@@ -74,23 +74,24 @@
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-ubl20</artifactId>
-      <version>3.3.0-SNAPSHOT</version>
+      <version>3.3.0</version>
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-ubl20-codelists</artifactId>
-      <version>3.3.0-SNAPSHOT</version>
+      <version>3.3.0</version>
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-ubl21</artifactId>
-      <version>3.3.0-SNAPSHOT</version>
+      <version>3.3.0</version>
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-ubl21-codelists</artifactId>
-      <version>3.3.0-SNAPSHOT</version>
+      <version>3.3.0</version>
     </dependency>
+    
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
