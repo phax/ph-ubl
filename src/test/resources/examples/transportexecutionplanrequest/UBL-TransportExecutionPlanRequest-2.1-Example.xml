@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportExecutionPlanRequest
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:ID>TEPR_1</cbc:ID>
+	<cbc:VersionID>1</cbc:VersionID>
+	<cbc:IssueDate>2011-09-13</cbc:IssueDate>
+	<cbc:IssueTime>10:00:10+01:00</cbc:IssueTime>
+	<cbc:DocumentStatusCode>NotConfirmed</cbc:DocumentStatusCode>
+	<cac:SenderParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Consignor</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+8687878763</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@consignor.cn</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:SenderParty>
+	<cac:ReceiverParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>NECOSS</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557000</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:ReceiverParty>
+	<cac:TransportUserParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Consignor</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+8687878763</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@consignor.cn</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:TransportUserParty>
+	<cac:TransportServiceProviderParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>NECOSS</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557000</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:TransportServiceProviderParty>
+	<cac:TransportServiceDescriptionDocumentReference>
+		<cbc:ID>2</cbc:ID>
+	</cac:TransportServiceDescriptionDocumentReference>
+	<cac:TransportContract>
+		<cbc:Note>Framework Agreement</cbc:Note>
+		<cac:ContractDocumentReference>
+			<cbc:ID>TC101</cbc:ID>
+			<cbc:IssueDate>2010-01-01</cbc:IssueDate>
+			<cbc:DocumentTypeCode>315</cbc:DocumentTypeCode>
+			<cbc:DocumentType>Contract</cbc:DocumentType>
+			<cbc:DocumentDescription>Framework Agreement between Consignor and NECOSS</cbc:DocumentDescription>
+		</cac:ContractDocumentReference>
+	</cac:TransportContract>
+	<cac:TransportServiceProviderResponseDeadlinePeriod>
+		<cbc:EndDate>2011-09-13</cbc:EndDate>
+		<cbc:EndTime>11:00:10+01:00</cbc:EndTime>
+	</cac:TransportServiceProviderResponseDeadlinePeriod>
+	<cac:MainTransportationService>
+		<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
+		<cbc:TransportationServiceDescription>Transport from Hamburg to Nurnberg</cbc:TransportationServiceDescription>
+	</cac:MainTransportationService>
+	<cac:ServiceEndTimePeriod>
+		<cbc:EndDate>2011-10-06</cbc:EndDate>
+		<cbc:EndTime>16:00:10+01:00</cbc:EndTime>
+	</cac:ServiceEndTimePeriod>
+	<cac:FromLocation>
+		<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+		<cac:Address>
+			<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEHAM</cbc:ID>
+			<cbc:StreetName>Neuer Wandrahm 4</cbc:StreetName>
+			<cbc:CityName>Hamburg</cbc:CityName>
+			<cbc:PostalZone>29400</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:Address>
+	</cac:FromLocation>
+	<cac:ToLocation>
+		<cbc:LocationTypeCode>7</cbc:LocationTypeCode>
+		<cac:Address>
+			<cbc:StreetName>Grosse strasse 34</cbc:StreetName>
+			<cbc:CityName>Nurnberg</cbc:CityName>
+			<cbc:PostalZone>28400</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:Address>
+	</cac:ToLocation>
+	<cac:TransportExecutionTerms>
+		<cac:DeliveryTerms>
+			<cbc:ID schemeAgencyName="INCOTERMS">EXW</cbc:ID>
+			<cac:DeliveryLocation>
+				<cac:Address>
+					<cbc:CityName>Hamburg</cbc:CityName>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:DeliveryTerms>
+		<cac:NotificationRequirement>
+			<cbc:NotificationTypeCode>TIME_SCHEDULE_DEVIATIONS</cbc:NotificationTypeCode>
+			<cac:NotifyParty>
+				<cbc:EndpointID>www.consignee.de/statusnotifications/</cbc:EndpointID>
+				<cac:PartyName>
+					<cbc:Name>Consignee</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:ElectronicMail>someName@consignee.de</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:NotifyParty>
+			<cac:NotifyParty>
+				<cbc:EndpointID>www.consignor.cn/statusnotifications/</cbc:EndpointID>
+				<cac:PartyName>
+					<cbc:Name>Consignor</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:ElectronicMail>someName@consignor.cn</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:NotifyParty>
+		</cac:NotificationRequirement>
+		<cac:NotificationRequirement>
+			<cbc:NotificationTypeCode>ITEM_CONDITION_DEVIATIONS</cbc:NotificationTypeCode>
+			<!--A Transportation Status notifying about the item condition deviation (e.g. damaged goods) should 
+			be issued at a maximum of 10 minutes after the deviation is discovered-->
+			<cbc:PostEventNotificationDurationMeasure unitCode="MIN">10</cbc:PostEventNotificationDurationMeasure>
+			<cac:NotifyParty>
+				<cbc:EndpointID>www.consignee.com/statusnotifications/</cbc:EndpointID>
+				<cac:PartyName>
+					<cbc:Name>Consignee</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:ElectronicMail>someName@consignee.de</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:NotifyParty>
+			<cac:NotifyParty>
+				<cbc:EndpointID>www.consignor.cn/statusnotifications/</cbc:EndpointID>
+				<cac:PartyName>
+					<cbc:Name>Consignor</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:ElectronicMail>someName@consignor.cn</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:NotifyParty>
+		</cac:NotificationRequirement>
+	</cac:TransportExecutionTerms>
+	<cac:Consignment>
+		<cbc:ID>CON_1</cbc:ID>
+		<cbc:GrossWeightMeasure unitCode="KGM">50000</cbc:GrossWeightMeasure>
+		<cbc:NetWeightMeasure unitCode="KGM">3000</cbc:NetWeightMeasure>
+		<cbc:GrossVolumeMeasure unitCode="MTQ">78</cbc:GrossVolumeMeasure>
+		<cbc:LoadingLengthMeasure unitCode="MTR">12</cbc:LoadingLengthMeasure>
+		<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+		<cbc:TotalTransportHandlingUnitQuantity>2</cbc:TotalTransportHandlingUnitQuantity>		
+		<cac:ConsolidatedShipment>
+			<cbc:ID>GSIN_1</cbc:ID>
+		</cac:ConsolidatedShipment>
+		<cac:ConsolidatedShipment>
+			<cbc:ID>GSIN_2</cbc:ID>
+		</cac:ConsolidatedShipment>
+		<cac:RequestedPickupTransportEvent>
+			<cac:Location>
+				<cac:Address>
+					<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEHAM</cbc:ID>
+					<cbc:StreetName>Neuer Wandrahm 4</cbc:StreetName>
+					<cbc:CityName>Hamburg</cbc:CityName>
+					<cbc:PostalZone>29400</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:Location>
+			<cac:Period>
+				<cbc:StartDate>2011-10-03</cbc:StartDate>
+				<cbc:StartTime>09:30:10+01:00</cbc:StartTime>
+				<cbc:EndDate>2011-10-03</cbc:EndDate>
+				<cbc:EndTime>12:30:10+01:00</cbc:EndTime>
+			</cac:Period>
+		</cac:RequestedPickupTransportEvent>
+		<cac:RequestedDeliveryTransportEvent>
+			<cac:Location>
+				<cac:Address>
+					<cbc:StreetName>Grosse strasse 34</cbc:StreetName>
+					<cbc:CityName>Nurnberg</cbc:CityName>
+					<cbc:PostalZone>28400</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:Location>
+			<cac:Period>
+				<cbc:StartDate>2011-10-06</cbc:StartDate>
+				<cbc:StartTime>12:30:10+01:00</cbc:StartTime>
+				<cbc:EndDate>2011-10-06</cbc:EndDate>
+				<cbc:EndTime>15:30:10+01:00</cbc:EndTime>
+			</cac:Period>
+		</cac:RequestedDeliveryTransportEvent>
+		<cac:ConsigneeParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827123</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Consignee</cbc:Name>
+			</cac:PartyName>
+			<cac:Contact>
+				<cbc:Name>SomeName</cbc:Name>
+				<cbc:Telephone>+4987878763</cbc:Telephone>
+				<cbc:ElectronicMail>SomeName@consignee.de</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:ConsigneeParty>
+		<cac:ConsignorParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Consignor</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
+			</cac:PostalAddress>
+			<cac:Contact>
+				<cbc:Name>SomeName</cbc:Name>
+				<cbc:Telephone>+8676576456</cbc:Telephone>
+				<cbc:ElectronicMail>SomeName@consignor.cn</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:ConsignorParty>
+		<cac:OriginalDepartureCountry>
+			<cbc:IdentificationCode>CN</cbc:IdentificationCode>
+		</cac:OriginalDepartureCountry>
+		<cac:FinalDestinationCountry>
+			<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+		</cac:FinalDestinationCountry>
+		<cac:TransportHandlingUnit>
+			<cbc:ID>CON_THU_1</cbc:ID>
+			<cbc:TransportHandlingUnitTypeCode>4</cbc:TransportHandlingUnitTypeCode>
+			<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+			<cbc:TotalGoodsItemQuantity>500</cbc:TotalGoodsItemQuantity>
+			<cbc:TotalPackageQuantity>10</cbc:TotalPackageQuantity>
+			<cbc:ShippingMarks>General Cargo</cbc:ShippingMarks>
+			<cac:TransportEquipment>
+				<cbc:ID>CON_TE_1</cbc:ID>
+				<cbc:TransportEquipmentTypeCode>CN</cbc:TransportEquipmentTypeCode>
+				<cbc:FullnessIndicationCode>1</cbc:FullnessIndicationCode>
+				<cbc:ReturnabilityIndicator>true</cbc:ReturnabilityIndicator>
+				<cbc:RefrigeratedIndicator>false</cbc:RefrigeratedIndicator>
+				<cbc:Description>SomeDescription</cbc:Description>
+				<cbc:GrossWeightMeasure unitCode="KGM">25000</cbc:GrossWeightMeasure>
+				<cbc:GrossVolumeMeasure unitCode="MTQ">39</cbc:GrossVolumeMeasure>
+				<cbc:PowerIndicator>false</cbc:PowerIndicator>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Length</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">6.1</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Height</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.6</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Width</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.44</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:Package>
+					<cbc:ID>CON_P_1</cbc:ID>
+					<cbc:Quantity>10</cbc:Quantity>
+					<cbc:PackagingTypeCode>PL</cbc:PackagingTypeCode>
+					<cac:GoodsItem>
+						<cac:Item>
+							<cac:CommodityClassification>
+								<cbc:CargoTypeCode>12</cbc:CargoTypeCode>
+							</cac:CommodityClassification>
+						</cac:Item>
+					</cac:GoodsItem>
+				</cac:Package>
+			</cac:TransportEquipment>
+		</cac:TransportHandlingUnit>
+		<cac:TransportHandlingUnit>
+			<cbc:ID>CON_THU_2</cbc:ID>
+			<cbc:TransportHandlingUnitTypeCode>4</cbc:TransportHandlingUnitTypeCode>
+			<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+			<cbc:TotalGoodsItemQuantity>500</cbc:TotalGoodsItemQuantity>
+			<cbc:TotalPackageQuantity>10</cbc:TotalPackageQuantity>
+			<cbc:ShippingMarks>General Cargo</cbc:ShippingMarks>
+			<cac:TransportEquipment>
+				<cbc:ID>CON_TE_2</cbc:ID>
+				<cbc:TransportEquipmentTypeCode>CN</cbc:TransportEquipmentTypeCode>
+				<cbc:FullnessIndicationCode>1</cbc:FullnessIndicationCode>
+				<cbc:ReturnabilityIndicator>true</cbc:ReturnabilityIndicator>
+				<cbc:RefrigeratedIndicator>false</cbc:RefrigeratedIndicator>
+				<cbc:Description>SomeDescription</cbc:Description>
+				<cbc:GrossWeightMeasure unitCode="KGM">25000</cbc:GrossWeightMeasure>
+				<cbc:GrossVolumeMeasure unitCode="MTQ">39</cbc:GrossVolumeMeasure>
+				<cbc:PowerIndicator>false</cbc:PowerIndicator>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Length</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">6.1</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Height</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.6</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Width</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.44</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:Package>					
+					<cbc:ID>CON_P_2</cbc:ID>
+					<cbc:Quantity>10</cbc:Quantity>
+					<cbc:PackagingTypeCode>PL</cbc:PackagingTypeCode>
+					<cac:GoodsItem>
+						<cac:Item>
+							<cac:CommodityClassification>
+								<cbc:CargoTypeCode>12</cbc:CargoTypeCode>
+							</cac:CommodityClassification>
+						</cac:Item>
+					</cac:GoodsItem>
+				</cac:Package>
+			</cac:TransportEquipment>
+		</cac:TransportHandlingUnit>
+	</cac:Consignment>
+</TransportExecutionPlanRequest>

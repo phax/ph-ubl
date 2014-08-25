@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportProgressStatus
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:ID>TPSR_1</cbc:ID>
+	<cbc:IssueDate>2011-10-03</cbc:IssueDate>
+	<cbc:IssueTime>14:30:10+01:00</cbc:IssueTime>
+	<cbc:StatusAvailableIndicator>true</cbc:StatusAvailableIndicator>
+	<cac:SenderParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673821325</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>ARRIVA</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557888</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@arriva.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:SenderParty>
+	<cac:ReceiverParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>NECOSS</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557000</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:ReceiverParty>
+	<cac:SourceIssuerParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673821325</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>ARRIVA</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557888</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@arriva.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:SourceIssuerParty>
+	<cac:TransportProgressStatusRequestDocumentReference>
+		<cbc:ID schemeName="MovementReferenceNumber">TPS_1</cbc:ID>
+	</cac:TransportProgressStatusRequestDocumentReference>
+	<cac:TransportMeans>
+		<cbc:JourneyID>RHamBrem</cbc:JourneyID>
+		<cbc:RegistrationNationalityID>DE</cbc:RegistrationNationalityID>
+		<cbc:TransportMeansTypeCode>230</cbc:TransportMeansTypeCode>
+		<cac:RailTransport>
+			<cbc:TrainID>RID01235</cbc:TrainID>
+		</cac:RailTransport>
+	</cac:TransportMeans>
+	<cac:TransportSchedule>
+		<cbc:SequenceNumeric>1</cbc:SequenceNumeric>
+		<cbc:ReliabilityPercent>80</cbc:ReliabilityPercent>
+		<cac:StatusLocation>
+			<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+			<cac:Address>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4568763527610</cbc:ID>
+				<cbc:StreetName>Ludwig-Erhard-Str. 15</cbc:StreetName>
+				<cbc:CityName>Bremen</cbc:CityName>
+				<cac:Country>
+					<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:StatusLocation>
+		<cac:EstimatedArrivalTransportEvent>
+			<cac:Period>
+				<cbc:StartDate>2011-10-03</cbc:StartDate>
+				<cbc:StartTime>18:30:10+01:00</cbc:StartTime>
+				<cbc:EndDate>2011-10-03</cbc:EndDate>
+				<cbc:EndTime>18:35:10+01:00</cbc:EndTime>
+			</cac:Period>
+		</cac:EstimatedArrivalTransportEvent>
+	</cac:TransportSchedule>
+</TransportProgressStatus>

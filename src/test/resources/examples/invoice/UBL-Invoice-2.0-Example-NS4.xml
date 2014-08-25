@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bob:Invoice xmlns:Harry="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:Sally="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:Bob="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+	<Harry:UBLVersionID>2.0</Harry:UBLVersionID>
+	<Harry:CustomizationID>urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft</Harry:CustomizationID>
+	<Harry:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft</Harry:ProfileID>
+	<Harry:ID>A00095678</Harry:ID>
+	<Harry:CopyIndicator>false</Harry:CopyIndicator>
+	<UUID xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">849FBBCE-E081-40B4-906C-94C5FF9D1AC3</UUID>
+	<Susan:IssueDate xmlns:Susan="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">2005-06-21</Susan:IssueDate>
+	<Sally:InvoiceTypeCode xmlns:Sally="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">SalesInvoice</Sally:InvoiceTypeCode>
+	<Harry:Note>sample</Harry:Note>
+	<Harry:TaxPointDate>2005-06-21</Harry:TaxPointDate>
+	<Sally:OrderReference>
+		<Harry:ID>AEG012345</Harry:ID>
+		<Harry:SalesOrderID>CON0095678</Harry:SalesOrderID>
+		<Harry:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</Harry:UUID>
+		<Harry:IssueDate>2005-06-20</Harry:IssueDate>
+	</Sally:OrderReference>
+	<Sally:AccountingSupplierParty>
+		<Harry:CustomerAssignedAccountID>CO001</Harry:CustomerAssignedAccountID>
+		<Sally:Party>
+			<Sally:PartyName>
+				<Harry:Name>Consortial</Harry:Name>
+			</Sally:PartyName>
+			<Sally:PostalAddress>
+				<Harry:StreetName>Busy Street</Harry:StreetName>
+				<Harry:BuildingName>Thereabouts</Harry:BuildingName>
+				<Harry:BuildingNumber>56A</Harry:BuildingNumber>
+				<Harry:CityName>Farthing</Harry:CityName>
+				<Harry:PostalZone>AA99 1BB</Harry:PostalZone>
+				<Harry:CountrySubentity>Heremouthshire</Harry:CountrySubentity>
+				<Sally:AddressLine>
+					<Harry:Line>The Roundabout</Harry:Line>
+				</Sally:AddressLine>
+				<Sally:Country>
+					<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+				</Sally:Country>
+			</Sally:PostalAddress>
+			<Sally:PartyTaxScheme>
+				<Harry:RegistrationName>Farthing Purchasing Consortium</Harry:RegistrationName>
+				<Harry:CompanyID>175 269 2355</Harry:CompanyID>
+				<Harry:ExemptionReason>N/A</Harry:ExemptionReason>
+				<Sally:TaxScheme>
+					<Harry:ID>VAT</Harry:ID>
+					<Harry:TaxTypeCode>VAT</Harry:TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:PartyTaxScheme>
+			<Sally:Contact>
+				<Harry:Name>Mrs Bouquet</Harry:Name>
+				<Harry:Telephone>0158 1233714</Harry:Telephone>
+				<Harry:Telefax>0158 1233856</Harry:Telefax>
+				<Harry:ElectronicMail>bouquet@fpconsortial.co.uk</Harry:ElectronicMail>
+			</Sally:Contact>
+		</Sally:Party>
+	</Sally:AccountingSupplierParty>
+	<Sally:AccountingCustomerParty>
+		<Harry:CustomerAssignedAccountID>XFB01</Harry:CustomerAssignedAccountID>
+		<Harry:SupplierAssignedAccountID>GT00978567</Harry:SupplierAssignedAccountID>
+		<Sally:Party>
+			<Sally:PartyName>
+				<Harry:Name>IYT Corporation</Harry:Name>
+			</Sally:PartyName>
+			<Sally:PostalAddress>
+				<Harry:StreetName>Avon Way</Harry:StreetName>
+				<Harry:BuildingName>Thereabouts</Harry:BuildingName>
+				<Harry:BuildingNumber>56A</Harry:BuildingNumber>
+				<Harry:CityName>Bridgtow</Harry:CityName>
+				<Harry:PostalZone>ZZ99 1ZZ</Harry:PostalZone>
+				<Harry:CountrySubentity>Avon</Harry:CountrySubentity>
+				<Sally:AddressLine>
+					<Harry:Line>3rd Floor, Room 5</Harry:Line>
+				</Sally:AddressLine>
+				<Sally:Country>
+					<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+				</Sally:Country>
+			</Sally:PostalAddress>
+			<Sally:PartyTaxScheme>
+				<Harry:RegistrationName>Bridgtow District Council</Harry:RegistrationName>
+				<Harry:CompanyID>12356478</Harry:CompanyID>
+				<Harry:ExemptionReason>Local Authority</Harry:ExemptionReason>
+				<Sally:TaxScheme>
+					<Harry:ID>UK VAT</Harry:ID>
+					<Harry:TaxTypeCode>VAT</Harry:TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:PartyTaxScheme>
+			<Sally:Contact>
+				<Harry:Name>Mr Fred Churchill</Harry:Name>
+				<Harry:Telephone>0127 2653214</Harry:Telephone>
+				<Harry:Telefax>0127 2653215</Harry:Telefax>
+				<Harry:ElectronicMail>fred@iytcorporation.gov.uk</Harry:ElectronicMail>
+			</Sally:Contact>
+		</Sally:Party>
+	</Sally:AccountingCustomerParty>
+	<Sally:Delivery>
+		<Harry:ActualDeliveryDate>2005-06-20</Harry:ActualDeliveryDate>
+		<Harry:ActualDeliveryTime>11:30:00.0Z</Harry:ActualDeliveryTime>
+		<Sally:DeliveryAddress>
+			<Harry:StreetName>Avon Way</Harry:StreetName>
+			<Harry:BuildingName>Thereabouts</Harry:BuildingName>
+			<Harry:BuildingNumber>56A</Harry:BuildingNumber>
+			<Harry:CityName>Bridgtow</Harry:CityName>
+			<Harry:PostalZone>ZZ99 1ZZ</Harry:PostalZone>
+			<Harry:CountrySubentity>Avon</Harry:CountrySubentity>
+			<Sally:AddressLine>
+				<Harry:Line>3rd Floor, Room 5</Harry:Line>
+			</Sally:AddressLine>
+			<Sally:Country>
+				<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+			</Sally:Country>
+		</Sally:DeliveryAddress>
+	</Sally:Delivery>
+	<Sally:PaymentMeans>
+		<Harry:PaymentMeansCode>20</Harry:PaymentMeansCode>
+		<Harry:PaymentDueDate>2005-07-21</Harry:PaymentDueDate>
+		<Sally:PayeeFinancialAccount>
+			<Harry:ID>12345678</Harry:ID>
+			<Harry:Name>Farthing Purchasing Consortium</Harry:Name>
+			<Harry:AccountTypeCode>Current</Harry:AccountTypeCode>
+			<Harry:CurrencyCode>GBP</Harry:CurrencyCode>
+			<Sally:FinancialInstitutionBranch>
+				<Harry:ID>10-26-58</Harry:ID>
+				<Harry:Name>Open Bank Ltd, Bridgstow Branch </Harry:Name>
+				<Sally:FinancialInstitution>
+					<Harry:ID>10-26-58</Harry:ID>
+					<Harry:Name>Open Bank Ltd</Harry:Name>
+					<Sally:Address>
+						<Harry:StreetName>City Road</Harry:StreetName>
+						<Harry:BuildingName>Banking House</Harry:BuildingName>
+						<Harry:BuildingNumber>12</Harry:BuildingNumber>
+						<Harry:CityName>London</Harry:CityName>
+						<Harry:PostalZone>AQ1 6TH</Harry:PostalZone>
+						<Harry:CountrySubentity>London
+</Harry:CountrySubentity>
+						<Sally:AddressLine>
+							<Harry:Line>5th Floor</Harry:Line>
+						</Sally:AddressLine>
+						<Sally:Country>
+							<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+						</Sally:Country>
+					</Sally:Address>
+				</Sally:FinancialInstitution>
+				<Sally:Address>
+					<Harry:StreetName>Busy Street</Harry:StreetName>
+					<Harry:BuildingName>The Mall</Harry:BuildingName>
+					<Harry:BuildingNumber>152</Harry:BuildingNumber>
+					<Harry:CityName>Farthing</Harry:CityName>
+					<Harry:PostalZone>AA99 1BB</Harry:PostalZone>
+					<Harry:CountrySubentity>Heremouthshire</Harry:CountrySubentity>
+					<Sally:AddressLine>
+						<Harry:Line>West Wing</Harry:Line>
+					</Sally:AddressLine>
+					<Sally:Country>
+						<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+					</Sally:Country>
+				</Sally:Address>
+			</Sally:FinancialInstitutionBranch>
+			<Sally:Country>
+				<Harry:IdentificationCode>GB</Harry:IdentificationCode>
+			</Sally:Country>
+		</Sally:PayeeFinancialAccount>
+	</Sally:PaymentMeans>
+	<Sally:PaymentTerms>
+		<Harry:Note>Payable within 1 calendar month from the invoice date</Harry:Note>
+	</Sally:PaymentTerms>
+	<Sally:AllowanceCharge>
+		<Harry:ChargeIndicator>false</Harry:ChargeIndicator>
+		<Harry:AllowanceChargeReasonCode>17</Harry:AllowanceChargeReasonCode>
+		<Harry:MultiplierFactorNumeric>0.10</Harry:MultiplierFactorNumeric>
+		<Harry:Amount currencyID="GBP">10.00</Harry:Amount>
+	</Sally:AllowanceCharge>
+	<Sally:TaxTotal>
+		<Harry:TaxAmount currencyID="GBP">17.50</Harry:TaxAmount>
+		<Harry:TaxEvidenceIndicator>true</Harry:TaxEvidenceIndicator>
+		<Sally:TaxSubtotal>
+			<Harry:TaxableAmount currencyID="GBP">100.00</Harry:TaxableAmount>
+			<Harry:TaxAmount currencyID="GBP">17.50</Harry:TaxAmount>
+			<Sally:TaxCategory>
+				<Harry:ID>A</Harry:ID>
+				<Sally:TaxScheme>
+					<Harry:ID>UK VAT</Harry:ID>
+					<Harry:TaxTypeCode>VAT</Harry:TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:TaxCategory>
+		</Sally:TaxSubtotal>
+	</Sally:TaxTotal>
+	<Sally:LegalMonetaryTotal>
+		<Harry:LineExtensionAmount currencyID="GBP">100.00</Harry:LineExtensionAmount>
+		<Harry:TaxExclusiveAmount currencyID="GBP">90.00</Harry:TaxExclusiveAmount>
+		<Harry:AllowanceTotalAmount currencyID="GBP">10.00</Harry:AllowanceTotalAmount>
+		<Harry:PayableAmount currencyID="GBP">107.50</Harry:PayableAmount>
+	</Sally:LegalMonetaryTotal>
+	<Sally:InvoiceLine>
+		<Harry:ID>A</Harry:ID>
+		<Harry:InvoicedQuantity unitCode="KGM">100</Harry:InvoicedQuantity>
+		<Harry:LineExtensionAmount currencyID="GBP">100.00</Harry:LineExtensionAmount>
+		<Sally:OrderLineReference>
+			<Harry:LineID>1</Harry:LineID>
+			<Harry:SalesOrderLineID>A</Harry:SalesOrderLineID>
+			<Harry:LineStatusCode>NoStatus</Harry:LineStatusCode>
+			<Sally:OrderReference>
+				<Harry:ID>AEG012345</Harry:ID>
+				<Harry:SalesOrderID>CON0095678</Harry:SalesOrderID>
+				<Harry:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</Harry:UUID>
+				<Harry:IssueDate>2005-06-20</Harry:IssueDate>
+			</Sally:OrderReference>
+		</Sally:OrderLineReference>
+		<Sally:TaxTotal>
+			<Harry:TaxAmount currencyID="GBP">17.50</Harry:TaxAmount>
+			<Harry:TaxEvidenceIndicator>true</Harry:TaxEvidenceIndicator>
+			<Sally:TaxSubtotal>
+				<Harry:TaxableAmount currencyID="GBP">100.00</Harry:TaxableAmount>
+				<Harry:TaxAmount currencyID="GBP">17.50</Harry:TaxAmount>
+				<Sally:TaxCategory>
+					<Harry:ID>A</Harry:ID>
+					<Harry:Percent>17.5</Harry:Percent>
+					<Sally:TaxScheme>
+						<Harry:ID>UK VAT</Harry:ID>
+						<Harry:TaxTypeCode>VAT</Harry:TaxTypeCode>
+					</Sally:TaxScheme>
+				</Sally:TaxCategory>
+			</Sally:TaxSubtotal>
+		</Sally:TaxTotal>
+		<Sally:Item>
+			<Harry:Description>Acme beeswax</Harry:Description>
+			<Harry:Name>beeswax</Harry:Name>
+			<Sally:BuyersItemIdentification>
+				<Harry:ID>6578489</Harry:ID>
+			</Sally:BuyersItemIdentification>
+			<Sally:SellersItemIdentification>
+				<Harry:ID>17589683</Harry:ID>
+			</Sally:SellersItemIdentification>
+			<Sally:ItemInstance>
+				<Sally:LotIdentification>
+					<Harry:LotNumberID>546378239</Harry:LotNumberID>
+					<Harry:ExpiryDate>2010-01-01</Harry:ExpiryDate>
+				</Sally:LotIdentification>
+			</Sally:ItemInstance>
+		</Sally:Item>
+		<Sally:Price>
+			<Harry:PriceAmount currencyID="GBP">1.00</Harry:PriceAmount>
+			<Harry:BaseQuantity unitCode="KGM">1</Harry:BaseQuantity>
+		</Sally:Price>
+	</Sally:InvoiceLine>
+</Bob:Invoice>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportationStatusRequest
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:ID>TSR_1</cbc:ID>
+	<cbc:IssueDate>2011-10-06</cbc:IssueDate>
+	<cbc:IssueTime>09:29:10+01:00</cbc:IssueTime>
+	<cbc:TransportationStatusTypeCode>All deviations</cbc:TransportationStatusTypeCode>
+	<cac:TransportExecutionPlanDocumentReference>
+		<cbc:ID>TEP_1</cbc:ID>
+	</cac:TransportExecutionPlanDocumentReference>
+	<cac:Consignment>
+		<cbc:ID>CON_1</cbc:ID>
+	</cac:Consignment>
+</TransportationStatusRequest>

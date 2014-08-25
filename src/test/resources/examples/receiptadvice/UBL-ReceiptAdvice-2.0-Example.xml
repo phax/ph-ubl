@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReceiptAdvice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:ReceiptAdvice-2.0:sbs-1.0-draft</cbc:CustomizationID>
+	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-receipt-advice-notification-draft</cbc:ProfileID>
+	<cbc:ID>658398</cbc:ID>
+	<cbc:CopyIndicator>false</cbc:CopyIndicator>
+	<cbc:UUID>89F82FA6-5331-491D-83BC-7B6CA7FD047C</cbc:UUID>
+	<cbc:IssueDate>2005-06-21</cbc:IssueDate>
+
+	<cbc:Note>sample</cbc:Note>
+	<cac:OrderReference>
+		<cbc:ID>AEG012345</cbc:ID>
+		<cbc:SalesOrderID>CON0095678</cbc:SalesOrderID>
+		<cbc:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</cbc:UUID>
+		<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+	</cac:OrderReference>
+	<cac:DespatchDocumentReference>
+		<cbc:ID>565899</cbc:ID>
+		<cbc:UUID>88C7280E-8F10-419F-9949-8EFFFA2842B8</cbc:UUID>
+		<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+	</cac:DespatchDocumentReference>
+	<cac:DeliveryCustomerParty>
+		<cbc:CustomerAssignedAccountID>XFB01</cbc:CustomerAssignedAccountID>
+		<cbc:SupplierAssignedAccountID>GT00978567</cbc:SupplierAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>IYT Corporation</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Avon Way</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Bridgtow</cbc:CityName>
+				<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+				<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>3rd Floor, Room 5</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Bridgtow District Council</cbc:RegistrationName>
+				<cbc:CompanyID>12356478</cbc:CompanyID>
+				<cbc:ExemptionReason>Local Authority</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>UK VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mr Fred Churchill</cbc:Name>
+				<cbc:Telephone>0127 2653214</cbc:Telephone>
+				<cbc:Telefax>0127 2653215</cbc:Telefax>
+				<cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:DeliveryCustomerParty>
+	<cac:DespatchSupplierParty>
+		<cbc:CustomerAssignedAccountID>CO001</cbc:CustomerAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Consortial</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Busy Street</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Farthing</cbc:CityName>
+				<cbc:PostalZone>AA99 1BB</cbc:PostalZone>
+				<cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>The Roundabout</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
+				<cbc:CompanyID>175 269 2355</cbc:CompanyID>
+				<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mrs Bouquet</cbc:Name>
+				<cbc:Telephone>0158 1233714</cbc:Telephone>
+				<cbc:Telefax>0158 1233856</cbc:Telefax>
+				<cbc:ElectronicMail>bouquet@fpconsortial.co.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:DespatchSupplierParty>
+	<cac:Shipment>
+		<cbc:ID>1</cbc:ID>
+		<cac:Consignment>
+			<cbc:ID>1</cbc:ID>
+		</cac:Consignment>
+		<cac:Delivery>
+			<cbc:ID>1</cbc:ID>
+			<cbc:Quantity unitCode="KGM">90</cbc:Quantity>
+			<cbc:ActualDeliveryDate>2005-06-20</cbc:ActualDeliveryDate>
+			<cbc:ActualDeliveryTime>11:30:00.0Z</cbc:ActualDeliveryTime>
+			<cac:RequestedDeliveryPeriod>
+				<cbc:StartDate>2005-06-20</cbc:StartDate>
+				<cbc:StartTime>10:30:47.0Z</cbc:StartTime>
+				<cbc:EndDate>2005-06-21</cbc:EndDate>
+				<cbc:EndTime>10:30:47.0Z</cbc:EndTime>
+			</cac:RequestedDeliveryPeriod>
+		</cac:Delivery>
+	</cac:Shipment>
+	<cac:ReceiptLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:Note>SAMPLE</cbc:Note>
+		<cbc:ReceivedQuantity unitCode="KGM">90</cbc:ReceivedQuantity>
+		<cbc:ShortQuantity unitCode="KGM">10</cbc:ShortQuantity>
+		<cac:Item>
+			<cbc:Description>Acme beeswax</cbc:Description>
+			<cbc:Name>beeswax</cbc:Name>
+			<cac:BuyersItemIdentification>
+				<cbc:ID>6578489</cbc:ID>
+			</cac:BuyersItemIdentification>
+			<cac:SellersItemIdentification>
+				<cbc:ID>17589683</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:LotNumberID>546378239</cbc:LotNumberID>
+					<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:ReceiptLine>
+</ReceiptAdvice>

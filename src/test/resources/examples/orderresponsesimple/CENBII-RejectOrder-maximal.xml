@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderResponseSimple xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2 D:\Daten\E-Projekte\PEPPOL\svn\Standards\UBL\UBL\os-UBL-2.0\xsd\maindoc\UBL-OrderResponseSimple-2.0.xsd">
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biicoretrdm002:ver1.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii06:ver1.0</cbc:ProfileID>
+	<cbc:ID>66890-9-09</cbc:ID>
+	<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+	<cbc:Note languageID="EN">sample</cbc:Note>
+	<cbc:AcceptedIndicator>false</cbc:AcceptedIndicator>
+	<cac:OrderReference>
+		<cbc:ID>AEG012345</cbc:ID>
+	</cac:OrderReference>
+	<cac:SellerSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">EndpointID</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">PartyIdentification</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="en">Consortial</cbc:Name>
+			</cac:PartyName>
+		</cac:Party>
+	</cac:SellerSupplierParty>
+	<cac:BuyerCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">EndpointID</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">PartyIdentification</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="en">IYT Corporation</cbc:Name>
+			</cac:PartyName>
+		</cac:Party>
+	</cac:BuyerCustomerParty>
+</OrderResponseSimple>

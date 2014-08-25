@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice
+	xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 UBL-Invoice-2.0.xsd"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+	<cbc:UBLVersionID schemeURI="http://www.example.org"
+		schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+		schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+		schemeAgencyID="normalizedString">2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID schemeURI="http://www.example.org"
+		schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+		schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+		schemeAgencyID="normalizedString">urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0</cbc:CustomizationID>
+	<cbc:ProfileID schemeURI="http://www.example.org"
+		schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+		schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+		schemeAgencyID="normalizedString">urn:www.cenbii.eu:profiles:profile4:ver1.0</cbc:ProfileID>
+	<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+		schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+		schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+	</cbc:ID>
+	<cbc:IssueDate>1967-08-13</cbc:IssueDate>
+	<cbc:InvoiceTypeCode name="String" listName="String"
+		listID="normalizedString" languageID="en-us" listAgencyName="String"
+		listSchemeURI="http://www.example.org" listURI="http://www.example.org"
+		listAgencyID="normalizedString" listVersionID="normalizedString">380
+	</cbc:InvoiceTypeCode>
+	<cbc:Note languageID="en-us">String</cbc:Note>
+	<cbc:TaxPointDate>1967-08-13</cbc:TaxPointDate>
+	<cbc:DocumentCurrencyCode name="String"
+		listName="Currency" listID="ISO 4217 Alpha" languageID="en"
+		listAgencyName="United Nations Economic Commission for Europe"
+		listSchemeURI="urn:un:unece:uncefact:codelist:specification:54217:2001"
+		listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc"
+		listAgencyID="6" listVersionID="2001">AED
+	</cbc:DocumentCurrencyCode>
+	<cbc:AccountingCost languageID="en-us">String
+	</cbc:AccountingCost>
+	<cac:InvoicePeriod>
+		<cbc:StartDate>1967-08-13</cbc:StartDate>
+		<cbc:EndDate>1967-08-13</cbc:EndDate>
+	</cac:InvoicePeriod>
+	<cac:OrderReference>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+	</cac:OrderReference>
+	<cac:ContractDocumentReference>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+		<cbc:DocumentType languageID="en-us">String
+		</cbc:DocumentType>
+	</cac:ContractDocumentReference>
+	<cac:ContractDocumentReference>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+		<cbc:DocumentType languageID="en-us">String
+		</cbc:DocumentType>
+	</cac:ContractDocumentReference>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+		<cbc:DocumentType languageID="en-us">String
+		</cbc:DocumentType>
+	</cac:AdditionalDocumentReference>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+		<cbc:DocumentType languageID="en-us">String
+		</cbc:DocumentType>
+	</cac:AdditionalDocumentReference>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeURI="http://www.example.org"
+				schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+				schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+				schemeAgencyID="normalizedString">normalizedString</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="en-us">String</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cbc:Postbox languageID="en-us">String</cbc:Postbox>
+				<cbc:StreetName languageID="en-us">String</cbc:StreetName>
+				<cbc:AdditionalStreetName languageID="en-us">String
+				</cbc:AdditionalStreetName>
+				<cbc:BuildingNumber languageID="en-us">String
+				</cbc:BuildingNumber>
+				<cbc:Department languageID="en-us">String</cbc:Department>
+				<cbc:CityName languageID="en-us">String</cbc:CityName>
+				<cbc:PostalZone languageID="en-us">String</cbc:PostalZone>
+				<cbc:CountrySubentity languageID="en-us">String</cbc:CountrySubentity>
+				<cbc:Region languageID="en-us">String</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode name="String"
+						listName="Country" listID="ISO3166-1" languageID="en"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+						listAgencyID="6" listVersionID="0.3">AD
+					</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeURI="http://www.example.org"
+					schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName languageID="en-us">String
+				</cbc:RegistrationName>
+				<cbc:CompanyID schemeURI="http://www.example.org"
+					schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName languageID="en-us">String</cbc:CityName>
+					<cbc:CountrySubentity languageID="en-us">String
+					</cbc:CountrySubentity>
+					<cac:Country>
+						<cbc:IdentificationCode name="String"
+							listName="Country" listID="ISO3166-1" languageID="en"
+							listAgencyName="United Nations Economic Commission for Europe"
+							listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0"
+							listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+							listAgencyID="6" listVersionID="0.3">AD
+						</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Telephone languageID="en-us">String</cbc:Telephone>
+				<cbc:Telefax languageID="en-us">String</cbc:Telefax>
+				<cbc:ElectronicMail languageID="en-us">String
+				</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName languageID="en-us">String</cbc:FirstName>
+				<cbc:FamilyName languageID="en-us">String</cbc:FamilyName>
+				<cbc:MiddleName languageID="en-us">String</cbc:MiddleName>
+				<cbc:JobTitle languageID="en-us">String</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+			<cac:Party>
+			<cbc:EndpointID schemeURI="http://www.example.org"
+				schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+				schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+				schemeAgencyID="normalizedString">normalizedString</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="en-us">String</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cbc:Postbox languageID="en-us">String</cbc:Postbox>
+				<cbc:StreetName languageID="en-us">String</cbc:StreetName>
+				<cbc:AdditionalStreetName languageID="en-us">String
+				</cbc:AdditionalStreetName>
+				<cbc:BuildingNumber languageID="en-us">String
+				</cbc:BuildingNumber>
+				<cbc:Department languageID="en-us">String</cbc:Department>
+				<cbc:CityName languageID="en-us">String</cbc:CityName>
+				<cbc:PostalZone languageID="en-us">String</cbc:PostalZone>
+				<cbc:CountrySubentity languageID="en-us">String</cbc:CountrySubentity>
+				<cbc:Region languageID="en-us">String</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode name="String"
+						listName="Country" listID="ISO3166-1" languageID="en"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+						listAgencyID="6" listVersionID="0.3">AD
+					</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeURI="http://www.example.org"
+					schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName languageID="en-us">String
+				</cbc:RegistrationName>
+				<cbc:CompanyID schemeURI="http://www.example.org"
+					schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName languageID="en-us">String</cbc:CityName>
+					<cbc:CountrySubentity languageID="en-us">String
+					</cbc:CountrySubentity>
+					<cac:Country>
+						<cbc:IdentificationCode name="String"
+							listName="Country" listID="ISO3166-1" languageID="en"
+							listAgencyName="United Nations Economic Commission for Europe"
+							listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0"
+							listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+							listAgencyID="6" listVersionID="0.3">AD
+						</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Telephone languageID="en-us">String</cbc:Telephone>
+				<cbc:Telefax languageID="en-us">String</cbc:Telefax>
+				<cbc:ElectronicMail languageID="en-us">String
+				</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName languageID="en-us">String</cbc:FirstName>
+				<cbc:FamilyName languageID="en-us">String</cbc:FamilyName>
+				<cbc:MiddleName languageID="en-us">String</cbc:MiddleName>
+				<cbc:JobTitle languageID="en-us">String</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:PayeeParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">PayeeID
+			</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name languageID="en-us">PayeeName</cbc:Name>
+		</cac:PartyName>
+		<cac:PartyLegalEntity>
+			<cbc:CompanyID schemeURI="http://www.example.org"
+				schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+				schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+				schemeAgencyID="normalizedString">normalizedString</cbc:CompanyID>
+		</cac:PartyLegalEntity>
+	</cac:PayeeParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>1967-08-13</cbc:ActualDeliveryDate>
+		<cac:DeliveryLocation>
+			<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+			</cbc:ID>
+			<cac:Address>
+				<cbc:StreetName languageID="en-us">String</cbc:StreetName>
+				<cbc:AdditionalStreetName languageID="en-us">String
+				</cbc:AdditionalStreetName>
+				<cbc:BuildingNumber languageID="en-us">String
+				</cbc:BuildingNumber>
+				<cbc:Department languageID="en-us">String</cbc:Department>
+				<cbc:CityName languageID="en-us">String</cbc:CityName>
+				<cbc:PostalZone languageID="en-us">String</cbc:PostalZone>
+				<cbc:CountrySubentity languageID="en-us">String
+				</cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode name="String"
+						listName="Country" listID="ISO3166-1" languageID="en"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+						listAgencyID="6" listVersionID="0.3">AD
+					</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode name="String" listName="Payment Means"
+			listID="UN/ECE 4461" languageID="en"
+			listAgencyName="United Nations Economic Commission for Europe"
+			listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode-2.0"
+			listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PaymentMeansCode-2.0.gc"
+			listAgencyID="6" listVersionID="D03A">1
+		</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>1967-08-13</cbc:PaymentDueDate>
+		<cbc:PaymentChannelCode name="String" listName="String"
+			listID="normalizedString" languageID="en-us" listAgencyName="String"
+			listSchemeURI="http://www.example.org" listURI="http://www.example.org"
+			listAgencyID="normalizedString" listVersionID="normalizedString">normalizedString
+		</cbc:PaymentChannelCode>
+		<cbc:PaymentID schemeURI="http://www.example.org"
+			schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+			schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+			schemeAgencyID="normalizedString">normalizedString</cbc:PaymentID>
+		<cac:PayerFinancialAccount>
+			<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+			</cbc:ID>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cac:FinancialInstitution>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				</cac:FinancialInstitution>
+			</cac:FinancialInstitutionBranch>
+		</cac:PayerFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode name="String" listName="Payment Means"
+			listID="UN/ECE 4461" languageID="en"
+			listAgencyName="United Nations Economic Commission for Europe"
+			listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode-2.0"
+			listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PaymentMeansCode-2.0.gc"
+			listAgencyID="6" listVersionID="D03A">1
+		</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>1967-08-13</cbc:PaymentDueDate>
+		<cbc:PaymentChannelCode name="String" listName="String"
+			listID="normalizedString" languageID="en-us" listAgencyName="String"
+			listSchemeURI="http://www.example.org" listURI="http://www.example.org"
+			listAgencyID="normalizedString" listVersionID="normalizedString">normalizedString
+		</cbc:PaymentChannelCode>
+		<cbc:PaymentID schemeURI="http://www.example.org"
+			schemeName="String" schemeAgencyName="String" schemeID="normalizedString"
+			schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+			schemeAgencyID="normalizedString">normalizedString</cbc:PaymentID>
+		<cac:PayerFinancialAccount>
+			<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+			</cbc:ID>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cac:FinancialInstitution>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				</cac:FinancialInstitution>
+			</cac:FinancialInstitutionBranch>
+		</cac:PayerFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note languageID="en-us">String</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:AllowanceCharge>
+		<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+		<cbc:AllowanceChargeReason languageID="en-us">String
+		</cbc:AllowanceChargeReason>
+		<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+	</cac:AllowanceCharge>
+	<cac:AllowanceCharge>
+		<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+		<cbc:AllowanceChargeReason languageID="en-us">String
+		</cbc:AllowanceChargeReason>
+		<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+	</cac:AllowanceCharge>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="AED">0.0</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="AED">0.0
+			</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="AED">0.0</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">A</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cbc:TaxExemptionReasonCode name="String"
+					listName="String" listID="normalizedString" languageID="en-us"
+					listAgencyName="String" listSchemeURI="http://www.example.org"
+					listURI="http://www.example.org" listAgencyID="normalizedString"
+					listVersionID="normalizedString">normalizedString</cbc:TaxExemptionReasonCode>
+				<cbc:TaxExemptionReason languageID="en-us">String
+				</cbc:TaxExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="AED">0.0
+			</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="AED">0.0</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cbc:TaxExemptionReasonCode name="String"
+					listName="String" listID="normalizedString" languageID="en-us"
+					listAgencyName="String" listSchemeURI="http://www.example.org"
+					listURI="http://www.example.org" listAgencyID="normalizedString"
+					listVersionID="normalizedString">normalizedString</cbc:TaxExemptionReasonCode>
+				<cbc:TaxExemptionReason languageID="en-us">String
+				</cbc:TaxExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="AED">0.0
+		</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="AED">0.0
+		</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="AED">0.0
+		</cbc:TaxInclusiveAmount>
+		<cbc:AllowanceTotalAmount currencyID="AED">0.0
+		</cbc:AllowanceTotalAmount>
+		<cbc:ChargeTotalAmount currencyID="AED">0.0
+		</cbc:ChargeTotalAmount>
+		<cbc:PrepaidAmount currencyID="AED">0.0
+		</cbc:PrepaidAmount>
+		<cbc:PayableRoundingAmount currencyID="AED">0.0
+		</cbc:PayableRoundingAmount>
+		<cbc:PayableAmount currencyID="AED">0.0
+		</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+			schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+			schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+		</cbc:ID>
+		<cbc:Note languageID="en-us">String</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="04">0.0
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="AED">0.0
+		</cbc:LineExtensionAmount>
+		<cbc:AccountingCost languageID="en-us">String
+		</cbc:AccountingCost>
+		<cac:OrderLineReference>
+			<cbc:LineID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+			</cbc:LineID>
+		</cac:OrderLineReference>
+		<cac:OrderLineReference>
+			<cbc:LineID schemeURI="http://www.example.org" schemeName="String"
+				schemeAgencyName="String" schemeID="normalizedString" schemeDataURI="http://www.example.org"
+				schemeVersionID="normalizedString" schemeAgencyID="normalizedString">normalizedString
+			</cbc:LineID>
+		</cac:OrderLineReference>
+		<cac:AllowanceCharge>
+			<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+			<cbc:AllowanceChargeReason languageID="en-us">String
+			</cbc:AllowanceChargeReason>
+			<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+		</cac:AllowanceCharge>
+		<cac:AllowanceCharge>
+			<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+			<cbc:AllowanceChargeReason languageID="en-us">String
+			</cbc:AllowanceChargeReason>
+			<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+		</cac:AllowanceCharge>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="AED">0.0</cbc:TaxAmount>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description languageID="en-us">String</cbc:Description>
+			<cbc:Name languageID="en-us">String</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode name="String"
+					listName="String" listID="normalizedString" languageID="en-us"
+					listAgencyName="String" listSchemeURI="http://www.example.org"
+					listURI="http://www.example.org" listAgencyID="normalizedString"
+					listVersionID="normalizedString">normalizedString</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode name="String"
+					listName="String" listID="normalizedString" languageID="en-us"
+					listAgencyName="String" listSchemeURI="http://www.example.org"
+					listURI="http://www.example.org" listAgencyID="normalizedString"
+					listVersionID="normalizedString">normalizedString</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+					schemeAgencyName="String" schemeID="normalizedString"
+					schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+					schemeAgencyID="normalizedString">normalizedString</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID schemeURI="http://www.example.org" schemeName="String"
+						schemeAgencyName="String" schemeID="normalizedString"
+						schemeDataURI="http://www.example.org" schemeVersionID="normalizedString"
+						schemeAgencyID="normalizedString">VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:AdditionalItemProperty>
+				<cbc:Name languageID="en-us">String</cbc:Name>
+				<cbc:Value languageID="en-us">String</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name languageID="en-us">String</cbc:Name>
+				<cbc:Value languageID="en-us">String</cbc:Value>
+			</cac:AdditionalItemProperty>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="AED">0.0</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="04">0.0</cbc:BaseQuantity>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:AllowanceChargeReason languageID="en-us">String
+				</cbc:AllowanceChargeReason>
+				<cbc:MultiplierFactorNumeric>0.0</cbc:MultiplierFactorNumeric>
+				<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+				<cbc:BaseAmount currencyID="AED">0.0</cbc:BaseAmount>
+			</cac:AllowanceCharge>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:AllowanceChargeReason languageID="en-us">String
+				</cbc:AllowanceChargeReason>
+				<cbc:MultiplierFactorNumeric>0.0</cbc:MultiplierFactorNumeric>
+				<cbc:Amount currencyID="AED">0.0</cbc:Amount>
+				<cbc:BaseAmount currencyID="AED">0.0</cbc:BaseAmount>
+			</cac:AllowanceCharge>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

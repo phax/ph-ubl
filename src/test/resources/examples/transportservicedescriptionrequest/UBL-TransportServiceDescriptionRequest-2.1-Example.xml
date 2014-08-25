@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportServiceDescriptionRequest
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:ID>TSD_REQ_1</cbc:ID>
+	<cbc:IssueDate>2011-09-12</cbc:IssueDate>
+	<cbc:IssueTime>11:01:10+01:00</cbc:IssueTime>
+	<cac:SenderParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Consignor</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+8687878763</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@consignor.cn</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:SenderParty>
+	<cac:ReceiverParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>NECOSS</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557000</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:ReceiverParty>
+	<cac:TransportationService>
+		<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
+			<cac:TransportEquipment>
+				<cbc:ID>1</cbc:ID>
+				<cbc:TransportEquipmentTypeCode>CN</cbc:TransportEquipmentTypeCode>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Length</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">6.1</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Height</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.6</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Width</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.44</cbc:Measure>
+				</cac:MeasurementDimension>
+			</cac:TransportEquipment>		
+			<cac:TransportEquipment>
+				<cbc:ID>1</cbc:ID>
+				<cbc:TransportEquipmentTypeCode>CN</cbc:TransportEquipmentTypeCode>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Length</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">6.1</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Height</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.6</cbc:Measure>
+				</cac:MeasurementDimension>
+				<cac:MeasurementDimension>
+					<cbc:AttributeID>Width</cbc:AttributeID>
+					<cbc:Measure unitCode="MTR">2.44</cbc:Measure>
+				</cac:MeasurementDimension>
+			</cac:TransportEquipment>
+		<cac:ShipmentStage>
+			<cbc:ID>1</cbc:ID>
+			<cac:RequestedDepartureTransportEvent>
+				<cac:Location>
+					<cac:Address>
+						<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEHAM</cbc:ID>
+						<cbc:StreetName>Neuer Wandrahm 4</cbc:StreetName>
+						<cbc:CityName>Hamburg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-03</cbc:StartDate>
+					<cbc:EndDate>2011-10-03</cbc:EndDate>
+				</cac:Period>
+			</cac:RequestedDepartureTransportEvent>
+			<cac:RequestedArrivalTransportEvent>
+				<cac:Location>
+					<cac:Address>
+						<cbc:StreetName>Grosse strasse 34</cbc:StreetName>
+						<cbc:CityName>Nurnberg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-06</cbc:StartDate>
+					<cbc:EndDate>2011-10-06</cbc:EndDate>
+				</cac:Period>
+			</cac:RequestedArrivalTransportEvent>
+		</cac:ShipmentStage>
+	</cac:TransportationService>
+</TransportServiceDescriptionRequest>

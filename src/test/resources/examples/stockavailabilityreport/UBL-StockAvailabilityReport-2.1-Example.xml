@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StockAvailabilityReport
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:ID>SA2009</cbc:ID>
+    <cbc:CopyIndicator>false</cbc:CopyIndicator>
+    <cbc:IssueDate>2010-04-11</cbc:IssueDate>
+    <cbc:Note>Report about quantities of each item which are (or will be) available</cbc:Note>
+    <cac:InventoryPeriod>
+        <cbc:StartDate>2010-04-11</cbc:StartDate>
+        <cbc:StartTime>08:00:00</cbc:StartTime>
+        <cbc:EndDate>2011-04-11</cbc:EndDate>
+    </cac:InventoryPeriod>
+    <cac:SellerSupplierParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Arancio Forniture spa</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Dell'Arcoveggio</cbc:StreetName>
+                <cbc:BuildingNumber>403</cbc:BuildingNumber>
+                <cbc:CityName>Bologna</cbc:CityName>
+                <cbc:PostalZone>40129</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Rossi</cbc:Name>
+                <cbc:Telephone>0039 051 23000000</cbc:Telephone>
+                <cbc:Telefax>0039 051 23000023</cbc:Telefax>
+                <cbc:ElectronicMail>rossi@arancioforniture.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:SellerSupplierParty>
+    <cac:RetailerCustomerParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Beta Shop</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Emilia</cbc:StreetName>
+                <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                <cbc:CityName>Modena</cbc:CityName>
+                <cbc:PostalZone>41121</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Delta</cbc:Name>
+                <cbc:Telephone>0039 059 33000000</cbc:Telephone>
+                <cbc:Telefax>0039 059 33000055</cbc:Telefax>
+                <cbc:ElectronicMail>delta@betashop.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:RetailerCustomerParty>
+    <cac:InventoryReportingParty>
+        <cac:PartyName>
+            <cbc:Name>Beta Shop</cbc:Name>
+        </cac:PartyName>
+        <cac:PostalAddress>
+            <cbc:Floor>2</cbc:Floor>
+            <cbc:Room>309</cbc:Room>
+            <cbc:StreetName>Via Emilia</cbc:StreetName>
+            <cbc:BuildingNumber>1</cbc:BuildingNumber>
+            <cbc:CityName>Modena</cbc:CityName>
+            <cbc:PostalZone>41121</cbc:PostalZone>
+            <cac:Country>
+                <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                <cbc:Name>Italy</cbc:Name>
+            </cac:Country>
+        </cac:PostalAddress>
+        <cac:Contact>
+            <cbc:Name>Mr Gamma</cbc:Name>
+            <cbc:Telephone>0039 059 33000022</cbc:Telephone>
+            <cbc:Telefax>0039 059 33000057</cbc:Telefax>
+            <cbc:ElectronicMail>gamma@betashop.it</cbc:ElectronicMail>
+        </cac:Contact>
+    </cac:InventoryReportingParty>
+    <cac:StockAvailabilityReportLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:Quantity unitCode="NAR">50</cbc:Quantity>
+        <cbc:AvailabilityDate>2010-04-20</cbc:AvailabilityDate>
+        <cbc:AvailabilityStatusCode listID="7011" listAgencyName="UN/ECE"
+            listURI="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+            >1</cbc:AvailabilityStatusCode>
+        <cac:Item>
+            <cbc:Description>T-shirt</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>TT319</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>ZZ738</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:StockAvailabilityReportLine>
+    <cac:StockAvailabilityReportLine>
+        <cbc:ID>2</cbc:ID>
+        <cbc:Quantity unitCode="NAR">80</cbc:Quantity>
+        <cbc:AvailabilityDate>2010-04-11</cbc:AvailabilityDate>
+        <cbc:AvailabilityStatusCode listID="7011" listAgencyName="UN/ECE"
+            listURI="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+            >2</cbc:AvailabilityStatusCode>
+        <cac:Item>
+            <cbc:Description>jersey</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>TJ043</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>K0058</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:StockAvailabilityReportLine>
+    <cac:StockAvailabilityReportLine>
+        <cbc:ID>3</cbc:ID>
+        <cbc:Quantity unitCode="NAR">0</cbc:Quantity>
+        <cbc:AvailabilityStatusCode listID="7011" listAgencyName="UN/ECE"
+            listURI="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+            >8</cbc:AvailabilityStatusCode>
+        <cac:Item>
+            <cbc:Description>skirt</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>TS893</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>PK009</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:StockAvailabilityReportLine>
+</StockAvailabilityReport>

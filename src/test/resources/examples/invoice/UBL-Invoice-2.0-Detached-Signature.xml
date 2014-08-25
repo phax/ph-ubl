@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="addedSig">
+  <ds:SignedInfo>
+    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <ds:Reference URI="UBL-Invoice-2.0-Detached.xml">
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>qM/+Gsg4/E/0p3fE9LTZA6Xtkds=</ds:DigestValue>
+    </ds:Reference>
+    <ds:Reference URI="#xades-test-s">
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>mjiR61tL2dV3HMus3GBG/aEjbt4=</ds:DigestValue>
+    </ds:Reference>
+  </ds:SignedInfo>
+  <ds:SignatureValue Id="addedSigVal">VkiVEIkPTISrrwdFouXWEHirxST2mCbLuXmgO0T+4UXHq9Sir+/9gnEZU7Aa2PCB
+Q/3X0RIkX/sQwGMNdQ5jUJWc0BoGOszhc0CYHxDiayqlQ4fZGz+nhVdoUog4o7Tx
+dk+vu/LS/7iz6asudXp2Zh8tT4LnOINsj+//DdRd6yM=</ds:SignatureValue>
+  <ds:KeyInfo>
+    <ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+uXEmg0yTZN1Yf7IuwDcf+MhHjILcPtFXVW3FRFpy5ymWDDmoOddPJrG3S6zHcCbu
+kdqJR+fIHhpGauMifTbC4k9F0UNgT0DSzxoOkVMFwv/pREK28lvnDZD1rGnS9GKt
+cyOMVbGe5BSl49iBI5xhpUtmRYxVR/RAxSUmCrfZFoM=
+</ds:Modulus>
+<ds:Exponent>
+AQAB
+</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+    <ds:X509Data>
+      
+      
+      
+    <ds:X509Certificate>MIICcTCCAdoCCQDzGe/d5rwBKzANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJV
+UzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEO
+MAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVl
+MQ8wDQYDVQQDDAZVQkwgVEMwHhcNMTMwMjE1MTg1OTQ2WhcNMTMwMzE3MTg1OTQ2
+WjB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UE
+BwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNo
+bmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwgZ8wDQYJKoZIhvcNAQEB
+BQADgY0AMIGJAoGBALlxJoNMk2TdWH+yLsA3H/jIR4yC3D7RV1VtxURacucplgw5
+qDnXTyaxt0usx3Am7pHaiUfnyB4aRmrjIn02wuJPRdFDYE9A0s8aDpFTBcL/6URC
+tvJb5w2Q9axp0vRirXMjjFWxnuQUpePYgSOcYaVLZkWMVUf0QMUlJgq32RaDAgMB
+AAEwDQYJKoZIhvcNAQEFBQADgYEAVtqeUFJQa64pqCYJAxflCGdOKFBX2p8LCo3K
+eupnQC9UvLdOxuS8fAjzo40FQG687/7NGcZ30ysVjy/s3XyqxDFLln601vI470i9
+6Gip3cBF8WHB5lUnvaT9dNEYFDBBR22glEnY9SA8y8EbbO+Cy8hIQEzULoVOkr/a
+JfeH5w4=</ds:X509Certificate>
+<ds:X509SubjectName>CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US</ds:X509IssuerName>
+<ds:X509SerialNumber>17517295961972146475</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+  </ds:KeyInfo>
+<ds:Object>
+  <QualifyingProperties xmlns="http://uri.etsi.org/01903/v1.3.2#" Target="#addedSig">
+    <SignedProperties Id="xades-test-s">
+      <SignedSignatureProperties>
+        <SigningTime>2010-11-26T18:00:00Z</SigningTime>
+      </SignedSignatureProperties>
+    </SignedProperties>
+    <UnsignedProperties Id="xades-test-u">
+      <UnsignedSignatureProperties>
+        <SignatureTimeStamp>
+          <XMLTimeStamp>2010-11-26T18:00:00Z</XMLTimeStamp>
+        </SignatureTimeStamp>
+      </UnsignedSignatureProperties>
+    </UnsignedProperties>
+  </QualifyingProperties>
+</ds:Object>
+</ds:Signature>

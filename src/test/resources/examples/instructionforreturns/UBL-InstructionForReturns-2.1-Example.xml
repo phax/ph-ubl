@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InstructionForReturns
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:ID>AB011</cbc:ID>
+    <cbc:CopyIndicator>false</cbc:CopyIndicator>
+    <cbc:IssueDate>2010-04-10</cbc:IssueDate>
+    <cbc:Note>Instruction to return goods that are badly sent to you.</cbc:Note>
+    <cac:SellerSupplierParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Arancio Forniture spa</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Dell'Arcoveggio</cbc:StreetName>
+                <cbc:BuildingNumber>403</cbc:BuildingNumber>
+                <cbc:CityName>Bologna</cbc:CityName>
+                <cbc:PostalZone>40129</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Rossi</cbc:Name>
+                <cbc:Telephone>0039 051 23000000</cbc:Telephone>
+                <cbc:Telefax>0039 051 23000023</cbc:Telefax>
+                <cbc:ElectronicMail>rossi@arancioforniture.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:SellerSupplierParty>
+    <cac:RetailerCustomerParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Beta Shop</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Emilia</cbc:StreetName>
+                <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                <cbc:CityName>Modena</cbc:CityName>
+                <cbc:PostalZone>41121</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Delta</cbc:Name>
+                <cbc:Telephone>0039 059 33000000</cbc:Telephone>
+                <cbc:Telefax>0039 059 33000055</cbc:Telefax>
+                <cbc:ElectronicMail>delta@betashop.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:RetailerCustomerParty>
+    <cac:ManufacturerParty>
+        <cac:PartyName>
+            <cbc:Name>AZ Outsourcing srl</cbc:Name>
+        </cac:PartyName>
+        <cac:PostalAddress>
+            <cbc:StreetName>Via Bolognese</cbc:StreetName>
+            <cbc:BuildingNumber>199</cbc:BuildingNumber>
+            <cbc:CityName>Bologna</cbc:CityName>
+            <cbc:PostalZone>40129</cbc:PostalZone>
+            <cac:Country>
+                <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                <cbc:Name>Italy</cbc:Name>
+            </cac:Country>
+        </cac:PostalAddress>
+        <cac:Contact>
+            <cbc:Name>Mr Verdi</cbc:Name>
+            <cbc:Telephone>0039 051 25400000</cbc:Telephone>
+            <cbc:Telefax>0039 051 25400023</cbc:Telefax>
+            <cbc:ElectronicMail>verdi@azoutsourcing.it</cbc:ElectronicMail>
+        </cac:Contact>
+    </cac:ManufacturerParty>
+    <cac:Shipment>
+        <cbc:ID>51022</cbc:ID>
+        <cac:Consignment>
+            <cbc:ID>510</cbc:ID>
+        </cac:Consignment>
+        <cac:Delivery>
+            <cac:DeliveryAddress>
+                <cbc:StreetName>Via Dell'Arcoveggio</cbc:StreetName>
+                <cbc:BuildingNumber>403</cbc:BuildingNumber>
+                <cbc:CityName>Bologna</cbc:CityName>
+                <cbc:PostalZone>40129</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:DeliveryAddress>
+            <cac:Despatch>
+                <cac:DespatchAddress>
+                    <cbc:StreetName>Via Emilia</cbc:StreetName>
+                    <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                    <cbc:CityName>Modena</cbc:CityName>
+                    <cbc:PostalZone>41121</cbc:PostalZone>
+                    <cac:Country>
+                        <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                        <cbc:Name>Italy</cbc:Name>
+                    </cac:Country>
+                </cac:DespatchAddress>
+            </cac:Despatch>
+        </cac:Delivery>
+    </cac:Shipment>
+    <cac:InstructionForReturnsLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:Quantity unitCode="NAR">20</cbc:Quantity>
+        <cac:Item>
+            <cbc:Description>Denim Jeans Jacket</cbc:Description>
+            <cbc:Name>Jeans Jacket man</cbc:Name>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>AA109</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>YX401</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:InstructionForReturnsLine>
+    <cac:InstructionForReturnsLine>
+        <cbc:ID>2</cbc:ID>
+        <cbc:Quantity unitCode="NAR">5</cbc:Quantity>
+        <cac:Item>
+            <cbc:Description>Leather Jacket</cbc:Description>
+            <cbc:Name>Leather Jacket man</cbc:Name>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>AA128</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>YX233</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:InstructionForReturnsLine>
+</InstructionForReturns>

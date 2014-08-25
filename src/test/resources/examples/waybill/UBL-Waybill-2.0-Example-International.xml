@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waybill xmlns="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:Waybill-2.0:samples-2.0-draft</cbc:CustomizationID>
+	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sample-international-scenario</cbc:ProfileID>
+	<cbc:ID>KHN23-44044-1</cbc:ID>
+	<cbc:CarrierAssignedID>123456789987654321</cbc:CarrierAssignedID>
+	<cbc:UUID>74638995-D67E-002F-436-8G17366352B1</cbc:UUID>
+	<cbc:IssueDate>2005-06-25</cbc:IssueDate>
+	<cbc:IssueTime>09:00:00.0Z</cbc:IssueTime>
+	<cbc:Name>Air Waybill</cbc:Name>
+	<cbc:ShippingOrderID>KHN23-44044</cbc:ShippingOrderID>
+	<cbc:AdValoremIndicator>false</cbc:AdValoremIndicator>
+	<cbc:DeclaredCarriageValueAmount currencyID="USD">1500.00</cbc:DeclaredCarriageValueAmount>
+	<cac:ConsignorParty>
+		<cac:PartyName>
+			<cbc:Name>Consortial</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Boston Road</cbc:StreetName>
+			<cbc:BuildingName>Suite M-102</cbc:BuildingName>
+			<cbc:BuildingNumber>630</cbc:BuildingNumber>
+			<cbc:CityName>Billerica</cbc:CityName>
+			<cbc:PostalZone>01821</cbc:PostalZone>
+			<cbc:CountrySubentity>Massachusetts</cbc:CountrySubentity>
+			<cbc:CountrySubentityCode>MA</cbc:CountrySubentityCode>
+			<cac:Country>
+				<cbc:IdentificationCode>US</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:Contact>
+			<cbc:Name>Mrs Bouquet</cbc:Name>
+			<cbc:Telephone> +1 158 1233714</cbc:Telephone>
+			<cbc:Telefax>+ 1 158 1233856</cbc:Telefax>
+			<cbc:ElectronicMail>bouquet@fpconsortial.com</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:ConsignorParty>
+	<cac:CarrierParty>
+		<cac:PartyName>
+			<cbc:Name>United Airfreight</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:ID>Freight Bookings</cbc:ID>
+			<cbc:Telephone>+1 3362 4788</cbc:Telephone>
+			<cbc:ElectronicMail>bookings@unitedfreight.com</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:CarrierParty>
+	<cac:FreightForwarderParty>
+		<cac:PartyName>
+			<cbc:Name>One-Stop Forwarders</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:Postbox>99043</cbc:Postbox>
+			<cbc:CityName>Boston</cbc:CityName>
+			<cbc:PostalZone>02210</cbc:PostalZone>
+			<cbc:CountrySubentityCode>MA</cbc:CountrySubentityCode>
+			<cac:Country>
+				<cbc:IdentificationCode>US</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:Contact>
+			<cbc:Name>Con Solidador</cbc:Name>
+			<cbc:Telephone> +1 343 1453654</cbc:Telephone>
+			<cbc:Telefax>+1 343 1453655</cbc:Telefax>
+			<cbc:ElectronicMail>ctanner@onestopfreight.com</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:FreightForwarderParty>
+	<cac:Shipment>
+		<cbc:ID>CONS-0001</cbc:ID>
+		<cbc:GrossWeightMeasure unitCode="KGM">130</cbc:GrossWeightMeasure>
+		<cbc:NetWeightMeasure unitCode="KGM">110</cbc:NetWeightMeasure>
+		<cbc:NetNetWeightMeasure unitCode="KGM">100</cbc:NetNetWeightMeasure>
+		<cbc:GrossVolumeMeasure unitCode="MTQ">2</cbc:GrossVolumeMeasure>
+		<cbc:NetVolumeMeasure unitCode="MTQ">2.235</cbc:NetVolumeMeasure>
+		<cbc:TotalGoodsItemQuantity>1</cbc:TotalGoodsItemQuantity>
+		<cbc:TotalTransportHandlingUnitQuantity>10</cbc:TotalTransportHandlingUnitQuantity>
+		<cbc:InsuranceValueAmount currencyID="USD">1000.00</cbc:InsuranceValueAmount>
+		<cbc:DeclaredCustomsValueAmount currencyID="GBP">524.80</cbc:DeclaredCustomsValueAmount>
+		<cbc:FreeOnBoardValueAmount currencyID="USD">1200.00</cbc:FreeOnBoardValueAmount>
+		<cbc:SpecialInstructions>Beeswax becomes liquid at 50'C</cbc:SpecialInstructions>
+		<cac:Consignment>
+			<cbc:ID schemeAgencyName="WCO" schemeName="Unique Consignment Reference">2005US12345678998765432112345678</cbc:ID>
+			<cbc:TariffDescription>Beeswax, other insect waxes and spermacetti</cbc:TariffDescription>
+			<cbc:TariffCode>15219000</cbc:TariffCode>
+			<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+			<cac:ConsigneeParty>
+				<cac:PartyName>
+					<cbc:Name>IYT Corporation</cbc:Name>
+				</cac:PartyName>
+				<cac:PostalAddress>
+					<cbc:StreetName>Avon Way</cbc:StreetName>
+					<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+					<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+					<cbc:CityName>Bridgtow</cbc:CityName>
+					<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+					<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>3rd Floor, Room 5</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:PostalAddress>
+				<cac:Contact>
+					<cbc:Name>Mr Fred Churchill</cbc:Name>
+					<cbc:Telephone>+44 127 2653214</cbc:Telephone>
+					<cbc:Telefax>+44 127 2653215</cbc:Telefax>
+					<cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:ConsigneeParty>
+			<cac:NotifyParty>
+				<cac:PartyName>
+					<cbc:Name>IYT Corporation</cbc:Name>
+				</cac:PartyName>
+				<cac:PostalAddress>
+					<cbc:StreetName>Avon Way</cbc:StreetName>
+					<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+					<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+					<cbc:CityName>Bridgtow</cbc:CityName>
+					<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+					<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>3rd Floor, Room 5</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:PostalAddress>
+				<cac:Contact>
+					<cbc:Name>Mr Fred Churchill</cbc:Name>
+					<cbc:Telephone>+44 127 2653214</cbc:Telephone>
+					<cbc:Telefax>+44 127 2653215</cbc:Telefax>
+					<cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:NotifyParty>
+			<cac:FinalDeliveryParty>
+				<cac:PartyName>
+					<cbc:Name>The Terminus</cbc:Name>
+				</cac:PartyName>
+				<cac:PostalAddress>
+					<cbc:StreetName>Avon Way</cbc:StreetName>
+					<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+					<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+					<cbc:CityName>Bridgtow</cbc:CityName>
+					<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+					<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>3rd Floor, Room 5</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:PostalAddress>
+				<cac:Contact>
+					<cbc:Name>S Massiah</cbc:Name>
+					<cbc:Telephone>+ 44 127 98876545</cbc:Telephone>
+					<cbc:Telefax>+ 44 127 98876546</cbc:Telefax>
+					<cbc:ElectronicMail>smassiah@the-email.co.uk</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:FinalDeliveryParty>
+			<cac:OriginalDepartureCountry>
+				<cbc:IdentificationCode>US</cbc:IdentificationCode>
+			</cac:OriginalDepartureCountry>
+			<cac:FinalDestinationCountry>
+				<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+			</cac:FinalDestinationCountry>
+			<cac:TransportContract>
+				<cbc:ID>CONS-001</cbc:ID>
+				<cbc:IssueDate>2005-06-24</cbc:IssueDate>
+				<cbc:ContractType>Forwarding Instructions</cbc:ContractType>
+				<cac:ValidityPeriod>
+					<cbc:StartDate>2005-06-25</cbc:StartDate>
+					<cbc:StartTime>01:00:00.0Z</cbc:StartTime>
+					<cbc:EndDate>2005-06-30</cbc:EndDate>
+					<cbc:EndTime>18:00:00.0Z</cbc:EndTime>
+				</cac:ValidityPeriod>
+				<cac:ContractDocumentReference>
+					<cbc:ID>normalizedString</cbc:ID>
+					<cbc:CopyIndicator>false</cbc:CopyIndicator>
+					<cbc:UUID>normalizedString</cbc:UUID>
+					<cbc:IssueDate>1967-08-13</cbc:IssueDate>
+					<cbc:DocumentTypeCode>normalizedString</cbc:DocumentTypeCode>
+					<cbc:DocumentType>String</cbc:DocumentType>
+					<cbc:XPath>String</cbc:XPath>
+					<cbc:XPath>String</cbc:XPath>
+					<cac:Attachment>
+						<cbc:EmbeddedDocumentBinaryObject mimeCode="application/CSTAdata+xml">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+						<cac:ExternalReference>
+							<cbc:URI>normalizedString</cbc:URI>
+							<cbc:DocumentHash>String</cbc:DocumentHash>
+							<cbc:ExpiryDate>1967-08-13</cbc:ExpiryDate>
+							<cbc:ExpiryTime>14:20:00.0Z</cbc:ExpiryTime>
+						</cac:ExternalReference>
+					</cac:Attachment>
+				</cac:ContractDocumentReference>
+				<cac:ContractDocumentReference>
+					<cbc:ID>normalizedString</cbc:ID>
+					<cbc:CopyIndicator>false</cbc:CopyIndicator>
+					<cbc:UUID>normalizedString</cbc:UUID>
+					<cbc:IssueDate>1967-08-13</cbc:IssueDate>
+					<cbc:DocumentTypeCode>normalizedString</cbc:DocumentTypeCode>
+					<cbc:DocumentType>String</cbc:DocumentType>
+					<cbc:XPath>String</cbc:XPath>
+					<cbc:XPath>String</cbc:XPath>
+					<cac:Attachment>
+						<cbc:EmbeddedDocumentBinaryObject mimeCode="application/CSTAdata+xml">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+						<cac:ExternalReference>
+							<cbc:URI>normalizedString</cbc:URI>
+							<cbc:DocumentHash>String</cbc:DocumentHash>
+							<cbc:ExpiryDate>1967-08-13</cbc:ExpiryDate>
+							<cbc:ExpiryTime>14:20:00.0Z</cbc:ExpiryTime>
+						</cac:ExternalReference>
+					</cac:Attachment>
+				</cac:ContractDocumentReference>
+			</cac:TransportContract>
+			<cac:OriginalDespatchTransportationService>
+				<cbc:TransportServiceCode>Door to Pier</cbc:TransportServiceCode>
+			</cac:OriginalDespatchTransportationService>
+			<cac:FinalDeliveryTransportationService>
+				<cbc:TransportServiceCode>Pier to Pier</cbc:TransportServiceCode>
+			</cac:FinalDeliveryTransportationService>
+			<cac:DeliveryTerms>
+				<cbc:ID>FOB Destination</cbc:ID>
+				<cac:DeliveryLocation>
+					<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">GBBRS</cbc:ID>
+					<cbc:Description>Bristol</cbc:Description>
+				</cac:DeliveryLocation>
+			</cac:DeliveryTerms>
+			<cac:PaymentTerms>
+				<cbc:PaymentMeansID>Bankers Cheque</cbc:PaymentMeansID>
+			</cac:PaymentTerms>
+			<cac:FreightAllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:AllowanceChargeReason>Freight charges</cbc:AllowanceChargeReason>
+				<cbc:SequenceNumeric>1</cbc:SequenceNumeric>
+				<cbc:Amount currencyID="USD">254.00</cbc:Amount>
+			</cac:FreightAllowanceCharge>
+			<cac:FreightAllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:AllowanceChargeReasonCode>79</cbc:AllowanceChargeReasonCode>
+				<cbc:AllowanceChargeReason>Sundry discount</cbc:AllowanceChargeReason>
+				<cbc:MultiplierFactorNumeric>0.05</cbc:MultiplierFactorNumeric>
+				<cbc:SequenceNumeric>2</cbc:SequenceNumeric>
+				<cbc:Amount currencyID="USD">12.70</cbc:Amount>
+				<cbc:BaseAmount currencyID="USD">254.00</cbc:BaseAmount>
+			</cac:FreightAllowanceCharge>
+		</cac:Consignment>
+		<cac:GoodsItem>
+			<cbc:ID>1</cbc:ID>
+			<cbc:SequenceNumberID>1</cbc:SequenceNumberID>
+			<cbc:Description>Acme beeswax</cbc:Description>
+			<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+			<cbc:DeclaredCustomsValueAmount currencyID="GBP">524.80</cbc:DeclaredCustomsValueAmount>
+			<cbc:DeclaredStatisticsValueAmount currencyID="USD">1000.00</cbc:DeclaredStatisticsValueAmount>
+			<cbc:FreeOnBoardValueAmount currencyID="USD">1241.30</cbc:FreeOnBoardValueAmount>
+			<cbc:InsuranceValueAmount currencyID="USD">1241.30</cbc:InsuranceValueAmount>
+			<cbc:ValueAmount currencyID="USD">1000.00</cbc:ValueAmount>
+			<cbc:GrossWeightMeasure unitCode="KGM">130</cbc:GrossWeightMeasure>
+			<cbc:NetWeightMeasure unitCode="KGM">110</cbc:NetWeightMeasure>
+			<cbc:NetNetWeightMeasure unitCode="KGM">100</cbc:NetNetWeightMeasure>
+			<cbc:GrossVolumeMeasure unitCode="MTQ">2</cbc:GrossVolumeMeasure>
+			<cbc:NetVolumeMeasure unitCode="MTQ">2.235</cbc:NetVolumeMeasure>
+			<cbc:Quantity>10</cbc:Quantity>
+			<cbc:RequiredCustomsID>ECN12344566</cbc:RequiredCustomsID>
+			<cbc:CustomsStatusCode>Cleared</cbc:CustomsStatusCode>
+			<cbc:CustomsTariffQuantity>1000</cbc:CustomsTariffQuantity>
+			<cac:Item>
+				<cbc:Description>Beeswax</cbc:Description>
+				<cbc:Name>Acme Beeswax</cbc:Name>
+				<cac:BuyersItemIdentification>
+					<cbc:ID>6578489</cbc:ID>
+				</cac:BuyersItemIdentification>
+				<cac:SellersItemIdentification>
+					<cbc:ID>17589683</cbc:ID>
+				</cac:SellersItemIdentification>
+				<cac:OriginCountry>
+					<cbc:IdentificationCode>MX</cbc:IdentificationCode>
+					<cbc:Name>Mexico</cbc:Name>
+				</cac:OriginCountry>
+			</cac:Item>
+		</cac:GoodsItem>
+		<cac:ShipmentStage>
+			<cbc:ID>1</cbc:ID>
+			<cbc:TransportModeCode listAgencyID="6" listID="UN/ECE rec 16">3</cbc:TransportModeCode>
+			<cbc:TransportMeansTypeCode>Truck</cbc:TransportMeansTypeCode>
+			<cbc:PreCarriageIndicator>true</cbc:PreCarriageIndicator>
+			<cbc:OnCarriageIndicator>false</cbc:OnCarriageIndicator>
+			<cac:TransitPeriod>
+				<cbc:StartDate>2005-06-25</cbc:StartDate>
+				<cbc:StartTime>11:35:00.0Z</cbc:StartTime>
+				<cbc:EndDate>2005-06-25</cbc:EndDate>
+				<cbc:EndTime>16:00:00.0Z</cbc:EndTime>
+			</cac:TransitPeriod>
+			<cac:CarrierParty>
+				<cac:PartyName>
+					<cbc:Name>Keep On Trucking</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:Telephone>+1 36222 33847</cbc:Telephone>
+				</cac:Contact>
+			</cac:CarrierParty>
+			<cac:TransportMeans>
+				<cac:RoadTransport>
+					<cbc:LicensePlateID>2652 WE</cbc:LicensePlateID>
+				</cac:RoadTransport>
+			</cac:TransportMeans>
+		</cac:ShipmentStage>
+		<cac:ShipmentStage>
+			<cbc:ID>2</cbc:ID>
+			<cbc:TransportModeCode listAgencyID="6" listID="UN/ECE rec 16">4</cbc:TransportModeCode>
+			<cbc:TransportMeansTypeCode>Plane</cbc:TransportMeansTypeCode>
+			<cbc:PreCarriageIndicator>false</cbc:PreCarriageIndicator>
+			<cbc:OnCarriageIndicator>false</cbc:OnCarriageIndicator>
+			<cac:TransitPeriod>
+				<cbc:StartDate>2005-06-25</cbc:StartDate>
+				<cbc:StartTime>23:20:00.0Z</cbc:StartTime>
+			</cac:TransitPeriod>
+			<cac:CarrierParty>
+				<cac:PartyName>
+					<cbc:Name>United Airfreight</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:ID>Freight Bookings</cbc:ID>
+					<cbc:Telephone>+1 3362 4788</cbc:Telephone>
+					<cbc:ElectronicMail>bookings@unitedfreight.com</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:CarrierParty>
+			<cac:TransportMeans>
+				<cbc:JourneyID>UA 1234</cbc:JourneyID>
+				<cac:AirTransport>
+					<cbc:AircraftID>A-127763-747</cbc:AircraftID>
+				</cac:AirTransport>
+			</cac:TransportMeans>
+			<cac:LoadingPortLocation>
+				<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">USBOS</cbc:ID>
+				<cbc:Description>Boston Airport</cbc:Description>
+			</cac:LoadingPortLocation>
+			<cac:UnloadingPortLocation>
+				<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">GBBRS</cbc:ID>
+				<cbc:Description>Bristol Airport</cbc:Description>
+			</cac:UnloadingPortLocation>
+			<cac:TransshipPortLocation>
+				<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">GBLHR</cbc:ID>
+				<cbc:Description>Heathrow Apt/London</cbc:Description>
+			</cac:TransshipPortLocation>
+		</cac:ShipmentStage>
+		<cac:Delivery>
+			<cbc:Quantity>1</cbc:Quantity>
+			<cbc:LatestDeliveryDate>2005-06-30</cbc:LatestDeliveryDate>
+			<cbc:LatestDeliveryTime>18:00:00.0Z</cbc:LatestDeliveryTime>
+			<cbc:TrackingID>NKH7712289-03339-000128</cbc:TrackingID>
+			<cac:DeliveryAddress>
+				<cbc:StreetName>Avon Way</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Bridgtow</cbc:CityName>
+				<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+				<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>3rd Floor, Room 5</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:DeliveryAddress>
+			<cac:RequestedDeliveryPeriod>
+				<cbc:StartDate>2005-06-29</cbc:StartDate>
+				<cbc:StartTime>01:00:00.0Z</cbc:StartTime>
+				<cbc:EndDate>2005-06-30</cbc:EndDate>
+				<cbc:EndTime>18:00:00.0Z</cbc:EndTime>
+			</cac:RequestedDeliveryPeriod>
+			<cac:EstimatedDeliveryPeriod>
+				<cbc:StartDate>2005-06-30</cbc:StartDate>
+				<cbc:StartTime>01:00:00.0Z</cbc:StartTime>
+			</cac:EstimatedDeliveryPeriod>
+			<cac:DeliveryParty>
+				<cac:PartyName>
+					<cbc:Name>The Terminus</cbc:Name>
+				</cac:PartyName>
+				<cac:Contact>
+					<cbc:Name>S Massiah</cbc:Name>
+					<cbc:Telephone>+ 44 127 98876545</cbc:Telephone>
+					<cbc:Telefax>+ 44 127 98876546</cbc:Telefax>
+					<cbc:ElectronicMail>smassiah@the-email.co.uk</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:DeliveryParty>
+			<cac:Despatch>
+				<cbc:ActualDespatchDate>2005-06-25</cbc:ActualDespatchDate>
+				<cbc:ActualDespatchTime>11:35:00.0Z</cbc:ActualDespatchTime>
+				<cac:DespatchAddress>
+					<cbc:StreetName>Boston Road</cbc:StreetName>
+					<cbc:BuildingName>Suite M-102</cbc:BuildingName>
+					<cbc:BuildingNumber>630</cbc:BuildingNumber>
+					<cbc:CityName>Billerica</cbc:CityName>
+					<cbc:PostalZone>01821</cbc:PostalZone>
+					<cbc:CountrySubentity>Massachusetts</cbc:CountrySubentity>
+					<cbc:CountrySubentityCode>MA</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode>US</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:DespatchAddress>
+				<cac:DespatchParty>
+					<cac:PartyName>
+						<cbc:Name>Consortial</cbc:Name>
+					</cac:PartyName>
+				</cac:DespatchParty>
+				<cac:Contact>
+					<cbc:Name>Mrs Bouquet</cbc:Name>
+					<cbc:Telephone> +1 158 1233714</cbc:Telephone>
+					<cbc:Telefax>+ 1 158 1233856</cbc:Telefax>
+					<cbc:ElectronicMail>bouquet@fpconsortial.com</cbc:ElectronicMail>
+				</cac:Contact>
+			</cac:Despatch>
+		</cac:Delivery>
+		<cac:TransportHandlingUnit>
+			<cbc:ID>1</cbc:ID>
+			<cbc:TransportHandlingUnitTypeCode listAgencyName="United Nations Economic Commission for Europe" listID="TRED 8053">PA</cbc:TransportHandlingUnitTypeCode>
+			<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+			<cbc:TotalGoodsItemQuantity>10</cbc:TotalGoodsItemQuantity>
+			<cbc:TotalPackageQuantity>10</cbc:TotalPackageQuantity>
+			<cac:ActualPackage>
+				<cbc:Quantity>10</cbc:Quantity>
+				<cbc:PackagingTypeCode listAgencyID="6" listID="UN/ECE rec 21">TB</cbc:PackagingTypeCode>
+			</cac:ActualPackage>
+		</cac:TransportHandlingUnit>
+		<cac:OriginAddress>
+			<cbc:StreetName>Boston Road</cbc:StreetName>
+			<cbc:BuildingName>Suite M-102</cbc:BuildingName>
+			<cbc:BuildingNumber>630</cbc:BuildingNumber>
+			<cbc:CityName>Billerica</cbc:CityName>
+			<cbc:PostalZone>01821</cbc:PostalZone>
+			<cbc:CountrySubentity>Massachusetts</cbc:CountrySubentity>
+			<cbc:CountrySubentityCode>MA</cbc:CountrySubentityCode>
+			<cac:Country>
+				<cbc:IdentificationCode>US</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:OriginAddress>
+		<cac:FirstArrivalPortLocation>
+			<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">GBBRS</cbc:ID>
+			<cbc:Description>Bristol</cbc:Description>
+		</cac:FirstArrivalPortLocation>
+		<cac:LastExitPortLocation>
+			<cbc:ID schemeAgencyID="6" schemeID="UN/LOCODE">USBOS</cbc:ID>
+			<cbc:Description>Boston</cbc:Description>
+		</cac:LastExitPortLocation>
+		<cac:ExportCountry>
+			<cbc:IdentificationCode>US</cbc:IdentificationCode>
+		</cac:ExportCountry>
+		<cac:FreightAllowanceCharge>
+			<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+			<cbc:AllowanceChargeReason>Freight charges</cbc:AllowanceChargeReason>
+			<cbc:SequenceNumeric>1</cbc:SequenceNumeric>
+			<cbc:Amount currencyID="USD">254.00</cbc:Amount>
+		</cac:FreightAllowanceCharge>
+		<cac:FreightAllowanceCharge>
+			<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+			<cbc:AllowanceChargeReasonCode>79</cbc:AllowanceChargeReasonCode>
+			<cbc:AllowanceChargeReason>Sundry discount</cbc:AllowanceChargeReason>
+			<cbc:MultiplierFactorNumeric>0.05</cbc:MultiplierFactorNumeric>
+			<cbc:SequenceNumeric>2</cbc:SequenceNumeric>
+			<cbc:Amount currencyID="USD">12.70</cbc:Amount>
+			<cbc:BaseAmount currencyID="USD">254.00</cbc:BaseAmount>
+		</cac:FreightAllowanceCharge>
+	</cac:Shipment>
+	<cac:DocumentReference>
+		<cbc:ID>AEG012345</cbc:ID>
+		<cbc:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</cbc:UUID>
+		<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+		<cbc:DocumentType>Order</cbc:DocumentType>
+	</cac:DocumentReference>
+	<cac:DocumentReference>
+		<cbc:ID>KHN23-44044</cbc:ID>
+		<cbc:UUID>6E09886B-DC6E-439F-82D1-7C83746352B1</cbc:UUID>
+		<cbc:IssueDate>2005-06-24</cbc:IssueDate>
+		<cbc:DocumentType>Forwarding Instructions</cbc:DocumentType>
+	</cac:DocumentReference>
+	<cac:ExchangeRate>
+		<cbc:SourceCurrencyCode>USD</cbc:SourceCurrencyCode>
+		<cbc:SourceCurrencyBaseRate>1.00</cbc:SourceCurrencyBaseRate>
+		<cbc:TargetCurrencyCode>GBP</cbc:TargetCurrencyCode>
+		<cbc:TargetCurrencyBaseRate>1.00</cbc:TargetCurrencyBaseRate>
+		<cbc:CalculationRate>1.8947</cbc:CalculationRate>
+		<cbc:MathematicOperatorCode>Multiply</cbc:MathematicOperatorCode>
+		<cbc:Date>1967-08-13</cbc:Date>
+	</cac:ExchangeRate>
+	<cac:DocumentDistribution>
+		<cbc:PrintQualifier>Copies allowed</cbc:PrintQualifier>
+		<cbc:MaximumCopiesNumeric>5</cbc:MaximumCopiesNumeric>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Consortial</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Boston Road</cbc:StreetName>
+				<cbc:BuildingName>Suite M-102</cbc:BuildingName>
+				<cbc:BuildingNumber>630</cbc:BuildingNumber>
+				<cbc:CityName>Billerica</cbc:CityName>
+				<cbc:PostalZone>01821</cbc:PostalZone>
+				<cbc:CountrySubentity>Massachusetts</cbc:CountrySubentity>
+				<cbc:CountrySubentityCode>MA</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode>US</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:Contact>
+				<cbc:Name>Mrs Bouquet</cbc:Name>
+				<cbc:Telephone> +1 158 1233714</cbc:Telephone>
+				<cbc:Telefax>+ 1 158 1233856</cbc:Telefax>
+				<cbc:ElectronicMail>bouquet@fpconsortial.com</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:DocumentDistribution>
+	<cac:DocumentDistribution>
+		<cbc:PrintQualifier>Copies allowed</cbc:PrintQualifier>
+		<cbc:MaximumCopiesNumeric>4</cbc:MaximumCopiesNumeric>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>IYT Corporation</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Avon Way</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Bridgtow</cbc:CityName>
+				<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+				<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>3rd Floor, Room 5</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:Contact>
+				<cbc:Name>Mr Fred Churchill</cbc:Name>
+				<cbc:Telephone>+44 127 2653214</cbc:Telephone>
+				<cbc:Telefax>+44 127 2653215</cbc:Telefax>
+				<cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:DocumentDistribution>
+</Waybill>

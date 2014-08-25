@@ -1,0 +1,655 @@
+<Catalogue xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:sdt="urn:oasis:names:specification:ubl:schema:xsd:SpecializedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2 xsd\UBL-Catalogue-2.0.xsd">
+	<cbc:UBLVersionID></cbc:UBLVersionID>
+	<cbc:CustomizationID>BiiCoreTrdm019</cbc:CustomizationID>
+	<cbc:ProfileID>BII01</cbc:ProfileID>
+	<cbc:ID>75fa728a-5297-4011-9731-c29dc265c762</cbc:ID>
+	<cbc:Name>PC Portatili 9</cbc:Name>
+	<cbc:IssueDate>2010-07-21</cbc:IssueDate>
+	<cbc:VersionID>001.001</cbc:VersionID>
+	<cac:ValidityPeriod>
+		<cbc:StartDate>2010-06-25</cbc:StartDate>
+		<cbc:EndDate>2010-12-24</cbc:EndDate>
+	</cac:ValidityPeriod>
+	<cac:ReferencedContract>
+		<cbc:ID>PP91</cbc:ID>
+		<cbc:ContractType>AQ</cbc:ContractType>
+	</cac:ReferencedContract>
+	<cac:ProviderParty>
+		<cbc:EndpointID schemeAgencyID="9" schemeID="GLN">0010:05359681004</cbc:EndpointID>
+		<cac:PartyIdentification>
+			<cbc:ID>0010:05359681004</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>RTI Italware S.r.l. - Computer Gross S.p.A. - ADM Services S.p.A.</cbc:Name>
+		</cac:PartyName>
+	</cac:ProviderParty>
+	<cac:ReceiverParty>
+		<cbc:EndpointID schemeAgencyID="9" schemeID="GLN">0010:05359681005</cbc:EndpointID>
+		<cac:PartyIdentification>
+			<cbc:ID>0010:05359681005</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Consip S.p.A.</cbc:Name>
+		</cac:PartyName>
+	</cac:ReceiverParty>
+	<cac:SellerSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeAgencyID="9" schemeID="GLN">0010:05359681004</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyID="9" schemeID="GLN">0010:05359681004</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>RTI Italware S.r.l. - Computer Gross S.p.A. - ADM Services S.p.A.</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID>TestID</cbc:ID>
+				<cbc:Postbox></cbc:Postbox>
+				<cbc:StreetName>Via della Maglianella</cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber>65/E</cbc:BuildingNumber>
+				<cbc:Department></cbc:Department>
+				<cbc:CityName>Roma</cbc:CityName>
+				<cbc:PostalZone>00166</cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode>IT</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:Contact>
+				<cbc:Telephone>0666411156</cbc:Telephone>
+				<cbc:Telefax>0666411074</cbc:Telefax>
+				<cbc:ElectronicMail>commerciale.portatili9@italware.it</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName>Marco</cbc:FirstName>
+				<cbc:FamilyName>Magnozzi</cbc:FamilyName>
+				<cbc:MiddleName></cbc:MiddleName>
+				<cbc:JobTitle></cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:SellerSupplierParty>
+	<cac:ContractorCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeAgencyID="9" schemeID="GLN">0010:05359681005</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyID="9" schemeID="GLN">0010:05359681005</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Consip S.p.A.</cbc:Name>
+			</cac:PartyName>
+			<cac:Contact>
+				<cbc:Telephone>0685449370</cbc:Telephone>
+				<cbc:Telefax>0685449284</cbc:Telefax>
+				<cbc:ElectronicMail>paolo.luxardo@tesoro.it</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName>Paolo</cbc:FirstName>
+				<cbc:FamilyName>Luxardo</cbc:FamilyName>
+				<cbc:MiddleName></cbc:MiddleName>
+				<cbc:JobTitle>Ing.</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:ContractorCustomerParty>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode>de</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">539.73</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>HP Compaq 6730b</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>L1A_HP_WINDOWS</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID>GC_PP9</cbc:ID>
+				<cbc:DocumentType>Guida alla Convenzione</cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI>https://www.acquistinretepa.it/pls/portal/docs/PAGE/PG_CONSIP_DOC/CONVENZIONI/PC_Portatili_9/PC_Portatili_9-Guida_alla_Convenzione_Lotto_1.pdf</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:CommodityClassification>
+				<cbc:CommodityCode>CPV</cbc:CommodityCode>
+				<cbc:ItemClassificationCode>30213100-6</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:CommodityClassification>
+				<cbc:CommodityCode>eclass-4.1</cbc:CommodityCode>
+				<cbc:ItemClassificationCode>19-01-02-00</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Masterizzatore DVD</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Processore</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Memoria RAM</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Hard Disk</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Video</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Peso</cbc:Name>
+				<cbc:Value></cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name>HP Compaq</cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01_a</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		<cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode></cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">35.70</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Batteria Secondaria</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>2</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType></cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI></cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode></cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name></cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01_b</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		<cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode></cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">102.41</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Tastiera Speciale</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>3</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType></cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpeg"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI>test.jpg</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode></cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name></cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01_c</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		<cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode></cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">9.81</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Memory Key USB 8GB</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>4</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType></cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI></cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode></cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name></cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01_d</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		<cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode></cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">199.47</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>MS Office 2007 Professional</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>5</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType></cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI></cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode></cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name></cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>ID01_e</cbc:ID>
+		<cbc:ActionCode>INS</cbc:ActionCode>
+		<cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+		<cbc:OrderableUnit>Pezzo</cbc:OrderableUnit>
+		<cbc:ContentUnitQuantity>1</cbc:ContentUnitQuantity>
+		<cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+		<cbc:MinimumOrderQuantity>1</cbc:MinimumOrderQuantity>
+		
+		<cbc:WarrantyInformation></cbc:WarrantyInformation>
+		<cac:LineValidityPeriod>
+			<cbc:StartDate>2010-06-25</cbc:StartDate>
+			<cbc:EndDate>2010-12-31</cbc:EndDate>
+		</cac:LineValidityPeriod>
+		<cac:ItemComparison>
+			
+			
+		</cac:ItemComparison>
+		<cac:RequiredItemLocationQuantity>
+			
+			
+			
+			<cac:ApplicableTerritoryAddress>
+				<cbc:ID>1</cbc:ID>
+				<cbc:AddressTypeCode></cbc:AddressTypeCode>
+				<cbc:StreetName></cbc:StreetName>
+				<cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+				<cbc:BuildingNumber></cbc:BuildingNumber>
+				<cbc:CityName></cbc:CityName>
+				<cbc:PostalZone></cbc:PostalZone>
+				<cbc:CountrySubentity></cbc:CountrySubentity>
+				<cbc:Region></cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode></cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">27.57</cbc:PriceAmount>
+				
+				<cac:ValidityPeriod>
+					
+					
+				</cac:ValidityPeriod>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Sun StarOffice</cbc:Description>
+			<cbc:PackQuantity>1</cbc:PackQuantity>
+			
+			<cbc:Name></cbc:Name>
+			<cbc:Keyword>Notebook</cbc:Keyword>
+			<cac:SellersItemIdentification>
+				<cbc:ID>6</cbc:ID>
+				<cbc:ExtendedID></cbc:ExtendedID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID></cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:ItemSpecificationDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType></cbc:DocumentType>
+				<cac:Attachment>
+					<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain"></cbc:EmbeddedDocumentBinaryObject>
+					<cac:ExternalReference>
+						<cbc:URI></cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:ItemSpecificationDocumentReference>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode></cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID></cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID></cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:ManufacturerParty>
+				<cac:PartyName>
+					<cbc:Name></cbc:Name>
+				</cac:PartyName>
+			</cac:ManufacturerParty>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:ExpiryDate>2010-12-31</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+	</cac:CatalogueLine>
+</Catalogue>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Quotation xmlns="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:schema:xsd:Quotation-2-draft</cbc:CustomizationID>
+	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-request-for-quotation-draft</cbc:ProfileID>
+	<cbc:ID>QIY7655</cbc:ID>
+	<cbc:CopyIndicator>false</cbc:CopyIndicator>
+	<cbc:UUID>4D07786B-DA6D-439F-82D1-6FFFC7F4E3B1</cbc:UUID>
+	<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+	<cbc:Note>sample</cbc:Note>
+	<cac:ValidityPeriod>
+		<cbc:StartDate>2005-06-20</cbc:StartDate>
+		<cbc:EndDate>2005-07-20</cbc:EndDate>
+	</cac:ValidityPeriod>
+	<cac:RequestForQuotationDocumentReference>
+		<cbc:ID>G867B</cbc:ID>
+		<cbc:UUID>8D076867-AE6D-439F-8281-5AAFC7F4E3B1</cbc:UUID>
+		<cbc:IssueDate>2005-06-19</cbc:IssueDate>
+	</cac:RequestForQuotationDocumentReference>
+	<cac:SellerSupplierParty>
+		<cbc:CustomerAssignedAccountID>CO001</cbc:CustomerAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Consortial</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Busy Street</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Farthing</cbc:CityName>
+				<cbc:PostalZone>AA99 1BB</cbc:PostalZone>
+				<cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>The Roundabout</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
+				<cbc:CompanyID>175 269 2355</cbc:CompanyID>
+				<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mrs Bouquet</cbc:Name>
+				<cbc:Telephone>0158 1233714</cbc:Telephone>
+				<cbc:Telefax>0158 1233856</cbc:Telefax>
+				<cbc:ElectronicMail>bouquet@fpconsortial.co.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:SellerSupplierParty>
+	<cac:OriginatorCustomerParty>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>The Terminus</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Avon Way</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Bridgtow</cbc:CityName>
+				<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+				<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>3rd Floor, Room 5</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Bridgtow District Council</cbc:RegistrationName>
+				<cbc:CompanyID>12356478</cbc:CompanyID>
+				<cbc:ExemptionReason>Local Authority</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>UK VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>S Massiah</cbc:Name>
+				<cbc:Telephone>0127 98876545</cbc:Telephone>
+				<cbc:Telefax>0127 98876546</cbc:Telefax>
+				<cbc:ElectronicMail>smassiah@the-email.co.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:OriginatorCustomerParty>
+	<cac:Delivery>
+		<cac:DeliveryAddress>
+			<cbc:StreetName>Avon Way</cbc:StreetName>
+			<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+			<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+			<cbc:CityName>Bridgtow</cbc:CityName>
+			<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+			<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+			<cac:AddressLine>
+				<cbc:Line>3rd Floor, Room 5</cbc:Line>
+			</cac:AddressLine>
+			<cac:Country>
+				<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:DeliveryAddress>
+		<cac:RequestedDeliveryPeriod>
+			<cbc:StartDate>2005-06-29</cbc:StartDate>
+			<cbc:StartTime>09:30:47.0Z</cbc:StartTime>
+			<cbc:EndDate>2005-06-29</cbc:EndDate>
+			<cbc:EndTime>09:30:47.0Z</cbc:EndTime>
+		</cac:RequestedDeliveryPeriod>
+	</cac:Delivery>
+	<cac:DeliveryTerms>
+		<cbc:SpecialTerms>1% deduction for late delivery as per contract</cbc:SpecialTerms>
+	</cac:DeliveryTerms>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode>20</cbc:PaymentMeansCode>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>12345678</cbc:ID>
+			<cbc:Name>Farthing Purchasing Consortium</cbc:Name>
+			<cbc:AccountTypeCode>Current</cbc:AccountTypeCode>
+			<cbc:CurrencyCode>GBP</cbc:CurrencyCode>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID>10-26-58</cbc:ID>
+				<cbc:Name>Open Bank Ltd, Bridgstow Branch </cbc:Name>
+				<cac:FinancialInstitution>
+					<cbc:ID>10-26-58</cbc:ID>
+					<cbc:Name>Open Bank Ltd</cbc:Name>
+					<cac:Address>
+						<cbc:StreetName>City Road</cbc:StreetName>
+						<cbc:BuildingName>Banking House</cbc:BuildingName>
+						<cbc:BuildingNumber>12</cbc:BuildingNumber>
+						<cbc:CityName>London</cbc:CityName>
+						<cbc:PostalZone>AQ1 6TH</cbc:PostalZone>
+						<cbc:CountrySubentity>London
+</cbc:CountrySubentity>
+						<cac:AddressLine>
+							<cbc:Line>5th Floor</cbc:Line>
+						</cac:AddressLine>
+						<cac:Country>
+							<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:FinancialInstitution>
+				<cac:Address>
+					<cbc:StreetName>Busy Street</cbc:StreetName>
+					<cbc:BuildingName>The Mall</cbc:BuildingName>
+					<cbc:BuildingNumber>152</cbc:BuildingNumber>
+					<cbc:CityName>Farthing</cbc:CityName>
+					<cbc:PostalZone>AA99 1BB</cbc:PostalZone>
+					<cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>West Wing</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:FinancialInstitutionBranch>
+			<cac:Country>
+				<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:TransactionConditions>
+		<cbc:Description>order response required; payment is by BACS or by cheque</cbc:Description>
+	</cac:TransactionConditions>
+	<cac:AllowanceCharge>
+		<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+		<cbc:AllowanceChargeReasonCode>17</cbc:AllowanceChargeReasonCode>
+		<cbc:MultiplierFactorNumeric>0.10</cbc:MultiplierFactorNumeric>
+		<cbc:Amount currencyID="GBP">10.00</cbc:Amount>
+	</cac:AllowanceCharge>
+	<cac:DestinationCountry>
+		<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+		<cbc:Name>Great Britain</cbc:Name>
+	</cac:DestinationCountry>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+		<cbc:TaxEvidenceIndicator>false</cbc:TaxEvidenceIndicator>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>A</cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID>UK VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:QuotedMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
+		<cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>
+	</cac:QuotedMonetaryTotal>
+	<cac:QuotationLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:Note>sample</cbc:Note>
+		<cac:LineItem>
+			<cbc:ID>1</cbc:ID>
+			<cbc:Quantity unitCode="KGM">100</cbc:Quantity>
+			<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+			<cbc:TotalTaxAmount currencyID="GBP">17.50</cbc:TotalTaxAmount>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="GBP">100.00</cbc:PriceAmount>
+				<cbc:BaseQuantity unitCode="KGM">1</cbc:BaseQuantity>
+			</cac:Price>
+			<cac:Item>
+				<cbc:Description>Acme beeswax</cbc:Description>
+				<cbc:Name>beeswax</cbc:Name>
+				<cac:BuyersItemIdentification>
+					<cbc:ID>6578489</cbc:ID>
+				</cac:BuyersItemIdentification>
+				<cac:SellersItemIdentification>
+					<cbc:ID>17589683</cbc:ID>
+				</cac:SellersItemIdentification>
+			</cac:Item>
+		</cac:LineItem>
+	</cac:QuotationLine>
+</Quotation>

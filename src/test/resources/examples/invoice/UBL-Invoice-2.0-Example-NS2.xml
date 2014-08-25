@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bob:Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:Sally="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:Bob="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+	<UBLVersionID>2.0</UBLVersionID>
+	<CustomizationID>urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft</CustomizationID>
+	<ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft</ProfileID>
+	<ID>A00095678</ID>
+	<CopyIndicator>false</CopyIndicator>
+	<UUID>849FBBCE-E081-40B4-906C-94C5FF9D1AC3</UUID>
+	<IssueDate>2005-06-21</IssueDate>
+	<InvoiceTypeCode>SalesInvoice</InvoiceTypeCode>
+	<Note>sample</Note>
+	<TaxPointDate>2005-06-21</TaxPointDate>
+	<Sally:OrderReference>
+		<ID>AEG012345</ID>
+		<SalesOrderID>CON0095678</SalesOrderID>
+		<UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</UUID>
+		<IssueDate>2005-06-20</IssueDate>
+	</Sally:OrderReference>
+	<Sally:AccountingSupplierParty>
+		<CustomerAssignedAccountID>CO001</CustomerAssignedAccountID>
+		<Sally:Party>
+			<Sally:PartyName>
+				<Name>Consortial</Name>
+			</Sally:PartyName>
+			<Sally:PostalAddress>
+				<StreetName>Busy Street</StreetName>
+				<BuildingName>Thereabouts</BuildingName>
+				<BuildingNumber>56A</BuildingNumber>
+				<CityName>Farthing</CityName>
+				<PostalZone>AA99 1BB</PostalZone>
+				<CountrySubentity>Heremouthshire</CountrySubentity>
+				<Sally:AddressLine>
+					<Line>The Roundabout</Line>
+				</Sally:AddressLine>
+				<Sally:Country>
+					<IdentificationCode>GB</IdentificationCode>
+				</Sally:Country>
+			</Sally:PostalAddress>
+			<Sally:PartyTaxScheme>
+				<RegistrationName>Farthing Purchasing Consortium</RegistrationName>
+				<CompanyID>175 269 2355</CompanyID>
+				<ExemptionReason>N/A</ExemptionReason>
+				<Sally:TaxScheme>
+					<ID>VAT</ID>
+					<TaxTypeCode>VAT</TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:PartyTaxScheme>
+			<Sally:Contact>
+				<Name>Mrs Bouquet</Name>
+				<Telephone>0158 1233714</Telephone>
+				<Telefax>0158 1233856</Telefax>
+				<ElectronicMail>bouquet@fpconsortial.co.uk</ElectronicMail>
+			</Sally:Contact>
+		</Sally:Party>
+	</Sally:AccountingSupplierParty>
+	<Sally:AccountingCustomerParty>
+		<CustomerAssignedAccountID>XFB01</CustomerAssignedAccountID>
+		<SupplierAssignedAccountID>GT00978567</SupplierAssignedAccountID>
+		<Sally:Party>
+			<Sally:PartyName>
+				<Name>IYT Corporation</Name>
+			</Sally:PartyName>
+			<Sally:PostalAddress>
+				<StreetName>Avon Way</StreetName>
+				<BuildingName>Thereabouts</BuildingName>
+				<BuildingNumber>56A</BuildingNumber>
+				<CityName>Bridgtow</CityName>
+				<PostalZone>ZZ99 1ZZ</PostalZone>
+				<CountrySubentity>Avon</CountrySubentity>
+				<Sally:AddressLine>
+					<Line>3rd Floor, Room 5</Line>
+				</Sally:AddressLine>
+				<Sally:Country>
+					<IdentificationCode>GB</IdentificationCode>
+				</Sally:Country>
+			</Sally:PostalAddress>
+			<Sally:PartyTaxScheme>
+				<RegistrationName>Bridgtow District Council</RegistrationName>
+				<CompanyID>12356478</CompanyID>
+				<ExemptionReason>Local Authority</ExemptionReason>
+				<Sally:TaxScheme>
+					<ID>UK VAT</ID>
+					<TaxTypeCode>VAT</TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:PartyTaxScheme>
+			<Sally:Contact>
+				<Name>Mr Fred Churchill</Name>
+				<Telephone>0127 2653214</Telephone>
+				<Telefax>0127 2653215</Telefax>
+				<ElectronicMail>fred@iytcorporation.gov.uk</ElectronicMail>
+			</Sally:Contact>
+		</Sally:Party>
+	</Sally:AccountingCustomerParty>
+	<Sally:Delivery>
+		<ActualDeliveryDate>2005-06-20</ActualDeliveryDate>
+		<ActualDeliveryTime>11:30:00.0Z</ActualDeliveryTime>
+		<Sally:DeliveryAddress>
+			<StreetName>Avon Way</StreetName>
+			<BuildingName>Thereabouts</BuildingName>
+			<BuildingNumber>56A</BuildingNumber>
+			<CityName>Bridgtow</CityName>
+			<PostalZone>ZZ99 1ZZ</PostalZone>
+			<CountrySubentity>Avon</CountrySubentity>
+			<Sally:AddressLine>
+				<Line>3rd Floor, Room 5</Line>
+			</Sally:AddressLine>
+			<Sally:Country>
+				<IdentificationCode>GB</IdentificationCode>
+			</Sally:Country>
+		</Sally:DeliveryAddress>
+	</Sally:Delivery>
+	<Sally:PaymentMeans>
+		<PaymentMeansCode>20</PaymentMeansCode>
+		<PaymentDueDate>2005-07-21</PaymentDueDate>
+		<Sally:PayeeFinancialAccount>
+			<ID>12345678</ID>
+			<Name>Farthing Purchasing Consortium</Name>
+			<AccountTypeCode>Current</AccountTypeCode>
+			<CurrencyCode>GBP</CurrencyCode>
+			<Sally:FinancialInstitutionBranch>
+				<ID>10-26-58</ID>
+				<Name>Open Bank Ltd, Bridgstow Branch </Name>
+				<Sally:FinancialInstitution>
+					<ID>10-26-58</ID>
+					<Name>Open Bank Ltd</Name>
+					<Sally:Address>
+						<StreetName>City Road</StreetName>
+						<BuildingName>Banking House</BuildingName>
+						<BuildingNumber>12</BuildingNumber>
+						<CityName>London</CityName>
+						<PostalZone>AQ1 6TH</PostalZone>
+						<CountrySubentity>London
+</CountrySubentity>
+						<Sally:AddressLine>
+							<Line>5th Floor</Line>
+						</Sally:AddressLine>
+						<Sally:Country>
+							<IdentificationCode>GB</IdentificationCode>
+						</Sally:Country>
+					</Sally:Address>
+				</Sally:FinancialInstitution>
+				<Sally:Address>
+					<StreetName>Busy Street</StreetName>
+					<BuildingName>The Mall</BuildingName>
+					<BuildingNumber>152</BuildingNumber>
+					<CityName>Farthing</CityName>
+					<PostalZone>AA99 1BB</PostalZone>
+					<CountrySubentity>Heremouthshire</CountrySubentity>
+					<Sally:AddressLine>
+						<Line>West Wing</Line>
+					</Sally:AddressLine>
+					<Sally:Country>
+						<IdentificationCode>GB</IdentificationCode>
+					</Sally:Country>
+				</Sally:Address>
+			</Sally:FinancialInstitutionBranch>
+			<Sally:Country>
+				<IdentificationCode>GB</IdentificationCode>
+			</Sally:Country>
+		</Sally:PayeeFinancialAccount>
+	</Sally:PaymentMeans>
+	<Sally:PaymentTerms>
+		<Note>Payable within 1 calendar month from the invoice date</Note>
+	</Sally:PaymentTerms>
+	<Sally:AllowanceCharge>
+		<ChargeIndicator>false</ChargeIndicator>
+		<AllowanceChargeReasonCode>17</AllowanceChargeReasonCode>
+		<MultiplierFactorNumeric>0.10</MultiplierFactorNumeric>
+		<Amount currencyID="GBP">10.00</Amount>
+	</Sally:AllowanceCharge>
+	<Sally:TaxTotal>
+		<TaxAmount currencyID="GBP">17.50</TaxAmount>
+		<TaxEvidenceIndicator>true</TaxEvidenceIndicator>
+		<Sally:TaxSubtotal>
+			<TaxableAmount currencyID="GBP">100.00</TaxableAmount>
+			<TaxAmount currencyID="GBP">17.50</TaxAmount>
+			<Sally:TaxCategory>
+				<ID>A</ID>
+				<Sally:TaxScheme>
+					<ID>UK VAT</ID>
+					<TaxTypeCode>VAT</TaxTypeCode>
+				</Sally:TaxScheme>
+			</Sally:TaxCategory>
+		</Sally:TaxSubtotal>
+	</Sally:TaxTotal>
+	<Sally:LegalMonetaryTotal>
+		<LineExtensionAmount currencyID="GBP">100.00</LineExtensionAmount>
+		<TaxExclusiveAmount currencyID="GBP">90.00</TaxExclusiveAmount>
+		<AllowanceTotalAmount currencyID="GBP">10.00</AllowanceTotalAmount>
+		<PayableAmount currencyID="GBP">107.50</PayableAmount>
+	</Sally:LegalMonetaryTotal>
+	<Sally:InvoiceLine>
+		<ID>A</ID>
+		<InvoicedQuantity unitCode="KGM">100</InvoicedQuantity>
+		<LineExtensionAmount currencyID="GBP">100.00</LineExtensionAmount>
+		<Sally:OrderLineReference>
+			<LineID>1</LineID>
+			<SalesOrderLineID>A</SalesOrderLineID>
+			<LineStatusCode>NoStatus</LineStatusCode>
+			<Sally:OrderReference>
+				<ID>AEG012345</ID>
+				<SalesOrderID>CON0095678</SalesOrderID>
+				<UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</UUID>
+				<IssueDate>2005-06-20</IssueDate>
+			</Sally:OrderReference>
+		</Sally:OrderLineReference>
+		<Sally:TaxTotal>
+			<TaxAmount currencyID="GBP">17.50</TaxAmount>
+			<TaxEvidenceIndicator>true</TaxEvidenceIndicator>
+			<Sally:TaxSubtotal>
+				<TaxableAmount currencyID="GBP">100.00</TaxableAmount>
+				<TaxAmount currencyID="GBP">17.50</TaxAmount>
+				<Sally:TaxCategory>
+					<ID>A</ID>
+					<Percent>17.5</Percent>
+					<Sally:TaxScheme>
+						<ID>UK VAT</ID>
+						<TaxTypeCode>VAT</TaxTypeCode>
+					</Sally:TaxScheme>
+				</Sally:TaxCategory>
+			</Sally:TaxSubtotal>
+		</Sally:TaxTotal>
+		<Sally:Item>
+			<Description>Acme beeswax</Description>
+			<Name>beeswax</Name>
+			<Sally:BuyersItemIdentification>
+				<ID>6578489</ID>
+			</Sally:BuyersItemIdentification>
+			<Sally:SellersItemIdentification>
+				<ID>17589683</ID>
+			</Sally:SellersItemIdentification>
+			<Sally:ItemInstance>
+				<Sally:LotIdentification>
+					<LotNumberID>546378239</LotNumberID>
+					<ExpiryDate>2010-01-01</ExpiryDate>
+				</Sally:LotIdentification>
+			</Sally:ItemInstance>
+		</Sally:Item>
+		<Sally:Price>
+			<PriceAmount currencyID="GBP">1.00</PriceAmount>
+			<BaseQuantity unitCode="KGM">1</BaseQuantity>
+		</Sally:Price>
+	</Sally:InvoiceLine>
+</Bob:Invoice>

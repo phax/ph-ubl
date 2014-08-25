@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Order xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Order-2 D:\Daten\E-Projekte\PEPPOL\svn\dev\peppol\trunk\wp4\validation\xslt-v1\maindoc\UBL-Order-2.0.xsd">
+	<cbc:UBLVersionID 
+		schemeID="xxx" 
+		schemeName="xxx" 
+		schemeAgencyID="xxx" 
+		schemeAgencyName="xxx" 
+		schemeVersionID="xxx" 
+		schemeDataURI="xxx" 
+		schemeURI="xxx">2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID
+		schemeID="xxxschemeID" 
+		schemeName="xxxschemeName" 
+		schemeAgencyID="xxxschemeAgencyID" 
+		schemeAgencyName="xxxschemeAgencyName" 
+		schemeVersionID="xxxschemeVersionID" 
+		schemeDataURI="xxxschemeDataURI" 
+		schemeURI="xxxschemeURI">urn:www.cenbii.eu:transaction:biicoretrdm001:ver1.0</cbc:CustomizationID>
+	<cbc:ProfileID
+		schemeID="xxxschemeID" 
+		schemeName="xxxschemeName" 
+		schemeAgencyID="xxxschemeAgencyID" 
+		schemeAgencyName="xxxschemeAgencyName" 
+		schemeVersionID="xxxschemeVersionID" 
+		schemeDataURI="xxxschemeDataURI" 
+		schemeURI="xxxschemeURI">urn:www.cenbii.eu:profile:bii03:ver1.0</cbc:ProfileID>
+	<cbc:ID
+		schemeID="xxxschemeID" 
+		schemeName="xxxschemeName" 
+		schemeAgencyID="xxxschemeAgencyID" 
+		schemeAgencyName="xxxschemeAgencyName" 
+		schemeVersionID="xxxschemeVersionID" 
+		schemeDataURI="xxxschemeDataURI" 
+		schemeURI="xxxschemeURI">PM10405461</cbc:ID>
+	<cbc:IssueDate>2010-03-12</cbc:IssueDate>
+	<cbc:IssueTime>00:00:00</cbc:IssueTime>
+	<cbc:Note languageID="EN">Some Note</cbc:Note>
+	<cbc:DocumentCurrencyCode
+		listID="ISO 4217 Alpha"
+		listAgencyID="6"
+		listAgencyName="United Nations Economic Commission for Europe"
+		listName="Currency"
+		listVersionID="2001"
+		name="xxx"
+		languageID="en"
+		listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc"
+		listSchemeURI="urn:un:unece:uncefact:codelist:specification:54217:2001">EUR</cbc:DocumentCurrencyCode>
+	<cbc:AccountingCost languageID="EN">xxx</cbc:AccountingCost>
+	<cac:ValidityPeriod>
+		<cbc:EndDate>2022-12-31</cbc:EndDate>
+	</cac:ValidityPeriod>
+	<cac:QuotationDocumentReference>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+	</cac:QuotationDocumentReference>
+	<cac:OrderDocumentReference>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+	</cac:OrderDocumentReference>
+	<cac:OriginatorDocumentReference>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+		<cbc:DocumentType>xxx</cbc:DocumentType>
+	</cac:OriginatorDocumentReference>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+		<cbc:DocumentType>xxx</cbc:DocumentType>
+		<cac:Attachment>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/activemessage"/>
+			<cac:ExternalReference>
+				<cbc:URI>xxx</cbc:URI>
+			</cac:ExternalReference>
+		</cac:Attachment>
+	</cac:AdditionalDocumentReference>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+		<cbc:DocumentType>xxx</cbc:DocumentType>
+		<cac:Attachment>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/activemessage"/>
+			<cac:ExternalReference>
+				<cbc:URI>xxx</cbc:URI>
+			</cac:ExternalReference>
+		</cac:Attachment>
+	</cac:AdditionalDocumentReference>
+	<cac:Contract>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+		<cbc:ContractType>xxx</cbc:ContractType>
+	</cac:Contract>
+	<cac:BuyerCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID 
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="EN">Laajasalon ta:n hammashoitola</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:ID>
+				<cbc:Postbox languageID="EN">xxx</cbc:Postbox>
+				<cbc:StreetName languageID="EN">xxx</cbc:StreetName>
+				<cbc:AdditionalStreetName languageID="EN">xxx</cbc:AdditionalStreetName>
+				<cbc:BuildingNumber languageID="EN">xxx</cbc:BuildingNumber>
+				<cbc:Department languageID="EN">xxx</cbc:Department>
+				<cbc:CityName languageID="EN">xxx</cbc:CityName>
+				<cbc:PostalZone languageID="EN">xxx</cbc:PostalZone>
+				<cbc:CountrySubentity languageID="EN">xxx</cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode 
+						listID="ISO3166-1"
+						listAgencyID="6"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listName="Country"
+						listVersionID="0.3"
+						name="xxx"
+						languageID="en"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+						listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName languageID="en">xxx</cbc:RegistrationName>
+				<cbc:CompanyID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName languageID="en">xxx</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode
+							listID="ISO3166-1"
+							listAgencyID="6"
+							listAgencyName="United Nations Economic Commission for Europe"
+							listName="Country"
+							listVersionID="0.3"
+							name="xxx"
+							languageID="en"
+							listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+							listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+				<cac:TaxScheme>
+					<cbc:ID
+						schemeID="xxxschemeID" 
+						schemeName="xxxschemeName" 
+						schemeAgencyID="xxxschemeAgencyID" 
+						schemeAgencyName="xxxschemeAgencyName" 
+						schemeVersionID="xxxschemeVersionID" 
+						schemeDataURI="xxxschemeDataURI" 
+						schemeURI="xxxschemeURI">xxx</cbc:ID>
+					<cbc:Name languageID="en">xxx</cbc:Name>
+					<cbc:TaxTypeCode 
+						listID="xxx"
+						listAgencyID="xxx"
+						listAgencyName="xxx"
+						listName="xxx"
+						listVersionID="xxx"
+						name="xxx"
+						languageID="en"
+						listURI="xxx"
+						listSchemeURI="xxx">xxx</cbc:TaxTypeCode>
+					<cbc:CurrencyCode
+						listID="ISO 4217 Alpha"
+						listAgencyID="6"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listName="Currency"
+						listVersionID="2001"
+						name="xxx"
+						languageID="en"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc"
+						listSchemeURI="urn:un:unece:uncefact:codelist:specification:54217:2001">xxx</cbc:CurrencyCode>
+					<cac:JurisdictionRegionAddress>
+						<cbc:AddressTypeCode
+							listID="xxx"
+							listAgencyID="xxx"
+							listAgencyName="xxx"
+							listName="xxx"
+							listVersionID="xxx"
+							name="xxx"
+							languageID="en"
+							listURI="xxx"
+							listSchemeURI="xxx">xxx</cbc:AddressTypeCode>
+						<cbc:BlockName languageID="en">xxx</cbc:BlockName>
+						<cbc:InhouseMail languageID="en">xxx</cbc:InhouseMail>
+						<cbc:PlotIdentification languageID="en">xxx</cbc:PlotIdentification>
+						<cbc:CitySubdivisionName languageID="en">xxx</cbc:CitySubdivisionName>
+						<cbc:TimezoneOffset languageID="en">xxx</cbc:TimezoneOffset>
+						<cac:Country>
+							<cbc:IdentificationCode
+								listID="ISO3166-1"
+								listAgencyID="6"
+								listAgencyName="United Nations Economic Commission for Europe"
+								listName="Country"
+								listVersionID="0.3"
+								name="xxx"
+								languageID="en"
+								listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+								listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+							<cbc:Name languageID="en">xxx</cbc:Name>
+						</cac:Country>
+						<cac:LocationCoordinate>
+							<cbc:CoordinateSystemCode
+								listID="xxx"
+								listAgencyID="xxx"
+								listAgencyName="xxx"
+								listName="xxx"
+								listVersionID="xxx"
+								name="xxx"
+								languageID="en"
+								listURI="xxx"
+								listSchemeURI="xxx">xxx</cbc:CoordinateSystemCode>
+							<cbc:LatitudeDegreesMeasure unitCode="04">10</cbc:LatitudeDegreesMeasure>
+							<cbc:LatitudeMinutesMeasure unitCode="04">10</cbc:LatitudeMinutesMeasure>
+							<cbc:LatitudeDirectionCode
+								listID="Latitude Direction"
+								listAgencyID="UBL"
+								listAgencyName="OASIS Universal Business Language"
+								listName="Latitude Direction"
+								listVersionID="2.0"
+								name="xxx"
+								languageID="en"
+								listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc"
+								listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:LatitudeDirectionCode-2.0">xxx</cbc:LatitudeDirectionCode>
+							<cbc:LongitudeDegreesMeasure unitCode="04">10</cbc:LongitudeDegreesMeasure>
+							<cbc:LongitudeMinutesMeasure unitCode="04">10</cbc:LongitudeMinutesMeasure>
+							<cbc:LongitudeDirectionCode
+								listID="Longitude Direction"
+								listAgencyID="UBL"
+								listAgencyName="OASIS Universal Business Language"
+								listName="Longitude Direction"
+								listVersionID="2.0"
+								name="xxx"
+								languageID="en"
+								listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LongitudeDirectionCode-2.0.gc"
+								listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:LongitudeDirectionCode-2.0">xxx</cbc:LongitudeDirectionCode>
+						</cac:LocationCoordinate>
+					</cac:JurisdictionRegionAddress>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>xxx</cbc:RegistrationName>
+				<cbc:CompanyID>xxx</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>xxx</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode>xxx</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+				<cac:TaxScheme>
+					<cbc:ID
+						schemeID="xxxschemeID" 
+						schemeName="xxxschemeName" 
+						schemeAgencyID="xxxschemeAgencyID" 
+						schemeAgencyName="xxxschemeAgencyName" 
+						schemeVersionID="xxxschemeVersionID" 
+						schemeDataURI="xxxschemeDataURI" 
+						schemeURI="xxxschemeURI">xxx</cbc:ID>
+					<cbc:Name>xxx</cbc:Name>
+					<cbc:TaxTypeCode>xxx</cbc:TaxTypeCode>
+					<cbc:CurrencyCode>xxx</cbc:CurrencyCode>
+					<cac:JurisdictionRegionAddress>
+						<cbc:AddressTypeCode>xxx</cbc:AddressTypeCode>
+						<cbc:BlockName>xxx</cbc:BlockName>
+						<cbc:InhouseMail>xxx</cbc:InhouseMail>
+						<cbc:PlotIdentification>xxx</cbc:PlotIdentification>
+						<cbc:CitySubdivisionName>xxx</cbc:CitySubdivisionName>
+						<cbc:TimezoneOffset>xxx</cbc:TimezoneOffset>
+						<cac:Country>
+							<cbc:IdentificationCode>xxx</cbc:IdentificationCode>
+							<cbc:Name>xxx</cbc:Name>
+						</cac:Country>
+						<cac:LocationCoordinate>
+							<cbc:CoordinateSystemCode>xxx</cbc:CoordinateSystemCode>
+							<cbc:LatitudeDegreesMeasure unitCode="04">10</cbc:LatitudeDegreesMeasure>
+							<cbc:LatitudeMinutesMeasure unitCode="04">10</cbc:LatitudeMinutesMeasure>
+							<cbc:LatitudeDirectionCode>xxx</cbc:LatitudeDirectionCode>
+							<cbc:LongitudeDegreesMeasure unitCode="04">10</cbc:LongitudeDegreesMeasure>
+							<cbc:LongitudeMinutesMeasure unitCode="04">10</cbc:LongitudeMinutesMeasure>
+							<cbc:LongitudeDirectionCode>xxx</cbc:LongitudeDirectionCode>
+						</cac:LocationCoordinate>
+					</cac:JurisdictionRegionAddress>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName languageID="en">xxx</cbc:RegistrationName>
+				<cbc:CompanyID 
+						schemeID="xxxschemeID" 
+						schemeName="xxxschemeName" 
+						schemeAgencyID="xxxschemeAgencyID" 
+						schemeAgencyName="xxxschemeAgencyName" 
+						schemeVersionID="xxxschemeVersionID" 
+						schemeDataURI="xxxschemeDataURI" 
+						schemeURI="xxxschemeURI">xxx</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName languageID="en">xxx</cbc:CityName>
+					<cbc:CountrySubentity languageID="en">xxx</cbc:CountrySubentity>
+					<cac:Country>
+						<cbc:IdentificationCode 
+							listID="ISO3166-1"
+							listAgencyID="6"
+							listAgencyName="United Nations Economic Commission for Europe"
+							listName="Country"
+							listVersionID="0.3"
+							name="xxx"
+							languageID="en"
+							listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+							listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Telephone languageID="en">xxx</cbc:Telephone>
+				<cbc:Telefax languageID="en">xxx</cbc:Telefax>
+				<cbc:ElectronicMail languageID="en">xxx</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName languageID="en">xxx</cbc:FirstName>
+				<cbc:FamilyName languageID="en">xxx</cbc:FamilyName>
+				<cbc:MiddleName languageID="en">xxx</cbc:MiddleName>
+				<cbc:JobTitle languageID="en">xxx</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+		<cac:DeliveryContact>
+			<cbc:Name languageID="en">xxx</cbc:Name>
+			<cbc:Telephone languageID="en">xxx</cbc:Telephone>
+			<cbc:Telefax languageID="en">xxx</cbc:Telefax>
+			<cbc:ElectronicMail languageID="en">xxx</cbc:ElectronicMail>
+		</cac:DeliveryContact>
+	</cac:BuyerCustomerParty>
+	<cac:SellerSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID 
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name languageID="en">Laajasalon ta:n hammashoitola</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:ID>
+				<cbc:Postbox languageID="en">xxx</cbc:Postbox>
+				<cbc:StreetName languageID="en">xxx</cbc:StreetName>
+				<cbc:AdditionalStreetName languageID="en">xxx</cbc:AdditionalStreetName>
+				<cbc:BuildingNumber languageID="en">xxx</cbc:BuildingNumber>
+				<cbc:Department languageID="en">xxx</cbc:Department>
+				<cbc:CityName languageID="en">xxx</cbc:CityName>
+				<cbc:PostalZone languageID="en">xxx</cbc:PostalZone>
+				<cbc:CountrySubentity languageID="en">xxx</cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode 
+						listID="ISO3166-1"
+						listAgencyID="6"
+						listAgencyName="United Nations Economic Commission for Europe"
+						listName="Country"
+						listVersionID="0.3"
+						name="xxx"
+						languageID="en"
+						listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+						listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>xxx</cbc:RegistrationName>
+				<cbc:CompanyID>xxx</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>xxx</cbc:CityName>
+					<cbc:CountrySubentity>xxx</cbc:CountrySubentity>
+					<cac:Country>
+						<cbc:IdentificationCode>xxx</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Telephone>xxx</cbc:Telephone>
+				<cbc:Telefax>xxx</cbc:Telefax>
+				<cbc:ElectronicMail>xxx</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName>FirstName</cbc:FirstName>
+				<cbc:FamilyName>FamilyName</cbc:FamilyName>
+				<cbc:MiddleName>MiddleName</cbc:MiddleName>
+				<cbc:JobTitle>JobTitle</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:SellerSupplierParty>
+	<cac:OriginatorCustomerParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">partyID</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>OriginatorCustomerParty</cbc:Name>
+			</cac:PartyName>
+			<cac:Contact>
+				<cbc:Telephone>xxx</cbc:Telephone>
+				<cbc:Telefax>xxx</cbc:Telefax>
+				<cbc:ElectronicMail>xxx</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Person>
+				<cbc:FirstName>origFirstName</cbc:FirstName>
+				<cbc:FamilyName>origFamilyName</cbc:FamilyName>
+				<cbc:MiddleName>origMiddleName</cbc:MiddleName>
+				<cbc:JobTitle>origJobTitle</cbc:JobTitle>
+			</cac:Person>
+		</cac:Party>
+	</cac:OriginatorCustomerParty>
+<cac:Delivery>
+	<cac:DeliveryLocation>
+		<cac:Address>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:ID>
+			<cbc:Postbox languageID="en">Laajasalon ta:n hammashoitola</cbc:Postbox>
+			<cbc:StreetName  languageID="en">Koulutanhua 2</cbc:StreetName>
+			<cbc:AdditionalStreetName  languageID="en">additional street name</cbc:AdditionalStreetName>
+			<cbc:BuildingNumber  languageID="en">10</cbc:BuildingNumber>
+			<cbc:Department  languageID="en">deptxyz</cbc:Department>
+			<cbc:CityName  languageID="en">Helsinki</cbc:CityName>
+			<cbc:PostalZone languageID="en">00840</cbc:PostalZone>
+			<cbc:CountrySubentity languageID="en">FIN</cbc:CountrySubentity>
+			<cac:Country>
+				<cbc:IdentificationCode 
+					listID="ISO3166-1"
+					listAgencyID="6"
+					listAgencyName="United Nations Economic Commission for Europe"
+					listName="Country"
+					listVersionID="0.3"
+					name="xxx"
+					languageID="en"
+					listURI="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"
+					listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0">xxx</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:Address>
+	</cac:DeliveryLocation>
+	<cac:RequestedDeliveryPeriod>
+		<cbc:StartDate>2022-01-01</cbc:StartDate>
+		<cbc:EndDate>2022-12-31</cbc:EndDate>
+	</cac:RequestedDeliveryPeriod>
+	<cac:DeliveryParty>
+		<cac:PartyIdentification>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyIdentification>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Terveyskeskus</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Name>xxx</cbc:Name>
+			<cbc:Telephone>xxx</cbc:Telephone>
+			<cbc:Telefax>xxx</cbc:Telefax>
+			<cbc:ElectronicMail>xxx</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:DeliveryParty>
+</cac:Delivery>
+<cac:DeliveryTerms>
+	<cbc:ID
+		schemeID="xxxschemeID" 
+		schemeName="xxxschemeName" 
+		schemeAgencyID="xxxschemeAgencyID" 
+		schemeAgencyName="xxxschemeAgencyName" 
+		schemeVersionID="xxxschemeVersionID" 
+		schemeDataURI="xxxschemeDataURI" 
+		schemeURI="xxxschemeURI">xxx</cbc:ID>
+	<cbc:SpecialTerms languageID="en">xxx</cbc:SpecialTerms>
+	<cac:DeliveryLocation>
+		<cbc:ID
+			schemeID="xxxschemeID" 
+			schemeName="xxxschemeName" 
+			schemeAgencyID="xxxschemeAgencyID" 
+			schemeAgencyName="xxxschemeAgencyName" 
+			schemeVersionID="xxxschemeVersionID" 
+			schemeDataURI="xxxschemeDataURI" 
+			schemeURI="xxxschemeURI">xxx</cbc:ID>
+	</cac:DeliveryLocation>
+</cac:DeliveryTerms>
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReason languageID="en">xxx</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="HUF">10</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReason>xxx</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="HUF">10</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:TaxTotal>
+	<cbc:TaxAmount currencyID="HUF">5</cbc:TaxAmount>
+</cac:TaxTotal>
+<cac:TaxTotal>
+	<cbc:TaxAmount currencyID="HUF">5</cbc:TaxAmount>
+</cac:TaxTotal>
+<cac:AnticipatedMonetaryTotal>
+	<cbc:LineExtensionAmount currencyID="AED">20</cbc:LineExtensionAmount>
+	<cbc:AllowanceTotalAmount currencyID="AED">10</cbc:AllowanceTotalAmount>
+	<cbc:ChargeTotalAmount currencyID="AED">10</cbc:ChargeTotalAmount>
+	<cbc:PayableAmount currencyID="AED">30</cbc:PayableAmount>
+</cac:AnticipatedMonetaryTotal>
+	<cac:OrderLine>
+		<cbc:Note languageID="EN">xxx</cbc:Note>
+		<cac:LineItem>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">1</cbc:ID>
+			<cbc:Quantity unitCode="KPO">10</cbc:Quantity>
+			<cbc:LineExtensionAmount currencyID="AED">10</cbc:LineExtensionAmount>
+			<cbc:TotalTaxAmount currencyID="EUR">15.18</cbc:TotalTaxAmount>
+			<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+			<cbc:AccountingCost languageID="en">xxx</cbc:AccountingCost>
+			<cac:Delivery>
+				<cac:RequestedDeliveryPeriod>
+					<cbc:StartDate>2022-01-01</cbc:StartDate>
+					<cbc:EndDate>2022-12-31</cbc:EndDate>
+				</cac:RequestedDeliveryPeriod>
+			</cac:Delivery>
+			<cac:OriginatorParty>
+				<cac:PartyIdentification>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">xxx</cbc:ID>
+				</cac:PartyIdentification>
+				<cac:PartyName>
+					<cbc:Name languageID="en">xxx</cbc:Name>
+				</cac:PartyName>
+			</cac:OriginatorParty>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+				<cbc:BaseQuantity unitCode="04">10</cbc:BaseQuantity>
+			</cac:Price>
+			<cac:Item>
+				<cbc:Description languageID="en">xxx</cbc:Description>
+				<cbc:Name languageID="en">Koetin 18-19Xsi</cbc:Name>
+				<cac:SellersItemIdentification>
+					<cbc:ID>19598</cbc:ID>
+				</cac:SellersItemIdentification>
+				<cac:StandardItemIdentification>
+					<cbc:ID
+						schemeID="xxxschemeID" 
+						schemeName="xxxschemeName" 
+						schemeAgencyID="xxxschemeAgencyID" 
+						schemeAgencyName="xxxschemeAgencyName" 
+						schemeVersionID="xxxschemeVersionID" 
+						schemeDataURI="xxxschemeDataURI" 
+						schemeURI="xxxschemeURI">xxx</cbc:ID>
+				</cac:StandardItemIdentification>
+				<cac:AdditionalItemProperty>
+					<cbc:Name languageID="en">xxx</cbc:Name>
+					<cbc:Value languageID="en">xxx</cbc:Value>
+				</cac:AdditionalItemProperty>
+			</cac:Item>
+		</cac:LineItem>
+	</cac:OrderLine>
+	<cac:OrderLine>
+		<cbc:Note languageID="EN">xxx</cbc:Note>
+		<cac:LineItem>
+			<cbc:ID
+				schemeID="xxxschemeID" 
+				schemeName="xxxschemeName" 
+				schemeAgencyID="xxxschemeAgencyID" 
+				schemeAgencyName="xxxschemeAgencyName" 
+				schemeVersionID="xxxschemeVersionID" 
+				schemeDataURI="xxxschemeDataURI" 
+				schemeURI="xxxschemeURI">2</cbc:ID>
+			<cbc:Quantity unitCode="KPO">10</cbc:Quantity>
+			<cbc:LineExtensionAmount currencyID="AED">10</cbc:LineExtensionAmount>
+			<cbc:TotalTaxAmount currencyID="EUR">15.18</cbc:TotalTaxAmount>
+			<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+			<cbc:AccountingCost>xxx</cbc:AccountingCost>
+			<cac:Delivery>
+				<cac:RequestedDeliveryPeriod>
+					<cbc:StartDate>2022-01-01</cbc:StartDate>
+					<cbc:EndDate>2022-12-31</cbc:EndDate>
+				</cac:RequestedDeliveryPeriod>
+			</cac:Delivery>
+			<cac:OriginatorParty>
+				<cac:PartyIdentification>
+				<cbc:ID
+					schemeID="xxxschemeID" 
+					schemeName="xxxschemeName" 
+					schemeAgencyID="xxxschemeAgencyID" 
+					schemeAgencyName="xxxschemeAgencyName" 
+					schemeVersionID="xxxschemeVersionID" 
+					schemeDataURI="xxxschemeDataURI" 
+					schemeURI="xxxschemeURI">xxx</cbc:ID>
+				</cac:PartyIdentification>
+				<cac:PartyName>
+					<cbc:Name>xxx</cbc:Name>
+				</cac:PartyName>
+			</cac:OriginatorParty>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+				<cbc:BaseQuantity>10</cbc:BaseQuantity>
+			</cac:Price>
+			<cac:Item>
+				<cbc:Description>xxx</cbc:Description>
+				<cbc:Name>Koetin 18-19Xsi</cbc:Name>
+				<cac:SellersItemIdentification>
+					<cbc:ID>19598</cbc:ID>
+				</cac:SellersItemIdentification>
+				<cac:StandardItemIdentification>
+					<cbc:ID>xxx</cbc:ID>
+				</cac:StandardItemIdentification>
+				<cac:AdditionalItemProperty>
+					<cbc:Name>xxx</cbc:Name>
+					<cbc:Value>xxx</cbc:Value>
+				</cac:AdditionalItemProperty>
+			</cac:Item>
+		</cac:LineItem>
+	</cac:OrderLine>
+</Order>

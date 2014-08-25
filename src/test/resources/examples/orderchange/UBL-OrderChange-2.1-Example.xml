@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderChange xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biicoretrdmXYZ:ver1.0</cbc:CustomizationID>
+  <cbc:ProfileID schemeAgencyID="BII" schemeID="Profile">urn:www.cenbii.eu:profile:BIIXYZ:ver1.0</cbc:ProfileID>
+  <cbc:ID>7</cbc:ID>
+  <cbc:IssueDate>2010-01-21</cbc:IssueDate>
+  <cbc:IssueTime>12:30:00</cbc:IssueTime>
+  <cbc:SequenceNumberID>1</cbc:SequenceNumberID>
+  <cbc:Note>Information text for the whole order change</cbc:Note>
+  <cac:OrderReference>
+    <cbc:ID>34</cbc:ID>
+  </cac:OrderReference>
+  <cac:BuyerCustomerParty>
+    <cac:Party>
+      <cbc:EndpointID schemeAgencyID="9" schemeID="GLN">7300072311115</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID schemeAgencyID="9" schemeID="GLN">7300070011115</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyIdentification>
+        <cbc:ID>PartyID123</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>Johnssons byggvaror</cbc:Name>
+      </cac:PartyName>
+    </cac:Party>
+  </cac:BuyerCustomerParty>
+  <cac:SellerSupplierParty>
+    <cac:Party>
+      <cbc:EndpointID schemeAgencyID="9" schemeID="GLN">7302347231111</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>SellerPartyID123</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>Moderna Produkter AB</cbc:Name>
+      </cac:PartyName>
+    </cac:Party>
+  </cac:SellerSupplierParty>
+  <cac:OrderLine>
+    <cbc:Note>Freetext note on line 1</cbc:Note>
+    <cac:LineItem>
+      <cbc:ID>1</cbc:ID>
+      <cbc:LineStatusCode listAgencyID="UBL" listName="Line Status">Revised</cbc:LineStatusCode>
+      <cbc:Quantity unitCode="LTR">240</cbc:Quantity>
+      <cbc:LineExtensionAmount currencyID="SEK">12000</cbc:LineExtensionAmount>
+      <cbc:TotalTaxAmount currencyID="SEK">20</cbc:TotalTaxAmount>
+      <cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+      <cbc:AccountingCostCode>ProjectID123</cbc:AccountingCostCode>
+      <cac:Delivery>
+        <cac:RequestedDeliveryPeriod>
+          <cbc:StartDate>2010-02-10</cbc:StartDate>
+          <cbc:EndDate>2010-02-25</cbc:EndDate>
+        </cac:RequestedDeliveryPeriod>
+      </cac:Delivery>
+      <cac:OriginatorParty>
+        <cac:PartyIdentification>
+          <cbc:ID schemeAgencyID="ZZZ" schemeID="ZZZ">EmployeeXXX</cbc:ID>
+        </cac:PartyIdentification>
+        <cac:PartyName>
+          <cbc:Name>Josef K.</cbc:Name>
+        </cac:PartyName>
+      </cac:OriginatorParty>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="SEK">50</cbc:PriceAmount>
+        <cbc:BaseQuantity unitCode="LTR">1</cbc:BaseQuantity>
+      </cac:Price>
+      <cac:Item>
+        <cbc:Description>Red paint</cbc:Description>
+        <cbc:Name>Falu Rödfärg</cbc:Name>
+        <cac:SellersItemIdentification>
+          <cbc:ID>SItemNo001</cbc:ID>
+        </cac:SellersItemIdentification>
+        <cac:StandardItemIdentification>
+          <cbc:ID schemeAgencyID="6" schemeID="GTIN">1234567890123</cbc:ID>
+        </cac:StandardItemIdentification>
+        <cac:AdditionalItemProperty>
+          <cbc:Name>Paint type</cbc:Name>
+          <cbc:Value>Acrylic</cbc:Value>
+        </cac:AdditionalItemProperty>
+        <cac:AdditionalItemProperty>
+          <cbc:Name>Solvant</cbc:Name>
+          <cbc:Value>Water</cbc:Value>
+        </cac:AdditionalItemProperty>
+      </cac:Item>
+    </cac:LineItem>
+  </cac:OrderLine>
+</OrderChange>

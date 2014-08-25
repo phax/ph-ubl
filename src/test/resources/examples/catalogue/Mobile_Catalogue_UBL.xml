@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalogue xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:clm5639="urn:un:unece:uncefact:codelist:specification:5639:1988" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2
+D:\SVN\04-SOU~1\BUSLAY~1\xml\xsd\maindoc\UBL-Catalogue-2.0.xsd">
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>BiiCoreTrdm019</cbc:CustomizationID>
+	<cbc:ProfileID>BII01</cbc:ProfileID>
+	<cbc:ID>2010-Mobile-1234</cbc:ID>
+	<cbc:IssueDate>2010-10-01</cbc:IssueDate>
+	<cbc:VersionID>001.001</cbc:VersionID>
+	<cac:ReferencedContract>
+		<cbc:ID>DI/06050</cbc:ID>
+	</cac:ReferencedContract>
+	<cac:ProviderParty>
+		<cac:PartyIdentification>
+			<cbc:ID>SYSTEMAT</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>SYSTEMAT LUXEMBOURG PSF</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Parc d'activités 77-79</cbc:StreetName>
+			<cbc:CityName>Capellen</cbc:CityName>
+			<cbc:PostalZone>L-8308</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyTaxScheme>
+			<cbc:CompanyID>LU20793127</cbc:CompanyID>
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>
+			</cac:TaxScheme>
+		</cac:PartyTaxScheme>
+	</cac:ProviderParty>
+	<cac:ReceiverParty>
+		<cac:PartyName>
+			<cbc:Name>European Commission Directorate General Informatics DIGIT.R.2/Fin</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Rue de la Loi 200</cbc:StreetName>
+			<cbc:CityName>Bruxelles</cbc:CityName>
+			<cbc:PostalZone>1049</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyTaxScheme>
+			<cbc:CompanyID/>
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>
+			</cac:TaxScheme>
+		</cac:PartyTaxScheme>
+	</cac:ReceiverParty>
+	<cac:CatalogueLine>
+		<cbc:ID>1</cbc:ID>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_MAINTGET4SP2_1</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_KT292AA</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_KT293AA</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>HP 6530B 2.4GHZ AZERTY</cbc:Description>
+			<cbc:Name>HP 6530b</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_GW688AVAZBE</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.1</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>2</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Extension Guarantee</cbc:Description>
+			<cbc:Name>Extension Guarantee</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_MAINTGET4SP2_1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.1</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>3</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>HP 1 Go 800 MHz PC2-6400 DDR2</cbc:Description>
+			<cbc:Name>1GB RAM</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_KT292AA</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.1.1</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>4</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>MEMORY 2GB DDR2-800 SODIMM</cbc:Description>
+			<cbc:Name>2GB RAM</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_KT293AA</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.1.2</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>5</cbc:ID>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_MAINTGET4SP2_2</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_KT292AA</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:AccessoryRelatedItem>
+			<cbc:ID>CE_KT293AA</cbc:ID>
+		</cac:AccessoryRelatedItem>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>HP 6530B 2.4GHZ QWERTY INT</cbc:Description>
+			<cbc:Name>HP 6530b INT</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_GW688AVQWINT</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.2</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>6</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>Extension Guarantee</cbc:Description>
+			<cbc:Name>Extension Guarantee</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_MAINTGET4SP2_2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.2</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>7</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>HP 1 Go 800 MHz PC2-6400 DDR2</cbc:Description>
+			<cbc:Name>1GB RAM</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_KT292AA</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.2.1</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+	<cac:CatalogueLine>
+		<cbc:ID>8</cbc:ID>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:RequiredItemLocationQuantity>
+			<cac:ApplicableTerritoryAddress>
+				<cac:Country>
+					<cbc:IdentificationCode>LU</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:ApplicableTerritoryAddress>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="EUR">1</cbc:PriceAmount>
+			</cac:Price>
+		</cac:RequiredItemLocationQuantity>
+		<cac:Item>
+			<cbc:Description>MEMORY 2GB DDR2-800 SODIMM</cbc:Description>
+			<cbc:Name>2GB RAM</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>CE_KT293AA</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="DI/06050">1.1.2.2</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+	</cac:CatalogueLine>
+</Catalogue>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InventoryReport
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:ID>CC2679</cbc:ID>
+    <cbc:CopyIndicator>false</cbc:CopyIndicator>
+    <cbc:IssueDate>2010-04-12</cbc:IssueDate>
+    <cbc:Note>Report about the quantities on stock.</cbc:Note>
+    <cbc:DocumentCurrencyCode listID="ISO 4217 Alpha">EUR</cbc:DocumentCurrencyCode>
+    <cac:InventoryPeriod>
+        <cbc:StartDate>2010-04-11</cbc:StartDate>
+        <cbc:StartTime>14:00:00</cbc:StartTime>
+        <cbc:EndDate>2010-04-11</cbc:EndDate>
+    </cac:InventoryPeriod>
+    <cac:RetailerCustomerParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Beta Shop</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Emilia</cbc:StreetName>
+                <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                <cbc:CityName>Modena</cbc:CityName>
+                <cbc:PostalZone>41121</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Delta</cbc:Name>
+                <cbc:Telephone>0039 059 33000000</cbc:Telephone>
+                <cbc:Telefax>0039 059 33000055</cbc:Telefax>
+                <cbc:ElectronicMail>delta@betashop.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:RetailerCustomerParty>
+    <cac:InventoryReportingParty>
+        <cac:PartyName>
+            <cbc:Name>Arancio Forniture spa</cbc:Name>
+        </cac:PartyName>
+        <cac:PostalAddress>
+            <cbc:StreetName>Via Dell'Arcoveggio</cbc:StreetName>
+            <cbc:BuildingNumber>405</cbc:BuildingNumber>
+            <cbc:Department>Sales and Planning Department</cbc:Department>
+            <cbc:CityName>Bologna</cbc:CityName>
+            <cbc:PostalZone>40129</cbc:PostalZone>
+            <cac:Country>
+                <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                <cbc:Name>Italy</cbc:Name>
+            </cac:Country>
+        </cac:PostalAddress>
+        <cac:Contact>
+            <cbc:Name>Mr Bianchi</cbc:Name>
+            <cbc:Telephone>0039 051 23000008</cbc:Telephone>
+            <cbc:Telefax>0039 051 23000025</cbc:Telefax>
+            <cbc:ElectronicMail>bianchi@arancioforniture.it</cbc:ElectronicMail>
+        </cac:Contact>
+    </cac:InventoryReportingParty>
+    <cac:SellerSupplierParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>Arancio Forniture spa</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Via Dell'Arcoveggio</cbc:StreetName>
+                <cbc:BuildingNumber>403</cbc:BuildingNumber>
+                <cbc:CityName>Bologna</cbc:CityName>
+                <cbc:PostalZone>40129</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>IT</cbc:IdentificationCode>
+                    <cbc:Name>Italy</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:Contact>
+                <cbc:Name>Mr Rossi</cbc:Name>
+                <cbc:Telephone>0039 051 23000000</cbc:Telephone>
+                <cbc:Telefax>0039 051 23000023</cbc:Telefax>
+                <cbc:ElectronicMail>rossi@arancioforniture.it</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:SellerSupplierParty>
+    <cac:InventoryReportLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:Quantity unitCode="NAR">10</cbc:Quantity>
+        <cbc:InventoryValueAmount currencyID="EUR">200</cbc:InventoryValueAmount>
+        <cac:Item>
+            <cbc:Description>shirt</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>SH009</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>DD88</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:InventoryReportLine>
+    <cac:InventoryReportLine>
+        <cbc:ID>2</cbc:ID>
+        <cbc:Quantity unitCode="NAR">15</cbc:Quantity>
+        <cbc:InventoryValueAmount currencyID="EUR">750</cbc:InventoryValueAmount>
+        <cac:Item>
+            <cbc:Description>trousers</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>TH009</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>DA008</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:InventoryReportLine>
+    <cac:InventoryReportLine>
+        <cbc:ID>3</cbc:ID>
+        <cbc:Quantity unitCode="NAR">5</cbc:Quantity>
+        <cbc:InventoryValueAmount currencyID="EUR">300</cbc:InventoryValueAmount>
+        <cac:Item>
+            <cbc:Description>woman's dress</cbc:Description>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>DH019</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>BA058</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+    </cac:InventoryReportLine>
+</InventoryReport>

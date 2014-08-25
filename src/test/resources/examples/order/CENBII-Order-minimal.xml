@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Order-2 UBL-Order-2.0.xsd" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biicoretrdm001:ver1.0</cbc:CustomizationID>
+  <cbc:ProfileID>urn:www.cenbii.eu:profile:bii03:ver1.0</cbc:ProfileID>
+  <cbc:ID/>
+  <cbc:IssueDate>2010-01-01</cbc:IssueDate>
+  <cac:BuyerCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID>BuyerID</cbc:ID>
+      </cac:PartyIdentification>
+    </cac:Party>
+  </cac:BuyerCustomerParty>
+  <cac:SellerSupplierParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID>SellerID</cbc:ID>
+      </cac:PartyIdentification>
+    </cac:Party>
+  </cac:SellerSupplierParty>
+  <cac:OrderLine>
+    <cac:LineItem>
+      <cbc:ID>LineItemID</cbc:ID>
+      <cbc:Quantity>10</cbc:Quantity>
+      <cac:Item/>
+    </cac:LineItem>
+  </cac:OrderLine>
+</Order>

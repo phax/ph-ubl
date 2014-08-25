@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportationStatus
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:ID>TS_1</cbc:ID>
+    <cbc:IssueDate>2011-10-06</cbc:IssueDate>
+    <cbc:IssueTime>09:29:30+01:00</cbc:IssueTime>
+    <cbc:TransportationStatusTypeCode>All deviations</cbc:TransportationStatusTypeCode>
+    <!--Damage in the course of transportation-->
+    <cbc:TransportExecutionStatusCode>35</cbc:TransportExecutionStatusCode>
+    <cac:Consignment>
+        <cbc:ID>CON_1</cbc:ID>
+        <cac:TransportHandlingUnit>
+            <cbc:ID>CON_THU_1</cbc:ID>
+            <cac:TransportEquipment>
+                <cbc:ID>CON_TE_1</cbc:ID>
+            </cac:TransportEquipment>
+            <cac:Status>
+                <!--Damage-->
+                <cbc:ConditionCode>4</cbc:ConditionCode>
+                <!--Equipment failure-->
+                <cbc:StatusReasonCode>23</cbc:StatusReasonCode>
+                <cbc:StatusReason>Reefer container lost power - cargo of fish destroyed</cbc:StatusReason>
+            </cac:Status>
+            </cac:TransportHandlingUnit>
+    </cac:Consignment>
+    <cac:TransportExecutionPlanDocumentReference>
+        <cbc:ID>TEP_1</cbc:ID>
+    </cac:TransportExecutionPlanDocumentReference>
+</TransportationStatus>
