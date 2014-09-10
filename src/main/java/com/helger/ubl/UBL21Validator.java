@@ -95,13 +95,13 @@ import com.helger.commons.error.IResourceErrorGroup;
  * @author Philip Helger
  */
 @NotThreadSafe
- public final class UBL21Validator extends AbstractUBLDocumentMarshaller
- {
-   @PresentForCodeCoverage
-   @SuppressWarnings ("unused")
-   private static final UBL21Validator s_aInstance = new UBL21Validator ();
+public final class UBL21Validator extends AbstractUBLDocumentMarshaller
+{
+  @PresentForCodeCoverage
+  @SuppressWarnings ("unused")
+  private static final UBL21Validator s_aInstance = new UBL21Validator ();
 
-   private UBL21Validator ()
+  private UBL21Validator ()
   {}
 
   /**
@@ -1800,4 +1800,4 @@ import com.helger.commons.error.IResourceErrorGroup;
   {
     return validateWaybill (aWaybill).containsNoError ();
   }
- }
+}

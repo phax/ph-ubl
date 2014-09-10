@@ -102,13 +102,13 @@ import com.helger.commons.state.ESuccess;
  * @author Philip Helger
  */
 @NotThreadSafe
- public final class UBL21Writer extends AbstractUBLDocumentMarshaller
- {
-   @PresentForCodeCoverage
-   @SuppressWarnings ("unused")
-   private static final UBL21Writer s_aInstance = new UBL21Writer ();
+public final class UBL21Writer extends AbstractUBLDocumentMarshaller
+{
+  @PresentForCodeCoverage
+  @SuppressWarnings ("unused")
+  private static final UBL21Writer s_aInstance = new UBL21Writer ();
 
-   private UBL21Writer ()
+  private UBL21Writer ()
   {}
 
   /**
@@ -7562,4 +7562,4 @@ import com.helger.commons.state.ESuccess;
   {
     return UBL21Marshaller.writeUBLDocument (aWaybill, EUBL21DocumentType.WAYBILL, aCustomEventHandler, aResult);
   }
- }
+}

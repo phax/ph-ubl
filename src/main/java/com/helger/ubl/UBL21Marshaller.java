@@ -78,8 +78,8 @@ public final class UBL21Marshaller
     // create an Unmarshaller
     final Unmarshaller aUnmarshaller = aJAXBContext.createUnmarshaller ();
     aUnmarshaller.setEventHandler (aCustomEventHandler != null
-        ? aCustomEventHandler
-        : new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
+                                                              ? aCustomEventHandler
+                                                              : new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
 
     // Validating!
     aUnmarshaller.setSchema (aSchema);
@@ -152,8 +152,8 @@ public final class UBL21Marshaller
       ret = aUnmarshaller.unmarshal (aNode, aDestClass).getValue ();
       if (ret == null)
         throw new IllegalStateException ("Failed to read UBL 2.1 document of class " +
-            aDestClass.getName () +
-            " - without exception!");
+                                         aDestClass.getName () +
+                                         " - without exception!");
     }
     catch (final UnmarshalException ex)
     {
@@ -234,8 +234,8 @@ public final class UBL21Marshaller
       ret = aUnmarshaller.unmarshal (aSource, aDestClass).getValue ();
       if (ret == null)
         throw new IllegalStateException ("Failed to read UBL 2.1 document of class " +
-            aDestClass.getName () +
-            " - without exception!");
+                                         aDestClass.getName () +
+                                         " - without exception!");
     }
     catch (final UnmarshalException ex)
     {
@@ -267,8 +267,8 @@ public final class UBL21Marshaller
     // create an Unmarshaller
     final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
     aMarshaller.setEventHandler (aCustomEventHandler != null
-        ? aCustomEventHandler
-        : new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
+                                                            ? aCustomEventHandler
+                                                            : new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
 
     // Validating!
     aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
@@ -407,9 +407,9 @@ public final class UBL21Marshaller
       if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
       {
         s_aLogger.error ("You cannot write a '" +
-            aUBLDocument.getClass () +
-            "' as a " +
-            eDocType.getPackage ().getName ());
+                         aUBLDocument.getClass () +
+                         "' as a " +
+                         eDocType.getPackage ().getName ());
         return ESuccess.FAILURE;
       }
 
@@ -462,16 +462,16 @@ public final class UBL21Marshaller
       if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
       {
         s_aLogger.error ("You cannot validate a '" +
-            aUBLDocument.getClass () +
-            "' as a " +
-            eDocType.getPackage ().getName ());
+                         aUBLDocument.getClass () +
+                         "' as a " +
+                         eDocType.getPackage ().getName ());
       }
       else
       {
         // Since creating the JAXB context is quite cost intensive this is done
         // only once!
         final JAXBContext aJAXBContext = JAXBContextCache.getInstance ()
-            .getFromCache (eDocType.getImplementationClass ());
+                                                         .getFromCache (eDocType.getImplementationClass ());
 
         // create an Unmarshaller
         final Marshaller aMarshaller = aJAXBContext.createMarshaller ();

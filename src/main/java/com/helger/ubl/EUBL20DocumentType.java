@@ -112,8 +112,8 @@ public enum EUBL20DocumentType implements IUBLDocumentType
     m_sNamespaceURI = aXmlSchema.namespace ();
     if (StringHelper.hasNoText (m_sNamespaceURI))
       throw new IllegalArgumentException ("The package '" +
-          aPackage.getName () +
-          "' has no namespace in the @XmlSchema annotation!");
+                                          aPackage.getName () +
+                                          "' has no namespace in the @XmlSchema annotation!");
     m_aQName = new QName (m_sNamespaceURI, sLocalName);
     m_sXSDPath = CUBL20.SCHEMA_DIRECTORY + sXSDPath;
   }

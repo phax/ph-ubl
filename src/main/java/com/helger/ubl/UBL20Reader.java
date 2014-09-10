@@ -68,13 +68,13 @@ import com.helger.commons.xml.transform.TransformSourceFactory;
  * @author Philip Helger
  */
 @NotThreadSafe
- public final class UBL20Reader extends AbstractUBLDocumentMarshaller
- {
-   @PresentForCodeCoverage
-   @SuppressWarnings ("unused")
-   private static final UBL20Reader s_aInstance = new UBL20Reader ();
+public final class UBL20Reader extends AbstractUBLDocumentMarshaller
+{
+  @PresentForCodeCoverage
+  @SuppressWarnings ("unused")
+  private static final UBL20Reader s_aInstance = new UBL20Reader ();
 
-   private UBL20Reader ()
+  private UBL20Reader ()
   {}
 
   /**
@@ -4168,4 +4168,4 @@ import com.helger.commons.xml.transform.TransformSourceFactory;
   {
     return UBL20Marshaller.readUBLDocument (aSource, WaybillType.class, aCustomEventHandler);
   }
- }
+}
