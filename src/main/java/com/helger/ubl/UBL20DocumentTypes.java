@@ -27,7 +27,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotations.PresentForCodeCoverage;
 import com.helger.commons.annotations.ReturnsImmutableObject;
-import com.helger.commons.collections.ContainerHelper;
+import com.helger.commons.collections.CollectionHelper;
 
 /**
  * UBL document type map. Provides sanity methods for accessing UBL 2.0 document
@@ -77,7 +77,7 @@ public final class UBL20DocumentTypes
   @ReturnsImmutableObject
   public static Set <String> getAllNamespaces ()
   {
-    return ContainerHelper.makeUnmodifiable (s_aNamespace2DocType.keySet ());
+    return CollectionHelper.makeUnmodifiable (s_aNamespace2DocType.keySet ());
   }
 
   /**
@@ -134,7 +134,7 @@ public final class UBL20DocumentTypes
   @ReturnsImmutableObject
   public static Set <String> getAllLocalNames ()
   {
-    return ContainerHelper.makeUnmodifiable (s_aLocalName2DocType.keySet ());
+    return CollectionHelper.makeUnmodifiable (s_aLocalName2DocType.keySet ());
   }
 
   /**
