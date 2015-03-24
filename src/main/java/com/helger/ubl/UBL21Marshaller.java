@@ -39,6 +39,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.helpers.DefaultHandler;
 
+import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotations.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.jaxb.JAXBContextCache;
@@ -127,10 +128,8 @@ public final class UBL21Marshaller
                                        @Nonnull final Class <T> aDestClass,
                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
-    if (aNode == null)
-      throw new NullPointerException ("node");
-    if (aDestClass == null)
-      throw new NullPointerException ("destClass");
+    ValueEnforcer.notNull (aNode, "Node");
+    ValueEnforcer.notNull (aDestClass, "destClass");
 
     T ret = null;
     try
@@ -213,10 +212,8 @@ public final class UBL21Marshaller
                                        @Nonnull final Class <T> aDestClass,
                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
-    if (aSource == null)
-      throw new NullPointerException ("source");
-    if (aDestClass == null)
-      throw new NullPointerException ("destClass");
+    ValueEnforcer.notNull (aSource, "Source");
+    ValueEnforcer.notNull (aDestClass, "DestClass");
 
     T ret = null;
     try
@@ -272,18 +269,28 @@ public final class UBL21Marshaller
 
     // Validating!
     aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
-    if (JAXBMarshallerUtils.isSunJAXB2Marshaller (aMarshaller))
+    if (JAXBMarshallerUtils.isExternalSunJAXB2Marshaller (aMarshaller))
     {
       // It's the Sun JAXB implementation
-      try
-      {
-        JAXBMarshallerUtils.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespacePrefixMapper.getInstance ());
-      }
-      catch (final NoClassDefFoundError ex)
-      {
-        s_aLogger.warn ("The com.sun.xml.bind:jaxb-impl artifact is missing in your classpath. Therefore no namespace mapping can be applied!");
-      }
+      JAXBMarshallerUtils.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespacePrefixMapper.getInstance ());
     }
+    else
+      if (JAXBMarshallerUtils.isInternalSunJAXB2Marshaller (aMarshaller))
+      {
+        // It's the Java runtime contained implementation
+        try
+        {
+          aMarshaller.setProperty ("com.sun.xml.internal.bind.namespacePrefixMapper",
+                                   UBL21NamespacePrefixMapperOracleRT.getInstance ());
+        }
+        catch (final Throwable t)
+        {
+          // Just in case a non-Oracle runtime is used!
+          s_aLogger.error ("The Oracle internal JAXB implementation is used, but the namespace mapper could not be set!");
+        }
+      }
+      else
+        s_aLogger.info ("A custom JAXB marshaller is used. Therefore no namespace prefix mapping is available!");
 
     return aMarshaller;
   }
@@ -394,12 +401,9 @@ public final class UBL21Marshaller
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
   {
-    if (aUBLDocument == null)
-      throw new NullPointerException ("ublDocument");
-    if (eDocType == null)
-      throw new NullPointerException ("docType");
-    if (aResult == null)
-      throw new NullPointerException ("result");
+    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
+    ValueEnforcer.notNull (eDocType, "DocType");
+    ValueEnforcer.notNull (aResult, "Result");
 
     try
     {
@@ -450,10 +454,8 @@ public final class UBL21Marshaller
   public static IResourceErrorGroup validateUBLObject (@Nonnull final Object aUBLDocument,
                                                        @Nonnull final EUBL21DocumentType eDocType)
   {
-    if (aUBLDocument == null)
-      throw new NullPointerException ("ublDocument");
-    if (eDocType == null)
-      throw new NullPointerException ("docType");
+    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
+    ValueEnforcer.notNull (eDocType, "DocType");
 
     final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
     try

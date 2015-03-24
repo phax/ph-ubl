@@ -23,6 +23,7 @@ import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
 
+import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotations.CodingStyleguideUnaware;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.IReadableResource;
@@ -83,10 +84,8 @@ public enum EUBL20DocumentType implements IUBLDocumentType
 
   private EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    if (aClass == null)
-      throw new NullPointerException ("class");
-    if (StringHelper.hasNoText (sXSDPath))
-      throw new IllegalArgumentException ("XSDPath");
+    ValueEnforcer.notNull (aClass, "Class");
+    ValueEnforcer.notEmpty (sXSDPath, "XSDPath");
 
     // Check whether it is an @XmlType class
     final XmlType aXmlType = aClass.getAnnotation (XmlType.class);
