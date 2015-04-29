@@ -269,28 +269,18 @@ public final class UBL20Marshaller
 
     // Validating!
     aMarshaller.setSchema (UBL20DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
-    if (JAXBMarshallerUtils.isExternalSunJAXB2Marshaller (aMarshaller))
+    try
     {
-      // It's the Sun JAXB implementation
-      JAXBMarshallerUtils.setSunNamespacePrefixMapper (aMarshaller, UBL20NamespacePrefixMapper.getInstance ());
+      JAXBMarshallerUtils.setSunNamespacePrefixMapper (aMarshaller, UBL20NamespaceContext.getInstance ());
     }
-    else
-      if (JAXBMarshallerUtils.isInternalSunJAXB2Marshaller (aMarshaller))
-      {
-        // It's the Java runtime contained implementation
-        try
-        {
-          aMarshaller.setProperty ("com.sun.xml.internal.bind.namespacePrefixMapper",
-                                   UBL21NamespacePrefixMapperOracleRT.getInstance ());
-        }
-        catch (final Throwable t)
-        {
-          // Just in case a non-Oracle runtime is used!
-          s_aLogger.error ("The Oracle internal JAXB implementation is used, but the namespace mapper could not be set!");
-        }
-      }
-      else
-        s_aLogger.info ("A custom JAXB marshaller is used. Therefore no namespace prefix mapping is available!");
+    catch (final Throwable t)
+    {
+      // Just in case...
+      s_aLogger.error ("Failed to set the namespace prefix mapper: " +
+                       t.getClass ().getName () +
+                       " -- " +
+                       t.getMessage ());
+    }
 
     return aMarshaller;
   }

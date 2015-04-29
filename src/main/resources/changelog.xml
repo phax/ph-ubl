@@ -19,6 +19,11 @@
 -->
 <changelog xmlns="http://www.phloc.com/ns/changelog/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.phloc.com/ns/changelog/1.0 schemas/changelog-1.0.xsd" version="1.0" component="ph-ubl">
+  <entry date="2015-04-29" category="api" action="change" incompatible="true">
+    <change>
+      <text locale="en">Changed the namespace prefix mapper implementations used</text>
+    </change>
+  </entry>
   <release date="2015-03-12" version="3.3.1" />
   <release date="2014-08-25" version="3.3.0" />
 </changelog>
