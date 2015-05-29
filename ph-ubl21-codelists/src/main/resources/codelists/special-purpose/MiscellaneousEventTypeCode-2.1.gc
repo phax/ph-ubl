@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>MiscellaneousEventTypeCode</ShortName>
+      <LongName>Miscellaneous Event Type Code</LongName>
+      <Version>2.1</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:MiscellaneousEventTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:MiscellaneousEventTypeCode-2.1</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/MiscellaneousEventTypeCode-2.1.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">OASIS Universal Business Language</LongName>
+         <Identifier>UBL</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ASSORTMENT_CHARGE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DISASTER</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FORECAST_DECREASE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FORECAST_INCREASE</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FREIGHT_FLOW_ALLOCATION</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>INVENTORY_POLICY_CHANGE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LABOR</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LOCATION_OF_CLOSING</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LOCATION_OF_OPENING</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OTHER</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OUT_OF_STOCK</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PACKAGING_LABELING_CHANGE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PRICE_DECREASE</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PRICE_INCREASE</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STORE_FORMAT_OF_PLANOGRAM_CHANGE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TEST_MARKET</SimpleValue>
+         </Value>
+      </Row>
+	        <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WEATHER</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

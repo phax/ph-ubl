@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>ChannelCode</ShortName>
+      <LongName xml:lang="en">Communication Address Code Qualifier</LongName>
+      <LongName Identifier="listID">UN/ECE 3155</LongName>
+      <Version>D03A</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode-2.0</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChannelCode-2.0.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier>6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" xml:lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" xml:lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Circuit switching</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SITA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ARINC</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AT&amp;T mailbox</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Peripheral device</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>U.S. Defense Switched Network</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>U.S. federal telecommunications system</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>World Wide Web</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International calling country code</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Alternate telephone</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Videotex number</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cellular phone</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International telephone direct line</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>O.F.T.P. (ODETTE File Transfer Protocol)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uniform Resource Location (URL)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Very High Frequency (VHF) radio telephone</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cable address</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EDI transmission</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Electronic mail</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Extension</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>File transfer access method</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telefax</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GEIS (General Electric Information Service) mailbox</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IBM information exchange</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Internal mail</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mail</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Postbox number</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Packet switching</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>S.W.I.F.T.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telephone</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telegraph</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telex</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telemail</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Teletext</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TWX</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>X.400 address</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pager</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International telephone switchboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National telephone direct line</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National telephone switchboard</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

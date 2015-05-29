@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>DocumentTypeCode</ShortName>
+      <LongName xml:lang="en">Document Type Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCodeAccounting</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCodeAccounting:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/DocumentTypeCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_DocumentNameCodeAccounting_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>105</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Purchase order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message issued within an enterprise to initiate the purchase of articles, materials or services required for the production or manufacture of goods to be offered for sale or otherwise supplied to customers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>220</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message by means of which a buyer initiates a transaction with a seller involving the supply of goods or services as specified, according to conditions set out in an offer, or otherwise known to the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>223</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lease order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message for goods in leasing contracts.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>224</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rush order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message for urgent ordering.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>245</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delivery release</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message issued by a buyer releasing the despatch of goods after receipt of the Ready for despatch advice from the seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>315</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Contract</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(1296) Document/message evidencing an agreement between the seller and the buyer for the supply of goods or services; its effects are equivalent to those of an order followed by an acknowledgement of order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>320</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Acknowledgement of order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message acknowledging an undertaking to fulfil an order and confirming conditions or acceptance of conditions.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>325</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Proforma invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message serving as a preliminary invoice, containing - on the whole - the same information as the final invoice, but not actually claiming payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>326</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Partial invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message specifying details of an incomplete invoice.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>380</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Commercial invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(1334) Document/message claiming payment for goods or services supplied under conditions agreed between seller and buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>389</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Self-billed invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An invoice the invoicee is producing instead of the seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>393</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Factored invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Invoice assigned to a third party for collection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>394</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lease invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Usage of INVOIC-message for goods in leasing contracts.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>395</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignment invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Commercial invoice that covers a transaction other than one involving a sale.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>398</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cross docking despatch advice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document by means of which the supplier or consignor informs the buyer, consignee or the distribution centre about the despatch of goods for cross docking.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>399</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transshipment despatch advice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document by means of which the supplier or consignor informs the buyer, consignee or the distribution centre about the despatch of goods for transshipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>455</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Extended credit advice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message sent by an account servicing institution to one of its account owners, to inform the account owner of an entry that has been or will be credited to its account for a specified amount on the date indicated. It provides extended commercial information concerning the relevant remittance advice.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>481</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Remittance advice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message advising of the remittance of payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>533</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Original accounting voucher</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To indicate that the document/message justifying an accounting entry is original.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>534</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Copy accounting voucher</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To indicate that the document/message justifying an accounting entry is a copy.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>640</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delivery order</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Document/message issued by a party entitled to authorize the release of goods specified therein to a named consignee, to be retained by the custodian of the goods.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

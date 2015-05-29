@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!--
+  Synthesized metadata-only genericode file for: TransportAuthorizationCodeType
+-->
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>TransportAuthorizationCode</ShortName>
+      <LongName>Transport Authorization Code</LongName>
+      <Version>2.0</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:TransportAuthorizationCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:TransportAuthorizationCode-2.0</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportAuthorizationCode-2.0.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">OASIS Universal Business Language</LongName>
+         <Identifier>UBL</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+<!--
+   Add the following and replace with coded values and associated names.
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>A Coded Value</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>B Coded Value</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+-->
+</gc:CodeList>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>PartyRoleCode</ShortName>
+      <LongName xml:lang="en">Party Role Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:PartyRoleCodeChargePaying</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:PartyRoleCodeChargePaying:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/PartyRoleCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_PartyRoleCodeChargePaying_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's agent/representative</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Third party who arranged the purchase of merchandise on behalf of the actual buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Declarant's agent/representative</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Any natural or legal person who makes a declaration to an official body on behalf of another natural or legal person, where legally permitted (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit principal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Natural or legal person responsible for the satisfactory performance of a Customs transit operation. Source: CCC.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit principal's agent/representative</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Agent acting on behalf of the transit principal (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Approved consignor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Person or company approved by the relevant authority in the country to pack and export specific goods under Customs supervision.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Authorized exporter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Exporter authorized/approved by Customs for special Customs procedures e.g. simplified procedure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Authorized importer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Importer authorized/approved by Customs for special Customs procedures e.g. simplified procedure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Authorized trader (transit)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Trader authorized/approved by Customs for special transit procedures e.g. simplified procedure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3126] Party undertaking or arranging transport of goods between named points.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carrier's agent</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Party authorized to act for or on behalf of carrier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3132] Party to which goods are consigned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CPD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Charges payer at destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Party, other than the ordering party, which has to pay the charges concerning the destination operations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignee's agent</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Party authorized to act on behalf of the consignee.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3336] Party which, by contract with a carrier, consigns or sends goods with the carrier, or has them conveyed by him. Synonym: shipper, sender.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exporter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3030] Party who makes, or on whose behalf the export declaration is made, and who is the owner of the goods or has similar rights of disposal over them at the time when the declaration is accepted.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Freight forwarder</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Party arranging forwarding of goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignor's representative</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Party authorised to represent the consignor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Importer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3020] Party who makes - or on whose behalf a Customs clearing agent or other authorized person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Invoicee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3006] Party to whom an invoice is issued.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the credit party when other than the beneficiary.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

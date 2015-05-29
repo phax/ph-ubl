@@ -1,0 +1,2896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>TransportMeansTypeCode</ShortName>
+      <LongName xml:lang="en">Transport Means Type Code</LongName>
+      <Version>2007</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:TransportMeansTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:TransportMeansTypeCode:2007</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/TransportMeansTypeCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_TransportMeansTypeCode_2007.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for hauling loads.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with a tank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tractor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with an engine designed for pulling.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Closed automotive vehicle designed for carrying freight.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tiptanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a tank lifting capability.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, dry bulk</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying dry bulk cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carrier, car</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying motorcars.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, reefer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for the carriage of frozen cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>60</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Multimodal, type unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Multimodal transport of unknown type.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>70</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fixed transport installation, type unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Fixed transport installation of unknown type.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>71</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipeline</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A line of one or more pipes for continuous transport of liquid or gas commodity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>72</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Powerline</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A line of one or more cables or wires for continuous transport of electricity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>80</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vessel, type unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel of unknown type.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>81</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying general cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>82</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying liquid cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>83</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for carrying containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>84</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Gas tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel with tanks designed for carrying gas.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>85</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter, tug</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying cargo and capable of towing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>86</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor tanker, tug</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying liquid cargo and capable of towing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>87</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter with one or more ships alongside</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying general cargo that has one or more vessels alongside.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>88</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter with tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying general cargo alongside a vessel designed for carrying liquid cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>89</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter pushing one or more freighters</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying general cargo, pushing one or more vessels also designed for carrying general cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>150</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>General cargo vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry general cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>151</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unit carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry unit loads</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>152</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry bulk cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>153</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel solely equipped with tanks to carry cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>154</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Liquefied gas tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry liquefied gas.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>155</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Other special tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry other special liquids.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>157</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cargo and passenger vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry cargo and passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>159</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Passenger ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry more than 12 passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>160</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Assistance vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to give assistance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>170</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Other sea-going vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Sea-going vessel, not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>172</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Work ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to assist in work.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>173</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Push boat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to push other vessels.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>174</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dredger</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to scoop or suck mud or sand.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>175</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fishing boat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for fishing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>176</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Research and education ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for research and education.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>177</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Navy vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel operated by a Navy.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>178</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Structure, floating</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Any floating structure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>180</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pleasure boat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for recreation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>181</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Speedboat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for speed, often used for recreation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>182</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sailing boat with auxiliary motor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed primarily for sailing outfitted with an auxiliary motor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>183</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sailing yacht</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A specific type of vessel mostly used for pleasure and designed for sailing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>184</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Boat for sport fishing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for sport fishing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>185</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Craft, pleasure, longer than 20 metres</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel longer than 20 metres, designed for recreation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>189</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Craft, other, recreational</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for recreation, not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>190</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fast ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Fast, all-purpose vessel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>191</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hydrofoil</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel with wing-like structure for skimming at high speed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>192</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Catamaran, fast</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Fast vessel designed with two parallel hulls.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>210</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, railroad</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>One or more rail wagons pulled or pushed by one or more locomotive units, or self-propelled, that move over rail tracks.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>220</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, passenger</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train designed to carry passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>230</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, freight</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train for carrying freight.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>310</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying mail.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>311</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck dump</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a cargo-dumping capability.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>312</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, forklift</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for lifting cargo and heavy objects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>313</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Loader, shovel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for shoveling sand and other bulk material.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>314</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, platform, fixed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a fixed platform.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>315</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carrier, straddle</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for lifting and transporting containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>320</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crane, mobile</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with cargo crane.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>330</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying more than 8 passengers including the driver.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>341</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for making fast deliveries.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>342</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, light</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for light carriage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>343</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, furniture</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying furniture.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>360</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tractor, industrial</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for towing one or more trailers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>362</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, freezer with isothermic trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying frozen goods with a trailer designed for carrying temperature-controlled goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>363</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, isothermic with isothermic trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with trailer designed to carry temperature-controlled goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>364</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, refrigerated with isothermic trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying refrigerated goods with a trailer designed for carrying temperature-controlled goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>365</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, freezer with refrigerated trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying frozen goods with a trailer designed for carrying refrigerated goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>366</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, isothermic with refrigerated trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry temperature-controlled goods with a trailer designed to carry refrigerated goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>367</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, opening floor, with extendable trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with an opening floor with an extendable trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>368</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, rigid, with tank and tank trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rigid automotive vehicle designed with a tank with a tank trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>369</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk with tank trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for bulk carrying with a tank trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>370</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, rigid with tank and bulk trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rigid automotive vehicle designed with a tank with a trailer capable of carrying bulk cargo and liquid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>371</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk with bulk trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle and trailer both designed for carrying bulk cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>372</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with extendable trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with extendable trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>373</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with removable roof and extendable trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with removable roof and extendable trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>374</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk truck with extendable trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying bulk cargo with an extendable trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>375</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, refrigerated with freezer trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying refrigerated goods with a trailer designed for carrying frozen goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>376</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, isothermic with freezer trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying temperature-controlled goods with a trailer designed for carrying frozen goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>377</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, furniture with trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying furniture with a trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>378</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with furniture trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with trailer designed for carrying furniture.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>379</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, removable roof with furniture trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle designed with a removable roof with a trailer designed for carrying furniture.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>380</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tip-up with gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a tip-up capability with a gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>381</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with a gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>382</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, with removable roof and gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with removable roof and a gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>383</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, opening-floor with gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with an opening floor and with a gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>384</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk with gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying bulk cargo with a gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>385</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tip-up with extendable gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a tip-up capability with an extendable gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>386</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with extendable gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with an extendable gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>387</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, removable roof with extendable gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle designed with a removable roof and with an extendable gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>388</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, opening floor with extendable gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle designed with an opening floor and with an extendable gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>389</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk with extendable gondola trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying bulk cargo with an extendable gondola trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>390</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tip-up truck with opening-floor trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a tip-up capability with an opening-floor trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>391</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with opening-floor trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with opening-floor trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>392</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, removable roof, with opening-floor trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautliner vehicle with a removable roof, with an opening-floor trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>393</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, opening-floor with opening-floor trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle and trailer both with opening floors.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>394</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk truck with opening-floor trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying bulk cargo with an opening-floor trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>395</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to pull a trailer, with a trailer attached.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>396</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tilt, with tilt trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with a tilt capability with a trailer also with a tilt capability.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>397</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, refrigerated, with refrigerated trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry refrigerated goods with a trailer also capable of carrying refrigerated goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>398</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, freezer with freezer trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle capable of carrying frozen goods with a trailer also capable of carrying frozen goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>399</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, removal with removal trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry household effects with a trailer also capable of carrying household effects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>810</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Motor freighter pushing at least one tank-ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Motorized vessel designed for carrying general cargo, pushing at least one vessel designed to carry liquid cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>811</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, freighter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to push or pull another vessel that is also capable of carrying general cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>812</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to push or pull another vessel also capable of carrying liquid cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>813</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, freighter, coupled</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to push or pull another vessel that is also capable of carrying general cargo tied to one or more other vessels.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>814</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, freighter/tanker, coupled</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to push or pull another vessel that is also capable of carrying either general or liquid cargo tied to one or more other vessels.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>815</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Freightbarge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lighter designed for carrying general cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>816</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tankbarge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lighter designed for carrying liquid cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>817</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Freightbarge with containers</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lighter designed for carrying containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>818</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tankbarge, gas</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lighter designed for carrying gas.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>821</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, one cargo barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for pushing/towing, facilitating the movement of one cargo barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>822</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, two cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of two cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>823</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, three cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of three cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>824</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, four cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of four cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>825</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, five cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of five cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>826</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, six cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of six cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>827</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, seven cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of seven cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>828</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, eight cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of eight cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>829</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, nine cargo barges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, facilitating the movement of nine or more cargo barges.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>831</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, one gas/tank barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving one tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>832</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, two barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving two barges of which at least one tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>833</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, three barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving three barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>834</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, four barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving four barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>835</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, five barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving five barges of which at least one is a tanker of gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>836</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, six barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving six barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>837</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, seven barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving seven barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>838</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, eight barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving eight barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>839</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushtow, nine or more barges at least one tanker or gas barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combination designed for pushing/towing, moving nine or more barges of which at least one is a tanker or gas barge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, single</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for pushing another vessel that is the only boat used for a tow.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>841</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, one or more tows</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for pushing another vessel that is involved in one or more concurrent tows.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>842</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, assisting a vessel or linked combination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for pushing another vessel that is assisting one vessel or a combination of vessels or tugs and vessels.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>843</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pushboat, single</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for pushing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>844</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Passenger ship, ferry, red cross ship, cruise ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessels designed for carrying passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>845</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Service vessel, police patrol, port services</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to perform a specific dedicated service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>846</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vessel, work maintenance craft, floating derrick, cable-ship, buoy-ship, dredge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to perform a specific type of work.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>847</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Object, towed, not otherwise specified</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An object in tow that is not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>848</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fishing boat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for fishing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>849</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bunkership</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for carrying and delivering bunkers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>850</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barge, tanker, chemical</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry liquid or bulk chemicals.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>851</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Object, not otherwise specified</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A floating object that is not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>852</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Service vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tender (vessel for logistical support), dealing with the transport of small material and maintenance requirements outside the port area on rivers and other inland waterways.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>853</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Police patrol vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A vessel for the supervision by police of applicable rules and regulations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>854</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port service vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A port tender (vessel for logistical support), dealing with the transport of material and people within a port area.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>855</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Navigation surveillance vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A vessel of the competent authority (waterway) dealing with the surveillance of navigation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1501</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Grain vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry grain.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1502</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Timber/log carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry logs and timber.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1503</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wood chips vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry wood chips.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1504</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Steel products vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry steel products.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1505</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carrier, general cargo/container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry general cargo and containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1506</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature controlled cargo vessels</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry temperature-controlled cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1511</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Full container ship/cellular vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry containers only.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1512</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>RoRo vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel with ramp designed to carry roll-on/roll-off cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1513</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Car carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry automotive vehicles or their knock-down parts.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1514</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Livestock carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry livestock.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1515</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barge carrier - Lash ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry barges. Lash means lighters aboard ship.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1516</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chemical carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry chemicals in bulk or drums not in tanks.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1517</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Irradiated fuel carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry irradiated fuel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1518</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Heavy cargo vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Ship designed to carry heavy cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1519</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>RoRo/Container vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry both containers and roll-on/roll-off cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1521</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dry bulk carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry dry bulk (expellers).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1522</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ore carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry ore.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1523</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cement carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry cement.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1524</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Gravel carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry gravel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1525</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coal carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry coal.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1531</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crude oil tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry crude oil.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1532</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chemical tanker, coaster</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry chemicals in coastal traffic.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1533</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chemical tanker, deep sea</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry chemicals in deep sea.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1534</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oil and other derivatives tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry oil and other derivatives.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1541</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LPG tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry Liquefied Petroleum Gas (LPG).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1542</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LNG tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry Liquefied Natural Gas (LNG).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1543</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LNG/LPG tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry Liquefied Natural Gas (LNG) and Liquefied Petroleum Gas (LPG).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1551</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Asphalt/bitumen tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed asphalt and bitumen.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1552</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Molasses tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry molasses.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1553</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vegetable oil tanker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tanker designed to carry vegetable oil.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1591</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cruise ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Passenger ship designed to carry tourists on specified routes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1592</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ferry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to ply regularly between two or more ports.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1593</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Other passenger ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry passengers, not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1594</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Passenger ship, sailing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to carry passengers and mainly propelled by sails.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1601</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, without tow</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to tow objects but sailing alone.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1602</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tug, with tow</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to tow, and towing an object.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1603</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Salvage vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to salvage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1604</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rescue vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to effect rescue operations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1605</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oil combat vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to combat oil spills.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1606</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oil rig</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Object designed for drilling oil at sea.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1607</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to serve as a hospital at sea.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1711</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pilot boat</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to convey pilots to/from ships.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1712</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Patrol/measure ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to guard, patrol or measure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1721</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Supply vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to provide supplies.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1723</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Offshore support vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to provide offshore support.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1724</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pontoon</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Flat-bottomed vessel with a flat deck.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1725</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stone dumping vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to dump stones.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1726</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cable layer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to lay cable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1727</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buoyage vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to handle buoys.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1728</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Icebreaker</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to break ice.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1729</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipelaying vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to lay pipe.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1751</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trawler</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed to drag a bag-like net.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1752</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cutter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Small vessel that sometimes can be carried on a larger ship.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1753</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Factory ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed as a fish factory.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1761</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fishery research vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for fishery research.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1762</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Climate registration vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for climate registration.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1763</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ship for environmental measurement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for environmental monitoring and measurement.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1764</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scientific vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for scientific purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1765</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sailing school ship</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for training, powered by sail.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1766</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Training vessel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vessel designed for training.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1781</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crane, floating</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A crane mounted on a barge or pontoon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1782</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dock, floating</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A submersible floating structure used as a dock.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2201</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, super express</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train designed for high speed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2202</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, sleeper</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Passenger train that includes carriages for sleeping.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2203</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, passenger, hired group</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A chartered train.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2301</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Blocktrain</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train for carrying freight to the same destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2302</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train for carrying containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2303</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, with one wagon</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train with a single wagon for carrying freight.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2304</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, with more than one and less than 20 wagons</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train with more than one and less than 20 wagons for carrying freight.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2305</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Train, with more than 20 wagons</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Train with more than 20 wagons for carrying freight.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3100</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with removal trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline truck with trailer capable of carrying household effects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3101</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner with removable roof and removal trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with removable roof and a trailer capable of carrying household effects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3102</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Car, with caravan</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automobile towing a house trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3103</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, 25 tonne</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with a 25 tonne capacity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3104</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, 25 tonne with removable roof</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with a 25 tonne capacity and a removable roof.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3105</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated, flat bed, 25 tonne</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with a flat bed and 25 tonne capacity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3106</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated, flat bed, 24 tonne, with 10 metre crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with a flat bed and 25 tonne capacity with a 10 metre crane attached.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3107</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated, flat bed, 24 tonne, with 15 metre crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with a flat bed and 25 tonne capacity with a 15 metre crane attached.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3108</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated, flat bed, 24 tonne, with 18 metre crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with a flat bed and 25 tonne capacity with an 18 metre crane attached.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3109</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated, flat bed, 10 tonne</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with a flat bed and 10 tonne capacity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3110</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, 25 tonne, with 90 cubic metre trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with a 25 tonne capacity and a 90 cubic metre trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3111</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, 25 tonne, with 120 cubic metre trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with a 25 tonne capacity and a 120 cubic metre trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3112</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, flat with trailer and 10 metre crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with flat bed and trailer and 10 metre crane.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3113</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, articulated with tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle with tank designed for carrying liquid or bulk goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3114</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, flat, 15 tonne</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with flat bed and a 15 tonne capacity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3115</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lorry, flat, 15 tonne with crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with flat bed and a 15 tonne capacity and attached crane.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3116</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, isothermic</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry temperature-controlled goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3117</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, refrigerated</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry refrigerated goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3118</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, freezer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry frozen goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3119</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, isothermic</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry temperature-controlled goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3120</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Van, refrigerated</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry refrigerated goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3121</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, bulk</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry bulk goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3122</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tip-up</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with a tip-up capability.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3123</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, articulated, tip-up</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Articulated automotive vehicle designed with a tip-up capability.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3124</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, rigid, with tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rigid automotive vehicle designed with a tank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3125</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with non-rigid sides.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3126</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, tautliner, with removable roof</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive tautline vehicle with a removable roof.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3127</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with opening floor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with a floor that can be opened.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3128</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, freezer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry frozen goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3129</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with crane for moving goods, without trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A truck with a crane for moving goods, without a trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3130</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with crane for moving goods, with trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A truck with a crane for moving goods, with a trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3131</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with crane for lifting goods, without trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A truck with a crane for lifting goods, without a trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3132</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with crane for lifting goods, with trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A truck with a crane for lifting goods, with a trailer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3133</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Taxi cab</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle licensed to ply for hire.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3134</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, furniture</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for carrying furniture.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3135</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, hydrant</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for the delivery of fuel from a fixed installation to a means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3136</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Car</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry a small number of passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3137</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck, with tail-lift</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with a hydraulic lifting device on the rear of the vehicle for loading and unloading goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3138</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Armoured vehicle</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed with fortified body for enhanced protection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3201</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Car, elevator</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with raisable work platform.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3301</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus, with trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle with an attached trailer for carrying passengers and/or luggage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3302</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus, highway</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for highway travel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3303</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus, sightseeing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed for sightseeing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3304</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus, airport/city</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Automotive vehicle designed to carry passengers and their baggage between an airport and a city and return.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

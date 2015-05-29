@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>CargoTypeCode</ShortName>
+      <LongName xml:lang="en">Cargo Type Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:CargoTypeClassificationCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:CargoTypeClassificationCode:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/CargoTypeCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_CargoTypeClassificationCode_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Documents</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Printed, typed or written matter including leaflets, pamphlets, certificates etc., which are not subject to import duties and taxes, restrictions and prohibitions.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Low value non-dutiable consignments</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Imported consignments/items/goods in respect of which Customs duties and other taxes are waived as they are below a value determined by the Customs administration.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Low value dutiable consignments</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Imported consignments/items/goods in respect of which Customs duties and other taxes are payable are below a certain amount as determined by the Customs administration.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>High value consignments</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Imported consignments/items/goods which are determined as having a value above a certain amount fixed by the Customs administration, which may or may not attract duties and taxes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Other non-containerized</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Non-containerized cargo which cannot be categorized by any of the other nature of cargo code.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vehicles</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Vehicles which are not stowed in containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll-on roll-off</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo transported or to be transported on roll-on roll-off vessels and which is transportable on its own wheels or stowed on special heavy duty trailers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Palletized</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Non-containerized cargo which is palletized.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Containerized</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo stowed or to be stowed in a container.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Breakbulk</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Non-containerized cargo stowed in vessels' holds.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hazardous cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo with dangerous properties, according to appropriate dangerous goods regulations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>General cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo of a general nature, not otherwise specified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Liquid cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo in liquid form.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature controlled cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo transported under specified temperature conditions.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Environmental pollutant cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo is an environmental pollutant.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not-hazardous cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo which is not hazardous.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Diplomatic</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo transported under diplomatic conditions.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Military</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo for military purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Obnoxious</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo that is objectionable to human senses.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Out of gauge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo that has at least one non-standard dimension.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Household goods and personal effects</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo consisting of household goods and personal effects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frozen cargo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargo of frozen products.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ballast only</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>No cargo, means of transport is carrying only ballast.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

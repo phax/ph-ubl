@@ -1,0 +1,2676 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>CountryIdentificationCode</ShortName>
+      <LongName xml:lang="en">Country</LongName>
+      <LongName Identifier="listID">ISO3166-1</LongName>
+      <Version>0.3</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier>6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="numericcode" Use="optional">
+         <ShortName>NumericCode</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AFGHANISTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>004</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ALBANIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>008</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ALGERIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>012</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AMERICAN SAMOA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>016</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ANDORRA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>020</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ANGOLA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>024</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ANGUILLA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>660</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ANTARCTICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>010</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ANTIGUA AND BARBUDA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>028</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ARGENTINA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>032</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ARMENIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>051</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ARUBA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>533</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AUSTRALIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AUSTRIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>040</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AZERBAIJAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>031</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BAHAMAS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>044</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BAHRAIN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>048</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BANGLADESH</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>050</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BARBADOS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>052</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BELARUS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>112</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BELGIUM</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>056</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BELIZE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>084</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BENIN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>204</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BERMUDA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>060</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BHUTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>064</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BOLIVIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>068</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BOSNIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue/>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>AND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BOTSWANA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>072</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BOUVET ISLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>074</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BRAZIL</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>076</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BRITISH INDIAN OCEAN TERRITORY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>086</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BRUNEI DARUSSALAM</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>096</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BULGARIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>100</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BURKINA FASO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>854</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>BURUNDI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>108</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CAMBODIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>116</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CAMEROON</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>120</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CANADA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>124</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CAPE VERDE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>132</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CAYMAN ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>136</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CENTRAL AFRICAN REPUBLIC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>140</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CHAD</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>148</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CHILE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>152</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CHINA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>156</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CHRISTMAS ISLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>162</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COCOS (KEELING) ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>166</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COLOMBIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>170</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COMOROS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>174</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CONGO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>178</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COOK ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>184</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COSTA RICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>188</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>COTE D&#8217;IVOIRE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>384</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CROATIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>191</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CUBA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>192</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CYPRUS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>196</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CZECH REPUBLIC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>203</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DENMARK</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>208</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DJIBOUTI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>262</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DOMINICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>212</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DOMINICAN REPUBLIC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>214</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EAST TIMOR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>626</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ECUADOR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>218</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EGYPT</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>818</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EL SALVADOR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>222</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EQUATORIAL GUINEA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>226</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ER</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ERITREA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>232</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ESTONIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>233</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ET</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ETHIOPIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>231</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FALKLAND ISLANDS (MALVINAS)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>238</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FAROE ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>234</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FIJI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>242</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FINLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>246</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FRANCE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>250</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FRANCE, METROPOLITAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>249</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FRENCH GUIANA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>254</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FRENCH POLYNESIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>258</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FRENCH SOUTHERN TERRITORIES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>260</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GABON</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>266</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GAMBIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>270</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GEORGIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>268</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GERMANY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>276</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GHANA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>288</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GIBRALTAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>292</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GREECE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>300</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GREENLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>304</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GRENADA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>308</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUADELOUPE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>312</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUAM</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>316</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUATEMALA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>320</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUINEA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>324</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUINEA-BISSAU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>624</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GUYANA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>328</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HAITI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>332</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HEARD ISLAND AND MC DONALD ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>334</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HERZEGOVINA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>070</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HONDURAS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>340</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HONG KONG</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>344</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HUNGARY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>348</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ICELAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>352</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>INDIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>356</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ID</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>INDONESIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>360</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IRAN (ISLAMIC REPUBLIC OF)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>364</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IRAQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>368</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IRELAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>372</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ISRAEL</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>376</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ITALY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>380</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>JAMAICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>388</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>JAPAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>392</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>JORDAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>400</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KAZAKHSTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>398</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KENYA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>404</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KIRIBATI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>296</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KOREA, DEMOCRATIC PEOPLE&#8217;S REPUBLIC OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>408</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KOREA, REPUBLIC OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>410</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KUWAIT</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>414</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>KYRGYZSTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>417</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LAO PEOPLE&#8217;S DEMOCRATIC REPUBLIC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>418</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LATVIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>428</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LEBANON</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>422</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LESOTHO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>426</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LIBERIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>430</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LIBYAN ARAB JAMAHIRIYA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>434</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LIECHTENSTEIN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>438</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LITHUANIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>440</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>LUXEMBOURG</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>442</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MACAU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>446</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MADAGASCAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>450</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MALAWI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>454</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MALAYSIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>458</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MALDIVES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>462</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ML</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MALI</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>466</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MALTA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>470</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MARSHALL ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>584</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MARTINIQUE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>474</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MAURITANIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>478</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MAURITIUS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>480</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MAYOTTE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>175</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MEXICO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>484</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MICRONESIA, FEDERATED STATES OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>583</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MOLDOVA, REPUBLIC OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>498</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MONACO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>492</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MONGOLIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>496</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MONTSERRAT</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>500</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MOROCCO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>504</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MOZAMBIQUE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>508</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MYANMAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>104</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NAMIBIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>516</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NAURU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>520</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NEPAL</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>524</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NETHERLANDS ANTILLES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>530</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NETHERLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>528</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NEW CALEDONIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>540</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NEW ZEALAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>554</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NICARAGUA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>558</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NIGER</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>562</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NIGERIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>566</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NIUE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>570</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NORFOLK ISLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>574</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NORTHERN MARIANA ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>580</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NORWAY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>578</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>OMAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>512</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PAKISTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>586</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PALAU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>585</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PANAMA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>591</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PAPUA NEW GUINEA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>598</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PARAGUAY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>600</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PERU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>604</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PHILIPPINES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>608</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PITCAIRN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>612</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>POLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>616</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PORTUGAL</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>620</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>PUERTO RICO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>630</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>QATAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>634</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>REUNION</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>638</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ROMANIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>642</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>RUSSIAN FEDERATION</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>643</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>RWANDA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>646</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAINT HELENA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>654</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAINT KITTS AND NEVIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>659</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAINT LUCIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>662</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAINT PIERRE AND MIQUELON</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>666</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAINT VINCENT AND THE GRENADINES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>670</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAMOA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>882</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAN MARINO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>674</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SAUDI ARABIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>682</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SENEGAL</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>686</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SEYCHELLES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>690</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SIERRA LEONE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>694</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SINGAPORE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>702</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SLOVAKIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>703</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SLOVENIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>705</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOLOMON ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>090</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOMALIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>706</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOUTH AFRICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>710</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>239</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ES</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SPAIN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>724</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SRI LANKA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>144</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SUDAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>736</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SURINAME</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>740</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SVALBARD AND JAN MAYEN ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>744</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SWAZILAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>748</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SWEDEN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>752</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SWITZERLAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>756</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SYRIAN ARAB REPUBLIC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>760</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SÃO TOME AND PRINCIPE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>678</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TAIWAN, PROVINCE OF CHINA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>158</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TAJIKISTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>762</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TANZANIA, UNITED REPUBLIC OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>834</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>THAILAND</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>764</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>THE FORMER YUGOSLAV REPUBLIC OF MACEDONIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>807</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TOGO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>768</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TOKELAU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>772</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TONGA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>776</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TRINIDAD AND TOBAGO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>780</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TUNISIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>788</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TURKEY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>792</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TURKMENISTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>795</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TURKS AND CAICOS ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>796</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TUVALU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>798</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UGANDA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>800</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UKRAINE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>804</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UNITED ARAB EMIRATES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>784</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UNITED KINGDOM</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>826</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UNITED STATES MINOR OUTLYING ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>581</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>US</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UNITED STATES</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>URUGUAY</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>858</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UZBEKISTAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>860</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VANUATU</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>548</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VATICAN CITY STATE (HOLY SEE)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>336</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VENEZUELA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>862</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VIET NAM</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>704</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VIRGIN ISLANDS (BRITISH)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>092</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>VIRGIN ISLANDS (U.S.)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>850</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>WALLIS AND FUTUNA ISLANDS</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>876</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>WESTERN SAHARA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>732</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>YEMEN</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>887</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>YUGOSLAVIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>891</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ZAIRE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>180</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ZAMBIA</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>894</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ZIMBABWE</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>716</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

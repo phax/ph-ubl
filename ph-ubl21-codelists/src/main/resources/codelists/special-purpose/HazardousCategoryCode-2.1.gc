@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>HazardousCategoryCode</ShortName>
+      <LongName xml:lang="en">Hazardous Category Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:DangerousGoodsRegulationCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:DangerousGoodsRegulationCode:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/HazardousCategoryCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_DangerousGoodsRegulationCode_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ADR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>European agreement on the international carriage of dangerous goods on road (ADR)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>European agreement on the international carriage of dangerous goods on road. ADR is the abbreviation of "Accord europeen relatif au transport international des marchandises dangereuses par route".</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ADS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NDR European agreement for the transport of dangerous goods on the river Rhine</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>European agreement giving regulations for the transport of dangerous goods on the river Rhine, officially known as: "Accord europeen relatif au transport international des marchandises dangereuses par navigation sur le Rhin.".</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ADT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CA, Transport Canada's dangerous goods requirements</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Canadian transport of dangerous goods requirements as published by Transport Canada in the Canadian Gazette, Part II.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ADU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>JP, Japanese maritime safety agency dangerous goods regulation code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Regulation regarding the handling of dangerous goods on vessels issued by Japanese maritime safety agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ADV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MARPOL 73/78</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocol of 1978 relating.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AGS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, ADR and GGVS combined regulations for combined transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combined German and European regulations for the transportation of dangerous goods on German and other European roads. ADR means: Accord Europeen relatif au Transport international des marchandises Dangereuses par Route. GGVS means: Gefahrgutverordnung Strasse.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ANR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ADNR, Autorisation de transport de matieres Dangereuses pour la Navigation sur le Rhin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Regulations for dangerous goods transportation on the Rhine.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ARD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, ARD and RID - Combined regulations for combined transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combined European regulations for the combined transportation of dangerous goods on roads and rails. ARD means: Autorisation de transport par Route de matieres dangereuses. RID means: Reglement International concernant le transport des marchandises Dangereuses par chemin de fer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CFR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US, 49 Code of federal regulations</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>United States federal regulations issued by the US Department of transportation covering the domestic transportation of dangerous goods by truck, rail, water and air.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>COM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, ADR, RID, GGVS and GGVE - Combined regulations for combined transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combined German and European regulations for the combined transportation of dangerous goods on German and other European roads and rails. ADR means: Accord Europeen relatif au transport international des marchandises Dangereuse par Route. RID means: Reglement International concernant le transport des marchandises Dangereuses par chemin de fer. GGVS means: Gefahrgutverordnung Strasse. GGVE means: Gefahrgutverordnung Eisenbahn.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GVE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, GGVE (Gefahrgutverordnung Eisenbahn)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>German regulation for the transportation of dangerous goods on rail.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GVS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, GGVS (Gefahrgutverordnung Strasse)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>German regulation for the transportation of dangerous goods on road.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ICA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IATA ICAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Regulations covering the international transportation of dangerous goods issued by the International Air Transport Association and the International Civil Aviation Organization.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IMD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IMO IMDG code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Regulations regarding the transportation of dangerous goods on ocean-going vessels issued by the International Maritime Organization.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RGE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DE, RID and GGVE, Combined regulations for combined transport on rails</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Combined German and European regulations for the transportation of dangerous goods on German and other European rails. RID means: Reglement International concernant le transport des marchandises Dangereuses par chemin de fer. GGVE means: Gefahrgutverordnung Eisenbahn.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RID</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Railroad dangerous goods book (RID)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>International regulations concerning the international carriage of dangerous goods by rail.
+RID is the abbreviation of "Reglement International concernant le transport des marchandises Dangereuses par chemin de fer".</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UK IMO book</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The United Kingdom (UK) version of the International Maritime Organisation (IMO) book on dangerous goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Additional and/or other information for the transportation of dangerous goods which are mutually defined.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

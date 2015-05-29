@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>SizeTypeCode</ShortName>
+      <LongName xml:lang="en">Size Type Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:EquipmentSizeTypeDescriptionCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:EquipmentSizeTypeDescriptionCode:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/SizeTypeCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_EquipmentSizeTypeDescriptionCode_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dime coated tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank coated with dime.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Epoxy coated tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank coated with epoxy.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pressurized tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank capable of holding pressurized goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank capable of keeping goods refrigerated.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stainless steel tank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank made of stainless steel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nonworking reefer container 40 ft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 40 foot refrigerated container that is not actively controlling temperature of the product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Europallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>80 x 120 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scandinavian pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>100 x 120 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Non self-propelled vehicle designed for the carriage of cargo so that it can be towed by a motor vehicle.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nonworking reefer container 20 ft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 20 foot refrigerated container that is not actively controlling temperature of the product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exchangeable pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet exchangeable following international convention.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Semi-trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Non self propelled vehicle without front wheels designed for the carriage of cargo and provided with a kingpin.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container 20 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container with a length of 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container 30 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container with a length of 30 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container 40 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container with a length of 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container IC 20 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A container owned by InterContainer, a European railway subsidiary, with a length of 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container IC 30 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A container owned by InterContainer, a European railway subsidiary, with a length of 30 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container IC 40 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A container owned by InterContainer, a European railway subsidiary, with a length of 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank 20 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated tank with a length of 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank 30 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated tank with a length of 30 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank 40 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated tank with a length of 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container IC 20 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container owned by InterContainer, a European railway subsidiary, with a length of 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container IC 30 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container owned by InterContainer, a European railway subsidiary, with a length of 30 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container IC 40 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tank container, owned by InterContainer, a European railway subsidiary, with a length of 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank IC 20 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated tank owned by InterContainer, a European railway subsidiary, with a length of 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature controlled container 30 ft.</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Temperature controlled container measuring 30 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated tank IC 40 feet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated tank owned by InterContainer, a European railway subsidiary, with a length of 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable case: L &lt; 6,15m</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A movable case with a length less than 6,15 metres.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable case: 6,15m &lt; L &lt; 7,82m</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A movable case with a length between 6,15 metres and 7,82 metres.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable case: 7,82m &lt; L &lt; 9,15m</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A movable case with a length between 7,82 metres and 9,15 metres.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable case: 9,15m &lt; L &lt; 10,90m</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A movable case with a length between 9,15 metres and 10,90 metres.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable case: 10,90m &lt; L &lt; 13,75m</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A movable case with a length between 10,90 metres and 13,75 metres.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Totebin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A steel open top unit of about 1,5 * 1,5 * 2,5 meters for road transport of bulk cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature controlled container 20 ft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Temperature controlled container measuring 20 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>40</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature controlled container 40 ft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A temperature controlled container measuring 40 feet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Non working refrigerated (reefer) container 30ft.</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 30 foot refrigerated (reefer) container that is not actively cooling the product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dual trailers</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Two trailers linked together one behind another and pulled by one tractor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>20 ft IL container (open top)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An open top container that is 20 feet in internal length.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>20 ft IL container (closed top)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A closed top container that is 20 feet in internal length.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>45</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>40 ft IL container (closed top)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A closed top container that is 40 feet in internal length.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

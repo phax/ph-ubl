@@ -1,0 +1,2969 @@
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <Identification>
+    <ShortName>PortCode-fixed</ShortName>
+    <LongName xml:lang="en">Port - fixed</LongName>
+    <LongName Identifier="listID">UN/ECE rec 16</LongName>
+    <Version>2012-1</Version>
+    <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode-fixed</CanonicalUri>
+    <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode-2.1-fixed</CanonicalVersionUri>
+    <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/PortCode-2.1-fixed.gc</LocationUri>
+    <AlternateFormatLocationUri MimeType="text/html">http://www.unece.org/cefact/codesfortrade/codes_index.html</AlternateFormatLocationUri>
+    <Agency>
+      <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+      <Identifier>6</Identifier>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Column Id="code" Use="required">
+      <Annotation>
+        <Description>
+          <xhtml:p>The ISO 3166 alpha-2 Country Code followed by a 3-character code for the place
+            name. The 3-character code element for the location name will normally comprise three
+            letters. However, where all permutations available for a country have been exhausted,
+            the numerals 2-9 may also be used.</xhtml:p>
+          <xhtml:p>When interpreting location code values found outside of the code list in part 2
+            of the UN/LOCODE Manual, it is understood that: when a three-letter code is used alone
+            to indicate a location, it designates the name of an airport or location as adopted by
+            IATA (whose code only has three letters); whereas a three letter code preceded by a
+            two-letter country code designates the name for a location as adopted within the
+            UN/LOCODE and might depict a different location from that of the IATA code,, e.g. PAR =
+            IATA code for Paris, France (UN/LOCODE = FR PAR); GB PAR = UN/LOCODE for Par, United
+            Kingdom.</xhtml:p>
+          <xhtml:p>In cases where no ISO 3166 country code element is available, e.g. installations
+            in international waters or international cooperation zones, the code element "XZ",
+            available for user assignment in accordance with clause 8.1.3 of ISO 3166-1/1997, will
+            be used.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Code</ShortName>
+      <Data Type="normalizedString"/>
+    </Column>
+    <Column Id="name" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>Several countries use national alphabets based on the 26 character set referred
+            to above, but with the addition of diacritical signs which may affect the pronunciation
+            of the names concerned, their place in the alphabetical order and sometimes their
+            meaning. With the increasing use of UN/LOCODE also in national and regional trade, the
+            absence of diacritic signs caused serious disadvantages and problems for users.</xhtml:p>
+          <xhtml:p>For these reasons it was agreed in 1995 to introduce in the data base such
+            characters which consist of a basic letter of the 26 character set but with an added
+            diacritic sign (examples are &#131;, &#134;, &#132;, &#130;, &#138;, &#148;, &#147;, o, &#129;), and to produce print-out on
+            paper and Web pages showing these characters. (The Danish and Norwegian character "&#145;"
+            had to be replaced by a single "a").</xhtml:p>
+          <xhtml:p>To aid users with such problems, as from the 2001 version of UN/LOCODE, two
+            columns are provided for place names, one reflecting national name versions, with
+            diacritic signs, and one in which diacritic signs have been removed from the
+            names.Countries for which diacritic signs are used in UN/LOCODE are: AT, BO, BR, CH, CL,
+            CR, DE, DK, FI, FO, FR, HU, IS, KR, MX, NO, PA, PE, PT, SE, SJ, TR and VN. In this
+            "diacritics" column it was also possible to include accented letters</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Name</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="namenodiacritics" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The names of those locations which have been accepted for inclusion in UN/LOCODE
+            in accordance with the provisions of the Recommendation.</xhtml:p>
+          <xhtml:p>Place names are given without diacritic signs.</xhtml:p>
+          <xhtml:p>In countries with more than one national language, place names may be different
+            in the respective languages. In such cases, more than one name version maybe included,
+            followed by other versions placed within brackets, e.g.: Abo (Turku) and Turku (Abo).</xhtml:p>
+          <xhtml:p>The Governments concerned have been or will be consulted regarding the most
+            appropriate manner in which different name versions should be presented in UN/ LOCODE.</xhtml:p>
+          <xhtml:p>A place name may be followed, after a comma sign, by an indication of
+            geographical or administrative significance, such as the name of an island on which the
+            place is located, e.g. Bandung, Java; Taramajima, Okinawa.</xhtml:p>
+          <xhtml:p>There may be subordinate entities under a place name, e.g. different airports
+            serving the same main location, outlying ports, freight terminals, etc. If a separate
+            code element has been assigned to such a location, the name of the sublocation is added
+            after the main name, separated by a hyphen (-), e.g. GBLHR London-Heathrow Apt, ARCUA
+            Bahia Blanca-Cuatreros</xhtml:p>
+          <xhtml:p>The sublocation name is also listed in its proper alphabetic name order place,
+            followed by an oblique stroke (slash) (/) and the name of the main place to which it
+            belongs, e.g.:GBLHR Heathrow Apt/London AR CUA Cuatreros/Bahia Blanca</xhtml:p>
+          <xhtml:p>Abbreviations used include: Apt for Airport, I. for Island(s), Pto for Puerto, Pt
+            for Port, and St for Saint</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>NameNoDiacritics</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="country" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The name for the ISO 3166 alpha-2 Country Code</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Country</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="subdivision" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The ISO 1-3 character alphabetic and/or numeric code for the administrative
+            division of the country concerned (state, province, department, etc.), as included in
+            International Standard ISO 3166-2/1998 and when deemed desirable to enhance the use of
+            the code, or when requested by the country concerned.</xhtml:p>
+          <xhtml:p>In UN/LOCODE, the country code element is not shown in this column. Only the
+            latter part of the complete ISO 3166-2 code element (after the hyphen) is shown, as a
+            qualifier to the location name. Where subdivision codes are used, the corresponding code
+            lists are reproduced in Part 3 of the UN/LOCODE Manual.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Subdivision</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="IATA" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The IATA/LOCODE 3-character place name.  This is the portion of the code that
+          does not include the initial 2-character country code.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>IATA</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="functions" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>A 1-digit function classifier code for the location, where: 1 = port, as defined
+            in Rec 16, 2 = rail terminal, 3 = road terminal, 4 = airport, 5 = postal exchange
+            office, [6 = reserved for multimodal functions, ICDs etc], [7 = reserved for fixed
+            transport functions (e.g. oil platform)], 8 = border crossing, 0 = function not known,
+            to be specified.</xhtml:p>
+          <xhtml:p>A group of digits "1234-" in this column means therefore that all four specified
+            functions apply to the location. The presence of the digit "4" will normally mean that
+            the code element shown is an approved IATA code. The digit "0" means that the criteria
+            for inclusion apply, but that no information is available regarding the specific
+            transport mode functions of the location.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Functions</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-unknown" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "0" when the location is unknown.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Unknown</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-port" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "1" when the location is a port.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Port</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-rail" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "2" when the location is a rail terminal.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Rail</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-road" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "3" when the location is a road terminal.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Road</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-air" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "4" when the location is an airport.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Air</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-post" Use="optional">
+      <Annotation>
+        <Description>
+        <xhtml:p>This field exists and has a value of "5" when the location is a postal exchange office.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Post</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-multi" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "6" when reserved for multimodal functions.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Multi</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-fixed" Use="optional">
+      <Annotation>
+        <Description>
+         <xhtml:p>This field exists and has a value of "7" when reserved for fixed transport functions.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Fixed</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function-border" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>This field exists and has a value of "B" when the location is a border crossing.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function-Border</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="function" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>A text representation of the function classifier
+          code where: 1 = "Port", 2 = "Rail Terminal", 3 = "Road Terminal",
+          4 = "Airport", 5 = "Postal Exchange", 6 = "Multimodel",
+          7 = "Fixed Transport", B = "Border Crossing".</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Function</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="change" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>A classifier to indicate any changes since previous issue</xhtml:p>
+          <xhtml:p>X means Marked for deletion in the next issue</xhtml:p>
+          <xhtml:p># means Change in the location name</xhtml:p>
+          <xhtml:p>¦ means Other change in the entry</xhtml:p>
+          <xhtml:p>+ means Entry added to the current issue</xhtml:p>
+          <xhtml:p>= means Reference entry</xhtml:p>
+          <xhtml:p>! means Retained for certain entries in the USA code list (controlled
+            duplications)</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Change</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="status" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>To indicate the status of the entry by a 2-character code, e.g. whether approved
+            by Government, by Customs, or based on a user requirement not necessarily recognised by
+            an authority, etc. It is also intended to show the status of checking, e.g. that
+            function indicators are not verified.</xhtml:p>
+          <xhtml:p>The following codes are used at present:</xhtml:p>
+          <xhtml:p>AA = Approved by competent national government agency</xhtml:p>
+          <xhtml:p>AC = Approved by Customs Authority</xhtml:p>
+          <xhtml:p>AF = Approved by national facilitation body</xhtml:p>
+          <xhtml:p>AI = Code adopted by international organisation (IATA or ECLAC)</xhtml:p>
+          <xhtml:p>AM = Approved by the UN/LOCODE Maintenance Agency</xhtml:p>
+          <xhtml:p>AS = Approved by national standardisation body</xhtml:p>
+          <xhtml:p>AQ = Entry approved, functions not verified</xhtml:p>
+          <xhtml:p>RL = Recognised location - Existence and representation of location name
+            confirmed by check against nominated gazetteer or other reference work</xhtml:p>
+          <xhtml:p>RN = Request from credible national sources for locations in their own country</xhtml:p>
+          <xhtml:p>RQ = Request under consideration</xhtml:p>
+          <xhtml:p>RR = Request rejected</xhtml:p>
+          <xhtml:p>QQ = Original entry not verified since date indicated</xhtml:p>
+          <xhtml:p>UR = Entry included on user's request; not officially approved</xhtml:p>
+          <xhtml:p>XX = Entry that will be removed from the next issue of UN/LOCODE</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Status</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="date" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>Reference date showing the year and month of request, of entry into the code
+            list, of latest approval, etc., as relevant.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Date</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="latitude" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The degrees of latitude for the port's geographical location.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Latitude</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Column Id="longitude" Use="optional">
+      <Annotation>
+        <Description>
+          <xhtml:p>The degrees of longitude for the port's geographical location.</xhtml:p>
+        </Description>
+      </Annotation>
+      <ShortName>Longitude</ShortName>
+      <Data Type="string"/>
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code"/>
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+
+<Row>
+<Value ColumnRef="code"><SimpleValue>AEOFJ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Offshore Fujairah</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Offshore Fujairah</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AE</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OFJ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2515N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>05640E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AOSBT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>FPSO Saxi Batuque</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>FPSO Saxi Batuque</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SBT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0619S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01113E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AOPAZ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Pazflor FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Pazflor FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>PAZ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0821S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01206E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ARCAE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Canuelas</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Canuelas</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>B</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CAE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3502S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>05844W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUBOB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Bobin</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Bobin</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NSW</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BOB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3143S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>15217E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUDAL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Dalton</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Dalton</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NSW</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DAL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3443S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>14911E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUFVN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Four Vanguard</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Four Vanguard</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FVN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2054S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11453E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUPUF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Front Puffin FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Front Puffin FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NT</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>PUF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1217S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12419E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUKTN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kitan FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kitan FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KTN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1036S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12611E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUMOD</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Modec Venture 11</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Modec Venture 11</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MOD</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1946S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11636E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUMUT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mutineer</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mutineer</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MUT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1916S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11636E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUNGH</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Nganhurra</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Nganhurra</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>WA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>NGH</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0607</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2129S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11400E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUSTY</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Stybarrow Venture MV17</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Stybarrow Venture MV17</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>WA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>STY</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2126S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11349E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUTHM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tottenham</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tottenham</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>VIC</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>THM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1007</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3748S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>14451E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>AUWBT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Woollybutt (Oil facility)</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Woollybutt (Oil facility)</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>AU</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>WA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>WBT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0407</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2103S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11452E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BHAHD</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Al Hidd</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Al Hidd</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BH</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>15</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>AHD</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3--67-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>AA</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2614N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>05039E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRANF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Cidade de Angra dos Reis FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Cidade de Angra dos Reis FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ANF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2455S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04230W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRESF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Espirito Santo FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Espirito Santo FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ESF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2112S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>03944W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRFLU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Fluminense</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Fluminense</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FLU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2238S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04025W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRIDT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ilha d'Agua Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ilha d'Agua Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>RJ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>IDT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2249S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04303W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRRET</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ilha Redonda Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ilha Redonda Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>RET</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2280S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04311W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRMLM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Marlim</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Marlim</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MLM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2220S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04004W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRNCT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Norte Capixaba Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Norte Capixaba Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>NCT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1859S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>03943W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRPOU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ponta Ubu</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ponta Ubu</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>POU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>12----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0212</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2046S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04034W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>BRTPE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tapera</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tapera</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>BR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>RS</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TPE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1007</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2737S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>05252W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CADVN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Devon</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Devon</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>AB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DVN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5322N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11344W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CACNG</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Keg River</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Keg River</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>AB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CNG</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5748N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11752W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CALMT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Lamont</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Lamont</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>AB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LMT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5345N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11247W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CAWRF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>White Rose Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>White Rose Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>WRF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4647N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04800W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CGAZR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Azurite</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Azurite</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>AZR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0538S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01059E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>CRSAB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>San Antonio de Belen</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>San Antonio de Belen</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>CR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>H</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SAB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3---7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0958N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08411W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DEDLE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Badersleben</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Badersleben</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DE</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>ST</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DLE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5198N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10887E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DEBGC</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Bergkirchen</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Bergkirchen</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DE</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>BY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BGC</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4815N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01122E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DEZFO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Schwerstedt</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Schwerstedt</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DE</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZFO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5058N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01119E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DOESP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Esperanza</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Esperanza</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ESP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1834N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07131W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DOLAV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>La Vega</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>La Vega</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LAV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1913N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>70310W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>DOLAL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Los Alcarrizos</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Los Alcarrizos</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>DO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LAL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1831N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07010W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>EGZTB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Zeit Bay</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Zeit Bay</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>EG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZTB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2749N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>03336E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESADT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Alcaudete de la Jaya</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Alcaudete de la Jaya</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ADT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Road Terminal, Airport, Postal Exchange, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>12345-7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-air"><SimpleValue>4</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3947N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00452W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESECT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>El Casar de Talamanca</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>El Casar de Talamanca</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>GU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ECT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Road Terminal, Postal Exchange, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>123-567-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4042N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00326W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESROM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>El Rompido</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>El Rompido</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>H</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ROM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Road Terminal, Postal Exchange, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>123-567-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3713N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00707W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESFUP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Fuentepelayo</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Fuentepelayo</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>SG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FUP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3--67-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4113N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00410W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESMNF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Montefrio</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Montefrio</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>GR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MNF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>12---67-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3719N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00401W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESVLR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Villar del Arzobispo</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Villar del Arzobispo</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>VC</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VLR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3944N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00049W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ESYUN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Yuncos</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Yuncos</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ES</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>YUN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3--67-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4005N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00352W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>FR49M</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Montfort</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Montfort</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>FR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>49</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>49M</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4712N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00013W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>FRTL7</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Taillecavat</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Taillecavat</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>FR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>47</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TL7</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4438N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00010E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GAETA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Etame FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Etame FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ETA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0345S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01031E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GATCT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tchatamba</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tchatamba</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TCT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0202S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00907E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBAOF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Alba Oil Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Alba Oil Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>AOF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5804N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00104E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBANA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Anasuria</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Anasuria</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>SCT</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ANA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5715N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00048E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBBOF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Banff Offshore</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Banff Offshore</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BOF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5700N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00117E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBBPF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Beryl Platform</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Beryl Platform</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BPF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5932N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00132E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBCPF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Captain Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Captain Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CPF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5819N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00144W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBDDT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Durward Dauntless</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Durward Dauntless</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DDT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5730N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00005W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBETT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Etrick Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Etrick Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ETT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5754N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00035W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBFNV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Foinaven</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Foinaven</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FNV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6020N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00424W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBFMF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Fulmar Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Fulmar Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FMF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5629N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00208E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBGOX</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Goxhill</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Goxhill</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NEL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GOX</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5340N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00020W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBLDA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Leadon</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Leadon</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LDA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5934N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00139E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBMMR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mossmoran</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mossmoran</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MMR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5630N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00230W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBSUT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>South Arne</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>South Arne</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SUT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5604N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00415E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBTHF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Thistle Field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Thistle Field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>THF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6129N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00134E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBTOI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Triton</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Triton</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TOI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5711N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00050E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GBVGI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Varg field</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Varg field</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VGI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0407</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GHJUB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Jubilee FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Jubilee FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>JUB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0437N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00255W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GQATE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Aseng FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Aseng FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GQ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ATE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0322N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00908E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GTBAR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Bárcenas</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Barcenas</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GT</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>GU</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BAR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1431N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09036W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GTCHR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Champerico</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Champerico</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GT</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>RE</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CHR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>123--67-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1418N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09155W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>GTESQ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Esquipulas</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Esquipulas</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>GT</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>CQ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ESQ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1434N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08921W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDCEN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Cengkareng</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Cengkareng</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>JK</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CEN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0609S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10643E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDKSO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kalbut Situbondo</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kalbut Situbondo</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>JI</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KSO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3---7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0737S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11353E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDOKA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Karimun Besar Offshore</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Karimun Besar Offshore</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OKA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0104N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10331E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDLVN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Langsa Venture FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Langsa Venture FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LVN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0519N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09803E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDOYO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Oyong</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Oyong</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OYO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0717S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11244E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDPGA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Pagerungan</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Pagerungan</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>PGA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0655S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11555E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDPOL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Poleng</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Poleng</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>POL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0639S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11255E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IDWID</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Widuri</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Widuri</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ID</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>WID</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0440S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10639E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IRBMR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Bandar Mashur</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Bandar Mashur</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>IR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>10</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BMR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0307</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3033N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04911E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>IRZAN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Zanjan</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Zanjan</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>IR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZAN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Airport, Postal Exchange, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-2345-7-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-air"><SimpleValue>4</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0307</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3640N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>04828E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ISMJH</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mjoeyrarhofn</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mjoeyrarhofn</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>IS</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>07</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MJH</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3--67-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6455N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01357W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ITZQA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Puia</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Puia</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>IT</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>PN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZQA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3--67-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4553N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01234E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>KHKOS</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kâmpóng Saôm</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kampong Saom</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>KH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KOS</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Airport, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-34--7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-air"><SimpleValue>4</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>AI</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1036N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10331E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>KRPUS</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Busan</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Busan</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>KR</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>26</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>PUS</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Rail Terminal, Road Terminal, Airport, Postal Exchange, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1234567-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-air"><SimpleValue>4</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>AF</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3508N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12903E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>LKAVI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Avissawella</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Avissawella</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>LK</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>AVI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23---7-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0657N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08013E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>LYMBK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mabruk</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mabruk</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>LY</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>SR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MBK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3000N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01715E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>LYMTH</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Melittah</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Melittah</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>LY</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TB</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MTH</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0701</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MXCNT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Cantarell</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Cantarell</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CNT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1940N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09205W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MXCOS</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Cosoleacaque</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Cosoleacaque</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MX</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>VER</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>COS</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23--67-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1800N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09437W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MXTAK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Takuntah</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Takuntah</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TAK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1945N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09142W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MXYKN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Yùum K'Ak'Náab</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Yuum K'Ak'Naab</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>YKN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1936N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09217W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MYBGK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Bunga Kekwa</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Bunga Kekwa</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BGK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0703N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10404E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MYCAK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Cakerawala Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Cakerawala Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CAK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0707N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10306E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MYKIK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kikeh</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kikeh</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KIK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0552N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11417E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MYSEP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Sepang, Selangor</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Sepang, Selangor</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MY</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>10</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SEP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3---7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0242N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10145E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>MYTGO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tembungo</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tembungo</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>MY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TGO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0638N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11547E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGABF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Abo</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Abo</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ABF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0542N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00428E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGEBO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ebok Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ebok Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>EBO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0405N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00810E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGERT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Erha Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Erha Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>ON</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ERT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0521N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00421E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGODU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Odudu Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Odudu Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ODU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0400N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00745E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGUKP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ukpokiti</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ukpokiti</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>UKP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0541N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00447E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NGUSA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Usan FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Usan FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>USA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0357N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00739E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NIMSP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Masatepe</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Masatepe</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NI</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MSP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1155N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08690W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NLRUY</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>de Ruyter</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>de Ruyter</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>RUY</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5218N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00403E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NLGRD</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Groede</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Groede</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NL</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>ZE</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GRD</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Postal Exchange, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23-5-7-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5123N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00330E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NLWTG</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Watergang</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Watergang</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NL</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>WTG</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Postal Exchange, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3-567-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-post"><SimpleValue>5</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NOVAR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Petrojarl Varg FPSO</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Petrojarl Varg FPSO</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VAR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5804N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00154E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NOSIR</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Siri</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Siri</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SIR</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0212</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NOTLL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Troll A Platform</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Troll A Platform</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TLL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1007</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6040N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00340E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>NZOTU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Offshore Tui</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Offshore Tui</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>NZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OTU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3925S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>17314E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>PGKUL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kumul</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kumul</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>PG</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KUL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0207</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>0806S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>14434E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>PHMAL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Malampaya</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Malampaya</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>PH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MAL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1132N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11906E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>QAASN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Al Shaheen</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Al Shaheen</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>QA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ASN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RN</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2633N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>05204E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>SVLAP</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>La Paz</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>La Paz</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>SV</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LAP</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>THRVT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Rubicon Vantage Fpso</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Rubicon Vantage Fpso</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>TH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>RVT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1001</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1031N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10017E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>THTTE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tantawan Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tantawan Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>TH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TTE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1005N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10125E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>TLLIB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Liberdade</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Liberdade</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>TL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LIB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1102S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12637E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>TLMDV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Modec Venture</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Modec Venture</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>TL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MDV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1052S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12634E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>TNISI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Isis</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Isis</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>TN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ISI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3437N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>01225E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USB2W</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Brewerton</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Brewerton</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NY</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>B2W</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4314N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07608W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USNJC</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Clark</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Clark</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>NJ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>NJC</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4038N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07418W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USCM7</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Clermont</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Clermont</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>IN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>CM7</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3948N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08619W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USDTE</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Denton</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Denton</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>MT</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DTE</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4719N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10956W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USDPN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Dupont</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Dupont</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>CO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>DPN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3950N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10454W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USUFS</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Eagan</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Eagan</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>MN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>UFS</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4448N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09310W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USEVI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Elk Grove Village</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Elk Grove Village</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>IL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>EVI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4200N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08758W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USFW5</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Fellows</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Fellows</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FW5</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3510N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11932W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USFH5</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Flint Hill</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Flint Hill</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>VA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FH5</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3647N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07929W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USQGO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Glendale</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Glendale</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>OH</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>QGO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3916N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08428W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USGPV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Grapevine</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Grapevine</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GPV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23---7-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0501</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3256N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09704W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USGBJ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Greenbrae</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Greenbrae</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>CA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GBJ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3756N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12231W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USLQZ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>La Vernia</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>La Vernia</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LQZ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2921N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09806W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USLG4</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Logan</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Logan</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>MT</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>LG4</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4553N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>11125W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USM2Y</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mayersville</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mayersville</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>MS</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>M2Y</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3254N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09103W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USZMK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mill Creek</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mill Creek</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>OK</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZMK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3424N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09659W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USOW5</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Oakwood</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Oakwood</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OW5</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3135N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09550W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USOAB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Offshore Ambrose</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Offshore Ambrose</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OAB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4012N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>07200W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USOCT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Offshore Corpus Christi</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Offshore Corpus Christi</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>OCT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2728N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09649W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USQUT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Quintana</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Quintana</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>QUT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1107</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2855N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09518W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USRK2</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Rosanky</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Rosanky</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>RK2</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2955N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09717W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USTGN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Sainte Genevieve</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Sainte Genevieve</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>MO</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TGN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23--67-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3758N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09002W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USSD7</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Sand Hills</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Sand Hills</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TX</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SD7</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3541N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10259W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USXAF</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Sioux Rapids</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Sioux Rapids</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>IA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>XAF</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3--67-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4253N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09509W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USS3B</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>South Bend</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>South Bend</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>LA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>S3B</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2937N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09132W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USSW8</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Southwest Pass</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Southwest Pass</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SW8</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2900N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08920W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USTF4</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Taft, Orange</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Taft, Orange</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>FL</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TF4</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3---7-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1101</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>2825N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08121W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USZTH</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Thatcher</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Thatcher</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>AR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ZTH</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3251N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10946W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USYTU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Turner</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Turner</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>OR</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>YTU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Rail Terminal, Road Terminal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-23---7-</SimpleValue></Value>
+<Value ColumnRef="function-rail"><SimpleValue>2</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>4450N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>12257W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USVJC</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Vici</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Vici</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>OK</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VJC</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>-----67-</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3609N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>09918W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>USW2L</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Whitwell</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Whitwell</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>US</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>TN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>W2L</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>1201</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3512N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>08531W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>VEJOT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Jose Terminal</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Jose Terminal</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>VE</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>B</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>JOT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-----7-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0401</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1006N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>06451W</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>VNRUB</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Ruby</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Ruby</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>VN</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>RUB</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1023N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10830E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>VNSTC</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Song Than Icd</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Song Than Icd</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>VN</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>57</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>STC</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>--3--67-</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RL</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>1046N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>10643E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>VNTAM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tanamexco Icd</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tanamexco Icd</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>VN</SimpleValue></Value>
+<Value ColumnRef="subdivision"><SimpleValue>65</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TAM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Port, Road Terminal, Multimodal, Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>1-3--67-</SimpleValue></Value>
+<Value ColumnRef="function-port"><SimpleValue>1</SimpleValue></Value>
+<Value ColumnRef="function-road"><SimpleValue>3</SimpleValue></Value>
+<Value ColumnRef="function-multi"><SimpleValue>6</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZALV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Alve</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Alve</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>ALV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6558N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00730E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZBRA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Brage</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Brage</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>BRA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6035N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00305E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZFRM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Fram</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Fram</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>FRM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6105N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00330E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZGJO</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Gjoa</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Gjoa</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GJO</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6122N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00400E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZGRA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Grane</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Grane</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>GRA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5910N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00230E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZHUL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Huldra</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Huldra</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>HUL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6052N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00240E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZKRI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kristin</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kristin</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KRI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6502N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00625E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZKBJ</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Kvitebjorn</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Kvitebjorn</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>KBJ</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6105N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00230E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZMKL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Mikkel</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Mikkel</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MKL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6440N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00745E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZMVI</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Morvin</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Morvin</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MVI</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6508N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00628E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZSHV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Snohvit</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Snohvit</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SHV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>7137N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>02125E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZSYG</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Sygna</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Sygna</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>SYG</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6130N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00200E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZTUN</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tune</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tune</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>TUN</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6030N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00240E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZTHA</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Tyrihans</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Tyrihans</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>THA</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6449N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00703E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZURD</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Urd</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Urd</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>URD</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6602N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00823E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZVFK</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Veslefrikk</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Veslefrikk</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VFK</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6047N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00253E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZVGD</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Vigdis</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Vigdis</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VGD</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6125N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00210E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZVIL</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Vilje</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Vilje</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VIL</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5940N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00217E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZVSU</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Visund</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Visund</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VSU</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6128N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00230E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZVOV</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Volve</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Volve</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>VOV</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>5825N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00155E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>XZYGT</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Yttergryta</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Yttergryta</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>XZ</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>YGT</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0901</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>6507N</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>00742E</SimpleValue></Value>
+</Row>
+<Row>
+<Value ColumnRef="code"><SimpleValue>ZAMKM</SimpleValue></Value>
+<Value ColumnRef="name"><SimpleValue>Markman</SimpleValue></Value>
+<Value ColumnRef="namenodiacritics"><SimpleValue>Markman</SimpleValue></Value>
+<Value ColumnRef="country"><SimpleValue>ZA</SimpleValue></Value>
+<Value ColumnRef="IATA"><SimpleValue>MKM</SimpleValue></Value>
+<Value ColumnRef="function"><SimpleValue>Fixed Transport</SimpleValue></Value>
+<Value ColumnRef="functions"><SimpleValue>------7-</SimpleValue></Value>
+<Value ColumnRef="function-fixed"><SimpleValue>7</SimpleValue></Value>
+<Value ColumnRef="status"><SimpleValue>RQ</SimpleValue></Value>
+<Value ColumnRef="date"><SimpleValue>0907</SimpleValue></Value>
+<Value ColumnRef="latitude"><SimpleValue>3348S</SimpleValue></Value>
+<Value ColumnRef="longitude"><SimpleValue>02537E</SimpleValue></Value>
+</Row>
+  </SimpleCodeList>
+</gc:CodeList>

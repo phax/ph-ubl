@@ -1,0 +1,2768 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>PackagingTypeCode</ShortName>
+      <LongName xml:lang="en">Packaging Type</LongName>
+      <LongName Identifier="listID">UN/ECE rec 21</LongName>
+      <Version>Revision 5</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier>6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1D</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plywood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1G</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, fibre</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1W</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2C</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, super bulk</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, aluminium</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4C</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, natural wood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4D</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plywood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4F</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, reconstituted wood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4G</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, fibreboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5L</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5M</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6P</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, fibre </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, paper </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, wooden </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aerosol</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 60cms </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, shrinkwrapped </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, 100cms * 110cms </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Clamshell</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cone</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ampoule, non-protected </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ampoule, protected </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Atomizer </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Capsule</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bobbin </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottlecrate / bottlerack </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Board</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bundle </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Balloon, non-protected </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bunch</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bin</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bucket </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bale, compressed </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basin</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bale, non-compressed </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, cylindrical </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, cylindrical </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Balloon, protected </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected cylindrical</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected cylindrical</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, bulbous </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bolt </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Butt </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected bulbous</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected bulbous</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, for liquids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Board, in bundle/bunch/truss </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bars, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, rectangular </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, beer</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Churn</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, with handle and spout </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Creel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coffer </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chest</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Canister </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coffin </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cask </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coil </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, not otherwise specified as transport equipment</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carboy, non-protected</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carboy, protected</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cartridge</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carton </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cup</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cover</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage, roll </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, cylindrical </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cylinder </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Canvas </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, cardboard </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage, Commonwealth Handling Equipment Pool  (CHEP)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, iron </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Demijohn, non-protected</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, cardboard </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dispenser</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Demijohn, protected</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, wooden </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, polystyrene</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, cardboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, plastic tray</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, cardboard </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ED</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, wooden </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, cardboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, metal</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, isothermic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Envelope </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, fruit </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, framed</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Firkin </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flask</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Footlocker </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Filmpack </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frame</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Foodtainer</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cart, flatbed</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, flexible container</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, gas</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Girder </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, glass </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, containing horizontally stacked flat items</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Girders, in bundle/bunch/truss </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, wooden</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, cardboard </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hogshead </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hamper </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, wooden </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, cardboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ID</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, metal</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, show</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, flow </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, paper wrapped</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, cardboard, with bottle grip-holes </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, rigid, lidded stackable (CEN TS 14482:2002)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ingot</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ingots, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, rectangular</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jug</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jutebag</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, cylindrical</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Keg</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Log</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lot</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Liftvan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Logs, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, multiply</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, milk</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, metal </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sack, multi-wall </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mat</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, plastic wrapped </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Matchbox </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not available</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged, single unit</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged, multiple units</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nest </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net, tube, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net, tube, textile </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Packet </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, box Combined open-ended box and pallet</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Parcel </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 100cms </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 120cms </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pen </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plate</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pitcher</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipe </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Punnet</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pail </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plank</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pouch</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, plastic </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pot</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipes, in bundle/bunch/truss </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plates, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Planks, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel, non-removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel, removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium, non-removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium, removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic, non-removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic, removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden, bung type</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden, removable head </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel, non-removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel, removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic, non-removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic, removable head</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, wooden, natural wood, ordinary</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, wooden, natural wood, with sift proof walls</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic, expanded </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic, solid</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rod</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ring </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rack, clothing hanger</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rack </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reel </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rednet </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rods, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sack </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slab</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, shallow </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spindle</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sea-chest</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sachet </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Skid </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, skeleton </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slipsheet </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheetmetal </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spool </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheet, plastic wrapping</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheet</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Suitcase </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Envelope, steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Shrinkwrapped  </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Set</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sleeve</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheets, in bundle/bunch/truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tub</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tea-chest</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube, collapsible</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tierce</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank, rectangular</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tub, with lid</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tin</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tun</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trunk</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truss</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube, with nozzle </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank, cylindrical</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tubes, in bundle/bunch/truss </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uncaged </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vat</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, gas (at 1031 mbar and 15øC)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vial </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vanpack </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, liquid </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, large particles (“nodules”) </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vacuum-packed</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, liquefied gas (at abnormal temperature/pressure) </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, granular particles (“grains”) </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, fine particles (“powders”)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wickerbottle </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel, pressurised &gt; 10 kpa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium, pressurised &gt; 10 kpa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, pressure 10 kpa </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel, liquid </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium, liquid </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, liquid </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, without coat/liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, coated </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, with liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, coated and liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plastic film</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile with out coat/liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, natural wood, with inner liner</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, coated </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, with liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, coated and liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plywood, with inner liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, reconstituted wood, with inner liner</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, without inner coat/liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, sift proof </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, water resistant</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, plastics film </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, without inner coat/liner </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, sift proof </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, water resistant</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper, multi-wall </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper, multi-wall, water resistant</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in steel drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in steel crate box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in aluminium drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in aluminium crate</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in wooden box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plywood drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plywood box </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in fibre drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in fibreboard box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plastic drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in solid plastic box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in steel drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in steel crate box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in aluminium drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in aluminium crate</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in wooden box</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in plywood drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in wickerwork hamper</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in fibre drum</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in fibreboard box </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in expandable plastic pack</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in solid plastic pack</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, paper, multi-wall </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, large </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, paper, multi-wall, water resistant</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, solids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, solids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, pressurised</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, pressurised</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, liquids </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, liquids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, solids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, solids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, pressurised </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, pressurised</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, liquids</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, liquids </SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, fibreboard</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, flexible</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, other than steel</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, natural wood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plywood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, reconstituted wood</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined </SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

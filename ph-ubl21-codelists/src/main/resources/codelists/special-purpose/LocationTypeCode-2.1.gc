@@ -1,0 +1,3303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>LocationTypeCode</ShortName>
+      <LongName xml:lang="en">Location Type Code</LongName>
+      <Version>D10B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:LocationFunctionCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:LocationFunctionCode:D10B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/LocationTypeCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_LocationFunctionCode_D10B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="required">
+         <ShortName>Description</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of terms of delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3018) Point or port of departure, shipment or destination, as required under the applicable terms of delivery, e.g. Incoterms.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3109] To identify the place where the payment has been or should be made.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tare check place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where equipment tare has been or must be checked for official assessment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods receipt place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which the goods have been received.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of departure</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3214) Port, airport or other location from which a means of transport or transport equipment is scheduled to depart or has departed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ward bed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A bed in a ward.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3246) Place to which the goods are to be finally delivered under transport contract terms (operational term).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port, airport or other location to which a means of transport or transport equipment is destined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of loading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3334] Seaport, airport, freight terminal, rail station or other place at which the goods (cargo) are loaded on to the means of transport being used for their carriage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of acceptance</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3348] Place where the goods are taken over by the carrier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3392] Seaport, airport, freight terminal, rail station or other place at which goods are unloaded from the means of transport having been used for their carriage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port at which the goods are discharged from the vessel used for their transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of transhipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3424] Place where goods are to be or have been transferred from one means of transport to another during the course of one transport operation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods item storage location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3385] To identify the place where a goods item is located.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of transfer responsibility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the responsibility is transferred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of transfer of ownership</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the ownership of the goods is transferred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Border crossing place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where goods are transported across a country border.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Warehouse</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3156] Warehouse where a particular consignment is to be or has been stored.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Factory/plant</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Factory/plant relevant for a particular consignment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of ultimate destination of goods</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where goods will ultimately be delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Terms of sale place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place of departure, shipment or destination as specified in the terms of sale agreed between the parties.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs clearance location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3080] Place at which Customs clearance should or has taken place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port of release</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port where goods are released from Customs custody.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port of entry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port where final documentation is filed for Customs Entry processing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country relevant for a particular transaction.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>City</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>City or town relevant for a particular transaction or consignment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of origin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3239] To identify the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of destination of goods</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country to which the goods are to be delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Railway station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name or identification of a railway station/yard relevant to a particular consignment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of source</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which raw material or components were originally produced prior to manufacture or assembly in another country.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Building</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A building or part thereof relevant to a particular consignment or transaction.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Beginning of chargeable section</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>First rail station in a predefined section of the chargeable voyage. A complete voyage may be divided in sections, even within one country, that are separately chargeable using different tariff rules (split tariffs).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Baseport of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3356] Place at which the cargo is discharged or unloaded from a means of transport according to the transport contract. The goods may or may not be discharged from the main means of transport at this place or port.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Baseport of loading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3322] Place at which the cargo is loaded on a means of transport according to the transport contract. The goods may or may not be loaded on the main means of transport at this place or port.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exportation country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3220] Country from which the goods were initially exported to the importing country without any commercial transaction taking place in intermediate countries. Synonym: Country whence consigned. Country of despatch: Country from which goods are despatched between countries of a Customs union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of ultimate destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3216) Country known to the consignor or his agent at the time of despatch to be the final country to which the goods are to be delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignment final exportation country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3331] To identify the country from which goods have been or will be consigned prior to final importation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignment first destination country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3219] To identify the country where a consignment is off-loaded from the means of transport used for the original exportation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of production</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where item has been or will be produced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>40</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of trading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where item has been or will be traded.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignment entry customs office location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3089] To identify the customs office at which the goods enter the customs territory of destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Consignment exit customs office location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3097] To identify the customs office at which the goods leave or are intended to leave the customs territory of despatch.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of Customs examination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where Customs undertakes a physical inspection of goods to satisfy themselves that the goods' nature, origin, condition, quantity and value are in accordance with the particulars furnished on the goods declaration (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of authentication of document</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3410) Place where document is signed or otherwise authenticated. Synonym: Place of issue of document.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>45</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of destination (transit)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3086) Customs office at which a transit operation is terminated. Synonym: Customs office of transit termination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>46</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region from which goods are despatched between countries of a Customs union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>47</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region known to the consignor or his agent at the time of despatch to be the final region to which the goods are to be delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>48</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of production</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region where item has been or will be produced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>49</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3263] Country through which a goods or passengers are routed between the country of original departure and final destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>50</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit customs office location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3107] To identify the customs office which is responsible for transit formalities en-route.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of invalid transit guarantee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which the security or guarantee for the movement of goods under a transit procedure is not valid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>52</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of destination (transit)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country at which a Customs transit operation is terminated. Synonym: Country of transit termination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>53</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Charge and freight due from</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or point from which charges and freight are charged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Manufacturing department</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A department within the manufacturing area (e.g. lacquering, assembly).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>55</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Freight charge payable to location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3102] Name of a place to which a transport charges tariff applies or where freight and other related charges are to be or have been incurred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>56</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>End of chargeable section</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Last rail station in a predefined section of the chargeable voyage. A complete voyage may be divided in sections, even within one country, that are separately chargeable using different tariff rules (split tariffs).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>57</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of payment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of the location at which freight and charges for main transport are payable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>58</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Full track loading or unloading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification of the station proceeding to the loading or unloading of a rail wagon on a full track site. (Used only when a rail station is obliged to transfer the load on another wagon for technical reasons - e.g. damage).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>59</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of loss</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To identify the location where the loss occurred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>60</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of arrival</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which the transport means arrives.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Next port of call</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Next port which the vessel is going to call upon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>62</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>On-carriage port</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port of discharge at which the cargo is discharged from the vessel, used for transport after the main transport (transit port).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>63</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sub-project location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place at which works occur referring to a sub-project.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>64</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>First optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The first optional place or port of discharge as mentioned on the transport document where cargo can be discharged at the option of the shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Final port or place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of the seaport, airport, freight terminal, rail station or other place at which the goods (cargo) are finally (to be) unloaded from the means of transport used for their carriage according to the transport contract.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Express railway station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Railway station offering express transportation services.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mixed cargo railway station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Railway station offering mixed cargo transportation services .</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>68</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Second optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The second optional place or port of discharge as mentioned on the transport document where cargo can be discharged at the option of shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>69</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Next non-discharge port of call</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code to identify the next port of call for a vessel where no cargo will be discharged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>70</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Third optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The third optional place or port of discharge as mentioned on the transport document where cargo can be discharged at the option of the shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>71</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reconsolidation point</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place where cargo is reconsolidated.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>72</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fourth optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The fourth optional place or port of discharge as mentioned on the transport document where cargo can be discharged at the option of the shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>73</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill of lading release office</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A location where bills of lading are released to customers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>74</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transhipment excluding this place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/location where a transhipment from a means of transport to another means of transport is not authorised.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>75</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transhipment limited to this place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Only place/location where a transhipment from a means of transport to another means of transport is authorised.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>76</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Original port of loading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The port where the goods were first loaded on a vessel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>77</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>First port of call - non-discharging</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port in the country of destination where the conveyance initially arrives from the 'last place/port of call of conveyance' and where a conveyance will not be discharging cargoes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>78</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>First port of call - discharging</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port in the country of destination where the conveyance initially arrives from the 'last place/port of call of conveyance' and where a conveyance will be discharging cargoes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>79</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place/port of first entry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or port where final documentation is filed for Customs entry processing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>80</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which the goods are taken over for carriage (operational term), if different from the transport contract place of acceptance (see: 10). Synonym: Place of origin of carriage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>81</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fifth optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The fifth optional place or port of discharge as mentioned on the transport document where cargo can be discharged at the option of the shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>82</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pre-carriage port</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port of loading at which the cargo is loaded on the pre-carriage vessel used for the transport prior to the main transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>83</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of delivery (by on carriage)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place to which the goods are to be finally delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>84</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport contract place of acceptance</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which the goods are taken over by the carrier according to the contract of carriage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>85</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport contract place of destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place to which the goods are destined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>86</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of valid transit guarantee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which the security or guarantee for the movement of goods under a transit procedure is valid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>87</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place/port of conveyance initial arrival</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/port in the country of destination where the conveyance initially arrives from the "Last place/port of call of conveyance" (125).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>88</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of receipt</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification of the location at which the cargo is actually received.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>89</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of registration</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the registration occurs.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>90</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Special treatment place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where one or more special treatments have happened or must happen.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of document issue</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The place or location where a document is issued.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Routing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Indication of a routing place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Station of application of additional costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rail station where, according to the transport contract, some chargeable operations must happen (re-weighting, re-fixing of the load, control on equipment and on consignment, etc.).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>94</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Previous port of call</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Previous port which the vessel has called upon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>95</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sailing destination area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Geographical area to which the vessel's trip is destined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>96</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of lodgement of documents</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs station where, required documents for Customs declarations, have been lodged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>97</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Optional place of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The optional place or port of discharge as mentioned on the bill of lading where cargo is discharged at the option of the shipper.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>98</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of empty equipment despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location from which empty equipment is despatched.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>99</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of empty equipment return</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location to which empty equipment is returned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>100</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place/port of warehouse entry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location (e.g. district) within a Customs territory where a warehouse entry was filed to enter merchandise into a Customs bonded warehouse.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>101</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of first sale</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of country where firstly a sale took place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>103</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which goods are transferred from one carrier to another (contractual term).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>104</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of deconsolidation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where a large consignment is de-grouped into smaller consignments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>105</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of consumption</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/location where goods enter the marketplace (commerce) of the importing country.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>106</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of origin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region in which the goods have been produced or manufactured according to the criteria laid down for the purposes of the application of the Customs tariff, of quantitative restrictions or of any other measures related to trade (see: 3238).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>107</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of consolidation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where smaller consignments of goods are grouped together into a large consignment to be transported as a larger unit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>108</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rate combination point</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Point over which sector rates are combined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>109</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of prolongation decision of delivery delay</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where it has been decided to prolong the delivery delay.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>110</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Recharging place/location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/location where a consignment has been changed of destination and is subject to a recharge note. (Complementary orders to modify the routing of the transport may be given, upon which a new charge calculation may be applied by the carrier).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>111</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs office from which goods are despatched between countries of a Customs union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>112</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of equipment availability</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region in which a piece of equipment is requested to be made available for on-hire.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>113</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country from which goods are despatched within a Customs union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>114</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of export</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs office from which goods are taken out of the Customs territory (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>115</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Free zone of export</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Foreign free zone (desc: see 1131 = 131) from which goods are exported to the country of importation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>116</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of export/despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region from which the goods were initially exported to the importing country without any commercial transaction taking place in intermediate countries. Region of despatch: region from which goods are despatched between countries of a Customs union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>117</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of collection</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where goods are to be or could be picked up (collected).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>118</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of departure</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs office at which a Customs transit operation commences (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>119</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit guarantee customs office location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3111] To identify the Customs office at which a security or guarantee for the movement of goods under a transit procedure is lodged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>120</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of transhipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where goods are transferred under Customs control from the importing means of transport to the exporting means of transport within the area of one Customs office which is the office of both importation and exportation (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>122</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs office where the goods are to be cleared (CCC).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>123</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wagon-load railway station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A railway station where rail wagons are loaded.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>124</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Siding</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A short railway track for loading or unloading rail wagons, or bypassing of trains, connected with a main track by switch.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>125</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Last place/port of call of conveyance</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Conveyance departed from this last foreign place/port of call to go to "Place/port of conveyance initial arrival" (87).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>126</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of previous Customs procedure</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which the Customs declaration for the previous Customs procedure has been lodged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>127</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of registration of previous Customs declaration</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs office where the previous Customs declaration has been lodged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>128</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Participant sender location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where a participant in the movement of goods is located and can be contacted.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>129</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wage negotiation district</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The district to which workers belong for the purposes of union wage negotiation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>130</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of ultimate destination of conveyance</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Seaport, airport, freight terminal, rail station or other place to which a means of transport is ultimately destined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>131</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of loading of empty equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Seaport, airport, freight terminal, rail station or other place where empty equipment (e.g. containers) was loaded onto means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>132</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of discharge of empty equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Seaport, airport, freight terminal, rail station or other place where empty equipment (e.g. containers) was unloaded from means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>133</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(3246) Region to which the goods are to be finally delivered under transport contract terms (operational term).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>134</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Petroleum warehouse</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bonded petroleum warehouse or the supplier source.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>135</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of entry (Customs)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which the goods enter the Customs territory.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>136</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Living animals care place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where living animal cares are provided.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>137</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Re-icing place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where re-icing must be executed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>138</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Weighting place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where weight can be ascertained.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>139</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Marshalling yard</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Station where the wagons are disconnected and reconnected to form a new train.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>140</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stopping station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Station where the train must stop or is stopped for unexpected handling.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>141</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Loading dock</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Platform specially equipped for loading and unloading of rail wagons.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>142</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port connection</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Track connecting a rail station to a dock.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>143</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of expiry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the documentary credit expires for presentation of required documents.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>144</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of negotiation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the documentary credit is to be presented for negotiation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>145</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Claims payable place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where insurance claims are payable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>146</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Documentary credit available in</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the documentary credit is available with any bank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>147</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport means stowage location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[8043] To identify a location on board a means of transport where specified goods or transport equipment has been or are to be stowed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>148</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>For transportation to</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/country where goods are to be transported to.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>149</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Loading on board/despatch/taking in charge at/from</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/country where goods have to be loaded on board, despatched or taken in charge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>150</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container stack position</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Stack position of a container at a terminal, depot or freight station.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>151</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Private box</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A private box used for pick-up and delivery of packages, e.g. of express packages.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>152</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Next port of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Next port at which goods are discharged from the vessel used for their transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>153</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Port of call</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Port where a vessel has called upon or will call upon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>154</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place/location of on-hire</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/location where an object is contracted for use.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>155</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place/location of off-hire</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place/location where an object's contract for use ends.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>156</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Other carriers terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A carrier terminal belonging to a carrier other than the original carrier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>157</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of Value Added Tax (VAT) jurisdiction</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The country governing the VAT regulation to which the transaction is subject.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>158</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Contact location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The site where a contact is located.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>159</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Additional internal destination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Any location within the consignee's premises where the goods are moved to.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>160</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Foreign port of call</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code to identify the foreign port where the vessel calls at or will call at.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>161</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maintenance location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A location where maintenance has been or will be performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>162</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place or location of sale</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location at which the sale takes place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>163</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Direct investment country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which a direct investment is made or withdrawn.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>164</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Berth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location in port where the vessel is berthed or moored.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>165</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Construction country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country in which the construction work is made.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>166</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Donation acting country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country acting in the donation of aid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>167</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment transaction country</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country of the foreign counterpart of the payment transaction.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>168</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Physical place of return of item</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Physical place at which the item is returned, i.e. the location where the supplier receives the item form the customer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>169</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Relay port</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A location where cargo is transferred from one means of transport to another means of transport owned or operated by the same carrier under the same bill of lading.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>170</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Final port of discharge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Last port at which cargo is unloaded from a vessel before the cargo is moved to a place of delivery or destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>171</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of destination for pre-stacking prior to stowage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The destination location for which items are to be pre-stacked prior to being stowed together on a means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>172</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reporting location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location to which the information being reported is applicable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>173</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport contract place of despatch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place from which goods are despatched as per transport contract.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>174</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of residence</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place where a party lives.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>175</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Activity location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place at which the activity occurs.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>176</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pick-up location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location for pick up.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>177</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Construction site</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place at which construction works occur.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>178</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of embarkation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the object is put, or goes, on board the conveyance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>179</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of disembarkation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the object or person disembarks from the conveyance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>180</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Person birth location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>[3486] Name of the place where a person was born.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>181</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Registered office</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of a registered office.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>182</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of incorporation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the location of incorporation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>183</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of business</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of a business.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>184</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Physical location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the physical location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>185</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Location to send mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the location to which mail is sent.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>186</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Foreign registration location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of foreign registration.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>187</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tax filed from location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the location from which taxes are filed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>188</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Filing location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the location of the filing entity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>189</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Former location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies an earlier or previous place or location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>190</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Head office</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of a head office.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>191</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Property</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of property.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>192</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Correct location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the correct place or location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>193</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Branch location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of a branch.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>194</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Former registered location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the former registered location of an entity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>195</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Future location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location to be used in the future.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>196</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Changed to location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the change to location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>197</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of inquiry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place to which an inquiry is made.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>198</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Original location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the original location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>199</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of last source</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The country where a product or service was last sourced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>200</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of handling</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where a handling operation is to be, or has been, performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>201</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of origin as defined by transportation agency</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country of origin as defined by the transportation agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>202</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A terminus for transport vehicles.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>203</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sample location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code identifying the location from which a sample is taken.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>204</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital Advanced Dependency Unit (ADU)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A designated unit in a hospital for advanced dependency nursing care.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>205</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital Neonatal Intensive Care Unit (NICU)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A designated unit in a hospital for the provision of intensive care to neonates.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>206</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital Paediatric Care Unit (PCU)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A designated unit in a hospital for the provision of care to paediatric patients.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>207</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital Intensive Care Unit (ICU)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An intensive care unit in a hospital.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>208</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital luxury room</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A room in a hospital for patient accommodation of superior standard.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>209</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital shared room</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A room in a hospital for shared accommodation of patients.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>210</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hospital private room</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A room in a hospital for private accommodation of a patient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>211</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bidding area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An area for which bids can be made with the same price applicable to the whole area.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>212</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Price area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An area for which the same price is applicable to the whole area.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>213</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of destination of equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country of the last place where the equipment will stop.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>214</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aircraft airport stand</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code used to specify the airport stand allocated to the aircraft.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>215</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Airport passenger terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code used to specify the airport terminal used for the embarking or disembarking of passengers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>216</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Previous berth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location in a port where a vessel was previously moored.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>217</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Next berth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location in a port where a vessel will be moored, after moving from the current location.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>218</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Entity location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the place or location of the entity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>219</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods depot</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Depot where goods are received and are available for pick-up.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>220</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Disinfecting place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where disinfection has been or must be performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>221</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Harbour rail station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rail station servicing a harbour.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>222</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of live animal care</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where live animal care has been or must be provided.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>223</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Phytosanitary control place</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where phytosanitary control has been or must be performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>224</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place for re-icing or de-icing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where re-icing or de-icing has been or must be performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>225</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of refuelling</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where refuelling has been or must be performed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>226</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of provision of an unexpected service</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where an unexpected service has been or must be provided.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>227</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Private container terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Container terminal managed or owned by a private company.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>228</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Railway container terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Container terminal managed or owned by a railway company.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>229</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inspection site</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The site where an inspection takes or took place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>230</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Request only stop</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A location where a stop is only made on request.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>231</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Grid area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A section of a grid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>232</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Source power area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The area that is the source of power.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>233</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sink power area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The area that is the destination of power.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>234</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scheduled berth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location in a port where a vessel is scheduled to be moored.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>235</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scheduled berth, bow</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location in a port where the bow of a vessel is scheduled to berth.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>236</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scheduled berth, stern</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location in a port where the stern of a vessel is scheduled to berth.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>237</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Balance settlement area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An area where common rules for balance settlement applies.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>238</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Market area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An  area with common trading rules.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>239</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Metering grid area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A physical area where consumption, production and exchange can be metered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>240</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Climate zone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A geographical area where the climate has common characteristics.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>241</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of birth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where a person or an animal was born.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>242</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of fattening</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where an animal has been fattened.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>243</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of slaughter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where an animal has been slaughtered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>244</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of meat cutting</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where the meat is cut into pieces.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>245</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Meat cutting location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A location where the meat is cut into pieces.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>246</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slaughterhouse</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place for the slaughter of animals as food.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>247</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of meat mincing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where meat has been cut into very small pieces using a meat grinder.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>248</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of discharge and loading</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place at which a means of transport is performing both discharge and loading operations, e.g. seaport, airport, freight terminal, rail station.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>249</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cargo facility location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of the terminal, warehouse or yard where the goods are to be on or offloaded.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>250</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tourist point of interest</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code to specify that the location is a tourist point of interest.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>251</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs office of payment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where Customs duties/taxes/fees have to be paid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>252</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Conveyance facility location at departure</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of the location of the last facility (e.g. terminal, warehouse or yard) from which the conveyance will depart.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>253</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Conveyance facility location at arrival</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name of the location of the initial facility (e.g. terminal, warehouse or yard) where the conveyance will arrive.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>254</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bus station</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name or identification of a bus station.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>255</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ferry terminal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Name or identification of a ferry terminal.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>256</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of packing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where goods are packaged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>257</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of assembly</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Country where product is assembled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>258</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Town sales office</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location is a town sales office.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>259</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Travel agency</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location is a travel agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>260</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inland clearance depot</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Depot where goods are cleared by the customs authorities or other governmental authorities in the interior of a country.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>261</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of final production</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the production of the item was finalised.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>262</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of growth</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the product was grown.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>263</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of intermediate production</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place of any processing prior to final production.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>264</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of nutrient origin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the nutrient, or item of nourishing food, originated.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>265</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of package material production</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the material used for packaging was produced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>266</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of processing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The place where the commodity was processed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>267</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of species origin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The place where the species was taken from the wild, or the place where the species was born, artificially propagated, grown or harvested.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>268</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of catch</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where the animal was caught, e.g. area of the ocean where the fish was harvested.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>269</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Government appeal office</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location of a government office at which an appeal can be lodged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>270</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Regulatory office of cross-border goods entry</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To identify the regulatory office at which the goods enter or are intended to enter the customs territory of destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>271</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Regulatory office of cross-border goods exit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To identify the regulatory office at which the goods leave or are intended to leave the customs territory of dispatch.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>272</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Government approved establishment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Facility approved for a specific purpose by a government authority.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>273</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Free trade zone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A special area of a country where some normal trade barriers (e.g. tariffs and quotas) are eliminated, a.k.a. foreign free zone.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>274</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of physical examination</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place where goods are to be examined.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>275</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Permitted location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The location at which goods identified on the license, permit, certificate or other document are allowed to be moved or otherwise handled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>276</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Landing location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The place where a means of transport may be parked or tied up, e.g. wharf, quay, railyard, parking lot.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>277</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of loading on final means of transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where a consignment is placed aboard the means of transport which enters the destination customs territory.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>278</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of regulatory declaration review</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location where the declaration is reviewed by appropriate government agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>279</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Travel document issuing country or political entity</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The country or political entity issuing the travel document.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>280</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Compliant facility, registered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A facility that has been formally documented as compliant with regulations or statutes by a regulatory authority.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>281</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bonded warehouse</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A building or other secured area in which dutiable goods may be stored, manipulated, or undergo manufacturing operations without payment of duty.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>282</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods destruction site, designated</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place designated for the destruction of goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>283</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods disposal location, designated</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place designated for the disposal of goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>284</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incineration facility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Facility with a furnace or apparatus for consuming materials completely or reducing materials to ash by burning.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>285</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Laboratory</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A facility equipped for scientific experimentation, research, testing or determination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>286</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Place of assembly</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Facility where product is assembled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>287</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Processing site</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place where an operation or a series of operations are performed in the making or treatment of a product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>288</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Quarantine facility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A place or station where isolation is carried out.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>289</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reclamation facility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A facility where desired substances are recovered from materials or goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>290</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refinery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An industrial plant for refining a substance, such as petroleum or sugar.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>291</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Smelter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue> A facility where ores are fused or melted in order to separate the metal contained in them.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>292</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Prescribed treatment facility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A facility where goods are subjected to a prescribed treatment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>293</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Embassy</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The official headquarters of an ambassador or official diplomat sent by one sovereign or state to another as its resident representative.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>294</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of source</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region where goods were originally produced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>295</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Region of storage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Region where products have been stored.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>296</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ship security incident location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location for reporting any security related matter to indicate where the safety/security incident has taken place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>297</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ship-to-ship activity location</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Location where the ship-to-ship activity has taken place.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>298</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Country of last processing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The country where the trade item was last processed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Place or location as agreed between the relevant parties.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

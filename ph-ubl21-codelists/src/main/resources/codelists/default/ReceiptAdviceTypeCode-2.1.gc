@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>ReceiptAdviceTypeCode</ShortName>
+      <LongName xml:lang="en">Receipt Advice Type Code</LongName>
+      <Version>2.1</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ReceiptAdviceTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ReceiptAdviceTypeCode-2.1</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/default/ReceiptAdviceTypeCode-2.1.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">OASIS Universal Business Language</LongName>
+         <Identifier>UBL</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>Preliminary</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>An arrival that has not passed the goods inspection process.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>Actual</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>An arrival that has passed goods inspection and is accepted (or not).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>Return</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receipt of goods that are returned back from the buyer (e.g. customer returns).</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

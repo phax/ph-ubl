@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>DocumentStatusReasonCode</ShortName>
+      <LongName xml:lang="en">Document Status Reason Code</LongName>
+      <LongName Identifier="listID">tred9013</LongName>
+      <Version>D12B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:StatusReasonDescriptionCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:StatusReasonDescriptionCode:D12B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/DocumentStatusReasonCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/html">http://www.unece.org/trade/untdid/d12b/tred/tred9013.htm</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <LongName xml:lang="en">Code</LongName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <LongName xml:lang="en">Name</LongName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <LongName xml:lang="en">Description</LongName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Address ex delivery area</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The address for delivery is outside the area of the carrier/transporter.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>After transport departed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment arrived after the means of transport has departed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Agent refusal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The agent of the customer refused to accept delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Altered seals</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The seals on the equipment have been changed from those notified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Appointment scheduled</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An arrangement has been made to deliver at a specific time.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Attempt unsuccessful</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An unsuccessful attempt has been made to deliver the goods/consignments/equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Business closed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment could not be delivered/collected as the business was closed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Changed schedule</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment cannot/will not be delivered/collected at the arranged time because of a change of schedule.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Complementary address needed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A further address is needed to effect delivery/collection of the goods/consignments/equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Computer system down</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The computer system is inoperative.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit approval requested</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The consignee requests delivery on a credit base.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customer arrangements</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods/consignments/equipment require delivery arrangements by the customer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs refusal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The Customs authorities have refused to clear the goods/consignments/equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Damaged</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been damaged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delivery at specific requested dates/times/periods</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Delivery of the goods/consignments/equipment is requested at specific dates/times/periods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Destination incorrect</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been sent to wrong destination.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Departure delay</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The transport has been delayed in departing on the arranged transport action.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Derailment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The train carrying the goods/consignments/equipment has been derailed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Discrepancy</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>There is a discrepancy between the details of goods/ equipment previously provided and the actual situation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dock strike</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment cannot be delivered/collected due to a dock strike.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Due to customer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An action in the transport chain has been affected due to action of the customer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Empty</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The package/equipment is found to be empty.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Equipment failure</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Delivery/collection could not be effected due to equipment failure.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Examination required by relevant authority</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An examination of the goods/equipment has been ordered by the relevant authority.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Export restrictions</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been prohibited from export pending further investigation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frustrated export</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Attempts to export the goods/consignments/equipment have been unsuccessful.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods units missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The tally of goods/consignments/equipment does not match the quantity as per advice. Result: less than advised.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Import restrictions</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment need import checks and tests pending being released for importation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect pick information</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment were not collected due to incorrect pick information.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The address given for the action was incorrect.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Industrial dispute</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The action was frustrated by an industrial dispute.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Instructions awaited</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Further instructions are required.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lost goods/consignments/equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been lost in the course of a movement along the transport chain.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Means of transport damaged</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The means of transport on which the goods/consignments/equipment were being (were to be) moved has been damaged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mechanical breakdown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>There has been a mechanical breakdown of the means of transport/equipment on which the goods/consignments/equipment was being (was to be) moved.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mechanical inspection</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A mechanical inspection of the means of transport/ equipment on which the goods/consignments/equipment were being (were to be) moved, is required.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Missing and/or incorrect documents</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment require complete and correct documentation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New delivery arrangements</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Alternative delivery arrangements advised by consignee after failed delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>No recipient contact information</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>No information available concerning the responsible person at delivery address.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>40</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not identified</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment expected to be located and identified in the transport chain cannot be identified.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not loaded</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment to be loaded onto a means of transport have not been loaded on the expected transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>On deck</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been stowed on deck.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package not ready</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The package was not available for collection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package tracking number unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The package tracking number is unknown.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>45</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Partly missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment are partly, but not completely, missing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>46</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment not received</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The expected payment for the transport action was not received.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>47</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment refused</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The payer refused to pay for the service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>48</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plundered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been plundered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>49</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refused without reason given</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The transport action/documentation has been refused without explanation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>50</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scheduled past cut-off</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment to be delivered/collected have been scheduled past/later than the cut-off time.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Shunted to siding</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The transport on which the goods/consignments/equipment is to be placed has been shunted to siding.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>52</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Signature not required</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>No signature required.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>53</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sorted wrong route</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been sorted erroneously to an incorrect route.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Special service required</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A special service is required for the goods/consignments/equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>55</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Split</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The consignment of goods has been split into two or more consignments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>56</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Totally missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The total goods/consignments/equipment is missing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>57</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tracking information unavailable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The tracking information of the goods/consignments/equipment is unavailable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>58</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transit delay</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been delayed in transit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>59</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unable to locate</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment cannot be located.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>60</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unacceptable condition</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment were in unacceptable condition at time of delivery/collection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Under deck</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been stowed under/below deck.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>62</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason is unknown.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>63</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Weather conditions</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The weather conditions have affected collection/delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>64</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Expired free time</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods/consignments/equipment have been in a storage facility for longer than permitted free time.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Outstanding claims settled</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Outstanding claims in respect of goods/consignments/equipment have been settled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stolen</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A consignment or goods have been stolen.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Administrative error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An administrative error has occurred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>68</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Undefined incident attributed to buyer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An undefined incident has been attributed to the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>69</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Undefined incident attributed to carrier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An undefined incident has been attributed to the carrier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>70</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Undefined incident attributed to logistic service provider</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An undefined incident has been attributed to the logistic service provider.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>71</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Change in agreed product reference</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An agreed reference associated with a product has changed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>72</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Difference in replenishment figures</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A difference has been identified between the opening inventory balance, the physical count of incoming replenishment inventory, and the closing inventory balance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>73</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lost quantity of variable measurement product</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A quantity of a variable measurement product which has been lost.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>74</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Damaged during manipulation in warehouse</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product damaged during the manipulation process in a warehouse.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>75</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Product degenerated during storage or transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A product has degenerated during storage or transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>76</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Destroyed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods, consignments, or equipment have been destroyed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>77</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Best before date expired</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A product's best before date has expired.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>78</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Log number assignment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Log number is assigned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>79</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Entry point assessment of Data Maintenance Request (DMR)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>initial comment An entry point is providing its initial comments on a DMR.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>80</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Entry point assessment of Data Maintenance Request (DMR)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>latest comment An entry point is providing its latest comments on a DMR.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>81</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unable to take corrective action</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Corrective action could not be taken.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>82</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International assessment group reporting on Data</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Maintenance Request (DMR) The international assessment group has determined if the Data Maintenance Request (DMR) is to be included in the next publication of the standard.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>84</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Central secretariat review cycle start</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Report start of the central secretariat review cycle.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>85</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Data structure tag assigned</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A data structure has been assigned a permanent tag.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>87</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Information is in error.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>88</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Accident involving means of transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The means of transport being used to move the consignment has been involved in an accident.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>89</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Order or instruction status change</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A status of an order or instruction has changed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>90</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not accepted by delivery party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The delivery was not accepted by the delivery party.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delivery requested to another location by ordering party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods have been delivered to another location following an instruction from the ordering party.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect goods delivered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods delivered were incorrect.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Undefined incident attributed to customs authority</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An undefined incident has been attributed to the customs authority.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>94</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Imperfect item</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Item has defect(s).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>95</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Excess goods delivered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Excess goods have been delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>96</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods partially delivered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods were partially delivered.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>97</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Remove to federal court</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Action has been removed to a federal court level.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>98</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Change of venue granted</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A change in venue has been approved.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>99</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Replenish inventory</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The goods, consignment and/or equipment have replenished inventory.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>100</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unloading date and or time not received</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The unloading date and or time was not received.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>101</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stacked pallets not acceptable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Stacked pallets are not accepted by the goods recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>102</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallets containing mixed goods not acceptable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallets containing mixed goods are not accepted by goods recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>103</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Product expiry date not acceptable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The product expiry date is not accepted.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>104</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet and goods height higher than permitted</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The combined height of the pallet and goods is higher than permitted.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>105</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delivery order not received</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The delivery order was not received.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>106</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Back-orders not permitted by goods recipient</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Back-orders are not permitted by the goods recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>107</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Article identification not found in computer system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Article identification is not found in computer system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>108</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods not barcoded</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods are not barcoded.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

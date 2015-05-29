@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>ItemClassificationCode</ShortName>
+      <LongName xml:lang="en">Item Classification Code</LongName>
+      <LongName Identifier="listID">tred7143</LongName>
+      <Version>D12B</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:standard:UNECE:ItemTypeDefinitionCode</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:standard:UNECE:ItemTypeDefinitionCode:D12B</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/ItemClassificationCode-2.1.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/html">http://www.unece.org/trade/untdid/d12b/tred/tred7143.htm</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <LongName xml:lang="en">Code</LongName>
+         <Data Type="normalizedString"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <LongName xml:lang="en">Name</LongName>
+         <Data Type="string"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <LongName xml:lang="en">Description</LongName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Product version number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned by manufacturer or seller to identify the release of a product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Assembly</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is that of an assembly.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HIBC (Health Industry Bar Code)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Article identifier used within health sector to indicate data used conforms to HIBC.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cold roll number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a cold roll.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hot roll number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a hot roll.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slab number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a slab, which is produced in a particular production step.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Software revision number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number assigned to indicate a revision of software.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal Product Code) Consumer package code (1-5-5)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An 11-digit code that uniquely identifies consumer packaging of a product; does not have a check digit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal Product Code) Consumer package code (1-5-5-1)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 12-digit code that uniquely identifies the consumer packaging of a product, including a check digit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sample number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a sample.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pack number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a pack containing a stack of items put together (e.g. cold roll sheets (steel product)).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal Product Code) Shipping container code (1-2-5-5)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 13-digit code that uniquely identifies the manufacturer's shipping unit, including the packaging indicator.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal Product Code)/EAN (European article number) Shipping container code (1-2-5-5-1)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A 14-digit code that uniquely identifies the manufacturer's shipping unit, including the packaging indicator and the check digit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal Product Code) suffix</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A suffix used in conjunction with a higher level UPC (Universal product code) to define packing variations for a product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>State label code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code which specifies the codification of the state's labelling requirements.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Heat number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to the heat (also known as the iron charge) for the production of steel products.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coupon number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number identifying a coupon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Resource number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number to identify a resource.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Work task number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number to identify a work task.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Price look up number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification number on a product allowing a quick electronic retrieval of price information for that product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NSN (North Atlantic Treaty Organization Stock Number)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned under the NATO (North Atlantic Treaty Organization) codification system to provide the identification of an approved item of supply.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refined product code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code specifying the product refinement designation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exhibit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code indicating that the product is identified by an exhibit number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>End item</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number specifying an end item.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Federal supply classification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code to specify a product's Federal supply classification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Engineering data list</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code specifying the product's engineering data list.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Milestone event number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number to identify a milestone event.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lot number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number indicating the lot number of a product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National drug code 4-4-2 format</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code identifying the product in national drug format 4-4-2.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National drug code 5-3-2 format</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code identifying the product in national drug format 5-3-2.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National drug code 5-4-1 format</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code identifying the product in national drug format 5-4-1.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National drug code 5-4-2 format</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code identifying the product in national drug format 5-4-2.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National drug code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code specifying the national drug classification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Part number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number indicating the part.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Local Stock Number (LSN)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A local number assigned to an item of stock.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Next higher assembly number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number specifying the next higher assembly or component into which the product is being incorporated.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Data category</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code specifying a category of data.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Control number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To specify the control number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Special material identification code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number to identify the special material code.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Locally assigned control number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number assigned locally for control purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's colour</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Colour assigned by buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's part number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number assigned by the buyer to identify an article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Variable measure product code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code assigned to identify a variable measure item.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Financial phase</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To specify as an item, the financial phase.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Contract breakdown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To specify as an item, the contract breakdown.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Technical phase</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To specify as an item, the technical phase.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dye lot number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number identifying a dye lot.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Daily statement of activities</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A statement listing activities of one day.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Periodical statement of activities within a bilaterally agreed time period</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Periodical statement listing activities within a bilaterally agreed time period.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Calendar week statement of activities</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A statement listing activities of a calendar week.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Calendar month statement of activities</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A statement listing activities of a calendar month.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Original equipment number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Original equipment number allocated to spare parts by the manufacturer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Industry commodity code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The codes given to certain commodities by an industry.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Commodity grouping</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code for a group of articles with common characteristics (e.g. used for statistical purposes).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Colour number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code for the colour of an article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Contract number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a contract.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs article number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code defined by Customs authorities to an article or a group of articles for Customs purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drawing revision number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number indicating that a change or revision has been applied to a drawing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drawing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a drawing of an article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Engineering change level</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number indicating that a change or revision has been applied to an article's specification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Material code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code defining the material's type, surface, geometric form plus various classifying characteristics.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Article Numbering Association (EAN)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a manufacturer's product according to the International Article Numbering Association.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's internal product group code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product group code used within a buyer's internal systems.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National product group code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>National product group code. Administered by a national agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>General specification number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is a general specification number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Harmonised system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is part of, or is generated in the context of the Harmonised Commodity Description and Coding System (Harmonised System), as developed and maintained by the World Customs Organization (WCO).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ISBN (International Standard Book Number)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A unique number identifying a book.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's item number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number has been allocated by the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ISSN (International Standard Serial Number)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A unique number identifying a serial publication.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's style number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number given by the buyer to a specific style or form of an article, especially used for garments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's size code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code given by the buyer to designate the size of an article in textile and shoe industry.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Machine number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is a machine number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Manufacturer's (producer's) article number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The number given to an article by its manufacturer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Model number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number assigned by the manufacturer to differentiate variations in similar products in a class or group.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Product/service identification number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a product or service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Batch number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is a batch number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ON</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customer order number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number of a customer's order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Part number description</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a description associated with a number ultimately used to identify an article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Purchaser's order line number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a line entry in a customer's order for goods or services.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Purchase order number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a customer's order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promotional variant number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is a promotional variant number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer's qualifier for size</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number qualifies the size of the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Returnable container number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a returnable container.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Release number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number identifying a release from a buyer's purchase order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Run number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number identifies the production or manufacturing run or sequence in which the item was manufactured, processed or assembled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Record keeping of model year</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number relates to the year in which the particular model was kept.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Supplier's article number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to an article by the supplier of that article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Standard group of products (mixed assortment)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number relates to a standard group of other items (mixed) which are grouped together as a single item for identification purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SKU (Stock keeping unit)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number of a stock keeping unit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Serial number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification number of an item which distinguishes this specific item out of a number of identical items.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>RSK number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Plumbing and heating.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IFLS (Institut Francais du Libre Service) 5 digit product classification code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>5 digit code for product classification managed by the Institut Francais du Libre Service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IFLS (Institut Francais du Libre Service) 9 digit product classification code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>9 digit code for product classification managed by the Institut Francais du Libre Service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EAN.UCC Global Trade Item Number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A unique number, up to 14-digits, assigned according to the numbering structure of the EAN.UCC system. 'EAN' stands for the 'International Article Numbering Association', and 'UCC' for the 'Uniform Code Council'.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EDIS (Energy Data Identification System)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>European system for identification of meter data.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slaughter number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Unique number given by a slaughterhouse to an animal or a group of animals of the same breed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Official animal number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Unique number given by a national authority to identify an animal individually.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SRZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Harmonized tariff schedule</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The international Harmonized Tariff Schedule (HTS) to classify the article for customs, statistical and other purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Supplier's supplier article number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Article number referring to a sales catalogue of supplier's supplier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>46 Level DOT Code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US Department of Transportation (DOT) code to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Airline Tariff 6D</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US code agreed to by the airline industry to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Title 49 Code of Federal Regulations</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US Customs and Border Protection (CBP) code used to identify hazardous (dangerous) goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Civil Aviation Administration code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US Department of Transportation/Federal Aviation Administration code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hazardous Materials ID DOT</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US Department of Transportation (DOT) code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Endorsement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A US Customs and Border Protection (CBP) code used to identify hazardous (dangerous) goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Air Force Regulation 71-4</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A department of Defense/Air Force code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Breed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The breed of the item (e.g. plant or animal).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chemical Abstract Service (CAS) registry number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A unique numerical identifier for for chemical compounds, polymers, biological sequences, mixtures and alloys.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Engine model designation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A name or designation to identify an engine model.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Institutional Meat Purchase Specifications (IMPS) Number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A number assigned by agricultural authorities to identify and track meat and meat products.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Price Look-Up code (PLU)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification number affixed to produce in stores to retrieve price information.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Maritime Organization (IMO) Code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An International Maritime Organization (IMO) code used to identify hazardous (dangerous) goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bureau of Explosives 600-A (rail)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A Department of Transportation/Federal Railroad Administration code used to identify hazardous (dangerous) goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>United Nations Dangerous Goods List</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A UN code used to classify and identify dangerous goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Code of Botanical Nomenclature (ICBN)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code established by the International Code of Botanical Nomenclature (ICBN) used to classify and identify botanical articles and commodities.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Code of Zoological Nomenclature (ICZN)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code established by the International Code of Zoological Nomenclature (ICZN) used to classify and identify animals.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International Code of Nomenclature for Cultivated Plants (ICNCP)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code established by the International Code of Nomenclature for Cultivated Plants (ICNCP) used to classify and identify animals.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>DistributorÕs article identifier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifier assigned to an article by the distributor of that article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Norwegian Classification system ENVA</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Norwegian market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Supplier assigned classification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification assigned by the supplier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mexican classification system AMECE</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Mexican market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>German classification system CCG</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the German market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Finnish classification system EANFIN</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Finnish market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Canadian classification system ICC</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Canadian market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SSZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>French classification system IFLS5</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the French market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Style number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number given to a specific style or form of an article, especially used for garments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dutch classification system CBL</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Dutch market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Japanese classification system JICFS</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Japanese market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>European Union dairy subsidy eligibility classification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Category of product eligible for EU subsidy (applies for certain dairy products with specific level of fat content).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GS1 Spain classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Spanish market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GS1 Poland classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Polish market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Federal Agency on Technical Regulating and Metrology of the Russian Federation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A Russian government agency that serves as a national standardization body of the Russian Federation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Efficient Consumer Response (ECR) Austria classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Austrian market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GS1 Italy classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the Italian market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CPV (Common Procurement Vocabulary)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Official classification system for public procurement in the European Union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IFDA (International Foodservice Distributors Association)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>International Foodservice Distributors Association (IFDA).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AHFS (American Hospital Formulary Service) pharmacologic - therapeutic classification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pharmacologic - therapeutic classification maintained by the American Hospital Formulary Service (AHFS).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ATC (Anatomical Therapeutic Chemical) classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Anatomical Therapeutic Chemical classification system maintained by the World Health Organisation (WHO).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CLADIMED (Classification des Dispositifs M&#142;dicaux)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A five level classification system for medical decvices maintained by the CLADIMED organisation used in the French market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CMDR (Canadian Medical Device Regulations) classification system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Classification system related to the Canadian Medical Device Regulations maintained by Health Canada.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CNDM (Classificazione Nazionale dei Dispositivi Medici)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A classification system for medical devices used in the Italian market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UK DM&amp;D (Dictionary of Medicines &amp; Devices) standard coding scheme</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A classification system for medicines and devices used in the UK market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>eCl@ss</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standardized material and service classification and dictionary maintained by eClass e.V.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EDMA (European Diagnostic Manufacturers Association) Products Classification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Classification for in vitro diagnostics medical devices maintained by the European Diagnostic Manufacturers Association.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EGAR (European Generic Article Register)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A classification system for medical devices.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GMDN (Global Medical Devices Nomenclature)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Nomenclature system for identification of medical devices officially apprroved by the European Union.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GPI (Generic Product Identifier)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A drug classification system managed by Medi-Span.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>HCPCS (Healthcare Common Procedure Coding System)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A classification system used with US healthcare insurance programs.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ICPS (International Classification for Patient Safety)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A patient safety taxonomy maintained by the World Health Organisation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>MedDRA (Medical Dictionary for Regulatory Activities)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A medical dictionary maintained by the International Federation of Pharmaceutical Manufacturers and Associations (IFPMA).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Medical Columbus</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Medical product classification system used in the German market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NAPCS (North American Product Classification System)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product classification system used in the North American market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SUA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>NHS (National Health Services) eClass</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product and Service classification system used in United Kingdom market.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SUB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US FDA (Food and Drug Administration) Product Code Classification Database</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>US FDA Product Code Classification Database contains medical device names and associated information developed by the Center for Devices and Radiological Health (CDRH).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SUC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SNOMED CT (Systematized Nomenclature of Medicine-Clinical Terms)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A medical nomenclature system developed between the NHS and the College of American Pathologists.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UMDNS (Universal Medical Device Nomenclature System)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A standard international nomenclature and computer coding system for medical devices maintained by the Emergency Care Research Institute (ECRI).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SUE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GS1 Global Returnable Asset Identifier, non-serialised</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A unique, 13-digit number assigned according to the numbering structure of the GS1 system and used to identify a type of Reusable Transport Item (RTI).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport group number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>(8012) Additional number to form article groups for packing and/or transportation purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ultimate customer's article number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned by ultimate customer to identify relevant article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>UPC (Universal product code)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number assigned to a manufacturer's product by the Product Code Council.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vendor item number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number assigned by a vendor/seller identifying a product/service/article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vendor's (seller's) part number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reference number assigned by a vendor/seller identifying an article.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vendor's supplemental item number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number is a specified by the vendor as a supplemental number for the vendor's purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vendor specification number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The item number has been allocated by the vendor as a specification number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Item type identification mutually agreed between interchanging parties.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

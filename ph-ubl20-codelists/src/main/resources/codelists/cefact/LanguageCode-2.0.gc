@@ -1,0 +1,2239 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>LanguageCode</ShortName>
+      <LongName xml:lang="en">Language</LongName>
+      <Version>UN D.05A</Version>
+      <CanonicalUri>urn:un:unece:uncefact:codelist:specification:63453</CanonicalUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:specification:63453:2005</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/Language-2.0.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier>6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" xml:lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" xml:lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Afar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Abkhazian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Afrikaans</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Amharic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Arabic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Assamese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aymara</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Azerbaijani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bashkir</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Byelorussian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulgarian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bihari</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bislama</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bengali; Bangla</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tibetan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Breton</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Catalan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Corsican</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Czech</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Welsh</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Danish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>German</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bhutani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Greek</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>English</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Esperanto</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ES</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spanish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ET</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Esotonian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basque</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Persian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Finnish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fiji</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Faroese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>French</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frisian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Irish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scots Gaelic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Galician</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Guarani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Gujarati</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hausa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hebrew</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hindi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Croatian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hungarian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Armenian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Interlingua</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ID</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Indonesian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Interlingue</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inupiak</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Icelandic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Italian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Eskimo, Inuktiut CA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Japanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Javanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Georgian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kazakh</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Greenlandic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cambodian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kannada</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Korean</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kashmiri</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kurdish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kirghiz</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Latin</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lingala</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Laothian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lithuanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Latvian, Lettish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malagasy</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maori</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Macedonian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ML</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malayalam</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mangolian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Moldavian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Marathi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malay</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maltese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nauru</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nepali</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dutch</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Norwegian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Occitan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>(Afan) Oromo</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oriya</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Punjabi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Polish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pashto, Pushto</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Portuguese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Quechua</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rhaeto-Romance</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kirundi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Romanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Russian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kinyarwanda</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sanskrit</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sindhi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sangho</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Serbo-Croatian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Singhalese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slovak</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slovenian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Samoan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Shona</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Somali</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Albanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Serbian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Siswati</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sesotho</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sundanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Swedish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sawahili</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tamil</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telugu</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tajik</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Thai</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tigrinya</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Turkmen</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tagalog</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Setswana</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tonga</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Turkish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tsonga</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tatar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Twi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uigur</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ukrainian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Urdu</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uzbek</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vietnamese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Volapük</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wolof</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>hosa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Yiddish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Yoruba</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Zhuang</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chinese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Zulu</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>aa</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Afar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ab</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Abkhazian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>af</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Afrikaans</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>am</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Amharic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ar</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Arabic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>as</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Assamese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ay</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aymara</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>az</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Azerbaijani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ba</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bashkir</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>be</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Byelorussian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>bg</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulgarian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>bh</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bihari</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>bi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bislama</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>bn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bengali; Bangla</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>bo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tibetan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>br</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Breton</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ca</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Catalan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>co</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Corsican</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>cs</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Czech</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>cy</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Welsh</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>da</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Danish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>de</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>German</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>dz</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bhutani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>el</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Greek</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>en</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>English</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>eo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Esperanto</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>es</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spanish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>et</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Esotonian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>eu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basque</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fa</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Persian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Finnish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fj</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fiji</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Faroese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fr</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>French</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>fy</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frisian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ga</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Irish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>gd</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Scots Gaelic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>gl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Galician</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>gn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Guarani</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>gu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Gujarati</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ha</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hausa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>he</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hebrew</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>hi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hindi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>hr</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Croatian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>hu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hungarian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>hy</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Armenian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ia</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Interlingua</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>id</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Indonesian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ie</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Interlingue</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ik</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inupiak</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>is</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Icelandic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>it</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Italian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>iu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Eskimo, Inuktiut CA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ja</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Japanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>jw</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Javanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ka</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Georgian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>kk</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kazakh</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>kl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Greenlandic</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>km</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cambodian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>kn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kannada</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ko</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Korean</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ks</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kashmiri</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ku</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kurdish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ky</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kirghiz</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>la</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Latin</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ln</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lingala</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>lo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Laothian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>lt</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lithuanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>lv</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Latvian, Lettish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mg</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malagasy</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maori</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mk</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Macedonian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ml</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malayalam</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mangolian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Moldavian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mr</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Marathi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ms</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Malay</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>mt</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maltese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>na</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nauru</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ne</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nepali</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>nl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dutch</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>no</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Norwegian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>oc</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Occitan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>om</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>(Afan) Oromo</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>or</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oriya</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>pa</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Punjabi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>pl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Polish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ps</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pashto, Pushto</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>pt</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Portuguese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>qu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Quechua</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>rm</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rhaeto-Romance</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>rn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kirundi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ro</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Romanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ru</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Russian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>rw</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kinyarwanda</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sa</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sanskrit</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sd</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sindhi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sg</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sangho</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sh</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Serbo-Croatian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>si</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Singhalese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sk</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slovak</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slovenian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sm</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Samoan</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Shona</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>so</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Somali</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sq</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Albanian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sr</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Serbian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ss</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Siswati</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>st</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sesotho</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>su</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sundanese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sv</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Swedish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>sw</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sawahili</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ta</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tamil</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>te</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telugu</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tg</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tajik</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>th</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Thai</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ti</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tigrinya</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tk</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Turkmen</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tl</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tagalog</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tn</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Setswana</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>to</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tonga</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tr</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Turkish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ts</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tsonga</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tt</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tatar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>tw</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Twi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ug</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uigur</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>uk</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ukrainian</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ur</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Urdu</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>uz</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uzbek</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>vi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vietnamese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>vo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Volapük</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>wo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wolof</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>xh</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>hosa</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>yi</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Yiddish</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>yo</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Yoruba</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>za</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Zhuang</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>zh</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chinese</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>zu</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Zulu</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>
