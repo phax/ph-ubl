@@ -28,15 +28,55 @@ Add the following to your pom.xml to use this artifact:
 </dependency>
 ```
 
+When you are only interested in UBL 2.0 you can manually exclude the UBL 2.1 artefacts in your pom.xml like this:
+
+```
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-ubl</artifactId>
+  <version>3.3.0</version>
+  <exclusions>
+    <exclusion>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl21</artifactId>
+    </exclusion>
+    <exclusion>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl21-codelists</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
+```
+
+When you are only interested in UBL 2.1 you can manually exclude the UBL 2.0 artefacts in your pom.xml like this:
+
+```
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-ubl</artifactId>
+  <version>3.3.0</version>
+  <exclusions>
+    <exclusion>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl20</artifactId>
+    </exclusion>
+    <exclusion>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl20-codelists</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
+```
+
 #Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/]
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl20/]
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/]
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl21/]
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/]
-  * [http://repo1.maven.org/maven2/com/helger/ph-ubl/]
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl20/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl21/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl/
 
 ---
 
