@@ -24,6 +24,13 @@ import com.helger.ubl.IUBLDocumentType;
 
 public abstract class AbstractCreateUBLActionCode
 {
+  protected static enum EPhase
+  {
+    READ,
+    WRITE,
+    VALIDATE;
+  }
+
   static void append (@Nonnull final IUBLDocumentType e,
                       @Nonnull final EPhase ePhase,
                       @Nonnull final StringBuilder aSB,
