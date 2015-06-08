@@ -77,6 +77,12 @@ Binary versions of the artefacts can be downloaded from Maven Central:
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl/
+  
+The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
+
+  * http://repo1.maven.org/maven2/com/helger/ph-commons/
+  * http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
+  * http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
 ---
 
