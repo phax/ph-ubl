@@ -27,19 +27,19 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
-import com.helger.commons.annotations.CodingStyleguideUnaware;
-import com.helger.commons.annotations.Nonempty;
-import com.helger.commons.annotations.ReturnsMutableCopy;
-import com.helger.commons.collections.CollectionHelper;
+import com.helger.commons.annotation.CodingStyleguideUnaware;
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.id.IHasID;
-import com.helger.commons.io.file.filter.FilenameFilterEndsWith;
+import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
 import com.helger.commons.io.file.iterate.FileSystemRecursiveIterator;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.genericode.Genericode10CodeListMarshaller;
-import com.helger.genericode.Genericode10Utils;
+import com.helger.genericode.Genericode10Helper;
 import com.helger.genericode.v10.CodeListDocument;
 import com.helger.genericode.v10.Column;
 import com.helger.genericode.v10.Row;
@@ -90,23 +90,23 @@ public final class MainCreateEnumsGenericode21
       System.out.println ("  does not contain a SimpleCodeList!");
       return;
     }
-    final Column aColCode = Genericode10Utils.getColumnOfID (aCodeList10.getColumnSet (), COLID_CODE);
+    final Column aColCode = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_CODE);
     if (aColCode == null)
     {
       System.out.println ("  No '" + COLID_CODE + "' column found");
       return;
     }
-    if (!Genericode10Utils.isKeyColumn (aCodeList10.getColumnSet (), COLID_CODE))
+    if (!Genericode10Helper.isKeyColumn (aCodeList10.getColumnSet (), COLID_CODE))
     {
       System.out.println ("  Column '" + COLID_CODE + "' is not a key");
       return;
     }
 
     // Name column may be null
-    final Column aColName = Genericode10Utils.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
+    final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode10Utils.getAllColumnIDs (aCodeList10.getColumnSet ()));
+    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet ()));
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
     if (aFile.getName ().equals ("UnitOfMeasureCode-2.1.gc") ||
@@ -161,7 +161,7 @@ public final class MainCreateEnumsGenericode21
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList10.getSimpleCodeList ().getRow ())
     {
-      final String sCode = Genericode10Utils.getRowValue (aRow, COLID_CODE).trim ();
+      final String sCode = Genericode10Helper.getRowValue (aRow, COLID_CODE).trim ();
       String sIdentifier = RegExHelper.getAsIdentifier (sCode);
       if (StringHelper.hasNoText (sIdentifier))
       {
@@ -188,11 +188,11 @@ public final class MainCreateEnumsGenericode21
       final JEnumConstant jEnumConst = jEnum.enumConstant (sIdentifier);
       jEnumConst.arg (JExpr.lit (sCode));
       if (bHasNameColumn)
-        jEnumConst.arg (JExpr.lit (Genericode10Utils.getRowValue (aRow, COLID_NAME).trim ()));
+        jEnumConst.arg (JExpr.lit (Genericode10Helper.getRowValue (aRow, COLID_NAME).trim ()));
 
       for (final String sOtherCol : aOtherCols)
       {
-        String sValue = Genericode10Utils.getRowValue (aRow, sOtherCol);
+        String sValue = Genericode10Helper.getRowValue (aRow, sOtherCol);
         if (sValue != null)
           sValue = sValue.trim ().replaceAll ("\\s+", " ");
         jEnumConst.arg (sValue == null ? JExpr._null () : JExpr.lit (sValue));
@@ -339,12 +339,12 @@ public final class MainCreateEnumsGenericode21
         }
       }
 
-      final String sRowCode = Genericode10Utils.getRowValue (aRow, COLID_CODE).trim ();
+      final String sRowCode = Genericode10Helper.getRowValue (aRow, COLID_CODE).trim ();
       aCodeMethod.body ().invoke (aCodeParam, "add").arg (sRowCode);
 
       if (bHasNameColumn && aNameMethod != null)
       {
-        final String sRowName = Genericode10Utils.getRowValue (aRow, COLID_NAME).trim ();
+        final String sRowName = Genericode10Helper.getRowValue (aRow, COLID_NAME).trim ();
         aNameMethod.body ().invoke (aNameParam, "add").arg (sRowName);
       }
 
@@ -386,7 +386,7 @@ public final class MainCreateEnumsGenericode21
   public static void main (final String [] args) throws JClassAlreadyExistsException, IOException
   {
     for (final File aFile : FileSystemRecursiveIterator.create (new File ("src/main/resources/codelists"),
-                                                                new FilenameFilterEndsWith (".gc")))
+                                                                new FileFilterFilenameEndsWith (".gc")))
     {
       final CodeListDocument aCodeList10 = new Genericode10CodeListMarshaller ().read (aFile);
       if (aCodeList10 != null)

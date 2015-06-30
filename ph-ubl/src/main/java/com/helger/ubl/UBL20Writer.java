@@ -59,7 +59,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
 import org.w3c.dom.Document;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
+import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.state.ESuccess;
 
 /**

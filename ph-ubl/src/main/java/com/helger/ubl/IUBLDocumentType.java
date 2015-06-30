@@ -24,7 +24,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
 
 import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.io.IReadableResource;
+import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.xml.schema.IHasSchema;
 
 /**

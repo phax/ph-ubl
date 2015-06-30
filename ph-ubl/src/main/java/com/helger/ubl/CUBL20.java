@@ -18,7 +18,7 @@ package com.helger.ubl;
 
 import javax.annotation.concurrent.Immutable;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
+import com.helger.commons.annotation.PresentForCodeCoverage;
 
 /**
  * Constants for UBL 2.0 handling.

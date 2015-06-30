@@ -24,11 +24,11 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
 
 import com.helger.commons.ValueEnforcer;
-import com.helger.commons.annotations.CodingStyleguideUnaware;
+import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.io.IReadableResource;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.lang.CGStringHelper;
+import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.commons.xml.schema.XMLSchemaCache;
 import com.helger.commons.xml.schema.XMLSchemaValidationHelper;
@@ -103,7 +103,7 @@ public enum EUBL20DocumentType implements IUBLDocumentType
 
     // Hack: build the element name from the type, excluding the "Type" at the
     // end
-    String sLocalName = CGStringHelper.getClassLocalName (aClass);
+    String sLocalName = ClassHelper.getClassLocalName (aClass);
     sLocalName = sLocalName.substring (0, sLocalName.length () - "Type".length ());
 
     m_aClass = aClass;

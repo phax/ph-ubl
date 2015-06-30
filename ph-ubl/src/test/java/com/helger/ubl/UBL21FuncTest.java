@@ -41,9 +41,9 @@ import org.xml.sax.SAXException;
 
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.PHTestUtils;
-import com.helger.commons.xml.serialize.DOMReader;
-import com.helger.commons.xml.serialize.DOMReaderSettings;
+import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.commons.xml.serialize.read.DOMReader;
+import com.helger.commons.xml.serialize.read.DOMReaderSettings;
 import com.helger.ubl.mock.MockUBLTestDocuments;
 
 /**
@@ -79,7 +79,7 @@ public final class UBL21FuncTest
       // read again
       final CatalogueType aUBLObject2 = UBL21Reader.readCatalogue (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateCatalogue (aUBLObject2);
@@ -119,7 +119,7 @@ public final class UBL21FuncTest
       // read again
       final CreditNoteType aUBLObject2 = UBL21Reader.readCreditNote (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateCreditNote (aUBLObject2);
@@ -159,7 +159,7 @@ public final class UBL21FuncTest
       // read again
       final DespatchAdviceType aUBLObject2 = UBL21Reader.readDespatchAdvice (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateDespatchAdvice (aUBLObject2);
@@ -199,7 +199,7 @@ public final class UBL21FuncTest
       // read again
       final ForwardingInstructionsType aUBLObject2 = UBL21Reader.readForwardingInstructions (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateForwardingInstructions (aUBLObject2);
@@ -239,7 +239,7 @@ public final class UBL21FuncTest
       // read again
       final InvoiceType aUBLObject2 = UBL21Reader.readInvoice (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateInvoice (aUBLObject2);
@@ -280,7 +280,7 @@ public final class UBL21FuncTest
       // read again
       final OrderType aUBLObject2 = UBL21Reader.readOrder (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateOrder (aUBLObject2);
@@ -320,7 +320,7 @@ public final class UBL21FuncTest
       // read again
       final OrderResponseSimpleType aUBLObject2 = UBL21Reader.readOrderResponseSimple (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateOrderResponseSimple (aUBLObject2);
@@ -360,7 +360,7 @@ public final class UBL21FuncTest
       // read again
       final QuotationType aUBLObject2 = UBL21Reader.readQuotation (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateQuotation (aUBLObject2);
@@ -400,7 +400,7 @@ public final class UBL21FuncTest
       // read again
       final ReceiptAdviceType aUBLObject2 = UBL21Reader.readReceiptAdvice (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateReceiptAdvice (aUBLObject2);
@@ -440,7 +440,7 @@ public final class UBL21FuncTest
       // read again
       final RemittanceAdviceType aUBLObject2 = UBL21Reader.readRemittanceAdvice (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateRemittanceAdvice (aUBLObject2);
@@ -480,7 +480,7 @@ public final class UBL21FuncTest
       // read again
       final RequestForQuotationType aUBLObject2 = UBL21Reader.readRequestForQuotation (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateRequestForQuotation (aUBLObject2);
@@ -520,7 +520,7 @@ public final class UBL21FuncTest
       // read again
       final StatementType aUBLObject2 = UBL21Reader.readStatement (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateStatement (aUBLObject2);
@@ -560,7 +560,7 @@ public final class UBL21FuncTest
       // read again
       final WaybillType aUBLObject2 = UBL21Reader.readWaybill (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      PHTestUtils.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBL21Validator.validateWaybill (aUBLObject2);

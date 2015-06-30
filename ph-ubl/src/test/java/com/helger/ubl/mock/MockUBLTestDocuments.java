@@ -23,8 +23,8 @@ import java.util.Locale;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
-import com.helger.commons.annotations.ReturnsMutableCopy;
-import com.helger.commons.lang.CGStringHelper;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.ubl.EUBL20DocumentType;
 import com.helger.ubl.EUBL21DocumentType;
@@ -86,7 +86,7 @@ public final class MockUBLTestDocuments
   private static String _getTestFileBaseDirName (final IUBLDocumentType aDocType)
   {
     return "examples/" +
-           StringHelper.trimEnd (CGStringHelper.getClassLocalName (aDocType.getImplementationClass ()), "Type")
+           StringHelper.trimEnd (ClassHelper.getClassLocalName (aDocType.getImplementationClass ()), "Type")
                        .toLowerCase (Locale.US) + "/";
   }
 

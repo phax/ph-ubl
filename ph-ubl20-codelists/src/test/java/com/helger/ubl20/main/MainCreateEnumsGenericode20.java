@@ -30,17 +30,17 @@ import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContent
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
 import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
 
-import com.helger.commons.annotations.CodingStyleguideUnaware;
-import com.helger.commons.annotations.Nonempty;
+import com.helger.commons.annotation.CodingStyleguideUnaware;
+import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
-import com.helger.commons.io.file.filter.FilenameFilterEndsWith;
+import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
 import com.helger.commons.io.file.iterate.FileSystemRecursiveIterator;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.genericode.Genericode04CodeListMarshaller;
-import com.helger.genericode.Genericode04Utils;
+import com.helger.genericode.Genericode04Helper;
 import com.helger.genericode.v04.CodeListDocument;
 import com.helger.genericode.v04.Column;
 import com.helger.genericode.v04.Row;
@@ -105,21 +105,21 @@ public final class MainCreateEnumsGenericode20
       System.out.println ("  does not contain a SimpleCodeList!");
       return;
     }
-    final Column aColCode = Genericode04Utils.getColumnOfID (aCodeList.getColumnSet (), COLID_CODE);
+    final Column aColCode = Genericode04Helper.getColumnOfID (aCodeList.getColumnSet (), COLID_CODE);
     if (aColCode == null)
     {
       System.out.println ("  No '" + COLID_CODE + "' column found");
       return;
     }
-    if (!Genericode04Utils.isKeyColumn (aCodeList.getColumnSet (), COLID_CODE))
+    if (!Genericode04Helper.isKeyColumn (aCodeList.getColumnSet (), COLID_CODE))
     {
       System.out.println ("  Column '" + COLID_CODE + "' is not a key");
       return;
     }
-    final Column aColName = Genericode04Utils.getColumnOfID (aCodeList.getColumnSet (), COLID_NAME);
+    final Column aColName = Genericode04Helper.getColumnOfID (aCodeList.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode04Utils.getAllColumnIDs (aCodeList.getColumnSet ()));
+    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode04Helper.getAllColumnIDs (aCodeList.getColumnSet ()));
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
 
@@ -138,7 +138,7 @@ public final class MainCreateEnumsGenericode20
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList.getSimpleCodeList ().getRow ())
     {
-      final String sCode = Genericode04Utils.getRowValue (aRow, COLID_CODE).trim ();
+      final String sCode = Genericode04Helper.getRowValue (aRow, COLID_CODE).trim ();
       String sIdentifier = RegExHelper.getAsIdentifier (sCode);
       if (StringHelper.hasNoText (sIdentifier))
       {
@@ -166,11 +166,11 @@ public final class MainCreateEnumsGenericode20
       jEnumConst.arg (JExpr.lit (sCode));
 
       if (bHasNameColumn)
-        jEnumConst.arg (JExpr.lit (Genericode04Utils.getRowValue (aRow, COLID_NAME).trim ()));
+        jEnumConst.arg (JExpr.lit (Genericode04Helper.getRowValue (aRow, COLID_NAME).trim ()));
 
       for (final String sOtherCol : aOtherCols)
       {
-        String sValue = Genericode04Utils.getRowValue (aRow, sOtherCol);
+        String sValue = Genericode04Helper.getRowValue (aRow, sOtherCol);
         if (sValue != null)
           sValue = sValue.trim ().replaceAll ("\\s+", " ");
         jEnumConst.arg (sValue == null ? JExpr._null () : JExpr.lit (sValue));
@@ -274,7 +274,7 @@ public final class MainCreateEnumsGenericode20
   public static void main (final String [] args) throws JClassAlreadyExistsException, IOException
   {
     for (final File aFile : FileSystemRecursiveIterator.create (new File ("src/main/resources/codelists"),
-                                                                new FilenameFilterEndsWith (".gc")))
+                                                                new FileFilterFilenameEndsWith (".gc")))
     {
       System.out.println (aFile.getName ());
       final CodeListDocument aCodeList04 = new Genericode04CodeListMarshaller ().read (aFile);

@@ -58,8 +58,8 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
 import org.w3c.dom.Node;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
-import com.helger.commons.io.IReadableResource;
+import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.xml.transform.TransformSourceFactory;
 
 /**

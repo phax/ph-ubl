@@ -18,7 +18,7 @@ package com.helger.ubl.main;
 
 import javax.annotation.Nonnull;
 
-import com.helger.commons.lang.CGStringHelper;
+import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.ubl.IUBLDocumentType;
 
@@ -37,7 +37,7 @@ public abstract class AbstractCreateUBLActionCode
                       @Nonnull final String sMarshallerClass,
                       @Nonnull final String sEnumName)
   {
-    final String sType = CGStringHelper.getClassLocalName (e.getImplementationClass ());
+    final String sType = ClassHelper.getClassLocalName (e.getImplementationClass ());
     final String sName = StringHelper.trimEnd (sType, "Type");
     final String sParam = "a" + sName;
     final String sReadMethod = "read" + sName;

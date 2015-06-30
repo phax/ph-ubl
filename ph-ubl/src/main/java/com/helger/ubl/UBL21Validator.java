@@ -86,7 +86,7 @@ import oasis.names.specification.ubl.schema.xsd.unawardednotification_21.Unaward
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_21.UtilityStatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
+import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
 
 /**

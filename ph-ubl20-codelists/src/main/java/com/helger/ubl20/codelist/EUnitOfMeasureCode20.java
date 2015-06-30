@@ -18,12 +18,14 @@ package com.helger.ubl20.codelist;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import com.helger.commons.annotations.CodingStyleguideUnaware;
-import com.helger.commons.annotations.Nonempty;
+
+import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
+
+import com.helger.commons.annotation.CodingStyleguideUnaware;
+import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
-import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
 
 
 /**

@@ -29,27 +29,27 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.XMLConstants;
 
-import com.helger.commons.annotations.Nonempty;
-import com.helger.commons.collections.ArrayHelper;
-import com.helger.commons.collections.CollectionHelper;
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.collection.ArrayHelper;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.io.file.ComparatorFileName;
-import com.helger.commons.io.file.FileUtils;
-import com.helger.commons.io.file.filter.FilenameFilterEndsWith;
+import com.helger.commons.io.file.FileHelper;
+import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.commons.microdom.IMicroDocument;
 import com.helger.commons.microdom.IMicroElement;
-import com.helger.commons.microdom.impl.MicroDocument;
-import com.helger.commons.microdom.reader.XMLMapHandler;
+import com.helger.commons.microdom.MicroDocument;
 import com.helger.commons.microdom.serialize.MicroReader;
 import com.helger.commons.microdom.serialize.MicroWriter;
+import com.helger.commons.microdom.util.XMLMapHandler;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
-import com.helger.commons.url.URLUtils;
+import com.helger.commons.url.URLHelper;
 import com.helger.commons.xml.CXML;
-import com.helger.commons.xml.EXMLIncorrectCharacterHandling;
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.commons.xml.serialize.XMLWriterSettings;
+import com.helger.commons.xml.serialize.write.EXMLIncorrectCharacterHandling;
+import com.helger.commons.xml.serialize.write.XMLWriterSettings;
 
 /**
  * Utility class that creates:
@@ -83,8 +83,8 @@ public final class MainCreateJAXBBinding20
   @Nonnull
   private static Iterable <File> _getFileList (final String sPath)
   {
-    return CollectionHelper.getSorted (FileSystemIterator.create (sPath, new FilenameFilterEndsWith (".xsd")),
-                                      new ComparatorFileName (Locale.US));
+    return CollectionHelper.getSorted (FileSystemIterator.create (sPath, new FileFilterFilenameEndsWith (".xsd")),
+                                       new ComparatorFileName ());
   }
 
   @Nullable
@@ -100,7 +100,7 @@ public final class MainCreateJAXBBinding20
     String s = sNamespaceURI.toLowerCase (Locale.US);
 
     String [] aParts;
-    final URL aURL = URLUtils.getAsURL (sNamespaceURI);
+    final URL aURL = URLHelper.getAsURL (sNamespaceURI);
     if (aURL != null)
     {
       // Host
@@ -182,7 +182,7 @@ public final class MainCreateJAXBBinding20
         }
       }
       MicroWriter.writeToStream (eDoc,
-                                 FileUtils.getOutputStream ("src/main/jaxb/bindings20.xjb"),
+                                 FileHelper.getOutputStream ("src/main/jaxb/bindings20.xjb"),
                                  new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
                                                          .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
                                                                                                                            JAXB_NS_URI)

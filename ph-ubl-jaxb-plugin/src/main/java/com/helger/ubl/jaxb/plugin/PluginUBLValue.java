@@ -27,8 +27,8 @@ import javax.annotation.Nullable;
 
 import org.xml.sax.ErrorHandler;
 
-import com.helger.commons.annotations.IsSPIImplementation;
-import com.helger.commons.collections.CollectionHelper;
+import com.helger.commons.annotation.IsSPIImplementation;
+import com.helger.commons.collection.CollectionHelper;
 import com.sun.codemodel.JCodeModel;
 import com.sun.codemodel.JConditional;
 import com.sun.codemodel.JDefinedClass;

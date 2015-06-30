@@ -40,10 +40,10 @@ import org.w3c.dom.Node;
 import org.xml.sax.helpers.DefaultHandler;
 
 import com.helger.commons.ValueEnforcer;
-import com.helger.commons.annotations.PresentForCodeCoverage;
+import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.jaxb.JAXBContextCache;
-import com.helger.commons.jaxb.JAXBMarshallerUtils;
+import com.helger.commons.jaxb.JAXBMarshallerHelper;
 import com.helger.commons.jaxb.validation.CollectingValidationEventHandler;
 import com.helger.commons.jaxb.validation.LoggingValidationEventHandler;
 import com.helger.commons.state.ESuccess;
@@ -271,7 +271,7 @@ public final class UBL21Marshaller
     aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
     try
     {
-      JAXBMarshallerUtils.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespaceContext.getInstance ());
+      JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespaceContext.getInstance ());
     }
     catch (final Throwable t)
     {

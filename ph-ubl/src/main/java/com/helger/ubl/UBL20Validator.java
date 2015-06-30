@@ -52,7 +52,7 @@ import oasis.names.specification.ubl.schema.xsd.statement_2.StatementType;
 import oasis.names.specification.ubl.schema.xsd.transportationstatus_2.TransportationStatusType;
 import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
+import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
 
 /**

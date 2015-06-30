@@ -18,8 +18,9 @@ package com.helger.ubl21.codelist;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import com.helger.commons.annotations.CodingStyleguideUnaware;
-import com.helger.commons.annotations.Nonempty;
+
+import com.helger.commons.annotation.CodingStyleguideUnaware;
+import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
