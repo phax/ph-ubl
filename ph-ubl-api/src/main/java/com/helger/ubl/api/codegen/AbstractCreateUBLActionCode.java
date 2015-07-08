@@ -64,6 +64,23 @@ public abstract class AbstractCreateUBLActionCode
            .append (sReadMethod)
            .append ("(aNode, getGlobalValidationEventHandler ());}\n");
 
+        // read (Node, ClassLoader)
+        aSB.append ("/** Interpret the passed DOM {@link Node} as a " +
+                    sName +
+                    " using the global validation event handler.\n" +
+                    "@param aNode the DOM node. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader){return ")
+           .append (sReadMethod)
+           .append ("(aNode, aClassLoader, getGlobalValidationEventHandler ());}\n");
+
         // read (Node, ValidationEventHandler)
         aSB.append ("/** Interpret the passed DOM {@link Node} as a " +
                     sName +
@@ -83,6 +100,26 @@ public abstract class AbstractCreateUBLActionCode
            .append (sType)
            .append (".class, aCustomEventHandler);}\n");
 
+        // read (Node, ClassLoader, ValidationEventHandler)
+        aSB.append ("/** Interpret the passed DOM {@link Node} as a " +
+                    sName +
+                    " using a custom validation event handler.\n" +
+                    "@param aNode the DOM node. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader, @Nullable ValidationEventHandler aCustomEventHandler){return ")
+           .append (sMarshallerClass)
+           .append (".readUBLDocument (aNode, aClassLoader, ")
+           .append (sType)
+           .append (".class, aCustomEventHandler);}\n");
+
         // read (File)
         aSB.append ("/** Interpret the passed {@link File} as a " +
                     sName +
@@ -98,6 +135,23 @@ public abstract class AbstractCreateUBLActionCode
            .append ("(@Nonnull final File aSource){return ")
            .append (sReadMethod)
            .append ("(TransformSourceFactory.create(aSource));}\n");
+
+        // read (File, ClassLoader)
+        aSB.append ("/** Interpret the passed {@link File} as a " +
+                    sName +
+                    " using the global validation event handler.\n" +
+                    "@param aSource the source file to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final File aSource, @Nullable ClassLoader aClassLoader){return ")
+           .append (sReadMethod)
+           .append ("(TransformSourceFactory.create(aSource), aClassLoader);}\n");
 
         // read (File, ValidationEventHandler)
         aSB.append ("/** Interpret the passed {@link File} as a " +
@@ -116,6 +170,24 @@ public abstract class AbstractCreateUBLActionCode
            .append (sReadMethod)
            .append ("(TransformSourceFactory.create(aSource), aCustomEventHandler);}\n");
 
+        // read (File, ClassLoader, ValidationEventHandler)
+        aSB.append ("/** Interpret the passed {@link File} as a " +
+                    sName +
+                    " using a custom validation event handler.\n" +
+                    "@param aSource the source file to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final File aSource, @Nullable ClassLoader aClassLoader, @Nullable ValidationEventHandler aCustomEventHandler){return ")
+           .append (sReadMethod)
+           .append ("(TransformSourceFactory.create(aSource), aClassLoader, aCustomEventHandler);}\n");
+
         // read (IReadableResource)
         aSB.append ("/** Interpret the passed {@link IReadableResource} as a " +
                     sName +
@@ -131,6 +203,23 @@ public abstract class AbstractCreateUBLActionCode
            .append ("(@Nonnull final IReadableResource aSource){return ")
            .append (sReadMethod)
            .append ("(TransformSourceFactory.create (aSource));}\n");
+
+        // read (IReadableResource, ClassLoader)
+        aSB.append ("/** Interpret the passed {@link IReadableResource} as a " +
+                    sName +
+                    " using the global validation event handler.\n" +
+                    "@param aSource the resource to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader){return ")
+           .append (sReadMethod)
+           .append ("(TransformSourceFactory.create (aSource), aClassLoader);}\n");
 
         // read (IReadableResource, ValidationEventHandler)
         aSB.append ("/** Interpret the passed {@link IReadableResource} as a " +
@@ -149,6 +238,24 @@ public abstract class AbstractCreateUBLActionCode
            .append (sReadMethod)
            .append ("(TransformSourceFactory.create (aSource), aCustomEventHandler);}\n");
 
+        // read (IReadableResource, ClassLoader, ValidationEventHandler)
+        aSB.append ("/** Interpret the passed {@link IReadableResource} as a " +
+                    sName +
+                    " using a custom validation event handler.\n" +
+                    "@param aSource the resource to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader,  @Nullable ValidationEventHandler aCustomEventHandler){return ")
+           .append (sReadMethod)
+           .append ("(TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);}\n");
+
         // read (Source)
         aSB.append ("/** Interpret the passed {@link Source} as a " +
                     sName +
@@ -164,6 +271,23 @@ public abstract class AbstractCreateUBLActionCode
            .append ("(@Nonnull final Source aSource){return ")
            .append (sReadMethod)
            .append ("(aSource, getGlobalValidationEventHandler ());}\n");
+
+        // read (Source, ClassLoader)
+        aSB.append ("/** Interpret the passed {@link Source} as a " +
+                    sName +
+                    " using the global validation event handler.\n" +
+                    "@param aSource the source to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader){return ")
+           .append (sReadMethod)
+           .append ("(aSource, aClassLoader, getGlobalValidationEventHandler ());}\n");
 
         // read (Source, ValidationEventHandler)
         aSB.append ("/** Interpret the passed {@link Source} as a " +
@@ -181,6 +305,26 @@ public abstract class AbstractCreateUBLActionCode
            .append ("(@Nonnull final Source aSource, @Nullable ValidationEventHandler aCustomEventHandler){return ")
            .append (sMarshallerClass)
            .append (".readUBLDocument (aSource, (ClassLoader) null, ")
+           .append (sType)
+           .append (".class, aCustomEventHandler);}\n");
+
+        // read (Source, ClassLoader, ValidationEventHandler)
+        aSB.append ("/** Interpret the passed {@link Source} as a " +
+                    sName +
+                    " using a custom validation event handler.\n" +
+                    "@param aSource the source to read from. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
+                    "@return The evaluated " +
+                    sType +
+                    " or <code>null</code> in case of a parsing error */\n");
+        aSB.append ("@Nullable public static ")
+           .append (sType)
+           .append (" ")
+           .append (sReadMethod)
+           .append ("(@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader, @Nullable ValidationEventHandler aCustomEventHandler){return ")
+           .append (sMarshallerClass)
+           .append (".readUBLDocument (aSource, aClassLoader, ")
            .append (sType)
            .append (".class, aCustomEventHandler);}\n");
         break;

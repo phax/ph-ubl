@@ -1,11 +1,23 @@
 package com.helger.ubl21;
 
+import java.io.File;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.NotThreadSafe;
+import javax.xml.bind.ValidationEventHandler;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.state.ESuccess;
+import com.helger.commons.xml.transform.TransformSourceFactory;
 import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;

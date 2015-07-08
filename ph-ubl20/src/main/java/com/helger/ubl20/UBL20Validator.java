@@ -1,11 +1,23 @@
 package com.helger.ubl20;
 
+import java.io.File;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.NotThreadSafe;
+import javax.xml.bind.ValidationEventHandler;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.state.ESuccess;
+import com.helger.commons.xml.transform.TransformSourceFactory;
 import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType;
@@ -63,7 +75,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 /** Validate the passed {@link ApplicationResponseType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse){return validateApplicationResponse(aApplicationResponse).containsNoError ();}
+public static boolean isValidApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse){return validateApplicationResponse(aApplicationResponse, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link ApplicationResponseType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -81,7 +93,7 @@ public static boolean isValidApplicationResponse (@Nonnull final ApplicationResp
 /** Validate the passed {@link AttachedDocumentType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument){return validateAttachedDocument(aAttachedDocument).containsNoError ();}
+public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument){return validateAttachedDocument(aAttachedDocument, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link AttachedDocumentType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -99,7 +111,7 @@ public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentTy
 /** Validate the passed {@link BillOfLadingType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBillOfLading){return validateBillOfLading(aBillOfLading).containsNoError ();}
+public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBillOfLading){return validateBillOfLading(aBillOfLading, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link BillOfLadingType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -117,7 +129,7 @@ public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBill
 /** Validate the passed {@link CatalogueType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue){return validateCatalogue(aCatalogue).containsNoError ();}
+public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue){return validateCatalogue(aCatalogue, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CatalogueType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -135,7 +147,7 @@ public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue,
 /** Validate the passed {@link CatalogueDeletionType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion){return validateCatalogueDeletion(aCatalogueDeletion).containsNoError ();}
+public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion){return validateCatalogueDeletion(aCatalogueDeletion, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CatalogueDeletionType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -153,7 +165,7 @@ public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletion
 /** Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate){return validateCatalogueItemSpecificationUpdate(aCatalogueItemSpecificationUpdate).containsNoError ();}
+public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate){return validateCatalogueItemSpecificationUpdate(aCatalogueItemSpecificationUpdate, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -171,7 +183,7 @@ public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final Ca
 /** Validate the passed {@link CataloguePricingUpdateType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate){return validateCataloguePricingUpdate(aCataloguePricingUpdate).containsNoError ();}
+public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate){return validateCataloguePricingUpdate(aCataloguePricingUpdate, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CataloguePricingUpdateType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -189,7 +201,7 @@ public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePri
 /** Validate the passed {@link CatalogueRequestType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest){return validateCatalogueRequest(aCatalogueRequest).containsNoError ();}
+public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest){return validateCatalogueRequest(aCatalogueRequest, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CatalogueRequestType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -207,7 +219,7 @@ public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestTy
 /** Validate the passed {@link CertificateOfOriginType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin){return validateCertificateOfOrigin(aCertificateOfOrigin).containsNoError ();}
+public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin){return validateCertificateOfOrigin(aCertificateOfOrigin, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CertificateOfOriginType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -225,7 +237,7 @@ public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOr
 /** Validate the passed {@link CreditNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNote){return validateCreditNote(aCreditNote).containsNoError ();}
+public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNote){return validateCreditNote(aCreditNote, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link CreditNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -243,7 +255,7 @@ public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNo
 /** Validate the passed {@link DebitNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote){return validateDebitNote(aDebitNote).containsNoError ();}
+public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote){return validateDebitNote(aDebitNote, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link DebitNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -261,7 +273,7 @@ public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote,
 /** Validate the passed {@link DespatchAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice){return validateDespatchAdvice(aDespatchAdvice).containsNoError ();}
+public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice){return validateDespatchAdvice(aDespatchAdvice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link DespatchAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -279,7 +291,7 @@ public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType a
 /** Validate the passed {@link ForwardingInstructionsType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions){return validateForwardingInstructions(aForwardingInstructions).containsNoError ();}
+public static boolean isValidForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions){return validateForwardingInstructions(aForwardingInstructions, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link ForwardingInstructionsType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -297,7 +309,7 @@ public static boolean isValidForwardingInstructions (@Nonnull final ForwardingIn
 /** Validate the passed {@link FreightInvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice){return validateFreightInvoice(aFreightInvoice).containsNoError ();}
+public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice){return validateFreightInvoice(aFreightInvoice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link FreightInvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -315,7 +327,7 @@ public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType a
 /** Validate the passed {@link InvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice){return validateInvoice(aInvoice).containsNoError ();}
+public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice){return validateInvoice(aInvoice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link InvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -333,7 +345,7 @@ public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice, @Null
 /** Validate the passed {@link OrderType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidOrder (@Nonnull final OrderType aOrder){return validateOrder(aOrder).containsNoError ();}
+public static boolean isValidOrder (@Nonnull final OrderType aOrder){return validateOrder(aOrder, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link OrderType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -351,7 +363,7 @@ public static boolean isValidOrder (@Nonnull final OrderType aOrder, @Nullable C
 /** Validate the passed {@link OrderCancellationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation){return validateOrderCancellation(aOrderCancellation).containsNoError ();}
+public static boolean isValidOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation){return validateOrderCancellation(aOrderCancellation, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link OrderCancellationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -369,7 +381,7 @@ public static boolean isValidOrderCancellation (@Nonnull final OrderCancellation
 /** Validate the passed {@link OrderChangeType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderChange){return validateOrderChange(aOrderChange).containsNoError ();}
+public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderChange){return validateOrderChange(aOrderChange, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link OrderChangeType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -387,7 +399,7 @@ public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderC
 /** Validate the passed {@link OrderResponseType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOrderResponse){return validateOrderResponse(aOrderResponse).containsNoError ();}
+public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOrderResponse){return validateOrderResponse(aOrderResponse, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link OrderResponseType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -405,7 +417,7 @@ public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOr
 /** Validate the passed {@link OrderResponseSimpleType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple){return validateOrderResponseSimple(aOrderResponseSimple).containsNoError ();}
+public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple){return validateOrderResponseSimple(aOrderResponseSimple, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link OrderResponseSimpleType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -423,7 +435,7 @@ public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSi
 /** Validate the passed {@link PackingListType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidPackingList (@Nonnull final PackingListType aPackingList){return validatePackingList(aPackingList).containsNoError ();}
+public static boolean isValidPackingList (@Nonnull final PackingListType aPackingList){return validatePackingList(aPackingList, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link PackingListType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -441,7 +453,7 @@ public static boolean isValidPackingList (@Nonnull final PackingListType aPackin
 /** Validate the passed {@link QuotationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation){return validateQuotation(aQuotation).containsNoError ();}
+public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation){return validateQuotation(aQuotation, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link QuotationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -459,7 +471,7 @@ public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation,
 /** Validate the passed {@link ReceiptAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice){return validateReceiptAdvice(aReceiptAdvice).containsNoError ();}
+public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice){return validateReceiptAdvice(aReceiptAdvice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link ReceiptAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -477,7 +489,7 @@ public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aRe
 /** Validate the passed {@link ReminderType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidReminder (@Nonnull final ReminderType aReminder){return validateReminder(aReminder).containsNoError ();}
+public static boolean isValidReminder (@Nonnull final ReminderType aReminder){return validateReminder(aReminder, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link ReminderType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -495,7 +507,7 @@ public static boolean isValidReminder (@Nonnull final ReminderType aReminder, @N
 /** Validate the passed {@link RemittanceAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice){return validateRemittanceAdvice(aRemittanceAdvice).containsNoError ();}
+public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice){return validateRemittanceAdvice(aRemittanceAdvice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link RemittanceAdviceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -513,7 +525,7 @@ public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceTy
 /** Validate the passed {@link RequestForQuotationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation){return validateRequestForQuotation(aRequestForQuotation).containsNoError ();}
+public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation){return validateRequestForQuotation(aRequestForQuotation, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link RequestForQuotationType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -531,7 +543,7 @@ public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuota
 /** Validate the passed {@link SelfBilledCreditNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote){return validateSelfBilledCreditNote(aSelfBilledCreditNote).containsNoError ();}
+public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote){return validateSelfBilledCreditNote(aSelfBilledCreditNote, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link SelfBilledCreditNoteType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -549,7 +561,7 @@ public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCred
 /** Validate the passed {@link SelfBilledInvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice){return validateSelfBilledInvoice(aSelfBilledInvoice).containsNoError ();}
+public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice){return validateSelfBilledInvoice(aSelfBilledInvoice, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link SelfBilledInvoiceType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -567,7 +579,7 @@ public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoice
 /** Validate the passed {@link StatementType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidStatement (@Nonnull final StatementType aStatement){return validateStatement(aStatement).containsNoError ();}
+public static boolean isValidStatement (@Nonnull final StatementType aStatement){return validateStatement(aStatement, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link StatementType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -585,7 +597,7 @@ public static boolean isValidStatement (@Nonnull final StatementType aStatement,
 /** Validate the passed {@link TransportationStatusType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus){return validateTransportationStatus(aTransportationStatus).containsNoError ();}
+public static boolean isValidTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus){return validateTransportationStatus(aTransportationStatus, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link TransportationStatusType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
@@ -603,7 +615,7 @@ public static boolean isValidTransportationStatus (@Nonnull final Transportation
 /** Validate the passed {@link WaybillType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @return <code>true</code> if the object is valid, <code>false</code> otherwise. */
-public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill){return validateWaybill(aWaybill).containsNoError ();}
+public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill){return validateWaybill(aWaybill, (ClassLoader) null).containsNoError ();}
 /** Validate the passed {@link WaybillType} object.
 @param sParam the source object to validate. May not be <code>null</code>.
 @param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.
