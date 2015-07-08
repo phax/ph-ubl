@@ -1,6 +1,6 @@
 #ph-ubl
 
-This is the readme file for the current version 4.x - for the old version 3.3.x please see [README-v3.3.md].
+This is the readme file for the current version 4.x - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
 
 Set of Java libraries for reading and writing OASIS UBL 2.0 and 2.1 documents.
 This is the successor of the phloc-ubl library.
