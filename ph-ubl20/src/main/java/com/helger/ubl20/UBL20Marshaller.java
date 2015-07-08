@@ -19,7 +19,6 @@ package com.helger.ubl20;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.MarshalException;
@@ -42,13 +41,12 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.jaxb.JAXBContextCache;
 import com.helger.commons.jaxb.JAXBMarshallerHelper;
 import com.helger.commons.jaxb.validation.CollectingValidationEventHandler;
-import com.helger.commons.jaxb.validation.LoggingValidationEventHandler;
 import com.helger.commons.state.ESuccess;
 import com.helger.commons.xml.XMLFactory;
 import com.helger.commons.xml.XMLHelper;
+import com.helger.ubl.api.AbstractUBLMarshaller;
 
 /**
  * This is the marshaller for UBL documents.
@@ -56,7 +54,7 @@ import com.helger.commons.xml.XMLHelper;
  * @author Philip Helger
  */
 @Immutable
-public final class UBL20Marshaller
+public final class UBL20Marshaller extends AbstractUBLMarshaller
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (UBL20Marshaller.class);
 
@@ -65,26 +63,6 @@ public final class UBL20Marshaller
 
   private UBL20Marshaller ()
   {}
-
-  @Nonnull
-  private static Unmarshaller _createUnmarshaller (@Nonnull final Class <?> aClass,
-                                                   @Nonnull final Schema aSchema,
-                                                   @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
-  {
-    // Since creating the JAXB context is quite cost intensive this is done
-    // only once!
-    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass);
-
-    // create an Unmarshaller
-    final Unmarshaller aUnmarshaller = aJAXBContext.createUnmarshaller ();
-    aUnmarshaller.setEventHandler (aCustomEventHandler != null ? aCustomEventHandler
-                                                               : new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
-
-    // Validating!
-    aUnmarshaller.setSchema (aSchema);
-
-    return aUnmarshaller;
-  }
 
   /**
    * Convert the passed XML node into a domain object.<br>
@@ -143,7 +121,7 @@ public final class UBL20Marshaller
       }
 
       final Schema aSchema = UBL20DocumentTypes.getSchemaOfNamespace (sNodeNamespace);
-      final Unmarshaller aUnmarshaller = _createUnmarshaller (aClass, aSchema, aCustomEventHandler);
+      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aClass, aSchema, aCustomEventHandler);
 
       // start unmarshalling
       ret = aUnmarshaller.unmarshal (aNode, aDestClass).getValue ();
@@ -223,7 +201,7 @@ public final class UBL20Marshaller
         s_aLogger.error ("Don't know how to read UBL object of class " + aDestClass.getName ());
         return null;
       }
-      final Unmarshaller aUnmarshaller = _createUnmarshaller (aDestClass, aSchema, aCustomEventHandler);
+      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aDestClass, aSchema, aCustomEventHandler);
 
       // start unmarshalling
       ret = aUnmarshaller.unmarshal (aSource, aDestClass).getValue ();
@@ -251,21 +229,18 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  private static Marshaller _createMarshaller (@Nonnull final Class <?> aClass,
-                                               @Nonnull final String sNamespaceURI,
-                                               @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
+  private static Marshaller _createFullMarshaller (@Nonnull final Class <?> aClass,
+                                                   @Nonnull final String sNamespaceURI,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
   {
-    // Since creating the JAXB context is quite cost intensive this is done
-    // only once!
-    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass);
-
-    // create an Unmarshaller
-    final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
-    aMarshaller.setEventHandler (aCustomEventHandler != null ? aCustomEventHandler
-                                                             : new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
-
     // Validating!
-    aMarshaller.setSchema (UBL20DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
+    final Schema aSchema = UBL20DocumentTypes.getSchemaOfNamespace (sNamespaceURI);
+    if (aSchema == null)
+      throw new IllegalArgumentException ("Don't know how to write UBL object of class '" + sNamespaceURI + "'");
+
+    // Create a generic marshaller
+    final Marshaller aMarshaller = createBasicMarshaller (aClass, aSchema, aCustomEventHandler);
+
     try
     {
       JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, UBL20NamespaceContext.getInstance ());
@@ -404,9 +379,9 @@ public final class UBL20Marshaller
 
     try
     {
-      final Marshaller aMarshaller = _createMarshaller (eDocType.getImplementationClass (),
-                                                        eDocType.getNamespaceURI (),
-                                                        aCustomEventHandler);
+      final Marshaller aMarshaller = _createFullMarshaller (eDocType.getImplementationClass (),
+                                                            eDocType.getNamespaceURI (),
+                                                            aCustomEventHandler);
 
       // start marshalling
       final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);
@@ -446,25 +421,21 @@ public final class UBL20Marshaller
 
     // Avoid class cast exception later on
     if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
+    {
       throw new IllegalArgumentException ("You cannot validate a '" +
                                           aUBLDocument.getClass () +
                                           "' as a " +
                                           eDocType.getPackage ().getName ());
+    }
 
     final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
     try
     {
-      // Since creating the JAXB context is quite cost intensive this is done
-      // only once!
-      final JAXBContext aJAXBContext = JAXBContextCache.getInstance ()
-                                                       .getFromCache (eDocType.getImplementationClass ());
-
-      // create an Unmarshaller
-      final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
-      aMarshaller.setEventHandler (aEventHandler);
-
       // Validating!
-      aMarshaller.setSchema (UBL20DocumentTypes.getSchemaOfNamespace (eDocType.getNamespaceURI ()));
+      final Schema aSchema = UBL20DocumentTypes.getSchemaOfNamespace (eDocType.getNamespaceURI ());
+
+      // create a Marshaller
+      final Marshaller aMarshaller = createBasicMarshaller (eDocType.getImplementationClass (), aSchema, aEventHandler);
 
       // start marshalling
       final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);
