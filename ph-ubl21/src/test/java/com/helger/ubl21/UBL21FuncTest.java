@@ -218,7 +218,7 @@ public final class UBL21FuncTest
   {
     for (final String sFilename : MockUBL21TestDocuments.getUBL21TestDocuments (EUBL21DocumentType.INVOICE))
     {
-      if (true)
+      if (false)
         System.out.println (sFilename);
 
       // Read
