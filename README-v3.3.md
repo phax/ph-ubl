@@ -15,9 +15,9 @@ The following projects are contained:
   
 #Examples
 
-An example for reading and writing UBL 2.0 files can be found in the test file [FuncTestUBL20.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl/src/test/java/com/helger/ubl/FuncTestUBL20.java).
+An example for reading and writing UBL 2.0 files can be found in the test file [FuncTestUBL20.java](https://github.com/phax/ph-ubl/blob/ph-ubl-3.3.1/src/test/java/com/helger/ubl/FuncTestUBL20.java).
 
-An example for reading and writing UBL 2.1 files can be found in the test file [FuncTestUBL21.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl/src/test/java/com/helger/ubl/FuncTestUBL21.java).
+An example for reading and writing UBL 2.1 files can be found in the test file [FuncTestUBL21.java](https://github.com/phax/ph-ubl/blob/ph-ubl-3.3.1/src/test/java/com/helger/ubl/FuncTestUBL21.java).
 
 #Maven usage
 Add the following to your pom.xml to use this artifact:
@@ -26,7 +26,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl</artifactId>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
 </dependency>
 ```
 
@@ -36,7 +36,7 @@ When you are only interested in UBL 2.0 you can manually exclude the UBL 2.1 art
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl</artifactId>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
   <exclusions>
     <exclusion>
       <groupId>com.helger</groupId>
@@ -56,7 +56,7 @@ When you are only interested in UBL 2.1 you can manually exclude the UBL 2.0 art
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl</artifactId>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
   <exclusions>
     <exclusion>
       <groupId>com.helger</groupId>
