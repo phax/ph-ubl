@@ -85,7 +85,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.ubl21.*
+              com.helger.ubl21.codelist.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*
