@@ -16,13 +16,13 @@
  */
 package com.helger.ubl.mock;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.ubl.EUBL20DocumentType;
 import com.helger.ubl.EUBL21DocumentType;
 import com.helger.ubl.testfiles.UBLTestFiles;
@@ -37,7 +37,7 @@ public final class MockUBLTestDocuments
   @ReturnsMutableCopy
   public static List <String> getUBL20TestDocuments (@Nonnull final EUBL20DocumentType eType)
   {
-    List <String> aFiles = new ArrayList <String> ();
+    List <String> aFiles = null;
     switch (eType)
     {
       case CATALOGUE:
@@ -83,17 +83,14 @@ public final class MockUBLTestDocuments
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    final List <String> ret = new ArrayList <String> (aFiles.size ());
-    for (final String sFile : aFiles)
-      ret.add (UBLTestFiles.COMMON_BASE_DIRECTORY + sFile);
-    return ret;
+    return CollectionHelper.newList (aFiles);
   }
 
   @Nonnull
   @ReturnsMutableCopy
   public static List <String> getUBL21TestDocuments (@Nonnull final EUBL21DocumentType eType)
   {
-    List <String> aFiles = new ArrayList <String> ();
+    List <String> aFiles = null;
     switch (eType)
     {
       case CATALOGUE:
@@ -214,9 +211,6 @@ public final class MockUBLTestDocuments
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    final List <String> ret = new ArrayList <String> (aFiles.size ());
-    for (final String sFile : aFiles)
-      ret.add (UBLTestFiles.COMMON_BASE_DIRECTORY + sFile);
-    return ret;
+    return CollectionHelper.newList (aFiles);
   }
 }

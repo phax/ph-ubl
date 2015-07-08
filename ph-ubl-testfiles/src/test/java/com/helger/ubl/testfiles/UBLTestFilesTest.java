@@ -20,9 +20,7 @@ public final class UBLTestFilesTest
   private static void _test (@Nonnull final List <String> aFiles)
   {
     for (final String sFile : aFiles)
-      assertTrue (sFile +
-                  " does not exist",
-                  new ClassPathResource (UBLTestFiles.COMMON_BASE_DIRECTORY + sFile).exists ());
+      assertTrue (sFile + " does not exist", new ClassPathResource (sFile).exists ());
   }
 
   @Test
