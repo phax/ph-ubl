@@ -58,6 +58,10 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-commons</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl-api</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
@@ -68,6 +72,11 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl-testfiles</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -82,6 +91,7 @@
         <configuration>
           <instructions>
             <Export-Package>
+              com.helger.ubl21.*,
               oasis.names.specification.ubl.schema.xsd.*,
               org.etsi.uri.*,
               org.w3._2000._09.xmldsig,
