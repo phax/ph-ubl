@@ -92,6 +92,11 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-ubl-testfiles</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-ubl20</artifactId>
         <version>${project.version}</version>
       </dependency>

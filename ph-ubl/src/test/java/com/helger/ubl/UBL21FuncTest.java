@@ -21,6 +21,18 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.commons.xml.serialize.read.DOMReader;
+import com.helger.commons.xml.serialize.read.DOMReaderSettings;
+import com.helger.ubl.mock.MockUBLTestDocuments;
+
 import oasis.names.specification.ubl.schema.xsd.catalogue_21.CatalogueType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
 import oasis.names.specification.ubl.schema.xsd.despatchadvice_21.DespatchAdviceType;
@@ -34,17 +46,6 @@ import oasis.names.specification.ubl.schema.xsd.remittanceadvice_21.RemittanceAd
 import oasis.names.specification.ubl.schema.xsd.requestforquotation_21.RequestForQuotationType;
 import oasis.names.specification.ubl.schema.xsd.statement_21.StatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
-
-import org.junit.Test;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-
-import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
-import com.helger.commons.xml.serialize.read.DOMReader;
-import com.helger.commons.xml.serialize.read.DOMReaderSettings;
-import com.helger.ubl.mock.MockUBLTestDocuments;
 
 /**
  * Test class for class {@link UBL21DocumentMarshaller}.
@@ -218,6 +219,9 @@ public final class UBL21FuncTest
   {
     for (final String sFilename : MockUBLTestDocuments.getUBL21TestDocuments (EUBL21DocumentType.INVOICE))
     {
+      if (true)
+        System.out.println (sFilename);
+
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.INVOICE.getSchema ()));

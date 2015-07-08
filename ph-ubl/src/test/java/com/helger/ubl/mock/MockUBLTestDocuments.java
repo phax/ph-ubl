@@ -18,132 +18,74 @@ package com.helger.ubl.mock;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.lang.ClassHelper;
-import com.helger.commons.string.StringHelper;
 import com.helger.ubl.EUBL20DocumentType;
 import com.helger.ubl.EUBL21DocumentType;
-import com.helger.ubl.IUBLDocumentType;
+import com.helger.ubl.testfiles.UBLTestFiles;
 
 @Immutable
 public final class MockUBLTestDocuments
 {
-  private static final String [] UBL20_CATALOGUE_FILES = new String [] { "Consip_Catalogo_UBL.xml",
-                                                                        "Mobile_Catalogue_UBL.xml" };
-
-  private static final String [] UBL20_CREDITNOTE_FILES = new String [] { "BII04 XML example full core data 01.xml",
-                                                                         "UBL-CreditNote-2.0-Example.xml" };
-
-  private static final String [] UBL20_DESPATCHADVICE_FILES = new String [] { "UBL-DespatchAdvice-2.0-Example.xml" };
-
-  private static final String [] UBL20_FORWARDINGINSTRUCTIONS_FILES = new String [] { "UBL-ForwardingInstructions-2.0-Example-International.xml" };
-
-  private static final String [] UBL20_INVOICE_FILES = new String [] { "BII04 minimal invoice example 02.xml",
-                                                                      "BII04 minimal VAT invoice example 01.xml",
-                                                                      "BII04 XML example full core data 01.xml",
-                                                                      "CENBII-Invoice-maximal.xml",
-                                                                      "ERR-10 BII04 minimal VAT invoice example 01.xml",
-                                                                      "ERR-11 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-13 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-18 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-19 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-2 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-3 BII04 minimal VAT invoice example 01.xml",
-                                                                      "ERR-4 BII04 minimal invoice example 01.xml",
-                                                                      "ERR-5 BII04 minimal VAT invoice example 01.xml",
-                                                                      "ERR-9 BII04 minimal VAT invoice example 01.xml",
-                                                                      "PEP BII04 minimal invoice example 02.xml",
-                                                                      "PEP BII04 minimal VAT invoice example 01.xml",
-                                                                      "UBL-Invoice-2.0-Example.xml" };
-
-  private static final String [] UBL20_ORDER_FILES = new String [] { "BII03 Order example 01.xml",
-                                                                    "CENBII-Order-maximal.xml",
-                                                                    "CENBII-Order-minimal.xml",
-                                                                    "UBL-Order-2.0-Example-International.xml",
-                                                                    "UBL-Order-2.0-Example.xml" };
-
-  private static final String [] UBL20_ORDER_RESPONSE_SIMPLE_FILES = new String [] { "CENBII-AcceptOrder-maximal.xml",
-                                                                                    "CENBII-AcceptOrder-minimal.xml",
-                                                                                    "CENBII-RejectOrder-maximal.xml",
-                                                                                    "CENBII-RejectOrder-minimal.xml",
-                                                                                    "UBL-OrderResponseSimple-2.0-Example.xml" };
-
-  private static final String [] UBL20_QUOTATION_FILES = new String [] { "UBL-Quotation-2.0-Example.xml" };
-  private static final String [] UBL20_RECEIPTADVICE_FILES = new String [] { "UBL-ReceiptAdvice-2.0-Example.xml" };
-  private static final String [] UBL20_REMITTANCEADVICE_FILES = new String [] { "UBL-RemittanceAdvice-2.0-Example.xml" };
-  private static final String [] UBL20_REQUESTFORQUOTATION_FILES = new String [] { "UBL-RequestForQuotation-2.0-Example.xml" };
-  private static final String [] UBL20_STATEMENT_FILES = new String [] { "UBL-Statement-2.0-Example.xml" };
-  private static final String [] UBL20_WAYBILL_FILES = new String [] { "UBL-Waybill-2.0-Example-International.xml" };
-
   private MockUBLTestDocuments ()
   {}
-
-  private static String _getTestFileBaseDirName (final IUBLDocumentType aDocType)
-  {
-    return "examples/" +
-           StringHelper.trimEnd (ClassHelper.getClassLocalName (aDocType.getImplementationClass ()), "Type")
-                       .toLowerCase (Locale.US) + "/";
-  }
 
   @Nonnull
   @ReturnsMutableCopy
   public static List <String> getUBL20TestDocuments (@Nonnull final EUBL20DocumentType eType)
   {
-    final String sBaseDir = _getTestFileBaseDirName (eType);
-    String [] aFiles = new String [0];
+    List <String> aFiles = new ArrayList <String> ();
     switch (eType)
     {
       case CATALOGUE:
-        aFiles = UBL20_CATALOGUE_FILES;
+        aFiles = UBLTestFiles.CATALOGUE_FILES;
         break;
       case CREDIT_NOTE:
-        aFiles = UBL20_CREDITNOTE_FILES;
+        aFiles = UBLTestFiles.CREDIT_NOTE_FILES;
         break;
       case DESPATCH_ADVICE:
-        aFiles = UBL20_DESPATCHADVICE_FILES;
+        aFiles = UBLTestFiles.DESPATCH_ADVICE_FILES;
         break;
       case FORWARDING_INSTRUCTIONS:
-        aFiles = UBL20_FORWARDINGINSTRUCTIONS_FILES;
+        aFiles = UBLTestFiles.FORWARDING_INSTRUCTIONS_FILES;
         break;
       case INVOICE:
-        aFiles = UBL20_INVOICE_FILES;
+        aFiles = UBLTestFiles.INVOICE_FILES;
         break;
       case ORDER:
-        aFiles = UBL20_ORDER_FILES;
+        aFiles = UBLTestFiles.ORDER_FILES;
         break;
       case ORDER_RESPONSE_SIMPLE:
-        aFiles = UBL20_ORDER_RESPONSE_SIMPLE_FILES;
+        aFiles = UBLTestFiles.ORDER_RESPONSE_SIMPLE_FILES;
         break;
       case QUOTATION:
-        aFiles = UBL20_QUOTATION_FILES;
+        aFiles = UBLTestFiles.QUOTATION_FILES;
         break;
       case RECEIPT_ADVICE:
-        aFiles = UBL20_RECEIPTADVICE_FILES;
+        aFiles = UBLTestFiles.RECEIPT_ADVICE_FILES;
         break;
       case REQUEST_FOR_QUOTATION:
-        aFiles = UBL20_REQUESTFORQUOTATION_FILES;
+        aFiles = UBLTestFiles.REQUEST_FOR_QUOTATION_FILES;
         break;
       case REMITTANCE_ADVICE:
-        aFiles = UBL20_REMITTANCEADVICE_FILES;
+        aFiles = UBLTestFiles.REMITTANCE_ADVICE_FILES;
         break;
       case STATEMENT:
-        aFiles = UBL20_STATEMENT_FILES;
+        aFiles = UBLTestFiles.STATEMENT_FILES;
         break;
       case WAYBILL:
-        aFiles = UBL20_WAYBILL_FILES;
+        aFiles = UBLTestFiles.WAYBILL_FILES;
         break;
       default:
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    final List <String> ret = new ArrayList <String> (aFiles.length);
+    final List <String> ret = new ArrayList <String> (aFiles.size ());
     for (final String sFile : aFiles)
-      ret.add (sBaseDir + sFile);
+      ret.add (UBLTestFiles.COMMON_BASE_DIRECTORY + sFile);
     return ret;
   }
 
@@ -151,56 +93,130 @@ public final class MockUBLTestDocuments
   @ReturnsMutableCopy
   public static List <String> getUBL21TestDocuments (@Nonnull final EUBL21DocumentType eType)
   {
-    final String sBaseDir = _getTestFileBaseDirName (eType);
-    String [] aFiles = new String [0];
+    List <String> aFiles = new ArrayList <String> ();
     switch (eType)
     {
       case CATALOGUE:
-        aFiles = UBL20_CATALOGUE_FILES;
+        aFiles = UBLTestFiles.CATALOGUE_FILES;
         break;
       case CREDIT_NOTE:
-        aFiles = UBL20_CREDITNOTE_FILES;
+        aFiles = UBLTestFiles.CREDIT_NOTE_FILES;
+        break;
+      case DEBIT_NOTE:
+        aFiles = UBLTestFiles.DEBIT_NOTE_FILES;
         break;
       case DESPATCH_ADVICE:
-        aFiles = UBL20_DESPATCHADVICE_FILES;
+        aFiles = UBLTestFiles.DESPATCH_ADVICE_FILES;
+        break;
+      case EXCEPTION_CRITERIA:
+        aFiles = UBLTestFiles.EXCEPTION_CRITERIA_FILES;
+        break;
+      case EXCEPTION_NOTIFICATION:
+        aFiles = UBLTestFiles.EXCEPTION_NOTIFICATION_FILES;
+        break;
+      case FORECAST:
+        aFiles = UBLTestFiles.FORECAST_FILES;
+        break;
+      case FORECAST_REVISION:
+        aFiles = UBLTestFiles.FORECAST_REVISION_FILES;
         break;
       case FORWARDING_INSTRUCTIONS:
-        aFiles = UBL20_FORWARDINGINSTRUCTIONS_FILES;
+        aFiles = UBLTestFiles.FORWARDING_INSTRUCTIONS_FILES;
+        break;
+      case FREIGHT_INVOICE:
+        aFiles = UBLTestFiles.FREIGHT_INVOICE_FILES;
+        break;
+      case GOODS_ITEM_ITINERARY:
+        aFiles = UBLTestFiles.GOODS_ITEM_ITINERARY_FILES;
+        break;
+      case INSTRUCTION_FOR_RETURNS:
+        aFiles = UBLTestFiles.INSTRUCTION_FOR_RETURNS_FILES;
         break;
       case INVOICE:
-        aFiles = UBL20_INVOICE_FILES;
+        aFiles = UBLTestFiles.INVOICE_FILES;
         break;
       case ORDER:
-        aFiles = UBL20_ORDER_FILES;
+        aFiles = UBLTestFiles.ORDER_FILES;
+        break;
+      case ORDER_CANCELLATION:
+        aFiles = UBLTestFiles.ORDER_CANCELLATION_FILES;
+        break;
+      case ORDER_CHANGE:
+        aFiles = UBLTestFiles.ORDER_CHANGE_FILES;
+        break;
+      case ORDER_RESPONSE:
+        aFiles = UBLTestFiles.ORDER_RESPONSE_FILES;
         break;
       case ORDER_RESPONSE_SIMPLE:
-        aFiles = UBL20_ORDER_RESPONSE_SIMPLE_FILES;
+        aFiles = UBLTestFiles.ORDER_RESPONSE_SIMPLE_FILES;
+        break;
+      case PRODUCT_ACTIVITY:
+        aFiles = UBLTestFiles.PRODUCT_ACTIVITY_FILES;
         break;
       case QUOTATION:
-        aFiles = UBL20_QUOTATION_FILES;
+        aFiles = UBLTestFiles.QUOTATION_FILES;
         break;
       case RECEIPT_ADVICE:
-        aFiles = UBL20_RECEIPTADVICE_FILES;
+        aFiles = UBLTestFiles.RECEIPT_ADVICE_FILES;
         break;
-      case REQUEST_FOR_QUOTATION:
-        aFiles = UBL20_REQUESTFORQUOTATION_FILES;
+      case REMINDER:
+        aFiles = UBLTestFiles.REMINDER_FILES;
         break;
       case REMITTANCE_ADVICE:
-        aFiles = UBL20_REMITTANCEADVICE_FILES;
+        aFiles = UBLTestFiles.REMITTANCE_ADVICE_FILES;
+        break;
+      case REQUEST_FOR_QUOTATION:
+        aFiles = UBLTestFiles.REQUEST_FOR_QUOTATION_FILES;
+        break;
+      case RETAIL_EVENT:
+        aFiles = UBLTestFiles.RETAIL_EVENT_FILES;
+        break;
+      case SELF_BILLED_CREDIT_NOTE:
+        aFiles = UBLTestFiles.SELF_BILLED_CREDIT_NOTE_FILES;
         break;
       case STATEMENT:
-        aFiles = UBL20_STATEMENT_FILES;
+        aFiles = UBLTestFiles.STATEMENT_FILES;
+        break;
+      case STOCK_AVAILABILITY_REPORT:
+        aFiles = UBLTestFiles.STOCK_AVAILABILITY_REPORT_FILES;
+        break;
+      case TRADE_ITEM_LOCATION_PROFILE:
+        aFiles = UBLTestFiles.TRADE_ITEM_LOCATION_PROFILE_FILES;
+        break;
+      case TRANSPORTATION_STATUS:
+        aFiles = UBLTestFiles.TRANSPORTATION_STATUS_FILES;
+        break;
+      case TRANSPORTATION_STATUS_REQUEST:
+        aFiles = UBLTestFiles.TRANSPORTATION_STATUS_REQUEST_FILES;
+        break;
+      case TRANSPORT_EXECUTION_PLAN:
+        aFiles = UBLTestFiles.TRANSPORT_EXECUTION_PLAN_FILES;
+        break;
+      case TRANSPORT_EXECUTION_PLAN_REQUEST:
+        aFiles = UBLTestFiles.TRANSPORT_EXECUTION_PLAN_REQUEST_FILES;
+        break;
+      case TRANSPORT_PROGRESS_STATUS:
+        aFiles = UBLTestFiles.TRANSPORT_PROGRESS_STATUS_FILES;
+        break;
+      case TRANSPORT_PROGRESS_STATUS_REQUEST:
+        aFiles = UBLTestFiles.TRANSPORT_PROGRESS_STATUS_REQUEST_FILES;
+        break;
+      case TRANSPORT_SERVICE_DESCRIPTION:
+        aFiles = UBLTestFiles.TRANSPORT_SERVICE_DESCRIPTION_FILES;
+        break;
+      case TRANSPORT_SERVICE_DESCRIPTION_REQUEST:
+        aFiles = UBLTestFiles.TRANSPORT_SERVICE_DESCRIPTION_REQUEST_FILES;
         break;
       case WAYBILL:
-        aFiles = UBL20_WAYBILL_FILES;
+        aFiles = UBLTestFiles.WAYBILL_FILES;
         break;
       default:
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    final List <String> ret = new ArrayList <String> (aFiles.length);
+    final List <String> ret = new ArrayList <String> (aFiles.size ());
     for (final String sFile : aFiles)
-      ret.add (sBaseDir + sFile);
+      ret.add (UBLTestFiles.COMMON_BASE_DIRECTORY + sFile);
     return ret;
   }
 }

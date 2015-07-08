@@ -24,12 +24,12 @@
     <artifactId>ph-ubl-parent-pom</artifactId>
     <version>4.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>ph-ubl</artifactId>
+  <artifactId>ph-ubl-testfiles</artifactId>
   <packaging>bundle</packaging>
-  <name>ph-ubl</name>
-  <description>Library for managed reading and writing of UBL 2.0 and 2.1 documents</description>
-  <url>https://github.com/phax/ph-ubl/ph-ubl</url>
-  <inceptionYear>2014</inceptionYear>
+  <name>ph-ubl-testfiles</name>
+  <description>UBL 2.0/2.1 test files</description>
+  <url>https://github.com/phax/ph-ubl/ph-ubl-testfiles</url>
+  <inceptionYear>2015</inceptionYear>
   
   <licenses>
     <license>
@@ -53,46 +53,15 @@
     </developer>
   </developers>
 
-  <properties>
-    <jaxb.version>2.1.13</jaxb.version>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-commons</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-ubl20</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-ubl20-codelists</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-ubl21</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-ubl21-codelists</artifactId>
-    </dependency>
-    
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <scope>provided</scope>
-    </dependency>
     
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-ubl-testfiles</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -107,7 +76,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.ubl.*
+              com.helger.ubl.testfiles.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*
@@ -120,7 +89,7 @@
         <artifactId>license-maven-plugin</artifactId>
         <configuration>
           <excludes>
-            <exclude>src/test/resources/examples/**</exclude>
+            <exclude>src/main/resources/test-ubl/**</exclude>
           </excludes>
         </configuration>
       </plugin>
