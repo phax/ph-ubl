@@ -6,13 +6,13 @@ Set of Java libraries for reading and writing OASIS UBL 2.0 and 2.1 documents.
 This is the successor of the phloc-ubl library.
 The following projects are contained:
 
-  * **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage.
-  * **ph-ubl-testfiles** contains all UBL 2.0 and 2.1 test files.
+  * **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage (used only in Maven generate-sources phase) 
+  * **ph-ubl-testfiles** contains all UBL 2.0 and 2.1 test files (used only in Maven test scope)
   * **ph-ubl-api** base library containing common stuff for UBL 2.0 and 2.1.
-  * **ph-ubl20** contains ONLY the generated JAXB files for UBL 2.0.
-  * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists
-  * **ph-ubl21** contains ONLY the generated JAXB files for UBL 2.1
-  * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists
+  * **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
+  * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
+  * **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
+  * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
 
 #Examples
 
