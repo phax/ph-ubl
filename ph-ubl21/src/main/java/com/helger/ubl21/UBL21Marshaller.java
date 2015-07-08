@@ -78,9 +78,8 @@ public final class UBL21Marshaller
 
     // create an Unmarshaller
     final Unmarshaller aUnmarshaller = aJAXBContext.createUnmarshaller ();
-    aUnmarshaller.setEventHandler (aCustomEventHandler != null
-                                                              ? aCustomEventHandler
-                                                              : new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
+    aUnmarshaller.setEventHandler (aCustomEventHandler != null ? aCustomEventHandler
+                                                               : new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
 
     // Validating!
     aUnmarshaller.setSchema (aSchema);
@@ -263,9 +262,8 @@ public final class UBL21Marshaller
 
     // create an Unmarshaller
     final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
-    aMarshaller.setEventHandler (aCustomEventHandler != null
-                                                            ? aCustomEventHandler
-                                                            : new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
+    aMarshaller.setEventHandler (aCustomEventHandler != null ? aCustomEventHandler
+                                                             : new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
 
     // Validating!
     aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI));
@@ -395,18 +393,18 @@ public final class UBL21Marshaller
     ValueEnforcer.notNull (eDocType, "DocType");
     ValueEnforcer.notNull (aResult, "Result");
 
+    // Avoid class cast exception later on
+    if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
+    {
+      s_aLogger.error ("You cannot write a '" +
+                       aUBLDocument.getClass () +
+                       "' as a " +
+                       eDocType.getPackage ().getName ());
+      return ESuccess.FAILURE;
+    }
+
     try
     {
-      // Avoid class cast exception later on
-      if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
-      {
-        s_aLogger.error ("You cannot write a '" +
-                         aUBLDocument.getClass () +
-                         "' as a " +
-                         eDocType.getPackage ().getName ());
-        return ESuccess.FAILURE;
-      }
-
       final Marshaller aMarshaller = _createMarshaller (eDocType.getImplementationClass (),
                                                         eDocType.getNamespaceURI (),
                                                         aCustomEventHandler);
@@ -447,36 +445,34 @@ public final class UBL21Marshaller
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
     ValueEnforcer.notNull (eDocType, "DocType");
 
+    // Avoid class cast exception later on
+    if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
+    {
+      throw new IllegalArgumentException ("You cannot validate a '" +
+                                          aUBLDocument.getClass () +
+                                          "' as a " +
+                                          eDocType.getPackage ().getName ());
+    }
+
     final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
     try
     {
-      // Avoid class cast exception later on
-      if (!eDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
-      {
-        s_aLogger.error ("You cannot validate a '" +
-                         aUBLDocument.getClass () +
-                         "' as a " +
-                         eDocType.getPackage ().getName ());
-      }
-      else
-      {
-        // Since creating the JAXB context is quite cost intensive this is done
-        // only once!
-        final JAXBContext aJAXBContext = JAXBContextCache.getInstance ()
-                                                         .getFromCache (eDocType.getImplementationClass ());
+      // Since creating the JAXB context is quite cost intensive this is done
+      // only once!
+      final JAXBContext aJAXBContext = JAXBContextCache.getInstance ()
+                                                       .getFromCache (eDocType.getImplementationClass ());
 
-        // create an Unmarshaller
-        final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
-        aMarshaller.setEventHandler (aEventHandler);
+      // create an Unmarshaller
+      final Marshaller aMarshaller = aJAXBContext.createMarshaller ();
+      aMarshaller.setEventHandler (aEventHandler);
 
-        // Validating!
-        aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (eDocType.getNamespaceURI ()));
+      // Validating!
+      aMarshaller.setSchema (UBL21DocumentTypes.getSchemaOfNamespace (eDocType.getNamespaceURI ()));
 
-        // start marshalling
-        final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);
-        // DefaultHandler has very little overhead
-        aMarshaller.marshal (aJAXBElement, new DefaultHandler ());
-      }
+      // start marshalling
+      final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);
+      // DefaultHandler has very little overhead
+      aMarshaller.marshal (aJAXBElement, new DefaultHandler ());
     }
     catch (final JAXBException ex)
     {

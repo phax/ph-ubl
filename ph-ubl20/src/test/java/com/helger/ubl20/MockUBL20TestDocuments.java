@@ -66,7 +66,8 @@ public final class MockUBL20TestDocuments
         aFiles = UBLTestFiles.RECEIPT_ADVICE_FILES;
         break;
       case REQUEST_FOR_QUOTATION:
-        aFiles = UBLTestFiles.REQUEST_FOR_QUOTATION_FILES;
+        aFiles = CollectionHelper.newList (UBLTestFiles.REQUEST_FOR_QUOTATION_FILES);
+        aFiles.remove ("test-ubl/requestforquotation/UBL-RequestForQuotation-2.1-Example.xml");
         break;
       case REMITTANCE_ADVICE:
         aFiles = UBLTestFiles.REMITTANCE_ADVICE_FILES;

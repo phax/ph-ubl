@@ -30,7 +30,7 @@ public class MainCreateUBL20ActionCode extends AbstractCreateUBLActionCode
 
   private static String _getPrefix (final String sWhat, final String sClassName)
   {
-    return "package com.helger.ubl;\n" +
+    return "package com.helger.ubl20;\n" +
            "\n" +
            "import java.io.File;\n" +
            "import javax.annotation.Nonnull;\n" +

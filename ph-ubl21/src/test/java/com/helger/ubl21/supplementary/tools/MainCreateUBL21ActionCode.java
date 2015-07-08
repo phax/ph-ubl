@@ -30,7 +30,7 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
 
   private static String _getPrefix (final String sWhat, final String sClassName)
   {
-    return "package com.helger.ubl;\n" +
+    return "package com.helger.ubl21;\n" +
            "\n" +
            "import java.io.File;\n" +
            "import javax.annotation.Nonnull;\n" +
@@ -143,21 +143,21 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
     StringBuilder aSB = new StringBuilder (_getPrefix ("Read", "UBL21Reader"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
       append (e, EPhase.READ, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
-    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl/UBL21Reader.java"),
+    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Reader.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);
 
     aSB = new StringBuilder (_getPrefix ("Write", "UBL21Writer"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
       append (e, EPhase.WRITE, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
-    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl/UBL21Writer.java"),
+    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Writer.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);
 
     aSB = new StringBuilder (_getPrefix ("Validate", "UBL21Validator"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
       append (e, EPhase.VALIDATE, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
-    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl/UBL21Validator.java"),
+    SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Validator.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);
 
