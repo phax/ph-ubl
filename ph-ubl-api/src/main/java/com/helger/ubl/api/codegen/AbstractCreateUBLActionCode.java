@@ -24,7 +24,7 @@ import com.helger.ubl.api.IUBLDocumentType;
 
 public abstract class AbstractCreateUBLActionCode
 {
-  public static enum EPhase
+  protected static enum EPhase
   {
    READ,
    WRITE,
