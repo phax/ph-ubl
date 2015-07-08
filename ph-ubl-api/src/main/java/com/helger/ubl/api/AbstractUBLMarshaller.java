@@ -16,12 +16,13 @@ public abstract class AbstractUBLMarshaller
 {
   @Nonnull
   protected static Unmarshaller createFullUnmarshaller (@Nonnull final Class <?> aClass,
+                                                        @Nullable final ClassLoader aClassLoader,
                                                         @Nonnull final Schema aSchema,
                                                         @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
   {
     // Since creating the JAXB context is quite cost intensive this is done
     // only once!
-    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass);
+    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass, aClassLoader);
 
     // create an Unmarshaller
     final Unmarshaller aUnmarshaller = aJAXBContext.createUnmarshaller ();
@@ -36,12 +37,13 @@ public abstract class AbstractUBLMarshaller
 
   @Nonnull
   protected static Marshaller createBasicMarshaller (@Nonnull final Class <?> aClass,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Schema aSchema,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
   {
     // Since creating the JAXB context is quite cost intensive this is done
     // only once!
-    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass);
+    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (aClass, aClassLoader);
 
     // create a Marshaller
     final Marshaller aMarshaller = aJAXBContext.createMarshaller ();

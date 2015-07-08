@@ -67,30 +67,14 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
   /**
    * Convert the passed XML node into a domain object.<br>
    * Note: this is the generic API for reading all types of UBL documents.
-   * Please refer to {@link UBL21DocumentMarshaller} for a type-safe API for all
-   * supported document types.
-   *
-   * @param aNode
-   *          The XML node to be converted. May not be <code>null</code>.
-   * @param aDestClass
-   *          The UBL class of the result type. May not be <code>null</code>.
-   * @return <code>null</code> in case conversion to the specified class failed.
-   *         See the log output for details.
-   */
-  @Nullable
-  public static <T> T readUBLDocument (@Nonnull final Node aNode, @Nonnull final Class <T> aDestClass)
-  {
-    return readUBLDocument (aNode, aDestClass, null);
-  }
-
-  /**
-   * Convert the passed XML node into a domain object.<br>
-   * Note: this is the generic API for reading all types of UBL documents.
    * Please refer to {@link UBL21Reader} for a type-safe API for all supported
    * document types.
    *
    * @param aNode
    *          The XML node to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
    * @param aDestClass
    *          The UBL class of the result type. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -101,27 +85,33 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    */
   @Nullable
   public static <T> T readUBLDocument (@Nonnull final Node aNode,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final Class <T> aDestClass,
                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     ValueEnforcer.notNull (aNode, "Node");
     ValueEnforcer.notNull (aDestClass, "destClass");
 
+    final String sNodeNamespaceURI = XMLHelper.getNamespaceURI (aNode);
+    final Class <?> aClass = UBL21DocumentTypes.getImplementationClassOfNamespace (sNodeNamespaceURI);
+
+    // Avoid class cast exception later on
+    if (!aDestClass.equals (aClass))
+    {
+      s_aLogger.error ("You cannot read an '" + sNodeNamespaceURI + "' as a " + aDestClass.getName ());
+      return null;
+    }
+
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNodeNamespaceURI);
+    if (aSchema == null)
+      throw new IllegalStateException ("Internal inconsistency. Failed to resolve namespace URI '" +
+                                       sNodeNamespaceURI +
+                                       "'");
+
     T ret = null;
     try
     {
-      final String sNodeNamespace = XMLHelper.getNamespaceURI (aNode);
-      final Class <?> aClass = UBL21DocumentTypes.getImplementationClassOfNamespace (sNodeNamespace);
-
-      // Avoid class cast exception later on
-      if (!aDestClass.equals (aClass))
-      {
-        s_aLogger.error ("You cannot read an '" + sNodeNamespace + "' as a " + aDestClass.getName ());
-        return null;
-      }
-
-      final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNodeNamespace);
-      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aClass, aSchema, aCustomEventHandler);
+      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aClass, aClassLoader, aSchema, aCustomEventHandler);
 
       // start unmarshalling
       ret = aUnmarshaller.unmarshal (aNode, aDestClass).getValue ();
@@ -156,25 +146,9 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    *
    * @param aSource
    *          The source object to be converted. May not be <code>null</code>.
-   * @param aDestClass
-   *          The UBL class of the result type. May not be <code>null</code>.
-   * @return <code>null</code> in case conversion to the specified class failed.
-   *         See the log output for details.
-   */
-  @Nullable
-  public static <T> T readUBLDocument (@Nonnull final Source aSource, @Nonnull final Class <T> aDestClass)
-  {
-    return readUBLDocument (aSource, aDestClass, null);
-  }
-
-  /**
-   * Convert the passed XML node into a domain object.<br>
-   * Note: this is the generic API for reading all types of UBL documents.
-   * Please refer to {@link UBL21Reader} for a type-safe API for all supported
-   * document types.
-   *
-   * @param aSource
-   *          The source object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
    * @param aDestClass
    *          The UBL class of the result type. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -185,23 +159,28 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    */
   @Nullable
   public static <T> T readUBLDocument (@Nonnull final Source aSource,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final Class <T> aDestClass,
                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     ValueEnforcer.notNull (aSource, "Source");
     ValueEnforcer.notNull (aDestClass, "DestClass");
 
+    // as we don't have a node, we need to trust the implementation class
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfImplementationClass (aDestClass);
+    if (aSchema == null)
+    {
+      s_aLogger.error ("Don't know how to read UBL 2.1 object of class " + aDestClass.getName ());
+      return null;
+    }
+
     T ret = null;
     try
     {
-      // as we don't have a node, we need to trust the implementation class
-      final Schema aSchema = UBL21DocumentTypes.getSchemaOfImplementationClass (aDestClass);
-      if (aSchema == null)
-      {
-        s_aLogger.error ("Don't know how to read UBL object of class " + aDestClass.getName ());
-        return null;
-      }
-      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aDestClass, aSchema, aCustomEventHandler);
+      final Unmarshaller aUnmarshaller = createFullUnmarshaller (aDestClass,
+                                                                 aClassLoader,
+                                                                 aSchema,
+                                                                 aCustomEventHandler);
 
       // start unmarshalling
       ret = aUnmarshaller.unmarshal (aSource, aDestClass).getValue ();
@@ -230,16 +209,17 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
 
   @Nonnull
   private static Marshaller _createFullMarshaller (@Nonnull final Class <?> aClass,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final String sNamespaceURI,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
   {
     // Validating!
     final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI);
     if (aSchema == null)
-      throw new IllegalArgumentException ("Don't know how to write UBL object of class '" + sNamespaceURI + "'");
+      throw new IllegalArgumentException ("Don't know how to write UBL 2.1 object of class '" + sNamespaceURI + "'");
 
     // Create a generic marshaller
-    final Marshaller aMarshaller = createBasicMarshaller (aClass, aSchema, aCustomEventHandler);
+    final Marshaller aMarshaller = createBasicMarshaller (aClass, aClassLoader, aSchema, aCustomEventHandler);
 
     try
     {
@@ -272,27 +252,9 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    *
    * @param aUBLDocument
    *          The domain object to be converted. May not be <code>null</code>.
-   * @param eDocType
-   *          The UBL document type matching the document. May not be
-   *          <code>null</code>.
-   * @return <code>null</code> in case conversion to the specified class failed.
-   *         See the log output for details.
-   */
-  @Nullable
-  public static Document writeUBLDocument (@Nonnull final Object aUBLDocument,
-                                           @Nonnull final EUBL21DocumentType eDocType)
-  {
-    return writeUBLDocument (aUBLDocument, eDocType, (ValidationEventHandler) null);
-  }
-
-  /**
-   * Convert the passed domain object into an XML node.<br>
-   * Note: this is the generic API for writing all types of UBL documents.
-   * Please refer to {@link UBL21Writer} for a type-safe API for all supported
-   * document types.
-   *
-   * @param aUBLDocument
-   *          The domain object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
    * @param eDocType
    *          The UBL document type matching the document. May not be
    *          <code>null</code>.
@@ -304,12 +266,14 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    */
   @Nullable
   public static Document writeUBLDocument (@Nonnull final Object aUBLDocument,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final EUBL21DocumentType eDocType,
                                            @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     final Document aDoc = XMLFactory.newDocument ();
     final DOMResult aResult = new DOMResult (aDoc);
-    return writeUBLDocument (aUBLDocument, eDocType, aCustomEventHandler, aResult).isSuccess () ? aDoc : null;
+    return writeUBLDocument (aUBLDocument, aClassLoader, eDocType, aCustomEventHandler, aResult).isSuccess () ? aDoc
+                                                                                                              : null;
   }
 
   /**
@@ -320,31 +284,9 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    *
    * @param aUBLDocument
    *          The domain object to be converted. May not be <code>null</code>.
-   * @param eDocType
-   *          The UBL document type matching the document. May not be
-   *          <code>null</code>.
-   * @param aResult
-   *          the result object to write the marshaled document to. May not be
-   *          <code>null</code>.
-   * @return {@link ESuccess#FAILURE} in case conversion to the specified class
-   *         failed.
-   */
-  @Nonnull
-  public static ESuccess writeUBLDocument (@Nonnull final Object aUBLDocument,
-                                           @Nonnull final EUBL21DocumentType eDocType,
-                                           @Nonnull final Result aResult)
-  {
-    return writeUBLDocument (aUBLDocument, eDocType, (ValidationEventHandler) null, aResult);
-  }
-
-  /**
-   * Convert the passed domain object into an XML node.<br>
-   * Note: this is the generic API for writing all types of UBL documents.
-   * Please refer to {@link UBL21Writer} for a type-safe API for all supported
-   * document types.
-   *
-   * @param aUBLDocument
-   *          The domain object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
    * @param eDocType
    *          The UBL document type matching the document. May not be
    *          <code>null</code>.
@@ -359,6 +301,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    */
   @Nonnull
   public static ESuccess writeUBLDocument (@Nonnull final Object aUBLDocument,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final EUBL21DocumentType eDocType,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
@@ -380,6 +323,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     try
     {
       final Marshaller aMarshaller = _createFullMarshaller (eDocType.getImplementationClass (),
+                                                            aClassLoader,
                                                             eDocType.getNamespaceURI (),
                                                             aCustomEventHandler);
 
@@ -407,6 +351,9 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    *
    * @param aUBLDocument
    *          The domain object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
    * @param eDocType
    *          The UBL document type matching the document. May not be
    *          <code>null</code>.
@@ -414,6 +361,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    */
   @Nonnull
   public static IResourceErrorGroup validateUBLObject (@Nonnull final Object aUBLDocument,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nonnull final EUBL21DocumentType eDocType)
   {
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
@@ -428,14 +376,22 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                                           eDocType.getPackage ().getName ());
     }
 
+    // Validating!
+    final String sNamespaceURI = eDocType.getNamespaceURI ();
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI);
+    if (aSchema == null)
+      throw new IllegalStateException ("Internal inconsistency. Failed to resolve namespace URI '" +
+                                       sNamespaceURI +
+                                       "'");
+
     final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
     try
     {
-      // Validating!
-      final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (eDocType.getNamespaceURI ());
-
       // create a Marshaller
-      final Marshaller aMarshaller = createBasicMarshaller (eDocType.getImplementationClass (), aSchema, aEventHandler);
+      final Marshaller aMarshaller = createBasicMarshaller (eDocType.getImplementationClass (),
+                                                            aClassLoader,
+                                                            aSchema,
+                                                            aEventHandler);
 
       // start marshalling
       final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);

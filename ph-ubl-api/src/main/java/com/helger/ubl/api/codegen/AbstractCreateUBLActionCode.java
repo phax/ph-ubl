@@ -55,7 +55,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aNode the DOM node. May not be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -72,14 +72,14 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
            .append (sReadMethod)
            .append ("(@Nonnull final Node aNode, @Nullable ValidationEventHandler aCustomEventHandler){return ")
            .append (sMarshallerClass)
-           .append (".readUBLDocument (aNode, ")
+           .append (".readUBLDocument (aNode, (ClassLoader) null, ")
            .append (sType)
            .append (".class, aCustomEventHandler);}\n");
 
@@ -90,7 +90,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aSource the source file to read from. May not be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -107,7 +107,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -123,7 +123,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aSource the resource to read from. May not be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -140,7 +140,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -156,7 +156,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aSource the source to read from. May not be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
@@ -173,14 +173,14 @@ public abstract class AbstractCreateUBLActionCode
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@return The evaluated " +
                     sType +
-                    " or <code>null</code> in case of a parsing error */");
+                    " or <code>null</code> in case of a parsing error */\n");
         aSB.append ("@Nullable public static ")
            .append (sType)
            .append (" ")
            .append (sReadMethod)
            .append ("(@Nonnull final Source aSource, @Nullable ValidationEventHandler aCustomEventHandler){return ")
            .append (sMarshallerClass)
-           .append (".readUBLDocument (aSource, ")
+           .append (".readUBLDocument (aSource, (ClassLoader) null, ")
            .append (sType)
            .append (".class, aCustomEventHandler);}\n");
         break;
@@ -192,7 +192,7 @@ public abstract class AbstractCreateUBLActionCode
                     "@param " +
                     sParam +
                     " the source object to convert. May not be <code>null</code>.\n" +
-                    "@return The created DOM document or <code>null</code> in case of conversion error */");
+                    "@return The created DOM document or <code>null</code> in case of conversion error */\n");
         aSB.append ("@Nullable public static Document ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -213,7 +213,7 @@ public abstract class AbstractCreateUBLActionCode
                     sParam +
                     " the source object to convert. May not be <code>null</code>.\n" +
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
-                    "@return The created DOM document or <code>null</code> in case of conversion error */");
+                    "@return The created DOM document or <code>null</code> in case of conversion error */\n");
         aSB.append ("@Nullable public static Document ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -224,7 +224,7 @@ public abstract class AbstractCreateUBLActionCode
            .append (sMarshallerClass)
            .append (".writeUBLDocument (")
            .append (sParam)
-           .append (", ")
+           .append (", (ClassLoader) null, ")
            .append (sEnumName)
            .append (", aCustomEventHandler);}\n");
 
@@ -236,7 +236,7 @@ public abstract class AbstractCreateUBLActionCode
                     sParam +
                     " the source object to convert. May not be <code>null</code>.\n" +
                     "@param aResult the file to write to. May not be <code>null</code>.\n" +
-                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */");
+                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */\n");
         aSB.append ("@Nonnull public static ESuccess ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -258,7 +258,7 @@ public abstract class AbstractCreateUBLActionCode
                     " the source object to convert. May not be <code>null</code>.\n" +
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@param aResult the file to write to. May not be <code>null</code>.\n" +
-                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */");
+                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */\n");
         aSB.append ("@Nonnull public static ESuccess ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -279,7 +279,7 @@ public abstract class AbstractCreateUBLActionCode
                     sParam +
                     " the source object to convert. May not be <code>null</code>.\n" +
                     "@param aResult the result object to write to. May not be <code>null</code>.\n" +
-                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */");
+                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */\n");
         aSB.append ("@Nonnull public static ESuccess ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -301,7 +301,7 @@ public abstract class AbstractCreateUBLActionCode
                     " the source object to convert. May not be <code>null</code>.\n" +
                     "@param aCustomEventHandler The custom event handler to use. May be <code>null</code>.\n" +
                     "@param aResult the result object to write to. May not be <code>null</code>.\n" +
-                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */");
+                    "@return {@link ESuccess#SUCCESS} in case of success, {@link ESuccess#FAILURE} in case of an error */\n");
         aSB.append ("@Nonnull public static ESuccess ")
            .append (sWriteMethod)
            .append ("(@Nonnull final ")
@@ -312,7 +312,7 @@ public abstract class AbstractCreateUBLActionCode
            .append (sMarshallerClass)
            .append (".writeUBLDocument (")
            .append (sParam)
-           .append (", ")
+           .append (", (ClassLoader) null, ")
            .append (sEnumName)
            .append (", aCustomEventHandler, aResult);}\n");
         break;
@@ -322,7 +322,7 @@ public abstract class AbstractCreateUBLActionCode
                     sType +
                     "} object.\n" +
                     "@param sParam the source object to validate. May not be <code>null</code>.\n" +
-                    "@return The collected messages during validation. Never<code>null</code>. */");
+                    "@return The collected messages during validation. Never<code>null</code>. */\n");
         aSB.append ("@Nullable public static IResourceErrorGroup ")
            .append (sValidateMethod)
            .append (" (@Nonnull final ")
@@ -333,7 +333,28 @@ public abstract class AbstractCreateUBLActionCode
            .append (sMarshallerClass)
            .append (".validateUBLObject (")
            .append (sParam)
-           .append (", ")
+           .append (", (ClassLoader) null, ")
+           .append (sEnumName)
+           .append (");}\n");
+
+        // IResourceErrorGroup validate (Object, ClassLoader)
+        aSB.append ("/** Validate the passed {@link " +
+                    sType +
+                    "} object.\n" +
+                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return The collected messages during validation. Never<code>null</code>. */\n");
+        aSB.append ("@Nullable public static IResourceErrorGroup ")
+           .append (sValidateMethod)
+           .append (" (@Nonnull final ")
+           .append (sType)
+           .append (" ")
+           .append (sParam)
+           .append (", @Nullable ClassLoader aClassLoader){return ")
+           .append (sMarshallerClass)
+           .append (".validateUBLObject (")
+           .append (sParam)
+           .append (", aClassLoader, ")
            .append (sEnumName)
            .append (");}\n");
 
@@ -342,7 +363,7 @@ public abstract class AbstractCreateUBLActionCode
                     sType +
                     "} object.\n" +
                     "@param sParam the source object to validate. May not be <code>null</code>.\n" +
-                    "@return <code>true</code> if the object is valid, <code>false</code> otherwise. */");
+                    "@return <code>true</code> if the object is valid, <code>false</code> otherwise. */\n");
         aSB.append ("public static boolean ")
            .append (sIsValidMethod)
            .append (" (@Nonnull final ")
@@ -353,7 +374,26 @@ public abstract class AbstractCreateUBLActionCode
            .append (sValidateMethod)
            .append ("(")
            .append (sParam)
-           .append (").containsNoError ();}\n");
+           .append (", (ClassLoader) null).containsNoError ();}\n");
+
+        // boolean isValid (Object, ClassLoader)
+        aSB.append ("/** Validate the passed {@link " +
+                    sType +
+                    "} object.\n" +
+                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+                    "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
+                    "@return <code>true</code> if the object is valid, <code>false</code> otherwise. */\n");
+        aSB.append ("public static boolean ")
+           .append (sIsValidMethod)
+           .append (" (@Nonnull final ")
+           .append (sType)
+           .append (" ")
+           .append (sParam)
+           .append (", @Nullable ClassLoader aClassLoader){return ")
+           .append (sValidateMethod)
+           .append ("(")
+           .append (sParam)
+           .append (", aClassLoader).containsNoError ();}\n");
         break;
     }
   }
