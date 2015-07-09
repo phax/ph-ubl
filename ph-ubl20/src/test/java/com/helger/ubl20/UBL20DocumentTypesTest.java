@@ -25,7 +25,7 @@ import org.junit.Test;
 
 /**
  * Test class for class {@link UBL20DocumentTypes}.
- * 
+ *
  * @author Philip Helger
  */
 public final class UBL20DocumentTypesTest
@@ -70,7 +70,10 @@ public final class UBL20DocumentTypesTest
     assertNull (UBL20DocumentTypes.getSchemaOfImplementationClass (null));
     assertNull (UBL20DocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EUBL20DocumentType eDocType : EUBL20DocumentType.values ())
-      assertSame (eDocType.getSchema (),
+    {
+      assertSame (eDocType.getSchema (null),
                   UBL20DocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertNotNull (eDocType.getValidator (null));
+    }
   }
 }
