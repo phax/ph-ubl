@@ -209,7 +209,7 @@ public enum EUBL21DocumentType implements IUBLDocumentType
     {
       // Lazy initialization
       final IReadableResource aXSDRes = getXSDResource (aClassLoader);
-      m_aSchema = XMLSchemaCache.getInstance ().getSchema (aXSDRes);
+      m_aSchema = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
       if (m_aSchema == null)
         throw new IllegalStateException ("Failed to create Schema from " + aXSDRes);
     }
