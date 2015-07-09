@@ -17,6 +17,7 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.xml.bind.annotation.XmlSchema;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
@@ -189,19 +190,25 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public IReadableResource getXSDResource ()
+  public IReadableResource getXSDResource (@Nullable final ClassLoader aClassLoader)
   {
-    return new ClassPathResource (m_sXSDPath);
+    return new ClassPathResource (m_sXSDPath, aClassLoader);
+  }
+
+  @Nonnull
+  public Schema getSchema ()
+  {
+    return getSchema ((ClassLoader) null);
   }
 
   @Nonnull
   @SuppressFBWarnings ("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")
-  public Schema getSchema ()
+  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
   {
     if (m_aSchema == null)
     {
       // Lazy initialization
-      final IReadableResource aXSDRes = getXSDResource ();
+      final IReadableResource aXSDRes = getXSDResource (aClassLoader);
       m_aSchema = XMLSchemaCache.getInstance ().getSchema (aXSDRes);
       if (m_aSchema == null)
         throw new IllegalStateException ("Failed to create Schema from " + aXSDRes);
@@ -210,14 +217,15 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public Validator getValidator ()
+  public Validator getValidator (@Nullable final ClassLoader aClassLoader)
   {
-    return getSchema ().newValidator ();
+    return getSchema (aClassLoader).newValidator ();
   }
 
   @Nonnull
-  public IResourceErrorGroup validateXML (@Nonnull final IReadableResource aXML)
+  public IResourceErrorGroup validateXML (@Nonnull final IReadableResource aXML,
+                                          @Nullable final ClassLoader aClassLoader)
   {
-    return XMLSchemaValidationHelper.validate (getSchema (), aXML);
+    return XMLSchemaValidationHelper.validate (getSchema (aClassLoader), aXML);
   }
 }

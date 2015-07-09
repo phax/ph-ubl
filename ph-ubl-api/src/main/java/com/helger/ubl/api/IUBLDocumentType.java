@@ -19,6 +19,7 @@ package com.helger.ubl.api;
 import java.io.Serializable;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
@@ -75,10 +76,13 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   String getXSDPath ();
 
   /**
+   * @param aClassLoader
+   *          The class loader to be used. May be <code>null</code> indicating
+   *          that the default class loader should be used.
    * @return The resource from which the XSD can be read.
    */
   @Nonnull
-  IReadableResource getXSDResource ();
+  IReadableResource getXSDResource (@Nullable ClassLoader aClassLoader);
 
   /**
    * @return The non-<code>null</code> compiled {@link Schema} object retrieved
@@ -88,21 +92,37 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   Schema getSchema ();
 
   /**
+   * @param aClassLoader
+   *          The class loader to be used. May be <code>null</code> indicating
+   *          that the default class loader should be used.
+   * @return The non-<code>null</code> compiled {@link Schema} object retrieved
+   *         by the {@link com.helger.commons.xml.schema.XMLSchemaCache}.
+   */
+  @Nonnull
+  Schema getSchema (@Nullable ClassLoader aClassLoader);
+
+  /**
+   * @param aClassLoader
+   *          The class loader to be used. May be <code>null</code> indicating
+   *          that the default class loader should be used.
    * @return The non-<code>null</code> compiled {@link Validator} object
    *         retrieved from the schema to be obtained from {@link #getSchema()}.
    */
   @Nonnull
-  Validator getValidator ();
+  Validator getValidator (@Nullable ClassLoader aClassLoader);
 
   /**
    * Validate the passed XML instance against the XML Schema of this document
    * type.
    *
    * @param aXML
-   *          The XML resource to be validated.
+   *          The XML resource to be validated. May not be <code>null</code>.
+   * @param aClassLoader
+   *          The class loader to be used. May be <code>null</code> indicating
+   *          that the default class loader should be used.
    * @return A non-<code>null</code> group of validation errors. Is empty if no
    *         error occurred.
    */
   @Nonnull
-  IResourceErrorGroup validateXML (@Nonnull final IReadableResource aXML);
+  IResourceErrorGroup validateXML (@Nonnull IReadableResource aXML, @Nullable final ClassLoader aClassLoader);
 }
