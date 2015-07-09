@@ -18,6 +18,7 @@ package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
 
+import com.helger.commons.annotation.Singleton;
 import com.helger.commons.xml.CXML;
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
 
@@ -26,6 +27,7 @@ import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
  *
  * @author Philip Helger
  */
+@Singleton
 public class UBL20NamespaceContext extends MapBasedNamespaceContext
 {
   private static final class SingletonHolder

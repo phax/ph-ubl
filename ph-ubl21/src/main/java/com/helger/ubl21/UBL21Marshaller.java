@@ -102,7 +102,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
       return null;
     }
 
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNodeNamespaceURI);
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNodeNamespaceURI, aClassLoader);
     if (aSchema == null)
       throw new IllegalStateException ("Internal inconsistency. Failed to resolve namespace URI '" +
                                        sNodeNamespaceURI +
@@ -167,7 +167,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     ValueEnforcer.notNull (aDestClass, "DestClass");
 
     // as we don't have a node, we need to trust the implementation class
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfImplementationClass (aDestClass);
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfImplementationClass (aDestClass, aClassLoader);
     if (aSchema == null)
     {
       s_aLogger.error ("Don't know how to read UBL 2.1 object of class " + aDestClass.getName ());
@@ -214,7 +214,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                                                    @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
   {
     // Validating!
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI);
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI, aClassLoader);
     if (aSchema == null)
       throw new IllegalArgumentException ("Don't know how to write UBL 2.1 object of class '" + sNamespaceURI + "'");
 
@@ -378,7 +378,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
 
     // Validating!
     final String sNamespaceURI = eDocType.getNamespaceURI ();
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI);
+    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI, aClassLoader);
     if (aSchema == null)
       throw new IllegalStateException ("Internal inconsistency. Failed to resolve namespace URI '" +
                                        sNamespaceURI +
