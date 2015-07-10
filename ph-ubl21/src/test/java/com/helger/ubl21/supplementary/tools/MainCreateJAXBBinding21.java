@@ -108,7 +108,7 @@ public final class MainCreateJAXBBinding21
       final List <String> x = CollectionHelper.getReverseList (StringHelper.getExploded ('.', sHost));
 
       // Path in regular order:
-      final String sPath = StringHelper.trimStart (aURL.getPath (), "/");
+      final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
       x.addAll (StringHelper.getExploded ('/', sPath));
 
       // Convert to array

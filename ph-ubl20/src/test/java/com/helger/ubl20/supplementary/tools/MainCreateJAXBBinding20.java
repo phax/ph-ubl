@@ -113,7 +113,7 @@ public final class MainCreateJAXBBinding20
       final List <String> x = CollectionHelper.getReverseList (StringHelper.getExploded ('.', sHost));
 
       // Path in regular order:
-      final String sPath = StringHelper.trimStart (aURL.getPath (), "/");
+      final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
       x.addAll (StringHelper.getExploded ('/', sPath));
 
       // Convert to array
@@ -204,11 +204,10 @@ public final class MainCreateJAXBBinding20
     final Map <String, String> aValueToConstants = new TreeMap <String, String> ();
     final IMicroElement eSimpleType = aDoc.getDocumentElement ().getFirstChildElement ();
 
-    final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings")
-                                                  .setAttribute ("node",
-                                                                 "xsd:simpleType[@name='" +
-                                                                     eSimpleType.getAttributeValue ("name") +
-                                                                     "']");
+    final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings").setAttribute ("node",
+                                                                                                         "xsd:simpleType[@name='" +
+                                                                                                                 eSimpleType.getAttributeValue ("name") +
+                                                                                                                 "']");
     final IMicroElement eTypesafeEnumClass = eInnerBindings.appendElement (JAXB_NS_URI, "typesafeEnumClass");
 
     final IMicroElement eRestriction = eSimpleType.getFirstChildElement ();
@@ -253,8 +252,7 @@ public final class MainCreateJAXBBinding20
     }
 
     // Write out the mapping file for easy later-on resolving
-    XMLMapHandler.writeMap (aValueToConstants, new FileSystemResource ("src/main/resources/schemas/" +
-                                                                       sFilename +
-                                                                       ".mapping"));
+    XMLMapHandler.writeMap (aValueToConstants,
+                            new FileSystemResource ("src/main/resources/schemas/" + sFilename + ".mapping"));
   }
 }
