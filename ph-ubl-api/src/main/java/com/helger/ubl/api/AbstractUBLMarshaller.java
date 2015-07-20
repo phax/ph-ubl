@@ -9,8 +9,8 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.ValidationEventHandler;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.jaxb.JAXBContextCache;
-import com.helger.commons.jaxb.validation.LoggingValidationEventHandler;
+import com.helger.jaxb.JAXBContextCache;
+import com.helger.jaxb.validation.LoggingValidationEventHandler;
 
 public abstract class AbstractUBLMarshaller
 {

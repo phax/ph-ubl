@@ -70,8 +70,13 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-jaxb</artifactId>
+        <version>6.0.2-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-genericode</artifactId>
-        <version>4.0.0</version>
+        <version>4.1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>

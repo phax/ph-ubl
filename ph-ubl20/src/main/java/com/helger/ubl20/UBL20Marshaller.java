@@ -42,11 +42,11 @@ import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.debug.GlobalDebug;
 import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.jaxb.JAXBMarshallerHelper;
-import com.helger.commons.jaxb.validation.CollectingValidationEventHandler;
 import com.helger.commons.state.ESuccess;
 import com.helger.commons.xml.XMLFactory;
 import com.helger.commons.xml.XMLHelper;
+import com.helger.jaxb.JAXBMarshallerHelper;
+import com.helger.jaxb.validation.CollectingValidationEventHandler;
 import com.helger.ubl.api.AbstractUBLMarshaller;
 
 /**
