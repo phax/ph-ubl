@@ -142,7 +142,7 @@ public final class UBL20DocumentTypes
                                              @Nullable final ClassLoader aClassLoader)
   {
     final EUBL20DocumentType eDocType = getDocumentTypeOfNamespace (sNamespace);
-    return eDocType == null ? null : eDocType.getSchema ();
+    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 
   /**
