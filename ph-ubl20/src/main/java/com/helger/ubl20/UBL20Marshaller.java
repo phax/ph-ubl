@@ -226,14 +226,14 @@ public final class UBL20Marshaller extends AbstractUBLMarshaller
     {
       JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, UBL20NamespaceContext.getInstance ());
     }
-    catch (final IllegalArgumentException ex)
+    catch (final Throwable t)
     {
-      // Just in case...
+      // Might be an IllegalArgumentException or a NoClassDefFoundError
       s_aLogger.error ("Failed to set the namespace prefix mapper: " +
-                       ex.getClass ().getName () +
+                       t.getClass ().getName () +
                        " -- " +
-                       ex.getMessage (),
-                       GlobalDebug.isDebugMode () ? ex.getCause () : null);
+                       t.getMessage (),
+                       GlobalDebug.isDebugMode () ? t.getCause () : null);
     }
 
     return aMarshaller;
