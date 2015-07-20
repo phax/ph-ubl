@@ -40,6 +40,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.debug.GlobalDebug;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.jaxb.JAXBMarshallerHelper;
 import com.helger.commons.jaxb.validation.CollectingValidationEventHandler;
@@ -225,13 +226,14 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     {
       JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespaceContext.getInstance ());
     }
-    catch (final Throwable t)
+    catch (final IllegalArgumentException ex)
     {
       // Just in case...
       s_aLogger.error ("Failed to set the namespace prefix mapper: " +
-                       t.getClass ().getName () +
+                       ex.getClass ().getName () +
                        " -- " +
-                       t.getMessage ());
+                       ex.getMessage (),
+                       GlobalDebug.isDebugMode () ? ex.getCause () : null);
     }
 
     return aMarshaller;
