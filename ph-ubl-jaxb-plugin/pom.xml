@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger</groupId>
     <artifactId>ph-ubl-parent-pom</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0-RC2</version>
   </parent>
   <artifactId>ph-ubl-jaxb-plugin</artifactId>
   <name>ph-ubl-jaxb-plugin</name>
