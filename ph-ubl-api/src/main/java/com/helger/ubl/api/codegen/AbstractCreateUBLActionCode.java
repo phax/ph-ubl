@@ -22,6 +22,12 @@ import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.ubl.api.IUBLDocumentType;
 
+/**
+ * Base class for internal code generation. You should not care too much about
+ * this one...
+ *
+ * @author Philip Helger
+ */
 public abstract class AbstractCreateUBLActionCode
 {
   protected static enum EPhase
