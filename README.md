@@ -79,6 +79,15 @@ The following projects are required at runtime. The exact version depends on the
   * http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
   * http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
+#Other UBL sites
+
+For further information on the Universal Business Language can be found on the following pages:
+
+  * https://www.oasis-open.org/committees/ubl/
+  * http://ubl.xml.org
+  * http://goubl.com
+  
+
 ---
 
 On Twitter: <a href="https://twitter.com/philiphelger">Follow @philiphelger</a>
