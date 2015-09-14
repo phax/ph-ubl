@@ -66,12 +66,12 @@
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-commons</artifactId>
-        <version>6.1.1</version>
+        <version>6.2.0</version>
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-jaxb</artifactId>
-        <version>6.1.1</version>
+        <version>6.2.0</version>
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
