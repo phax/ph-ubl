@@ -1,5 +1,8 @@
 #ph-ubl 4.0.0
 
+[![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
+﻿
+
 This is the readme file for the current version 4.x - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
 
 Set of Java libraries for reading and writing OASIS UBL 2.0 and 2.1 documents.
