@@ -175,7 +175,6 @@
           <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-ubl-jaxb-plugin</artifactId>
-            <version>${project.version}</version>
           </dependency>
         </dependencies>
       </plugin>
