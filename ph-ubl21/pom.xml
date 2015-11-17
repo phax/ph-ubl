@@ -142,6 +142,7 @@
           <specVersion>2.1</specVersion>
           <args>
             <arg>-no-header</arg>
+            <arg>-quiet</arg>
             <arg>-Xph-default-locale</arg>
             <arg>en_US</arg>
             <arg>-Xph-annotate</arg>
