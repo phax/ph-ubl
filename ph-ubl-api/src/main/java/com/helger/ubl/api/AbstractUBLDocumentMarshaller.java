@@ -19,6 +19,7 @@ package com.helger.ubl.api;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.NotThreadSafe;
 import javax.xml.bind.ValidationEventHandler;
+import javax.xml.namespace.NamespaceContext;
 
 /**
  * Base class for document marshallers encapsulating the common elements.
@@ -29,6 +30,7 @@ import javax.xml.bind.ValidationEventHandler;
 public abstract class AbstractUBLDocumentMarshaller
 {
   private static ValidationEventHandler s_aGlobalEventHandler = null;
+  private static NamespaceContext s_aGlobalNamespaceContext = null;
 
   protected AbstractUBLDocumentMarshaller ()
   {}
@@ -56,5 +58,30 @@ public abstract class AbstractUBLDocumentMarshaller
   public static final ValidationEventHandler getGlobalValidationEventHandler ()
   {
     return s_aGlobalEventHandler;
+  }
+
+  /**
+   * Set a global namespace context that should be passed to all write actions.
+   * If no global namespace context is defined, a default namespace context is
+   * used.
+   *
+   * @param aGlobalNamespaceContext
+   *          The new global namespace context. May be <code>null</code> to
+   *          indicate, that the default namespace context should be used.
+   */
+  public static final void setGlobalNamespaceContext (@Nullable final NamespaceContext aGlobalNamespaceContext)
+  {
+    s_aGlobalNamespaceContext = aGlobalNamespaceContext;
+  }
+
+  /**
+   * @return The current global namespace context. May be <code>null</code> to
+   *         indicate that no global namespace context is defined, and the
+   *         default namespace context is used.
+   */
+  @Nullable
+  public static final NamespaceContext getGlobalNamespaceContext ()
+  {
+    return s_aGlobalNamespaceContext;
   }
 }
