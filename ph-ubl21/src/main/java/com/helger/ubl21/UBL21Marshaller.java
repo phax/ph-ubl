@@ -26,6 +26,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.ValidationEventHandler;
+import javax.xml.namespace.NamespaceContext;
 import javax.xml.namespace.QName;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
@@ -212,7 +213,8 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
   private static Marshaller _createFullMarshaller (@Nonnull final Class <?> aClass,
                                                    @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final String sNamespaceURI,
-                                                   @Nullable final ValidationEventHandler aCustomEventHandler) throws JAXBException
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
+                                                   @Nullable final NamespaceContext aNSContext) throws JAXBException
   {
     // Validating!
     final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI, aClassLoader);
@@ -222,19 +224,22 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     // Create a generic marshaller
     final Marshaller aMarshaller = createBasicMarshaller (aClass, aClassLoader, aSchema, aCustomEventHandler);
 
-    try
-    {
-      JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, UBL21NamespaceContext.getInstance ());
-    }
-    catch (final Throwable t)
-    {
-      // Might be an IllegalArgumentException or a NoClassDefFoundError
-      s_aLogger.error ("Failed to set the namespace prefix mapper: " +
-                       t.getClass ().getName () +
-                       " -- " +
-                       t.getMessage (),
-                       GlobalDebug.isDebugMode () ? t.getCause () : null);
-    }
+    if (aNSContext != null)
+      try
+      {
+        JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, aNSContext);
+      }
+      catch (final Throwable t)
+      {
+        // Might be an IllegalArgumentException or a NoClassDefFoundError
+        s_aLogger.error ("Failed to set the namespace context " +
+                         aNSContext +
+                         ": " +
+                         t.getClass ().getName () +
+                         " -- " +
+                         t.getMessage (),
+                         GlobalDebug.isDebugMode () ? t.getCause () : null);
+      }
 
     return aMarshaller;
   }
@@ -272,10 +277,50 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                                            @Nonnull final EUBL21DocumentType eDocType,
                                            @Nullable final ValidationEventHandler aCustomEventHandler)
   {
+    return writeUBLDocument (aUBLDocument,
+                             aClassLoader,
+                             eDocType,
+                             aCustomEventHandler,
+                             UBL21NamespaceContext.getInstance ());
+  }
+
+  /**
+   * Convert the passed domain object into an XML node.<br>
+   * Note: this is the generic API for writing all types of UBL documents.
+   * Please refer to {@link UBL21Writer} for a type-safe API for all supported
+   * document types.
+   *
+   * @param aUBLDocument
+   *          The domain object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
+   * @param eDocType
+   *          The UBL document type matching the document. May not be
+   *          <code>null</code>.
+   * @param aCustomEventHandler
+   *          An optional custom event handler to be used in marshalling. May be
+   *          null.
+   * @param aNSContext
+   *          The namespace context to be used. May be <code>null</code>.
+   * @return <code>null</code> in case conversion to the specified class failed.
+   *         See the log output for details.
+   */
+  @Nullable
+  public static Document writeUBLDocument (@Nonnull final Object aUBLDocument,
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nonnull final EUBL21DocumentType eDocType,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler,
+                                           @Nullable final NamespaceContext aNSContext)
+  {
     final Document aDoc = XMLFactory.newDocument ();
     final DOMResult aResult = new DOMResult (aDoc);
-    return writeUBLDocument (aUBLDocument, aClassLoader, eDocType, aCustomEventHandler, aResult).isSuccess () ? aDoc
-                                                                                                              : null;
+    return writeUBLDocument (aUBLDocument,
+                             aClassLoader,
+                             eDocType,
+                             aCustomEventHandler,
+                             aResult,
+                             aNSContext).isSuccess () ? aDoc : null;
   }
 
   /**
@@ -308,6 +353,47 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
   {
+    return writeUBLDocument (aUBLDocument,
+                             aClassLoader,
+                             eDocType,
+                             aCustomEventHandler,
+                             aResult,
+                             UBL21NamespaceContext.getInstance ());
+  }
+
+  /**
+   * Convert the passed domain object into an XML node.<br>
+   * Note: this is the generic API for writing all types of UBL documents.
+   * Please refer to {@link UBL21Writer} for a type-safe API for all supported
+   * document types.
+   *
+   * @param aUBLDocument
+   *          The domain object to be converted. May not be <code>null</code>.
+   * @param aClassLoader
+   *          Optional class loader to be used for JAXBContext. May be
+   *          <code>null</code> to indicate to use the default class loader.
+   * @param eDocType
+   *          The UBL document type matching the document. May not be
+   *          <code>null</code>.
+   * @param aCustomEventHandler
+   *          An optional custom event handler to be used in marshalling. May be
+   *          <code>null</code>.
+   * @param aResult
+   *          the result object to write the marshaled document to. May not be
+   *          <code>null</code>.
+   * @param aNSContext
+   *          The namespace context to be used. May be <code>null</code>.
+   * @return {@link ESuccess#FAILURE} in case conversion to the specified class
+   *         failed.
+   */
+  @Nonnull
+  public static ESuccess writeUBLDocument (@Nonnull final Object aUBLDocument,
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nonnull final EUBL21DocumentType eDocType,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler,
+                                           @Nonnull final Result aResult,
+                                           @Nullable final NamespaceContext aNSContext)
+  {
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
     ValueEnforcer.notNull (eDocType, "DocType");
     ValueEnforcer.notNull (aResult, "Result");
@@ -327,7 +413,8 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
       final Marshaller aMarshaller = _createFullMarshaller (eDocType.getImplementationClass (),
                                                             aClassLoader,
                                                             eDocType.getNamespaceURI (),
-                                                            aCustomEventHandler);
+                                                            aCustomEventHandler,
+                                                            aNSContext);
 
       // start marshalling
       final JAXBElement <?> aJAXBElement = _createJAXBElement (eDocType.getQName (), aUBLDocument);
