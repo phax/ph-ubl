@@ -212,15 +212,10 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
   @Nonnull
   private static Marshaller _createFullMarshaller (@Nonnull final Class <?> aClass,
                                                    @Nullable final ClassLoader aClassLoader,
-                                                   @Nonnull final String sNamespaceURI,
+                                                   @Nonnull final Schema aSchema,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nullable final NamespaceContext aNSContext) throws JAXBException
   {
-    // Validating!
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI, aClassLoader);
-    if (aSchema == null)
-      throw new IllegalArgumentException ("Don't know how to write UBL 2.1 object of class '" + sNamespaceURI + "'");
-
     // Create a generic marshaller
     final Marshaller aMarshaller = createBasicMarshaller (aClass, aClassLoader, aSchema, aCustomEventHandler);
 
@@ -412,7 +407,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     {
       final Marshaller aMarshaller = _createFullMarshaller (eDocType.getImplementationClass (),
                                                             aClassLoader,
-                                                            eDocType.getNamespaceURI (),
+                                                            eDocType.getSchema (aClassLoader),
                                                             aCustomEventHandler,
                                                             aNSContext);
 
@@ -466,12 +461,7 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
     }
 
     // Validating!
-    final String sNamespaceURI = eDocType.getNamespaceURI ();
-    final Schema aSchema = UBL21DocumentTypes.getSchemaOfNamespace (sNamespaceURI, aClassLoader);
-    if (aSchema == null)
-      throw new IllegalStateException ("Internal inconsistency. Failed to resolve namespace URI '" +
-                                       sNamespaceURI +
-                                       "'");
+    final Schema aSchema = eDocType.getSchema (aClassLoader);
 
     final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
     try
