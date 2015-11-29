@@ -21,10 +21,18 @@ import java.io.InputStream;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.UnmarshalException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.ValidationEventHandler;
 import javax.xml.transform.Source;
 import javax.xml.transform.sax.SAXSource;
+import javax.xml.validation.Schema;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
@@ -32,9 +40,12 @@ import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.OverrideOnDemand;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.xml.EXMLParserFeature;
+import com.helger.commons.xml.XMLHelper;
 import com.helger.commons.xml.sax.InputSourceFactory;
 import com.helger.commons.xml.serialize.read.SAXReaderFactory;
 import com.helger.commons.xml.serialize.read.SAXReaderSettings;
+import com.helger.jaxb.JAXBContextCache;
+import com.helger.jaxb.validation.LoggingValidationEventHandler;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -49,11 +60,15 @@ import com.helger.ubl.api.IUBLDocumentType;
 public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLReaderBuilder <T, IMPLTYPE>>
                                                extends AbstractUBLBuilder <IMPLTYPE>
 {
+  private static final Logger s_aLogger = LoggerFactory.getLogger (AbstractUBLReaderBuilder.class);
+
+  protected Class <T> m_aImplClass;
   protected ValidationEventHandler m_aEventHandler;
 
-  public AbstractUBLReaderBuilder (@Nonnull final IUBLDocumentType aDocType)
+  public AbstractUBLReaderBuilder (@Nonnull final IUBLDocumentType aDocType, @Nonnull final Class <T> aImplClass)
   {
     super (aDocType);
+    m_aImplClass = ValueEnforcer.notNull (aImplClass, "ImplClass");
   }
 
   /**
@@ -185,8 +200,96 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
     return _readSecurelyFromInputSource (InputSourceFactory.create (sSource));
   }
 
+  @Nonnull
+  protected Unmarshaller createUnmarshaller () throws JAXBException
+  {
+    // Since creating the JAXB context is quite cost intensive this is done
+    // only once!
+    final JAXBContext aJAXBContext = JAXBContextCache.getInstance ().getFromCache (m_aDocType.getImplementationClass (),
+                                                                                   m_aClassLoader);
+
+    // create an Unmarshaller
+    final Unmarshaller aUnmarshaller = aJAXBContext.createUnmarshaller ();
+    if (m_aEventHandler != null)
+      aUnmarshaller.setEventHandler (m_aEventHandler);
+    else
+      aUnmarshaller.setEventHandler (new LoggingValidationEventHandler (aUnmarshaller.getEventHandler ()));
+
+    // Validating!
+    aUnmarshaller.setSchema (m_aDocType.getSchema (m_aClassLoader));
+
+    return aUnmarshaller;
+  }
+
   /**
-   * Interpret the passed {@link Source} as a UBL document.
+   * Customize the unmarshaller
+   *
+   * @param aUnmarshaller
+   *          The unmarshaller to customize. Never <code>null</code>.
+   */
+  @OverrideOnDemand
+  protected void customizeUnmarshaller (@Nonnull final Unmarshaller aUnmarshaller)
+  {}
+
+  /**
+   * Convert the passed XML node into a domain object.<br>
+   * Note: this is the generic API for reading all types of UBL documents.
+   *
+   * @param aNode
+   *          The XML node to be converted. May not be <code>null</code>.
+   * @return <code>null</code> in case conversion to the specified class failed.
+   *         See the log output for details.
+   */
+  @Nullable
+  public T read (@Nonnull final Node aNode)
+  {
+    ValueEnforcer.notNull (aNode, "Node");
+
+    final String sNodeNamespaceURI = XMLHelper.getNamespaceURI (aNode);
+
+    // Avoid class cast exception later on
+    if (!m_aDocType.getNamespaceURI ().equals (sNodeNamespaceURI))
+    {
+      s_aLogger.error ("You cannot read an '" + sNodeNamespaceURI + "' as a " + m_aImplClass.getName ());
+      return null;
+    }
+
+    T ret = null;
+    try
+    {
+      final Unmarshaller aUnmarshaller = createUnmarshaller ();
+
+      // Customize on demand
+      customizeUnmarshaller (aUnmarshaller);
+
+      // start unmarshalling
+      ret = aUnmarshaller.unmarshal (aNode, m_aImplClass).getValue ();
+      if (ret == null)
+        throw new IllegalStateException ("Failed to read UBL document of class " +
+                                         m_aImplClass.getName () +
+                                         " - without exception!");
+    }
+    catch (final UnmarshalException ex)
+    {
+      // The JAXB specification does not mandate how the JAXB provider
+      // must behave when attempting to unmarshal invalid XML data. In
+      // those cases, the JAXB provider is allowed to terminate the
+      // call to unmarshal with an UnmarshalException.
+      s_aLogger.error ("Unmarshal exception reading UBL document", ex);
+      return null;
+    }
+    catch (final JAXBException ex)
+    {
+      s_aLogger.warn ("JAXB Exception reading UBL document", ex);
+      return null;
+    }
+
+    return ret;
+  }
+
+  /**
+   * Interpret the passed {@link Source} as a UBL document.<br>
+   * Note: this is the generic API for reading all types of UBL documents.
    *
    * @param sSource
    *          The source to read from. May not be <code>null</code>.
@@ -194,5 +297,48 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    *         parsing error
    */
   @Nullable
-  public abstract T read (@Nonnull Source aSource);
+  public T read (@Nonnull final Source aSource)
+  {
+    ValueEnforcer.notNull (aSource, "Source");
+
+    // as we don't have a node, we need to trust the implementation class
+    final Schema aSchema = m_aDocType.getSchema (m_aClassLoader);
+    if (aSchema == null)
+    {
+      s_aLogger.error ("Don't know how to read UBL document of type " + m_aImplClass.getName ());
+      return null;
+    }
+
+    T ret = null;
+    try
+    {
+      final Unmarshaller aUnmarshaller = createUnmarshaller ();
+
+      // Customize on demand
+      customizeUnmarshaller (aUnmarshaller);
+
+      // start unmarshalling
+      ret = aUnmarshaller.unmarshal (aSource, m_aImplClass).getValue ();
+      if (ret == null)
+        throw new IllegalStateException ("Failed to read UBL document of class " +
+                                         m_aImplClass.getName () +
+                                         " - without exception!");
+    }
+    catch (final UnmarshalException ex)
+    {
+      // The JAXB specification does not mandate how the JAXB provider
+      // must behave when attempting to unmarshal invalid XML data. In
+      // those cases, the JAXB provider is allowed to terminate the
+      // call to unmarshal with an UnmarshalException.
+      s_aLogger.error ("Unmarshal exception reading UBL document", ex);
+      return null;
+    }
+    catch (final JAXBException ex)
+    {
+      s_aLogger.warn ("JAXB Exception reading UBL document", ex);
+      return null;
+    }
+
+    return ret;
+  }
 }

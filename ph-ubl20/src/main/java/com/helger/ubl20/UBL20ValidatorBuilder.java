@@ -18,8 +18,6 @@ package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
 
 /**
@@ -34,14 +32,6 @@ public class UBL20ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, 
   public UBL20ValidatorBuilder (@Nonnull final Class <T> aClass)
   {
     super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-  }
-
-  @Override
-  @Nonnull
-  public IResourceErrorGroup validate (@Nonnull final T aUBLDocument)
-  {
-    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
-    return UBL20Marshaller.validateUBLObject (aUBLDocument, m_aClassLoader, (EUBL20DocumentType) m_aDocType);
   }
 
   /**

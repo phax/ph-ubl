@@ -22,20 +22,30 @@ import java.io.OutputStream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.WillClose;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.MarshalException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.ValidationEventHandler;
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.transform.Result;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamResult;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
+import com.helger.commons.ValueEnforcer;
+import com.helger.commons.debug.GlobalDebug;
 import com.helger.commons.io.resource.IWritableResource;
 import com.helger.commons.io.stream.StreamHelper;
 import com.helger.commons.state.ESuccess;
 import com.helger.commons.xml.XMLFactory;
 import com.helger.commons.xml.transform.ResourceStreamResult;
 import com.helger.commons.xml.transform.StringStreamResult;
+import com.helger.jaxb.JAXBMarshallerHelper;
+import com.helger.jaxb.validation.LoggingValidationEventHandler;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -43,13 +53,15 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be read
+ *          The UBL implementation class to be written
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
 public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLWriterBuilder <T, IMPLTYPE>>
-                                               extends AbstractUBLBuilder <IMPLTYPE>
+                                               extends AbstractWritingUBLBuilder <T, IMPLTYPE>
 {
+  private static final Logger s_aLogger = LoggerFactory.getLogger (AbstractUBLWriterBuilder.class);
+
   protected ValidationEventHandler m_aEventHandler;
   protected NamespaceContext m_aNSContext;
 
@@ -191,6 +203,37 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     return write (aUBLDocument, new ResourceStreamResult (aResult));
   }
 
+  @Override
+  @Nonnull
+  protected Marshaller createMarshaller () throws JAXBException
+  {
+    final Marshaller aMarshaller = super.createMarshaller ();
+
+    if (m_aEventHandler != null)
+      aMarshaller.setEventHandler (m_aEventHandler);
+    else
+      aMarshaller.setEventHandler (new LoggingValidationEventHandler (aMarshaller.getEventHandler ()));
+
+    if (m_aNSContext != null)
+      try
+      {
+        JAXBMarshallerHelper.setSunNamespacePrefixMapper (aMarshaller, m_aNSContext);
+      }
+      catch (final Throwable t)
+      {
+        // Might be an IllegalArgumentException or a NoClassDefFoundError
+        s_aLogger.error ("Failed to set the namespace context " +
+                         m_aNSContext +
+                         ": " +
+                         t.getClass ().getName () +
+                         " -- " +
+                         t.getMessage (),
+                         GlobalDebug.isDebugMode () ? t.getCause () : null);
+      }
+
+    return aMarshaller;
+  }
+
   /**
    * Convert the passed UBL document to a custom {@link Result}.
    *
@@ -202,5 +245,41 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    *         {@link ESuccess#FAILURE} in case of an error
    */
   @Nonnull
-  public abstract ESuccess write (@Nonnull T aUBLDocument, @Nonnull Result aResult);
+  public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull final Result aResult)
+  {
+    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
+    ValueEnforcer.notNull (aResult, "Result");
+
+    // Avoid class cast exception later on
+    if (!m_aDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
+    {
+      s_aLogger.error ("You cannot write a '" +
+                       aUBLDocument.getClass () +
+                       "' as a " +
+                       m_aDocType.getPackage ().getName ());
+      return ESuccess.FAILURE;
+    }
+
+    try
+    {
+      final Marshaller aMarshaller = createMarshaller ();
+
+      // Customize on demand
+      customizeMarshaller (aMarshaller);
+
+      // start marshalling
+      final JAXBElement <?> aJAXBElement = _createJAXBElement (m_aDocType.getQName (), aUBLDocument);
+      aMarshaller.marshal (aJAXBElement, aResult);
+      return ESuccess.SUCCESS;
+    }
+    catch (final MarshalException ex)
+    {
+      s_aLogger.error ("Marshal exception writing UBL document", ex);
+    }
+    catch (final JAXBException ex)
+    {
+      s_aLogger.warn ("JAXB Exception writing UBL document", ex);
+    }
+    return ESuccess.FAILURE;
+  }
 }

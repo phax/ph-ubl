@@ -18,8 +18,6 @@ package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
 
 /**
@@ -34,14 +32,6 @@ public class UBL21ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, 
   public UBL21ValidatorBuilder (@Nonnull final Class <T> aClass)
   {
     super (UBL21DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-  }
-
-  @Override
-  @Nonnull
-  public IResourceErrorGroup validate (@Nonnull final T aUBLDocument)
-  {
-    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
-    return UBL21Marshaller.validateUBLObject (aUBLDocument, m_aClassLoader, (EUBL21DocumentType) m_aDocType);
   }
 
   /**

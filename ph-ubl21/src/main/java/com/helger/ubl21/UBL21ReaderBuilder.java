@@ -17,12 +17,7 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.xml.transform.Source;
 
-import org.w3c.dom.Node;
-
-import com.helger.commons.ValueEnforcer;
 import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 
@@ -35,46 +30,12 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  */
 public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21ReaderBuilder <T>>
 {
-  private final Class <T> m_aClass;
-
   public UBL21ReaderBuilder (@Nonnull final Class <T> aClass)
   {
-    super (UBL21DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-    m_aClass = ValueEnforcer.notNull (aClass, "Class");
+    super (UBL21DocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
 
     // Set global event handler
     setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
-  }
-
-  /**
-   * Interpret the passed {@link Source} as a UBL document.
-   *
-   * @param aSource
-   *          The source to read from. May not be <code>null</code>.
-   * @return The evaluated UBL document or <code>null</code> in case of a
-   *         parsing error
-   */
-  @Override
-  @Nullable
-  public T read (@Nonnull final Source aSource)
-  {
-    ValueEnforcer.notNull (aSource, "Source");
-    return UBL21Marshaller.readUBLDocument (aSource, m_aClassLoader, m_aClass, m_aEventHandler);
-  }
-
-  /**
-   * Interpret the passed DOM {@link Node} as a UBL document.
-   *
-   * @param aNode
-   *          The DOM node to be read. May not be <code>null</code>.
-   * @return The evaluated UBL document or <code>null</code> in case of a
-   *         parsing error
-   */
-  @Nullable
-  public T read (@Nonnull final Node aNode)
-  {
-    ValueEnforcer.notNull (aNode, "Node");
-    return UBL21Marshaller.readUBLDocument (aNode, m_aClassLoader, m_aClass, m_aEventHandler);
   }
 
   /**

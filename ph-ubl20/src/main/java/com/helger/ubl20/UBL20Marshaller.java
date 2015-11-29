@@ -56,6 +56,7 @@ import com.helger.ubl.api.AbstractUBLMarshaller;
  * @author Philip Helger
  */
 @Immutable
+@Deprecated
 public final class UBL20Marshaller extends AbstractUBLMarshaller
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (UBL20Marshaller.class);

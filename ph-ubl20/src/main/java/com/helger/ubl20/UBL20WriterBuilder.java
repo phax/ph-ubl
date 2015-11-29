@@ -17,10 +17,7 @@
 package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
-import javax.xml.transform.Result;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.state.ESuccess;
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
 import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
@@ -46,19 +43,6 @@ public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20Wr
     aNSContext.addMappings (UBL20NamespaceContext.getInstance ());
     aNSContext.setDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
-  }
-
-  @Override
-  @Nonnull
-  public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull final Result aResult)
-  {
-    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
-    return UBL20Marshaller.writeUBLDocument (aUBLDocument,
-                                             m_aClassLoader,
-                                             (EUBL20DocumentType) m_aDocType,
-                                             m_aEventHandler,
-                                             m_aNSContext,
-                                             aResult);
   }
 
   /**

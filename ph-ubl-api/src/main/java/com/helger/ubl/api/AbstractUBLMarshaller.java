@@ -33,6 +33,7 @@ import com.helger.jaxb.validation.LoggingValidationEventHandler;
  *
  * @author Philip Helger
  */
+@Deprecated
 public abstract class AbstractUBLMarshaller
 {
   @Nonnull

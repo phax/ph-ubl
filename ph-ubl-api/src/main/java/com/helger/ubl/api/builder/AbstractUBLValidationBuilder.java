@@ -17,8 +17,15 @@
 package com.helger.ubl.api.builder;
 
 import javax.annotation.Nonnull;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.helger.commons.ValueEnforcer;
 import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.jaxb.validation.CollectingValidationEventHandler;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -26,12 +33,12 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be read
+ *          The UBL implementation class to be validated
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
 public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends AbstractUBLValidationBuilder <T, IMPLTYPE>>
-                                                   extends AbstractUBLBuilder <IMPLTYPE>
+                                                   extends AbstractWritingUBLBuilder <T, IMPLTYPE>
 {
   public AbstractUBLValidationBuilder (@Nonnull final IUBLDocumentType aDocType)
   {
@@ -60,5 +67,39 @@ public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends Abstract
    * @return The validation results. Never <code>null</code>.
    */
   @Nonnull
-  public abstract IResourceErrorGroup validate (@Nonnull T aUBLDocument);
+  public IResourceErrorGroup validate (@Nonnull final T aUBLDocument)
+  {
+    ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
+
+    // Avoid class cast exception later on
+    if (!m_aDocType.getPackage ().equals (aUBLDocument.getClass ().getPackage ()))
+    {
+      throw new IllegalArgumentException ("You cannot validate a '" +
+                                          aUBLDocument.getClass () +
+                                          "' as a " +
+                                          m_aDocType.getPackage ().getName ());
+    }
+
+    final CollectingValidationEventHandler aEventHandler = new CollectingValidationEventHandler ();
+    try
+    {
+      // create a Marshaller
+      final Marshaller aMarshaller = createMarshaller ();
+      aMarshaller.setEventHandler (aEventHandler);
+
+      // Customize on demand
+      customizeMarshaller (aMarshaller);
+
+      // start marshalling
+      final JAXBElement <?> aJAXBElement = _createJAXBElement (m_aDocType.getQName (), aUBLDocument);
+      // DefaultHandler has very little overhead
+      aMarshaller.marshal (aJAXBElement, new DefaultHandler ());
+    }
+    catch (final JAXBException ex)
+    {
+      // Should already be contained as an entry in the event handler
+    }
+    return aEventHandler.getResourceErrors ();
+  }
+
 }
