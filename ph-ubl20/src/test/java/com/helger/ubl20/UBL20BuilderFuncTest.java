@@ -19,11 +19,16 @@ package com.helger.ubl20;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import javax.annotation.Nonnull;
+import javax.xml.bind.Marshaller;
+
 import org.junit.Test;
 
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
+import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
+import com.helger.jaxb.JAXBMarshallerHelper;
 
 import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
 
@@ -40,7 +45,16 @@ public final class UBL20BuilderFuncTest
   {
     final UBL20ReaderBuilder <InvoiceType> aReader = UBL20ReaderBuilder.create (InvoiceType.class);
     final UBL20ValidatorBuilder <InvoiceType> aValidator = UBL20ValidatorBuilder.create (InvoiceType.class);
-    final UBL20WriterBuilder <InvoiceType> aWriter = UBL20WriterBuilder.create (InvoiceType.class);
+    final UBL20WriterBuilder <InvoiceType> aWriter = new UBL20WriterBuilder <InvoiceType> (InvoiceType.class)
+    {
+      @Override
+      protected void customizeMarshaller (@Nonnull final Marshaller aMarshaller)
+      {
+        JAXBMarshallerHelper.setFormattedOutput (aMarshaller, true);
+      }
+    };
+    aWriter.setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("bla",
+                                                                             EUBL20DocumentType.INVOICE.getNamespaceURI ()));
 
     final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE).get (0);
 

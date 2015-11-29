@@ -20,6 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import com.helger.commons.ValueEnforcer;
+import com.helger.commons.string.ToStringGenerator;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -37,6 +38,16 @@ public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <I
   public AbstractUBLBuilder (@Nonnull final IUBLDocumentType aDocType)
   {
     m_aDocType = ValueEnforcer.notNull (aDocType, "DocType");
+  }
+
+  /**
+   * @return The document type as passed in the constructor. Never
+   *         <code>null</code>.
+   */
+  @Nonnull
+  public IUBLDocumentType getUBLDocumentType ()
+  {
+    return m_aDocType;
   }
 
   @SuppressWarnings ("unchecked")
@@ -67,5 +78,13 @@ public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <I
   {
     m_aClassLoader = aClassLoader;
     return thisAsT ();
+  }
+
+  @Override
+  public String toString ()
+  {
+    return new ToStringGenerator (this).append ("DocType", m_aDocType)
+                                       .append ("ClassLoader", m_aClassLoader)
+                                       .toString ();
   }
 }

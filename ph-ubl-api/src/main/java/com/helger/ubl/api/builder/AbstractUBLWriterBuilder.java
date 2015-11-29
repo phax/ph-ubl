@@ -41,6 +41,7 @@ import com.helger.commons.debug.GlobalDebug;
 import com.helger.commons.io.resource.IWritableResource;
 import com.helger.commons.io.stream.StreamHelper;
 import com.helger.commons.state.ESuccess;
+import com.helger.commons.string.ToStringGenerator;
 import com.helger.commons.xml.XMLFactory;
 import com.helger.commons.xml.transform.ResourceStreamResult;
 import com.helger.commons.xml.transform.StringStreamResult;
@@ -62,8 +63,8 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (AbstractUBLWriterBuilder.class);
 
-  protected ValidationEventHandler m_aEventHandler;
-  protected NamespaceContext m_aNSContext;
+  protected ValidationEventHandler m_aEventHandler = UBLBuilderDefaultSettings.getDefaultValidationEventHandler ();
+  protected NamespaceContext m_aNSContext = UBLBuilderDefaultSettings.getDefaultNamespaceContext ();
 
   public AbstractUBLWriterBuilder (@Nonnull final IUBLDocumentType aDocType)
   {
@@ -71,8 +72,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
   }
 
   /**
-   * @return The special JAXB validation event handler to be used.
-   *         <code>null</code> by default.
+   * @return The special JAXB validation event handler to be used. By default
+   *         {@link UBLBuilderDefaultSettings#getDefaultValidationEventHandler()}
+   *         is used.
    */
   @Nullable
   public ValidationEventHandler getValidationEventHandler ()
@@ -95,8 +97,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
   }
 
   /**
-   * @return The special JAXB namespace context to be used. <code>null</code> by
-   *         default.
+   * @return The special JAXB namespace context to be used. By default
+   *         {@link UBLBuilderDefaultSettings#getDefaultNamespaceContext()} is
+   *         used.
    */
   @Nullable
   public NamespaceContext getNamespaceContext ()
@@ -281,5 +284,14 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
       s_aLogger.warn ("JAXB Exception writing UBL document", ex);
     }
     return ESuccess.FAILURE;
+  }
+
+  @Override
+  public String toString ()
+  {
+    return ToStringGenerator.getDerived (super.toString ())
+                            .append ("EventHandler", m_aEventHandler)
+                            .append ("NamespaceContext", m_aNSContext)
+                            .toString ();
   }
 }

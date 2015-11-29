@@ -42,9 +42,10 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
 /**
  * Validate all UBL 2.0 document types.
- * 
+ *
  * @author Philip Helger
  */
+@SuppressWarnings ("deprecation")
 @NotThreadSafe
 public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 {
@@ -56,7 +57,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a validation builder for ApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -67,7 +68,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ApplicationResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -83,7 +84,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ApplicationResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -94,7 +95,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aApplicationResponse,
                                               aClassLoader,
@@ -103,7 +104,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ApplicationResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -117,7 +118,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ApplicationResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -128,14 +129,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return validateApplicationResponse (aApplicationResponse, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for AttachedDocument.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -146,7 +147,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link AttachedDocumentType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -162,7 +163,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link AttachedDocumentType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -173,14 +174,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                              @Nullable ClassLoader aClassLoader)
+                                                              @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aAttachedDocument, aClassLoader, EUBL20DocumentType.ATTACHED_DOCUMENT);
   }
 
   /**
    * Validate the passed {@link AttachedDocumentType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -194,7 +195,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link AttachedDocumentType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -205,14 +206,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return validateAttachedDocument (aAttachedDocument, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for BillOfLading.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -223,7 +224,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link BillOfLadingType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -237,7 +238,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link BillOfLadingType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -248,14 +249,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                                          @Nullable ClassLoader aClassLoader)
+                                                          @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aBillOfLading, aClassLoader, EUBL20DocumentType.BILL_OF_LADING);
   }
 
   /**
    * Validate the passed {@link BillOfLadingType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -269,7 +270,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link BillOfLadingType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -280,14 +281,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return validateBillOfLading (aBillOfLading, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Catalogue.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -298,7 +299,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -312,7 +313,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -323,14 +324,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCatalogue, aClassLoader, EUBL20DocumentType.CATALOGUE);
   }
 
   /**
    * Validate the passed {@link CatalogueType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -344,7 +345,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -354,14 +355,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue,
+                                          @Nullable final ClassLoader aClassLoader)
   {
     return validateCatalogue (aCatalogue, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for CatalogueDeletion.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -372,7 +374,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueDeletionType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -388,7 +390,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueDeletionType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -399,14 +401,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                               @Nullable ClassLoader aClassLoader)
+                                                               @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCatalogueDeletion, aClassLoader, EUBL20DocumentType.CATALOGUE_DELETION);
   }
 
   /**
    * Validate the passed {@link CatalogueDeletionType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -420,7 +422,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueDeletionType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -431,14 +433,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                  @Nullable ClassLoader aClassLoader)
+                                                  @Nullable final ClassLoader aClassLoader)
   {
     return validateCatalogueDeletion (aCatalogueDeletion, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for CatalogueItemSpecificationUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -449,7 +451,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -465,7 +467,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -476,7 +478,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                              @Nullable ClassLoader aClassLoader)
+                                                                              @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCatalogueItemSpecificationUpdate,
                                               aClassLoader,
@@ -485,7 +487,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -500,7 +502,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueItemSpecificationUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -511,7 +513,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return validateCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
                                                      aClassLoader).containsNoError ();
@@ -519,7 +521,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a validation builder for CataloguePricingUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -530,7 +532,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CataloguePricingUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -546,7 +548,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CataloguePricingUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -557,7 +559,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                                    @Nullable ClassLoader aClassLoader)
+                                                                    @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCataloguePricingUpdate,
                                               aClassLoader,
@@ -566,7 +568,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CataloguePricingUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -580,7 +582,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CataloguePricingUpdateType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -591,14 +593,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return validateCataloguePricingUpdate (aCataloguePricingUpdate, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for CatalogueRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -609,7 +611,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueRequestType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -625,7 +627,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueRequestType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -636,14 +638,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                              @Nullable ClassLoader aClassLoader)
+                                                              @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCatalogueRequest, aClassLoader, EUBL20DocumentType.CATALOGUE_REQUEST);
   }
 
   /**
    * Validate the passed {@link CatalogueRequestType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -657,7 +659,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CatalogueRequestType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -668,14 +670,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return validateCatalogueRequest (aCatalogueRequest, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for CertificateOfOrigin.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -686,7 +688,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CertificateOfOriginType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -702,7 +704,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CertificateOfOriginType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -713,7 +715,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCertificateOfOrigin,
                                               aClassLoader,
@@ -722,7 +724,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CertificateOfOriginType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -736,7 +738,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CertificateOfOriginType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -747,14 +749,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return validateCertificateOfOrigin (aCertificateOfOrigin, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for CreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -765,7 +767,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -779,7 +781,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -790,14 +792,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                                        @Nullable ClassLoader aClassLoader)
+                                                        @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aCreditNote, aClassLoader, EUBL20DocumentType.CREDIT_NOTE);
   }
 
   /**
    * Validate the passed {@link CreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -811,7 +813,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link CreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -822,14 +824,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                           @Nullable ClassLoader aClassLoader)
+                                           @Nullable final ClassLoader aClassLoader)
   {
     return validateCreditNote (aCreditNote, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for DebitNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -840,7 +842,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DebitNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -854,7 +856,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DebitNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -865,14 +867,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aDebitNote, aClassLoader, EUBL20DocumentType.DEBIT_NOTE);
   }
 
   /**
    * Validate the passed {@link DebitNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -886,7 +888,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DebitNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -896,14 +898,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote,
+                                          @Nullable final ClassLoader aClassLoader)
   {
     return validateDebitNote (aDebitNote, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for DespatchAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -914,7 +917,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DespatchAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -928,7 +931,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DespatchAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -939,14 +942,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                                            @Nullable ClassLoader aClassLoader)
+                                                            @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aDespatchAdvice, aClassLoader, EUBL20DocumentType.DESPATCH_ADVICE);
   }
 
   /**
    * Validate the passed {@link DespatchAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -960,7 +963,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link DespatchAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -971,14 +974,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                               @Nullable ClassLoader aClassLoader)
+                                               @Nullable final ClassLoader aClassLoader)
   {
     return validateDespatchAdvice (aDespatchAdvice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for ForwardingInstructions.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -989,7 +992,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ForwardingInstructionsType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1005,7 +1008,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ForwardingInstructionsType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1016,7 +1019,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                                    @Nullable ClassLoader aClassLoader)
+                                                                    @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aForwardingInstructions,
                                               aClassLoader,
@@ -1025,7 +1028,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ForwardingInstructionsType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1039,7 +1042,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ForwardingInstructionsType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1050,14 +1053,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return validateForwardingInstructions (aForwardingInstructions, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for FreightInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1068,7 +1071,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link FreightInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1082,7 +1085,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link FreightInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1093,14 +1096,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                                            @Nullable ClassLoader aClassLoader)
+                                                            @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aFreightInvoice, aClassLoader, EUBL20DocumentType.FREIGHT_INVOICE);
   }
 
   /**
    * Validate the passed {@link FreightInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1114,7 +1117,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link FreightInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1125,14 +1128,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                               @Nullable ClassLoader aClassLoader)
+                                               @Nullable final ClassLoader aClassLoader)
   {
     return validateFreightInvoice (aFreightInvoice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Invoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1143,7 +1146,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link InvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1157,7 +1160,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link InvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1168,14 +1171,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateInvoice (@Nonnull final InvoiceType aInvoice,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aInvoice, aClassLoader, EUBL20DocumentType.INVOICE);
   }
 
   /**
    * Validate the passed {@link InvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1189,7 +1192,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link InvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1199,14 +1202,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice, @Nullable final ClassLoader aClassLoader)
   {
     return validateInvoice (aInvoice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Order.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1217,7 +1220,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1231,7 +1234,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1241,14 +1244,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static IResourceErrorGroup validateOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
+  public static IResourceErrorGroup validateOrder (@Nonnull final OrderType aOrder,
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aOrder, aClassLoader, EUBL20DocumentType.ORDER);
   }
 
   /**
    * Validate the passed {@link OrderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1262,7 +1266,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1272,14 +1276,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidOrder (@Nonnull final OrderType aOrder, @Nullable final ClassLoader aClassLoader)
   {
     return validateOrder (aOrder, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for OrderCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1290,7 +1294,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderCancellationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1306,7 +1310,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderCancellationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1317,14 +1321,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                               @Nullable ClassLoader aClassLoader)
+                                                               @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aOrderCancellation, aClassLoader, EUBL20DocumentType.ORDER_CANCELLATION);
   }
 
   /**
    * Validate the passed {@link OrderCancellationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1338,7 +1342,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderCancellationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1349,14 +1353,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                  @Nullable ClassLoader aClassLoader)
+                                                  @Nullable final ClassLoader aClassLoader)
   {
     return validateOrderCancellation (aOrderCancellation, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for OrderChange.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1367,7 +1371,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderChangeType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1381,7 +1385,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderChangeType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1392,14 +1396,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                                         @Nullable ClassLoader aClassLoader)
+                                                         @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aOrderChange, aClassLoader, EUBL20DocumentType.ORDER_CHANGE);
   }
 
   /**
    * Validate the passed {@link OrderChangeType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1413,7 +1417,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderChangeType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1424,14 +1428,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                            @Nullable ClassLoader aClassLoader)
+                                            @Nullable final ClassLoader aClassLoader)
   {
     return validateOrderChange (aOrderChange, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for OrderResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1442,7 +1446,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1456,7 +1460,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1467,14 +1471,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aOrderResponse, aClassLoader, EUBL20DocumentType.ORDER_RESPONSE);
   }
 
   /**
    * Validate the passed {@link OrderResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1488,7 +1492,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1499,14 +1503,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return validateOrderResponse (aOrderResponse, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for OrderResponseSimple.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1517,7 +1521,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseSimpleType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1533,7 +1537,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseSimpleType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1544,7 +1548,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aOrderResponseSimple,
                                               aClassLoader,
@@ -1553,7 +1557,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseSimpleType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1567,7 +1571,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link OrderResponseSimpleType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1578,14 +1582,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return validateOrderResponseSimple (aOrderResponseSimple, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for PackingList.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1596,7 +1600,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link PackingListType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1610,7 +1614,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link PackingListType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1621,14 +1625,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validatePackingList (@Nonnull final PackingListType aPackingList,
-                                                         @Nullable ClassLoader aClassLoader)
+                                                         @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aPackingList, aClassLoader, EUBL20DocumentType.PACKING_LIST);
   }
 
   /**
    * Validate the passed {@link PackingListType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1642,7 +1646,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link PackingListType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1653,14 +1657,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidPackingList (@Nonnull final PackingListType aPackingList,
-                                            @Nullable ClassLoader aClassLoader)
+                                            @Nullable final ClassLoader aClassLoader)
   {
     return validatePackingList (aPackingList, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Quotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1671,7 +1675,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link QuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1685,7 +1689,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link QuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1696,14 +1700,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateQuotation (@Nonnull final QuotationType aQuotation,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aQuotation, aClassLoader, EUBL20DocumentType.QUOTATION);
   }
 
   /**
    * Validate the passed {@link QuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1717,7 +1721,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link QuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1727,14 +1731,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation,
+                                          @Nullable final ClassLoader aClassLoader)
   {
     return validateQuotation (aQuotation, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for ReceiptAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1745,7 +1750,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReceiptAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1759,7 +1764,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReceiptAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1770,14 +1775,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aReceiptAdvice, aClassLoader, EUBL20DocumentType.RECEIPT_ADVICE);
   }
 
   /**
    * Validate the passed {@link ReceiptAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1791,7 +1796,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReceiptAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1802,14 +1807,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return validateReceiptAdvice (aReceiptAdvice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Reminder.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1820,7 +1825,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReminderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1834,7 +1839,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReminderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1845,14 +1850,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReminder (@Nonnull final ReminderType aReminder,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aReminder, aClassLoader, EUBL20DocumentType.REMINDER);
   }
 
   /**
    * Validate the passed {@link ReminderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1866,7 +1871,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link ReminderType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1876,14 +1881,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidReminder (@Nonnull final ReminderType aReminder, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidReminder (@Nonnull final ReminderType aReminder,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return validateReminder (aReminder, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for RemittanceAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1894,7 +1900,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RemittanceAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1910,7 +1916,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RemittanceAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1921,14 +1927,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                              @Nullable ClassLoader aClassLoader)
+                                                              @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aRemittanceAdvice, aClassLoader, EUBL20DocumentType.REMITTANCE_ADVICE);
   }
 
   /**
    * Validate the passed {@link RemittanceAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -1942,7 +1948,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RemittanceAdviceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1953,14 +1959,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return validateRemittanceAdvice (aRemittanceAdvice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for RequestForQuotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1971,7 +1977,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RequestForQuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -1987,7 +1993,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RequestForQuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -1998,7 +2004,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aRequestForQuotation,
                                               aClassLoader,
@@ -2007,7 +2013,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RequestForQuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2021,7 +2027,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link RequestForQuotationType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2032,14 +2038,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return validateRequestForQuotation (aRequestForQuotation, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for SelfBilledCreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2050,7 +2056,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledCreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -2066,7 +2072,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledCreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2077,7 +2083,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                                  @Nullable ClassLoader aClassLoader)
+                                                                  @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aSelfBilledCreditNote,
                                               aClassLoader,
@@ -2086,7 +2092,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledCreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2100,7 +2106,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledCreditNoteType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2111,14 +2117,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return validateSelfBilledCreditNote (aSelfBilledCreditNote, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for SelfBilledInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2129,7 +2135,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -2145,7 +2151,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2156,14 +2162,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                               @Nullable ClassLoader aClassLoader)
+                                                               @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aSelfBilledInvoice, aClassLoader, EUBL20DocumentType.SELF_BILLED_INVOICE);
   }
 
   /**
    * Validate the passed {@link SelfBilledInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2177,7 +2183,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link SelfBilledInvoiceType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2188,14 +2194,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                  @Nullable ClassLoader aClassLoader)
+                                                  @Nullable final ClassLoader aClassLoader)
   {
     return validateSelfBilledInvoice (aSelfBilledInvoice, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Statement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2206,7 +2212,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link StatementType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -2220,7 +2226,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link StatementType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2231,14 +2237,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateStatement (@Nonnull final StatementType aStatement,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aStatement, aClassLoader, EUBL20DocumentType.STATEMENT);
   }
 
   /**
    * Validate the passed {@link StatementType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2252,7 +2258,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link StatementType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2262,14 +2268,15 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidStatement (@Nonnull final StatementType aStatement, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidStatement (@Nonnull final StatementType aStatement,
+                                          @Nullable final ClassLoader aClassLoader)
   {
     return validateStatement (aStatement, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for TransportationStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2280,7 +2287,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link TransportationStatusType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -2296,7 +2303,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link TransportationStatusType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2307,7 +2314,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                                  @Nullable ClassLoader aClassLoader)
+                                                                  @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aTransportationStatus,
                                               aClassLoader,
@@ -2316,7 +2323,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link TransportationStatusType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2330,7 +2337,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link TransportationStatusType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2341,14 +2348,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   public static boolean isValidTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return validateTransportationStatus (aTransportationStatus, aClassLoader).containsNoError ();
   }
 
   /**
    * Create a validation builder for Waybill.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2359,7 +2366,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link WaybillType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
@@ -2373,7 +2380,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link WaybillType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2384,14 +2391,14 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static IResourceErrorGroup validateWaybill (@Nonnull final WaybillType aWaybill,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return UBL20Marshaller.validateUBLObject (aWaybill, aClassLoader, EUBL20DocumentType.WAYBILL);
   }
 
   /**
    * Validate the passed {@link WaybillType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return <code>true</code> if the object is valid, <code>false</code>
@@ -2405,7 +2412,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
 
   /**
    * Validate the passed {@link WaybillType} object.
-   * 
+   *
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @param aClassLoader
@@ -2415,7 +2422,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *         otherwise.
    */
   @Deprecated
-  public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill, @Nullable ClassLoader aClassLoader)
+  public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill, @Nullable final ClassLoader aClassLoader)
   {
     return validateWaybill (aWaybill, aClassLoader).containsNoError ();
   }

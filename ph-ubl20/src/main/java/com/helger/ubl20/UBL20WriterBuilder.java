@@ -19,7 +19,6 @@ package com.helger.ubl20;
 import javax.annotation.Nonnull;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
 
 /**
@@ -34,9 +33,6 @@ public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20Wr
   public UBL20WriterBuilder (@Nonnull final Class <T> aClass)
   {
     super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-
-    // Set global event handler
-    setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();

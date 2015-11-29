@@ -39,6 +39,7 @@ import org.xml.sax.XMLReader;
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.OverrideOnDemand;
 import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.string.ToStringGenerator;
 import com.helger.commons.xml.EXMLParserFeature;
 import com.helger.commons.xml.XMLHelper;
 import com.helger.commons.xml.sax.InputSourceFactory;
@@ -63,7 +64,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   private static final Logger s_aLogger = LoggerFactory.getLogger (AbstractUBLReaderBuilder.class);
 
   protected Class <T> m_aImplClass;
-  protected ValidationEventHandler m_aEventHandler;
+  protected ValidationEventHandler m_aEventHandler = UBLBuilderDefaultSettings.getDefaultValidationEventHandler ();
 
   public AbstractUBLReaderBuilder (@Nonnull final IUBLDocumentType aDocType, @Nonnull final Class <T> aImplClass)
   {
@@ -72,8 +73,9 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   }
 
   /**
-   * @return The special JAXB validation event handler to be used.
-   *         <code>null</code> by default.
+   * @return The special JAXB validation event handler to be used. By default
+   *         {@link UBLBuilderDefaultSettings#getDefaultValidationEventHandler()}
+   *         is used.
    */
   @Nullable
   public ValidationEventHandler getValidationEventHandler ()
@@ -122,7 +124,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   }
 
   @Nullable
-  private T _readSecurelyFromInputSource (@Nonnull final InputSource aInputSource)
+  protected final T readSecurelyFromInputSource (@Nonnull final InputSource aInputSource)
   {
     // Initialize settings with defaults
     final SAXReaderSettings aSettings = createDefaultSAXReaderSettings ();
@@ -141,7 +143,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final File aSource)
   {
-    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
+    return readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -155,7 +157,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final IReadableResource aSource)
   {
-    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
+    return readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -169,7 +171,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final InputStream aSource)
   {
-    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
+    return readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -183,7 +185,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final byte [] aSource)
   {
-    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
+    return readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -197,7 +199,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final String sSource)
   {
-    return _readSecurelyFromInputSource (InputSourceFactory.create (sSource));
+    return readSecurelyFromInputSource (InputSourceFactory.create (sSource));
   }
 
   @Nonnull
@@ -340,5 +342,14 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
     }
 
     return ret;
+  }
+
+  @Override
+  public String toString ()
+  {
+    return ToStringGenerator.getDerived (super.toString ())
+                            .append ("ImplClass", m_aImplClass)
+                            .append ("EventHandler", m_aEventHandler)
+                            .toString ();
   }
 }

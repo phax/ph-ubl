@@ -49,9 +49,10 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
 /**
  * Read all UBL 2.0 document types.
- * 
+ *
  * @author Philip Helger
  */
+@SuppressWarnings ("deprecation")
 @NotThreadSafe
 public final class UBL20Reader extends AbstractUBLDocumentMarshaller
 {
@@ -63,7 +64,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a reader builder for ApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -75,7 +76,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ApplicationResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
@@ -91,7 +92,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ApplicationResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -103,7 +104,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readApplicationResponse (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -111,7 +112,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ApplicationResponse using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -122,7 +123,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -133,7 +134,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ApplicationResponse using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -147,8 +148,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, ApplicationResponseType.class, aCustomEventHandler);
   }
@@ -156,7 +157,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ApplicationResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
@@ -172,7 +173,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ApplicationResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -184,7 +185,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -192,7 +193,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ApplicationResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -203,7 +204,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -211,7 +212,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ApplicationResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -225,8 +226,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -234,7 +235,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ApplicationResponse
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
@@ -250,7 +251,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ApplicationResponse
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -262,7 +263,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -270,7 +271,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ApplicationResponse
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -281,7 +282,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -289,7 +290,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ApplicationResponse
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -303,8 +304,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readApplicationResponse (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -312,7 +313,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ApplicationResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
@@ -328,7 +329,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ApplicationResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -340,7 +341,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readApplicationResponse (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -348,7 +349,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ApplicationResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -359,7 +360,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -370,7 +371,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ApplicationResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -384,15 +385,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ApplicationResponseType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for AttachedDocument.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -404,7 +405,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a AttachedDocument using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
@@ -420,7 +421,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a AttachedDocument using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -432,7 +433,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readAttachedDocument (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -440,7 +441,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -451,7 +452,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, AttachedDocumentType.class, aCustomEventHandler);
   }
@@ -459,7 +460,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -473,8 +474,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, AttachedDocumentType.class, aCustomEventHandler);
   }
@@ -482,7 +483,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a AttachedDocument using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
@@ -498,7 +499,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a AttachedDocument using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -510,7 +511,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -518,7 +519,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -529,7 +530,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -537,7 +538,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -551,8 +552,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -560,7 +561,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a AttachedDocument using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
@@ -576,7 +577,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a AttachedDocument using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -588,7 +589,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -596,7 +597,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a AttachedDocument using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -607,7 +608,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -615,7 +616,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a AttachedDocument using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -629,8 +630,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readAttachedDocument (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -638,7 +639,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a AttachedDocument using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
@@ -654,7 +655,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a AttachedDocument using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -666,7 +667,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readAttachedDocument (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -674,7 +675,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -685,7 +686,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -696,7 +697,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a AttachedDocument using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -710,15 +711,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, AttachedDocumentType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for BillOfLading.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -730,7 +731,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
@@ -746,7 +747,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -757,7 +758,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readBillOfLading (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -765,7 +766,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -776,7 +777,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, BillOfLadingType.class, aCustomEventHandler);
   }
@@ -784,7 +785,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -798,8 +799,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, BillOfLadingType.class, aCustomEventHandler);
   }
@@ -807,7 +808,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
@@ -823,7 +824,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -834,7 +835,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static BillOfLadingType readBillOfLading (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static BillOfLadingType readBillOfLading (@Nonnull final File aSource,
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -842,7 +844,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -853,7 +855,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -861,7 +863,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -875,8 +877,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -884,7 +886,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a BillOfLading using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
@@ -900,7 +902,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a BillOfLading using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -912,7 +914,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -920,7 +922,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a BillOfLading using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -931,7 +933,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -939,7 +941,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a BillOfLading using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -953,8 +955,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readBillOfLading (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -962,7 +964,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
@@ -978,7 +980,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a BillOfLading using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -989,7 +991,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource,
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readBillOfLading (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -997,7 +1000,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1008,7 +1011,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, BillOfLadingType.class, aCustomEventHandler);
   }
@@ -1016,7 +1019,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a BillOfLading using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1030,15 +1033,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, BillOfLadingType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Catalogue.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1050,7 +1053,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CatalogueType or <code>null</code> in case of a
@@ -1066,7 +1069,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1077,7 +1080,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CatalogueType readCatalogue (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static CatalogueType readCatalogue (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogue (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1085,7 +1088,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Catalogue using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1096,7 +1099,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, CatalogueType.class, aCustomEventHandler);
   }
@@ -1104,7 +1107,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Catalogue using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1118,8 +1121,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CatalogueType.class, aCustomEventHandler);
   }
@@ -1127,7 +1130,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueType or <code>null</code> in case of a
@@ -1143,7 +1146,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1154,7 +1157,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CatalogueType readCatalogue (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static CatalogueType readCatalogue (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1162,7 +1165,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Catalogue using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1173,7 +1176,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1181,7 +1184,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Catalogue using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1195,8 +1198,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -1204,7 +1207,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Catalogue using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueType or <code>null</code> in case of a
@@ -1220,7 +1223,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Catalogue using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1232,7 +1235,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1240,7 +1243,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Catalogue using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1251,7 +1254,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1259,7 +1262,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Catalogue using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1273,8 +1276,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogue (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -1282,7 +1285,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueType or <code>null</code> in case of a
@@ -1298,7 +1301,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Catalogue using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1309,7 +1312,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CatalogueType readCatalogue (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static CatalogueType readCatalogue (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogue (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1317,7 +1320,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Catalogue using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1328,7 +1331,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, CatalogueType.class, aCustomEventHandler);
   }
@@ -1336,7 +1339,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Catalogue using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1350,15 +1353,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for CatalogueDeletion.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1370,7 +1373,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueDeletion using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
@@ -1386,7 +1389,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueDeletion using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1398,7 +1401,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueDeletion (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1406,7 +1409,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1417,7 +1420,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -1428,7 +1431,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1442,8 +1445,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CatalogueDeletionType.class, aCustomEventHandler);
   }
@@ -1451,7 +1454,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueDeletion using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
@@ -1467,7 +1470,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueDeletion using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1479,7 +1482,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1487,7 +1490,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1498,7 +1501,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1506,7 +1509,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1520,8 +1523,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -1529,7 +1532,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueDeletion using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
@@ -1545,7 +1548,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueDeletion using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1557,7 +1560,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1565,7 +1568,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueDeletion using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1576,7 +1579,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1584,7 +1587,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueDeletion using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1598,8 +1601,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueDeletion (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -1607,7 +1610,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueDeletion using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
@@ -1623,7 +1626,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueDeletion using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1635,7 +1638,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueDeletion (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1643,7 +1646,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1654,7 +1657,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -1665,7 +1668,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueDeletion using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1679,15 +1682,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueDeletionType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for CatalogueItemSpecificationUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1699,7 +1702,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CatalogueItemSpecificationUpdateType or
@@ -1715,7 +1718,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1727,7 +1730,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
-                                                                                           @Nullable ClassLoader aClassLoader)
+                                                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueItemSpecificationUpdate (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1735,7 +1738,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1746,7 +1749,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -1757,7 +1760,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -1771,8 +1774,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
-                                                                                           @Nullable ClassLoader aClassLoader,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ClassLoader aClassLoader,
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             aClassLoader,
@@ -1783,7 +1786,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueItemSpecificationUpdateType or
@@ -1799,7 +1802,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1811,7 +1814,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
-                                                                                           @Nullable ClassLoader aClassLoader)
+                                                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1819,7 +1822,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1830,7 +1833,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1838,7 +1841,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1852,8 +1855,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
-                                                                                           @Nullable ClassLoader aClassLoader,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ClassLoader aClassLoader,
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource),
                                                  aClassLoader,
@@ -1863,7 +1866,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a
    * CatalogueItemSpecificationUpdate using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueItemSpecificationUpdateType or
@@ -1879,7 +1882,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a
    * CatalogueItemSpecificationUpdate using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1891,7 +1894,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
-                                                                                           @Nullable ClassLoader aClassLoader)
+                                                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -1899,7 +1902,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a
    * CatalogueItemSpecificationUpdate using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1910,7 +1913,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -1918,7 +1921,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a
    * CatalogueItemSpecificationUpdate using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1932,8 +1935,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
-                                                                                           @Nullable ClassLoader aClassLoader,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ClassLoader aClassLoader,
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueItemSpecificationUpdate (TransformSourceFactory.create (aSource),
                                                  aClassLoader,
@@ -1943,7 +1946,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueItemSpecificationUpdateType or
@@ -1959,7 +1962,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueItemSpecificationUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -1971,7 +1974,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
-                                                                                           @Nullable ClassLoader aClassLoader)
+                                                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueItemSpecificationUpdate (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1979,7 +1982,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1990,7 +1993,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -2001,7 +2004,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueItemSpecificationUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2015,8 +2018,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
-                                                                                           @Nullable ClassLoader aClassLoader,
-                                                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                                           @Nullable final ClassLoader aClassLoader,
+                                                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             aClassLoader,
@@ -2026,7 +2029,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a reader builder for CataloguePricingUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2038,7 +2041,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
@@ -2054,7 +2057,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2066,7 +2069,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readCataloguePricingUpdate (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2074,7 +2077,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2085,7 +2088,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -2096,7 +2099,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2110,8 +2113,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CataloguePricingUpdateType.class, aCustomEventHandler);
   }
@@ -2119,7 +2122,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
@@ -2135,7 +2138,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2147,7 +2150,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2155,7 +2158,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2166,7 +2169,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2174,7 +2177,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2188,8 +2191,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2197,7 +2200,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CataloguePricingUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
@@ -2213,7 +2216,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CataloguePricingUpdate
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2225,7 +2228,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2233,7 +2236,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CataloguePricingUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2244,7 +2247,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2252,7 +2255,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CataloguePricingUpdate
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2266,8 +2269,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCataloguePricingUpdate (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2275,7 +2278,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
@@ -2291,7 +2294,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CataloguePricingUpdate using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2303,7 +2306,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readCataloguePricingUpdate (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2311,7 +2314,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2322,7 +2325,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -2333,7 +2336,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CataloguePricingUpdate using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2347,8 +2350,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             aClassLoader,
@@ -2358,7 +2361,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a reader builder for CatalogueRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2370,7 +2373,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueRequest using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
@@ -2386,7 +2389,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueRequest using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2398,7 +2401,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueRequest (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2406,7 +2409,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2417,7 +2420,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, CatalogueRequestType.class, aCustomEventHandler);
   }
@@ -2425,7 +2428,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2439,8 +2442,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CatalogueRequestType.class, aCustomEventHandler);
   }
@@ -2448,7 +2451,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueRequest using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
@@ -2464,7 +2467,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueRequest using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2476,7 +2479,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2484,7 +2487,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2495,7 +2498,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2503,7 +2506,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2517,8 +2520,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2526,7 +2529,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueRequest using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
@@ -2542,7 +2545,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueRequest using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2554,7 +2557,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2562,7 +2565,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueRequest using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2573,7 +2576,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2581,7 +2584,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CatalogueRequest using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2595,8 +2598,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCatalogueRequest (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2604,7 +2607,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueRequest using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
@@ -2620,7 +2623,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueRequest using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2632,7 +2635,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readCatalogueRequest (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2640,7 +2643,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2651,7 +2654,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -2662,7 +2665,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CatalogueRequest using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2676,15 +2679,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueRequestType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for CertificateOfOrigin.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2696,7 +2699,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CertificateOfOrigin using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
@@ -2712,7 +2715,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CertificateOfOrigin using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2724,7 +2727,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readCertificateOfOrigin (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2732,7 +2735,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CertificateOfOrigin using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2743,7 +2746,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -2754,7 +2757,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CertificateOfOrigin using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -2768,8 +2771,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CertificateOfOriginType.class, aCustomEventHandler);
   }
@@ -2777,7 +2780,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CertificateOfOrigin using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
@@ -2793,7 +2796,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CertificateOfOrigin using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2805,7 +2808,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2813,7 +2816,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CertificateOfOrigin using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2824,7 +2827,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2832,7 +2835,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CertificateOfOrigin using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2846,8 +2849,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2855,7 +2858,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CertificateOfOrigin
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
@@ -2871,7 +2874,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CertificateOfOrigin
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2883,7 +2886,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -2891,7 +2894,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CertificateOfOrigin
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2902,7 +2905,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -2910,7 +2913,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CertificateOfOrigin
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2924,8 +2927,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCertificateOfOrigin (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -2933,7 +2936,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CertificateOfOrigin using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
@@ -2949,7 +2952,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CertificateOfOrigin using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -2961,7 +2964,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readCertificateOfOrigin (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2969,7 +2972,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CertificateOfOrigin using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2980,7 +2983,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -2991,7 +2994,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CertificateOfOrigin using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3005,15 +3008,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CertificateOfOriginType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for CreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3025,7 +3028,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
@@ -3041,7 +3044,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3052,7 +3055,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CreditNoteType readCreditNote (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static CreditNoteType readCreditNote (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readCreditNote (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3060,7 +3063,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3071,7 +3074,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, CreditNoteType.class, aCustomEventHandler);
   }
@@ -3079,7 +3082,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a CreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3093,8 +3096,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, CreditNoteType.class, aCustomEventHandler);
   }
@@ -3102,7 +3105,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
@@ -3118,7 +3121,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3129,7 +3132,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CreditNoteType readCreditNote (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static CreditNoteType readCreditNote (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3137,7 +3140,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CreditNote using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3148,7 +3151,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3156,7 +3159,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a CreditNote using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3170,8 +3173,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3179,7 +3182,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
@@ -3195,7 +3198,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3207,7 +3210,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
-                                               @Nullable ClassLoader aClassLoader)
+                                               @Nullable final ClassLoader aClassLoader)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3215,7 +3218,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3226,7 +3229,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3234,7 +3237,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a CreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3248,8 +3251,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readCreditNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3257,7 +3260,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
@@ -3273,7 +3276,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CreditNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3284,7 +3287,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static CreditNoteType readCreditNote (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static CreditNoteType readCreditNote (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readCreditNote (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3292,7 +3295,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3303,7 +3306,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, CreditNoteType.class, aCustomEventHandler);
   }
@@ -3311,7 +3314,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a CreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3325,15 +3328,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CreditNoteType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for DebitNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3345,7 +3348,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
@@ -3361,7 +3364,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3372,7 +3375,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static DebitNoteType readDebitNote (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static DebitNoteType readDebitNote (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readDebitNote (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3380,7 +3383,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DebitNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3391,7 +3394,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, DebitNoteType.class, aCustomEventHandler);
   }
@@ -3399,7 +3402,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DebitNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3413,8 +3416,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, DebitNoteType.class, aCustomEventHandler);
   }
@@ -3422,7 +3425,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
@@ -3438,7 +3441,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3449,7 +3452,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static DebitNoteType readDebitNote (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static DebitNoteType readDebitNote (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3457,7 +3460,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DebitNote using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3468,7 +3471,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3476,7 +3479,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DebitNote using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3490,8 +3493,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3499,7 +3502,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DebitNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
@@ -3515,7 +3518,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DebitNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3527,7 +3530,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3535,7 +3538,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DebitNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3546,7 +3549,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3554,7 +3557,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DebitNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3568,8 +3571,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDebitNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3577,7 +3580,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
@@ -3593,7 +3596,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DebitNote using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3604,7 +3607,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static DebitNoteType readDebitNote (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static DebitNoteType readDebitNote (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readDebitNote (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3612,7 +3615,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DebitNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3623,7 +3626,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, DebitNoteType.class, aCustomEventHandler);
   }
@@ -3631,7 +3634,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DebitNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3645,15 +3648,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, DebitNoteType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for DespatchAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3665,7 +3668,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
@@ -3681,7 +3684,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3692,7 +3695,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode,
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readDespatchAdvice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3700,7 +3704,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3711,7 +3715,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, DespatchAdviceType.class, aCustomEventHandler);
   }
@@ -3719,7 +3723,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -3733,8 +3737,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, DespatchAdviceType.class, aCustomEventHandler);
   }
@@ -3742,7 +3746,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
@@ -3758,7 +3762,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3769,7 +3773,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource,
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3777,7 +3782,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3788,7 +3793,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3796,7 +3801,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3810,8 +3815,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3819,7 +3824,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DespatchAdvice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
@@ -3835,7 +3840,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DespatchAdvice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3847,7 +3852,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -3855,7 +3860,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DespatchAdvice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3866,7 +3871,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -3874,7 +3879,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a DespatchAdvice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3888,8 +3893,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readDespatchAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -3897,7 +3902,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
@@ -3913,7 +3918,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DespatchAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3925,7 +3930,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readDespatchAdvice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3933,7 +3938,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3944,7 +3949,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, DespatchAdviceType.class, aCustomEventHandler);
   }
@@ -3952,7 +3957,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a DespatchAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -3966,15 +3971,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, DespatchAdviceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for ForwardingInstructions.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3986,7 +3991,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
@@ -4002,7 +4007,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4014,7 +4019,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readForwardingInstructions (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4022,7 +4027,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4033,7 +4038,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -4044,7 +4049,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4058,8 +4063,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, ForwardingInstructionsType.class, aCustomEventHandler);
   }
@@ -4067,7 +4072,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
@@ -4083,7 +4088,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4095,7 +4100,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4103,7 +4108,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4114,7 +4119,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4122,7 +4127,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4136,8 +4141,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4145,7 +4150,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ForwardingInstructions
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
@@ -4161,7 +4166,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ForwardingInstructions
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4173,7 +4178,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4181,7 +4186,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ForwardingInstructions
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4192,7 +4197,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4200,7 +4205,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ForwardingInstructions
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4214,8 +4219,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readForwardingInstructions (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4223,7 +4228,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
@@ -4239,7 +4244,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ForwardingInstructions using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4251,7 +4256,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
-                                                                       @Nullable ClassLoader aClassLoader)
+                                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readForwardingInstructions (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4259,7 +4264,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4270,7 +4275,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -4281,7 +4286,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ForwardingInstructions using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4295,8 +4300,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
-                                                                       @Nullable ClassLoader aClassLoader,
-                                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                       @Nullable final ClassLoader aClassLoader,
+                                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             aClassLoader,
@@ -4306,7 +4311,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a reader builder for FreightInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4318,7 +4323,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
@@ -4334,7 +4339,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4345,7 +4350,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode,
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readFreightInvoice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4353,7 +4359,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4364,7 +4370,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, FreightInvoiceType.class, aCustomEventHandler);
   }
@@ -4372,7 +4378,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4386,8 +4392,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, FreightInvoiceType.class, aCustomEventHandler);
   }
@@ -4395,7 +4401,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
@@ -4411,7 +4417,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4422,7 +4428,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource,
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4430,7 +4437,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4441,7 +4448,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4449,7 +4456,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4463,8 +4470,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4472,7 +4479,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a FreightInvoice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
@@ -4488,7 +4495,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a FreightInvoice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4500,7 +4507,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4508,7 +4515,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a FreightInvoice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4519,7 +4526,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4527,7 +4534,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a FreightInvoice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4541,8 +4548,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readFreightInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4550,7 +4557,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
@@ -4566,7 +4573,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a FreightInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4578,7 +4585,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return readFreightInvoice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4586,7 +4593,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4597,7 +4604,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, FreightInvoiceType.class, aCustomEventHandler);
   }
@@ -4605,7 +4612,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a FreightInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4619,15 +4626,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, FreightInvoiceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Invoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4639,7 +4646,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Invoice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
@@ -4655,7 +4662,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Invoice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4666,7 +4673,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static InvoiceType readInvoice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static InvoiceType readInvoice (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readInvoice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4674,7 +4681,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Invoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4685,7 +4692,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, InvoiceType.class, aCustomEventHandler);
   }
@@ -4693,7 +4700,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Invoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4707,8 +4714,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, InvoiceType.class, aCustomEventHandler);
   }
@@ -4716,7 +4723,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Invoice using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
@@ -4732,7 +4739,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Invoice using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4743,7 +4750,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static InvoiceType readInvoice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static InvoiceType readInvoice (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4751,7 +4758,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Invoice using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4762,7 +4769,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4770,7 +4777,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Invoice using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4784,8 +4791,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4793,7 +4800,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Invoice using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
@@ -4809,7 +4816,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Invoice using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4820,7 +4827,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
+  public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -4828,7 +4836,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Invoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4839,7 +4847,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -4847,7 +4855,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Invoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4861,8 +4869,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -4870,7 +4878,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Invoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
@@ -4886,7 +4894,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Invoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4897,7 +4905,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static InvoiceType readInvoice (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static InvoiceType readInvoice (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readInvoice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4905,7 +4913,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Invoice using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4916,7 +4924,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, InvoiceType.class, aCustomEventHandler);
   }
@@ -4924,7 +4932,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Invoice using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -4938,15 +4946,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, InvoiceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Order.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4958,7 +4966,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Order using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
@@ -4974,7 +4982,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Order using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -4985,7 +4993,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static OrderType readOrder (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readOrder (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4993,7 +5001,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5003,7 +5011,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final Node aNode, @Nullable ValidationEventHandler aCustomEventHandler)
+  public static OrderType readOrder (@Nonnull final Node aNode,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, OrderType.class, aCustomEventHandler);
   }
@@ -5011,7 +5020,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5025,8 +5034,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Node aNode,
-                                     @Nullable ClassLoader aClassLoader,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ClassLoader aClassLoader,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, OrderType.class, aCustomEventHandler);
   }
@@ -5034,7 +5043,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Order using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
@@ -5050,7 +5059,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Order using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5061,7 +5070,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderType readOrder (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readOrder (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5069,7 +5078,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5079,7 +5088,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final File aSource, @Nullable ValidationEventHandler aCustomEventHandler)
+  public static OrderType readOrder (@Nonnull final File aSource,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrder (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5087,7 +5097,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5101,8 +5111,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final File aSource,
-                                     @Nullable ClassLoader aClassLoader,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ClassLoader aClassLoader,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrder (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5110,7 +5120,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Order using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
@@ -5126,7 +5136,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Order using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5137,7 +5147,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderType readOrder (@Nonnull final IReadableResource aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readOrder (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5145,7 +5155,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Order using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5156,7 +5166,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrder (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5164,7 +5174,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Order using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5178,8 +5188,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource,
-                                     @Nullable ClassLoader aClassLoader,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ClassLoader aClassLoader,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrder (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5187,7 +5197,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Order using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
@@ -5203,7 +5213,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Order using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5214,7 +5224,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderType readOrder (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderType readOrder (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readOrder (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5222,7 +5232,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5233,7 +5243,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, OrderType.class, aCustomEventHandler);
   }
@@ -5241,7 +5251,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Order using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5255,15 +5265,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource,
-                                     @Nullable ClassLoader aClassLoader,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ClassLoader aClassLoader,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for OrderCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5275,7 +5285,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderCancellation using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
@@ -5291,7 +5301,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderCancellation using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5303,7 +5313,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readOrderCancellation (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5311,7 +5321,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5322,7 +5332,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -5333,7 +5343,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5347,8 +5357,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, OrderCancellationType.class, aCustomEventHandler);
   }
@@ -5356,7 +5366,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderCancellation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
@@ -5372,7 +5382,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderCancellation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5384,7 +5394,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5392,7 +5402,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5403,7 +5413,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5411,7 +5421,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5425,8 +5435,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5434,7 +5444,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderCancellation using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
@@ -5450,7 +5460,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderCancellation using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5462,7 +5472,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5470,7 +5480,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderCancellation using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5481,7 +5491,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5489,7 +5499,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderCancellation using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5503,8 +5513,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderCancellation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5512,7 +5522,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderCancellation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
@@ -5528,7 +5538,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderCancellation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5540,7 +5550,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readOrderCancellation (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5548,7 +5558,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5559,7 +5569,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -5570,7 +5580,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderCancellation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5584,15 +5594,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderCancellationType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for OrderChange.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5604,7 +5614,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
@@ -5620,7 +5630,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5631,7 +5641,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderChangeType readOrderChange (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static OrderChangeType readOrderChange (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readOrderChange (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5639,7 +5649,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5650,7 +5660,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, OrderChangeType.class, aCustomEventHandler);
   }
@@ -5658,7 +5668,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5672,8 +5682,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, OrderChangeType.class, aCustomEventHandler);
   }
@@ -5681,7 +5691,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
@@ -5697,7 +5707,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5708,7 +5718,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderChangeType readOrderChange (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderChangeType readOrderChange (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5716,7 +5726,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5727,7 +5737,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5735,7 +5745,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5749,8 +5759,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5758,7 +5768,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderChange using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
@@ -5774,7 +5784,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderChange using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5786,7 +5796,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -5794,7 +5804,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderChange using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5805,7 +5815,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -5813,7 +5823,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderChange using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5827,8 +5837,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderChange (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -5836,7 +5846,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
@@ -5852,7 +5862,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderChange using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5863,7 +5873,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderChangeType readOrderChange (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderChangeType readOrderChange (@Nonnull final Source aSource,
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderChange (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5871,7 +5882,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5882,7 +5893,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, OrderChangeType.class, aCustomEventHandler);
   }
@@ -5890,7 +5901,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderChange using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -5904,15 +5915,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderChangeType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for OrderResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5924,7 +5935,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
@@ -5940,7 +5951,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5951,7 +5962,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderResponseType readOrderResponse (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static OrderResponseType readOrderResponse (@Nonnull final Node aNode,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponse (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5959,7 +5971,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5970,7 +5982,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, OrderResponseType.class, aCustomEventHandler);
   }
@@ -5978,7 +5990,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -5992,8 +6004,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, OrderResponseType.class, aCustomEventHandler);
   }
@@ -6001,7 +6013,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
@@ -6017,7 +6029,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6028,7 +6040,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderResponseType readOrderResponse (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderResponseType readOrderResponse (@Nonnull final File aSource,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6036,7 +6049,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6047,7 +6060,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6055,7 +6068,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6069,8 +6082,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6078,7 +6091,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
@@ -6094,7 +6107,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponse using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6106,7 +6119,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6114,7 +6127,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponse using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6125,7 +6138,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6133,7 +6146,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponse using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6147,8 +6160,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponse (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6156,7 +6169,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
@@ -6172,7 +6185,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponse using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6183,7 +6196,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static OrderResponseType readOrderResponse (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static OrderResponseType readOrderResponse (@Nonnull final Source aSource,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponse (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6191,7 +6205,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6202,7 +6216,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, OrderResponseType.class, aCustomEventHandler);
   }
@@ -6210,7 +6224,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponse using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6224,15 +6238,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderResponseType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for OrderResponseSimple.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6244,7 +6258,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponseSimple using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
@@ -6260,7 +6274,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponseSimple using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6272,7 +6286,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponseSimple (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6280,7 +6294,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponseSimple using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6291,7 +6305,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -6302,7 +6316,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a OrderResponseSimple using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6316,8 +6330,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, OrderResponseSimpleType.class, aCustomEventHandler);
   }
@@ -6325,7 +6339,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponseSimple using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
@@ -6341,7 +6355,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponseSimple using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6353,7 +6367,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6361,7 +6375,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponseSimple using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6372,7 +6386,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6380,7 +6394,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a OrderResponseSimple using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6394,8 +6408,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6403,7 +6417,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponseSimple
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
@@ -6419,7 +6433,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponseSimple
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6431,7 +6445,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6439,7 +6453,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponseSimple
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6450,7 +6464,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6458,7 +6472,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a OrderResponseSimple
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6472,8 +6486,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readOrderResponseSimple (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6481,7 +6495,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponseSimple using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
@@ -6497,7 +6511,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponseSimple using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6509,7 +6523,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readOrderResponseSimple (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6517,7 +6531,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponseSimple using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6528,7 +6542,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -6539,7 +6553,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a OrderResponseSimple using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6553,15 +6567,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderResponseSimpleType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for PackingList.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6573,7 +6587,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated PackingListType or <code>null</code> in case of a
@@ -6589,7 +6603,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6600,7 +6614,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static PackingListType readPackingList (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static PackingListType readPackingList (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readPackingList (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6608,7 +6622,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6619,7 +6633,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, PackingListType.class, aCustomEventHandler);
   }
@@ -6627,7 +6641,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6641,8 +6655,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, PackingListType.class, aCustomEventHandler);
   }
@@ -6650,7 +6664,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated PackingListType or <code>null</code> in case of a
@@ -6666,7 +6680,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6677,7 +6691,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static PackingListType readPackingList (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static PackingListType readPackingList (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6685,7 +6699,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6696,7 +6710,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6704,7 +6718,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6718,8 +6732,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6727,7 +6741,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a PackingList using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated PackingListType or <code>null</code> in case of a
@@ -6743,7 +6757,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a PackingList using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6755,7 +6769,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -6763,7 +6777,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a PackingList using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6774,7 +6788,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -6782,7 +6796,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a PackingList using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6796,8 +6810,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readPackingList (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -6805,7 +6819,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated PackingListType or <code>null</code> in case of a
@@ -6821,7 +6835,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a PackingList using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6832,7 +6846,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static PackingListType readPackingList (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static PackingListType readPackingList (@Nonnull final Source aSource,
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readPackingList (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6840,7 +6855,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6851,7 +6866,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, PackingListType.class, aCustomEventHandler);
   }
@@ -6859,7 +6874,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a PackingList using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6873,15 +6888,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, PackingListType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Quotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6893,7 +6908,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated QuotationType or <code>null</code> in case of a
@@ -6909,7 +6924,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6920,7 +6935,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static QuotationType readQuotation (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static QuotationType readQuotation (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readQuotation (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6928,7 +6943,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Quotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6939,7 +6954,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, QuotationType.class, aCustomEventHandler);
   }
@@ -6947,7 +6962,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Quotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -6961,8 +6976,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, QuotationType.class, aCustomEventHandler);
   }
@@ -6970,7 +6985,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated QuotationType or <code>null</code> in case of a
@@ -6986,7 +7001,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -6997,7 +7012,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static QuotationType readQuotation (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static QuotationType readQuotation (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7005,7 +7020,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Quotation using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7016,7 +7031,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7024,7 +7039,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Quotation using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7038,8 +7053,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7047,7 +7062,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Quotation using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated QuotationType or <code>null</code> in case of a
@@ -7063,7 +7078,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Quotation using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7075,7 +7090,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7083,7 +7098,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Quotation using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7094,7 +7109,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7102,7 +7117,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Quotation using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7116,8 +7131,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readQuotation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7125,7 +7140,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated QuotationType or <code>null</code> in case of a
@@ -7141,7 +7156,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Quotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7152,7 +7167,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static QuotationType readQuotation (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static QuotationType readQuotation (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readQuotation (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7160,7 +7175,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Quotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7171,7 +7186,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, QuotationType.class, aCustomEventHandler);
   }
@@ -7179,7 +7194,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Quotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7193,15 +7208,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, QuotationType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for ReceiptAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7213,7 +7228,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
@@ -7229,7 +7244,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7240,7 +7255,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readReceiptAdvice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7248,7 +7264,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7259,7 +7275,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, ReceiptAdviceType.class, aCustomEventHandler);
   }
@@ -7267,7 +7283,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7281,8 +7297,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, ReceiptAdviceType.class, aCustomEventHandler);
   }
@@ -7290,7 +7306,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
@@ -7306,7 +7322,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7317,7 +7333,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7325,7 +7342,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7336,7 +7353,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7344,7 +7361,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7358,8 +7375,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7367,7 +7384,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ReceiptAdvice using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
@@ -7383,7 +7400,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ReceiptAdvice using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7395,7 +7412,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7403,7 +7420,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ReceiptAdvice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7414,7 +7431,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7422,7 +7439,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a ReceiptAdvice using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7436,8 +7453,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReceiptAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7445,7 +7462,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
@@ -7461,7 +7478,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ReceiptAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7472,7 +7489,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource,
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return readReceiptAdvice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7480,7 +7498,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7491,7 +7509,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, ReceiptAdviceType.class, aCustomEventHandler);
   }
@@ -7499,7 +7517,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a ReceiptAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7513,15 +7531,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ReceiptAdviceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Reminder.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7533,7 +7551,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Reminder using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated ReminderType or <code>null</code> in case of a
@@ -7549,7 +7567,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Reminder using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7560,7 +7578,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReminderType readReminder (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static ReminderType readReminder (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readReminder (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7568,7 +7586,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Reminder using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7579,7 +7597,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, ReminderType.class, aCustomEventHandler);
   }
@@ -7587,7 +7605,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Reminder using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7601,8 +7619,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, ReminderType.class, aCustomEventHandler);
   }
@@ -7610,7 +7628,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Reminder using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated ReminderType or <code>null</code> in case of a
@@ -7626,7 +7644,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Reminder using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7637,7 +7655,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReminderType readReminder (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static ReminderType readReminder (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readReminder (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7645,7 +7663,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Reminder using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7656,7 +7674,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReminder (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7664,7 +7682,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Reminder using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7678,8 +7696,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReminder (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7687,7 +7705,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Reminder using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated ReminderType or <code>null</code> in case of a
@@ -7703,7 +7721,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Reminder using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7714,7 +7732,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReminderType readReminder (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
+  public static ReminderType readReminder (@Nonnull final IReadableResource aSource,
+                                           @Nullable final ClassLoader aClassLoader)
   {
     return readReminder (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7722,7 +7741,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Reminder using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7733,7 +7752,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReminder (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7741,7 +7760,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Reminder using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7755,8 +7774,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readReminder (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -7764,7 +7783,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Reminder using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated ReminderType or <code>null</code> in case of a
@@ -7780,7 +7799,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Reminder using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7791,7 +7810,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static ReminderType readReminder (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static ReminderType readReminder (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readReminder (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7799,7 +7818,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Reminder using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7810,7 +7829,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, ReminderType.class, aCustomEventHandler);
   }
@@ -7818,7 +7837,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Reminder using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7832,15 +7851,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ReminderType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for RemittanceAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7852,7 +7871,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RemittanceAdvice using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
@@ -7868,7 +7887,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RemittanceAdvice using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7880,7 +7899,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readRemittanceAdvice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7888,7 +7907,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7899,7 +7918,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, RemittanceAdviceType.class, aCustomEventHandler);
   }
@@ -7907,7 +7926,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -7921,8 +7940,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, RemittanceAdviceType.class, aCustomEventHandler);
   }
@@ -7930,7 +7949,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RemittanceAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
@@ -7946,7 +7965,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RemittanceAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7958,7 +7977,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -7966,7 +7985,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7977,7 +7996,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -7985,7 +8004,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -7999,8 +8018,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8008,7 +8027,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RemittanceAdvice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
@@ -8024,7 +8043,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RemittanceAdvice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8036,7 +8055,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8044,7 +8063,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RemittanceAdvice using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8055,7 +8074,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8063,7 +8082,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RemittanceAdvice using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8077,8 +8096,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRemittanceAdvice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8086,7 +8105,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RemittanceAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
@@ -8102,7 +8121,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RemittanceAdvice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8114,7 +8133,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return readRemittanceAdvice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8122,7 +8141,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8133,7 +8152,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -8144,7 +8163,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RemittanceAdvice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8158,15 +8177,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, RemittanceAdviceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for RequestForQuotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8178,7 +8197,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RequestForQuotation using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
@@ -8194,7 +8213,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RequestForQuotation using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8206,7 +8225,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readRequestForQuotation (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8214,7 +8233,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RequestForQuotation using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8225,7 +8244,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -8236,7 +8255,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a RequestForQuotation using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8250,8 +8269,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, RequestForQuotationType.class, aCustomEventHandler);
   }
@@ -8259,7 +8278,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RequestForQuotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
@@ -8275,7 +8294,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RequestForQuotation using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8287,7 +8306,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8295,7 +8314,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RequestForQuotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8306,7 +8325,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8314,7 +8333,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a RequestForQuotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8328,8 +8347,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8337,7 +8356,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RequestForQuotation
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
@@ -8353,7 +8372,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RequestForQuotation
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8365,7 +8384,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8373,7 +8392,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RequestForQuotation
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8384,7 +8403,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8392,7 +8411,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a RequestForQuotation
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8406,8 +8425,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readRequestForQuotation (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8415,7 +8434,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RequestForQuotation using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
@@ -8431,7 +8450,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RequestForQuotation using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8443,7 +8462,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader)
+                                                                 @Nullable final ClassLoader aClassLoader)
   {
     return readRequestForQuotation (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8451,7 +8470,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RequestForQuotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8462,7 +8481,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -8473,7 +8492,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a RequestForQuotation using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8487,15 +8506,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
-                                                                 @Nullable ClassLoader aClassLoader,
-                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                 @Nullable final ClassLoader aClassLoader,
+                                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, RequestForQuotationType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for SelfBilledCreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8507,7 +8526,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
@@ -8523,7 +8542,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8535,7 +8554,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledCreditNote (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8543,7 +8562,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledCreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8554,7 +8573,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -8565,7 +8584,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledCreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8579,8 +8598,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, SelfBilledCreditNoteType.class, aCustomEventHandler);
   }
@@ -8588,7 +8607,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
@@ -8604,7 +8623,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8616,7 +8635,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8624,7 +8643,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledCreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8635,7 +8654,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8643,7 +8662,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledCreditNote using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8657,8 +8676,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8666,7 +8685,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledCreditNote
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
@@ -8682,7 +8701,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledCreditNote
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8694,7 +8713,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8702,7 +8721,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledCreditNote
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8713,7 +8732,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8721,7 +8740,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledCreditNote
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8735,8 +8754,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledCreditNote (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8744,7 +8763,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
@@ -8760,7 +8779,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledCreditNote using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8772,7 +8791,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledCreditNote (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8780,7 +8799,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledCreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8791,7 +8810,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -8802,7 +8821,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledCreditNote using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8816,15 +8835,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, SelfBilledCreditNoteType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for SelfBilledInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8836,7 +8855,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledInvoice using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
@@ -8852,7 +8871,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledInvoice using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8864,7 +8883,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledInvoice (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8872,7 +8891,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8883,7 +8902,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -8894,7 +8913,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -8908,8 +8927,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, SelfBilledInvoiceType.class, aCustomEventHandler);
   }
@@ -8917,7 +8936,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
@@ -8933,7 +8952,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8945,7 +8964,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -8953,7 +8972,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8964,7 +8983,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -8972,7 +8991,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -8986,8 +9005,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -8995,7 +9014,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledInvoice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
@@ -9011,7 +9030,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledInvoice using
    * the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9023,7 +9042,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9031,7 +9050,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledInvoice using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9042,7 +9061,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9050,7 +9069,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a SelfBilledInvoice using
    * a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9064,8 +9083,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readSelfBilledInvoice (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9073,7 +9092,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
@@ -9089,7 +9108,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledInvoice using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9101,7 +9120,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return readSelfBilledInvoice (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9109,7 +9128,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9120,7 +9139,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -9131,7 +9150,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a SelfBilledInvoice using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9145,15 +9164,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, SelfBilledInvoiceType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Statement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9165,7 +9184,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated StatementType or <code>null</code> in case of a
@@ -9181,7 +9200,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9192,7 +9211,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static StatementType readStatement (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static StatementType readStatement (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readStatement (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9200,7 +9219,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Statement using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9211,7 +9230,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, StatementType.class, aCustomEventHandler);
   }
@@ -9219,7 +9238,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Statement using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9233,8 +9252,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, StatementType.class, aCustomEventHandler);
   }
@@ -9242,7 +9261,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated StatementType or <code>null</code> in case of a
@@ -9258,7 +9277,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9269,7 +9288,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static StatementType readStatement (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static StatementType readStatement (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readStatement (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9277,7 +9296,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Statement using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9288,7 +9307,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readStatement (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9296,7 +9315,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Statement using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9310,8 +9329,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readStatement (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9319,7 +9338,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Statement using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated StatementType or <code>null</code> in case of a
@@ -9335,7 +9354,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Statement using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9347,7 +9366,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return readStatement (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9355,7 +9374,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Statement using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9366,7 +9385,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readStatement (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9374,7 +9393,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Statement using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9388,8 +9407,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readStatement (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9397,7 +9416,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated StatementType or <code>null</code> in case of a
@@ -9413,7 +9432,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Statement using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9424,7 +9443,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static StatementType readStatement (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static StatementType readStatement (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readStatement (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9432,7 +9451,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Statement using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9443,7 +9462,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, StatementType.class, aCustomEventHandler);
   }
@@ -9451,7 +9470,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Statement using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9465,15 +9484,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, StatementType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for TransportationStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9485,7 +9504,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated TransportationStatusType or <code>null</code> in case
@@ -9501,7 +9520,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9513,7 +9532,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readTransportationStatus (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9521,7 +9540,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a TransportationStatus using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9532,7 +9551,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode,
                                             (ClassLoader) null,
@@ -9543,7 +9562,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a TransportationStatus using a
    * custom validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9557,8 +9576,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, TransportationStatusType.class, aCustomEventHandler);
   }
@@ -9566,7 +9585,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated TransportationStatusType or <code>null</code> in case
@@ -9582,7 +9601,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9594,7 +9613,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9602,7 +9621,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a TransportationStatus using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9613,7 +9632,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9621,7 +9640,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a TransportationStatus using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9635,8 +9654,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9644,7 +9663,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a TransportationStatus
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated TransportationStatusType or <code>null</code> in case
@@ -9660,7 +9679,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a TransportationStatus
    * using the global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9672,7 +9691,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9680,7 +9699,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a TransportationStatus
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9691,7 +9710,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9699,7 +9718,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a TransportationStatus
    * using a custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9713,8 +9732,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readTransportationStatus (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9722,7 +9741,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated TransportationStatusType or <code>null</code> in case
@@ -9738,7 +9757,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a TransportationStatus using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9750,7 +9769,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
-                                                                   @Nullable ClassLoader aClassLoader)
+                                                                   @Nullable final ClassLoader aClassLoader)
   {
     return readTransportationStatus (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9758,7 +9777,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a TransportationStatus using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9769,7 +9788,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource,
                                             (ClassLoader) null,
@@ -9780,7 +9799,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a TransportationStatus using a
    * custom validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9794,15 +9813,15 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
-                                                                   @Nullable ClassLoader aClassLoader,
-                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                   @Nullable final ClassLoader aClassLoader,
+                                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, TransportationStatusType.class, aCustomEventHandler);
   }
 
   /**
    * Create a reader builder for Waybill.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9814,7 +9833,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Waybill using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
@@ -9830,7 +9849,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Waybill using the global
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9841,7 +9860,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static WaybillType readWaybill (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
+  public static WaybillType readWaybill (@Nonnull final Node aNode, @Nullable final ClassLoader aClassLoader)
   {
     return readWaybill (aNode, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9849,7 +9868,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Waybill using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9860,7 +9879,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, (ClassLoader) null, WaybillType.class, aCustomEventHandler);
   }
@@ -9868,7 +9887,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed DOM {@link Node} as a Waybill using a custom
    * validation event handler.
-   * 
+   *
    * @param aNode
    *          the DOM node. May not be <code>null</code>.
    * @param aClassLoader
@@ -9882,8 +9901,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aNode, aClassLoader, WaybillType.class, aCustomEventHandler);
   }
@@ -9891,7 +9910,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Waybill using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
@@ -9907,7 +9926,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Waybill using the global validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9918,7 +9937,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static WaybillType readWaybill (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
+  public static WaybillType readWaybill (@Nonnull final File aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -9926,7 +9945,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Waybill using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9937,7 +9956,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -9945,7 +9964,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link File} as a Waybill using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source file to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9959,8 +9978,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -9968,7 +9987,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Waybill using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
@@ -9984,7 +10003,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Waybill using the
    * global validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -9995,7 +10014,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static WaybillType readWaybill (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
+  public static WaybillType readWaybill (@Nonnull final IReadableResource aSource,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aClassLoader);
   }
@@ -10003,7 +10023,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Waybill using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10014,7 +10034,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aCustomEventHandler);
   }
@@ -10022,7 +10042,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link IReadableResource} as a Waybill using a custom
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the resource to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -10036,8 +10056,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return readWaybill (TransformSourceFactory.create (aSource), aClassLoader, aCustomEventHandler);
   }
@@ -10045,7 +10065,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Waybill using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
@@ -10061,7 +10081,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Waybill using the global
    * validation event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -10072,7 +10092,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static WaybillType readWaybill (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
+  public static WaybillType readWaybill (@Nonnull final Source aSource, @Nullable final ClassLoader aClassLoader)
   {
     return readWaybill (aSource, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -10080,7 +10100,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Waybill using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10091,7 +10111,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, (ClassLoader) null, WaybillType.class, aCustomEventHandler);
   }
@@ -10099,7 +10119,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   /**
    * Interpret the passed {@link Source} as a Waybill using a custom validation
    * event handler.
-   * 
+   *
    * @param aSource
    *          the source to read from. May not be <code>null</code>.
    * @param aClassLoader
@@ -10113,8 +10133,8 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, WaybillType.class, aCustomEventHandler);
   }

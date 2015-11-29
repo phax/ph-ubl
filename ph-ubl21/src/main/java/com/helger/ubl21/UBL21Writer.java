@@ -83,9 +83,10 @@ import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 
 /**
  * Write all UBL 2.1 document types.
- * 
+ *
  * @author Philip Helger
  */
+@SuppressWarnings ("deprecation")
 @NotThreadSafe
 public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 {
@@ -97,7 +98,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -109,7 +110,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -125,7 +126,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -137,7 +138,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeApplicationResponse (aApplicationResponse, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -145,7 +146,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -156,7 +157,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aApplicationResponse,
                                              (ClassLoader) null,
@@ -167,7 +168,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -181,8 +182,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aApplicationResponse,
                                              aClassLoader,
@@ -193,7 +194,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -212,7 +213,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -226,7 +227,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeApplicationResponse (aApplicationResponse, aClassLoader, new StreamResult (aResult));
@@ -235,7 +236,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -257,7 +258,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -273,7 +274,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -286,7 +287,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -305,7 +306,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -319,7 +320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeApplicationResponse (aApplicationResponse, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -328,7 +329,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -354,7 +355,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ApplicationResponseType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aApplicationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -370,7 +371,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -383,7 +384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for AttachedDocument.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -395,7 +396,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -411,7 +412,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -423,7 +424,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader)
+                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeAttachedDocument (aAttachedDocument, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -431,7 +432,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -442,7 +443,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aAttachedDocument,
                                              (ClassLoader) null,
@@ -453,7 +454,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -467,8 +468,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ClassLoader aClassLoader,
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aAttachedDocument,
                                              aClassLoader,
@@ -479,7 +480,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -498,7 +499,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -512,7 +513,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final File aResult)
   {
     return writeAttachedDocument (aAttachedDocument, aClassLoader, new StreamResult (aResult));
@@ -521,7 +522,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -543,7 +544,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -559,7 +560,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final File aResult)
   {
@@ -569,7 +570,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -588,7 +589,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -602,7 +603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final Result aResult)
   {
     return writeAttachedDocument (aAttachedDocument, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -611,7 +612,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -637,7 +638,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AttachedDocumentType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aAttachedDocument
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -653,7 +654,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final Result aResult)
   {
@@ -666,7 +667,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for AwardedNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -678,7 +679,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -694,7 +695,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -706,7 +707,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeAwardedNotification (aAwardedNotification, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -714,7 +715,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -725,7 +726,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aAwardedNotification,
                                              (ClassLoader) null,
@@ -736,7 +737,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -750,8 +751,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aAwardedNotification,
                                              aClassLoader,
@@ -762,7 +763,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -781,7 +782,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -795,7 +796,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeAwardedNotification (aAwardedNotification, aClassLoader, new StreamResult (aResult));
@@ -804,7 +805,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -826,7 +827,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -842,7 +843,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -855,7 +856,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -874,7 +875,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -888,7 +889,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeAwardedNotification (aAwardedNotification, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -897,7 +898,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -923,7 +924,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link AwardedNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aAwardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -939,7 +940,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -952,7 +953,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for BillOfLading.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -964,7 +965,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -980,7 +981,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -992,7 +993,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader)
+                                            @Nullable final ClassLoader aClassLoader)
   {
     return writeBillOfLading (aBillOfLading, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1000,7 +1001,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1011,7 +1012,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ValidationEventHandler aCustomEventHandler)
+                                            @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aBillOfLading,
                                              (ClassLoader) null,
@@ -1022,7 +1023,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1036,8 +1037,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader,
-                                            @Nullable ValidationEventHandler aCustomEventHandler)
+                                            @Nullable final ClassLoader aClassLoader,
+                                            @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aBillOfLading,
                                              aClassLoader,
@@ -1048,7 +1049,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1066,7 +1067,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1080,7 +1081,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader,
+                                            @Nullable final ClassLoader aClassLoader,
                                             @Nonnull final File aResult)
   {
     return writeBillOfLading (aBillOfLading, aClassLoader, new StreamResult (aResult));
@@ -1089,7 +1090,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1111,7 +1112,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1127,7 +1128,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader,
+                                            @Nullable final ClassLoader aClassLoader,
                                             @Nullable final ValidationEventHandler aCustomEventHandler,
                                             @Nonnull final File aResult)
   {
@@ -1137,7 +1138,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1156,7 +1157,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1170,7 +1171,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader,
+                                            @Nullable final ClassLoader aClassLoader,
                                             @Nonnull final Result aResult)
   {
     return writeBillOfLading (aBillOfLading, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -1179,7 +1180,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1205,7 +1206,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link BillOfLadingType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aBillOfLading
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1221,7 +1222,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
-                                            @Nullable ClassLoader aClassLoader,
+                                            @Nullable final ClassLoader aClassLoader,
                                             @Nullable final ValidationEventHandler aCustomEventHandler,
                                             @Nonnull final Result aResult)
   {
@@ -1234,7 +1235,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CallForTenders.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1246,7 +1247,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -1262,7 +1263,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1274,7 +1275,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeCallForTenders (aCallForTenders, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1282,7 +1283,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1293,7 +1294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCallForTenders,
                                              (ClassLoader) null,
@@ -1304,7 +1305,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1318,8 +1319,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ClassLoader aClassLoader,
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCallForTenders,
                                              aClassLoader,
@@ -1330,7 +1331,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1349,7 +1350,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1363,7 +1364,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final File aResult)
   {
     return writeCallForTenders (aCallForTenders, aClassLoader, new StreamResult (aResult));
@@ -1372,7 +1373,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1394,7 +1395,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1410,7 +1411,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final File aResult)
   {
@@ -1420,7 +1421,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1439,7 +1440,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1453,7 +1454,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final Result aResult)
   {
     return writeCallForTenders (aCallForTenders, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -1462,7 +1463,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1488,7 +1489,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CallForTendersType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCallForTenders
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1504,7 +1505,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final Result aResult)
   {
@@ -1517,7 +1518,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Catalogue.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1529,7 +1530,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -1545,7 +1546,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1556,7 +1557,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue, @Nullable ClassLoader aClassLoader)
+  public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return writeCatalogue (aCatalogue, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1564,7 +1566,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1575,7 +1577,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogue,
                                              (ClassLoader) null,
@@ -1586,7 +1588,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1600,8 +1602,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogue,
                                              aClassLoader,
@@ -1612,7 +1614,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1630,7 +1632,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1644,7 +1646,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final File aResult)
   {
     return writeCatalogue (aCatalogue, aClassLoader, new StreamResult (aResult));
@@ -1653,7 +1655,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1675,7 +1677,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1691,7 +1693,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final File aResult)
   {
@@ -1701,7 +1703,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1719,7 +1721,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1733,7 +1735,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final Result aResult)
   {
     return writeCatalogue (aCatalogue, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -1742,7 +1744,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1768,7 +1770,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogue
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1784,7 +1786,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final Result aResult)
   {
@@ -1797,7 +1799,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CatalogueDeletion.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -1809,7 +1811,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -1825,7 +1827,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1837,7 +1839,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return writeCatalogueDeletion (aCatalogueDeletion, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -1845,7 +1847,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1856,7 +1858,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueDeletion,
                                              (ClassLoader) null,
@@ -1867,7 +1869,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1881,8 +1883,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueDeletion,
                                              aClassLoader,
@@ -1893,7 +1895,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -1912,7 +1914,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1926,7 +1928,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final File aResult)
   {
     return writeCatalogueDeletion (aCatalogueDeletion, aClassLoader, new StreamResult (aResult));
@@ -1935,7 +1937,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -1957,7 +1959,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -1973,7 +1975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final File aResult)
   {
@@ -1983,7 +1985,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2002,7 +2004,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2016,7 +2018,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final Result aResult)
   {
     return writeCatalogueDeletion (aCatalogueDeletion, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -2025,7 +2027,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2051,7 +2053,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueDeletionType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueDeletion
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2067,7 +2069,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final Result aResult)
   {
@@ -2080,7 +2082,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CatalogueItemSpecificationUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2092,7 +2094,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -2109,7 +2111,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2121,7 +2123,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader)
+                                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
                                                   aClassLoader,
@@ -2131,7 +2133,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2142,7 +2144,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueItemSpecificationUpdate,
                                              (ClassLoader) null,
@@ -2153,7 +2155,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2167,8 +2169,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader,
-                                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                @Nullable final ClassLoader aClassLoader,
+                                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueItemSpecificationUpdate,
                                              aClassLoader,
@@ -2179,7 +2181,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2198,7 +2200,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2212,7 +2214,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader,
+                                                                @Nullable final ClassLoader aClassLoader,
                                                                 @Nonnull final File aResult)
   {
     return writeCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
@@ -2223,7 +2225,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2247,7 +2249,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2263,7 +2265,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader,
+                                                                @Nullable final ClassLoader aClassLoader,
                                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                                 @Nonnull final File aResult)
   {
@@ -2276,7 +2278,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2297,7 +2299,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2311,7 +2313,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader,
+                                                                @Nullable final ClassLoader aClassLoader,
                                                                 @Nonnull final Result aResult)
   {
     return writeCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
@@ -2323,7 +2325,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2349,7 +2351,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueItemSpecificationUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2365,7 +2367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
-                                                                @Nullable ClassLoader aClassLoader,
+                                                                @Nullable final ClassLoader aClassLoader,
                                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                                 @Nonnull final Result aResult)
   {
@@ -2378,7 +2380,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CataloguePricingUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2390,7 +2392,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -2406,7 +2408,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2418,7 +2420,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writeCataloguePricingUpdate (aCataloguePricingUpdate, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2426,7 +2428,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2437,7 +2439,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCataloguePricingUpdate,
                                              (ClassLoader) null,
@@ -2448,7 +2450,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2462,8 +2464,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCataloguePricingUpdate,
                                              aClassLoader,
@@ -2474,7 +2476,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2493,7 +2495,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2507,7 +2509,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writeCataloguePricingUpdate (aCataloguePricingUpdate, aClassLoader, new StreamResult (aResult));
@@ -2516,7 +2518,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2538,7 +2540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2554,7 +2556,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -2567,7 +2569,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2586,7 +2588,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2600,7 +2602,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writeCataloguePricingUpdate (aCataloguePricingUpdate,
@@ -2612,7 +2614,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2638,7 +2640,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CataloguePricingUpdateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCataloguePricingUpdate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2654,7 +2656,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -2667,7 +2669,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CatalogueRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2679,7 +2681,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -2695,7 +2697,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2707,7 +2709,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader)
+                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeCatalogueRequest (aCatalogueRequest, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2715,7 +2717,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2726,7 +2728,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueRequest,
                                              (ClassLoader) null,
@@ -2737,7 +2739,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2751,8 +2753,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ClassLoader aClassLoader,
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCatalogueRequest,
                                              aClassLoader,
@@ -2763,7 +2765,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2782,7 +2784,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2796,7 +2798,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final File aResult)
   {
     return writeCatalogueRequest (aCatalogueRequest, aClassLoader, new StreamResult (aResult));
@@ -2805,7 +2807,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2827,7 +2829,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2843,7 +2845,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final File aResult)
   {
@@ -2853,7 +2855,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -2872,7 +2874,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2886,7 +2888,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final Result aResult)
   {
     return writeCatalogueRequest (aCatalogueRequest, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -2895,7 +2897,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -2921,7 +2923,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CatalogueRequestType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aCatalogueRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2937,7 +2939,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final Result aResult)
   {
@@ -2950,7 +2952,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CertificateOfOrigin.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -2962,7 +2964,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -2978,7 +2980,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -2990,7 +2992,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeCertificateOfOrigin (aCertificateOfOrigin, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -2998,7 +3000,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3009,7 +3011,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCertificateOfOrigin,
                                              (ClassLoader) null,
@@ -3020,7 +3022,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3034,8 +3036,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCertificateOfOrigin,
                                              aClassLoader,
@@ -3046,7 +3048,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3065,7 +3067,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3079,7 +3081,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeCertificateOfOrigin (aCertificateOfOrigin, aClassLoader, new StreamResult (aResult));
@@ -3088,7 +3090,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3110,7 +3112,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3126,7 +3128,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -3139,7 +3141,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3158,7 +3160,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3172,7 +3174,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeCertificateOfOrigin (aCertificateOfOrigin, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -3181,7 +3183,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3207,7 +3209,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CertificateOfOriginType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aCertificateOfOrigin
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3223,7 +3225,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -3236,7 +3238,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ContractAwardNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3248,7 +3250,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -3264,7 +3266,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3276,7 +3278,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeContractAwardNotice (aContractAwardNotice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3284,7 +3286,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3295,7 +3297,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aContractAwardNotice,
                                              (ClassLoader) null,
@@ -3306,7 +3308,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3320,8 +3322,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aContractAwardNotice,
                                              aClassLoader,
@@ -3332,7 +3334,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3351,7 +3353,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3365,7 +3367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeContractAwardNotice (aContractAwardNotice, aClassLoader, new StreamResult (aResult));
@@ -3374,7 +3376,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3396,7 +3398,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3412,7 +3414,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -3425,7 +3427,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3444,7 +3446,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3458,7 +3460,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeContractAwardNotice (aContractAwardNotice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -3467,7 +3469,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3493,7 +3495,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractAwardNoticeType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aContractAwardNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3509,7 +3511,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -3522,7 +3524,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ContractNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3534,7 +3536,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -3550,7 +3552,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3562,7 +3564,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeContractNotice (aContractNotice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3570,7 +3572,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3581,7 +3583,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aContractNotice,
                                              (ClassLoader) null,
@@ -3592,7 +3594,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3606,8 +3608,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ClassLoader aClassLoader,
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aContractNotice,
                                              aClassLoader,
@@ -3618,7 +3620,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3637,7 +3639,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3651,7 +3653,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final File aResult)
   {
     return writeContractNotice (aContractNotice, aClassLoader, new StreamResult (aResult));
@@ -3660,7 +3662,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3682,7 +3684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3698,7 +3700,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final File aResult)
   {
@@ -3708,7 +3710,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3727,7 +3729,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3741,7 +3743,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final Result aResult)
   {
     return writeContractNotice (aContractNotice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -3750,7 +3752,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3776,7 +3778,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ContractNoticeType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aContractNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3792,7 +3794,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final Result aResult)
   {
@@ -3805,7 +3807,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for CreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -3817,7 +3819,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -3833,7 +3835,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3844,7 +3846,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote, @Nullable ClassLoader aClassLoader)
+  public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
+                                          @Nullable final ClassLoader aClassLoader)
   {
     return writeCreditNote (aCreditNote, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -3852,7 +3855,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3863,7 +3866,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ValidationEventHandler aCustomEventHandler)
+                                          @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCreditNote,
                                              (ClassLoader) null,
@@ -3874,7 +3877,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3888,8 +3891,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ClassLoader aClassLoader,
-                                          @Nullable ValidationEventHandler aCustomEventHandler)
+                                          @Nullable final ClassLoader aClassLoader,
+                                          @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aCreditNote,
                                              aClassLoader,
@@ -3900,7 +3903,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -3918,7 +3921,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3932,7 +3935,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ClassLoader aClassLoader,
+                                          @Nullable final ClassLoader aClassLoader,
                                           @Nonnull final File aResult)
   {
     return writeCreditNote (aCreditNote, aClassLoader, new StreamResult (aResult));
@@ -3941,7 +3944,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -3963,7 +3966,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -3979,7 +3982,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ClassLoader aClassLoader,
+                                          @Nullable final ClassLoader aClassLoader,
                                           @Nullable final ValidationEventHandler aCustomEventHandler,
                                           @Nonnull final File aResult)
   {
@@ -3989,7 +3992,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4007,7 +4010,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4021,7 +4024,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ClassLoader aClassLoader,
+                                          @Nullable final ClassLoader aClassLoader,
                                           @Nonnull final Result aResult)
   {
     return writeCreditNote (aCreditNote, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -4030,7 +4033,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4056,7 +4059,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link CreditNoteType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4072,7 +4075,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
-                                          @Nullable ClassLoader aClassLoader,
+                                          @Nullable final ClassLoader aClassLoader,
                                           @Nullable final ValidationEventHandler aCustomEventHandler,
                                           @Nonnull final Result aResult)
   {
@@ -4085,7 +4088,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for DebitNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4097,7 +4100,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -4113,7 +4116,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4124,7 +4127,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nullable ClassLoader aClassLoader)
+  public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return writeDebitNote (aDebitNote, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4132,7 +4136,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4143,7 +4147,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDebitNote,
                                              (ClassLoader) null,
@@ -4154,7 +4158,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4168,8 +4172,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDebitNote,
                                              aClassLoader,
@@ -4180,7 +4184,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4198,7 +4202,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4212,7 +4216,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final File aResult)
   {
     return writeDebitNote (aDebitNote, aClassLoader, new StreamResult (aResult));
@@ -4221,7 +4225,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4243,7 +4247,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4259,7 +4263,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final File aResult)
   {
@@ -4269,7 +4273,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4287,7 +4291,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4301,7 +4305,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final Result aResult)
   {
     return writeDebitNote (aDebitNote, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -4310,7 +4314,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4336,7 +4340,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DebitNoteType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDebitNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4352,7 +4356,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final Result aResult)
   {
@@ -4365,7 +4369,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for DespatchAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4377,7 +4381,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -4393,7 +4397,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4405,7 +4409,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeDespatchAdvice (aDespatchAdvice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4413,7 +4417,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4424,7 +4428,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDespatchAdvice,
                                              (ClassLoader) null,
@@ -4435,7 +4439,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4449,8 +4453,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ClassLoader aClassLoader,
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDespatchAdvice,
                                              aClassLoader,
@@ -4461,7 +4465,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4480,7 +4484,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4494,7 +4498,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final File aResult)
   {
     return writeDespatchAdvice (aDespatchAdvice, aClassLoader, new StreamResult (aResult));
@@ -4503,7 +4507,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4525,7 +4529,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4541,7 +4545,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final File aResult)
   {
@@ -4551,7 +4555,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4570,7 +4574,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4584,7 +4588,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final Result aResult)
   {
     return writeDespatchAdvice (aDespatchAdvice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -4593,7 +4597,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4619,7 +4623,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DespatchAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDespatchAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4635,7 +4639,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final Result aResult)
   {
@@ -4648,7 +4652,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for DocumentStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4660,7 +4664,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -4676,7 +4680,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4688,7 +4692,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeDocumentStatus (aDocumentStatus, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4696,7 +4700,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4707,7 +4711,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDocumentStatus,
                                              (ClassLoader) null,
@@ -4718,7 +4722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4732,8 +4736,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ClassLoader aClassLoader,
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDocumentStatus,
                                              aClassLoader,
@@ -4744,7 +4748,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4763,7 +4767,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4777,7 +4781,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final File aResult)
   {
     return writeDocumentStatus (aDocumentStatus, aClassLoader, new StreamResult (aResult));
@@ -4786,7 +4790,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4808,7 +4812,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4824,7 +4828,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final File aResult)
   {
@@ -4834,7 +4838,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -4853,7 +4857,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4867,7 +4871,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final Result aResult)
   {
     return writeDocumentStatus (aDocumentStatus, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -4876,7 +4880,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4902,7 +4906,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4918,7 +4922,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final Result aResult)
   {
@@ -4931,7 +4935,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for DocumentStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -4943,7 +4947,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -4959,7 +4963,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -4971,7 +4975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return writeDocumentStatusRequest (aDocumentStatusRequest, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -4979,7 +4983,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -4990,7 +4994,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDocumentStatusRequest,
                                              (ClassLoader) null,
@@ -5001,7 +5005,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5015,8 +5019,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aDocumentStatusRequest,
                                              aClassLoader,
@@ -5027,7 +5031,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5046,7 +5050,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5060,7 +5064,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final File aResult)
   {
     return writeDocumentStatusRequest (aDocumentStatusRequest, aClassLoader, new StreamResult (aResult));
@@ -5069,7 +5073,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5091,7 +5095,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5107,7 +5111,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final File aResult)
   {
@@ -5120,7 +5124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5139,7 +5143,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5153,7 +5157,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Result aResult)
   {
     return writeDocumentStatusRequest (aDocumentStatusRequest,
@@ -5165,7 +5169,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5191,7 +5195,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link DocumentStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aDocumentStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5207,7 +5211,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final Result aResult)
   {
@@ -5220,7 +5224,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ExceptionCriteria.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5232,7 +5236,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -5248,7 +5252,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5260,7 +5264,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return writeExceptionCriteria (aExceptionCriteria, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5268,7 +5272,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5279,7 +5283,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aExceptionCriteria,
                                              (ClassLoader) null,
@@ -5290,7 +5294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5304,8 +5308,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aExceptionCriteria,
                                              aClassLoader,
@@ -5316,7 +5320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5335,7 +5339,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5349,7 +5353,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final File aResult)
   {
     return writeExceptionCriteria (aExceptionCriteria, aClassLoader, new StreamResult (aResult));
@@ -5358,7 +5362,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5380,7 +5384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5396,7 +5400,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final File aResult)
   {
@@ -5406,7 +5410,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5425,7 +5429,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5439,7 +5443,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final Result aResult)
   {
     return writeExceptionCriteria (aExceptionCriteria, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -5448,7 +5452,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5474,7 +5478,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionCriteriaType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionCriteria
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5490,7 +5494,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final Result aResult)
   {
@@ -5503,7 +5507,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ExceptionNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5515,7 +5519,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -5531,7 +5535,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5543,7 +5547,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return writeExceptionNotification (aExceptionNotification, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5551,7 +5555,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5562,7 +5566,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aExceptionNotification,
                                              (ClassLoader) null,
@@ -5573,7 +5577,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5587,8 +5591,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aExceptionNotification,
                                              aClassLoader,
@@ -5599,7 +5603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5618,7 +5622,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5632,7 +5636,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final File aResult)
   {
     return writeExceptionNotification (aExceptionNotification, aClassLoader, new StreamResult (aResult));
@@ -5641,7 +5645,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5663,7 +5667,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5679,7 +5683,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final File aResult)
   {
@@ -5692,7 +5696,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5711,7 +5715,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5725,7 +5729,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Result aResult)
   {
     return writeExceptionNotification (aExceptionNotification,
@@ -5737,7 +5741,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5763,7 +5767,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ExceptionNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aExceptionNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5779,7 +5783,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final Result aResult)
   {
@@ -5792,7 +5796,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Forecast.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -5804,7 +5808,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -5820,7 +5824,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5831,7 +5835,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeForecast (@Nonnull final ForecastType aForecast, @Nullable ClassLoader aClassLoader)
+  public static Document writeForecast (@Nonnull final ForecastType aForecast, @Nullable final ClassLoader aClassLoader)
   {
     return writeForecast (aForecast, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -5839,7 +5843,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5850,7 +5854,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForecast,
                                              (ClassLoader) null,
@@ -5861,7 +5865,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5875,8 +5879,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ClassLoader aClassLoader,
-                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                        @Nullable final ClassLoader aClassLoader,
+                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForecast, aClassLoader, EUBL21DocumentType.FORECAST, aCustomEventHandler);
   }
@@ -5884,7 +5888,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5902,7 +5906,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5916,7 +5920,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nonnull final File aResult)
   {
     return writeForecast (aForecast, aClassLoader, new StreamResult (aResult));
@@ -5925,7 +5929,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -5947,7 +5951,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -5963,7 +5967,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                         @Nonnull final File aResult)
   {
@@ -5973,7 +5977,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -5991,7 +5995,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6005,7 +6009,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nonnull final Result aResult)
   {
     return writeForecast (aForecast, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -6014,7 +6018,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6040,7 +6044,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecast
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6056,7 +6060,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                         @Nonnull final Result aResult)
   {
@@ -6069,7 +6073,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ForecastRevision.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6081,7 +6085,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -6097,7 +6101,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6109,7 +6113,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader)
+                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeForecastRevision (aForecastRevision, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6117,7 +6121,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6128,7 +6132,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForecastRevision,
                                              (ClassLoader) null,
@@ -6139,7 +6143,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6153,8 +6157,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ClassLoader aClassLoader,
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForecastRevision,
                                              aClassLoader,
@@ -6165,7 +6169,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6184,7 +6188,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6198,7 +6202,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final File aResult)
   {
     return writeForecastRevision (aForecastRevision, aClassLoader, new StreamResult (aResult));
@@ -6207,7 +6211,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6229,7 +6233,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6245,7 +6249,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final File aResult)
   {
@@ -6255,7 +6259,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6274,7 +6278,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6288,7 +6292,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final Result aResult)
   {
     return writeForecastRevision (aForecastRevision, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -6297,7 +6301,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6323,7 +6327,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForecastRevisionType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForecastRevision
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6339,7 +6343,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final Result aResult)
   {
@@ -6352,7 +6356,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ForwardingInstructions.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6364,7 +6368,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -6380,7 +6384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6392,7 +6396,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writeForwardingInstructions (aForwardingInstructions, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6400,7 +6404,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6411,7 +6415,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForwardingInstructions,
                                              (ClassLoader) null,
@@ -6422,7 +6426,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6436,8 +6440,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aForwardingInstructions,
                                              aClassLoader,
@@ -6448,7 +6452,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6467,7 +6471,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6481,7 +6485,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writeForwardingInstructions (aForwardingInstructions, aClassLoader, new StreamResult (aResult));
@@ -6490,7 +6494,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6512,7 +6516,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6528,7 +6532,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -6541,7 +6545,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6560,7 +6564,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6574,7 +6578,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writeForwardingInstructions (aForwardingInstructions,
@@ -6586,7 +6590,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6612,7 +6616,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ForwardingInstructionsType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aForwardingInstructions
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6628,7 +6632,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -6641,7 +6645,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for FreightInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6653,7 +6657,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -6669,7 +6673,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6681,7 +6685,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader)
+                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeFreightInvoice (aFreightInvoice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6689,7 +6693,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6700,7 +6704,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aFreightInvoice,
                                              (ClassLoader) null,
@@ -6711,7 +6715,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6725,8 +6729,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader,
-                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                              @Nullable final ClassLoader aClassLoader,
+                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aFreightInvoice,
                                              aClassLoader,
@@ -6737,7 +6741,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6756,7 +6760,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6770,7 +6774,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final File aResult)
   {
     return writeFreightInvoice (aFreightInvoice, aClassLoader, new StreamResult (aResult));
@@ -6779,7 +6783,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6801,7 +6805,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6817,7 +6821,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final File aResult)
   {
@@ -6827,7 +6831,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -6846,7 +6850,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6860,7 +6864,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nonnull final Result aResult)
   {
     return writeFreightInvoice (aFreightInvoice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -6869,7 +6873,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6895,7 +6899,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FreightInvoiceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFreightInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6911,7 +6915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
-                                              @Nullable ClassLoader aClassLoader,
+                                              @Nullable final ClassLoader aClassLoader,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                               @Nonnull final Result aResult)
   {
@@ -6924,7 +6928,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for FulfilmentCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -6936,7 +6940,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -6952,7 +6956,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -6964,7 +6968,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writeFulfilmentCancellation (aFulfilmentCancellation, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -6972,7 +6976,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -6983,7 +6987,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aFulfilmentCancellation,
                                              (ClassLoader) null,
@@ -6994,7 +6998,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7008,8 +7012,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aFulfilmentCancellation,
                                              aClassLoader,
@@ -7020,7 +7024,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7039,7 +7043,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7053,7 +7057,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writeFulfilmentCancellation (aFulfilmentCancellation, aClassLoader, new StreamResult (aResult));
@@ -7062,7 +7066,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7084,7 +7088,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7100,7 +7104,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -7113,7 +7117,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7132,7 +7136,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7146,7 +7150,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writeFulfilmentCancellation (aFulfilmentCancellation,
@@ -7158,7 +7162,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7184,7 +7188,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link FulfilmentCancellationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aFulfilmentCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7200,7 +7204,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -7213,7 +7217,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for GoodsItemItinerary.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7225,7 +7229,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -7241,7 +7245,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7253,7 +7257,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader)
+                                                  @Nullable final ClassLoader aClassLoader)
   {
     return writeGoodsItemItinerary (aGoodsItemItinerary, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7261,7 +7265,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7272,7 +7276,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ValidationEventHandler aCustomEventHandler)
+                                                  @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aGoodsItemItinerary,
                                              (ClassLoader) null,
@@ -7283,7 +7287,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7297,8 +7301,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader,
-                                                  @Nullable ValidationEventHandler aCustomEventHandler)
+                                                  @Nullable final ClassLoader aClassLoader,
+                                                  @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aGoodsItemItinerary,
                                              aClassLoader,
@@ -7309,7 +7313,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7328,7 +7332,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7342,7 +7346,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader,
+                                                  @Nullable final ClassLoader aClassLoader,
                                                   @Nonnull final File aResult)
   {
     return writeGoodsItemItinerary (aGoodsItemItinerary, aClassLoader, new StreamResult (aResult));
@@ -7351,7 +7355,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7373,7 +7377,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7389,7 +7393,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader,
+                                                  @Nullable final ClassLoader aClassLoader,
                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
                                                   @Nonnull final File aResult)
   {
@@ -7399,7 +7403,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7418,7 +7422,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7432,7 +7436,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader,
+                                                  @Nullable final ClassLoader aClassLoader,
                                                   @Nonnull final Result aResult)
   {
     return writeGoodsItemItinerary (aGoodsItemItinerary, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -7441,7 +7445,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7467,7 +7471,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GoodsItemItineraryType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aGoodsItemItinerary
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7483,7 +7487,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
-                                                  @Nullable ClassLoader aClassLoader,
+                                                  @Nullable final ClassLoader aClassLoader,
                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
                                                   @Nonnull final Result aResult)
   {
@@ -7496,7 +7500,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for GuaranteeCertificate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7508,7 +7512,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -7524,7 +7528,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7536,7 +7540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return writeGuaranteeCertificate (aGuaranteeCertificate, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7544,7 +7548,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7555,7 +7559,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aGuaranteeCertificate,
                                              (ClassLoader) null,
@@ -7566,7 +7570,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7580,8 +7584,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ClassLoader aClassLoader,
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aGuaranteeCertificate,
                                              aClassLoader,
@@ -7592,7 +7596,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7611,7 +7615,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7625,7 +7629,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final File aResult)
   {
     return writeGuaranteeCertificate (aGuaranteeCertificate, aClassLoader, new StreamResult (aResult));
@@ -7634,7 +7638,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7656,7 +7660,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7672,7 +7676,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final File aResult)
   {
@@ -7685,7 +7689,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7704,7 +7708,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7718,7 +7722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final Result aResult)
   {
     return writeGuaranteeCertificate (aGuaranteeCertificate, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -7727,7 +7731,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7753,7 +7757,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link GuaranteeCertificateType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aGuaranteeCertificate
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7769,7 +7773,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final Result aResult)
   {
@@ -7782,7 +7786,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for InstructionForReturns.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -7794,7 +7798,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -7810,7 +7814,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7822,7 +7826,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return writeInstructionForReturns (aInstructionForReturns, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -7830,7 +7834,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7841,7 +7845,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInstructionForReturns,
                                              (ClassLoader) null,
@@ -7852,7 +7856,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7866,8 +7870,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInstructionForReturns,
                                              aClassLoader,
@@ -7878,7 +7882,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7897,7 +7901,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7911,7 +7915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final File aResult)
   {
     return writeInstructionForReturns (aInstructionForReturns, aClassLoader, new StreamResult (aResult));
@@ -7920,7 +7924,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -7942,7 +7946,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -7958,7 +7962,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final File aResult)
   {
@@ -7971,7 +7975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -7990,7 +7994,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8004,7 +8008,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Result aResult)
   {
     return writeInstructionForReturns (aInstructionForReturns,
@@ -8016,7 +8020,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8042,7 +8046,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InstructionForReturnsType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aInstructionForReturns
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8058,7 +8062,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final Result aResult)
   {
@@ -8071,7 +8075,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for InventoryReport.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8083,7 +8087,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -8099,7 +8103,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8111,7 +8115,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader)
+                                               @Nullable final ClassLoader aClassLoader)
   {
     return writeInventoryReport (aInventoryReport, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8119,7 +8123,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8130,7 +8134,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInventoryReport,
                                              (ClassLoader) null,
@@ -8141,7 +8145,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8155,8 +8159,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInventoryReport,
                                              aClassLoader,
@@ -8167,7 +8171,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8186,7 +8190,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8200,7 +8204,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nonnull final File aResult)
   {
     return writeInventoryReport (aInventoryReport, aClassLoader, new StreamResult (aResult));
@@ -8209,7 +8213,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8231,7 +8235,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8247,7 +8251,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
                                                @Nonnull final File aResult)
   {
@@ -8257,7 +8261,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8276,7 +8280,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8290,7 +8294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nonnull final Result aResult)
   {
     return writeInventoryReport (aInventoryReport, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -8299,7 +8303,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8325,7 +8329,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InventoryReportType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aInventoryReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8341,7 +8345,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
                                                @Nonnull final Result aResult)
   {
@@ -8354,7 +8358,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Invoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8366,7 +8370,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -8382,7 +8386,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8393,7 +8397,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeInvoice (@Nonnull final InvoiceType aInvoice, @Nullable ClassLoader aClassLoader)
+  public static Document writeInvoice (@Nonnull final InvoiceType aInvoice, @Nullable final ClassLoader aClassLoader)
   {
     return writeInvoice (aInvoice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8401,7 +8405,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8412,7 +8416,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInvoice,
                                              (ClassLoader) null,
@@ -8423,7 +8427,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8437,8 +8441,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ClassLoader aClassLoader,
-                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                       @Nullable final ClassLoader aClassLoader,
+                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aInvoice, aClassLoader, EUBL21DocumentType.INVOICE, aCustomEventHandler);
   }
@@ -8446,7 +8450,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8464,7 +8468,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8478,7 +8482,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final File aResult)
   {
     return writeInvoice (aInvoice, aClassLoader, new StreamResult (aResult));
@@ -8487,7 +8491,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8509,7 +8513,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8525,7 +8529,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                        @Nonnull final File aResult)
   {
@@ -8535,7 +8539,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8553,7 +8557,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8567,7 +8571,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final Result aResult)
   {
     return writeInvoice (aInvoice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -8576,7 +8580,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8602,7 +8606,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link InvoiceType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8618,7 +8622,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                        @Nonnull final Result aResult)
   {
@@ -8631,7 +8635,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ItemInformationRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8643,7 +8647,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -8659,7 +8663,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8671,7 +8675,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writeItemInformationRequest (aItemInformationRequest, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8679,7 +8683,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8690,7 +8694,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aItemInformationRequest,
                                              (ClassLoader) null,
@@ -8701,7 +8705,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8715,8 +8719,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aItemInformationRequest,
                                              aClassLoader,
@@ -8727,7 +8731,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8746,7 +8750,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8760,7 +8764,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writeItemInformationRequest (aItemInformationRequest, aClassLoader, new StreamResult (aResult));
@@ -8769,7 +8773,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8791,7 +8795,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8807,7 +8811,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -8820,7 +8824,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -8839,7 +8843,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8853,7 +8857,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writeItemInformationRequest (aItemInformationRequest,
@@ -8865,7 +8869,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8891,7 +8895,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ItemInformationRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aItemInformationRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8907,7 +8911,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -8920,7 +8924,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Order.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -8932,7 +8936,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -8948,7 +8952,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -8959,7 +8963,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
+  public static Document writeOrder (@Nonnull final OrderType aOrder, @Nullable final ClassLoader aClassLoader)
   {
     return writeOrder (aOrder, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -8967,7 +8971,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -8978,7 +8982,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrder, (ClassLoader) null, EUBL21DocumentType.ORDER, aCustomEventHandler);
   }
@@ -8986,7 +8990,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9000,8 +9004,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ClassLoader aClassLoader,
-                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                     @Nullable final ClassLoader aClassLoader,
+                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrder, aClassLoader, EUBL21DocumentType.ORDER, aCustomEventHandler);
   }
@@ -9009,7 +9013,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9027,7 +9031,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9041,7 +9045,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ClassLoader aClassLoader,
+                                     @Nullable final ClassLoader aClassLoader,
                                      @Nonnull final File aResult)
   {
     return writeOrder (aOrder, aClassLoader, new StreamResult (aResult));
@@ -9050,7 +9054,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9072,7 +9076,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9088,7 +9092,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ClassLoader aClassLoader,
+                                     @Nullable final ClassLoader aClassLoader,
                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                      @Nonnull final File aResult)
   {
@@ -9098,7 +9102,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9116,7 +9120,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9130,7 +9134,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ClassLoader aClassLoader,
+                                     @Nullable final ClassLoader aClassLoader,
                                      @Nonnull final Result aResult)
   {
     return writeOrder (aOrder, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -9139,7 +9143,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9165,7 +9169,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9181,7 +9185,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
-                                     @Nullable ClassLoader aClassLoader,
+                                     @Nullable final ClassLoader aClassLoader,
                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                      @Nonnull final Result aResult)
   {
@@ -9194,7 +9198,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for OrderCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9206,7 +9210,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -9222,7 +9226,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9234,7 +9238,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return writeOrderCancellation (aOrderCancellation, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9242,7 +9246,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9253,7 +9257,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderCancellation,
                                              (ClassLoader) null,
@@ -9264,7 +9268,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9278,8 +9282,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderCancellation,
                                              aClassLoader,
@@ -9290,7 +9294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9309,7 +9313,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9323,7 +9327,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final File aResult)
   {
     return writeOrderCancellation (aOrderCancellation, aClassLoader, new StreamResult (aResult));
@@ -9332,7 +9336,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9354,7 +9358,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9370,7 +9374,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final File aResult)
   {
@@ -9380,7 +9384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9399,7 +9403,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9413,7 +9417,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final Result aResult)
   {
     return writeOrderCancellation (aOrderCancellation, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -9422,7 +9426,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9448,7 +9452,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderCancellationType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderCancellation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9464,7 +9468,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final Result aResult)
   {
@@ -9477,7 +9481,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for OrderChange.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9489,7 +9493,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -9505,7 +9509,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9517,7 +9521,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader)
+                                           @Nullable final ClassLoader aClassLoader)
   {
     return writeOrderChange (aOrderChange, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9525,7 +9529,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9536,7 +9540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderChange,
                                              (ClassLoader) null,
@@ -9547,7 +9551,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9561,8 +9565,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderChange,
                                              aClassLoader,
@@ -9573,7 +9577,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9591,7 +9595,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9605,7 +9609,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final File aResult)
   {
     return writeOrderChange (aOrderChange, aClassLoader, new StreamResult (aResult));
@@ -9614,7 +9618,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9636,7 +9640,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9652,7 +9656,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final File aResult)
   {
@@ -9662,7 +9666,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9680,7 +9684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9694,7 +9698,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final Result aResult)
   {
     return writeOrderChange (aOrderChange, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -9703,7 +9707,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9729,7 +9733,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderChangeType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderChange
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9745,7 +9749,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
   {
@@ -9758,7 +9762,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for OrderResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -9770,7 +9774,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -9786,7 +9790,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9798,7 +9802,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return writeOrderResponse (aOrderResponse, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -9806,7 +9810,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9817,7 +9821,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderResponse,
                                              (ClassLoader) null,
@@ -9828,7 +9832,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9842,8 +9846,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderResponse,
                                              aClassLoader,
@@ -9854,7 +9858,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9873,7 +9877,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9887,7 +9891,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final File aResult)
   {
     return writeOrderResponse (aOrderResponse, aClassLoader, new StreamResult (aResult));
@@ -9896,7 +9900,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -9918,7 +9922,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9934,7 +9938,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final File aResult)
   {
@@ -9944,7 +9948,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -9963,7 +9967,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -9977,7 +9981,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final Result aResult)
   {
     return writeOrderResponse (aOrderResponse, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -9986,7 +9990,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10012,7 +10016,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10028,7 +10032,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final Result aResult)
   {
@@ -10041,7 +10045,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for OrderResponseSimple.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -10053,7 +10057,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -10069,7 +10073,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10081,7 +10085,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeOrderResponseSimple (aOrderResponseSimple, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -10089,7 +10093,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10100,7 +10104,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderResponseSimple,
                                              (ClassLoader) null,
@@ -10111,7 +10115,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10125,8 +10129,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aOrderResponseSimple,
                                              aClassLoader,
@@ -10137,7 +10141,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10156,7 +10160,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10170,7 +10174,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeOrderResponseSimple (aOrderResponseSimple, aClassLoader, new StreamResult (aResult));
@@ -10179,7 +10183,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10201,7 +10205,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10217,7 +10221,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -10230,7 +10234,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10249,7 +10253,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10263,7 +10267,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeOrderResponseSimple (aOrderResponseSimple, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -10272,7 +10276,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10298,7 +10302,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link OrderResponseSimpleType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aOrderResponseSimple
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10314,7 +10318,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -10327,7 +10331,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for PackingList.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -10339,7 +10343,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -10355,7 +10359,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10367,7 +10371,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader)
+                                           @Nullable final ClassLoader aClassLoader)
   {
     return writePackingList (aPackingList, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -10375,7 +10379,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10386,7 +10390,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aPackingList,
                                              (ClassLoader) null,
@@ -10397,7 +10401,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10411,8 +10415,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aPackingList,
                                              aClassLoader,
@@ -10423,7 +10427,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10441,7 +10445,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10455,7 +10459,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final File aResult)
   {
     return writePackingList (aPackingList, aClassLoader, new StreamResult (aResult));
@@ -10464,7 +10468,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10486,7 +10490,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10502,7 +10506,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final File aResult)
   {
@@ -10512,7 +10516,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10530,7 +10534,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10544,7 +10548,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final Result aResult)
   {
     return writePackingList (aPackingList, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -10553,7 +10557,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10579,7 +10583,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PackingListType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aPackingList
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10595,7 +10599,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
   {
@@ -10608,7 +10612,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for PriorInformationNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -10620,7 +10624,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -10636,7 +10640,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10648,7 +10652,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writePriorInformationNotice (aPriorInformationNotice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -10656,7 +10660,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10667,7 +10671,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aPriorInformationNotice,
                                              (ClassLoader) null,
@@ -10678,7 +10682,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10692,8 +10696,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aPriorInformationNotice,
                                              aClassLoader,
@@ -10704,7 +10708,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10723,7 +10727,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10737,7 +10741,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writePriorInformationNotice (aPriorInformationNotice, aClassLoader, new StreamResult (aResult));
@@ -10746,7 +10750,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10768,7 +10772,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10784,7 +10788,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -10797,7 +10801,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -10816,7 +10820,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10830,7 +10834,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writePriorInformationNotice (aPriorInformationNotice,
@@ -10842,7 +10846,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10868,7 +10872,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link PriorInformationNoticeType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aPriorInformationNotice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10884,7 +10888,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -10897,7 +10901,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ProductActivity.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -10909,7 +10913,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -10925,7 +10929,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10937,7 +10941,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader)
+                                               @Nullable final ClassLoader aClassLoader)
   {
     return writeProductActivity (aProductActivity, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -10945,7 +10949,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -10956,7 +10960,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aProductActivity,
                                              (ClassLoader) null,
@@ -10967,7 +10971,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -10981,8 +10985,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader,
-                                               @Nullable ValidationEventHandler aCustomEventHandler)
+                                               @Nullable final ClassLoader aClassLoader,
+                                               @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aProductActivity,
                                              aClassLoader,
@@ -10993,7 +10997,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11012,7 +11016,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11026,7 +11030,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nonnull final File aResult)
   {
     return writeProductActivity (aProductActivity, aClassLoader, new StreamResult (aResult));
@@ -11035,7 +11039,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11057,7 +11061,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11073,7 +11077,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
                                                @Nonnull final File aResult)
   {
@@ -11083,7 +11087,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11102,7 +11106,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11116,7 +11120,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nonnull final Result aResult)
   {
     return writeProductActivity (aProductActivity, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -11125,7 +11129,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11151,7 +11155,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ProductActivityType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aProductActivity
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11167,7 +11171,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
-                                               @Nullable ClassLoader aClassLoader,
+                                               @Nullable final ClassLoader aClassLoader,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
                                                @Nonnull final Result aResult)
   {
@@ -11180,7 +11184,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Quotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -11192,7 +11196,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -11208,7 +11212,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11219,7 +11223,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeQuotation (@Nonnull final QuotationType aQuotation, @Nullable ClassLoader aClassLoader)
+  public static Document writeQuotation (@Nonnull final QuotationType aQuotation,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return writeQuotation (aQuotation, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -11227,7 +11232,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11238,7 +11243,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aQuotation,
                                              (ClassLoader) null,
@@ -11249,7 +11254,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11263,8 +11268,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aQuotation,
                                              aClassLoader,
@@ -11275,7 +11280,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11293,7 +11298,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11307,7 +11312,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final File aResult)
   {
     return writeQuotation (aQuotation, aClassLoader, new StreamResult (aResult));
@@ -11316,7 +11321,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11338,7 +11343,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11354,7 +11359,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final File aResult)
   {
@@ -11364,7 +11369,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11382,7 +11387,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11396,7 +11401,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final Result aResult)
   {
     return writeQuotation (aQuotation, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -11405,7 +11410,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11431,7 +11436,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link QuotationType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11447,7 +11452,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final Result aResult)
   {
@@ -11460,7 +11465,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for ReceiptAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -11472,7 +11477,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -11488,7 +11493,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11500,7 +11505,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return writeReceiptAdvice (aReceiptAdvice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -11508,7 +11513,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11519,7 +11524,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aReceiptAdvice,
                                              (ClassLoader) null,
@@ -11530,7 +11535,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11544,8 +11549,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aReceiptAdvice,
                                              aClassLoader,
@@ -11556,7 +11561,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11575,7 +11580,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11589,7 +11594,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final File aResult)
   {
     return writeReceiptAdvice (aReceiptAdvice, aClassLoader, new StreamResult (aResult));
@@ -11598,7 +11603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11620,7 +11625,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11636,7 +11641,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final File aResult)
   {
@@ -11646,7 +11651,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11665,7 +11670,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11679,7 +11684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final Result aResult)
   {
     return writeReceiptAdvice (aReceiptAdvice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -11688,7 +11693,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11714,7 +11719,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReceiptAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aReceiptAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11730,7 +11735,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final Result aResult)
   {
@@ -11743,7 +11748,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Reminder.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -11755,7 +11760,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -11771,7 +11776,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11782,7 +11787,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeReminder (@Nonnull final ReminderType aReminder, @Nullable ClassLoader aClassLoader)
+  public static Document writeReminder (@Nonnull final ReminderType aReminder, @Nullable final ClassLoader aClassLoader)
   {
     return writeReminder (aReminder, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -11790,7 +11795,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11801,7 +11806,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aReminder,
                                              (ClassLoader) null,
@@ -11812,7 +11817,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11826,8 +11831,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ClassLoader aClassLoader,
-                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                        @Nullable final ClassLoader aClassLoader,
+                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aReminder, aClassLoader, EUBL21DocumentType.REMINDER, aCustomEventHandler);
   }
@@ -11835,7 +11840,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11853,7 +11858,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11867,7 +11872,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nonnull final File aResult)
   {
     return writeReminder (aReminder, aClassLoader, new StreamResult (aResult));
@@ -11876,7 +11881,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11898,7 +11903,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11914,7 +11919,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                         @Nonnull final File aResult)
   {
@@ -11924,7 +11929,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -11942,7 +11947,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -11956,7 +11961,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nonnull final Result aResult)
   {
     return writeReminder (aReminder, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -11965,7 +11970,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -11991,7 +11996,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link ReminderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aReminder
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12007,7 +12012,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
-                                        @Nullable ClassLoader aClassLoader,
+                                        @Nullable final ClassLoader aClassLoader,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                         @Nonnull final Result aResult)
   {
@@ -12020,7 +12025,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for RemittanceAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -12032,7 +12037,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -12048,7 +12053,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12060,7 +12065,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader)
+                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeRemittanceAdvice (aRemittanceAdvice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -12068,7 +12073,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12079,7 +12084,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRemittanceAdvice,
                                              (ClassLoader) null,
@@ -12090,7 +12095,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12104,8 +12109,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ClassLoader aClassLoader,
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRemittanceAdvice,
                                              aClassLoader,
@@ -12116,7 +12121,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12135,7 +12140,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12149,7 +12154,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final File aResult)
   {
     return writeRemittanceAdvice (aRemittanceAdvice, aClassLoader, new StreamResult (aResult));
@@ -12158,7 +12163,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12180,7 +12185,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12196,7 +12201,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final File aResult)
   {
@@ -12206,7 +12211,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12225,7 +12230,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12239,7 +12244,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final Result aResult)
   {
     return writeRemittanceAdvice (aRemittanceAdvice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -12248,7 +12253,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12274,7 +12279,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RemittanceAdviceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aRemittanceAdvice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12290,7 +12295,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final Result aResult)
   {
@@ -12303,7 +12308,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for RequestForQuotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -12315,7 +12320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -12331,7 +12336,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12343,7 +12348,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader)
+                                                   @Nullable final ClassLoader aClassLoader)
   {
     return writeRequestForQuotation (aRequestForQuotation, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -12351,7 +12356,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12362,7 +12367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRequestForQuotation,
                                              (ClassLoader) null,
@@ -12373,7 +12378,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12387,8 +12392,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader,
-                                                   @Nullable ValidationEventHandler aCustomEventHandler)
+                                                   @Nullable final ClassLoader aClassLoader,
+                                                   @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRequestForQuotation,
                                              aClassLoader,
@@ -12399,7 +12404,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12418,7 +12423,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12432,7 +12437,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final File aResult)
   {
     return writeRequestForQuotation (aRequestForQuotation, aClassLoader, new StreamResult (aResult));
@@ -12441,7 +12446,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12463,7 +12468,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12479,7 +12484,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final File aResult)
   {
@@ -12492,7 +12497,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12511,7 +12516,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12525,7 +12530,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nonnull final Result aResult)
   {
     return writeRequestForQuotation (aRequestForQuotation, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -12534,7 +12539,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12560,7 +12565,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RequestForQuotationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aRequestForQuotation
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12576,7 +12581,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
-                                                   @Nullable ClassLoader aClassLoader,
+                                                   @Nullable final ClassLoader aClassLoader,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
                                                    @Nonnull final Result aResult)
   {
@@ -12589,7 +12594,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for RetailEvent.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -12601,7 +12606,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -12617,7 +12622,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12629,7 +12634,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader)
+                                           @Nullable final ClassLoader aClassLoader)
   {
     return writeRetailEvent (aRetailEvent, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -12637,7 +12642,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12648,7 +12653,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRetailEvent,
                                              (ClassLoader) null,
@@ -12659,7 +12664,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a DOM {@link Document} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12673,8 +12678,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader,
-                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                           @Nullable final ClassLoader aClassLoader,
+                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aRetailEvent,
                                              aClassLoader,
@@ -12685,7 +12690,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12703,7 +12708,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12717,7 +12722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final File aResult)
   {
     return writeRetailEvent (aRetailEvent, aClassLoader, new StreamResult (aResult));
@@ -12726,7 +12731,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12748,7 +12753,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12764,7 +12769,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final File aResult)
   {
@@ -12774,7 +12779,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12792,7 +12797,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12806,7 +12811,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final Result aResult)
   {
     return writeRetailEvent (aRetailEvent, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -12815,7 +12820,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12841,7 +12846,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link RetailEventType} to a custom {@link Result} using
    * a custom validation event handler.
-   * 
+   *
    * @param aRetailEvent
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12857,7 +12862,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
-                                           @Nullable ClassLoader aClassLoader,
+                                           @Nullable final ClassLoader aClassLoader,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                            @Nonnull final Result aResult)
   {
@@ -12870,7 +12875,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for SelfBilledCreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -12882,7 +12887,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -12898,7 +12903,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12910,7 +12915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return writeSelfBilledCreditNote (aSelfBilledCreditNote, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -12918,7 +12923,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -12929,7 +12934,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aSelfBilledCreditNote,
                                              (ClassLoader) null,
@@ -12940,7 +12945,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12954,8 +12959,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ClassLoader aClassLoader,
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aSelfBilledCreditNote,
                                              aClassLoader,
@@ -12966,7 +12971,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -12985,7 +12990,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -12999,7 +13004,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final File aResult)
   {
     return writeSelfBilledCreditNote (aSelfBilledCreditNote, aClassLoader, new StreamResult (aResult));
@@ -13008,7 +13013,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13030,7 +13035,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13046,7 +13051,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final File aResult)
   {
@@ -13059,7 +13064,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13078,7 +13083,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13092,7 +13097,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final Result aResult)
   {
     return writeSelfBilledCreditNote (aSelfBilledCreditNote, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -13101,7 +13106,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13127,7 +13132,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledCreditNote
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13143,7 +13148,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final Result aResult)
   {
@@ -13156,7 +13161,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for SelfBilledInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -13168,7 +13173,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -13184,7 +13189,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13196,7 +13201,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader)
+                                                 @Nullable final ClassLoader aClassLoader)
   {
     return writeSelfBilledInvoice (aSelfBilledInvoice, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -13204,7 +13209,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13215,7 +13220,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aSelfBilledInvoice,
                                              (ClassLoader) null,
@@ -13226,7 +13231,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13240,8 +13245,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader,
-                                                 @Nullable ValidationEventHandler aCustomEventHandler)
+                                                 @Nullable final ClassLoader aClassLoader,
+                                                 @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aSelfBilledInvoice,
                                              aClassLoader,
@@ -13252,7 +13257,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13271,7 +13276,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13285,7 +13290,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final File aResult)
   {
     return writeSelfBilledInvoice (aSelfBilledInvoice, aClassLoader, new StreamResult (aResult));
@@ -13294,7 +13299,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13316,7 +13321,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13332,7 +13337,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final File aResult)
   {
@@ -13342,7 +13347,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13361,7 +13366,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13375,7 +13380,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nonnull final Result aResult)
   {
     return writeSelfBilledInvoice (aSelfBilledInvoice, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -13384,7 +13389,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13410,7 +13415,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link SelfBilledInvoiceType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aSelfBilledInvoice
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13426,7 +13431,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
-                                                 @Nullable ClassLoader aClassLoader,
+                                                 @Nullable final ClassLoader aClassLoader,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
                                                  @Nonnull final Result aResult)
   {
@@ -13439,7 +13444,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Statement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -13451,7 +13456,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -13467,7 +13472,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a DOM {@link Document} using
    * the global validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13478,7 +13483,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeStatement (@Nonnull final StatementType aStatement, @Nullable ClassLoader aClassLoader)
+  public static Document writeStatement (@Nonnull final StatementType aStatement,
+                                         @Nullable final ClassLoader aClassLoader)
   {
     return writeStatement (aStatement, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -13486,7 +13492,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13497,7 +13503,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aStatement,
                                              (ClassLoader) null,
@@ -13508,7 +13514,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13522,8 +13528,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ClassLoader aClassLoader,
-                                         @Nullable ValidationEventHandler aCustomEventHandler)
+                                         @Nullable final ClassLoader aClassLoader,
+                                         @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aStatement,
                                              aClassLoader,
@@ -13534,7 +13540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13552,7 +13558,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13566,7 +13572,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final File aResult)
   {
     return writeStatement (aStatement, aClassLoader, new StreamResult (aResult));
@@ -13575,7 +13581,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13597,7 +13603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13613,7 +13619,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final File aResult)
   {
@@ -13623,7 +13629,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13641,7 +13647,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a custom {@link Result} using
    * the global validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13655,7 +13661,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nonnull final Result aResult)
   {
     return writeStatement (aStatement, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -13664,7 +13670,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13690,7 +13696,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StatementType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13706,7 +13712,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
-                                         @Nullable ClassLoader aClassLoader,
+                                         @Nullable final ClassLoader aClassLoader,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
                                          @Nonnull final Result aResult)
   {
@@ -13719,7 +13725,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for StockAvailabilityReport.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -13731,7 +13737,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -13747,7 +13753,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13759,7 +13765,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return writeStockAvailabilityReport (aStockAvailabilityReport, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -13767,7 +13773,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13778,7 +13784,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aStockAvailabilityReport,
                                              (ClassLoader) null,
@@ -13789,7 +13795,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13803,8 +13809,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aStockAvailabilityReport,
                                              aClassLoader,
@@ -13815,7 +13821,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13834,7 +13840,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13848,7 +13854,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nonnull final File aResult)
   {
     return writeStockAvailabilityReport (aStockAvailabilityReport, aClassLoader, new StreamResult (aResult));
@@ -13857,7 +13863,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13879,7 +13885,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13895,7 +13901,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                                        @Nonnull final File aResult)
   {
@@ -13908,7 +13914,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -13927,7 +13933,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13941,7 +13947,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nonnull final Result aResult)
   {
     return writeStockAvailabilityReport (aStockAvailabilityReport,
@@ -13953,7 +13959,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -13979,7 +13985,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link StockAvailabilityReportType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aStockAvailabilityReport
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -13995,7 +14001,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                                        @Nonnull final Result aResult)
   {
@@ -14008,7 +14014,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Tender.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -14020,7 +14026,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -14036,7 +14042,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14047,7 +14053,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeTender (@Nonnull final TenderType aTender, @Nullable ClassLoader aClassLoader)
+  public static Document writeTender (@Nonnull final TenderType aTender, @Nullable final ClassLoader aClassLoader)
   {
     return writeTender (aTender, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -14055,7 +14061,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14066,7 +14072,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTender,
                                              (ClassLoader) null,
@@ -14077,7 +14083,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14091,8 +14097,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ClassLoader aClassLoader,
-                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                      @Nullable final ClassLoader aClassLoader,
+                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTender, aClassLoader, EUBL21DocumentType.TENDER, aCustomEventHandler);
   }
@@ -14100,7 +14106,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14118,7 +14124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14132,7 +14138,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ClassLoader aClassLoader,
+                                      @Nullable final ClassLoader aClassLoader,
                                       @Nonnull final File aResult)
   {
     return writeTender (aTender, aClassLoader, new StreamResult (aResult));
@@ -14141,7 +14147,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14163,7 +14169,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14179,7 +14185,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ClassLoader aClassLoader,
+                                      @Nullable final ClassLoader aClassLoader,
                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                       @Nonnull final File aResult)
   {
@@ -14189,7 +14195,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14207,7 +14213,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14221,7 +14227,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ClassLoader aClassLoader,
+                                      @Nullable final ClassLoader aClassLoader,
                                       @Nonnull final Result aResult)
   {
     return writeTender (aTender, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -14230,7 +14236,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14256,7 +14262,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTender
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14272,7 +14278,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
-                                      @Nullable ClassLoader aClassLoader,
+                                      @Nullable final ClassLoader aClassLoader,
                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                       @Nonnull final Result aResult)
   {
@@ -14285,7 +14291,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TendererQualification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -14297,7 +14303,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -14313,7 +14319,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14325,7 +14331,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return writeTendererQualification (aTendererQualification, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -14333,7 +14339,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14344,7 +14350,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTendererQualification,
                                              (ClassLoader) null,
@@ -14355,7 +14361,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14369,8 +14375,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTendererQualification,
                                              aClassLoader,
@@ -14381,7 +14387,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14400,7 +14406,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14414,7 +14420,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final File aResult)
   {
     return writeTendererQualification (aTendererQualification, aClassLoader, new StreamResult (aResult));
@@ -14423,7 +14429,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14445,7 +14451,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14461,7 +14467,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final File aResult)
   {
@@ -14474,7 +14480,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14493,7 +14499,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14507,7 +14513,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Result aResult)
   {
     return writeTendererQualification (aTendererQualification,
@@ -14519,7 +14525,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14545,7 +14551,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14561,7 +14567,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final Result aResult)
   {
@@ -14574,7 +14580,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TendererQualificationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -14586,7 +14592,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -14602,7 +14608,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14614,7 +14620,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return writeTendererQualificationResponse (aTendererQualificationResponse,
                                                aClassLoader,
@@ -14624,7 +14630,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14635,7 +14641,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTendererQualificationResponse,
                                              (ClassLoader) null,
@@ -14646,7 +14652,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14660,8 +14666,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTendererQualificationResponse,
                                              aClassLoader,
@@ -14672,7 +14678,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14691,7 +14697,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14705,7 +14711,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nonnull final File aResult)
   {
     return writeTendererQualificationResponse (aTendererQualificationResponse,
@@ -14716,7 +14722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14740,7 +14746,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14756,7 +14762,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                                              @Nonnull final File aResult)
   {
@@ -14769,7 +14775,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14790,7 +14796,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14804,7 +14810,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nonnull final Result aResult)
   {
     return writeTendererQualificationResponse (aTendererQualificationResponse,
@@ -14816,7 +14822,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14842,7 +14848,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TendererQualificationResponseType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTendererQualificationResponse
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14858,7 +14864,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                                              @Nonnull final Result aResult)
   {
@@ -14871,7 +14877,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TenderReceipt.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -14883,7 +14889,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -14899,7 +14905,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14911,7 +14917,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader)
+                                             @Nullable final ClassLoader aClassLoader)
   {
     return writeTenderReceipt (aTenderReceipt, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -14919,7 +14925,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -14930,7 +14936,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTenderReceipt,
                                              (ClassLoader) null,
@@ -14941,7 +14947,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -14955,8 +14961,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader,
-                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                             @Nullable final ClassLoader aClassLoader,
+                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTenderReceipt,
                                              aClassLoader,
@@ -14967,7 +14973,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -14986,7 +14992,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15000,7 +15006,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final File aResult)
   {
     return writeTenderReceipt (aTenderReceipt, aClassLoader, new StreamResult (aResult));
@@ -15009,7 +15015,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15031,7 +15037,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15047,7 +15053,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final File aResult)
   {
@@ -15057,7 +15063,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15076,7 +15082,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15090,7 +15096,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nonnull final Result aResult)
   {
     return writeTenderReceipt (aTenderReceipt, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -15099,7 +15105,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15125,7 +15131,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TenderReceiptType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTenderReceipt
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15141,7 +15147,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
-                                             @Nullable ClassLoader aClassLoader,
+                                             @Nullable final ClassLoader aClassLoader,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                              @Nonnull final Result aResult)
   {
@@ -15154,7 +15160,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TradeItemLocationProfile.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -15166,7 +15172,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -15182,7 +15188,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15194,7 +15200,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader)
+                                                        @Nullable final ClassLoader aClassLoader)
   {
     return writeTradeItemLocationProfile (aTradeItemLocationProfile, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -15202,7 +15208,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15213,7 +15219,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTradeItemLocationProfile,
                                              (ClassLoader) null,
@@ -15224,7 +15230,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15238,8 +15244,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader,
-                                                        @Nullable ValidationEventHandler aCustomEventHandler)
+                                                        @Nullable final ClassLoader aClassLoader,
+                                                        @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTradeItemLocationProfile,
                                              aClassLoader,
@@ -15250,7 +15256,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15269,7 +15275,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15283,7 +15289,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader,
+                                                        @Nullable final ClassLoader aClassLoader,
                                                         @Nonnull final File aResult)
   {
     return writeTradeItemLocationProfile (aTradeItemLocationProfile, aClassLoader, new StreamResult (aResult));
@@ -15292,7 +15298,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15314,7 +15320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15330,7 +15336,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader,
+                                                        @Nullable final ClassLoader aClassLoader,
                                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                                         @Nonnull final File aResult)
   {
@@ -15343,7 +15349,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15362,7 +15368,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15376,7 +15382,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader,
+                                                        @Nullable final ClassLoader aClassLoader,
                                                         @Nonnull final Result aResult)
   {
     return writeTradeItemLocationProfile (aTradeItemLocationProfile,
@@ -15388,7 +15394,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15414,7 +15420,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TradeItemLocationProfileType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTradeItemLocationProfile
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15430,7 +15436,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
-                                                        @Nullable ClassLoader aClassLoader,
+                                                        @Nullable final ClassLoader aClassLoader,
                                                         @Nullable final ValidationEventHandler aCustomEventHandler,
                                                         @Nonnull final Result aResult)
   {
@@ -15443,7 +15449,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportationStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -15455,7 +15461,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -15471,7 +15477,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15483,7 +15489,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader)
+                                                    @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportationStatus (aTransportationStatus, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -15491,7 +15497,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15502,7 +15508,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportationStatus,
                                              (ClassLoader) null,
@@ -15513,7 +15519,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15527,8 +15533,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader,
-                                                    @Nullable ValidationEventHandler aCustomEventHandler)
+                                                    @Nullable final ClassLoader aClassLoader,
+                                                    @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportationStatus,
                                              aClassLoader,
@@ -15539,7 +15545,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15558,7 +15564,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a {@link File} using
    * the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15572,7 +15578,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final File aResult)
   {
     return writeTransportationStatus (aTransportationStatus, aClassLoader, new StreamResult (aResult));
@@ -15581,7 +15587,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15603,7 +15609,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a {@link File} using
    * a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15619,7 +15625,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final File aResult)
   {
@@ -15632,7 +15638,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15651,7 +15657,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15665,7 +15671,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nonnull final Result aResult)
   {
     return writeTransportationStatus (aTransportationStatus, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -15674,7 +15680,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15700,7 +15706,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15716,7 +15722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
-                                                    @Nullable ClassLoader aClassLoader,
+                                                    @Nullable final ClassLoader aClassLoader,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
                                                     @Nonnull final Result aResult)
   {
@@ -15729,7 +15735,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportationStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -15741,7 +15747,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -15757,7 +15763,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15769,7 +15775,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportationStatusRequest (aTransportationStatusRequest,
                                              aClassLoader,
@@ -15779,7 +15785,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15790,7 +15796,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportationStatusRequest,
                                              (ClassLoader) null,
@@ -15801,7 +15807,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15815,8 +15821,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportationStatusRequest,
                                              aClassLoader,
@@ -15827,7 +15833,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15846,7 +15852,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15860,7 +15866,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nonnull final File aResult)
   {
     return writeTransportationStatusRequest (aTransportationStatusRequest, aClassLoader, new StreamResult (aResult));
@@ -15869,7 +15875,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15893,7 +15899,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15909,7 +15915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                                            @Nonnull final File aResult)
   {
@@ -15922,7 +15928,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -15941,7 +15947,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -15955,7 +15961,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nonnull final Result aResult)
   {
     return writeTransportationStatusRequest (aTransportationStatusRequest,
@@ -15967,7 +15973,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -15993,7 +15999,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportationStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportationStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16009,7 +16015,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                                            @Nonnull final Result aResult)
   {
@@ -16022,7 +16028,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportExecutionPlan.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -16034,7 +16040,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -16050,7 +16056,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16062,7 +16068,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader)
+                                                      @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportExecutionPlan (aTransportExecutionPlan, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -16070,7 +16076,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16081,7 +16087,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportExecutionPlan,
                                              (ClassLoader) null,
@@ -16092,7 +16098,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16106,8 +16112,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader,
-                                                      @Nullable ValidationEventHandler aCustomEventHandler)
+                                                      @Nullable final ClassLoader aClassLoader,
+                                                      @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportExecutionPlan,
                                              aClassLoader,
@@ -16118,7 +16124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16137,7 +16143,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16151,7 +16157,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final File aResult)
   {
     return writeTransportExecutionPlan (aTransportExecutionPlan, aClassLoader, new StreamResult (aResult));
@@ -16160,7 +16166,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16182,7 +16188,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16198,7 +16204,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final File aResult)
   {
@@ -16211,7 +16217,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16230,7 +16236,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16244,7 +16250,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nonnull final Result aResult)
   {
     return writeTransportExecutionPlan (aTransportExecutionPlan,
@@ -16256,7 +16262,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16282,7 +16288,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlan
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16298,7 +16304,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
-                                                      @Nullable ClassLoader aClassLoader,
+                                                      @Nullable final ClassLoader aClassLoader,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
                                                       @Nonnull final Result aResult)
   {
@@ -16311,7 +16317,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportExecutionPlanRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -16323,7 +16329,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -16339,7 +16345,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16351,7 +16357,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader)
+                                                             @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportExecutionPlanRequest (aTransportExecutionPlanRequest,
                                                aClassLoader,
@@ -16361,7 +16367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16372,7 +16378,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportExecutionPlanRequest,
                                              (ClassLoader) null,
@@ -16383,7 +16389,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16397,8 +16403,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader,
-                                                             @Nullable ValidationEventHandler aCustomEventHandler)
+                                                             @Nullable final ClassLoader aClassLoader,
+                                                             @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportExecutionPlanRequest,
                                              aClassLoader,
@@ -16409,7 +16415,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16428,7 +16434,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16442,7 +16448,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nonnull final File aResult)
   {
     return writeTransportExecutionPlanRequest (aTransportExecutionPlanRequest,
@@ -16453,7 +16459,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16477,7 +16483,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16493,7 +16499,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                                              @Nonnull final File aResult)
   {
@@ -16506,7 +16512,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16527,7 +16533,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16541,7 +16547,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nonnull final Result aResult)
   {
     return writeTransportExecutionPlanRequest (aTransportExecutionPlanRequest,
@@ -16553,7 +16559,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16579,7 +16585,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportExecutionPlanRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16595,7 +16601,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
-                                                             @Nullable ClassLoader aClassLoader,
+                                                             @Nullable final ClassLoader aClassLoader,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
                                                              @Nonnull final Result aResult)
   {
@@ -16608,7 +16614,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportProgressStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -16620,7 +16626,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -16636,7 +16642,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16648,7 +16654,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader)
+                                                       @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportProgressStatus (aTransportProgressStatus, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -16656,7 +16662,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16667,7 +16673,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportProgressStatus,
                                              (ClassLoader) null,
@@ -16678,7 +16684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16692,8 +16698,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader,
-                                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                                       @Nullable final ClassLoader aClassLoader,
+                                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportProgressStatus,
                                              aClassLoader,
@@ -16704,7 +16710,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16723,7 +16729,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16737,7 +16743,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nonnull final File aResult)
   {
     return writeTransportProgressStatus (aTransportProgressStatus, aClassLoader, new StreamResult (aResult));
@@ -16746,7 +16752,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16768,7 +16774,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16784,7 +16790,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                                        @Nonnull final File aResult)
   {
@@ -16797,7 +16803,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -16816,7 +16822,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16830,7 +16836,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nonnull final Result aResult)
   {
     return writeTransportProgressStatus (aTransportProgressStatus,
@@ -16842,7 +16848,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16868,7 +16874,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatus
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16884,7 +16890,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
-                                                       @Nullable ClassLoader aClassLoader,
+                                                       @Nullable final ClassLoader aClassLoader,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                                        @Nonnull final Result aResult)
   {
@@ -16897,7 +16903,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportProgressStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -16909,7 +16915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -16925,7 +16931,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16937,7 +16943,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader)
+                                                              @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportProgressStatusRequest (aTransportProgressStatusRequest,
                                                 aClassLoader,
@@ -16947,7 +16953,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -16958,7 +16964,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportProgressStatusRequest,
                                              (ClassLoader) null,
@@ -16969,7 +16975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -16983,8 +16989,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader,
-                                                              @Nullable ValidationEventHandler aCustomEventHandler)
+                                                              @Nullable final ClassLoader aClassLoader,
+                                                              @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportProgressStatusRequest,
                                              aClassLoader,
@@ -16995,7 +17001,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17014,7 +17020,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17028,7 +17034,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader,
+                                                              @Nullable final ClassLoader aClassLoader,
                                                               @Nonnull final File aResult)
   {
     return writeTransportProgressStatusRequest (aTransportProgressStatusRequest,
@@ -17039,7 +17045,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17063,7 +17069,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17079,7 +17085,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader,
+                                                              @Nullable final ClassLoader aClassLoader,
                                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                                               @Nonnull final File aResult)
   {
@@ -17092,7 +17098,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17113,7 +17119,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17127,7 +17133,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader,
+                                                              @Nullable final ClassLoader aClassLoader,
                                                               @Nonnull final Result aResult)
   {
     return writeTransportProgressStatusRequest (aTransportProgressStatusRequest,
@@ -17139,7 +17145,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17165,7 +17171,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportProgressStatusRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17181,7 +17187,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
-                                                              @Nullable ClassLoader aClassLoader,
+                                                              @Nullable final ClassLoader aClassLoader,
                                                               @Nullable final ValidationEventHandler aCustomEventHandler,
                                                               @Nonnull final Result aResult)
   {
@@ -17194,7 +17200,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportServiceDescription.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -17206,7 +17212,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -17222,7 +17228,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17234,7 +17240,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader)
+                                                           @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportServiceDescription (aTransportServiceDescription,
                                              aClassLoader,
@@ -17244,7 +17250,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17255,7 +17261,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportServiceDescription,
                                              (ClassLoader) null,
@@ -17266,7 +17272,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17280,8 +17286,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader,
-                                                           @Nullable ValidationEventHandler aCustomEventHandler)
+                                                           @Nullable final ClassLoader aClassLoader,
+                                                           @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportServiceDescription,
                                              aClassLoader,
@@ -17292,7 +17298,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17311,7 +17317,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17325,7 +17331,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nonnull final File aResult)
   {
     return writeTransportServiceDescription (aTransportServiceDescription, aClassLoader, new StreamResult (aResult));
@@ -17334,7 +17340,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17358,7 +17364,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17374,7 +17380,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                                            @Nonnull final File aResult)
   {
@@ -17387,7 +17393,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17406,7 +17412,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17420,7 +17426,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nonnull final Result aResult)
   {
     return writeTransportServiceDescription (aTransportServiceDescription,
@@ -17432,7 +17438,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17458,7 +17464,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescription
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17474,7 +17480,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
-                                                           @Nullable ClassLoader aClassLoader,
+                                                           @Nullable final ClassLoader aClassLoader,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
                                                            @Nonnull final Result aResult)
   {
@@ -17487,7 +17493,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for TransportServiceDescriptionRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -17499,7 +17505,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -17516,7 +17522,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17528,7 +17534,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader)
+                                                                  @Nullable final ClassLoader aClassLoader)
   {
     return writeTransportServiceDescriptionRequest (aTransportServiceDescriptionRequest,
                                                     aClassLoader,
@@ -17538,7 +17544,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17549,7 +17555,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                  @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportServiceDescriptionRequest,
                                              (ClassLoader) null,
@@ -17560,7 +17566,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17574,8 +17580,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader,
-                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
+                                                                  @Nullable final ClassLoader aClassLoader,
+                                                                  @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aTransportServiceDescriptionRequest,
                                              aClassLoader,
@@ -17586,7 +17592,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17605,7 +17611,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * {@link File} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17619,7 +17625,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader,
+                                                                  @Nullable final ClassLoader aClassLoader,
                                                                   @Nonnull final File aResult)
   {
     return writeTransportServiceDescriptionRequest (aTransportServiceDescriptionRequest,
@@ -17630,7 +17636,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17654,7 +17660,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * {@link File} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17670,7 +17676,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader,
+                                                                  @Nullable final ClassLoader aClassLoader,
                                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
                                                                   @Nonnull final File aResult)
   {
@@ -17683,7 +17689,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * custom {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17704,7 +17710,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * custom {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17718,7 +17724,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader,
+                                                                  @Nullable final ClassLoader aClassLoader,
                                                                   @Nonnull final Result aResult)
   {
     return writeTransportServiceDescriptionRequest (aTransportServiceDescriptionRequest,
@@ -17730,7 +17736,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * custom {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17756,7 +17762,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a
    * custom {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aTransportServiceDescriptionRequest
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17772,7 +17778,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
-                                                                  @Nullable ClassLoader aClassLoader,
+                                                                  @Nullable final ClassLoader aClassLoader,
                                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
                                                                   @Nonnull final Result aResult)
   {
@@ -17785,7 +17791,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for UnawardedNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -17797,7 +17803,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -17813,7 +17819,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17825,7 +17831,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader)
+                                                     @Nullable final ClassLoader aClassLoader)
   {
     return writeUnawardedNotification (aUnawardedNotification, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -17833,7 +17839,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17844,7 +17850,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aUnawardedNotification,
                                              (ClassLoader) null,
@@ -17855,7 +17861,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a DOM
    * {@link Document} using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17869,8 +17875,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader,
-                                                     @Nullable ValidationEventHandler aCustomEventHandler)
+                                                     @Nullable final ClassLoader aClassLoader,
+                                                     @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aUnawardedNotification,
                                              aClassLoader,
@@ -17881,7 +17887,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17900,7 +17906,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a {@link File}
    * using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17914,7 +17920,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final File aResult)
   {
     return writeUnawardedNotification (aUnawardedNotification, aClassLoader, new StreamResult (aResult));
@@ -17923,7 +17929,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -17945,7 +17951,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a {@link File}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -17961,7 +17967,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final File aResult)
   {
@@ -17974,7 +17980,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -17993,7 +17999,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a custom
    * {@link Result} using the global validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18007,7 +18013,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nonnull final Result aResult)
   {
     return writeUnawardedNotification (aUnawardedNotification,
@@ -18019,7 +18025,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18045,7 +18051,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UnawardedNotificationType} to a custom
    * {@link Result} using a custom validation event handler.
-   * 
+   *
    * @param aUnawardedNotification
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18061,7 +18067,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
-                                                     @Nullable ClassLoader aClassLoader,
+                                                     @Nullable final ClassLoader aClassLoader,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
                                                      @Nonnull final Result aResult)
   {
@@ -18074,7 +18080,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for UtilityStatement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -18086,7 +18092,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -18102,7 +18108,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a DOM {@link Document}
    * using the global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18114,7 +18120,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader)
+                                                @Nullable final ClassLoader aClassLoader)
   {
     return writeUtilityStatement (aUtilityStatement, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -18122,7 +18128,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18133,7 +18139,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aUtilityStatement,
                                              (ClassLoader) null,
@@ -18144,7 +18150,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a DOM {@link Document}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18158,8 +18164,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader,
-                                                @Nullable ValidationEventHandler aCustomEventHandler)
+                                                @Nullable final ClassLoader aClassLoader,
+                                                @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aUtilityStatement,
                                              aClassLoader,
@@ -18170,7 +18176,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -18189,7 +18195,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a {@link File} using the
    * global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18203,7 +18209,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final File aResult)
   {
     return writeUtilityStatement (aUtilityStatement, aClassLoader, new StreamResult (aResult));
@@ -18212,7 +18218,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18234,7 +18240,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a {@link File} using a
    * custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18250,7 +18256,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final File aResult)
   {
@@ -18260,7 +18266,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -18279,7 +18285,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a custom {@link Result}
    * using the global validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18293,7 +18299,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nonnull final Result aResult)
   {
     return writeUtilityStatement (aUtilityStatement, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -18302,7 +18308,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18328,7 +18334,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link UtilityStatementType} to a custom {@link Result}
    * using a custom validation event handler.
-   * 
+   *
    * @param aUtilityStatement
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18344,7 +18350,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
-                                                @Nullable ClassLoader aClassLoader,
+                                                @Nullable final ClassLoader aClassLoader,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
                                                 @Nonnull final Result aResult)
   {
@@ -18357,7 +18363,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
 
   /**
    * Create a writer builder for Waybill.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -18369,7 +18375,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
@@ -18385,7 +18391,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a DOM {@link Document} using the
    * global validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18396,7 +18402,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    */
   @Deprecated
   @Nullable
-  public static Document writeWaybill (@Nonnull final WaybillType aWaybill, @Nullable ClassLoader aClassLoader)
+  public static Document writeWaybill (@Nonnull final WaybillType aWaybill, @Nullable final ClassLoader aClassLoader)
   {
     return writeWaybill (aWaybill, aClassLoader, getGlobalValidationEventHandler ());
   }
@@ -18404,7 +18410,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18415,7 +18421,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aWaybill,
                                              (ClassLoader) null,
@@ -18426,7 +18432,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a DOM {@link Document} using a
    * custom validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18440,8 +18446,8 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ClassLoader aClassLoader,
-                                       @Nullable ValidationEventHandler aCustomEventHandler)
+                                       @Nullable final ClassLoader aClassLoader,
+                                       @Nullable final ValidationEventHandler aCustomEventHandler)
   {
     return UBL21Marshaller.writeUBLDocument (aWaybill, aClassLoader, EUBL21DocumentType.WAYBILL, aCustomEventHandler);
   }
@@ -18449,7 +18455,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -18467,7 +18473,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a {@link File} using the global
    * validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18481,7 +18487,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final File aResult)
   {
     return writeWaybill (aWaybill, aClassLoader, new StreamResult (aResult));
@@ -18490,7 +18496,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18512,7 +18518,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a {@link File} using a custom
    * validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18528,7 +18534,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                        @Nonnull final File aResult)
   {
@@ -18538,7 +18544,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aResult
@@ -18556,7 +18562,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a custom {@link Result} using the
    * global validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18570,7 +18576,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nonnull final Result aResult)
   {
     return writeWaybill (aWaybill, aClassLoader, getGlobalValidationEventHandler (), aResult);
@@ -18579,7 +18585,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aCustomEventHandler
@@ -18605,7 +18611,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   /**
    * Convert the passed {@link WaybillType} to a custom {@link Result} using a
    * custom validation event handler.
-   * 
+   *
    * @param aWaybill
    *          the source object to convert. May not be <code>null</code>.
    * @param aClassLoader
@@ -18621,7 +18627,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
-                                       @Nullable ClassLoader aClassLoader,
+                                       @Nullable final ClassLoader aClassLoader,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
                                        @Nonnull final Result aResult)
   {

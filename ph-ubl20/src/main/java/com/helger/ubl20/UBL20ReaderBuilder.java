@@ -18,7 +18,6 @@ package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
 
-import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 
 /**
@@ -33,9 +32,6 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20Re
   public UBL20ReaderBuilder (@Nonnull final Class <T> aClass)
   {
     super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
-
-    // Set global event handler
-    setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
   }
 
   /**

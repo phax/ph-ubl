@@ -26,6 +26,7 @@ import javax.xml.bind.ValidationEventHandler;
  * @author Philip Helger
  */
 @NotThreadSafe
+@Deprecated
 public abstract class AbstractUBLDocumentMarshaller
 {
   private static ValidationEventHandler s_aGlobalEventHandler = null;
