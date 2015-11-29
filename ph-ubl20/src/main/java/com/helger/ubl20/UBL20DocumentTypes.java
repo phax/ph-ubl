@@ -182,8 +182,27 @@ public final class UBL20DocumentTypes
   @Nullable
   public static Class <?> getImplementationClassOfLocalName (@Nullable final String sLocalName)
   {
-    final IUBLDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
+    final EUBL20DocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
     return eDocType == null ? null : eDocType.getImplementationClass ();
+  }
+
+  /**
+   * Get the UBL 2.0 document type matching the passed implementation class.
+   *
+   * @param aImplClass
+   *          The implementation class to use. May be <code>null</code>.
+   * @return <code>null</code> if the implementation class is <code>null</code>
+   *         or if no UBL 2.0 document type has the specified implementation
+   *         class.
+   */
+  @Nullable
+  public static EUBL20DocumentType getDocumentTypeOfImplementatonClass (@Nullable final Class <?> aImplClass)
+  {
+    if (aImplClass != null)
+      for (final EUBL20DocumentType eDocType : EUBL20DocumentType.values ())
+        if (eDocType.getImplementationClass ().equals (aImplClass))
+          return eDocType;
+    return null;
   }
 
   /**
@@ -252,10 +271,7 @@ public final class UBL20DocumentTypes
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
                                                        @Nullable final ClassLoader aClassLoader)
   {
-    if (aImplClass != null)
-      for (final EUBL20DocumentType eDocType : EUBL20DocumentType.values ())
-        if (eDocType.getImplementationClass ().equals (aImplClass))
-          return eDocType.getSchema (aClassLoader);
-    return null;
+    final EUBL20DocumentType eDocType = getDocumentTypeOfImplementatonClass (aImplClass);
+    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 }

@@ -112,6 +112,25 @@ public final class UBL21DocumentTypes
   }
 
   /**
+   * Get the UBL 2.1 document type matching the passed implementation class.
+   *
+   * @param aImplClass
+   *          The implementation class to use. May be <code>null</code>.
+   * @return <code>null</code> if the implementation class is <code>null</code>
+   *         or if no UBL 2.1 document type has the specified implementation
+   *         class.
+   */
+  @Nullable
+  public static EUBL21DocumentType getDocumentTypeOfImplementatonClass (@Nullable final Class <?> aImplClass)
+  {
+    if (aImplClass != null)
+      for (final EUBL21DocumentType eDocType : EUBL21DocumentType.values ())
+        if (eDocType.getImplementationClass ().equals (aImplClass))
+          return eDocType;
+    return null;
+  }
+
+  /**
    * Get the XSD Schema object for the UBL 2.1 document type of the passed
    * namespace.
    *
@@ -253,10 +272,7 @@ public final class UBL21DocumentTypes
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
                                                        @Nullable final ClassLoader aClassLoader)
   {
-    if (aImplClass != null)
-      for (final EUBL21DocumentType eDocType : EUBL21DocumentType.values ())
-        if (eDocType.getImplementationClass ().equals (aImplClass))
-          return eDocType.getSchema (aClassLoader);
-    return null;
+    final EUBL21DocumentType eDocType = getDocumentTypeOfImplementatonClass (aImplClass);
+    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 }
