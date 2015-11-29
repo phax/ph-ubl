@@ -17,14 +17,24 @@
 package com.helger.ubl.api.builder;
 
 import java.io.File;
+import java.io.InputStream;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.bind.ValidationEventHandler;
 import javax.xml.transform.Source;
+import javax.xml.transform.sax.SAXSource;
 
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
+
+import com.helger.commons.ValueEnforcer;
+import com.helger.commons.annotation.OverrideOnDemand;
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.xml.transform.TransformSourceFactory;
+import com.helger.commons.xml.EXMLParserFeature;
+import com.helger.commons.xml.sax.InputSourceFactory;
+import com.helger.commons.xml.serialize.read.SAXReaderFactory;
+import com.helger.commons.xml.serialize.read.SAXReaderSettings;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -47,6 +57,16 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   }
 
   /**
+   * @return The special JAXB validation event handler to be used.
+   *         <code>null</code> by default.
+   */
+  @Nullable
+  public ValidationEventHandler getValidationEventHandler ()
+  {
+    return m_aEventHandler;
+  }
+
+  /**
    * Set the JAXB validation event handler to be used. May be <code>null</code>.
    *
    * @param aEventHandler
@@ -60,6 +80,41 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
     return thisAsT ();
   }
 
+  @Nullable
+  public T read (@Nonnull final SAXReaderSettings aSettings, @Nonnull final InputSource aInputSource)
+  {
+    ValueEnforcer.notNull (aSettings, "Settings");
+    ValueEnforcer.notNull (aInputSource, "InputSource");
+
+    // Create new XML reader
+    final XMLReader aParser = SAXReaderFactory.createXMLReader ();
+
+    // Apply settings
+    aSettings.applyToSAXReader (aParser);
+
+    return read (new SAXSource (aParser, aInputSource));
+  }
+
+  @Nonnull
+  @OverrideOnDemand
+  protected SAXReaderSettings createDefaultSAXReaderSettings ()
+  {
+    // Initialize settings with defaults
+    final SAXReaderSettings aSettings = new SAXReaderSettings ();
+    // Apply settings that make reading more secure
+    aSettings.setFeatureValues (EXMLParserFeature.AVOID_XML_ATTACKS);
+    return aSettings;
+  }
+
+  @Nullable
+  private T _readSecurelyFromInputSource (@Nonnull final InputSource aInputSource)
+  {
+    // Initialize settings with defaults
+    final SAXReaderSettings aSettings = createDefaultSAXReaderSettings ();
+
+    return read (aSettings, aInputSource);
+  }
+
   /**
    * Interpret the passed {@link File} as a UBL document.
    *
@@ -71,7 +126,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final File aSource)
   {
-    return read (TransformSourceFactory.create (aSource));
+    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -85,7 +140,21 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final IReadableResource aSource)
   {
-    return read (TransformSourceFactory.create (aSource));
+    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
+  }
+
+  /**
+   * Interpret the passed {@link InputStream} as a UBL document.
+   *
+   * @param aSource
+   *          The stream to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Nullable
+  public T read (@Nonnull final InputStream aSource)
+  {
+    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -99,7 +168,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final byte [] aSource)
   {
-    return read (TransformSourceFactory.create (aSource));
+    return _readSecurelyFromInputSource (InputSourceFactory.create (aSource));
   }
 
   /**
@@ -113,9 +182,17 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
   @Nullable
   public T read (@Nonnull final String sSource)
   {
-    return read (TransformSourceFactory.create (sSource));
+    return _readSecurelyFromInputSource (InputSourceFactory.create (sSource));
   }
 
+  /**
+   * Interpret the passed {@link Source} as a UBL document.
+   *
+   * @param sSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
   @Nullable
   public abstract T read (@Nonnull Source aSource);
 }

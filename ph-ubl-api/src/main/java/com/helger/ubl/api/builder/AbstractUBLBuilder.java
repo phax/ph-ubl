@@ -47,6 +47,15 @@ public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <I
   }
 
   /**
+   * @return The special class loader to be used. <code>null</code> by default.
+   */
+  @Nullable
+  public ClassLoader getClassLoader ()
+  {
+    return m_aClassLoader;
+  }
+
+  /**
    * Set the class loader to be used. This is optional.
    *
    * @param aClassLoader

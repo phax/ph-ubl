@@ -38,11 +38,27 @@ public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends Abstract
     super (aDocType);
   }
 
+  /**
+   * Check if the passed UBL document is valid according to the XSD or not.
+   *
+   * @param aUBLDocument
+   *          The UBL document to be validated. May not be <code>null</code>.
+   * @return <code>true</code> if the document is valid, <code>false</code> if
+   *         not.
+   * @see #validate(Object)
+   */
   public boolean isValid (@Nonnull final T aUBLDocument)
   {
     return validate (aUBLDocument).containsNoError ();
   }
 
+  /**
+   * Validate the passed UBL document.
+   *
+   * @param aUBLDocument
+   *          The UBL document to be validated. May not be <code>null</code>.
+   * @return The validation results. Never <code>null</code>.
+   */
   @Nonnull
   public abstract IResourceErrorGroup validate (@Nonnull T aUBLDocument);
 }

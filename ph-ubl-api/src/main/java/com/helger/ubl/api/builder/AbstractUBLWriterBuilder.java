@@ -59,11 +59,21 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
   }
 
   /**
+   * @return The special JAXB validation event handler to be used.
+   *         <code>null</code> by default.
+   */
+  @Nullable
+  public ValidationEventHandler getValidationEventHandler ()
+  {
+    return m_aEventHandler;
+  }
+
+  /**
    * Set the JAXB validation event handler to be used. May be <code>null</code>.
    *
    * @param aEventHandler
    *          The event handler to be used. May be <code>null</code>.
-   * @return this
+   * @return this for chaining
    */
   @Nonnull
   public IMPLTYPE setValidationEventHandler (@Nullable final ValidationEventHandler aEventHandler)
@@ -72,6 +82,23 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     return thisAsT ();
   }
 
+  /**
+   * @return The special JAXB namespace context to be used. <code>null</code> by
+   *         default.
+   */
+  @Nullable
+  public NamespaceContext getNamespaceContext ()
+  {
+    return m_aNSContext;
+  }
+
+  /**
+   * Set the namespace context (prefix to namespace URL mapping) to be used.
+   *
+   * @param aNSContext
+   *          The namespace context to be used. May be <code>null</code>.
+   * @return this for chaining
+   */
   @Nonnull
   public IMPLTYPE setNamespaceContext (@Nullable final NamespaceContext aNSContext)
   {
@@ -79,6 +106,14 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     return thisAsT ();
   }
 
+  /**
+   * Convert the passed UBL document to a DOM {@link Document}.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @return The created DOM document or <code>null</code> in case of conversion
+   *         error
+   */
   @Nullable
   public Document writeToDocument (@Nonnull final T aUBLDocument)
   {
@@ -87,6 +122,13 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     return write (aUBLDocument, aResult).isSuccess () ? aDoc : null;
   }
 
+  /**
+   * Convert the passed UBL document to a String.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @return The created String or <code>null</code> in case of conversion error
+   */
   @Nullable
   public String writeToString (@Nonnull final T aUBLDocument)
   {
@@ -94,12 +136,32 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     return write (aUBLDocument, aResult).isSuccess () ? aResult.getAsString () : null;
   }
 
+  /**
+   * Convert the passed UBL document to a custom {@link File}.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @param aResult
+   *          The result file to write to. May not be <code>null</code>.
+   * @return {@link ESuccess#SUCCESS} in case of success,
+   *         {@link ESuccess#FAILURE} in case of an error
+   */
   @Nonnull
   public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull final File aResult)
   {
     return write (aUBLDocument, new StreamResult (aResult));
   }
 
+  /**
+   * Convert the passed UBL document to a custom {@link OutputStream}.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @param aResult
+   *          The result stream to write to. May not be <code>null</code>.
+   * @return {@link ESuccess#SUCCESS} in case of success,
+   *         {@link ESuccess#FAILURE} in case of an error
+   */
   @Nonnull
   public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull @WillClose final OutputStream aResult)
   {
@@ -113,12 +175,32 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
     }
   }
 
+  /**
+   * Convert the passed UBL document to a custom {@link IWritableResource}.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @param aResult
+   *          The result resource to write to. May not be <code>null</code>.
+   * @return {@link ESuccess#SUCCESS} in case of success,
+   *         {@link ESuccess#FAILURE} in case of an error
+   */
   @Nonnull
   public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull final IWritableResource aResult)
   {
     return write (aUBLDocument, new ResourceStreamResult (aResult));
   }
 
+  /**
+   * Convert the passed UBL document to a custom {@link Result}.
+   *
+   * @param aUBLDocument
+   *          The source object to write. May not be <code>null</code>.
+   * @param aResult
+   *          The result object to write to. May not be <code>null</code>.
+   * @return {@link ESuccess#SUCCESS} in case of success,
+   *         {@link ESuccess#FAILURE} in case of an error
+   */
   @Nonnull
   public abstract ESuccess write (@Nonnull T aUBLDocument, @Nonnull Result aResult);
 }
