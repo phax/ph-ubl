@@ -1,19 +1,3 @@
-/**
- * Copyright (C) 2014-2015 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl21;
 
 import java.io.File;
@@ -112,6 +96,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   {}
 
   /**
+   * Create a writer builder for ApplicationResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ApplicationResponseType> applicationResponse ()
+  {
+    return UBL21WriterBuilder.create (ApplicationResponseType.class);
+  }
+
+  /**
    * Convert the passed {@link ApplicationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -120,6 +115,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse)
   {
@@ -138,6 +134,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader)
@@ -156,6 +153,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -180,6 +178,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader,
@@ -202,6 +201,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nonnull final File aResult)
@@ -223,6 +223,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader,
@@ -244,6 +245,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -268,6 +270,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader,
@@ -291,6 +294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nonnull final Result aResult)
@@ -312,6 +316,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader,
@@ -333,6 +338,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -361,6 +367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                    @Nullable ClassLoader aClassLoader,
@@ -375,6 +382,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for AttachedDocument.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <AttachedDocumentType> attachedDocument ()
+  {
+    return UBL21WriterBuilder.create (AttachedDocumentType.class);
+  }
+
+  /**
    * Convert the passed {@link AttachedDocumentType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -383,6 +401,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument)
   {
@@ -401,6 +420,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader)
@@ -419,6 +439,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -443,6 +464,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader,
@@ -465,6 +487,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nonnull final File aResult)
@@ -486,6 +509,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader,
@@ -507,6 +531,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -531,6 +556,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader,
@@ -551,6 +577,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nonnull final Result aResult)
@@ -572,6 +599,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader,
@@ -593,6 +621,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -621,6 +650,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                 @Nullable ClassLoader aClassLoader,
@@ -635,6 +665,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for AwardedNotification.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <AwardedNotificationType> awardedNotification ()
+  {
+    return UBL21WriterBuilder.create (AwardedNotificationType.class);
+  }
+
+  /**
    * Convert the passed {@link AwardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -643,6 +684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification)
   {
@@ -661,6 +703,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader)
@@ -679,6 +722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -703,6 +747,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader,
@@ -725,6 +770,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nonnull final File aResult)
@@ -746,6 +792,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader,
@@ -767,6 +814,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -791,6 +839,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader,
@@ -814,6 +863,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nonnull final Result aResult)
@@ -835,6 +885,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader,
@@ -856,6 +907,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -884,6 +936,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeAwardedNotification (@Nonnull final AwardedNotificationType aAwardedNotification,
                                                    @Nullable ClassLoader aClassLoader,
@@ -898,6 +951,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for BillOfLading.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <BillOfLadingType> billOfLading ()
+  {
+    return UBL21WriterBuilder.create (BillOfLadingType.class);
+  }
+
+  /**
    * Convert the passed {@link BillOfLadingType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -906,6 +970,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading)
   {
@@ -924,6 +989,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader)
@@ -942,6 +1008,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ValidationEventHandler aCustomEventHandler)
@@ -966,6 +1033,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader,
@@ -988,6 +1056,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading, @Nonnull final File aResult)
   {
@@ -1008,6 +1077,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader,
@@ -1029,6 +1099,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1053,6 +1124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader,
@@ -1073,6 +1145,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nonnull final Result aResult)
@@ -1094,6 +1167,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader,
@@ -1115,6 +1189,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1143,6 +1218,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                             @Nullable ClassLoader aClassLoader,
@@ -1157,6 +1233,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CallForTenders.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CallForTendersType> callForTenders ()
+  {
+    return UBL21WriterBuilder.create (CallForTendersType.class);
+  }
+
+  /**
    * Convert the passed {@link CallForTendersType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -1165,6 +1252,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders)
   {
@@ -1183,6 +1271,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader)
@@ -1201,6 +1290,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1225,6 +1315,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader,
@@ -1247,6 +1338,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nonnull final File aResult)
@@ -1268,6 +1360,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader,
@@ -1289,6 +1382,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1313,6 +1407,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader,
@@ -1333,6 +1428,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nonnull final Result aResult)
@@ -1354,6 +1450,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader,
@@ -1375,6 +1472,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1403,6 +1501,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCallForTenders (@Nonnull final CallForTendersType aCallForTenders,
                                               @Nullable ClassLoader aClassLoader,
@@ -1417,6 +1516,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Catalogue.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CatalogueType> catalogue ()
+  {
+    return UBL21WriterBuilder.create (CatalogueType.class);
+  }
+
+  /**
    * Convert the passed {@link CatalogueType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -1425,6 +1535,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue)
   {
@@ -1443,6 +1554,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue, @Nullable ClassLoader aClassLoader)
   {
@@ -1460,6 +1572,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1484,6 +1597,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ClassLoader aClassLoader,
@@ -1506,6 +1620,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue, @Nonnull final File aResult)
   {
@@ -1526,6 +1641,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ClassLoader aClassLoader,
@@ -1547,6 +1663,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1571,6 +1688,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ClassLoader aClassLoader,
@@ -1591,6 +1709,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue, @Nonnull final Result aResult)
   {
@@ -1611,6 +1730,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ClassLoader aClassLoader,
@@ -1632,6 +1752,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1660,6 +1781,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogue (@Nonnull final CatalogueType aCatalogue,
                                          @Nullable ClassLoader aClassLoader,
@@ -1674,6 +1796,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CatalogueDeletion.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CatalogueDeletionType> catalogueDeletion ()
+  {
+    return UBL21WriterBuilder.create (CatalogueDeletionType.class);
+  }
+
+  /**
    * Convert the passed {@link CatalogueDeletionType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -1682,6 +1815,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion)
   {
@@ -1700,6 +1834,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader)
@@ -1718,6 +1853,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1742,6 +1878,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader,
@@ -1764,6 +1901,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nonnull final File aResult)
@@ -1785,6 +1923,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader,
@@ -1806,6 +1945,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1830,6 +1970,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader,
@@ -1850,6 +1991,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nonnull final Result aResult)
@@ -1871,6 +2013,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader,
@@ -1892,6 +2035,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -1920,6 +2064,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                  @Nullable ClassLoader aClassLoader,
@@ -1934,6 +2079,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CatalogueItemSpecificationUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
+  {
+    return UBL21WriterBuilder.create (CatalogueItemSpecificationUpdateType.class);
+  }
+
+  /**
    * Convert the passed {@link CatalogueItemSpecificationUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -1942,6 +2098,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate)
   {
@@ -1961,6 +2118,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader)
@@ -1981,6 +2139,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2005,6 +2164,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader,
@@ -2027,6 +2187,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nonnull final File aResult)
@@ -2048,6 +2209,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader,
@@ -2071,6 +2233,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2097,6 +2260,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader,
@@ -2120,6 +2284,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nonnull final Result aResult)
@@ -2143,6 +2308,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader,
@@ -2167,6 +2333,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2195,6 +2362,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                 @Nullable ClassLoader aClassLoader,
@@ -2209,6 +2377,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CataloguePricingUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
+  {
+    return UBL21WriterBuilder.create (CataloguePricingUpdateType.class);
+  }
+
+  /**
    * Convert the passed {@link CataloguePricingUpdateType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -2217,6 +2396,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate)
   {
@@ -2235,6 +2415,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader)
@@ -2253,6 +2434,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2277,6 +2459,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader,
@@ -2299,6 +2482,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nonnull final File aResult)
@@ -2320,6 +2504,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader,
@@ -2341,6 +2526,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2365,6 +2551,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader,
@@ -2388,6 +2575,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nonnull final Result aResult)
@@ -2409,6 +2597,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader,
@@ -2433,6 +2622,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2461,6 +2651,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                       @Nullable ClassLoader aClassLoader,
@@ -2475,6 +2666,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CatalogueRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CatalogueRequestType> catalogueRequest ()
+  {
+    return UBL21WriterBuilder.create (CatalogueRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link CatalogueRequestType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -2483,6 +2685,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest)
   {
@@ -2501,6 +2704,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader)
@@ -2519,6 +2723,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2543,6 +2748,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader,
@@ -2565,6 +2771,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nonnull final File aResult)
@@ -2586,6 +2793,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader,
@@ -2607,6 +2815,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2631,6 +2840,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader,
@@ -2651,6 +2861,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nonnull final Result aResult)
@@ -2672,6 +2883,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader,
@@ -2693,6 +2905,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2721,6 +2934,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                 @Nullable ClassLoader aClassLoader,
@@ -2735,6 +2949,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CertificateOfOrigin.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CertificateOfOriginType> certificateOfOrigin ()
+  {
+    return UBL21WriterBuilder.create (CertificateOfOriginType.class);
+  }
+
+  /**
    * Convert the passed {@link CertificateOfOriginType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -2743,6 +2968,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin)
   {
@@ -2761,6 +2987,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader)
@@ -2779,6 +3006,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2803,6 +3031,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader,
@@ -2825,6 +3054,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nonnull final File aResult)
@@ -2846,6 +3076,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader,
@@ -2867,6 +3098,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2891,6 +3123,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader,
@@ -2914,6 +3147,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nonnull final Result aResult)
@@ -2935,6 +3169,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader,
@@ -2956,6 +3191,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -2984,6 +3220,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                    @Nullable ClassLoader aClassLoader,
@@ -2998,6 +3235,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ContractAwardNotice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ContractAwardNoticeType> contractAwardNotice ()
+  {
+    return UBL21WriterBuilder.create (ContractAwardNoticeType.class);
+  }
+
+  /**
    * Convert the passed {@link ContractAwardNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -3006,6 +3254,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice)
   {
@@ -3024,6 +3273,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader)
@@ -3042,6 +3292,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3066,6 +3317,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader,
@@ -3088,6 +3340,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nonnull final File aResult)
@@ -3109,6 +3362,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader,
@@ -3130,6 +3384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3154,6 +3409,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader,
@@ -3177,6 +3433,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nonnull final Result aResult)
@@ -3198,6 +3455,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader,
@@ -3219,6 +3477,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3247,6 +3506,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractAwardNotice (@Nonnull final ContractAwardNoticeType aContractAwardNotice,
                                                    @Nullable ClassLoader aClassLoader,
@@ -3261,6 +3521,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ContractNotice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ContractNoticeType> contractNotice ()
+  {
+    return UBL21WriterBuilder.create (ContractNoticeType.class);
+  }
+
+  /**
    * Convert the passed {@link ContractNoticeType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -3269,6 +3540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice)
   {
@@ -3287,6 +3559,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader)
@@ -3305,6 +3578,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3329,6 +3603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader,
@@ -3351,6 +3626,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nonnull final File aResult)
@@ -3372,6 +3648,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader,
@@ -3393,6 +3670,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3417,6 +3695,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader,
@@ -3437,6 +3716,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nonnull final Result aResult)
@@ -3458,6 +3738,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader,
@@ -3479,6 +3760,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3507,6 +3789,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeContractNotice (@Nonnull final ContractNoticeType aContractNotice,
                                               @Nullable ClassLoader aClassLoader,
@@ -3521,6 +3804,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for CreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <CreditNoteType> creditNote ()
+  {
+    return UBL21WriterBuilder.create (CreditNoteType.class);
+  }
+
+  /**
    * Convert the passed {@link CreditNoteType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -3529,6 +3823,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote)
   {
@@ -3547,6 +3842,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote, @Nullable ClassLoader aClassLoader)
   {
@@ -3564,6 +3860,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3588,6 +3885,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ClassLoader aClassLoader,
@@ -3610,6 +3908,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote, @Nonnull final File aResult)
   {
@@ -3630,6 +3929,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ClassLoader aClassLoader,
@@ -3651,6 +3951,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3675,6 +3976,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ClassLoader aClassLoader,
@@ -3695,6 +3997,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote, @Nonnull final Result aResult)
   {
@@ -3715,6 +4018,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ClassLoader aClassLoader,
@@ -3736,6 +4040,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3764,6 +4069,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                           @Nullable ClassLoader aClassLoader,
@@ -3778,6 +4084,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for DebitNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <DebitNoteType> debitNote ()
+  {
+    return UBL21WriterBuilder.create (DebitNoteType.class);
+  }
+
+  /**
    * Convert the passed {@link DebitNoteType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -3786,6 +4103,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote)
   {
@@ -3804,6 +4122,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nullable ClassLoader aClassLoader)
   {
@@ -3821,6 +4140,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3845,6 +4165,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ClassLoader aClassLoader,
@@ -3867,6 +4188,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nonnull final File aResult)
   {
@@ -3887,6 +4209,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ClassLoader aClassLoader,
@@ -3908,6 +4231,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -3932,6 +4256,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ClassLoader aClassLoader,
@@ -3952,6 +4277,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nonnull final Result aResult)
   {
@@ -3972,6 +4298,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ClassLoader aClassLoader,
@@ -3993,6 +4320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4021,6 +4349,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                          @Nullable ClassLoader aClassLoader,
@@ -4035,6 +4364,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for DespatchAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <DespatchAdviceType> despatchAdvice ()
+  {
+    return UBL21WriterBuilder.create (DespatchAdviceType.class);
+  }
+
+  /**
    * Convert the passed {@link DespatchAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -4043,6 +4383,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice)
   {
@@ -4061,6 +4402,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader)
@@ -4079,6 +4421,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4103,6 +4446,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader,
@@ -4125,6 +4469,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nonnull final File aResult)
@@ -4146,6 +4491,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader,
@@ -4167,6 +4513,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4191,6 +4538,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader,
@@ -4211,6 +4559,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nonnull final Result aResult)
@@ -4232,6 +4581,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader,
@@ -4253,6 +4603,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4281,6 +4632,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                               @Nullable ClassLoader aClassLoader,
@@ -4295,6 +4647,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for DocumentStatus.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <DocumentStatusType> documentStatus ()
+  {
+    return UBL21WriterBuilder.create (DocumentStatusType.class);
+  }
+
+  /**
    * Convert the passed {@link DocumentStatusType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -4303,6 +4666,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus)
   {
@@ -4321,6 +4685,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader)
@@ -4339,6 +4704,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4363,6 +4729,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader,
@@ -4385,6 +4752,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nonnull final File aResult)
@@ -4406,6 +4774,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader,
@@ -4427,6 +4796,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4451,6 +4821,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader,
@@ -4471,6 +4842,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nonnull final Result aResult)
@@ -4492,6 +4864,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader,
@@ -4513,6 +4886,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4541,6 +4915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatus (@Nonnull final DocumentStatusType aDocumentStatus,
                                               @Nullable ClassLoader aClassLoader,
@@ -4555,6 +4930,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for DocumentStatusRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <DocumentStatusRequestType> documentStatusRequest ()
+  {
+    return UBL21WriterBuilder.create (DocumentStatusRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link DocumentStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -4563,6 +4949,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest)
   {
@@ -4581,6 +4968,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader)
@@ -4599,6 +4987,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4623,6 +5012,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader,
@@ -4645,6 +5035,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nonnull final File aResult)
@@ -4666,6 +5057,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader,
@@ -4687,6 +5079,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4711,6 +5104,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader,
@@ -4734,6 +5128,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nonnull final Result aResult)
@@ -4755,6 +5150,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader,
@@ -4779,6 +5175,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4807,6 +5204,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeDocumentStatusRequest (@Nonnull final DocumentStatusRequestType aDocumentStatusRequest,
                                                      @Nullable ClassLoader aClassLoader,
@@ -4821,6 +5219,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ExceptionCriteria.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ExceptionCriteriaType> exceptionCriteria ()
+  {
+    return UBL21WriterBuilder.create (ExceptionCriteriaType.class);
+  }
+
+  /**
    * Convert the passed {@link ExceptionCriteriaType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -4829,6 +5238,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria)
   {
@@ -4847,6 +5257,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader)
@@ -4865,6 +5276,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4889,6 +5301,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader,
@@ -4911,6 +5324,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nonnull final File aResult)
@@ -4932,6 +5346,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader,
@@ -4953,6 +5368,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -4977,6 +5393,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader,
@@ -4997,6 +5414,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nonnull final Result aResult)
@@ -5018,6 +5436,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader,
@@ -5039,6 +5458,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5067,6 +5487,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionCriteria (@Nonnull final ExceptionCriteriaType aExceptionCriteria,
                                                  @Nullable ClassLoader aClassLoader,
@@ -5081,6 +5502,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ExceptionNotification.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ExceptionNotificationType> exceptionNotification ()
+  {
+    return UBL21WriterBuilder.create (ExceptionNotificationType.class);
+  }
+
+  /**
    * Convert the passed {@link ExceptionNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -5089,6 +5521,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification)
   {
@@ -5107,6 +5540,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader)
@@ -5125,6 +5559,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5149,6 +5584,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5171,6 +5607,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nonnull final File aResult)
@@ -5192,6 +5629,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5213,6 +5651,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5237,6 +5676,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5260,6 +5700,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nonnull final Result aResult)
@@ -5281,6 +5722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5305,6 +5747,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5333,6 +5776,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeExceptionNotification (@Nonnull final ExceptionNotificationType aExceptionNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5347,6 +5791,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Forecast.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ForecastType> forecast ()
+  {
+    return UBL21WriterBuilder.create (ForecastType.class);
+  }
+
+  /**
    * Convert the passed {@link ForecastType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -5355,6 +5810,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast)
   {
@@ -5373,6 +5829,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast, @Nullable ClassLoader aClassLoader)
   {
@@ -5390,6 +5847,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5414,6 +5872,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ClassLoader aClassLoader,
@@ -5433,6 +5892,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast, @Nonnull final File aResult)
   {
@@ -5453,6 +5913,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ClassLoader aClassLoader,
@@ -5474,6 +5935,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5498,6 +5960,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ClassLoader aClassLoader,
@@ -5518,6 +5981,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast, @Nonnull final Result aResult)
   {
@@ -5538,6 +6002,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ClassLoader aClassLoader,
@@ -5559,6 +6024,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5587,6 +6053,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecast (@Nonnull final ForecastType aForecast,
                                         @Nullable ClassLoader aClassLoader,
@@ -5601,6 +6068,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ForecastRevision.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ForecastRevisionType> forecastRevision ()
+  {
+    return UBL21WriterBuilder.create (ForecastRevisionType.class);
+  }
+
+  /**
    * Convert the passed {@link ForecastRevisionType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -5609,6 +6087,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision)
   {
@@ -5627,6 +6106,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader)
@@ -5645,6 +6125,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5669,6 +6150,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader,
@@ -5691,6 +6173,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nonnull final File aResult)
@@ -5712,6 +6195,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader,
@@ -5733,6 +6217,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5757,6 +6242,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader,
@@ -5777,6 +6263,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nonnull final Result aResult)
@@ -5798,6 +6285,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader,
@@ -5819,6 +6307,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -5847,6 +6336,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForecastRevision (@Nonnull final ForecastRevisionType aForecastRevision,
                                                 @Nullable ClassLoader aClassLoader,
@@ -5861,6 +6351,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ForwardingInstructions.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ForwardingInstructionsType> forwardingInstructions ()
+  {
+    return UBL21WriterBuilder.create (ForwardingInstructionsType.class);
+  }
+
+  /**
    * Convert the passed {@link ForwardingInstructionsType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -5869,6 +6370,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions)
   {
@@ -5887,6 +6389,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader)
@@ -5905,6 +6408,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5929,6 +6433,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader,
@@ -5951,6 +6456,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nonnull final File aResult)
@@ -5972,6 +6478,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader,
@@ -5993,6 +6500,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6017,6 +6525,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6040,6 +6549,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nonnull final Result aResult)
@@ -6061,6 +6571,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6085,6 +6596,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6113,6 +6625,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6127,6 +6640,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for FreightInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <FreightInvoiceType> freightInvoice ()
+  {
+    return UBL21WriterBuilder.create (FreightInvoiceType.class);
+  }
+
+  /**
    * Convert the passed {@link FreightInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -6135,6 +6659,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice)
   {
@@ -6153,6 +6678,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader)
@@ -6171,6 +6697,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6195,6 +6722,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader,
@@ -6217,6 +6745,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nonnull final File aResult)
@@ -6238,6 +6767,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader,
@@ -6259,6 +6789,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6283,6 +6814,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader,
@@ -6303,6 +6835,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nonnull final Result aResult)
@@ -6324,6 +6857,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader,
@@ -6345,6 +6879,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6373,6 +6908,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                               @Nullable ClassLoader aClassLoader,
@@ -6387,6 +6923,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for FulfilmentCancellation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <FulfilmentCancellationType> fulfilmentCancellation ()
+  {
+    return UBL21WriterBuilder.create (FulfilmentCancellationType.class);
+  }
+
+  /**
    * Convert the passed {@link FulfilmentCancellationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -6395,6 +6942,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation)
   {
@@ -6413,6 +6961,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader)
@@ -6431,6 +6980,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6455,6 +7005,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6477,6 +7028,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nonnull final File aResult)
@@ -6498,6 +7050,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6519,6 +7072,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6543,6 +7097,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6566,6 +7121,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nonnull final Result aResult)
@@ -6587,6 +7143,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6611,6 +7168,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6639,6 +7197,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeFulfilmentCancellation (@Nonnull final FulfilmentCancellationType aFulfilmentCancellation,
                                                       @Nullable ClassLoader aClassLoader,
@@ -6653,6 +7212,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for GoodsItemItinerary.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <GoodsItemItineraryType> goodsItemItinerary ()
+  {
+    return UBL21WriterBuilder.create (GoodsItemItineraryType.class);
+  }
+
+  /**
    * Convert the passed {@link GoodsItemItineraryType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -6661,6 +7231,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary)
   {
@@ -6679,6 +7250,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader)
@@ -6697,6 +7269,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6721,6 +7294,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader,
@@ -6743,6 +7317,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nonnull final File aResult)
@@ -6764,6 +7339,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader,
@@ -6785,6 +7361,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6809,6 +7386,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader,
@@ -6829,6 +7407,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nonnull final Result aResult)
@@ -6850,6 +7429,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader,
@@ -6871,6 +7451,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -6899,6 +7480,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGoodsItemItinerary (@Nonnull final GoodsItemItineraryType aGoodsItemItinerary,
                                                   @Nullable ClassLoader aClassLoader,
@@ -6913,6 +7495,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for GuaranteeCertificate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <GuaranteeCertificateType> guaranteeCertificate ()
+  {
+    return UBL21WriterBuilder.create (GuaranteeCertificateType.class);
+  }
+
+  /**
    * Convert the passed {@link GuaranteeCertificateType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -6921,6 +7514,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate)
   {
@@ -6939,6 +7533,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader)
@@ -6957,6 +7552,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6981,6 +7577,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader,
@@ -7003,6 +7600,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nonnull final File aResult)
@@ -7024,6 +7622,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader,
@@ -7045,6 +7644,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7069,6 +7669,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader,
@@ -7092,6 +7693,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nonnull final Result aResult)
@@ -7113,6 +7715,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader,
@@ -7134,6 +7737,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7162,6 +7766,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeGuaranteeCertificate (@Nonnull final GuaranteeCertificateType aGuaranteeCertificate,
                                                     @Nullable ClassLoader aClassLoader,
@@ -7176,6 +7781,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for InstructionForReturns.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <InstructionForReturnsType> instructionForReturns ()
+  {
+    return UBL21WriterBuilder.create (InstructionForReturnsType.class);
+  }
+
+  /**
    * Convert the passed {@link InstructionForReturnsType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -7184,6 +7800,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns)
   {
@@ -7202,6 +7819,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader)
@@ -7220,6 +7838,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7244,6 +7863,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader,
@@ -7266,6 +7886,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nonnull final File aResult)
@@ -7287,6 +7908,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader,
@@ -7308,6 +7930,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7332,6 +7955,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader,
@@ -7355,6 +7979,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nonnull final Result aResult)
@@ -7376,6 +8001,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader,
@@ -7400,6 +8026,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7428,6 +8055,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInstructionForReturns (@Nonnull final InstructionForReturnsType aInstructionForReturns,
                                                      @Nullable ClassLoader aClassLoader,
@@ -7442,6 +8070,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for InventoryReport.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <InventoryReportType> inventoryReport ()
+  {
+    return UBL21WriterBuilder.create (InventoryReportType.class);
+  }
+
+  /**
    * Convert the passed {@link InventoryReportType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -7450,6 +8089,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport)
   {
@@ -7468,6 +8108,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader)
@@ -7486,6 +8127,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7510,6 +8152,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader,
@@ -7532,6 +8175,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nonnull final File aResult)
@@ -7553,6 +8197,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader,
@@ -7574,6 +8219,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7598,6 +8244,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader,
@@ -7618,6 +8265,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nonnull final Result aResult)
@@ -7639,6 +8287,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader,
@@ -7660,6 +8309,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7688,6 +8338,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInventoryReport (@Nonnull final InventoryReportType aInventoryReport,
                                                @Nullable ClassLoader aClassLoader,
@@ -7702,6 +8353,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Invoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <InvoiceType> invoice ()
+  {
+    return UBL21WriterBuilder.create (InvoiceType.class);
+  }
+
+  /**
    * Convert the passed {@link InvoiceType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -7710,6 +8372,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice)
   {
@@ -7728,6 +8391,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice, @Nullable ClassLoader aClassLoader)
   {
@@ -7745,6 +8409,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7769,6 +8434,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ClassLoader aClassLoader,
@@ -7788,6 +8454,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice, @Nonnull final File aResult)
   {
@@ -7808,6 +8475,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ClassLoader aClassLoader,
@@ -7829,6 +8497,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7853,6 +8522,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ClassLoader aClassLoader,
@@ -7873,6 +8543,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice, @Nonnull final Result aResult)
   {
@@ -7893,6 +8564,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ClassLoader aClassLoader,
@@ -7914,6 +8586,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -7942,6 +8615,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeInvoice (@Nonnull final InvoiceType aInvoice,
                                        @Nullable ClassLoader aClassLoader,
@@ -7956,6 +8630,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ItemInformationRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ItemInformationRequestType> itemInformationRequest ()
+  {
+    return UBL21WriterBuilder.create (ItemInformationRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link ItemInformationRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -7964,6 +8649,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest)
   {
@@ -7982,6 +8668,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader)
@@ -8000,6 +8687,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8024,6 +8712,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader,
@@ -8046,6 +8735,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nonnull final File aResult)
@@ -8067,6 +8757,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader,
@@ -8088,6 +8779,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8112,6 +8804,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader,
@@ -8135,6 +8828,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nonnull final Result aResult)
@@ -8156,6 +8850,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader,
@@ -8180,6 +8875,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8208,6 +8904,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeItemInformationRequest (@Nonnull final ItemInformationRequestType aItemInformationRequest,
                                                       @Nullable ClassLoader aClassLoader,
@@ -8222,6 +8919,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Order.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <OrderType> order ()
+  {
+    return UBL21WriterBuilder.create (OrderType.class);
+  }
+
+  /**
    * Convert the passed {@link OrderType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -8230,6 +8938,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder)
   {
@@ -8248,6 +8957,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
   {
@@ -8265,6 +8975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8286,6 +8997,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ClassLoader aClassLoader,
@@ -8305,6 +9017,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder, @Nonnull final File aResult)
   {
@@ -8325,6 +9038,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ClassLoader aClassLoader,
@@ -8346,6 +9060,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8370,6 +9085,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ClassLoader aClassLoader,
@@ -8390,6 +9106,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder, @Nonnull final Result aResult)
   {
@@ -8410,6 +9127,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ClassLoader aClassLoader,
@@ -8431,6 +9149,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8459,6 +9178,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrder (@Nonnull final OrderType aOrder,
                                      @Nullable ClassLoader aClassLoader,
@@ -8473,6 +9193,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for OrderCancellation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <OrderCancellationType> orderCancellation ()
+  {
+    return UBL21WriterBuilder.create (OrderCancellationType.class);
+  }
+
+  /**
    * Convert the passed {@link OrderCancellationType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -8481,6 +9212,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation)
   {
@@ -8499,6 +9231,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader)
@@ -8517,6 +9250,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8541,6 +9275,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader,
@@ -8563,6 +9298,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nonnull final File aResult)
@@ -8584,6 +9320,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader,
@@ -8605,6 +9342,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8629,6 +9367,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader,
@@ -8649,6 +9388,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nonnull final Result aResult)
@@ -8670,6 +9410,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader,
@@ -8691,6 +9432,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8719,6 +9461,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                  @Nullable ClassLoader aClassLoader,
@@ -8733,6 +9476,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for OrderChange.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <OrderChangeType> orderChange ()
+  {
+    return UBL21WriterBuilder.create (OrderChangeType.class);
+  }
+
+  /**
    * Convert the passed {@link OrderChangeType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -8741,6 +9495,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange)
   {
@@ -8759,6 +9514,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader)
@@ -8777,6 +9533,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8801,6 +9558,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader,
@@ -8823,6 +9581,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange, @Nonnull final File aResult)
   {
@@ -8843,6 +9602,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader,
@@ -8864,6 +9624,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8888,6 +9649,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader,
@@ -8908,6 +9670,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange, @Nonnull final Result aResult)
   {
@@ -8928,6 +9691,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader,
@@ -8949,6 +9713,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -8977,6 +9742,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                            @Nullable ClassLoader aClassLoader,
@@ -8991,6 +9757,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for OrderResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <OrderResponseType> orderResponse ()
+  {
+    return UBL21WriterBuilder.create (OrderResponseType.class);
+  }
+
+  /**
    * Convert the passed {@link OrderResponseType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -8999,6 +9776,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse)
   {
@@ -9017,6 +9795,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader)
@@ -9035,6 +9814,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9059,6 +9839,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader,
@@ -9081,6 +9862,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nonnull final File aResult)
@@ -9102,6 +9884,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader,
@@ -9123,6 +9906,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9147,6 +9931,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader,
@@ -9167,6 +9952,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nonnull final Result aResult)
@@ -9188,6 +9974,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader,
@@ -9209,6 +9996,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9237,6 +10025,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                              @Nullable ClassLoader aClassLoader,
@@ -9251,6 +10040,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for OrderResponseSimple.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <OrderResponseSimpleType> orderResponseSimple ()
+  {
+    return UBL21WriterBuilder.create (OrderResponseSimpleType.class);
+  }
+
+  /**
    * Convert the passed {@link OrderResponseSimpleType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -9259,6 +10059,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple)
   {
@@ -9277,6 +10078,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader)
@@ -9295,6 +10097,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9319,6 +10122,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader,
@@ -9341,6 +10145,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nonnull final File aResult)
@@ -9362,6 +10167,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader,
@@ -9383,6 +10189,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9407,6 +10214,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader,
@@ -9430,6 +10238,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nonnull final Result aResult)
@@ -9451,6 +10260,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader,
@@ -9472,6 +10282,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9500,6 +10311,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                    @Nullable ClassLoader aClassLoader,
@@ -9514,6 +10326,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for PackingList.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <PackingListType> packingList ()
+  {
+    return UBL21WriterBuilder.create (PackingListType.class);
+  }
+
+  /**
    * Convert the passed {@link PackingListType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -9522,6 +10345,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList)
   {
@@ -9540,6 +10364,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader)
@@ -9558,6 +10383,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9582,6 +10408,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader,
@@ -9604,6 +10431,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList, @Nonnull final File aResult)
   {
@@ -9624,6 +10452,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader,
@@ -9645,6 +10474,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9669,6 +10499,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader,
@@ -9689,6 +10520,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList, @Nonnull final Result aResult)
   {
@@ -9709,6 +10541,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader,
@@ -9730,6 +10563,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9758,6 +10592,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePackingList (@Nonnull final PackingListType aPackingList,
                                            @Nullable ClassLoader aClassLoader,
@@ -9772,6 +10607,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for PriorInformationNotice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <PriorInformationNoticeType> priorInformationNotice ()
+  {
+    return UBL21WriterBuilder.create (PriorInformationNoticeType.class);
+  }
+
+  /**
    * Convert the passed {@link PriorInformationNoticeType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -9780,6 +10626,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice)
   {
@@ -9798,6 +10645,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader)
@@ -9816,6 +10664,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9840,6 +10689,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader,
@@ -9862,6 +10712,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nonnull final File aResult)
@@ -9883,6 +10734,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader,
@@ -9904,6 +10756,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -9928,6 +10781,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader,
@@ -9951,6 +10805,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nonnull final Result aResult)
@@ -9972,6 +10827,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader,
@@ -9996,6 +10852,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10024,6 +10881,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writePriorInformationNotice (@Nonnull final PriorInformationNoticeType aPriorInformationNotice,
                                                       @Nullable ClassLoader aClassLoader,
@@ -10038,6 +10896,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ProductActivity.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ProductActivityType> productActivity ()
+  {
+    return UBL21WriterBuilder.create (ProductActivityType.class);
+  }
+
+  /**
    * Convert the passed {@link ProductActivityType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -10046,6 +10915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity)
   {
@@ -10064,6 +10934,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader)
@@ -10082,6 +10953,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -10106,6 +10978,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader,
@@ -10128,6 +11001,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nonnull final File aResult)
@@ -10149,6 +11023,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader,
@@ -10170,6 +11045,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10194,6 +11070,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader,
@@ -10214,6 +11091,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nonnull final Result aResult)
@@ -10235,6 +11113,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader,
@@ -10256,6 +11135,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10284,6 +11164,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeProductActivity (@Nonnull final ProductActivityType aProductActivity,
                                                @Nullable ClassLoader aClassLoader,
@@ -10298,6 +11179,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Quotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <QuotationType> quotation ()
+  {
+    return UBL21WriterBuilder.create (QuotationType.class);
+  }
+
+  /**
    * Convert the passed {@link QuotationType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -10306,6 +11198,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation)
   {
@@ -10324,6 +11217,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation, @Nullable ClassLoader aClassLoader)
   {
@@ -10341,6 +11235,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -10365,6 +11260,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ClassLoader aClassLoader,
@@ -10387,6 +11283,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation, @Nonnull final File aResult)
   {
@@ -10407,6 +11304,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ClassLoader aClassLoader,
@@ -10428,6 +11326,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10452,6 +11351,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ClassLoader aClassLoader,
@@ -10472,6 +11372,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation, @Nonnull final Result aResult)
   {
@@ -10492,6 +11393,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ClassLoader aClassLoader,
@@ -10513,6 +11415,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10541,6 +11444,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeQuotation (@Nonnull final QuotationType aQuotation,
                                          @Nullable ClassLoader aClassLoader,
@@ -10555,6 +11459,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for ReceiptAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ReceiptAdviceType> receiptAdvice ()
+  {
+    return UBL21WriterBuilder.create (ReceiptAdviceType.class);
+  }
+
+  /**
    * Convert the passed {@link ReceiptAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -10563,6 +11478,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice)
   {
@@ -10581,6 +11497,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader)
@@ -10599,6 +11516,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -10623,6 +11541,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader,
@@ -10645,6 +11564,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nonnull final File aResult)
@@ -10666,6 +11586,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader,
@@ -10687,6 +11608,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10711,6 +11633,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader,
@@ -10731,6 +11654,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nonnull final Result aResult)
@@ -10752,6 +11676,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader,
@@ -10773,6 +11698,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10801,6 +11727,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                              @Nullable ClassLoader aClassLoader,
@@ -10815,6 +11742,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Reminder.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <ReminderType> reminder ()
+  {
+    return UBL21WriterBuilder.create (ReminderType.class);
+  }
+
+  /**
    * Convert the passed {@link ReminderType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -10823,6 +11761,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder)
   {
@@ -10841,6 +11780,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder, @Nullable ClassLoader aClassLoader)
   {
@@ -10858,6 +11798,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ValidationEventHandler aCustomEventHandler)
@@ -10882,6 +11823,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ClassLoader aClassLoader,
@@ -10901,6 +11843,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder, @Nonnull final File aResult)
   {
@@ -10921,6 +11864,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ClassLoader aClassLoader,
@@ -10942,6 +11886,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -10966,6 +11911,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ClassLoader aClassLoader,
@@ -10986,6 +11932,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder, @Nonnull final Result aResult)
   {
@@ -11006,6 +11953,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ClassLoader aClassLoader,
@@ -11027,6 +11975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11055,6 +12004,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeReminder (@Nonnull final ReminderType aReminder,
                                         @Nullable ClassLoader aClassLoader,
@@ -11069,6 +12019,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for RemittanceAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <RemittanceAdviceType> remittanceAdvice ()
+  {
+    return UBL21WriterBuilder.create (RemittanceAdviceType.class);
+  }
+
+  /**
    * Convert the passed {@link RemittanceAdviceType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -11077,6 +12038,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice)
   {
@@ -11095,6 +12057,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader)
@@ -11113,6 +12076,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -11137,6 +12101,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader,
@@ -11159,6 +12124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nonnull final File aResult)
@@ -11180,6 +12146,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader,
@@ -11201,6 +12168,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11225,6 +12193,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader,
@@ -11245,6 +12214,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nonnull final Result aResult)
@@ -11266,6 +12236,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader,
@@ -11287,6 +12258,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11315,6 +12287,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                 @Nullable ClassLoader aClassLoader,
@@ -11329,6 +12302,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for RequestForQuotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <RequestForQuotationType> requestForQuotation ()
+  {
+    return UBL21WriterBuilder.create (RequestForQuotationType.class);
+  }
+
+  /**
    * Convert the passed {@link RequestForQuotationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -11337,6 +12321,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation)
   {
@@ -11355,6 +12340,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader)
@@ -11373,6 +12359,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -11397,6 +12384,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader,
@@ -11419,6 +12407,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nonnull final File aResult)
@@ -11440,6 +12429,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader,
@@ -11461,6 +12451,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11485,6 +12476,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader,
@@ -11508,6 +12500,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nonnull final Result aResult)
@@ -11529,6 +12522,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader,
@@ -11550,6 +12544,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11578,6 +12573,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                    @Nullable ClassLoader aClassLoader,
@@ -11592,6 +12588,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for RetailEvent.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <RetailEventType> retailEvent ()
+  {
+    return UBL21WriterBuilder.create (RetailEventType.class);
+  }
+
+  /**
    * Convert the passed {@link RetailEventType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -11600,6 +12607,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent)
   {
@@ -11618,6 +12626,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader)
@@ -11636,6 +12645,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -11660,6 +12670,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader,
@@ -11682,6 +12693,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent, @Nonnull final File aResult)
   {
@@ -11702,6 +12714,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader,
@@ -11723,6 +12736,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11747,6 +12761,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader,
@@ -11767,6 +12782,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent, @Nonnull final Result aResult)
   {
@@ -11787,6 +12803,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader,
@@ -11808,6 +12825,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -11836,6 +12854,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeRetailEvent (@Nonnull final RetailEventType aRetailEvent,
                                            @Nullable ClassLoader aClassLoader,
@@ -11850,6 +12869,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for SelfBilledCreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
+  {
+    return UBL21WriterBuilder.create (SelfBilledCreditNoteType.class);
+  }
+
+  /**
    * Convert the passed {@link SelfBilledCreditNoteType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -11858,6 +12888,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote)
   {
@@ -11876,6 +12907,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader)
@@ -11894,6 +12926,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ValidationEventHandler aCustomEventHandler)
@@ -11918,6 +12951,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader,
@@ -11940,6 +12974,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nonnull final File aResult)
@@ -11961,6 +12996,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader,
@@ -11982,6 +13018,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12006,6 +13043,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader,
@@ -12029,6 +13067,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nonnull final Result aResult)
@@ -12050,6 +13089,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader,
@@ -12071,6 +13111,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12099,6 +13140,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                     @Nullable ClassLoader aClassLoader,
@@ -12113,6 +13155,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for SelfBilledInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
+  {
+    return UBL21WriterBuilder.create (SelfBilledInvoiceType.class);
+  }
+
+  /**
    * Convert the passed {@link SelfBilledInvoiceType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -12121,6 +13174,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice)
   {
@@ -12139,6 +13193,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader)
@@ -12157,6 +13212,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -12181,6 +13237,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader,
@@ -12203,6 +13260,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nonnull final File aResult)
@@ -12224,6 +13282,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader,
@@ -12245,6 +13304,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12269,6 +13329,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader,
@@ -12289,6 +13350,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nonnull final Result aResult)
@@ -12310,6 +13372,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader,
@@ -12331,6 +13394,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12359,6 +13423,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                  @Nullable ClassLoader aClassLoader,
@@ -12373,6 +13438,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Statement.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <StatementType> statement ()
+  {
+    return UBL21WriterBuilder.create (StatementType.class);
+  }
+
+  /**
    * Convert the passed {@link StatementType} to a DOM {@link Document} using
    * the global validation event handler.
    * 
@@ -12381,6 +13457,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement)
   {
@@ -12399,6 +13476,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement, @Nullable ClassLoader aClassLoader)
   {
@@ -12416,6 +13494,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -12440,6 +13519,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ClassLoader aClassLoader,
@@ -12462,6 +13542,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement, @Nonnull final File aResult)
   {
@@ -12482,6 +13563,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ClassLoader aClassLoader,
@@ -12503,6 +13585,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12527,6 +13610,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ClassLoader aClassLoader,
@@ -12547,6 +13631,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement, @Nonnull final Result aResult)
   {
@@ -12567,6 +13652,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ClassLoader aClassLoader,
@@ -12588,6 +13674,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12616,6 +13703,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStatement (@Nonnull final StatementType aStatement,
                                          @Nullable ClassLoader aClassLoader,
@@ -12630,6 +13718,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for StockAvailabilityReport.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <StockAvailabilityReportType> stockAvailabilityReport ()
+  {
+    return UBL21WriterBuilder.create (StockAvailabilityReportType.class);
+  }
+
+  /**
    * Convert the passed {@link StockAvailabilityReportType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -12638,6 +13737,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport)
   {
@@ -12656,6 +13756,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader)
@@ -12674,6 +13775,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -12698,6 +13800,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader,
@@ -12720,6 +13823,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nonnull final File aResult)
@@ -12741,6 +13845,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader,
@@ -12762,6 +13867,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12786,6 +13892,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader,
@@ -12809,6 +13916,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nonnull final Result aResult)
@@ -12830,6 +13938,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader,
@@ -12854,6 +13963,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -12882,6 +13992,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeStockAvailabilityReport (@Nonnull final StockAvailabilityReportType aStockAvailabilityReport,
                                                        @Nullable ClassLoader aClassLoader,
@@ -12896,6 +14007,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Tender.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TenderType> tender ()
+  {
+    return UBL21WriterBuilder.create (TenderType.class);
+  }
+
+  /**
    * Convert the passed {@link TenderType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -12904,6 +14026,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender)
   {
@@ -12922,6 +14045,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender, @Nullable ClassLoader aClassLoader)
   {
@@ -12939,6 +14063,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -12963,6 +14088,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ClassLoader aClassLoader,
@@ -12982,6 +14108,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender, @Nonnull final File aResult)
   {
@@ -13002,6 +14129,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ClassLoader aClassLoader,
@@ -13023,6 +14151,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13047,6 +14176,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ClassLoader aClassLoader,
@@ -13067,6 +14197,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender, @Nonnull final Result aResult)
   {
@@ -13087,6 +14218,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ClassLoader aClassLoader,
@@ -13108,6 +14240,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13136,6 +14269,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTender (@Nonnull final TenderType aTender,
                                       @Nullable ClassLoader aClassLoader,
@@ -13150,6 +14284,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TendererQualification.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TendererQualificationType> tendererQualification ()
+  {
+    return UBL21WriterBuilder.create (TendererQualificationType.class);
+  }
+
+  /**
    * Convert the passed {@link TendererQualificationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -13158,6 +14303,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification)
   {
@@ -13176,6 +14322,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader)
@@ -13194,6 +14341,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -13218,6 +14366,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -13240,6 +14389,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nonnull final File aResult)
@@ -13261,6 +14411,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -13282,6 +14433,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13306,6 +14458,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -13329,6 +14482,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nonnull final Result aResult)
@@ -13350,6 +14504,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -13374,6 +14529,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13402,6 +14558,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualification (@Nonnull final TendererQualificationType aTendererQualification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -13416,6 +14573,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TendererQualificationResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TendererQualificationResponseType> tendererQualificationResponse ()
+  {
+    return UBL21WriterBuilder.create (TendererQualificationResponseType.class);
+  }
+
+  /**
    * Convert the passed {@link TendererQualificationResponseType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -13424,6 +14592,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse)
   {
@@ -13442,6 +14611,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader)
@@ -13462,6 +14632,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -13486,6 +14657,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader,
@@ -13508,6 +14680,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nonnull final File aResult)
@@ -13529,6 +14702,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader,
@@ -13552,6 +14726,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13578,6 +14753,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader,
@@ -13601,6 +14777,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nonnull final Result aResult)
@@ -13624,6 +14801,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader,
@@ -13648,6 +14826,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13676,6 +14855,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTendererQualificationResponse (@Nonnull final TendererQualificationResponseType aTendererQualificationResponse,
                                                              @Nullable ClassLoader aClassLoader,
@@ -13690,6 +14870,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TenderReceipt.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TenderReceiptType> tenderReceipt ()
+  {
+    return UBL21WriterBuilder.create (TenderReceiptType.class);
+  }
+
+  /**
    * Convert the passed {@link TenderReceiptType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -13698,6 +14889,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt)
   {
@@ -13716,6 +14908,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader)
@@ -13734,6 +14927,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -13758,6 +14952,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader,
@@ -13780,6 +14975,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nonnull final File aResult)
@@ -13801,6 +14997,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader,
@@ -13822,6 +15019,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13846,6 +15044,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader,
@@ -13866,6 +15065,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nonnull final Result aResult)
@@ -13887,6 +15087,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader,
@@ -13908,6 +15109,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -13936,6 +15138,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTenderReceipt (@Nonnull final TenderReceiptType aTenderReceipt,
                                              @Nullable ClassLoader aClassLoader,
@@ -13950,6 +15153,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TradeItemLocationProfile.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TradeItemLocationProfileType> tradeItemLocationProfile ()
+  {
+    return UBL21WriterBuilder.create (TradeItemLocationProfileType.class);
+  }
+
+  /**
    * Convert the passed {@link TradeItemLocationProfileType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -13958,6 +15172,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile)
   {
@@ -13976,6 +15191,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader)
@@ -13994,6 +15210,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ValidationEventHandler aCustomEventHandler)
@@ -14018,6 +15235,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader,
@@ -14040,6 +15258,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nonnull final File aResult)
@@ -14061,6 +15280,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader,
@@ -14082,6 +15302,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14106,6 +15327,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader,
@@ -14129,6 +15351,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nonnull final Result aResult)
@@ -14150,6 +15373,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader,
@@ -14174,6 +15398,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14202,6 +15427,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTradeItemLocationProfile (@Nonnull final TradeItemLocationProfileType aTradeItemLocationProfile,
                                                         @Nullable ClassLoader aClassLoader,
@@ -14216,6 +15442,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportationStatus.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportationStatusType> transportationStatus ()
+  {
+    return UBL21WriterBuilder.create (TransportationStatusType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportationStatusType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -14224,6 +15461,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus)
   {
@@ -14242,6 +15480,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader)
@@ -14260,6 +15499,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ValidationEventHandler aCustomEventHandler)
@@ -14284,6 +15524,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader,
@@ -14306,6 +15547,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nonnull final File aResult)
@@ -14327,6 +15569,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader,
@@ -14348,6 +15591,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14372,6 +15616,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader,
@@ -14395,6 +15640,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nonnull final Result aResult)
@@ -14416,6 +15662,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader,
@@ -14437,6 +15684,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14465,6 +15713,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                     @Nullable ClassLoader aClassLoader,
@@ -14479,6 +15728,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportationStatusRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportationStatusRequestType> transportationStatusRequest ()
+  {
+    return UBL21WriterBuilder.create (TransportationStatusRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportationStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -14487,6 +15747,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest)
   {
@@ -14505,6 +15766,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader)
@@ -14525,6 +15787,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -14549,6 +15812,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader,
@@ -14571,6 +15835,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nonnull final File aResult)
@@ -14592,6 +15857,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader,
@@ -14613,6 +15879,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14639,6 +15906,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader,
@@ -14662,6 +15930,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nonnull final Result aResult)
@@ -14683,6 +15952,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader,
@@ -14707,6 +15977,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14735,6 +16006,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportationStatusRequest (@Nonnull final TransportationStatusRequestType aTransportationStatusRequest,
                                                            @Nullable ClassLoader aClassLoader,
@@ -14749,6 +16021,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportExecutionPlan.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportExecutionPlanType> transportExecutionPlan ()
+  {
+    return UBL21WriterBuilder.create (TransportExecutionPlanType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportExecutionPlanType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -14757,6 +16040,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan)
   {
@@ -14775,6 +16059,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader)
@@ -14793,6 +16078,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ValidationEventHandler aCustomEventHandler)
@@ -14817,6 +16103,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader,
@@ -14839,6 +16126,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nonnull final File aResult)
@@ -14860,6 +16148,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader,
@@ -14881,6 +16170,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -14905,6 +16195,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader,
@@ -14928,6 +16219,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nonnull final Result aResult)
@@ -14949,6 +16241,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader,
@@ -14973,6 +16266,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15001,6 +16295,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlan (@Nonnull final TransportExecutionPlanType aTransportExecutionPlan,
                                                       @Nullable ClassLoader aClassLoader,
@@ -15015,6 +16310,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportExecutionPlanRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
+  {
+    return UBL21WriterBuilder.create (TransportExecutionPlanRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportExecutionPlanRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -15023,6 +16329,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest)
   {
@@ -15041,6 +16348,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader)
@@ -15061,6 +16369,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -15085,6 +16394,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader,
@@ -15107,6 +16417,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nonnull final File aResult)
@@ -15128,6 +16439,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader,
@@ -15151,6 +16463,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15177,6 +16490,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader,
@@ -15200,6 +16514,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nonnull final Result aResult)
@@ -15223,6 +16538,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader,
@@ -15247,6 +16563,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15275,6 +16592,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportExecutionPlanRequest (@Nonnull final TransportExecutionPlanRequestType aTransportExecutionPlanRequest,
                                                              @Nullable ClassLoader aClassLoader,
@@ -15289,6 +16607,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportProgressStatus.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportProgressStatusType> transportProgressStatus ()
+  {
+    return UBL21WriterBuilder.create (TransportProgressStatusType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportProgressStatusType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -15297,6 +16626,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus)
   {
@@ -15315,6 +16645,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader)
@@ -15333,6 +16664,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -15357,6 +16689,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader,
@@ -15379,6 +16712,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nonnull final File aResult)
@@ -15400,6 +16734,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader,
@@ -15421,6 +16756,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15445,6 +16781,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader,
@@ -15468,6 +16805,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nonnull final Result aResult)
@@ -15489,6 +16827,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader,
@@ -15513,6 +16852,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15541,6 +16881,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatus (@Nonnull final TransportProgressStatusType aTransportProgressStatus,
                                                        @Nullable ClassLoader aClassLoader,
@@ -15555,6 +16896,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportProgressStatusRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportProgressStatusRequestType> transportProgressStatusRequest ()
+  {
+    return UBL21WriterBuilder.create (TransportProgressStatusRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportProgressStatusRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -15563,6 +16915,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest)
   {
@@ -15581,6 +16934,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader)
@@ -15601,6 +16955,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ValidationEventHandler aCustomEventHandler)
@@ -15625,6 +16980,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader,
@@ -15647,6 +17003,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nonnull final File aResult)
@@ -15668,6 +17025,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader,
@@ -15691,6 +17049,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15717,6 +17076,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader,
@@ -15740,6 +17100,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nonnull final Result aResult)
@@ -15763,6 +17124,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader,
@@ -15787,6 +17149,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15815,6 +17178,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportProgressStatusRequest (@Nonnull final TransportProgressStatusRequestType aTransportProgressStatusRequest,
                                                               @Nullable ClassLoader aClassLoader,
@@ -15829,6 +17193,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportServiceDescription.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportServiceDescriptionType> transportServiceDescription ()
+  {
+    return UBL21WriterBuilder.create (TransportServiceDescriptionType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportServiceDescriptionType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -15837,6 +17212,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription)
   {
@@ -15855,6 +17231,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader)
@@ -15875,6 +17252,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -15899,6 +17277,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader,
@@ -15921,6 +17300,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nonnull final File aResult)
@@ -15942,6 +17322,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader,
@@ -15963,6 +17344,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -15989,6 +17371,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader,
@@ -16012,6 +17395,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nonnull final Result aResult)
@@ -16033,6 +17417,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader,
@@ -16057,6 +17442,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16085,6 +17471,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescription (@Nonnull final TransportServiceDescriptionType aTransportServiceDescription,
                                                            @Nullable ClassLoader aClassLoader,
@@ -16099,6 +17486,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for TransportServiceDescriptionRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
+  {
+    return UBL21WriterBuilder.create (TransportServiceDescriptionRequestType.class);
+  }
+
+  /**
    * Convert the passed {@link TransportServiceDescriptionRequestType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -16107,6 +17505,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest)
   {
@@ -16126,6 +17525,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader)
@@ -16146,6 +17546,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ValidationEventHandler aCustomEventHandler)
@@ -16170,6 +17571,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader,
@@ -16192,6 +17594,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nonnull final File aResult)
@@ -16213,6 +17616,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader,
@@ -16236,6 +17640,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16262,6 +17667,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader,
@@ -16285,6 +17691,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nonnull final Result aResult)
@@ -16308,6 +17715,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader,
@@ -16332,6 +17740,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16360,6 +17769,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeTransportServiceDescriptionRequest (@Nonnull final TransportServiceDescriptionRequestType aTransportServiceDescriptionRequest,
                                                                   @Nullable ClassLoader aClassLoader,
@@ -16374,6 +17784,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for UnawardedNotification.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <UnawardedNotificationType> unawardedNotification ()
+  {
+    return UBL21WriterBuilder.create (UnawardedNotificationType.class);
+  }
+
+  /**
    * Convert the passed {@link UnawardedNotificationType} to a DOM
    * {@link Document} using the global validation event handler.
    * 
@@ -16382,6 +17803,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification)
   {
@@ -16400,6 +17822,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader)
@@ -16418,6 +17841,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -16442,6 +17866,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -16464,6 +17889,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nonnull final File aResult)
@@ -16485,6 +17911,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -16506,6 +17933,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16530,6 +17958,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -16553,6 +17982,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nonnull final Result aResult)
@@ -16574,6 +18004,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -16598,6 +18029,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16626,6 +18058,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUnawardedNotification (@Nonnull final UnawardedNotificationType aUnawardedNotification,
                                                      @Nullable ClassLoader aClassLoader,
@@ -16640,6 +18073,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for UtilityStatement.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <UtilityStatementType> utilityStatement ()
+  {
+    return UBL21WriterBuilder.create (UtilityStatementType.class);
+  }
+
+  /**
    * Convert the passed {@link UtilityStatementType} to a DOM {@link Document}
    * using the global validation event handler.
    * 
@@ -16648,6 +18092,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement)
   {
@@ -16666,6 +18111,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader)
@@ -16684,6 +18130,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ValidationEventHandler aCustomEventHandler)
@@ -16708,6 +18155,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader,
@@ -16730,6 +18178,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nonnull final File aResult)
@@ -16751,6 +18200,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader,
@@ -16772,6 +18222,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16796,6 +18247,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader,
@@ -16816,6 +18268,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nonnull final Result aResult)
@@ -16837,6 +18290,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader,
@@ -16858,6 +18312,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -16886,6 +18341,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeUtilityStatement (@Nonnull final UtilityStatementType aUtilityStatement,
                                                 @Nullable ClassLoader aClassLoader,
@@ -16900,6 +18356,17 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a writer builder for Waybill.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL21WriterBuilder <WaybillType> waybill ()
+  {
+    return UBL21WriterBuilder.create (WaybillType.class);
+  }
+
+  /**
    * Convert the passed {@link WaybillType} to a DOM {@link Document} using the
    * global validation event handler.
    * 
@@ -16908,6 +18375,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill)
   {
@@ -16926,6 +18394,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill, @Nullable ClassLoader aClassLoader)
   {
@@ -16943,6 +18412,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -16967,6 +18437,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
+  @Deprecated
   @Nullable
   public static Document writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ClassLoader aClassLoader,
@@ -16986,6 +18457,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill, @Nonnull final File aResult)
   {
@@ -17006,6 +18478,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ClassLoader aClassLoader,
@@ -17027,6 +18500,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -17051,6 +18525,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ClassLoader aClassLoader,
@@ -17071,6 +18546,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill, @Nonnull final Result aResult)
   {
@@ -17091,6 +18567,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ClassLoader aClassLoader,
@@ -17112,6 +18589,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable final ValidationEventHandler aCustomEventHandler,
@@ -17140,6 +18618,7 @@ public final class UBL21Writer extends AbstractUBLDocumentMarshaller
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
+  @Deprecated
   @Nonnull
   public static ESuccess writeWaybill (@Nonnull final WaybillType aWaybill,
                                        @Nullable ClassLoader aClassLoader,

@@ -20,24 +20,40 @@ import javax.annotation.Nonnull;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
+import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
 
 /**
  * A writer builder for UBL 2.0 documents.
  *
  * @author Philip Helger
+ * @param <T>
+ *          The UBL 2.0 implementation class to be read
  */
-public class UBL20ValidatorBuilder extends AbstractUBLWriterBuilder <UBL20ValidatorBuilder>
+public class UBL20ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, UBL20ValidatorBuilder <T>>
 {
-  public UBL20ValidatorBuilder (@Nonnull final EUBL20DocumentType eDocType)
+  public UBL20ValidatorBuilder (@Nonnull final Class <T> aClass)
   {
-    super (eDocType);
+    super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
+  @Override
   @Nonnull
-  public IResourceErrorGroup validate (@Nonnull final Object aUBLDocument)
+  public IResourceErrorGroup validate (@Nonnull final T aUBLDocument)
   {
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
     return UBL20Marshaller.validateUBLObject (aUBLDocument, m_aClassLoader, (EUBL20DocumentType) m_aDocType);
+  }
+
+  /**
+   * Create a new validation builder.
+   *
+   * @param aClass
+   *          The UBL class to be validated. May not be <code>null</code>.
+   * @return The new validation builder. Never <code>null</code>.
+   */
+  @Nonnull
+  public static <T> UBL20ValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
+  {
+    return new UBL20ValidatorBuilder <T> (aClass);
   }
 }

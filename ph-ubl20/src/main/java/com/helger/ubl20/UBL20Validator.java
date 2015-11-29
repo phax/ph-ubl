@@ -1,19 +1,3 @@
-/**
- * Copyright (C) 2014-2015 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
@@ -71,12 +55,24 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
   {}
 
   /**
+   * Create a validation builder for ApplicationResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <ApplicationResponseType> applicationResponse ()
+  {
+    return UBL20ValidatorBuilder.create (ApplicationResponseType.class);
+  }
+
+  /**
    * Validate the passed {@link ApplicationResponseType} object.
    * 
    * @param sParam
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse)
   {
@@ -95,6 +91,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -112,6 +109,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse)
   {
     return validateApplicationResponse (aApplicationResponse, (ClassLoader) null).containsNoError ();
@@ -128,10 +126,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidApplicationResponse (@Nonnull final ApplicationResponseType aApplicationResponse,
                                                     @Nullable ClassLoader aClassLoader)
   {
     return validateApplicationResponse (aApplicationResponse, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for AttachedDocument.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <AttachedDocumentType> attachedDocument ()
+  {
+    return UBL20ValidatorBuilder.create (AttachedDocumentType.class);
   }
 
   /**
@@ -141,6 +151,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument)
   {
@@ -159,6 +170,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                               @Nullable ClassLoader aClassLoader)
@@ -174,6 +186,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument)
   {
     return validateAttachedDocument (aAttachedDocument, (ClassLoader) null).containsNoError ();
@@ -190,10 +203,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidAttachedDocument (@Nonnull final AttachedDocumentType aAttachedDocument,
                                                  @Nullable ClassLoader aClassLoader)
   {
     return validateAttachedDocument (aAttachedDocument, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for BillOfLading.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <BillOfLadingType> billOfLading ()
+  {
+    return UBL20ValidatorBuilder.create (BillOfLadingType.class);
   }
 
   /**
@@ -203,6 +228,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateBillOfLading (@Nonnull final BillOfLadingType aBillOfLading)
   {
@@ -219,6 +245,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                                           @Nullable ClassLoader aClassLoader)
@@ -234,6 +261,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBillOfLading)
   {
     return validateBillOfLading (aBillOfLading, (ClassLoader) null).containsNoError ();
@@ -250,10 +278,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidBillOfLading (@Nonnull final BillOfLadingType aBillOfLading,
                                              @Nullable ClassLoader aClassLoader)
   {
     return validateBillOfLading (aBillOfLading, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Catalogue.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CatalogueType> catalogue ()
+  {
+    return UBL20ValidatorBuilder.create (CatalogueType.class);
   }
 
   /**
@@ -263,6 +303,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogue (@Nonnull final CatalogueType aCatalogue)
   {
@@ -279,6 +320,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogue (@Nonnull final CatalogueType aCatalogue,
                                                        @Nullable ClassLoader aClassLoader)
@@ -294,6 +336,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue)
   {
     return validateCatalogue (aCatalogue, (ClassLoader) null).containsNoError ();
@@ -310,9 +353,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogue (@Nonnull final CatalogueType aCatalogue, @Nullable ClassLoader aClassLoader)
   {
     return validateCatalogue (aCatalogue, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CatalogueDeletion.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CatalogueDeletionType> catalogueDeletion ()
+  {
+    return UBL20ValidatorBuilder.create (CatalogueDeletionType.class);
   }
 
   /**
@@ -322,6 +377,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion)
   {
@@ -340,6 +396,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                                @Nullable ClassLoader aClassLoader)
@@ -355,6 +412,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion)
   {
     return validateCatalogueDeletion (aCatalogueDeletion, (ClassLoader) null).containsNoError ();
@@ -371,10 +429,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueDeletion (@Nonnull final CatalogueDeletionType aCatalogueDeletion,
                                                   @Nullable ClassLoader aClassLoader)
   {
     return validateCatalogueDeletion (aCatalogueDeletion, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CatalogueItemSpecificationUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
+  {
+    return UBL20ValidatorBuilder.create (CatalogueItemSpecificationUpdateType.class);
   }
 
   /**
@@ -384,6 +454,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate)
   {
@@ -402,6 +473,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                               @Nullable ClassLoader aClassLoader)
@@ -419,6 +491,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate)
   {
     return validateCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
@@ -436,11 +509,23 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueItemSpecificationUpdate (@Nonnull final CatalogueItemSpecificationUpdateType aCatalogueItemSpecificationUpdate,
                                                                  @Nullable ClassLoader aClassLoader)
   {
     return validateCatalogueItemSpecificationUpdate (aCatalogueItemSpecificationUpdate,
                                                      aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CataloguePricingUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
+  {
+    return UBL20ValidatorBuilder.create (CataloguePricingUpdateType.class);
   }
 
   /**
@@ -450,6 +535,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate)
   {
@@ -468,6 +554,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                                     @Nullable ClassLoader aClassLoader)
@@ -485,6 +572,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate)
   {
     return validateCataloguePricingUpdate (aCataloguePricingUpdate, (ClassLoader) null).containsNoError ();
@@ -501,10 +589,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCataloguePricingUpdate (@Nonnull final CataloguePricingUpdateType aCataloguePricingUpdate,
                                                        @Nullable ClassLoader aClassLoader)
   {
     return validateCataloguePricingUpdate (aCataloguePricingUpdate, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CatalogueRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CatalogueRequestType> catalogueRequest ()
+  {
+    return UBL20ValidatorBuilder.create (CatalogueRequestType.class);
   }
 
   /**
@@ -514,6 +614,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest)
   {
@@ -532,6 +633,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                               @Nullable ClassLoader aClassLoader)
@@ -547,6 +649,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest)
   {
     return validateCatalogueRequest (aCatalogueRequest, (ClassLoader) null).containsNoError ();
@@ -563,10 +666,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCatalogueRequest (@Nonnull final CatalogueRequestType aCatalogueRequest,
                                                  @Nullable ClassLoader aClassLoader)
   {
     return validateCatalogueRequest (aCatalogueRequest, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CertificateOfOrigin.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CertificateOfOriginType> certificateOfOrigin ()
+  {
+    return UBL20ValidatorBuilder.create (CertificateOfOriginType.class);
   }
 
   /**
@@ -576,6 +691,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin)
   {
@@ -594,6 +710,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -611,6 +728,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin)
   {
     return validateCertificateOfOrigin (aCertificateOfOrigin, (ClassLoader) null).containsNoError ();
@@ -627,10 +745,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCertificateOfOrigin (@Nonnull final CertificateOfOriginType aCertificateOfOrigin,
                                                     @Nullable ClassLoader aClassLoader)
   {
     return validateCertificateOfOrigin (aCertificateOfOrigin, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for CreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <CreditNoteType> creditNote ()
+  {
+    return UBL20ValidatorBuilder.create (CreditNoteType.class);
   }
 
   /**
@@ -640,6 +770,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCreditNote (@Nonnull final CreditNoteType aCreditNote)
   {
@@ -656,6 +787,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                                         @Nullable ClassLoader aClassLoader)
@@ -671,6 +803,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNote)
   {
     return validateCreditNote (aCreditNote, (ClassLoader) null).containsNoError ();
@@ -687,10 +820,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidCreditNote (@Nonnull final CreditNoteType aCreditNote,
                                            @Nullable ClassLoader aClassLoader)
   {
     return validateCreditNote (aCreditNote, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for DebitNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <DebitNoteType> debitNote ()
+  {
+    return UBL20ValidatorBuilder.create (DebitNoteType.class);
   }
 
   /**
@@ -700,6 +845,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDebitNote (@Nonnull final DebitNoteType aDebitNote)
   {
@@ -716,6 +862,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDebitNote (@Nonnull final DebitNoteType aDebitNote,
                                                        @Nullable ClassLoader aClassLoader)
@@ -731,6 +878,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote)
   {
     return validateDebitNote (aDebitNote, (ClassLoader) null).containsNoError ();
@@ -747,9 +895,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidDebitNote (@Nonnull final DebitNoteType aDebitNote, @Nullable ClassLoader aClassLoader)
   {
     return validateDebitNote (aDebitNote, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for DespatchAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <DespatchAdviceType> despatchAdvice ()
+  {
+    return UBL20ValidatorBuilder.create (DespatchAdviceType.class);
   }
 
   /**
@@ -759,6 +919,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice)
   {
@@ -775,6 +936,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                                             @Nullable ClassLoader aClassLoader)
@@ -790,6 +952,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice)
   {
     return validateDespatchAdvice (aDespatchAdvice, (ClassLoader) null).containsNoError ();
@@ -806,10 +969,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidDespatchAdvice (@Nonnull final DespatchAdviceType aDespatchAdvice,
                                                @Nullable ClassLoader aClassLoader)
   {
     return validateDespatchAdvice (aDespatchAdvice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for ForwardingInstructions.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <ForwardingInstructionsType> forwardingInstructions ()
+  {
+    return UBL20ValidatorBuilder.create (ForwardingInstructionsType.class);
   }
 
   /**
@@ -819,6 +994,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions)
   {
@@ -837,6 +1013,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                                     @Nullable ClassLoader aClassLoader)
@@ -854,6 +1031,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions)
   {
     return validateForwardingInstructions (aForwardingInstructions, (ClassLoader) null).containsNoError ();
@@ -870,10 +1048,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidForwardingInstructions (@Nonnull final ForwardingInstructionsType aForwardingInstructions,
                                                        @Nullable ClassLoader aClassLoader)
   {
     return validateForwardingInstructions (aForwardingInstructions, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for FreightInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <FreightInvoiceType> freightInvoice ()
+  {
+    return UBL20ValidatorBuilder.create (FreightInvoiceType.class);
   }
 
   /**
@@ -883,6 +1073,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice)
   {
@@ -899,6 +1090,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                                             @Nullable ClassLoader aClassLoader)
@@ -914,6 +1106,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice)
   {
     return validateFreightInvoice (aFreightInvoice, (ClassLoader) null).containsNoError ();
@@ -930,10 +1123,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidFreightInvoice (@Nonnull final FreightInvoiceType aFreightInvoice,
                                                @Nullable ClassLoader aClassLoader)
   {
     return validateFreightInvoice (aFreightInvoice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Invoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <InvoiceType> invoice ()
+  {
+    return UBL20ValidatorBuilder.create (InvoiceType.class);
   }
 
   /**
@@ -943,6 +1148,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateInvoice (@Nonnull final InvoiceType aInvoice)
   {
@@ -959,6 +1165,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateInvoice (@Nonnull final InvoiceType aInvoice,
                                                      @Nullable ClassLoader aClassLoader)
@@ -974,6 +1181,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice)
   {
     return validateInvoice (aInvoice, (ClassLoader) null).containsNoError ();
@@ -990,9 +1198,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidInvoice (@Nonnull final InvoiceType aInvoice, @Nullable ClassLoader aClassLoader)
   {
     return validateInvoice (aInvoice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Order.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <OrderType> order ()
+  {
+    return UBL20ValidatorBuilder.create (OrderType.class);
   }
 
   /**
@@ -1002,6 +1222,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrder (@Nonnull final OrderType aOrder)
   {
@@ -1018,6 +1239,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
   {
@@ -1032,6 +1254,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrder (@Nonnull final OrderType aOrder)
   {
     return validateOrder (aOrder, (ClassLoader) null).containsNoError ();
@@ -1048,9 +1271,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrder (@Nonnull final OrderType aOrder, @Nullable ClassLoader aClassLoader)
   {
     return validateOrder (aOrder, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for OrderCancellation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <OrderCancellationType> orderCancellation ()
+  {
+    return UBL20ValidatorBuilder.create (OrderCancellationType.class);
   }
 
   /**
@@ -1060,6 +1295,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation)
   {
@@ -1078,6 +1314,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                                @Nullable ClassLoader aClassLoader)
@@ -1093,6 +1330,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation)
   {
     return validateOrderCancellation (aOrderCancellation, (ClassLoader) null).containsNoError ();
@@ -1109,10 +1347,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderCancellation (@Nonnull final OrderCancellationType aOrderCancellation,
                                                   @Nullable ClassLoader aClassLoader)
   {
     return validateOrderCancellation (aOrderCancellation, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for OrderChange.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <OrderChangeType> orderChange ()
+  {
+    return UBL20ValidatorBuilder.create (OrderChangeType.class);
   }
 
   /**
@@ -1122,6 +1372,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderChange (@Nonnull final OrderChangeType aOrderChange)
   {
@@ -1138,6 +1389,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                                          @Nullable ClassLoader aClassLoader)
@@ -1153,6 +1405,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderChange)
   {
     return validateOrderChange (aOrderChange, (ClassLoader) null).containsNoError ();
@@ -1169,10 +1422,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderChange (@Nonnull final OrderChangeType aOrderChange,
                                             @Nullable ClassLoader aClassLoader)
   {
     return validateOrderChange (aOrderChange, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for OrderResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <OrderResponseType> orderResponse ()
+  {
+    return UBL20ValidatorBuilder.create (OrderResponseType.class);
   }
 
   /**
@@ -1182,6 +1447,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponse (@Nonnull final OrderResponseType aOrderResponse)
   {
@@ -1198,6 +1464,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                                            @Nullable ClassLoader aClassLoader)
@@ -1213,6 +1480,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOrderResponse)
   {
     return validateOrderResponse (aOrderResponse, (ClassLoader) null).containsNoError ();
@@ -1229,10 +1497,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderResponse (@Nonnull final OrderResponseType aOrderResponse,
                                               @Nullable ClassLoader aClassLoader)
   {
     return validateOrderResponse (aOrderResponse, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for OrderResponseSimple.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <OrderResponseSimpleType> orderResponseSimple ()
+  {
+    return UBL20ValidatorBuilder.create (OrderResponseSimpleType.class);
   }
 
   /**
@@ -1242,6 +1522,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple)
   {
@@ -1260,6 +1541,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -1277,6 +1559,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple)
   {
     return validateOrderResponseSimple (aOrderResponseSimple, (ClassLoader) null).containsNoError ();
@@ -1293,10 +1576,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidOrderResponseSimple (@Nonnull final OrderResponseSimpleType aOrderResponseSimple,
                                                     @Nullable ClassLoader aClassLoader)
   {
     return validateOrderResponseSimple (aOrderResponseSimple, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for PackingList.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <PackingListType> packingList ()
+  {
+    return UBL20ValidatorBuilder.create (PackingListType.class);
   }
 
   /**
@@ -1306,6 +1601,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validatePackingList (@Nonnull final PackingListType aPackingList)
   {
@@ -1322,6 +1618,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validatePackingList (@Nonnull final PackingListType aPackingList,
                                                          @Nullable ClassLoader aClassLoader)
@@ -1337,6 +1634,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidPackingList (@Nonnull final PackingListType aPackingList)
   {
     return validatePackingList (aPackingList, (ClassLoader) null).containsNoError ();
@@ -1353,10 +1651,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidPackingList (@Nonnull final PackingListType aPackingList,
                                             @Nullable ClassLoader aClassLoader)
   {
     return validatePackingList (aPackingList, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Quotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <QuotationType> quotation ()
+  {
+    return UBL20ValidatorBuilder.create (QuotationType.class);
   }
 
   /**
@@ -1366,6 +1676,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateQuotation (@Nonnull final QuotationType aQuotation)
   {
@@ -1382,6 +1693,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateQuotation (@Nonnull final QuotationType aQuotation,
                                                        @Nullable ClassLoader aClassLoader)
@@ -1397,6 +1709,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation)
   {
     return validateQuotation (aQuotation, (ClassLoader) null).containsNoError ();
@@ -1413,9 +1726,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidQuotation (@Nonnull final QuotationType aQuotation, @Nullable ClassLoader aClassLoader)
   {
     return validateQuotation (aQuotation, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for ReceiptAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <ReceiptAdviceType> receiptAdvice ()
+  {
+    return UBL20ValidatorBuilder.create (ReceiptAdviceType.class);
   }
 
   /**
@@ -1425,6 +1750,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice)
   {
@@ -1441,6 +1767,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                                            @Nullable ClassLoader aClassLoader)
@@ -1456,6 +1783,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice)
   {
     return validateReceiptAdvice (aReceiptAdvice, (ClassLoader) null).containsNoError ();
@@ -1472,10 +1800,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidReceiptAdvice (@Nonnull final ReceiptAdviceType aReceiptAdvice,
                                               @Nullable ClassLoader aClassLoader)
   {
     return validateReceiptAdvice (aReceiptAdvice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Reminder.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <ReminderType> reminder ()
+  {
+    return UBL20ValidatorBuilder.create (ReminderType.class);
   }
 
   /**
@@ -1485,6 +1825,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReminder (@Nonnull final ReminderType aReminder)
   {
@@ -1501,6 +1842,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateReminder (@Nonnull final ReminderType aReminder,
                                                       @Nullable ClassLoader aClassLoader)
@@ -1516,6 +1858,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidReminder (@Nonnull final ReminderType aReminder)
   {
     return validateReminder (aReminder, (ClassLoader) null).containsNoError ();
@@ -1532,9 +1875,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidReminder (@Nonnull final ReminderType aReminder, @Nullable ClassLoader aClassLoader)
   {
     return validateReminder (aReminder, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for RemittanceAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <RemittanceAdviceType> remittanceAdvice ()
+  {
+    return UBL20ValidatorBuilder.create (RemittanceAdviceType.class);
   }
 
   /**
@@ -1544,6 +1899,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice)
   {
@@ -1562,6 +1918,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                               @Nullable ClassLoader aClassLoader)
@@ -1577,6 +1934,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice)
   {
     return validateRemittanceAdvice (aRemittanceAdvice, (ClassLoader) null).containsNoError ();
@@ -1593,10 +1951,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidRemittanceAdvice (@Nonnull final RemittanceAdviceType aRemittanceAdvice,
                                                  @Nullable ClassLoader aClassLoader)
   {
     return validateRemittanceAdvice (aRemittanceAdvice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for RequestForQuotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <RequestForQuotationType> requestForQuotation ()
+  {
+    return UBL20ValidatorBuilder.create (RequestForQuotationType.class);
   }
 
   /**
@@ -1606,6 +1976,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation)
   {
@@ -1624,6 +1995,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -1641,6 +2013,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation)
   {
     return validateRequestForQuotation (aRequestForQuotation, (ClassLoader) null).containsNoError ();
@@ -1657,10 +2030,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidRequestForQuotation (@Nonnull final RequestForQuotationType aRequestForQuotation,
                                                     @Nullable ClassLoader aClassLoader)
   {
     return validateRequestForQuotation (aRequestForQuotation, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for SelfBilledCreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
+  {
+    return UBL20ValidatorBuilder.create (SelfBilledCreditNoteType.class);
   }
 
   /**
@@ -1670,6 +2055,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote)
   {
@@ -1688,6 +2074,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                                   @Nullable ClassLoader aClassLoader)
@@ -1705,6 +2092,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote)
   {
     return validateSelfBilledCreditNote (aSelfBilledCreditNote, (ClassLoader) null).containsNoError ();
@@ -1721,10 +2109,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidSelfBilledCreditNote (@Nonnull final SelfBilledCreditNoteType aSelfBilledCreditNote,
                                                      @Nullable ClassLoader aClassLoader)
   {
     return validateSelfBilledCreditNote (aSelfBilledCreditNote, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for SelfBilledInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
+  {
+    return UBL20ValidatorBuilder.create (SelfBilledInvoiceType.class);
   }
 
   /**
@@ -1734,6 +2134,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice)
   {
@@ -1752,6 +2153,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                                @Nullable ClassLoader aClassLoader)
@@ -1767,6 +2169,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice)
   {
     return validateSelfBilledInvoice (aSelfBilledInvoice, (ClassLoader) null).containsNoError ();
@@ -1783,10 +2186,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidSelfBilledInvoice (@Nonnull final SelfBilledInvoiceType aSelfBilledInvoice,
                                                   @Nullable ClassLoader aClassLoader)
   {
     return validateSelfBilledInvoice (aSelfBilledInvoice, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Statement.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <StatementType> statement ()
+  {
+    return UBL20ValidatorBuilder.create (StatementType.class);
   }
 
   /**
@@ -1796,6 +2211,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateStatement (@Nonnull final StatementType aStatement)
   {
@@ -1812,6 +2228,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateStatement (@Nonnull final StatementType aStatement,
                                                        @Nullable ClassLoader aClassLoader)
@@ -1827,6 +2244,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidStatement (@Nonnull final StatementType aStatement)
   {
     return validateStatement (aStatement, (ClassLoader) null).containsNoError ();
@@ -1843,9 +2261,21 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidStatement (@Nonnull final StatementType aStatement, @Nullable ClassLoader aClassLoader)
   {
     return validateStatement (aStatement, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for TransportationStatus.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <TransportationStatusType> transportationStatus ()
+  {
+    return UBL20ValidatorBuilder.create (TransportationStatusType.class);
   }
 
   /**
@@ -1855,6 +2285,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus)
   {
@@ -1873,6 +2304,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                                   @Nullable ClassLoader aClassLoader)
@@ -1890,6 +2322,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus)
   {
     return validateTransportationStatus (aTransportationStatus, (ClassLoader) null).containsNoError ();
@@ -1906,10 +2339,22 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidTransportationStatus (@Nonnull final TransportationStatusType aTransportationStatus,
                                                      @Nullable ClassLoader aClassLoader)
   {
     return validateTransportationStatus (aTransportationStatus, aClassLoader).containsNoError ();
+  }
+
+  /**
+   * Create a validation builder for Waybill.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ValidatorBuilder <WaybillType> waybill ()
+  {
+    return UBL20ValidatorBuilder.create (WaybillType.class);
   }
 
   /**
@@ -1919,6 +2364,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          the source object to validate. May not be <code>null</code>.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateWaybill (@Nonnull final WaybillType aWaybill)
   {
@@ -1935,6 +2381,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    *          <code>null</code> to indicate to use the default class loader.
    * @return The collected messages during validation. Never<code>null</code>.
    */
+  @Deprecated
   @Nullable
   public static IResourceErrorGroup validateWaybill (@Nonnull final WaybillType aWaybill,
                                                      @Nullable ClassLoader aClassLoader)
@@ -1950,6 +2397,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill)
   {
     return validateWaybill (aWaybill, (ClassLoader) null).containsNoError ();
@@ -1966,6 +2414,7 @@ public final class UBL20Validator extends AbstractUBLDocumentMarshaller
    * @return <code>true</code> if the object is valid, <code>false</code>
    *         otherwise.
    */
+  @Deprecated
   public static boolean isValidWaybill (@Nonnull final WaybillType aWaybill, @Nullable ClassLoader aClassLoader)
   {
     return validateWaybill (aWaybill, aClassLoader).containsNoError ();

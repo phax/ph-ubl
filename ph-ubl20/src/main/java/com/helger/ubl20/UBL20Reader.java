@@ -1,19 +1,3 @@
-/**
- * Copyright (C) 2014-2015 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl20;
 
 import java.io.File;
@@ -78,6 +62,17 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   {}
 
   /**
+   * Create a reader builder for ApplicationResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <ApplicationResponseType> applicationResponse ()
+  {
+    return UBL20ReaderBuilder.create (ApplicationResponseType.class);
+  }
+
+  /**
    * Interpret the passed DOM {@link Node} as a ApplicationResponse using the
    * global validation event handler.
    * 
@@ -86,6 +81,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode)
   {
@@ -104,6 +100,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -122,6 +119,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -146,6 +144,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -163,6 +162,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource)
   {
@@ -181,6 +181,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -199,6 +200,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -220,6 +222,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -237,6 +240,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource)
   {
@@ -255,6 +259,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -273,6 +278,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -294,6 +300,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -311,6 +318,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource)
   {
@@ -329,6 +337,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -347,6 +356,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -371,12 +381,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ApplicationResponseType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ApplicationResponseType readApplicationResponse (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ApplicationResponseType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for AttachedDocument.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <AttachedDocumentType> attachedDocument ()
+  {
+    return UBL20ReaderBuilder.create (AttachedDocumentType.class);
   }
 
   /**
@@ -388,6 +410,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode)
   {
@@ -406,6 +429,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader)
@@ -424,6 +448,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -445,6 +470,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader,
@@ -462,6 +488,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource)
   {
@@ -480,6 +507,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -498,6 +526,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -519,6 +548,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -536,6 +566,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource)
   {
@@ -554,6 +585,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -572,6 +604,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -593,6 +626,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -610,6 +644,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource)
   {
@@ -628,6 +663,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -646,6 +682,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -670,12 +707,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated AttachedDocumentType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static AttachedDocumentType readAttachedDocument (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, AttachedDocumentType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for BillOfLading.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <BillOfLadingType> billOfLading ()
+  {
+    return UBL20ReaderBuilder.create (BillOfLadingType.class);
   }
 
   /**
@@ -687,6 +736,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode)
   {
@@ -705,6 +755,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -722,6 +773,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -743,6 +795,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Node aNode,
                                                    @Nullable ClassLoader aClassLoader,
@@ -760,6 +813,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource)
   {
@@ -778,6 +832,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -795,6 +850,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -816,6 +872,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final File aSource,
                                                    @Nullable ClassLoader aClassLoader,
@@ -833,6 +890,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource)
   {
@@ -851,6 +909,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
                                                    @Nullable ClassLoader aClassLoader)
@@ -869,6 +928,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -890,6 +950,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final IReadableResource aSource,
                                                    @Nullable ClassLoader aClassLoader,
@@ -907,6 +968,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource)
   {
@@ -925,6 +987,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -942,6 +1005,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -963,12 +1027,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated BillOfLadingType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static BillOfLadingType readBillOfLading (@Nonnull final Source aSource,
                                                    @Nullable ClassLoader aClassLoader,
                                                    @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, BillOfLadingType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Catalogue.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CatalogueType> catalogue ()
+  {
+    return UBL20ReaderBuilder.create (CatalogueType.class);
   }
 
   /**
@@ -980,6 +1056,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode)
   {
@@ -998,6 +1075,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -1015,6 +1093,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1036,6 +1115,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Node aNode,
                                              @Nullable ClassLoader aClassLoader,
@@ -1053,6 +1133,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource)
   {
@@ -1071,6 +1152,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -1088,6 +1170,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1109,6 +1192,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final File aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -1126,6 +1210,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource)
   {
@@ -1144,6 +1229,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader)
@@ -1162,6 +1248,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1183,6 +1270,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -1200,6 +1288,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource)
   {
@@ -1218,6 +1307,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -1235,6 +1325,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1256,12 +1347,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueType readCatalogue (@Nonnull final Source aSource,
                                              @Nullable ClassLoader aClassLoader,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for CatalogueDeletion.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CatalogueDeletionType> catalogueDeletion ()
+  {
+    return UBL20ReaderBuilder.create (CatalogueDeletionType.class);
   }
 
   /**
@@ -1273,6 +1376,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode)
   {
@@ -1291,6 +1395,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader)
@@ -1309,6 +1414,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1333,6 +1439,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader,
@@ -1350,6 +1457,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource)
   {
@@ -1368,6 +1476,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -1386,6 +1495,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1407,6 +1517,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -1424,6 +1535,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource)
   {
@@ -1442,6 +1554,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -1460,6 +1573,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1481,6 +1595,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -1498,6 +1613,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource)
   {
@@ -1516,6 +1632,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -1534,6 +1651,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1558,12 +1676,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueDeletionType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueDeletionType readCatalogueDeletion (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueDeletionType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for CatalogueItemSpecificationUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
+  {
+    return UBL20ReaderBuilder.create (CatalogueItemSpecificationUpdateType.class);
   }
 
   /**
@@ -1575,6 +1705,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode)
   {
@@ -1593,6 +1724,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
                                                                                            @Nullable ClassLoader aClassLoader)
@@ -1611,6 +1743,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
                                                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1635,6 +1768,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Node aNode,
                                                                                            @Nullable ClassLoader aClassLoader,
@@ -1655,6 +1789,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource)
   {
@@ -1673,6 +1808,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
                                                                                            @Nullable ClassLoader aClassLoader)
@@ -1691,6 +1827,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
                                                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1712,6 +1849,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final File aSource,
                                                                                            @Nullable ClassLoader aClassLoader,
@@ -1731,6 +1869,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource)
   {
@@ -1749,6 +1888,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
                                                                                            @Nullable ClassLoader aClassLoader)
@@ -1767,6 +1907,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
                                                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1788,6 +1929,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final IReadableResource aSource,
                                                                                            @Nullable ClassLoader aClassLoader,
@@ -1807,6 +1949,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource)
   {
@@ -1825,6 +1968,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
                                                                                            @Nullable ClassLoader aClassLoader)
@@ -1843,6 +1987,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
                                                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1867,6 +2012,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueItemSpecificationUpdateType or
    *         <code>null</code> in case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueItemSpecificationUpdateType readCatalogueItemSpecificationUpdate (@Nonnull final Source aSource,
                                                                                            @Nullable ClassLoader aClassLoader,
@@ -1879,6 +2025,17 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a reader builder for CataloguePricingUpdate.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
+  {
+    return UBL20ReaderBuilder.create (CataloguePricingUpdateType.class);
+  }
+
+  /**
    * Interpret the passed DOM {@link Node} as a CataloguePricingUpdate using the
    * global validation event handler.
    * 
@@ -1887,6 +2044,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode)
   {
@@ -1905,6 +2063,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -1923,6 +2082,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -1947,6 +2107,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Node aNode,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -1964,6 +2125,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource)
   {
@@ -1982,6 +2144,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -2000,6 +2163,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2021,6 +2185,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final File aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -2038,6 +2203,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource)
   {
@@ -2056,6 +2222,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -2074,6 +2241,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2095,6 +2263,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -2112,6 +2281,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource)
   {
@@ -2130,6 +2300,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -2148,6 +2319,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2172,6 +2344,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CataloguePricingUpdateType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CataloguePricingUpdateType readCataloguePricingUpdate (@Nonnull final Source aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -2184,6 +2357,17 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a reader builder for CatalogueRequest.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CatalogueRequestType> catalogueRequest ()
+  {
+    return UBL20ReaderBuilder.create (CatalogueRequestType.class);
+  }
+
+  /**
    * Interpret the passed DOM {@link Node} as a CatalogueRequest using the
    * global validation event handler.
    * 
@@ -2192,6 +2376,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode)
   {
@@ -2210,6 +2395,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader)
@@ -2228,6 +2414,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2249,6 +2436,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader,
@@ -2266,6 +2454,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource)
   {
@@ -2284,6 +2473,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -2302,6 +2492,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2323,6 +2514,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -2340,6 +2532,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource)
   {
@@ -2358,6 +2551,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -2376,6 +2570,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2397,6 +2592,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -2414,6 +2610,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource)
   {
@@ -2432,6 +2629,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -2450,6 +2648,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2474,12 +2673,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CatalogueRequestType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static CatalogueRequestType readCatalogueRequest (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CatalogueRequestType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for CertificateOfOrigin.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CertificateOfOriginType> certificateOfOrigin ()
+  {
+    return UBL20ReaderBuilder.create (CertificateOfOriginType.class);
   }
 
   /**
@@ -2491,6 +2702,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode)
   {
@@ -2509,6 +2721,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -2527,6 +2740,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2551,6 +2765,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -2568,6 +2783,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource)
   {
@@ -2586,6 +2802,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -2604,6 +2821,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2625,6 +2843,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -2642,6 +2861,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource)
   {
@@ -2660,6 +2880,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -2678,6 +2899,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2699,6 +2921,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -2716,6 +2939,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource)
   {
@@ -2734,6 +2958,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -2752,6 +2977,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2776,12 +3002,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CertificateOfOriginType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static CertificateOfOriginType readCertificateOfOrigin (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CertificateOfOriginType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for CreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <CreditNoteType> creditNote ()
+  {
+    return UBL20ReaderBuilder.create (CreditNoteType.class);
   }
 
   /**
@@ -2793,6 +3031,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode)
   {
@@ -2811,6 +3050,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -2828,6 +3068,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2849,6 +3090,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Node aNode,
                                                @Nullable ClassLoader aClassLoader,
@@ -2866,6 +3108,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource)
   {
@@ -2884,6 +3127,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -2901,6 +3145,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2922,6 +3167,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final File aSource,
                                                @Nullable ClassLoader aClassLoader,
@@ -2939,6 +3185,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource)
   {
@@ -2957,6 +3204,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
                                                @Nullable ClassLoader aClassLoader)
@@ -2975,6 +3223,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -2996,6 +3245,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final IReadableResource aSource,
                                                @Nullable ClassLoader aClassLoader,
@@ -3013,6 +3263,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource)
   {
@@ -3031,6 +3282,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -3048,6 +3300,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3069,12 +3322,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated CreditNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static CreditNoteType readCreditNote (@Nonnull final Source aSource,
                                                @Nullable ClassLoader aClassLoader,
                                                @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, CreditNoteType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for DebitNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <DebitNoteType> debitNote ()
+  {
+    return UBL20ReaderBuilder.create (DebitNoteType.class);
   }
 
   /**
@@ -3086,6 +3351,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode)
   {
@@ -3104,6 +3370,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -3121,6 +3388,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3142,6 +3410,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Node aNode,
                                              @Nullable ClassLoader aClassLoader,
@@ -3159,6 +3428,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource)
   {
@@ -3177,6 +3447,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -3194,6 +3465,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3215,6 +3487,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final File aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -3232,6 +3505,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource)
   {
@@ -3250,6 +3524,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader)
@@ -3268,6 +3543,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3289,6 +3565,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -3306,6 +3583,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource)
   {
@@ -3324,6 +3602,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -3341,6 +3620,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3362,12 +3642,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DebitNoteType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DebitNoteType readDebitNote (@Nonnull final Source aSource,
                                              @Nullable ClassLoader aClassLoader,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, DebitNoteType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for DespatchAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <DespatchAdviceType> despatchAdvice ()
+  {
+    return UBL20ReaderBuilder.create (DespatchAdviceType.class);
   }
 
   /**
@@ -3379,6 +3671,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode)
   {
@@ -3397,6 +3690,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -3414,6 +3708,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3435,6 +3730,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Node aNode,
                                                        @Nullable ClassLoader aClassLoader,
@@ -3452,6 +3748,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource)
   {
@@ -3470,6 +3767,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -3487,6 +3785,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3508,6 +3807,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final File aSource,
                                                        @Nullable ClassLoader aClassLoader,
@@ -3525,6 +3825,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource)
   {
@@ -3543,6 +3844,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ClassLoader aClassLoader)
@@ -3561,6 +3863,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3582,6 +3885,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ClassLoader aClassLoader,
@@ -3599,6 +3903,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource)
   {
@@ -3617,6 +3922,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
                                                        @Nullable ClassLoader aClassLoader)
@@ -3635,6 +3941,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3656,12 +3963,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated DespatchAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static DespatchAdviceType readDespatchAdvice (@Nonnull final Source aSource,
                                                        @Nullable ClassLoader aClassLoader,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, DespatchAdviceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for ForwardingInstructions.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <ForwardingInstructionsType> forwardingInstructions ()
+  {
+    return UBL20ReaderBuilder.create (ForwardingInstructionsType.class);
   }
 
   /**
@@ -3673,6 +3992,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode)
   {
@@ -3691,6 +4011,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -3709,6 +4030,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3733,6 +4055,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Node aNode,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -3750,6 +4073,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource)
   {
@@ -3768,6 +4092,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -3786,6 +4111,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3807,6 +4133,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final File aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -3824,6 +4151,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource)
   {
@@ -3842,6 +4170,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -3860,6 +4189,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3881,6 +4211,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final IReadableResource aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -3898,6 +4229,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource)
   {
@@ -3916,6 +4248,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
                                                                        @Nullable ClassLoader aClassLoader)
@@ -3934,6 +4267,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
                                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -3958,6 +4292,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ForwardingInstructionsType or <code>null</code> in
    *         case of a parsing error
    */
+  @Deprecated
   @Nullable
   public static ForwardingInstructionsType readForwardingInstructions (@Nonnull final Source aSource,
                                                                        @Nullable ClassLoader aClassLoader,
@@ -3970,6 +4305,17 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
   }
 
   /**
+   * Create a reader builder for FreightInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <FreightInvoiceType> freightInvoice ()
+  {
+    return UBL20ReaderBuilder.create (FreightInvoiceType.class);
+  }
+
+  /**
    * Interpret the passed DOM {@link Node} as a FreightInvoice using the global
    * validation event handler.
    * 
@@ -3978,6 +4324,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode)
   {
@@ -3996,6 +4343,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -4013,6 +4361,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4034,6 +4383,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Node aNode,
                                                        @Nullable ClassLoader aClassLoader,
@@ -4051,6 +4401,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource)
   {
@@ -4069,6 +4420,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4086,6 +4438,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4107,6 +4460,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final File aSource,
                                                        @Nullable ClassLoader aClassLoader,
@@ -4124,6 +4478,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource)
   {
@@ -4142,6 +4497,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ClassLoader aClassLoader)
@@ -4160,6 +4516,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4181,6 +4538,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final IReadableResource aSource,
                                                        @Nullable ClassLoader aClassLoader,
@@ -4198,6 +4556,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource)
   {
@@ -4216,6 +4575,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
                                                        @Nullable ClassLoader aClassLoader)
@@ -4234,6 +4594,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4255,12 +4616,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated FreightInvoiceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static FreightInvoiceType readFreightInvoice (@Nonnull final Source aSource,
                                                        @Nullable ClassLoader aClassLoader,
                                                        @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, FreightInvoiceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Invoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <InvoiceType> invoice ()
+  {
+    return UBL20ReaderBuilder.create (InvoiceType.class);
   }
 
   /**
@@ -4272,6 +4645,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode)
   {
@@ -4290,6 +4664,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -4307,6 +4682,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4328,6 +4704,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Node aNode,
                                          @Nullable ClassLoader aClassLoader,
@@ -4345,6 +4722,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource)
   {
@@ -4363,6 +4741,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4380,6 +4759,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4401,6 +4781,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final File aSource,
                                          @Nullable ClassLoader aClassLoader,
@@ -4418,6 +4799,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource)
   {
@@ -4436,6 +4818,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4453,6 +4836,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4474,6 +4858,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final IReadableResource aSource,
                                          @Nullable ClassLoader aClassLoader,
@@ -4491,6 +4876,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource)
   {
@@ -4509,6 +4895,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4526,6 +4913,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4547,12 +4935,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated InvoiceType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static InvoiceType readInvoice (@Nonnull final Source aSource,
                                          @Nullable ClassLoader aClassLoader,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, InvoiceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Order.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <OrderType> order ()
+  {
+    return UBL20ReaderBuilder.create (OrderType.class);
   }
 
   /**
@@ -4564,6 +4964,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Node aNode)
   {
@@ -4582,6 +4983,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -4599,6 +5001,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Node aNode, @Nullable ValidationEventHandler aCustomEventHandler)
   {
@@ -4619,6 +5022,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Node aNode,
                                      @Nullable ClassLoader aClassLoader,
@@ -4636,6 +5040,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final File aSource)
   {
@@ -4654,6 +5059,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4671,6 +5077,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final File aSource, @Nullable ValidationEventHandler aCustomEventHandler)
   {
@@ -4691,6 +5098,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final File aSource,
                                      @Nullable ClassLoader aClassLoader,
@@ -4708,6 +5116,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource)
   {
@@ -4726,6 +5135,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4743,6 +5153,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource,
                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4764,6 +5175,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final IReadableResource aSource,
                                      @Nullable ClassLoader aClassLoader,
@@ -4781,6 +5193,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource)
   {
@@ -4799,6 +5212,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -4816,6 +5230,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource,
                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4837,12 +5252,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static OrderType readOrder (@Nonnull final Source aSource,
                                      @Nullable ClassLoader aClassLoader,
                                      @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for OrderCancellation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <OrderCancellationType> orderCancellation ()
+  {
+    return UBL20ReaderBuilder.create (OrderCancellationType.class);
   }
 
   /**
@@ -4854,6 +5281,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode)
   {
@@ -4872,6 +5300,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader)
@@ -4890,6 +5319,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4914,6 +5344,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader,
@@ -4931,6 +5362,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource)
   {
@@ -4949,6 +5381,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -4967,6 +5400,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -4988,6 +5422,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -5005,6 +5440,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource)
   {
@@ -5023,6 +5459,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -5041,6 +5478,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5062,6 +5500,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -5079,6 +5518,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource)
   {
@@ -5097,6 +5537,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -5115,6 +5556,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5139,12 +5581,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderCancellationType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderCancellationType readOrderCancellation (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderCancellationType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for OrderChange.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <OrderChangeType> orderChange ()
+  {
+    return UBL20ReaderBuilder.create (OrderChangeType.class);
   }
 
   /**
@@ -5156,6 +5610,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode)
   {
@@ -5174,6 +5629,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -5191,6 +5647,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5212,6 +5669,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Node aNode,
                                                  @Nullable ClassLoader aClassLoader,
@@ -5229,6 +5687,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource)
   {
@@ -5247,6 +5706,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -5264,6 +5724,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5285,6 +5746,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final File aSource,
                                                  @Nullable ClassLoader aClassLoader,
@@ -5302,6 +5764,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource)
   {
@@ -5320,6 +5783,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
                                                  @Nullable ClassLoader aClassLoader)
@@ -5338,6 +5802,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5359,6 +5824,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final IReadableResource aSource,
                                                  @Nullable ClassLoader aClassLoader,
@@ -5376,6 +5842,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource)
   {
@@ -5394,6 +5861,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -5411,6 +5879,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5432,12 +5901,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderChangeType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderChangeType readOrderChange (@Nonnull final Source aSource,
                                                  @Nullable ClassLoader aClassLoader,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderChangeType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for OrderResponse.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <OrderResponseType> orderResponse ()
+  {
+    return UBL20ReaderBuilder.create (OrderResponseType.class);
   }
 
   /**
@@ -5449,6 +5930,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode)
   {
@@ -5467,6 +5949,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -5484,6 +5967,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5505,6 +5989,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Node aNode,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5522,6 +6007,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource)
   {
@@ -5540,6 +6026,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -5557,6 +6044,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5578,6 +6066,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final File aSource,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5595,6 +6084,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource)
   {
@@ -5613,6 +6103,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
                                                      @Nullable ClassLoader aClassLoader)
@@ -5631,6 +6122,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5652,6 +6144,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final IReadableResource aSource,
                                                      @Nullable ClassLoader aClassLoader,
@@ -5669,6 +6162,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource)
   {
@@ -5687,6 +6181,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -5704,6 +6199,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5725,12 +6221,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseType readOrderResponse (@Nonnull final Source aSource,
                                                      @Nullable ClassLoader aClassLoader,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderResponseType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for OrderResponseSimple.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <OrderResponseSimpleType> orderResponseSimple ()
+  {
+    return UBL20ReaderBuilder.create (OrderResponseSimpleType.class);
   }
 
   /**
@@ -5742,6 +6250,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode)
   {
@@ -5760,6 +6269,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -5778,6 +6288,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5802,6 +6313,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -5819,6 +6331,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource)
   {
@@ -5837,6 +6350,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -5855,6 +6369,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5876,6 +6391,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -5893,6 +6409,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource)
   {
@@ -5911,6 +6428,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -5929,6 +6447,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -5950,6 +6469,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -5967,6 +6487,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource)
   {
@@ -5985,6 +6506,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -6003,6 +6525,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6027,12 +6550,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated OrderResponseSimpleType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static OrderResponseSimpleType readOrderResponseSimple (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, OrderResponseSimpleType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for PackingList.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <PackingListType> packingList ()
+  {
+    return UBL20ReaderBuilder.create (PackingListType.class);
   }
 
   /**
@@ -6044,6 +6579,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode)
   {
@@ -6062,6 +6598,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -6079,6 +6616,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6100,6 +6638,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Node aNode,
                                                  @Nullable ClassLoader aClassLoader,
@@ -6117,6 +6656,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource)
   {
@@ -6135,6 +6675,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6152,6 +6693,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6173,6 +6715,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final File aSource,
                                                  @Nullable ClassLoader aClassLoader,
@@ -6190,6 +6733,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource)
   {
@@ -6208,6 +6752,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
                                                  @Nullable ClassLoader aClassLoader)
@@ -6226,6 +6771,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6247,6 +6793,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final IReadableResource aSource,
                                                  @Nullable ClassLoader aClassLoader,
@@ -6264,6 +6811,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource)
   {
@@ -6282,6 +6830,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6299,6 +6848,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6320,12 +6870,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated PackingListType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static PackingListType readPackingList (@Nonnull final Source aSource,
                                                  @Nullable ClassLoader aClassLoader,
                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, PackingListType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Quotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <QuotationType> quotation ()
+  {
+    return UBL20ReaderBuilder.create (QuotationType.class);
   }
 
   /**
@@ -6337,6 +6899,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode)
   {
@@ -6355,6 +6918,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -6372,6 +6936,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6393,6 +6958,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Node aNode,
                                              @Nullable ClassLoader aClassLoader,
@@ -6410,6 +6976,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource)
   {
@@ -6428,6 +6995,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6445,6 +7013,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6466,6 +7035,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final File aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -6483,6 +7053,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource)
   {
@@ -6501,6 +7072,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader)
@@ -6519,6 +7091,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6540,6 +7113,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -6557,6 +7131,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource)
   {
@@ -6575,6 +7150,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6592,6 +7168,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6613,12 +7190,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated QuotationType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static QuotationType readQuotation (@Nonnull final Source aSource,
                                              @Nullable ClassLoader aClassLoader,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, QuotationType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for ReceiptAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <ReceiptAdviceType> receiptAdvice ()
+  {
+    return UBL20ReaderBuilder.create (ReceiptAdviceType.class);
   }
 
   /**
@@ -6630,6 +7219,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode)
   {
@@ -6648,6 +7238,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -6665,6 +7256,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6686,6 +7278,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Node aNode,
                                                      @Nullable ClassLoader aClassLoader,
@@ -6703,6 +7296,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource)
   {
@@ -6721,6 +7315,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6738,6 +7333,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6759,6 +7355,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final File aSource,
                                                      @Nullable ClassLoader aClassLoader,
@@ -6776,6 +7373,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource)
   {
@@ -6794,6 +7392,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
                                                      @Nullable ClassLoader aClassLoader)
@@ -6812,6 +7411,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6833,6 +7433,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final IReadableResource aSource,
                                                      @Nullable ClassLoader aClassLoader,
@@ -6850,6 +7451,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource)
   {
@@ -6868,6 +7470,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -6885,6 +7488,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6906,12 +7510,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReceiptAdviceType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReceiptAdviceType readReceiptAdvice (@Nonnull final Source aSource,
                                                      @Nullable ClassLoader aClassLoader,
                                                      @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ReceiptAdviceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Reminder.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <ReminderType> reminder ()
+  {
+    return UBL20ReaderBuilder.create (ReminderType.class);
   }
 
   /**
@@ -6923,6 +7539,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode)
   {
@@ -6941,6 +7558,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -6958,6 +7576,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -6979,6 +7598,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Node aNode,
                                            @Nullable ClassLoader aClassLoader,
@@ -6996,6 +7616,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource)
   {
@@ -7014,6 +7635,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -7031,6 +7653,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7052,6 +7675,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final File aSource,
                                            @Nullable ClassLoader aClassLoader,
@@ -7069,6 +7693,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource)
   {
@@ -7087,6 +7712,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -7104,6 +7730,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7125,6 +7752,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final IReadableResource aSource,
                                            @Nullable ClassLoader aClassLoader,
@@ -7142,6 +7770,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource)
   {
@@ -7160,6 +7789,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -7177,6 +7807,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7198,12 +7829,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated ReminderType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static ReminderType readReminder (@Nonnull final Source aSource,
                                            @Nullable ClassLoader aClassLoader,
                                            @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, ReminderType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for RemittanceAdvice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <RemittanceAdviceType> remittanceAdvice ()
+  {
+    return UBL20ReaderBuilder.create (RemittanceAdviceType.class);
   }
 
   /**
@@ -7215,6 +7858,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode)
   {
@@ -7233,6 +7877,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader)
@@ -7251,6 +7896,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7272,6 +7918,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Node aNode,
                                                            @Nullable ClassLoader aClassLoader,
@@ -7289,6 +7936,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource)
   {
@@ -7307,6 +7955,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -7325,6 +7974,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7346,6 +7996,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final File aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -7363,6 +8014,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource)
   {
@@ -7381,6 +8033,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -7399,6 +8052,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7420,6 +8074,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final IReadableResource aSource,
                                                            @Nullable ClassLoader aClassLoader,
@@ -7437,6 +8092,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource)
   {
@@ -7455,6 +8111,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader)
@@ -7473,6 +8130,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7497,12 +8155,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RemittanceAdviceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static RemittanceAdviceType readRemittanceAdvice (@Nonnull final Source aSource,
                                                            @Nullable ClassLoader aClassLoader,
                                                            @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, RemittanceAdviceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for RequestForQuotation.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <RequestForQuotationType> requestForQuotation ()
+  {
+    return UBL20ReaderBuilder.create (RequestForQuotationType.class);
   }
 
   /**
@@ -7514,6 +8184,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode)
   {
@@ -7532,6 +8203,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -7550,6 +8222,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7574,6 +8247,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Node aNode,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -7591,6 +8265,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource)
   {
@@ -7609,6 +8284,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -7627,6 +8303,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7648,6 +8325,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final File aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -7665,6 +8343,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource)
   {
@@ -7683,6 +8362,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -7701,6 +8381,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7722,6 +8403,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final IReadableResource aSource,
                                                                  @Nullable ClassLoader aClassLoader,
@@ -7739,6 +8421,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource)
   {
@@ -7757,6 +8440,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader)
@@ -7775,6 +8459,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7799,12 +8484,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated RequestForQuotationType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static RequestForQuotationType readRequestForQuotation (@Nonnull final Source aSource,
                                                                  @Nullable ClassLoader aClassLoader,
                                                                  @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, RequestForQuotationType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for SelfBilledCreditNote.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
+  {
+    return UBL20ReaderBuilder.create (SelfBilledCreditNoteType.class);
   }
 
   /**
@@ -7816,6 +8513,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode)
   {
@@ -7834,6 +8532,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -7852,6 +8551,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7876,6 +8576,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Node aNode,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -7893,6 +8594,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource)
   {
@@ -7911,6 +8613,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -7929,6 +8632,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -7950,6 +8654,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final File aSource,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -7967,6 +8672,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource)
   {
@@ -7985,6 +8691,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8003,6 +8710,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8024,6 +8732,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -8041,6 +8750,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource)
   {
@@ -8059,6 +8769,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8077,6 +8788,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8101,12 +8813,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledCreditNoteType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledCreditNoteType readSelfBilledCreditNote (@Nonnull final Source aSource,
                                                                    @Nullable ClassLoader aClassLoader,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, SelfBilledCreditNoteType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for SelfBilledInvoice.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
+  {
+    return UBL20ReaderBuilder.create (SelfBilledInvoiceType.class);
   }
 
   /**
@@ -8118,6 +8842,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode)
   {
@@ -8136,6 +8861,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader)
@@ -8154,6 +8880,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8178,6 +8905,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Node aNode,
                                                              @Nullable ClassLoader aClassLoader,
@@ -8195,6 +8923,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource)
   {
@@ -8213,6 +8942,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -8231,6 +8961,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8252,6 +8983,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final File aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -8269,6 +9001,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource)
   {
@@ -8287,6 +9020,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -8305,6 +9039,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8326,6 +9061,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final IReadableResource aSource,
                                                              @Nullable ClassLoader aClassLoader,
@@ -8343,6 +9079,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource)
   {
@@ -8361,6 +9098,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader)
@@ -8379,6 +9117,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8403,12 +9142,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated SelfBilledInvoiceType or <code>null</code> in case of
    *         a parsing error
    */
+  @Deprecated
   @Nullable
   public static SelfBilledInvoiceType readSelfBilledInvoice (@Nonnull final Source aSource,
                                                              @Nullable ClassLoader aClassLoader,
                                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, SelfBilledInvoiceType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Statement.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <StatementType> statement ()
+  {
+    return UBL20ReaderBuilder.create (StatementType.class);
   }
 
   /**
@@ -8420,6 +9171,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode)
   {
@@ -8438,6 +9190,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -8455,6 +9208,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8476,6 +9230,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Node aNode,
                                              @Nullable ClassLoader aClassLoader,
@@ -8493,6 +9248,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource)
   {
@@ -8511,6 +9267,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -8528,6 +9285,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8549,6 +9307,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final File aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -8566,6 +9325,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource)
   {
@@ -8584,6 +9344,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader)
@@ -8602,6 +9363,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8623,6 +9385,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final IReadableResource aSource,
                                              @Nullable ClassLoader aClassLoader,
@@ -8640,6 +9403,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource)
   {
@@ -8658,6 +9422,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -8675,6 +9440,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8696,12 +9462,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated StatementType or <code>null</code> in case of a
    *         parsing error
    */
+  @Deprecated
   @Nullable
   public static StatementType readStatement (@Nonnull final Source aSource,
                                              @Nullable ClassLoader aClassLoader,
                                              @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, StatementType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for TransportationStatus.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <TransportationStatusType> transportationStatus ()
+  {
+    return UBL20ReaderBuilder.create (TransportationStatusType.class);
   }
 
   /**
@@ -8713,6 +9491,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode)
   {
@@ -8731,6 +9510,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8749,6 +9529,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8773,6 +9554,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Node aNode,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -8790,6 +9572,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource)
   {
@@ -8808,6 +9591,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8826,6 +9610,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8847,6 +9632,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final File aSource,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -8864,6 +9650,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource)
   {
@@ -8882,6 +9669,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8900,6 +9688,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8921,6 +9710,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final IReadableResource aSource,
                                                                    @Nullable ClassLoader aClassLoader,
@@ -8938,6 +9728,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource)
   {
@@ -8956,6 +9747,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
                                                                    @Nullable ClassLoader aClassLoader)
@@ -8974,6 +9766,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
@@ -8998,12 +9791,24 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated TransportationStatusType or <code>null</code> in case
    *         of a parsing error
    */
+  @Deprecated
   @Nullable
   public static TransportationStatusType readTransportationStatus (@Nonnull final Source aSource,
                                                                    @Nullable ClassLoader aClassLoader,
                                                                    @Nullable ValidationEventHandler aCustomEventHandler)
   {
     return UBL20Marshaller.readUBLDocument (aSource, aClassLoader, TransportationStatusType.class, aCustomEventHandler);
+  }
+
+  /**
+   * Create a reader builder for Waybill.
+   * 
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <WaybillType> waybill ()
+  {
+    return UBL20ReaderBuilder.create (WaybillType.class);
   }
 
   /**
@@ -9015,6 +9820,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode)
   {
@@ -9033,6 +9839,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode, @Nullable ClassLoader aClassLoader)
   {
@@ -9050,6 +9857,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9071,6 +9879,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Node aNode,
                                          @Nullable ClassLoader aClassLoader,
@@ -9088,6 +9897,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource)
   {
@@ -9106,6 +9916,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -9123,6 +9934,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9144,6 +9956,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final File aSource,
                                          @Nullable ClassLoader aClassLoader,
@@ -9161,6 +9974,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource)
   {
@@ -9179,6 +9993,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -9196,6 +10011,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9217,6 +10033,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final IReadableResource aSource,
                                          @Nullable ClassLoader aClassLoader,
@@ -9234,6 +10051,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource)
   {
@@ -9252,6 +10070,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource, @Nullable ClassLoader aClassLoader)
   {
@@ -9269,6 +10088,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource,
                                          @Nullable ValidationEventHandler aCustomEventHandler)
@@ -9290,6 +10110,7 @@ public final class UBL20Reader extends AbstractUBLDocumentMarshaller
    * @return The evaluated WaybillType or <code>null</code> in case of a parsing
    *         error
    */
+  @Deprecated
   @Nullable
   public static WaybillType readWaybill (@Nonnull final Source aSource,
                                          @Nullable ClassLoader aClassLoader,

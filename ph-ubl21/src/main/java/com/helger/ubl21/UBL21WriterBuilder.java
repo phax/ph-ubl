@@ -17,29 +17,26 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.transform.Result;
-import javax.xml.transform.dom.DOMResult;
-
-import org.w3c.dom.Document;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.state.ESuccess;
-import com.helger.commons.xml.XMLFactory;
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
 import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
 
 /**
- * A writer builder for UBL 2.0 documents.
+ * A writer builder for UBL 2.1 documents.
  *
  * @author Philip Helger
+ * @param <T>
+ *          The UBL 2.1 implementation class to be read
  */
-public class UBL21WriterBuilder extends AbstractUBLWriterBuilder <UBL21WriterBuilder>
+public class UBL21WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL21WriterBuilder <T>>
 {
-  public UBL21WriterBuilder (@Nonnull final EUBL21DocumentType eDocType)
+  public UBL21WriterBuilder (@Nonnull final Class <T> aClass)
   {
-    super (eDocType);
+    super (UBL21DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
 
     // Set global event handler
     setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
@@ -47,20 +44,13 @@ public class UBL21WriterBuilder extends AbstractUBLWriterBuilder <UBL21WriterBui
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
     aNSContext.addMappings (UBL21NamespaceContext.getInstance ());
-    aNSContext.setDefaultNamespaceURI (eDocType.getNamespaceURI ());
+    aNSContext.setDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
 
-  @Nullable
-  public Document write (@Nonnull final Object aUBLDocument)
-  {
-    final Document aDoc = XMLFactory.newDocument ();
-    final DOMResult aResult = new DOMResult (aDoc);
-    return write (aUBLDocument, aResult).isSuccess () ? aDoc : null;
-  }
-
+  @Override
   @Nonnull
-  public ESuccess write (@Nonnull final Object aUBLDocument, @Nonnull final Result aResult)
+  public ESuccess write (@Nonnull final T aUBLDocument, @Nonnull final Result aResult)
   {
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
     return UBL21Marshaller.writeUBLDocument (aUBLDocument,
@@ -69,5 +59,18 @@ public class UBL21WriterBuilder extends AbstractUBLWriterBuilder <UBL21WriterBui
                                              m_aEventHandler,
                                              m_aNSContext,
                                              aResult);
+  }
+
+  /**
+   * Create a new writer builder.
+   *
+   * @param aClass
+   *          The UBL class to be written. May not be <code>null</code>.
+   * @return The new writer builder. Never <code>null</code>.
+   */
+  @Nonnull
+  public static <T> UBL21WriterBuilder <T> create (@Nonnull final Class <T> aClass)
+  {
+    return new UBL21WriterBuilder <T> (aClass);
   }
 }

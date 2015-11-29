@@ -16,20 +16,27 @@
  */
 package com.helger.ubl.api.builder;
 
+import java.io.File;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.bind.ValidationEventHandler;
+import javax.xml.transform.Source;
 
+import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.xml.transform.TransformSourceFactory;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
  * Abstract builder class for reading UBL documents.
  *
  * @author Philip Helger
+ * @param <T>
+ *          The UBL implementation class to be read
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
-public abstract class AbstractUBLReaderBuilder <IMPLTYPE extends AbstractUBLReaderBuilder <IMPLTYPE>>
+public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLReaderBuilder <T, IMPLTYPE>>
                                                extends AbstractUBLBuilder <IMPLTYPE>
 {
   protected ValidationEventHandler m_aEventHandler;
@@ -52,4 +59,63 @@ public abstract class AbstractUBLReaderBuilder <IMPLTYPE extends AbstractUBLRead
     m_aEventHandler = aEventHandler;
     return thisAsT ();
   }
+
+  /**
+   * Interpret the passed {@link File} as a UBL document.
+   *
+   * @param aSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Nullable
+  public T read (@Nonnull final File aSource)
+  {
+    return read (TransformSourceFactory.create (aSource));
+  }
+
+  /**
+   * Interpret the passed {@link IReadableResource} as a UBL document.
+   *
+   * @param aSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Nullable
+  public T read (@Nonnull final IReadableResource aSource)
+  {
+    return read (TransformSourceFactory.create (aSource));
+  }
+
+  /**
+   * Interpret the passed {@link byte[]} as a UBL document.
+   *
+   * @param aSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Nullable
+  public T read (@Nonnull final byte [] aSource)
+  {
+    return read (TransformSourceFactory.create (aSource));
+  }
+
+  /**
+   * Interpret the passed {@link byte[]} as a UBL document.
+   *
+   * @param sSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Nullable
+  public T read (@Nonnull final String sSource)
+  {
+    return read (TransformSourceFactory.create (sSource));
+  }
+
+  @Nullable
+  public abstract T read (@Nonnull Source aSource);
 }

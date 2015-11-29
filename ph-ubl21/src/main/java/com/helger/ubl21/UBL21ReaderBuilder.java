@@ -27,13 +27,13 @@ import com.helger.ubl.api.AbstractUBLDocumentMarshaller;
 import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 
 /**
- * A reader builder for UBL 2.0 documents.
+ * A reader builder for UBL 2.1 documents.
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL 2.0 implementation class to be read
+ *          The UBL 2.1 implementation class to be read
  */
-public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL21ReaderBuilder <T>>
+public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21ReaderBuilder <T>>
 {
   private final Class <T> m_aClass;
 
@@ -46,6 +46,15 @@ public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL21Reade
     setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
   }
 
+  /**
+   * Interpret the passed {@link Source} as a UBL document.
+   *
+   * @param aSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Override
   @Nullable
   public T read (@Nonnull final Source aSource)
   {
@@ -53,10 +62,31 @@ public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL21Reade
     return UBL21Marshaller.readUBLDocument (aSource, m_aClassLoader, m_aClass, m_aEventHandler);
   }
 
+  /**
+   * Interpret the passed DOM {@link Node} as a UBL document.
+   *
+   * @param aNode
+   *          The DOM node to be read. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
   @Nullable
   public T read (@Nonnull final Node aNode)
   {
     ValueEnforcer.notNull (aNode, "Node");
     return UBL21Marshaller.readUBLDocument (aNode, m_aClassLoader, m_aClass, m_aEventHandler);
+  }
+
+  /**
+   * Create a new reader builder.
+   *
+   * @param aClass
+   *          The UBL class to be read. May not be <code>null</code>.
+   * @return The new reader builder. Never <code>null</code>.
+   */
+  @Nonnull
+  public static <T> UBL21ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
+  {
+    return new UBL21ReaderBuilder <T> (aClass);
   }
 }

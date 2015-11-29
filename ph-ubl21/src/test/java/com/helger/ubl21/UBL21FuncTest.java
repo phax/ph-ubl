@@ -62,33 +62,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.CATALOGUE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final CatalogueType aUBLObject = UBL21Reader.readCatalogue (aDoc);
+      final CatalogueType aUBLObject = UBL21Reader.catalogue ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateCatalogue (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.catalogue ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeCatalogue (aUBLObject);
+      final Document aDoc2 = UBL21Writer.catalogue ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final CatalogueType aUBLObject2 = UBL21Reader.readCatalogue (aDoc2);
+      final CatalogueType aUBLObject2 = UBL21Reader.catalogue ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateCatalogue (aUBLObject2);
+      aErrors = UBL21Validator.catalogue ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateCatalogue (new CatalogueType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.catalogue ().validate (new CatalogueType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -102,33 +102,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.CREDIT_NOTE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final CreditNoteType aUBLObject = UBL21Reader.readCreditNote (aDoc);
+      final CreditNoteType aUBLObject = UBL21Reader.creditNote ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateCreditNote (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.creditNote ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeCreditNote (aUBLObject);
+      final Document aDoc2 = UBL21Writer.creditNote ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final CreditNoteType aUBLObject2 = UBL21Reader.readCreditNote (aDoc2);
+      final CreditNoteType aUBLObject2 = UBL21Reader.creditNote ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateCreditNote (aUBLObject2);
+      aErrors = UBL21Validator.creditNote ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateCreditNote (new CreditNoteType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.creditNote ().validate (new CreditNoteType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -142,33 +142,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.DESPATCH_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final DespatchAdviceType aUBLObject = UBL21Reader.readDespatchAdvice (aDoc);
+      final DespatchAdviceType aUBLObject = UBL21Reader.despatchAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateDespatchAdvice (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.despatchAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeDespatchAdvice (aUBLObject);
+      final Document aDoc2 = UBL21Writer.despatchAdvice ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final DespatchAdviceType aUBLObject2 = UBL21Reader.readDespatchAdvice (aDoc2);
+      final DespatchAdviceType aUBLObject2 = UBL21Reader.despatchAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateDespatchAdvice (aUBLObject2);
+      aErrors = UBL21Validator.despatchAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateDespatchAdvice (new DespatchAdviceType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.despatchAdvice ().validate (new DespatchAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -182,33 +182,34 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.FORWARDING_INSTRUCTIONS.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final ForwardingInstructionsType aUBLObject = UBL21Reader.readForwardingInstructions (aDoc);
+      final ForwardingInstructionsType aUBLObject = UBL21Reader.forwardingInstructions ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateForwardingInstructions (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.forwardingInstructions ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeForwardingInstructions (aUBLObject);
+      final Document aDoc2 = UBL21Writer.forwardingInstructions ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ForwardingInstructionsType aUBLObject2 = UBL21Reader.readForwardingInstructions (aDoc2);
+      final ForwardingInstructionsType aUBLObject2 = UBL21Reader.forwardingInstructions ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateForwardingInstructions (aUBLObject2);
+      aErrors = UBL21Validator.forwardingInstructions ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateForwardingInstructions (new ForwardingInstructionsType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.forwardingInstructions ()
+                                                      .validate (new ForwardingInstructionsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -225,33 +226,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.INVOICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final InvoiceType aUBLObject = UBL21Reader.readInvoice (aDoc);
+      final InvoiceType aUBLObject = UBL21Reader.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateInvoice (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeInvoice (aUBLObject);
+      final Document aDoc2 = UBL21Writer.invoice ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final InvoiceType aUBLObject2 = UBL21Reader.readInvoice (aDoc2);
+      final InvoiceType aUBLObject2 = UBL21Reader.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateInvoice (aUBLObject2);
+      aErrors = UBL21Validator.invoice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateInvoice (new InvoiceType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.invoice ().validate (new InvoiceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -265,34 +266,34 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.ORDER.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final OrderType aUBLObject = UBL21Reader.readOrder (aDoc);
+      final OrderType aUBLObject = UBL21Reader.order ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
-      assertNull (UBL21Reader.readApplicationResponse (aDoc));
+      assertNull (UBL21Reader.applicationResponse ().read (aDoc));
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateOrder (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.order ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeOrder (aUBLObject);
+      final Document aDoc2 = UBL21Writer.order ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final OrderType aUBLObject2 = UBL21Reader.readOrder (aDoc2);
+      final OrderType aUBLObject2 = UBL21Reader.order ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateOrder (aUBLObject2);
+      aErrors = UBL21Validator.order ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateOrder (new OrderType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.order ().validate (new OrderType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -306,33 +307,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.ORDER_RESPONSE_SIMPLE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final OrderResponseSimpleType aUBLObject = UBL21Reader.readOrderResponseSimple (aDoc);
+      final OrderResponseSimpleType aUBLObject = UBL21Reader.orderResponseSimple ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateOrderResponseSimple (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.orderResponseSimple ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeOrderResponseSimple (aUBLObject);
+      final Document aDoc2 = UBL21Writer.orderResponseSimple ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final OrderResponseSimpleType aUBLObject2 = UBL21Reader.readOrderResponseSimple (aDoc2);
+      final OrderResponseSimpleType aUBLObject2 = UBL21Reader.orderResponseSimple ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateOrderResponseSimple (aUBLObject2);
+      aErrors = UBL21Validator.orderResponseSimple ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateOrderResponseSimple (new OrderResponseSimpleType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.orderResponseSimple ().validate (new OrderResponseSimpleType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -346,33 +347,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.QUOTATION.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final QuotationType aUBLObject = UBL21Reader.readQuotation (aDoc);
+      final QuotationType aUBLObject = UBL21Reader.quotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateQuotation (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.quotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeQuotation (aUBLObject);
+      final Document aDoc2 = UBL21Writer.quotation ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final QuotationType aUBLObject2 = UBL21Reader.readQuotation (aDoc2);
+      final QuotationType aUBLObject2 = UBL21Reader.quotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateQuotation (aUBLObject2);
+      aErrors = UBL21Validator.quotation ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateQuotation (new QuotationType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.quotation ().validate (new QuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -386,33 +387,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.RECEIPT_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final ReceiptAdviceType aUBLObject = UBL21Reader.readReceiptAdvice (aDoc);
+      final ReceiptAdviceType aUBLObject = UBL21Reader.receiptAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateReceiptAdvice (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.receiptAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeReceiptAdvice (aUBLObject);
+      final Document aDoc2 = UBL21Writer.receiptAdvice ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ReceiptAdviceType aUBLObject2 = UBL21Reader.readReceiptAdvice (aDoc2);
+      final ReceiptAdviceType aUBLObject2 = UBL21Reader.receiptAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateReceiptAdvice (aUBLObject2);
+      aErrors = UBL21Validator.receiptAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateReceiptAdvice (new ReceiptAdviceType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.receiptAdvice ().validate (new ReceiptAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -426,33 +427,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.REMITTANCE_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final RemittanceAdviceType aUBLObject = UBL21Reader.readRemittanceAdvice (aDoc);
+      final RemittanceAdviceType aUBLObject = UBL21Reader.remittanceAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateRemittanceAdvice (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.remittanceAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeRemittanceAdvice (aUBLObject);
+      final Document aDoc2 = UBL21Writer.remittanceAdvice ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final RemittanceAdviceType aUBLObject2 = UBL21Reader.readRemittanceAdvice (aDoc2);
+      final RemittanceAdviceType aUBLObject2 = UBL21Reader.remittanceAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateRemittanceAdvice (aUBLObject2);
+      aErrors = UBL21Validator.remittanceAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateRemittanceAdvice (new RemittanceAdviceType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.remittanceAdvice ().validate (new RemittanceAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -466,33 +467,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.REQUEST_FOR_QUOTATION.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final RequestForQuotationType aUBLObject = UBL21Reader.readRequestForQuotation (aDoc);
+      final RequestForQuotationType aUBLObject = UBL21Reader.requestForQuotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateRequestForQuotation (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.requestForQuotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeRequestForQuotation (aUBLObject);
+      final Document aDoc2 = UBL21Writer.requestForQuotation ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final RequestForQuotationType aUBLObject2 = UBL21Reader.readRequestForQuotation (aDoc2);
+      final RequestForQuotationType aUBLObject2 = UBL21Reader.requestForQuotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateRequestForQuotation (aUBLObject2);
+      aErrors = UBL21Validator.requestForQuotation ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateRequestForQuotation (new RequestForQuotationType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.requestForQuotation ().validate (new RequestForQuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -506,33 +507,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.STATEMENT.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final StatementType aUBLObject = UBL21Reader.readStatement (aDoc);
+      final StatementType aUBLObject = UBL21Reader.statement ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateStatement (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.statement ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeStatement (aUBLObject);
+      final Document aDoc2 = UBL21Writer.statement ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final StatementType aUBLObject2 = UBL21Reader.readStatement (aDoc2);
+      final StatementType aUBLObject2 = UBL21Reader.statement ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateStatement (aUBLObject2);
+      aErrors = UBL21Validator.statement ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateStatement (new StatementType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.statement ().validate (new StatementType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -546,33 +547,33 @@ public final class UBL21FuncTest
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBL21DocumentType.WAYBILL.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final WaybillType aUBLObject = UBL21Reader.readWaybill (aDoc);
+      final WaybillType aUBLObject = UBL21Reader.waybill ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL21Validator.validateWaybill (aUBLObject);
+      IResourceErrorGroup aErrors = UBL21Validator.waybill ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL21Writer.writeWaybill (aUBLObject);
+      final Document aDoc2 = UBL21Writer.waybill ().writeToDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final WaybillType aUBLObject2 = UBL21Reader.readWaybill (aDoc2);
+      final WaybillType aUBLObject2 = UBL21Reader.waybill ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBL21Validator.validateWaybill (aUBLObject2);
+      aErrors = UBL21Validator.waybill ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL21Validator.validateWaybill (new WaybillType ());
+    final IResourceErrorGroup aErrors = UBL21Validator.waybill ().validate (new WaybillType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }

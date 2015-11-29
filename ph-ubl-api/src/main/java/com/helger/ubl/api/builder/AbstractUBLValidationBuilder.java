@@ -18,20 +18,31 @@ package com.helger.ubl.api.builder;
 
 import javax.annotation.Nonnull;
 
+import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
  * Abstract builder class for validating UBL documents.
  *
  * @author Philip Helger
+ * @param <T>
+ *          The UBL implementation class to be read
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
-public abstract class AbstractUBLValidationBuilder <IMPLTYPE extends AbstractUBLValidationBuilder <IMPLTYPE>>
+public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends AbstractUBLValidationBuilder <T, IMPLTYPE>>
                                                    extends AbstractUBLBuilder <IMPLTYPE>
 {
   public AbstractUBLValidationBuilder (@Nonnull final IUBLDocumentType aDocType)
   {
     super (aDocType);
   }
+
+  public boolean isValid (@Nonnull final T aUBLDocument)
+  {
+    return validate (aUBLDocument).containsNoError ();
+  }
+
+  @Nonnull
+  public abstract IResourceErrorGroup validate (@Nonnull T aUBLDocument);
 }

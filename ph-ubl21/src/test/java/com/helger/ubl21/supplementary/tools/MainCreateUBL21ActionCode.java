@@ -145,21 +145,21 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
   {
     StringBuilder aSB = new StringBuilder (_getPrefix ("Read", "UBL21Reader"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
-      append (e, EPhase.READ, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
+      append (e, EPhase.READ, aSB, "UBL21ReaderBuilder", MARSHALLER_CLASS, ENUM_CLASS + e.name ());
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Reader.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);
 
     aSB = new StringBuilder (_getPrefix ("Write", "UBL21Writer"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
-      append (e, EPhase.WRITE, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
+      append (e, EPhase.WRITE, aSB, "UBL21WriterBuilder", MARSHALLER_CLASS, ENUM_CLASS + e.name ());
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Writer.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);
 
     aSB = new StringBuilder (_getPrefix ("Validate", "UBL21Validator"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
-      append (e, EPhase.VALIDATE, aSB, MARSHALLER_CLASS, ENUM_CLASS + e.name ());
+      append (e, EPhase.VALIDATE, aSB, "UBL21ValidatorBuilder", MARSHALLER_CLASS, ENUM_CLASS + e.name ());
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Validator.java"),
                             aSB.append ("}").toString (),
                             CCharset.CHARSET_UTF_8_OBJ);

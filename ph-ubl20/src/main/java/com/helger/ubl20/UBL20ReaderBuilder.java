@@ -33,7 +33,7 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  * @param <T>
  *          The UBL 2.0 implementation class to be read
  */
-public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL20ReaderBuilder <T>>
+public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20ReaderBuilder <T>>
 {
   private final Class <T> m_aClass;
 
@@ -46,6 +46,15 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL20Reade
     setValidationEventHandler (AbstractUBLDocumentMarshaller.getGlobalValidationEventHandler ());
   }
 
+  /**
+   * Interpret the passed {@link Source} as a UBL document.
+   *
+   * @param aSource
+   *          The source to read from. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
+  @Override
   @Nullable
   public T read (@Nonnull final Source aSource)
   {
@@ -53,10 +62,31 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <UBL20Reade
     return UBL20Marshaller.readUBLDocument (aSource, m_aClassLoader, m_aClass, m_aEventHandler);
   }
 
+  /**
+   * Interpret the passed DOM {@link Node} as a UBL document.
+   *
+   * @param aNode
+   *          The DOM node to be read. May not be <code>null</code>.
+   * @return The evaluated UBL document or <code>null</code> in case of a
+   *         parsing error
+   */
   @Nullable
   public T read (@Nonnull final Node aNode)
   {
     ValueEnforcer.notNull (aNode, "Node");
     return UBL20Marshaller.readUBLDocument (aNode, m_aClassLoader, m_aClass, m_aEventHandler);
+  }
+
+  /**
+   * Create a new reader builder.
+   *
+   * @param aClass
+   *          The UBL class to be read. May not be <code>null</code>.
+   * @return The new reader builder. Never <code>null</code>.
+   */
+  @Nonnull
+  public static <T> UBL20ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
+  {
+    return new UBL20ReaderBuilder <T> (aClass);
   }
 }
