@@ -67,10 +67,13 @@ public final class UBL20DocumentTypesTest
   @Test
   public void testGetSchemaOfImplementationClass ()
   {
+    assertNull (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (null));
     assertNull (UBL20DocumentTypes.getSchemaOfImplementationClass (null));
     assertNull (UBL20DocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EUBL20DocumentType eDocType : EUBL20DocumentType.values ())
     {
+      assertSame (eDocType,
+                  UBL20DocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
       assertSame (eDocType.getSchema (null),
                   UBL20DocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
