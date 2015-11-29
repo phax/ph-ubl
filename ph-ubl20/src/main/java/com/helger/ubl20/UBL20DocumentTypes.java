@@ -196,7 +196,7 @@ public final class UBL20DocumentTypes
    *         class.
    */
   @Nullable
-  public static EUBL20DocumentType getDocumentTypeOfImplementatonClass (@Nullable final Class <?> aImplClass)
+  public static EUBL20DocumentType getDocumentTypeOfImplementationClass (@Nullable final Class <?> aImplClass)
   {
     if (aImplClass != null)
       for (final EUBL20DocumentType eDocType : EUBL20DocumentType.values ())
@@ -271,7 +271,7 @@ public final class UBL20DocumentTypes
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
                                                        @Nullable final ClassLoader aClassLoader)
   {
-    final EUBL20DocumentType eDocType = getDocumentTypeOfImplementatonClass (aImplClass);
+    final EUBL20DocumentType eDocType = getDocumentTypeOfImplementationClass (aImplClass);
     return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 }

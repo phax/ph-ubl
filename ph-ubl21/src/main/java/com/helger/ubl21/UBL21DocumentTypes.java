@@ -121,7 +121,7 @@ public final class UBL21DocumentTypes
    *         class.
    */
   @Nullable
-  public static EUBL21DocumentType getDocumentTypeOfImplementatonClass (@Nullable final Class <?> aImplClass)
+  public static EUBL21DocumentType getDocumentTypeOfImplementationClass (@Nullable final Class <?> aImplClass)
   {
     if (aImplClass != null)
       for (final EUBL21DocumentType eDocType : EUBL21DocumentType.values ())
@@ -272,7 +272,7 @@ public final class UBL21DocumentTypes
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
                                                        @Nullable final ClassLoader aClassLoader)
   {
-    final EUBL21DocumentType eDocType = getDocumentTypeOfImplementatonClass (aImplClass);
+    final EUBL21DocumentType eDocType = getDocumentTypeOfImplementationClass (aImplClass);
     return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 }
