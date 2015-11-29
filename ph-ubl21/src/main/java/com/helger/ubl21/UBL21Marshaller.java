@@ -314,8 +314,8 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                              aClassLoader,
                              eDocType,
                              aCustomEventHandler,
-                             aResult,
-                             aNSContext).isSuccess () ? aDoc : null;
+                             aNSContext,
+                             aResult).isSuccess () ? aDoc : null;
   }
 
   /**
@@ -352,8 +352,8 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                              aClassLoader,
                              eDocType,
                              aCustomEventHandler,
-                             aResult,
-                             UBL21NamespaceContext.getInstance ());
+                             UBL21NamespaceContext.getInstance (),
+                             aResult);
   }
 
   /**
@@ -373,11 +373,11 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
    * @param aCustomEventHandler
    *          An optional custom event handler to be used in marshalling. May be
    *          <code>null</code>.
+   * @param aNSContext
+   *          The namespace context to be used. May be <code>null</code>.
    * @param aResult
    *          the result object to write the marshaled document to. May not be
    *          <code>null</code>.
-   * @param aNSContext
-   *          The namespace context to be used. May be <code>null</code>.
    * @return {@link ESuccess#FAILURE} in case conversion to the specified class
    *         failed.
    */
@@ -386,8 +386,8 @@ public final class UBL21Marshaller extends AbstractUBLMarshaller
                                            @Nullable final ClassLoader aClassLoader,
                                            @Nonnull final EUBL21DocumentType eDocType,
                                            @Nullable final ValidationEventHandler aCustomEventHandler,
-                                           @Nonnull final Result aResult,
-                                           @Nullable final NamespaceContext aNSContext)
+                                           @Nullable final NamespaceContext aNSContext,
+                                           @Nonnull final Result aResult)
   {
     ValueEnforcer.notNull (aUBLDocument, "UBLDocument");
     ValueEnforcer.notNull (eDocType, "DocType");
