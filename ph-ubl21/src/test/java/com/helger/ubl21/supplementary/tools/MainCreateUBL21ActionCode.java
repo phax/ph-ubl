@@ -124,6 +124,7 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
            " * \n" +
            " * @author Philip Helger\n" +
            " */" +
+           "@SuppressWarnings (\"deprecation\")\n" +
            "@NotThreadSafe\n" +
            "public final class " +
            sClassName +

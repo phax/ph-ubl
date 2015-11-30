@@ -17,6 +17,7 @@
 package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
 import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
@@ -28,6 +29,7 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
  * @param <T>
  *          The UBL 2.0 implementation class to be read
  */
+@NotThreadSafe
 public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20WriterBuilder <T>>
 {
   protected UBL20WriterBuilder (@Nonnull final EUBL20DocumentType eDocType)
@@ -52,6 +54,8 @@ public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20Wr
    * @param aClass
    *          The UBL class to be written. May not be <code>null</code>.
    * @return The new writer builder. Never <code>null</code>.
+   * @param <T>
+   *          The UBL 2.0 document implementation type
    */
   @Nonnull
   public static <T> UBL20WriterBuilder <T> create (@Nonnull final Class <T> aClass)

@@ -17,7 +17,7 @@
 package com.helger.ubl.api.builder;
 
 import javax.annotation.Nullable;
-import javax.annotation.concurrent.NotThreadSafe;
+import javax.annotation.concurrent.ThreadSafe;
 import javax.xml.bind.ValidationEventHandler;
 import javax.xml.namespace.NamespaceContext;
 
@@ -28,7 +28,7 @@ import com.helger.commons.concurrent.SimpleReadWriteLock;
  *
  * @author Philip Helger
  */
-@NotThreadSafe
+@ThreadSafe
 public final class UBLBuilderDefaultSettings
 {
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();

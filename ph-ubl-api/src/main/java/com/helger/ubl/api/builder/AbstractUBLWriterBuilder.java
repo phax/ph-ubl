@@ -22,6 +22,7 @@ import java.io.OutputStream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.WillClose;
+import javax.annotation.concurrent.NotThreadSafe;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.MarshalException;
@@ -58,6 +59,7 @@ import com.helger.ubl.api.IUBLDocumentType;
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
+@NotThreadSafe
 public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLWriterBuilder <T, IMPLTYPE>>
                                                extends AbstractWritingUBLBuilder <T, IMPLTYPE>
 {

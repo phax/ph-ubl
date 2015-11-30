@@ -658,10 +658,9 @@ public abstract class AbstractCreateUBLActionCode
            .append (".class);}\n");
 
         // IResourceErrorGroup validate (Object)
-        aSB.append ("/** Validate the passed {@link " +
-                    sType +
-                    "} object.\n" +
-                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+        aSB.append ("/** Validate the passed {@link " + sType + "} object.\n" + "@param ")
+           .append (sParam)
+           .append (" the source object to validate. May not be <code>null</code>.\n" +
                     "@return The collected messages during validation. Never<code>null</code>. */\n");
         aSB.append ("@Deprecated @Nullable public static IResourceErrorGroup ")
            .append (sValidateMethod)
@@ -678,10 +677,9 @@ public abstract class AbstractCreateUBLActionCode
            .append (");}\n");
 
         // IResourceErrorGroup validate (Object, ClassLoader)
-        aSB.append ("/** Validate the passed {@link " +
-                    sType +
-                    "} object.\n" +
-                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+        aSB.append ("/** Validate the passed {@link " + sType + "} object.\n" + "@param ")
+           .append (sParam)
+           .append (" the source object to validate. May not be <code>null</code>.\n" +
                     "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
                     "@return The collected messages during validation. Never<code>null</code>. */\n");
         aSB.append ("@Deprecated @Nullable public static IResourceErrorGroup ")
@@ -699,10 +697,9 @@ public abstract class AbstractCreateUBLActionCode
            .append (");}\n");
 
         // boolean isValid (Object)
-        aSB.append ("/** Validate the passed {@link " +
-                    sType +
-                    "} object.\n" +
-                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+        aSB.append ("/** Validate the passed {@link " + sType + "} object.\n" + "@param ")
+           .append (sParam)
+           .append (" the source object to validate. May not be <code>null</code>.\n" +
                     "@return <code>true</code> if the object is valid, <code>false</code> otherwise. */\n");
         aSB.append ("@Deprecated public static boolean ")
            .append (sIsValidMethod)
@@ -717,10 +714,9 @@ public abstract class AbstractCreateUBLActionCode
            .append (", (ClassLoader) null).containsNoError ();}\n");
 
         // boolean isValid (Object, ClassLoader)
-        aSB.append ("/** Validate the passed {@link " +
-                    sType +
-                    "} object.\n" +
-                    "@param sParam the source object to validate. May not be <code>null</code>.\n" +
+        aSB.append ("/** Validate the passed {@link " + sType + "} object.\n" + "@param ")
+           .append (sParam)
+           .append (" the source object to validate. May not be <code>null</code>.\n" +
                     "@param aClassLoader Optional class loader to be used for JAXBContext. May be <code>null</code> to indicate to use the default class loader.\n" +
                     "@return <code>true</code> if the object is valid, <code>false</code> otherwise. */\n");
         aSB.append ("@Deprecated public static boolean ")

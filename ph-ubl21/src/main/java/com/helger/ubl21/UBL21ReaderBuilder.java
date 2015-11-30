@@ -17,6 +17,7 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 
@@ -27,6 +28,7 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  * @param <T>
  *          The UBL 2.1 implementation class to be read
  */
+@NotThreadSafe
 public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21ReaderBuilder <T>>
 {
   protected UBL21ReaderBuilder (@Nonnull final EUBL21DocumentType eDocType, @Nonnull final Class <T> aImplClass)
@@ -45,6 +47,8 @@ public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21Re
    * @param aClass
    *          The UBL class to be read. May not be <code>null</code>.
    * @return The new reader builder. Never <code>null</code>.
+   * @param <T>
+   *          The UBL 2.1 document implementation type
    */
   @Nonnull
   public static <T> UBL21ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
@@ -56,8 +60,9 @@ public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21Re
    * Create a new reader builder that is not typed, because only the document
    * type enumeration value is available.
    *
-   * @param aClass
-   *          The UBL class to be read. May not be <code>null</code>.
+   * @param eDocType
+   *          The UBL 2.1 document type to be read. May not be <code>null</code>
+   *          .
    * @return The new reader builder. Never <code>null</code>.
    */
   @Nonnull

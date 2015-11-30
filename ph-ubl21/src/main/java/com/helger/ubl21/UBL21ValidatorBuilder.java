@@ -17,6 +17,7 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
 
@@ -27,6 +28,7 @@ import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
  * @param <T>
  *          The UBL 2.1 implementation class to be read
  */
+@NotThreadSafe
 public class UBL21ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, UBL21ValidatorBuilder <T>>
 {
   protected UBL21ValidatorBuilder (@Nonnull final EUBL21DocumentType eDocType)
@@ -45,6 +47,8 @@ public class UBL21ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, 
    * @param aClass
    *          The UBL class to be validated. May not be <code>null</code>.
    * @return The new validation builder. Never <code>null</code>.
+   * @param <T>
+   *          The UBL 2.1 document implementation type
    */
   @Nonnull
   public static <T> UBL21ValidatorBuilder <T> create (@Nonnull final Class <T> aClass)

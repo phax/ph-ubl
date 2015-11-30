@@ -159,6 +159,8 @@ public final class UBL20Marshaller extends AbstractUBLMarshaller
    *          be <code>null</code>.
    * @return <code>null</code> in case conversion to the specified class failed.
    *         See the log output for details.
+   * @param <T>
+   *          The UBL document implementation type
    */
   @Nullable
   public static <T> T readUBLDocument (@Nonnull final Source aSource,
@@ -297,6 +299,8 @@ public final class UBL20Marshaller extends AbstractUBLMarshaller
    * @param aCustomEventHandler
    *          An optional custom event handler to be used in marshalling. May be
    *          null.
+   * @param aNSContext
+   *          The namespace context to be used. May be <code>null</code>.
    * @return <code>null</code> in case conversion to the specified class failed.
    *         See the log output for details.
    */

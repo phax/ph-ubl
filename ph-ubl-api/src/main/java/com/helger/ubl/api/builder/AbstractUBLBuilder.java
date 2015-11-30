@@ -18,6 +18,7 @@ package com.helger.ubl.api.builder;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.string.ToStringGenerator;
@@ -30,6 +31,7 @@ import com.helger.ubl.api.IUBLDocumentType;
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
+@NotThreadSafe
 public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <IMPLTYPE>>
 {
   protected final IUBLDocumentType m_aDocType;

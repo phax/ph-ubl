@@ -17,6 +17,7 @@
 package com.helger.ubl.api.builder;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.NotThreadSafe;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
@@ -36,6 +37,7 @@ import com.helger.ubl.api.IUBLDocumentType;
  * @param <IMPLTYPE>
  *          The implementation class implementing this abstract class.
  */
+@NotThreadSafe
 public abstract class AbstractWritingUBLBuilder <T, IMPLTYPE extends AbstractWritingUBLBuilder <T, IMPLTYPE>>
                                                 extends AbstractUBLBuilder <IMPLTYPE>
 {
