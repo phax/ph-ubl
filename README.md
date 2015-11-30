@@ -1,9 +1,9 @@
-#ph-ubl 4.0.0
+#ph-ubl 4.5.0
 
 [![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
 ﻿
 
-This is the readme file for the current version 4.x - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
+This is the readme file for the current version 4.5.0 - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
 
 Set of Java libraries for reading and writing OASIS UBL 2.0 and 2.1 documents.
 This is the successor of the phloc-ubl library.
@@ -16,12 +16,33 @@ The following projects are contained:
   * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
   * **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
   * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
+  
+##News and noteworthy
+ 
+  * v4.5.0 - 2015-11-30
+    * New API that this more flexible and contains less overloads - see the examples
+    * Added the possibility to easily customize the namespace prefix mapping and other things
+  * v4.0.0 - 2015-07-28
+    * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
+    * Improved OSGI support
 
 #Examples
 
 An example for reading and writing UBL 2.0 files can be found in the test file [UBL20FuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl20/src/test/java/com/helger/ubl20/UBL20FuncTest.java).
 
 An example for reading and writing UBL 2.1 files can be found in the test file [UBL21FuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl21/src/test/java/com/helger/ubl21/UBL21FuncTest.java).
+
+#Maven usage generic
+You can use ph-ubl as a BOM (bill of material) when you include the following in the `dependencyManagement` section of your POM:
+```
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-ubl-parent-pom</artifactId>
+  <version>4.5.0</version>
+  <type>pom</type>
+  <scope>import</scope>
+</dependency>
+```
 
 #Maven usage UBL 2.0
 To read and write UBL 2.0 documents add the following to your pom.xml to use this artifact:
@@ -30,7 +51,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>4.0.0</version>
+  <version>4.5.0</version>
 </dependency>
 ```
 
@@ -40,7 +61,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>4.0.0</version>
+  <version>4.5.0</version>
 </dependency>
 ```
 
@@ -51,7 +72,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>4.0.0</version>
+  <version>4.5.0</version>
 </dependency>
 ```
 
@@ -61,7 +82,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>4.0.0</version>
+  <version>4.5.0</version>
 </dependency>
 ```
 
@@ -89,7 +110,6 @@ For further information on the Universal Business Language can be found on the f
   * https://www.oasis-open.org/committees/ubl/
   * http://ubl.xml.org
   * http://goubl.com
-  
 
 ---
 
