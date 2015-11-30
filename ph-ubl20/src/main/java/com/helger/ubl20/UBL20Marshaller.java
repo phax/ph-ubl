@@ -85,6 +85,8 @@ public final class UBL20Marshaller extends AbstractUBLMarshaller
    *          be <code>null</code>.
    * @return <code>null</code> in case conversion to the specified class failed.
    *         See the log output for details.
+   * @param <T>
+   *          The UBL document implementation type
    */
   @Nullable
   public static <T> T readUBLDocument (@Nonnull final Node aNode,
