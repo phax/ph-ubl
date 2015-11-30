@@ -29,9 +29,14 @@ import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
  */
 public class UBL20ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, UBL20ValidatorBuilder <T>>
 {
+  protected UBL20ValidatorBuilder (@Nonnull final EUBL20DocumentType eDocType)
+  {
+    super (eDocType);
+  }
+
   public UBL20ValidatorBuilder (@Nonnull final Class <T> aClass)
   {
-    super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+    this (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   /**

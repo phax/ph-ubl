@@ -29,9 +29,14 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  */
 public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20ReaderBuilder <T>>
 {
+  protected UBL20ReaderBuilder (@Nonnull final EUBL20DocumentType eDocType, @Nonnull final Class <T> aImplClass)
+  {
+    super (eDocType, aImplClass);
+  }
+
   public UBL20ReaderBuilder (@Nonnull final Class <T> aClass)
   {
-    super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
+    this (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
   }
 
   /**
@@ -45,5 +50,19 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20Re
   public static <T> UBL20ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
     return new UBL20ReaderBuilder <T> (aClass);
+  }
+
+  /**
+   * Create a new reader builder that is not typed, because only the document
+   * type enumeration value is available.
+   *
+   * @param aClass
+   *          The UBL class to be read. May not be <code>null</code>.
+   * @return The new reader builder. Never <code>null</code>.
+   */
+  @Nonnull
+  public static UBL20ReaderBuilder <?> createGeneric (@Nonnull final EUBL20DocumentType eDocType)
+  {
+    return new UBL20ReaderBuilder <Object> (eDocType, Object.class);
   }
 }

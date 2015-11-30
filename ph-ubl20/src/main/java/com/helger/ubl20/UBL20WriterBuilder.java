@@ -30,15 +30,20 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
  */
 public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20WriterBuilder <T>>
 {
-  public UBL20WriterBuilder (@Nonnull final Class <T> aClass)
+  protected UBL20WriterBuilder (@Nonnull final EUBL20DocumentType eDocType)
   {
-    super (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+    super (eDocType);
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
     aNSContext.addMappings (UBL20NamespaceContext.getInstance ());
     aNSContext.setDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
+  }
+
+  public UBL20WriterBuilder (@Nonnull final Class <T> aClass)
+  {
+    this (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   /**
