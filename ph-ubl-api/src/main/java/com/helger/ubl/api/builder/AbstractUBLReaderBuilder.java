@@ -293,7 +293,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link Source} as a UBL document.<br>
    * Note: this is the generic API for reading all types of UBL documents.
    *
-   * @param sSource
+   * @param aSource
    *          The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
