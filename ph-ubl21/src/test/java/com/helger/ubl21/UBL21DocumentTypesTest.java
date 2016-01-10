@@ -74,9 +74,9 @@ public final class UBL21DocumentTypesTest
     {
       assertSame (eDocType,
                   UBL21DocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (null),
+      assertSame (eDocType.getSchema (),
                   UBL21DocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
-      assertNotNull (eDocType.getValidator (null));
+      assertNotNull (eDocType.getValidator ());
     }
   }
 }

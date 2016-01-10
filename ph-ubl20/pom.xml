@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger</groupId>
     <artifactId>ph-ubl-parent-pom</artifactId>
-    <version>4.5.1-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl20</artifactId>
   <packaging>bundle</packaging>
@@ -61,12 +61,6 @@
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-ubl-api</artifactId>
-    </dependency>
-    
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <scope>provided</scope>
     </dependency>
     
     <dependency>

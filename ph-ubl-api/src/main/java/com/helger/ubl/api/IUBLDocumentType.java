@@ -89,7 +89,10 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
    *         by the {@link com.helger.commons.xml.schema.XMLSchemaCache}.
    */
   @Nonnull
-  Schema getSchema ();
+  default Schema getSchema ()
+  {
+    return getSchema ((ClassLoader) null);
+  }
 
   /**
    * @param aClassLoader
@@ -102,14 +105,28 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   Schema getSchema (@Nullable ClassLoader aClassLoader);
 
   /**
-   * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
    * @return The non-<code>null</code> compiled {@link Validator} object
    *         retrieved from the schema to be obtained from {@link #getSchema()}.
    */
   @Nonnull
-  Validator getValidator (@Nullable ClassLoader aClassLoader);
+  default Validator getValidator ()
+  {
+    return getSchema ().newValidator ();
+  }
+
+  /**
+   * @param aClassLoader
+   *          The class loader to be used. May be <code>null</code> indicating
+   *          that the default class loader should be used.
+   * @return The non-<code>null</code> compiled {@link Validator} object
+   *         retrieved from the schema to be obtained from
+   *         {@link #getSchema(ClassLoader)}.
+   */
+  @Nonnull
+  default Validator getValidator (@Nullable final ClassLoader aClassLoader)
+  {
+    return getSchema (aClassLoader).newValidator ();
+  }
 
   /**
    * Validate the passed XML instance against the XML Schema of this document

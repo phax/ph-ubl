@@ -22,10 +22,10 @@
   <parent>
     <groupId>com.helger</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>1.4.1</version>
+    <version>1.8.0-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>4.5.1-SNAPSHOT</version>
+  <version>5.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ph-ubl-parent-pom</name>
   <description>Base POM to build the ph-ubl projects</description>
@@ -66,25 +66,19 @@
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
-        <version>6.2.3</version>
+        <version>8.0.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-genericode</artifactId>
-        <version>4.1.1</version>
+        <version>5.0.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>jcodemodel</artifactId>
         <version>2.8.1</version>
-      </dependency>
-
-      <dependency>
-        <groupId>com.sun.xml.bind</groupId>
-        <artifactId>jaxb-impl</artifactId>
-        <version>2.1.13</version>
       </dependency>
       
       <dependency>

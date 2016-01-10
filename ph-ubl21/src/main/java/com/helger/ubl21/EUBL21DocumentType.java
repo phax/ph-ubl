@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlSchema;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
-import javax.xml.validation.Validator;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
@@ -196,12 +195,6 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public Schema getSchema ()
-  {
-    return getSchema ((ClassLoader) null);
-  }
-
-  @Nonnull
   @SuppressFBWarnings ("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")
   public Schema getSchema (@Nullable final ClassLoader aClassLoader)
   {
@@ -214,12 +207,6 @@ public enum EUBL21DocumentType implements IUBLDocumentType
         throw new IllegalStateException ("Failed to create Schema from " + aXSDRes);
     }
     return m_aSchema;
-  }
-
-  @Nonnull
-  public Validator getValidator (@Nullable final ClassLoader aClassLoader)
-  {
-    return getSchema (aClassLoader).newValidator ();
   }
 
   @Nonnull
