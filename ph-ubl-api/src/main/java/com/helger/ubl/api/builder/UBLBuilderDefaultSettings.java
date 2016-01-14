@@ -47,17 +47,11 @@ public final class UBLBuilderDefaultSettings
    *          The new default event handler. May be <code>null</code> to
    *          indicate, that the default handler should be used.
    */
-  public static final void setDefaultValidationEventHandler (@Nullable final ValidationEventHandler aEventHandler)
+  public static void setDefaultValidationEventHandler (@Nullable final ValidationEventHandler aEventHandler)
   {
-    s_aRWLock.writeLock ().lock ();
-    try
-    {
+    s_aRWLock.writeLocked ( () -> {
       s_aEventHandler = aEventHandler;
-    }
-    finally
-    {
-      s_aRWLock.writeLock ().unlock ();
-    }
+    });
   }
 
   /**
@@ -66,17 +60,9 @@ public final class UBLBuilderDefaultSettings
    *         handler is defined, and the default validation handler is used.
    */
   @Nullable
-  public static final ValidationEventHandler getDefaultValidationEventHandler ()
+  public static ValidationEventHandler getDefaultValidationEventHandler ()
   {
-    s_aRWLock.readLock ().lock ();
-    try
-    {
-      return s_aEventHandler;
-    }
-    finally
-    {
-      s_aRWLock.readLock ().unlock ();
-    }
+    return s_aRWLock.readLocked ( () -> s_aEventHandler);
   }
 
   /**
@@ -89,15 +75,9 @@ public final class UBLBuilderDefaultSettings
    */
   public static void setDefaultNamespaceContext (@Nullable final NamespaceContext aNamespaceContext)
   {
-    s_aRWLock.writeLock ().lock ();
-    try
-    {
+    s_aRWLock.writeLocked ( () -> {
       s_aNamespaceContext = aNamespaceContext;
-    }
-    finally
-    {
-      s_aRWLock.writeLock ().unlock ();
-    }
+    });
   }
 
   /**
@@ -107,14 +87,6 @@ public final class UBLBuilderDefaultSettings
   @Nullable
   public static NamespaceContext getDefaultNamespaceContext ()
   {
-    s_aRWLock.readLock ().lock ();
-    try
-    {
-      return s_aNamespaceContext;
-    }
-    finally
-    {
-      s_aRWLock.readLock ().unlock ();
-    }
+    return s_aRWLock.readLocked ( () -> s_aNamespaceContext);
   }
 }
