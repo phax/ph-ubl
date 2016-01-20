@@ -135,7 +135,6 @@
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <extension>true</extension>
-          <specVersion>2.1</specVersion>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
@@ -167,7 +166,7 @@
           <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-jaxb22-plugin</artifactId>
-            <version>2.2.11.6</version>
+            <version>2.2.11.7-SNAPSHOT</version>
           </dependency>
           <dependency>
             <groupId>com.helger</groupId>
