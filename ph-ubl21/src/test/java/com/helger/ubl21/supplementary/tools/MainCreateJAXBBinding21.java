@@ -18,6 +18,7 @@ package com.helger.ubl21.supplementary.tools;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -29,7 +30,6 @@ import javax.xml.XMLConstants;
 
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.io.file.ComparatorFileName;
 import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
@@ -79,7 +79,7 @@ public final class MainCreateJAXBBinding21
   private static Iterable <File> _getFileList (final String sPath)
   {
     return CollectionHelper.getSorted (FileSystemIterator.create (sPath, new FileFilterFilenameEndsWith (".xsd")),
-                                       new ComparatorFileName ());
+                                       Comparator.comparing (File::getName));
   }
 
   @Nullable
