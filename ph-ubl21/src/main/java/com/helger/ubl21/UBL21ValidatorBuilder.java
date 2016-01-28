@@ -31,7 +31,7 @@ import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
 @NotThreadSafe
 public class UBL21ValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, UBL21ValidatorBuilder <T>>
 {
-  protected UBL21ValidatorBuilder (@Nonnull final EUBL21DocumentType eDocType)
+  public UBL21ValidatorBuilder (@Nonnull final EUBL21DocumentType eDocType)
   {
     super (eDocType);
   }

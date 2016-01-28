@@ -31,7 +31,7 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 @NotThreadSafe
 public class UBL21ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL21ReaderBuilder <T>>
 {
-  protected UBL21ReaderBuilder (@Nonnull final EUBL21DocumentType eDocType, @Nonnull final Class <T> aImplClass)
+  public UBL21ReaderBuilder (@Nonnull final EUBL21DocumentType eDocType, @Nonnull final Class <T> aImplClass)
   {
     super (eDocType, aImplClass);
   }

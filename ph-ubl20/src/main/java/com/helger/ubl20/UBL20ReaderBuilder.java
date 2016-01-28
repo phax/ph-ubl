@@ -26,12 +26,12 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL 2.0 implementation class to be read
+ *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
 public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20ReaderBuilder <T>>
 {
-  protected UBL20ReaderBuilder (@Nonnull final EUBL20DocumentType eDocType, @Nonnull final Class <T> aImplClass)
+  public UBL20ReaderBuilder (@Nonnull final EUBL20DocumentType eDocType, @Nonnull final Class <T> aImplClass)
   {
     super (eDocType, aImplClass);
   }
@@ -45,10 +45,10 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20Re
    * Create a new reader builder.
    *
    * @param aClass
-   *          The UBL class to be read. May not be <code>null</code>.
+   *        The UBL class to be read. May not be <code>null</code>.
    * @return The new reader builder. Never <code>null</code>.
    * @param <T>
-   *          The UBL 2.0 document implementation type
+   *        The UBL 2.0 document implementation type
    */
   @Nonnull
   public static <T> UBL20ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
@@ -61,8 +61,7 @@ public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20Re
    * type enumeration value is available.
    *
    * @param eDocType
-   *          The UBL 2.0 document type to be read. May not be <code>null</code>
-   *          .
+   *        The UBL 2.0 document type to be read. May not be <code>null</code> .
    * @return The new reader builder. Never <code>null</code>.
    */
   @Nonnull

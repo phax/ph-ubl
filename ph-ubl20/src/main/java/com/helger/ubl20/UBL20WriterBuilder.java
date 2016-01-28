@@ -27,12 +27,12 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL 2.0 implementation class to be read
+ *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
 public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20WriterBuilder <T>>
 {
-  protected UBL20WriterBuilder (@Nonnull final EUBL20DocumentType eDocType)
+  public UBL20WriterBuilder (@Nonnull final EUBL20DocumentType eDocType)
   {
     super (eDocType);
 
@@ -52,10 +52,10 @@ public class UBL20WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL20Wr
    * Create a new writer builder.
    *
    * @param aClass
-   *          The UBL class to be written. May not be <code>null</code>.
+   *        The UBL class to be written. May not be <code>null</code>.
    * @return The new writer builder. Never <code>null</code>.
    * @param <T>
-   *          The UBL 2.0 document implementation type
+   *        The UBL 2.0 document implementation type
    */
   @Nonnull
   public static <T> UBL20WriterBuilder <T> create (@Nonnull final Class <T> aClass)

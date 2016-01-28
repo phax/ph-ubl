@@ -32,7 +32,7 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
 @NotThreadSafe
 public class UBL21WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL21WriterBuilder <T>>
 {
-  protected UBL21WriterBuilder (@Nonnull final EUBL21DocumentType eDocType)
+  public UBL21WriterBuilder (@Nonnull final EUBL21DocumentType eDocType)
   {
     super (eDocType);
 
