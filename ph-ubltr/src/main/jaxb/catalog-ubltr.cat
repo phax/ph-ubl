@@ -1,0 +1,1 @@
+REWRITE_SYSTEM "../common" "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common"

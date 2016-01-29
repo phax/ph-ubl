@@ -1,0 +1,2733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hr-xml.org/3"
+	xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.openapplications.org/oagis/9"
+		schemaLocation="www.openapplications.org_oagis_9/Components.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="../common/UBL-xmldsig-core-schema-2.1.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation> Name: ProcessUserAccount.xsd Status: 3.0 Public Release Date this
+			version: 2009-Sep-23 Purpose: Used to request processing of the UserAccount noun by a
+			receiving application or party. UserAccount Contains a set of information used to
+			establish and maintain user accounts for an application or system. Process is an "Action
+			Verb". ActionExpression(s) represent and communicate data management instructions. XPath
+			is the default expression language. The actionCode attribute (Add, Change, Delete,
+			Replace) specifies the action to be taken by the receiver. The data entities being
+			managed are represented as elements of the UserAccount noun in the BOD instance.
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="ProcessUserAccount" type="ProcessUserAccountType"/>
+	<xsd:complexType name="ProcessUserAccountType">
+		<xsd:annotation>
+			<xsd:documentation> Used to request processing of the UserAccount noun by a receiving
+				application or party. UserAccount Contains a set of information used to establish
+				and maintain user accounts for an application or system. Process is an "Action
+				Verb". ActionExpression(s) represent and communicate data management instructions.
+				XPath is the default expression language. The actionCode attribute (Add, Change,
+				Delete, Replace) specifies the action to be taken by the receiver. The data entities
+				being managed are represented as elements of the UserAccount noun in the BOD
+				instance. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="oa:BusinessObjectDocumentType">
+				<xsd:sequence>
+					<xsd:element name="DataArea" type="ProcessUserAccountDataAreaType">
+						<xsd:annotation>
+							<xsd:documentation>The DataArea is the part of the BOD that contains
+								business information. This information consists of a verb and one or
+								more noun instances. In the case of the ProcessUserAccount, the verb
+								Process indicates the action to be performed on the noun
+								UserAccount.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProcessUserAccountDataAreaType">
+		<xsd:sequence>
+			<xsd:element ref="oa:Process"/>
+			<xsd:element ref="UserAccount" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="UserAccount" type="UserAccountType"/>
+	<xsd:complexType name="UserAccountType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">User
+					Account. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					set of information used to establish and maintain user accounts for an
+					application or system.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="VersionID" minOccurs="0"/>
+			<xsd:element ref="Party" minOccurs="0"/>
+			<xsd:element ref="PartyReportingIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FreeFormEffectivePeriod" minOccurs="0"/>
+			<xsd:element ref="UserID" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the user. Usually, a person ID, such as an
+						employee ID.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessCredential" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Contains a password or other token associated with the
+						authentication of a user. This is used in pre-provisioning a partner system
+						with user account information rather than in actual authentication processes
+						(in which case the appropriate token would typically be passed in a SOAP
+						security header). This component is repeatable to allow for multiple
+						credentials or tokens. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PersonName" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The User's actual name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Communication" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Contact information related to the Users.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="UserRole" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The designated role(s) associated with the user with regard
+						to the account. For example, "recruiter," "compliance officer," "HR
+						manager," etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AuthorizedWorkScope" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A user's authorized scope of work.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ProhibitedWorkScope" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A prohibited scope of work for a user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccountConfiguration" minOccurs="0"/>
+			<xsd:element ref="Notification" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="GoverningAgreementID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SecurityQuestionInformation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="DocumentIDGroup">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Document Identification Group. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Provides
+					the Identifier(s) of the document being communicated. Uniquely identifies a
+					Document within an organization. Typically there is only an ID for a document
+					within one system. However, in the case of B2B transactions the different
+					parties to the transactions may have different Identifiers for the same
+					document. This construct is designed to allow for these different
+					identifications. This type is based on the Star Standards Document Identifier
+					Group. </ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The contextual
+					meaning of a particular DocumentIDGroup will be determined by its fully
+					qualified XPATH. For example:
+					ScreeningOrder/DocumentIDGroup/DocumentID</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DocumentID"/>
+			<xsd:element ref="AlternateDocumentID" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="DocumentID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Document Identification. Identifier</ccts:DictionaryEntryName>
+				<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The DocumentID
+					serves as an identifier of an entity corresponding to the noun. The
+					DocumentSequence serves as an identifier on the different instances of a noun in
+					a message instance; the sequence numbers are specific to the message instance
+					(i.e. in the case of a message instance with two noun instances, the first noun
+					instance may have a DocumentSequence of "1" and the second noun instance would
+					have a DocumentSequence of "2".</ccts:Definition>
+				<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification</ccts:PropertyTermName>
+				<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+				<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Either the
+					DocumentID or the DocumentSequence may serve as the identifier of the noun
+					instance and used in the ActionExpression to identify the noun instance.
+					DocumentID should be used if systems are maintaining noun instance IDs (i.e.,
+					PurchaseOrder Reference Number) for the entity corresponding to the noun.
+					DocumentSequence should be used if systems are not maintaining noun instance
+					IDs. </ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="IdentifierType">
+		<xsd:simpleContent>
+			<xsd:extension base="oa:IdentifierType">
+				<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:attributeGroup name="EffectiveDateAttributeGroup">
+		<xsd:annotation>
+			<xsd:documentation>HR-XML's 3.0 architecture makes a distinction between effective-date
+				meta data and effective dating that is an integral part of the data model for the
+				particular component. For example, a License typically has as an integral part of
+				its data model, a start date and end date during which it is effective. This might
+				be expressed using StartDate and EndDate components. Where there is the need to
+				provide “effective dating” metadata for a component the standard approach to be used
+				across the 3.0 library will be use EffectiveDateAttributeGroup. For example, a
+				PersonName does not include effective dating as an integral part of its data model,
+				but effective date meta date may be necessary for accurate processing or handling of
+				a PersonName. Note also in some cases, a component that has effective dating as part
+				of its data model may also have effective datng meta data. For example,
+				EmploymentHistory includes dating relevant to the tenure of a person at an employer
+				and within a position. Effective dating meta data (using the
+				EffectiveDateAttributeGroup) also could be valuable on EmploymentHistory to
+				distinquish among different versions of the same persons
+				history.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="validFrom" type="FormattedDateTimeType" use="optional"/>
+		<xsd:attribute name="validTo" type="FormattedDateTimeType" use="optional"/>
+	</xsd:attributeGroup>
+	<xsd:simpleType name="FormattedDateTimeType">
+		<xsd:annotation>
+			<xsd:documentation>This is formatted representation of a date, which may be specified as
+				a date, date/time, year, or year/month.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:union memberTypes="oa:DateType oa:YearMonthDateType oa:YearDateType oa:DateTimeType"/>
+	</xsd:simpleType>
+	<xsd:element name="AlternateDocumentID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>The DocumentID serves as an identifier of an entity corresponding to
+				the noun instance (i.e., the entity being managed in an interaction). In many cases,
+				trading partner requirements may make it necessary to associate multiple
+				indentifiers for an entity. Only a single DocumentID is permitted within any noun
+				instance, but multiple AlternateDocumentIDs are permitted.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentSequence" type="oa:PositiveIntegerNumericType">
+		<xsd:annotation>
+			<xsd:documentation>Intended as an identifier on different instances of a noun in a BOD
+				message instance. It is possible to have a single BOD message instance with both
+				multiple nouns instances and multiple ActionExpressions. In support of this need,
+				every noun is defined with DocumentID and DocumentSequence property elements. The
+				DocumentID serves as an identifier of an entity corresponding to the noun. The
+				DocumentSequence serves as an identifier on the different instances of a noun in a
+				message instance; the sequence numbers are specific to the message instance (i.e. in
+				the case of a message instance with two noun instances, the first noun instance may
+				have a DocumentSequence of "1" and the second noun instance would have a
+				DocumentSequence of "2".</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="VersionID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A version number or other identifier uniquely distinquishing the
+				particular generation or variant of the item in question.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Party" type="PartyType"/>
+	<xsd:complexType name="PartyType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Party. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					set of information about a Party necessary to execute and administer a given
+					request or business activity. A party is an individual or entity having a role
+					in a business activity and having obligations and/or entitlements deriving from
+					that role that are contractually binding or legally significant.
+				</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="BasePartyType">
+				<xsd:sequence>
+					<xsd:element ref="UserArea" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BasePartyType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Party. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					set of information about a Party necessary to execute and administer a given
+					request or business activity. A party is an individual or entity having a role
+					in a business activity and having obligations and/or entitlements deriving from
+					that role that are contractually binding or legally significant.
+				</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="PartyID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PartyLegalID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PartyTaxID" minOccurs="0"/>
+			<xsd:element ref="PartyName" minOccurs="0"/>
+			<xsd:element ref="PartyReportingIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Communication" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PersonContact" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="agencyRoleCode" type="AgencyRoleCodeContentType" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="PartyID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Party. Identification. Identifier</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Distinquishes a party system involved in a transaction. </ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PartyLegalID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A government assigned identifier to distinquish the party
+				(organization, person, or legal entity) to a transaction.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PartyTaxID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>An identifer assigned by a government tax authority to disquish the
+				party (organization, person, or legal entity) to a transaction.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PartyName" type="oa:TextType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Party. Name</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The name
+					of a party to the transaction.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PartyReportingIDs" type="IDSetType">
+		<xsd:annotation>
+			<xsd:documentation>Contains a set of identifiers that are communicated with an order or
+				other transaction for audit, reporting, accounting, or similar purposes. These can
+				be thought of as "pass-through" values. An example would be billing
+				references.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="IDSetType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Set. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					set of identifications (IDs) that as a composite belong to an identification
+					scheme control by a particular party.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Could be used
+					to communicate a "facet identifier" or other multi-part identifier or other
+					identification scheme that consists of a set of identifiers as a
+					composite.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="agencyRoleCode" type="AgencyRoleCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="IdentifierAttributeGroup"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="ID" type="IdentifierType"/>
+	<xsd:element name="UserArea" type="UserAreaType"/>
+	<xsd:complexType name="UserAreaType">
+		<xsd:annotation>
+			<xsd:documentation>Allows the implementer to extend the base HR-XML specification. This
+				is done by defining the additional information in XML Schema and referencing the new
+				schema in the xml instance document throught the use of namespaces. Once this is
+				done the additional information defined there can be carried in the BOD XML instance
+				document. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="AgencyRoleCodeContentType">
+		<xsd:union memberTypes="AgencyRoleCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="AgencyRoleCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Agency Role. Code</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">A code
+					classifying the role of an entity or the role with which that entity is
+					associated. </ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Customer"/>
+			<xsd:enumeration value="Supplier"/>
+			<xsd:enumeration value="Requester"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:attributeGroup name="IdentifierAttributeGroup">
+		<xsd:attribute name="schemeID" type="xsd:normalizedString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UNDT000011-SC2</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme. Identifier</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The
+						identification of the identification scheme.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeName" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UNDT000011-SC3</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme. Name. Text</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The name
+						of the identification scheme.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Name</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Text</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeAgencyID" type="xsd:normalizedString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UNDT000011-SC4</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Agency. Identifier</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The
+						identification of the agency that maintains the identification
+						scheme.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Agency</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+					<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Defaults to
+						the UN/EDIFACT data element 3055 code list.</ccts:UsageRule>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeAgencyName" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UNDT000011-SC5</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Agency. Name. Text</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The name
+						of the agency that maintains the identification scheme.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Agency</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Agency Name</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Text</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeVersionID" type="xsd:normalizedString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UNDT000011-SC6</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme. Version. Identifier</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The
+						version of the identification scheme.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Version</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeDataURI" type="xsd:anyURI" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UDT0000011-SC7</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Data. Uniform Resource.
+						Identifier</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The
+						Uniform Resource Identifier that identifies where the identification scheme
+						data is located.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme Data</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Uniform Resource Identifier</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="schemeURI" type="xsd:anyURI" use="optional">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">UDT0000011-SC8</ccts:UniqueID>
+					<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">SC</ccts:CategoryCode>
+					<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme. Uniform Resource.
+						Identifier</ccts:DictionaryEntryName>
+					<ccts:Definition xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">The
+						Uniform Resource Identifier that identifies where the identification scheme
+						is located.</ccts:Definition>
+					<ccts:ObjectClass xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identification Scheme</ccts:ObjectClass>
+					<ccts:PropertyTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Uniform Resource Identifier</ccts:PropertyTermName>
+					<ccts:RepresentationTermName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifier</ccts:RepresentationTermName>
+					<ccts:PrimitiveType xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">string</ccts:PrimitiveType>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:element name="Communication" type="CommunicationABIEType"/>
+	<xsd:complexType name="CommunicationABIEType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">This
+					flexibly allows capture of information about a variety of communication channels
+					(telephone, email, fax, messaging, address, etc.). CommunicationABIEType is
+					logically derived from UN/CEFACT TBG17 ABIE CommunicationType as defined in the
+					Reusable Aggregate Business Information Entity (RUABIE) XML Schema file. Note
+					this version has been modified to meet HR Industry requirments. 1. Includes
+					effective dating attributes. 2. Preference, sequence, and effective dating are
+					handled in attributes rather than element. 3. Address based on OAGIS Address
+					type with exceptions: includes effective dating and current Indicator; uses HR
+					country code list. 4. Uses HR code lists for ChannelCode and UseCode. </ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Various uses
+					and options are supported. Note that Communication allows the capture of an
+					Address as a communication type. Note that not every use of Address is a
+					communication. For example, Residence Address and Domicle Address have uses in
+					the context of payroll tax calculation, benefits plan eligibility determination,
+					and employment screening that are distinct from usage of an address as a
+					communication means. IIn this case, the Address 'type' attribute would specify
+					the address as Residence or Domicile.</ccts:UsageRule>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Residence
+					definition: The place of a person's general abode. A person's actual dwelling
+					place in fact. This may be a temporary residence or a long-term residence.
+					Residence Address is often a legal or official address for purposes of
+					determinations such as work eligibility, applicable payroll taxes, and benefits
+					program eligibility. This also is an address of of importance to processes such
+					as employment screening that make use of residence history to direct the scope
+					of screenings that may be conducted. </ccts:UsageRule>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Domicile
+					definition: Black's Law Dictionary, Sixth Edition: "A person's legal home. That
+					place where a man has his true, fixed, and permanent home and principal
+					establishment, and to which whenever he is absent he has the intention of
+					returning (emphasis added)(Smith v. Smith, 206 Pa. Super. 310). A person may
+					have more than one residence but only one domicile. The legal domicile of a
+					person is important since it, rather than the actual residence, often controls
+					the jurisdiction of the taxing authorities and determines where a person may
+					exercise the privilege of voting and other legal rights and privileges." OED:
+					Domicile n. 2. Law. The place where one has his home or permanent residence, to
+					which, if absent, he has the intention of returning. In some cases Domicile
+					Address may be deterimined by, and have significance with repect to,
+					determinations of applicable taxes or tax reportin.</ccts:UsageRule>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Formatted
+					telephone numbers should use the DialNumber element.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ChannelCode" minOccurs="0"/>
+			<xsd:element ref="UseCode" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element ref="oa:CountryDialing" minOccurs="0"/>
+					<xsd:element ref="oa:AreaDialing" minOccurs="0"/>
+					<xsd:element ref="oa:DialNumber" minOccurs="0"/>
+					<xsd:element ref="oa:Extension" minOccurs="0"/>
+					<xsd:element ref="oa:Access" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:element ref="Address" minOccurs="0"/>
+				<xsd:sequence>
+					<xsd:element ref="oa:URI" minOccurs="0"/>
+					<xsd:element ref="oa:HTMLPreferredIndicator" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:element ref="oa:Text" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:choice>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="sequence" type="oa:PositiveIntegerNumericType"/>
+		<xsd:attribute name="preferredIndicator" type="oa:IndicatorType"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="ChannelCode" type="ChannelCodeType"/>
+	<xsd:complexType name="ChannelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A set of codes classifying an instruction with which the customer,
+				requester, or search subject must comply for the screening to go forward. This is an
+				HR-XML Open List.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ChannelCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="ChannelCodeContentType">
+		<xsd:annotation>
+			<xsd:documentation/>
+		</xsd:annotation>
+		<xsd:union memberTypes="ChannelCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ChannelCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation/>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Telephone"/>
+			<xsd:enumeration value="MobileTelephone"/>
+			<xsd:enumeration value="Fax"/>
+			<xsd:enumeration value="Email"/>
+			<xsd:enumeration value="InstantMessage"/>
+			<xsd:enumeration value="Web"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="UseCode" type="UseCodeType"/>
+	<xsd:complexType name="UseCodeType">
+		<xsd:simpleContent>
+			<xsd:extension base="ContactUseCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="ContactUseCodeContentType">
+		<xsd:union memberTypes="ContactUseCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ContactUseCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation>A code classifying a designated use associated with a contact method.
+				For example, whether a telephone or email address is one for business communications
+				or one primarily for personal use.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Personal"/>
+			<xsd:enumeration value="Business"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="Address" type="AddressType"/>
+	<xsd:complexType name="AddressType">
+		<xsd:complexContent>
+			<xsd:extension base="AddressBaseType">
+				<xsd:sequence>
+					<xsd:element ref="UserArea" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+				<xsd:attribute name="currentAddressIndicator" type="oa:IndicatorType"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AddressBaseType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.openapplications.org/oagis/9">Address BaseType
+				provides the information about the address or semantic address of an associated
+					entity.<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Based on OAGIS AddressBaseType. Exception:CountryCode uses the HR country code
+					list.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1"> Example values
+					are: "Residence Address" Residence Address is a primary, legal address that is
+					related to a party. For a person, the Home Residence Address is used by an
+					employer for payroll, taxation, and benefit program eligibility. "Postal
+					Address" Set of precise and complete information on the basis of which an item
+					can be forwarded and delivered to an addressee. An address will be considered a
+					postal address only if it is explicitly collected as such. "Delivery Address"
+					Delivery Address is an address which is to be used to physically deliver the
+					related object. "Bill To" An address to which invoices are sent. "Accounts
+					Recievable" An address to which payments are set. </ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="oa:FormatCode" minOccurs="0"/>
+			<xsd:element ref="oa:AttentionOfName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="oa:CareOfName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:choice>
+				<xsd:element ref="oa:AddressLine" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:sequence>
+					<xsd:element ref="oa:LineOne" minOccurs="0"/>
+					<xsd:element ref="oa:LineTwo" minOccurs="0"/>
+					<xsd:element ref="oa:LineThree" minOccurs="0"/>
+					<xsd:element ref="oa:LineFour" minOccurs="0"/>
+					<xsd:element ref="oa:LineFive" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element ref="oa:BuildingNumber" minOccurs="0"/>
+					<xsd:element ref="oa:BuildingName" minOccurs="0"/>
+					<xsd:element ref="oa:StreetName" minOccurs="0"/>
+					<xsd:element ref="oa:Unit" minOccurs="0"/>
+					<xsd:element ref="oa:Floor" minOccurs="0"/>
+					<xsd:element ref="oa:PostOfficeBox" minOccurs="0"/>
+					<xsd:element ref="oa:DeliveryPointCode" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element ref="oa:CitySubDivisionName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="oa:CityName" minOccurs="0"/>
+			<xsd:element ref="oa:CountrySubDivisionCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="CountryCode" minOccurs="0"/>
+			<xsd:element ref="oa:PostalCode" minOccurs="0"/>
+			<xsd:element ref="oa:Status" minOccurs="0"/>
+			<xsd:element ref="oa:Preference" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attribute name="type" type="oa:NormalizedStringType"/>
+	</xsd:complexType>
+	<xsd:element name="CountryCode" type="CountryCodeType"/>
+	<xsd:complexType name="CountryCodeType">
+		<xsd:simpleContent>
+			<xsd:extension base="CountryCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="CountryCodeContentType">
+		<xsd:union memberTypes="CountryCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountryCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.iana.org/domains/root/db/">Two-letter codes from
+				the ISO 3166 standard as implemented by The Internet Assigned Numbers
+				Authority.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="AC">
+				<xsd:annotation>
+					<xsd:documentation>Ascension Island</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AD">
+				<xsd:annotation>
+					<xsd:documentation>Andorra</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AE">
+				<xsd:annotation>
+					<xsd:documentation>United Arab Emirates</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AF">
+				<xsd:annotation>
+					<xsd:documentation>Afghanistan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AG">
+				<xsd:annotation>
+					<xsd:documentation>Antigua and Barbuda</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AI">
+				<xsd:annotation>
+					<xsd:documentation>Anguilla</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AL">
+				<xsd:annotation>
+					<xsd:documentation>Albania</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AM">
+				<xsd:annotation>
+					<xsd:documentation>Armenia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AN">
+				<xsd:annotation>
+					<xsd:documentation>Netherlands Antilles</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AO">
+				<xsd:annotation>
+					<xsd:documentation>Angola</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AQ">
+				<xsd:annotation>
+					<xsd:documentation>Antarctica</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AR">
+				<xsd:annotation>
+					<xsd:documentation>Argentina</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AS">
+				<xsd:annotation>
+					<xsd:documentation>American Samoa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AT">
+				<xsd:annotation>
+					<xsd:documentation>Austria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AU">
+				<xsd:annotation>
+					<xsd:documentation>Australia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AW">
+				<xsd:annotation>
+					<xsd:documentation>Aruba</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AX">
+				<xsd:annotation>
+					<xsd:documentation>Aland Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AZ">
+				<xsd:annotation>
+					<xsd:documentation>Azerbaijan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BA">
+				<xsd:annotation>
+					<xsd:documentation>Bosnia and Herzegovina</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BB">
+				<xsd:annotation>
+					<xsd:documentation>Barbados</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BD">
+				<xsd:annotation>
+					<xsd:documentation>Bangladesh</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BE">
+				<xsd:annotation>
+					<xsd:documentation>Belgium</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BF">
+				<xsd:annotation>
+					<xsd:documentation>Burkina Faso</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BG">
+				<xsd:annotation>
+					<xsd:documentation>Bulgaria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BH">
+				<xsd:annotation>
+					<xsd:documentation>Bahrain</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BI">
+				<xsd:annotation>
+					<xsd:documentation>Burundi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BJ">
+				<xsd:annotation>
+					<xsd:documentation>Benin</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BL">
+				<xsd:annotation>
+					<xsd:documentation>Saint Barthelemy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BM">
+				<xsd:annotation>
+					<xsd:documentation>Bermuda</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BN">
+				<xsd:annotation>
+					<xsd:documentation>Brunei Darussalam</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BO">
+				<xsd:annotation>
+					<xsd:documentation>Bolivia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BR">
+				<xsd:annotation>
+					<xsd:documentation>Brazil</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BS">
+				<xsd:annotation>
+					<xsd:documentation>Bahamas</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BT">
+				<xsd:annotation>
+					<xsd:documentation>Bhutan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BV">
+				<xsd:annotation>
+					<xsd:documentation>Bouvet Island</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BW">
+				<xsd:annotation>
+					<xsd:documentation>Botswana</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BY">
+				<xsd:annotation>
+					<xsd:documentation>Belarus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BZ">
+				<xsd:annotation>
+					<xsd:documentation>Belize</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CA">
+				<xsd:annotation>
+					<xsd:documentation>Canada</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CC">
+				<xsd:annotation>
+					<xsd:documentation>Cocos (Keeling) Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CD">
+				<xsd:annotation>
+					<xsd:documentation>Congo, The Democratic Republic of the</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CF">
+				<xsd:annotation>
+					<xsd:documentation>Central African Republic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CG">
+				<xsd:annotation>
+					<xsd:documentation>Congo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CH">
+				<xsd:annotation>
+					<xsd:documentation>Switzerland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CI">
+				<xsd:annotation>
+					<xsd:documentation>Cote d'Ivoire</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CK">
+				<xsd:annotation>
+					<xsd:documentation>Cook Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CL">
+				<xsd:annotation>
+					<xsd:documentation>Chile</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CM">
+				<xsd:annotation>
+					<xsd:documentation>Cameroon</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CN">
+				<xsd:annotation>
+					<xsd:documentation>China</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CO">
+				<xsd:annotation>
+					<xsd:documentation>Colombia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CR">
+				<xsd:annotation>
+					<xsd:documentation>Costa Rica</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CU">
+				<xsd:annotation>
+					<xsd:documentation>Cuba</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CV">
+				<xsd:annotation>
+					<xsd:documentation>Cape Verde</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CX">
+				<xsd:annotation>
+					<xsd:documentation>Christmas Island</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CY">
+				<xsd:annotation>
+					<xsd:documentation>Cyprus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CZ">
+				<xsd:annotation>
+					<xsd:documentation>Czech Republic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DE">
+				<xsd:annotation>
+					<xsd:documentation>Germany</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DJ">
+				<xsd:annotation>
+					<xsd:documentation>Djibouti</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DK">
+				<xsd:annotation>
+					<xsd:documentation>Denmark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DM">
+				<xsd:annotation>
+					<xsd:documentation>Dominica</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DO">
+				<xsd:annotation>
+					<xsd:documentation>Dominican Republic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DZ">
+				<xsd:annotation>
+					<xsd:documentation>Algeria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EC">
+				<xsd:annotation>
+					<xsd:documentation>Ecuador</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EE">
+				<xsd:annotation>
+					<xsd:documentation>Estonia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EG">
+				<xsd:annotation>
+					<xsd:documentation>Egypt</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EH">
+				<xsd:annotation>
+					<xsd:documentation>Western Sahara</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ER">
+				<xsd:annotation>
+					<xsd:documentation>Eritrea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ES">
+				<xsd:annotation>
+					<xsd:documentation>Spain</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ET">
+				<xsd:annotation>
+					<xsd:documentation>Ethiopia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EU">
+				<xsd:annotation>
+					<xsd:documentation>European Union</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FI">
+				<xsd:annotation>
+					<xsd:documentation>Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FJ">
+				<xsd:annotation>
+					<xsd:documentation>Fiji</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FK">
+				<xsd:annotation>
+					<xsd:documentation>Falkland Islands (Malvinas)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FM">
+				<xsd:annotation>
+					<xsd:documentation>Micronesia, Federated States of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FO">
+				<xsd:annotation>
+					<xsd:documentation>Faroe Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FR">
+				<xsd:annotation>
+					<xsd:documentation>France</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GA">
+				<xsd:annotation>
+					<xsd:documentation>Gabon</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GB">
+				<xsd:annotation>
+					<xsd:documentation>United Kingdom</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GD">
+				<xsd:annotation>
+					<xsd:documentation>Grenada</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GE">
+				<xsd:annotation>
+					<xsd:documentation>Georgia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GF">
+				<xsd:annotation>
+					<xsd:documentation>French Guiana</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GG">
+				<xsd:annotation>
+					<xsd:documentation>Guernsey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GH">
+				<xsd:annotation>
+					<xsd:documentation>Ghana</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GI">
+				<xsd:annotation>
+					<xsd:documentation>Gibraltar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GL">
+				<xsd:annotation>
+					<xsd:documentation>Greenland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GM">
+				<xsd:annotation>
+					<xsd:documentation>Gambia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GN">
+				<xsd:annotation>
+					<xsd:documentation>Guinea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GP">
+				<xsd:annotation>
+					<xsd:documentation>Guadeloupe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GQ">
+				<xsd:annotation>
+					<xsd:documentation>Equatorial Guinea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GR">
+				<xsd:annotation>
+					<xsd:documentation>Greece</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GS">
+				<xsd:annotation>
+					<xsd:documentation>South Georgia and the South Sandwich
+						Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GT">
+				<xsd:annotation>
+					<xsd:documentation>Guatemala</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GU">
+				<xsd:annotation>
+					<xsd:documentation>Guam</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GW">
+				<xsd:annotation>
+					<xsd:documentation>Guinea-Bissau</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GY">
+				<xsd:annotation>
+					<xsd:documentation>Guyana</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HK">
+				<xsd:annotation>
+					<xsd:documentation>Hong Kong</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HM">
+				<xsd:annotation>
+					<xsd:documentation>Heard Island and McDonald Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HN">
+				<xsd:annotation>
+					<xsd:documentation>Honduras</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HR">
+				<xsd:annotation>
+					<xsd:documentation>Croatia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HT">
+				<xsd:annotation>
+					<xsd:documentation>Haiti</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HU">
+				<xsd:annotation>
+					<xsd:documentation>Hungary</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ID">
+				<xsd:annotation>
+					<xsd:documentation>Indonesia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IE">
+				<xsd:annotation>
+					<xsd:documentation>Ireland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IL">
+				<xsd:annotation>
+					<xsd:documentation>Israel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IM">
+				<xsd:annotation>
+					<xsd:documentation>Isle of Man</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IN">
+				<xsd:annotation>
+					<xsd:documentation>India</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IO">
+				<xsd:annotation>
+					<xsd:documentation>British Indian Ocean Territory</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IQ">
+				<xsd:annotation>
+					<xsd:documentation>Iraq</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IR">
+				<xsd:annotation>
+					<xsd:documentation>Iran, Islamic Republic of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IS">
+				<xsd:annotation>
+					<xsd:documentation>Iceland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IT">
+				<xsd:annotation>
+					<xsd:documentation>Italy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JE">
+				<xsd:annotation>
+					<xsd:documentation>Jersey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JM">
+				<xsd:annotation>
+					<xsd:documentation>Jamaica</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JO">
+				<xsd:annotation>
+					<xsd:documentation>Jordan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JP">
+				<xsd:annotation>
+					<xsd:documentation>Japan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KE">
+				<xsd:annotation>
+					<xsd:documentation>Kenya</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KG">
+				<xsd:annotation>
+					<xsd:documentation>Kyrgyzstan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KH">
+				<xsd:annotation>
+					<xsd:documentation>Cambodia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KI">
+				<xsd:annotation>
+					<xsd:documentation>Kiribati</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KM">
+				<xsd:annotation>
+					<xsd:documentation>Comoros</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KN">
+				<xsd:annotation>
+					<xsd:documentation>Saint Kitts and Nevis</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KP">
+				<xsd:annotation>
+					<xsd:documentation>Korea, Democratic People's Republic of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KR">
+				<xsd:annotation>
+					<xsd:documentation>Korea, Republic of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KW">
+				<xsd:annotation>
+					<xsd:documentation>Kuwait</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KY">
+				<xsd:annotation>
+					<xsd:documentation>Cayman Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KZ">
+				<xsd:annotation>
+					<xsd:documentation>Kazakhstan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LA">
+				<xsd:annotation>
+					<xsd:documentation>Lao People's Democratic Republic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LB">
+				<xsd:annotation>
+					<xsd:documentation>Lebanon</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LC">
+				<xsd:annotation>
+					<xsd:documentation>Saint Lucia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LI">
+				<xsd:annotation>
+					<xsd:documentation>Liechtenstein</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LK">
+				<xsd:annotation>
+					<xsd:documentation>Sri Lanka</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LR">
+				<xsd:annotation>
+					<xsd:documentation>Liberia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LS">
+				<xsd:annotation>
+					<xsd:documentation>Lesotho</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LT">
+				<xsd:annotation>
+					<xsd:documentation>Lithuania</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LU">
+				<xsd:annotation>
+					<xsd:documentation>Luxembourg</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LV">
+				<xsd:annotation>
+					<xsd:documentation>Latvia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LY">
+				<xsd:annotation>
+					<xsd:documentation>Libyan Arab Jamahiriya</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MA">
+				<xsd:annotation>
+					<xsd:documentation>Morocco</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MC">
+				<xsd:annotation>
+					<xsd:documentation>Monaco</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MD">
+				<xsd:annotation>
+					<xsd:documentation>Moldova</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ME">
+				<xsd:annotation>
+					<xsd:documentation>Montenegro</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MF">
+				<xsd:annotation>
+					<xsd:documentation>Saint Martin</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MG">
+				<xsd:annotation>
+					<xsd:documentation>Madagascar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MH">
+				<xsd:annotation>
+					<xsd:documentation>Marshall Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MK">
+				<xsd:annotation>
+					<xsd:documentation>Macedonia, The Former Yugoslav Republic
+						of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ML">
+				<xsd:annotation>
+					<xsd:documentation>Mali</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MM">
+				<xsd:annotation>
+					<xsd:documentation>Myanmar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MN">
+				<xsd:annotation>
+					<xsd:documentation>Mongolia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MO">
+				<xsd:annotation>
+					<xsd:documentation>Macao</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MP">
+				<xsd:annotation>
+					<xsd:documentation>Northern Mariana Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MQ">
+				<xsd:annotation>
+					<xsd:documentation>Martinique</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MR">
+				<xsd:annotation>
+					<xsd:documentation>Mauritania</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MS">
+				<xsd:annotation>
+					<xsd:documentation>Montserrat</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MT">
+				<xsd:annotation>
+					<xsd:documentation>Malta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MU">
+				<xsd:annotation>
+					<xsd:documentation>Mauritius</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MV">
+				<xsd:annotation>
+					<xsd:documentation>Maldives</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MW">
+				<xsd:annotation>
+					<xsd:documentation>Malawi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MX">
+				<xsd:annotation>
+					<xsd:documentation>Mexico</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MY">
+				<xsd:annotation>
+					<xsd:documentation>Malaysia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MZ">
+				<xsd:annotation>
+					<xsd:documentation>Mozambique</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NA">
+				<xsd:annotation>
+					<xsd:documentation>Namibia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NC">
+				<xsd:annotation>
+					<xsd:documentation>New Caledonia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NE">
+				<xsd:annotation>
+					<xsd:documentation>Niger</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NF">
+				<xsd:annotation>
+					<xsd:documentation>Norfolk Island</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NG">
+				<xsd:annotation>
+					<xsd:documentation>Nigeria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NI">
+				<xsd:annotation>
+					<xsd:documentation>Nicaragua</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NL">
+				<xsd:annotation>
+					<xsd:documentation>Netherlands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NO">
+				<xsd:annotation>
+					<xsd:documentation>Norway</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NP">
+				<xsd:annotation>
+					<xsd:documentation>Nepal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NR">
+				<xsd:annotation>
+					<xsd:documentation>Nauru</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NU">
+				<xsd:annotation>
+					<xsd:documentation>Niue</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NZ">
+				<xsd:annotation>
+					<xsd:documentation>New Zealand</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OM">
+				<xsd:annotation>
+					<xsd:documentation>Oman</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PA">
+				<xsd:annotation>
+					<xsd:documentation>Panama</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PE">
+				<xsd:annotation>
+					<xsd:documentation>Peru</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PF">
+				<xsd:annotation>
+					<xsd:documentation>French Polynesia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PG">
+				<xsd:annotation>
+					<xsd:documentation>Papua New Guinea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PH">
+				<xsd:annotation>
+					<xsd:documentation>Philippines</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PK">
+				<xsd:annotation>
+					<xsd:documentation>Pakistan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PL">
+				<xsd:annotation>
+					<xsd:documentation>Poland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PM">
+				<xsd:annotation>
+					<xsd:documentation>Saint Pierre and Miquelon</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PN">
+				<xsd:annotation>
+					<xsd:documentation>Pitcairn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PR">
+				<xsd:annotation>
+					<xsd:documentation>Puerto Rico</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PS">
+				<xsd:annotation>
+					<xsd:documentation>Palestinian Territory, Occupied</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PT">
+				<xsd:annotation>
+					<xsd:documentation>Portugal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PW">
+				<xsd:annotation>
+					<xsd:documentation>Palau</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PY">
+				<xsd:annotation>
+					<xsd:documentation>Paraguay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="QA">
+				<xsd:annotation>
+					<xsd:documentation>Qatar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RE">
+				<xsd:annotation>
+					<xsd:documentation>Reunion</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RO">
+				<xsd:annotation>
+					<xsd:documentation>Romania</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RS">
+				<xsd:annotation>
+					<xsd:documentation>Serbia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RU">
+				<xsd:annotation>
+					<xsd:documentation>Russian Federation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RW">
+				<xsd:annotation>
+					<xsd:documentation>Rwanda</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SA">
+				<xsd:annotation>
+					<xsd:documentation>Saudi Arabia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SB">
+				<xsd:annotation>
+					<xsd:documentation>Solomon Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SC">
+				<xsd:annotation>
+					<xsd:documentation>Seychelles</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SD">
+				<xsd:annotation>
+					<xsd:documentation>Sudan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SE">
+				<xsd:annotation>
+					<xsd:documentation>Sweden</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SG">
+				<xsd:annotation>
+					<xsd:documentation>Singapore</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SH">
+				<xsd:annotation>
+					<xsd:documentation>Saint Helena</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SI">
+				<xsd:annotation>
+					<xsd:documentation>Slovenia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SJ">
+				<xsd:annotation>
+					<xsd:documentation>Svalbard and Jan Mayen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SK">
+				<xsd:annotation>
+					<xsd:documentation>Slovakia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SL">
+				<xsd:annotation>
+					<xsd:documentation>Sierra Leone</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SM">
+				<xsd:annotation>
+					<xsd:documentation>San Marino</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SN">
+				<xsd:annotation>
+					<xsd:documentation>Senegal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SO">
+				<xsd:annotation>
+					<xsd:documentation>Somalia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SR">
+				<xsd:annotation>
+					<xsd:documentation>Suriname</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ST">
+				<xsd:annotation>
+					<xsd:documentation>Sao Tome and Principe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SU">
+				<xsd:annotation>
+					<xsd:documentation>Soviet Union (being phased out)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SV">
+				<xsd:annotation>
+					<xsd:documentation>El Salvador</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SY">
+				<xsd:annotation>
+					<xsd:documentation>Syrian Arab Republic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SZ">
+				<xsd:annotation>
+					<xsd:documentation>Swaziland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TC">
+				<xsd:annotation>
+					<xsd:documentation>Turks and Caicos Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TD">
+				<xsd:annotation>
+					<xsd:documentation>Chad</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TF">
+				<xsd:annotation>
+					<xsd:documentation>French Southern Territories</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TG">
+				<xsd:annotation>
+					<xsd:documentation>Togo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TH">
+				<xsd:annotation>
+					<xsd:documentation>Thailand</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TJ">
+				<xsd:annotation>
+					<xsd:documentation>Tajikistan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TK">
+				<xsd:annotation>
+					<xsd:documentation>Tokelau</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TL">
+				<xsd:annotation>
+					<xsd:documentation>Timor-Leste</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TM">
+				<xsd:annotation>
+					<xsd:documentation>Turkmenistan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TN">
+				<xsd:annotation>
+					<xsd:documentation>Tunisia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TO">
+				<xsd:annotation>
+					<xsd:documentation>Tonga</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TP">
+				<xsd:annotation>
+					<xsd:documentation>Portuguese Timor (being phased out)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TR">
+				<xsd:annotation>
+					<xsd:documentation>Turkey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TT">
+				<xsd:annotation>
+					<xsd:documentation>Trinidad and Tobago</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TV">
+				<xsd:annotation>
+					<xsd:documentation>Tuvalu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TW">
+				<xsd:annotation>
+					<xsd:documentation>Taiwan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TZ">
+				<xsd:annotation>
+					<xsd:documentation>Tanzania, United Republic of</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UA">
+				<xsd:annotation>
+					<xsd:documentation>Ukraine</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UG">
+				<xsd:annotation>
+					<xsd:documentation>Uganda</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UK">
+				<xsd:annotation>
+					<xsd:documentation>United Kingdom</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UM">
+				<xsd:annotation>
+					<xsd:documentation>United States Minor Outlying Islands</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="US">
+				<xsd:annotation>
+					<xsd:documentation>United States</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UY">
+				<xsd:annotation>
+					<xsd:documentation>Uruguay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UZ">
+				<xsd:annotation>
+					<xsd:documentation>Uzbekistan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VA">
+				<xsd:annotation>
+					<xsd:documentation>Holy See (Vatican City State)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VC">
+				<xsd:annotation>
+					<xsd:documentation>Saint Vincent and the Grenadines</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VE">
+				<xsd:annotation>
+					<xsd:documentation>Venezuela</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VG">
+				<xsd:annotation>
+					<xsd:documentation>Virgin Islands, British</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VI">
+				<xsd:annotation>
+					<xsd:documentation>Virgin Islands, U.S.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VN">
+				<xsd:annotation>
+					<xsd:documentation>Viet Nam</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="VU">
+				<xsd:annotation>
+					<xsd:documentation>Vanuatu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="WF">
+				<xsd:annotation>
+					<xsd:documentation>Wallis and Futuna</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="WS">
+				<xsd:annotation>
+					<xsd:documentation>Samoa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="YE">
+				<xsd:annotation>
+					<xsd:documentation>Yemen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="YT">
+				<xsd:annotation>
+					<xsd:documentation>Mayotte</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="YU">
+				<xsd:annotation>
+					<xsd:documentation>Yugoslavia (being phased out)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ZA">
+				<xsd:annotation>
+					<xsd:documentation>South Africa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ZM">
+				<xsd:annotation>
+					<xsd:documentation>Zambia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ZW">
+				<xsd:annotation>
+					<xsd:documentation>Zimbabwe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LanguageCodeContentType">
+		<xsd:annotation>
+			<xsd:documentation>This list is based on Internet Engineering Task Force (IETF) RFCs
+				4646 and RFC 4647 for language tags. This tag system is extensible to region,
+				dialect, and private designations. The IANA Language Subtag Registry is a source of
+				the tag values. See http://www.iana.org/assignments/language-subtag-registry This is
+				implemented as an HR-XML Open List. Additional values are
+				permitted.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:union memberTypes="LanguageCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="LanguageCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation>This list is based on Internet Engineering Task Force (IETF) RFCs
+				4646 and RFC 4647 for language tags. This tag system is extensible to region,
+				dialect, and private designations. The IANA Language Subtag Registry is a source of
+				the tag values. See http://www.iana.org/assignments/language-subtag-registry
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="en-US"/>
+			<xsd:enumeration value="en-CA"/>
+			<xsd:enumeration value="aa-ET"/>
+			<xsd:enumeration value="ab-GE"/>
+			<xsd:enumeration value="af-ZA"/>
+			<xsd:enumeration value="am-ET"/>
+			<xsd:enumeration value="ar-SA"/>
+			<xsd:enumeration value="as-IN"/>
+			<xsd:enumeration value="ay-BO"/>
+			<xsd:enumeration value="az-AZ"/>
+			<xsd:enumeration value="ba-RU"/>
+			<xsd:enumeration value="be-BY"/>
+			<xsd:enumeration value="bg-BG"/>
+			<xsd:enumeration value="bh-IN"/>
+			<xsd:enumeration value="bi-VU"/>
+			<xsd:enumeration value="bn-BD"/>
+			<xsd:enumeration value="bo-BT"/>
+			<xsd:enumeration value="br-FR"/>
+			<xsd:enumeration value="ca-ES"/>
+			<xsd:enumeration value="co-FR"/>
+			<xsd:enumeration value="cs-CZ"/>
+			<xsd:enumeration value="cy-GB"/>
+			<xsd:enumeration value="da-DE"/>
+			<xsd:enumeration value="de-DE"/>
+			<xsd:enumeration value="dz-BT"/>
+			<xsd:enumeration value="el-GR"/>
+			<xsd:enumeration value="es-ES"/>
+			<xsd:enumeration value="et-EE"/>
+			<xsd:enumeration value="eu-ES"/>
+			<xsd:enumeration value="fa-AF"/>
+			<xsd:enumeration value="fi-FI "/>
+			<xsd:enumeration value="fj-FJ"/>
+			<xsd:enumeration value="fo-FO"/>
+			<xsd:enumeration value="fr-CA"/>
+			<xsd:enumeration value="fr-FR"/>
+			<xsd:enumeration value="fy-NL"/>
+			<xsd:enumeration value="ga-IE"/>
+			<xsd:enumeration value="gd-GB"/>
+			<xsd:enumeration value="gl-ES"/>
+			<xsd:enumeration value="gn-PY"/>
+			<xsd:enumeration value="gu-IN"/>
+			<xsd:enumeration value="ha-NG"/>
+			<xsd:enumeration value="hi-IN"/>
+			<xsd:enumeration value="hr-HR"/>
+			<xsd:enumeration value="hu-HU"/>
+			<xsd:enumeration value="hy-AM"/>
+			<xsd:enumeration value="ik-GL"/>
+			<xsd:enumeration value="in-ID"/>
+			<xsd:enumeration value="is-IS"/>
+			<xsd:enumeration value="it-IT"/>
+			<xsd:enumeration value="iw-IL"/>
+			<xsd:enumeration value="ja-JP"/>
+			<xsd:enumeration value="ji-IL"/>
+			<xsd:enumeration value="jw-ID"/>
+			<xsd:enumeration value="ka-GE"/>
+			<xsd:enumeration value="kk-KZ"/>
+			<xsd:enumeration value="kl-GL"/>
+			<xsd:enumeration value="km-KH"/>
+			<xsd:enumeration value="kn-IN"/>
+			<xsd:enumeration value="ko-KP"/>
+			<xsd:enumeration value="ko-KR"/>
+			<xsd:enumeration value="ks-IN"/>
+			<xsd:enumeration value="ku-IQ"/>
+			<xsd:enumeration value="ky-CN"/>
+			<xsd:enumeration value="la-VA"/>
+			<xsd:enumeration value="ln-CD"/>
+			<xsd:enumeration value="lo-LA"/>
+			<xsd:enumeration value="lt-LT"/>
+			<xsd:enumeration value="lv-LV"/>
+			<xsd:enumeration value="mg-MG"/>
+			<xsd:enumeration value="mi-NZ"/>
+			<xsd:enumeration value="mk-MK"/>
+			<xsd:enumeration value="ml-IN"/>
+			<xsd:enumeration value="mn-MN"/>
+			<xsd:enumeration value="mo-MO"/>
+			<xsd:enumeration value="mr-IN"/>
+			<xsd:enumeration value="ms-MY"/>
+			<xsd:enumeration value="mt-MH"/>
+			<xsd:enumeration value="my-MM"/>
+			<xsd:enumeration value="na-NR"/>
+			<xsd:enumeration value="ne-NP"/>
+			<xsd:enumeration value="nl-NL"/>
+			<xsd:enumeration value="no-NO"/>
+			<xsd:enumeration value="oc-FR"/>
+			<xsd:enumeration value="om-ET"/>
+			<xsd:enumeration value="or-IN"/>
+			<xsd:enumeration value="pa-IN"/>
+			<xsd:enumeration value="pl-PL"/>
+			<xsd:enumeration value="ps-PK"/>
+			<xsd:enumeration value="pt-PT"/>
+			<xsd:enumeration value="qu-PE"/>
+			<xsd:enumeration value="rm-CH"/>
+			<xsd:enumeration value="rn-BI"/>
+			<xsd:enumeration value="ro-RO"/>
+			<xsd:enumeration value="ru-RU"/>
+			<xsd:enumeration value="rw-RW"/>
+			<xsd:enumeration value="sa-IN"/>
+			<xsd:enumeration value="sd-PK"/>
+			<xsd:enumeration value="sg-CF"/>
+			<xsd:enumeration value="sh-HR"/>
+			<xsd:enumeration value="si-LK"/>
+			<xsd:enumeration value="sk-SK"/>
+			<xsd:enumeration value="sl-SI"/>
+			<xsd:enumeration value="sm-WS"/>
+			<xsd:enumeration value="sn-ZW"/>
+			<xsd:enumeration value="so-SO"/>
+			<xsd:enumeration value="sq-AL"/>
+			<xsd:enumeration value="sr-CS"/>
+			<xsd:enumeration value="ss-ZA"/>
+			<xsd:enumeration value="st-ZA"/>
+			<xsd:enumeration value="su-SD"/>
+			<xsd:enumeration value="sv-SE"/>
+			<xsd:enumeration value="sw-TL"/>
+			<xsd:enumeration value="ta-IN"/>
+			<xsd:enumeration value="te-IN"/>
+			<xsd:enumeration value="tg-TJ"/>
+			<xsd:enumeration value="th-TH"/>
+			<xsd:enumeration value="ti-ET"/>
+			<xsd:enumeration value="tk-TM"/>
+			<xsd:enumeration value="tl-PH"/>
+			<xsd:enumeration value="tn-ZA"/>
+			<xsd:enumeration value="to-TO"/>
+			<xsd:enumeration value="tr-TR"/>
+			<xsd:enumeration value="ts-ZA"/>
+			<xsd:enumeration value="tt-RU"/>
+			<xsd:enumeration value="tw-GH"/>
+			<xsd:enumeration value="uk-UA"/>
+			<xsd:enumeration value="ur-PK"/>
+			<xsd:enumeration value="uz-UZ"/>
+			<xsd:enumeration value="vi-VN"/>
+			<xsd:enumeration value="wo-SN"/>
+			<xsd:enumeration value="xh-ZA"/>
+			<xsd:enumeration value="yo-NG"/>
+			<xsd:enumeration value="zh-CN"/>
+			<xsd:enumeration value="zu-ZA"/>
+			<xsd:enumeration value="aa"/>
+			<xsd:enumeration value="ab"/>
+			<xsd:enumeration value="af"/>
+			<xsd:enumeration value="am"/>
+			<xsd:enumeration value="ar"/>
+			<xsd:enumeration value="as"/>
+			<xsd:enumeration value="ay"/>
+			<xsd:enumeration value="az"/>
+			<xsd:enumeration value="ba"/>
+			<xsd:enumeration value="be"/>
+			<xsd:enumeration value="bg"/>
+			<xsd:enumeration value="bh"/>
+			<xsd:enumeration value="bi"/>
+			<xsd:enumeration value="bn"/>
+			<xsd:enumeration value="bo"/>
+			<xsd:enumeration value="br"/>
+			<xsd:enumeration value="ca"/>
+			<xsd:enumeration value="co"/>
+			<xsd:enumeration value="cs"/>
+			<xsd:enumeration value="cy"/>
+			<xsd:enumeration value="da"/>
+			<xsd:enumeration value="de"/>
+			<xsd:enumeration value="dz"/>
+			<xsd:enumeration value="el"/>
+			<xsd:enumeration value="en"/>
+			<xsd:enumeration value="es"/>
+			<xsd:enumeration value="et"/>
+			<xsd:enumeration value="eu"/>
+			<xsd:enumeration value="fa"/>
+			<xsd:enumeration value="fi"/>
+			<xsd:enumeration value="fj"/>
+			<xsd:enumeration value="fo"/>
+			<xsd:enumeration value="fr"/>
+			<xsd:enumeration value="fy"/>
+			<xsd:enumeration value="ga"/>
+			<xsd:enumeration value="gd"/>
+			<xsd:enumeration value="gl"/>
+			<xsd:enumeration value="gn"/>
+			<xsd:enumeration value="gu"/>
+			<xsd:enumeration value="ha"/>
+			<xsd:enumeration value="hi"/>
+			<xsd:enumeration value="hr"/>
+			<xsd:enumeration value="hu"/>
+			<xsd:enumeration value="hy"/>
+			<xsd:enumeration value="ik"/>
+			<xsd:enumeration value="in"/>
+			<xsd:enumeration value="is"/>
+			<xsd:enumeration value="it"/>
+			<xsd:enumeration value="iw"/>
+			<xsd:enumeration value="ja"/>
+			<xsd:enumeration value="ji"/>
+			<xsd:enumeration value="jw"/>
+			<xsd:enumeration value="ka"/>
+			<xsd:enumeration value="kk"/>
+			<xsd:enumeration value="kl"/>
+			<xsd:enumeration value="km"/>
+			<xsd:enumeration value="kn"/>
+			<xsd:enumeration value="ko"/>
+			<xsd:enumeration value="ks"/>
+			<xsd:enumeration value="ku"/>
+			<xsd:enumeration value="ky"/>
+			<xsd:enumeration value="la"/>
+			<xsd:enumeration value="ln"/>
+			<xsd:enumeration value="lo"/>
+			<xsd:enumeration value="lt"/>
+			<xsd:enumeration value="lv"/>
+			<xsd:enumeration value="mg"/>
+			<xsd:enumeration value="mi"/>
+			<xsd:enumeration value="mk"/>
+			<xsd:enumeration value="ml"/>
+			<xsd:enumeration value="mn"/>
+			<xsd:enumeration value="mo"/>
+			<xsd:enumeration value="mr"/>
+			<xsd:enumeration value="ms"/>
+			<xsd:enumeration value="mt"/>
+			<xsd:enumeration value="my"/>
+			<xsd:enumeration value="na"/>
+			<xsd:enumeration value="ne"/>
+			<xsd:enumeration value="nl"/>
+			<xsd:enumeration value="no"/>
+			<xsd:enumeration value="oc"/>
+			<xsd:enumeration value="om"/>
+			<xsd:enumeration value="or"/>
+			<xsd:enumeration value="pa"/>
+			<xsd:enumeration value="pl"/>
+			<xsd:enumeration value="ps"/>
+			<xsd:enumeration value="pt"/>
+			<xsd:enumeration value="qu"/>
+			<xsd:enumeration value="rm"/>
+			<xsd:enumeration value="rn"/>
+			<xsd:enumeration value="ro"/>
+			<xsd:enumeration value="ru"/>
+			<xsd:enumeration value="rw"/>
+			<xsd:enumeration value="sa"/>
+			<xsd:enumeration value="sd"/>
+			<xsd:enumeration value="sg"/>
+			<xsd:enumeration value="sh"/>
+			<xsd:enumeration value="si"/>
+			<xsd:enumeration value="sk"/>
+			<xsd:enumeration value="sl"/>
+			<xsd:enumeration value="sm"/>
+			<xsd:enumeration value="sn"/>
+			<xsd:enumeration value="so"/>
+			<xsd:enumeration value="sq"/>
+			<xsd:enumeration value="sr"/>
+			<xsd:enumeration value="ss"/>
+			<xsd:enumeration value="st"/>
+			<xsd:enumeration value="su"/>
+			<xsd:enumeration value="sv"/>
+			<xsd:enumeration value="sw"/>
+			<xsd:enumeration value="ta"/>
+			<xsd:enumeration value="te"/>
+			<xsd:enumeration value="tg"/>
+			<xsd:enumeration value="th"/>
+			<xsd:enumeration value="ti"/>
+			<xsd:enumeration value="tk"/>
+			<xsd:enumeration value="tl"/>
+			<xsd:enumeration value="tn"/>
+			<xsd:enumeration value="to"/>
+			<xsd:enumeration value="tr"/>
+			<xsd:enumeration value="ts"/>
+			<xsd:enumeration value="tt"/>
+			<xsd:enumeration value="tw"/>
+			<xsd:enumeration value="uk"/>
+			<xsd:enumeration value="ur"/>
+			<xsd:enumeration value="uz"/>
+			<xsd:enumeration value="vi"/>
+			<xsd:enumeration value="wo"/>
+			<xsd:enumeration value="xh"/>
+			<xsd:enumeration value="yo"/>
+			<xsd:enumeration value="zh"/>
+			<xsd:enumeration value="zu"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="PersonContact" type="PersonContactType"/>
+	<xsd:complexType name="PersonContactType">
+		<xsd:sequence>
+			<xsd:element ref="PersonID" minOccurs="0"/>
+			<xsd:element ref="PersonName" minOccurs="0"/>
+			<xsd:element ref="RoleName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Communication" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="contactTypeCode" type="oa:StringType"/>
+	</xsd:complexType>
+	<xsd:element name="PersonID" type="IdentifierType"/>
+	<xsd:element name="PersonName" type="PersonNameType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Person Name. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">A
+					component for capturing summary or fine-grain data comprising a person's
+					name.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PersonNameType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Person Name. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">A
+					collection of data representing a person name. </ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Various uses
+					and options are supported. The person name model is intended to be useful across
+					many cultural contexts. The ordering and presentation of given names and family
+					names may vary by cultural custom. A person name can be represented as a
+					formatted string "Mr. John L Smith III, Phd" or represented as discretely
+					fielded data or both. An option to present a name in an alternative "alphabet"
+					or script is supported. For example the same name might be presented using
+					Roman, Kanji, Arabic, or other character sets. Note the term "script" versus
+					"character set" is used so as not to confuse this issue with concepts such as
+					"character encoding". </ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PersonNameBaseType">
+				<xsd:sequence>
+					<xsd:element ref="AlternateScriptPersonName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="UserArea" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="scriptCode" type="oa:NormalizedStringType" use="optional"/>
+				<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+				<xsd:attribute name="nameTypeCode" type="NameTypeCodeContentType" use="optional"/>
+				<xsd:attribute name="legalNameIndicator" type="oa:IndicatorType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Indicates whether or not the PersonName represents a
+							"legal" or "official" name. Note that in some business contexts, a legal
+							name is a formatted name. For example, the exact way that a person's
+							name is represented within contracts and legal documents. Note that for
+							this second use, LegalName is optionally available within PersonName.
+							The legalNameIndicator is used when there is the need to distinquish the
+							entire collection of information as a legalName. This second use case
+							may be less common the first, but both are
+							supported.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonNameBaseType">
+		<xsd:sequence>
+			<xsd:element ref="FormattedName" minOccurs="0"/>
+			<xsd:element ref="LegalName" minOccurs="0"/>
+			<xsd:element ref="oa:GivenName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PreferredName" minOccurs="0"/>
+			<xsd:element ref="MiddleName" minOccurs="0"/>
+			<xsd:element ref="FamilyName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FormerFamilyName" minOccurs="0"/>
+			<xsd:element ref="PreferredSalutationCode" minOccurs="0"/>
+			<xsd:element ref="GenerationAffixCode" minOccurs="0"/>
+			<xsd:element ref="QualificationAffixCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TitleAffixCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PersonNameInitials" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="FormattedName" type="FormattedNameType"/>
+	<xsd:complexType name="FormattedNameType">
+		<xsd:annotation>
+			<xsd:documentation>This is a formatted presentation of a name (for example, a person
+				name) that might alternatively presented as discretely fielded components or it
+				could otherwise be a name that has alternative formatted representations. The
+				formatCode is an optional attribute available to specify the applicable "mask" or
+				type of format presentation to which the contents conforms. For example, in the case
+				of the FormattedName of person formatCodes could be items such as: "Family Name,
+				Given Name" "Given Name, Middle Initial, Family Name" "First Initial, Family Name"
+				"Given Name, Last Initial" "Nick Name, Family Name" </xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="oa:TextType">
+				<xsd:attribute name="formatCode" type="oa:NormalizedStringType"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="LegalName" type="FormattedNameType"/>
+	<xsd:element name="PreferredName" type="oa:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A "nick name" or the name by which the person prefers to be
+				called.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MiddleName" type="MiddleNameType"/>
+	<xsd:complexType name="MiddleNameType">
+		<xsd:annotation>
+			<xsd:documentation> This is a second "given name" or sometimes depending on cultural
+				context, representative of family relationships. A middle name can have a prefix.
+				For example, in Saudi names the word "Bin" means "son of" and would be a common
+				prefix to a middle name usually representing the first name of the person's father.
+				Some implementers may choose not to represent a prefix separately from a middle
+				name. However, it may be desirable to do so for a number of reasons: 1. name
+				sorting. For example, to support sorting on first letter of prefix and then by first
+				letter of the middle name. 2. formatting. For example, depending on the cultural
+				context in which the name is presented, the type of delimiter (e.g., a space or a
+				hyphen) between the prefix and the family name (or whether a delimiter appears at)
+				all may depend on the "alphabet" and/or cultural context in which the name is
+				presented.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="oa:TextType">
+				<xsd:attribute name="prefix" type="oa:StringType"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="FamilyName" type="FamilyNameType">
+		<xsd:annotation>
+			<xsd:documentation>Contains a non-given name. This is an inherited name or one
+				representing a family relationship or in some cultural contexts a "Place Name"
+				(where someone is from). In some cultural contexts, a single family name is typical,
+				while in others there may be multiple family names. A "primary" attribute may be
+				used in the case where there are multiple last names. A family name can have a
+				"prefix," such as Von, De, Van, Al, etc. These can be represented using the
+				FamilyName "prefix" attribute. Not all implementers may find it necessary to
+				separate prefixes from the family name itself. Capturing the prefix and FamilyName
+				as discrete fields can become important when formatting or appearance may vary based
+				on context. For example, in some cultural contexts it may be common to use a blank
+				space as the delimiter between the prefix and the family name, while in others a
+				hyphen might be used. Separating the prefix from FamilyName allows such formatting
+				requirements to be handled flexibly. </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FamilyNameType">
+		<xsd:annotation>
+			<xsd:documentation> This contains the name or names that generally would be inherited or
+				indicative of a person's family. In Western contexts, this is what is commonly
+				referred to as a "last name." If a person has multiple family names, the order in
+				which the names appear is deemed significant. Generally, that order should
+				correspond to the order in which the names would appear in a typical formatted
+				representation. The order may be specifically identified by the sequence. A
+				"primary" family name may be indicated using the attribute supplied for this
+				purpose. Where multiple family names are presented, only a single name may be
+				designated as primary = "true" Note that the attribute "prefix" may optionally
+				contain a part of the person’s name that precedes the family name. For example: Van
+				den, Von, Al, de, etc. Some implementers may choose not to represent a prefix
+				separately from a Family Name. However, it may be desirable to do so for a number of
+				reasons: 1. name sorting. For example, to support sorting on first letter of prefix
+				and then by first letter of the family name. 2. formatting. For example, depending
+				on the cultural context in which the name is presented, the type of delimiter (e.g.,
+				a space or a hyphen) between the prefix and the family name (or whether a delimiter
+				appears at) all may depend on the "alphabet" and/or cultural context in which the
+				name is presented.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="oa:TextType">
+				<xsd:attribute name="primaryIndicator" type="oa:IndicatorType"/>
+				<xsd:attribute name="sequence" type="oa:PositiveIntegerNumericType"/>
+				<xsd:attribute name="prefix" type="oa:StringType"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="FormerFamilyName" type="FamilyNameType">
+		<xsd:annotation>
+			<xsd:documentation>A previous family name, such as a "maiden name," which is a family
+				name prior to marriage and assuming a spouse's name.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PreferredSalutationCode" type="oa:CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Contains a preferred form of address or salutation. For, example,
+				Mr., Mrs., Hon., Dr., Major, Monsignor, Senora, Senor, Madam.etc.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="GenerationAffixCode" type="oa:CodeType">
+		<xsd:annotation>
+			<xsd:documentation>A portion of a name indicating generation Sr., Jr., III (the third),
+				etc. </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="QualificationAffixCode" type="oa:CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Usually an abreviation representing a qualification (a degree or
+				certification, for example) held by a person. For example, MD, RN, CPA, Phd., Esq.,
+				Ing., Lic., etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TitleAffixCode" type="oa:CodeType">
+		<xsd:annotation>
+			<xsd:documentation>This is intended to accomodate a special category of affixes to
+				person names, such as aristocratic titles (For example, "Baron" or "Lord"),
+				political or legal titles (Senator, Judge), academic titles (Professor), or Military
+				rank or title (Major, Capt., etc.). Within some systems and implementation contexts,
+				such titles may be handled simply as a PreferredSalutationCode. However, there are
+				also implementations where it is necessary to present the two concepts separately.
+				Senator. Ms. Sara Jones; Professor. Mr. Sam Smith; Major. Ms. Jane Doe. Such titles
+				would not always be from an enumerated value domain, but they could be within
+				systems implemented within specialized settings such as education, government,
+				military, etc. Note that this is not intended to capture information such as a
+				Position Title.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonNameInitials" type="oa:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A letter or series of letters representing the first letter in each
+				name part.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AlternateScriptPersonName" type="AlternateScriptPersonNameType"/>
+	<xsd:complexType name="AlternateScriptPersonNameType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Alternate Script Person Name. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					copy of a person name in an alternate script or "alaphabet". For example the
+					same name might be presented using Roman, Kanji, Arabic, or other character
+					sets. </ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PersonNameBaseType">
+				<xsd:sequence>
+					<xsd:element ref="UserArea" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="scriptCode" type="oa:NormalizedStringType"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="NameTypeCodeContentType">
+		<xsd:annotation>
+			<xsd:documentation>A code classifying the type of name - Current, Former, Alias. This is
+				an HR-XML open list so other values are permitted. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:union memberTypes="NameTypeCodeEnumType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="NameTypeCodeEnumType">
+		<xsd:annotation>
+			<xsd:documentation>A code classifying the type of name - Current, Former, Alias, "Birth
+				Name." </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="CurrentName"/>
+			<xsd:enumeration value="FormerName"/>
+			<xsd:enumeration value="BirthName"/>
+			<xsd:enumeration value="Alias"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="RoleName" type="oa:TextType"/>
+	<xsd:element name="FreeFormEffectivePeriod" type="FreeFormEffectivePeriodType"/>
+	<xsd:complexType name="FreeFormEffectivePeriodType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">ABIE</ccts:CategoryCode>
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Effective Date Period. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Indicates
+					the date period in which the associated component is effective. Based on the
+					same TimePeriodType UN/CEFACT ABIE (except start date is optional). The
+					xsd:choice between an EndDate and Duration also was removed for processing
+					simplicity. Generally, an EndDate or Duration would appear, but not both. This
+					usage rule is not enforced by the schema.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">FreeFormEffectivePeriod also has effective dating attributes. </ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="oa:Duration" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="StartDate" type="FreeFormDateType"/>
+	<xsd:complexType name="FreeFormDateType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">FreeForm Date. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Provides
+					FreeForm options for representing date information.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Recruiting,
+					employment screening, and similar HR processes often rely on information sourced
+					from word processing documents, web forms, paper, third-parties, and human
+					memory. Data quality and consistency is a frequent problem. FreeForm Date
+					Details is intended to give implementers choices for accomodating date
+					information provided with varying quality and precision or that has formatting
+					requirements.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FormattedDateTime" minOccurs="0"/>
+			<xsd:element ref="DateText" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="FormattedDateTime" type="FormattedDateTimeType"/>
+	<xsd:element name="DateText" type="DateTextType"/>
+	<xsd:complexType name="DateTextType">
+		<xsd:annotation>
+			<xsd:documentation>This is a textual or formatted representation of a date or date
+				information. For example, "January 4, 2009" or "Two Years Ago".</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="oa:NormalizedStringType">
+				<xsd:attribute name="typeCode" type="oa:NormalizedStringType"/>
+				<xsd:attribute name="languageCodeType" type="LanguageCodeContentType"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="EndDate" type="FreeFormDateType"/>
+	<xsd:element name="UserID" type="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A character string or name distinquishing a user to a system or
+				process. Generally used in context of system login or access.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AccessCredential" type="AccessCredentialType"/>
+	<xsd:complexType name="AccessCredentialType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">AccessCredential. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains a
+					password or other token associated with the authentication of a user. </ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">This is
+					typically used in pre-provisioning a partner system with user account
+					information rather than in actual authentication processes (in which case the
+					appropriate token would typically be passed in a SOAP security header). Where
+					used, this components generally would be repeatable to allow for multiple
+					credentials or tokens. This also would generally be used in a context in which a
+					UserID was supplied. See UserID-element. See UserAccount-noun.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AccessCredentialTypeCode" minOccurs="0"/>
+			<xsd:element ref="AccessCredentialValue" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="AccessCredentialTypeCode" type="oa:CodeType"/>
+	<xsd:element name="AccessCredentialValue" type="oa:StringType"/>
+	<xsd:element name="UserRole" type="UserRoleType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">The designated role(s)
+				associated with the user with regard to the account. For example, "recruiter,"
+				"compliance officer," "HR manager," etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="UserRoleType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">User
+					Role. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Identifies
+					the type of role that a user performs or is authorized to
+					perform.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">This is used in
+					pre-provisioning a partner system with user account information. See
+					UserAccount-noun.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="RoleCode" minOccurs="0"/>
+			<xsd:element ref="RoleName" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="AuthorizedWorkScope" type="WorkScopeType"/>
+	<xsd:complexType name="WorkScopeType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Work
+					Scope. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains
+					information about a person's authorized scope of
+					activities.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="WorkScopeCode" minOccurs="0"/>
+			<xsd:element ref="WorkScopeName" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="WorkScopeCode" type="oa:CodeType"/>
+	<xsd:element name="WorkScopeName" type="oa:StringType"/>
+	<xsd:element name="ProhibitedWorkScope" type="WorkScopeType"/>
+	<xsd:element name="AccountConfiguration" type="AccountConfigurationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains information on account options and notification perferences
+				and details.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AccountConfigurationType">
+		<xsd:sequence>
+			<xsd:element ref="UseDefaultIndicator" minOccurs="0"/>
+			<xsd:element ref="UserOptionCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="UseDefaultIndicator" type="oa:IndicatorType"/>
+	<xsd:element name="UserOptionCode" type="oa:CodeType"/>
+	<xsd:element name="Notification" type="NotificationType"/>
+	<xsd:complexType name="NotificationType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Notification. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">Contains
+					details on preferred or primary notification methods associated with a
+					particular scope of work or function. See
+					NotificationScopeCode-element.</ccts:DefinitionText>
+				<ccts:UsageRule xmlns:ccts="urn:un:unece:uncefact:documentation:1.1">This is used in
+					pre-provisioning a partner system with user account information. See
+					UserAccount-noun.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="NotificationScopeCode" minOccurs="0"/>
+			<xsd:element ref="UseDefaultIndicator" minOccurs="0"/>
+			<xsd:element ref="NotificationMethod" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="NotificationScopeCode" type="oa:CodeType"/>
+	<xsd:element name="NotificationMethod" type="CommunicationABIEType"/>
+	<xsd:element name="GoverningAgreementID" type="oa:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>An identifier for a relevant trading-partner agreement that sets or
+				describes rules or details about user authorization.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SecurityQuestionInformation" type="SecurityQuestionInformationType"/>
+	<xsd:complexType name="SecurityQuestionInformationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains information on a security question (For example, what is
+				your mother's maiden name?) the answer to which is known or set by the user.
+				Security questions sometimes are used to support password resets or other
+				authentication tasks.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SecurityQuestionID" minOccurs="0"/>
+			<xsd:element ref="SecurityQuestion" minOccurs="0"/>
+			<xsd:element ref="SecurityQuestionAnswer" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SecurityQuestionID" type="oa:IdentifierType"/>
+	<xsd:element name="SecurityQuestion" type="oa:StringType"/>
+	<xsd:element name="SecurityQuestionAnswer" type="oa:StringType"/>
+	<xsd:element name="CancelUserAccount" type="CancelUserAccountType"/>
+	<xsd:complexType name="CancelUserAccountType">
+		<xsd:annotation>
+			<xsd:documentation> 
+       CancelUserAccount conveys an instruction to cancel a previously communicated UserAccount instance. Cancel is not a simple delete in that cancelation may require business calculations and require prior agreement on cancelation terms. 
+
+       UserAccount  Contains a set of information used to establish and maintain user accounts for an application or system. 
+
+       Cancel is an "Action Verb". ActionExpression(s) represent and communicate data management  
+       instructions. The data entities being managed are represented as elements of the UserAccount noun in the BOD instance. 
+
+       The Cancel verb is used when the sender of the BOD is not the owner of the 
+       data, but is sending a request for the document to be canceled. 
+       </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="oa:BusinessObjectDocumentType">
+				<xsd:sequence>
+					<xsd:element name="DataArea" type="CancelUserAccountDataAreaType">
+						<xsd:annotation>
+							<xsd:documentation>The DataArea is the part of the BOD that contains business information. This information consists of a verb and one or more noun instances. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CancelUserAccountDataAreaType">
+		<xsd:sequence>
+			<xsd:element ref="oa:Cancel"/>
+			<xsd:element maxOccurs="unbounded" ref="UserAccount"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

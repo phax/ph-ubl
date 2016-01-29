@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.openapplications.org/oagis/9/codelists"
+	targetNamespace="http://www.openapplications.org/oagis/9/codelists"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:simpleType name="ResponseCodeContentType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.openapplications.org/platform/1">Allows the user to use any of the codes that OAGi defines or add additional values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:union memberTypes="ResponseCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ResponseCodeEnumerationType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.openapplications.org/platform/1">The acknowledge values that OAGi defines for OAGIS.  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Always"/>
+			<xsd:enumeration value="OnError"/>
+			<xsd:enumeration value="Never"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SystemEnvironmentCodeContentType">
+		<xsd:union memberTypes="SystemEnvironmentCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SystemEnvironmentCodeEnumerationType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Production"/>
+			<xsd:enumeration value="Test"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ActionCodeContentType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.openapplications.org/platform/1">Allows the user to use any of the codes that OAGi defines or add additional values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:union memberTypes="ActionCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ActionCodeEnumerationType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.openapplications.org/platform/1">The action values that OAGi defines for OAGIS.  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Add"/>
+			<xsd:enumeration value="Change"/>
+			<xsd:enumeration value="Delete"/>
+			<xsd:enumeration value="Replace"/>
+			<xsd:enumeration value="Accepted"/>
+			<xsd:enumeration value="Modified"/>
+			<xsd:enumeration value="Rejected"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StateCodeContentType">
+		<xsd:union memberTypes="StateCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="StateCodeEnumerationType">
+		<xsd:restriction base="xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="DeliveryPointCodeContentType">
+		<xsd:union memberTypes="DeliveryPointCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="DeliveryPointCodeEnumerationType">
+		<xsd:restriction base="xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountrySubdivisionCodeContentType">
+		<xsd:union memberTypes="CountrySubdivisionCodeEnumerationType xsd:normalizedString"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountrySubdivisionCodeEnumerationType">
+		<xsd:restriction base="xsd:normalizedString"/>
+	</xsd:simpleType>
+</xsd:schema>

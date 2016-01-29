@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1">
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
+	<xsd:element name="Invoice" type="InvoiceType"/>
+	<xsd:complexType name="InvoiceType">
+		<xsd:sequence>
+			<xsd:element ref="ext:UBLExtensions"/>
+			<xsd:element ref="cbc:UBLVersionID"/>
+			<xsd:element ref="cbc:CustomizationID"/>
+			<xsd:element ref="cbc:ProfileID"/>
+			<xsd:element ref="cbc:ID"/>
+			<xsd:element ref="cbc:CopyIndicator"/>
+			<xsd:element ref="cbc:UUID"/>
+			<xsd:element ref="cbc:IssueDate"/>
+			<xsd:element ref="cbc:IssueTime" minOccurs="0"/>
+			<xsd:element ref="cbc:InvoiceTypeCode"/>
+			<xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:DocumentCurrencyCode"/>
+			<xsd:element ref="cbc:TaxCurrencyCode" minOccurs="0"/>
+			<xsd:element ref="cbc:PricingCurrencyCode" minOccurs="0"/>
+			<xsd:element ref="cbc:PaymentCurrencyCode" minOccurs="0"/>
+			<xsd:element ref="cbc:PaymentAlternativeCurrencyCode" minOccurs="0"/>
+			<xsd:element ref="cbc:AccountingCost" minOccurs="0"/>
+			<xsd:element ref="cbc:LineCountNumeric"/>
+			<xsd:element ref="cac:InvoicePeriod" minOccurs="0"/>
+			<xsd:element ref="cac:OrderReference" minOccurs="0"/>
+			<xsd:element ref="cac:BillingReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:DespatchDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:ReceiptDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:OriginatorDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:ContractDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:AdditionalDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:Signature" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:AccountingSupplierParty"/>
+			<xsd:element ref="cac:AccountingCustomerParty"/>
+			<xsd:element ref="cac:BuyerCustomerParty" minOccurs="0"/>
+			<xsd:element ref="cac:SellerSupplierParty" minOccurs="0"/>
+			<xsd:element ref="cac:TaxRepresentativeParty" minOccurs="0"/>
+			<xsd:element ref="cac:Delivery" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:PaymentMeans" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:PaymentTerms" minOccurs="0"/>
+			<xsd:element ref="cac:AllowanceCharge" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:TaxExchangeRate" minOccurs="0"/>
+			<xsd:element ref="cac:PricingExchangeRate" minOccurs="0"/>
+			<xsd:element ref="cac:PaymentExchangeRate" minOccurs="0"/>
+			<xsd:element ref="cac:PaymentAlternativeExchangeRate" minOccurs="0"/>
+			<xsd:element ref="cac:TaxTotal" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:WithholdingTaxTotal" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:LegalMonetaryTotal"/>
+			<xsd:element ref="cac:InvoiceLine" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

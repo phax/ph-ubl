@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+	<xs:import namespace="http://www.efatura.gov.tr/package-namespace" schemaLocation="Package_1_2.xsd"/>
+	<xs:include schemaLocation="StandardBusinessDocumentHeader.xsd"/>
+</xs:schema>

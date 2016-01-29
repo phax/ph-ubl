@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.efatura.gov.tr/package-namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.efatura.gov.tr/package-namespace" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" schemaLocation="../maindoc/UBL-Invoice-2.1.xsd"/>
+	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" schemaLocation="../maindoc/UBL-ApplicationResponse-2.1.xsd"/>
+	<xs:import namespace="http://www.hr-xml.org/3" schemaLocation="../HRXML/UserAccount.xsd"/>
+	<xs:element name="Package">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Elements" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ElementType" type="xs:string"/>
+							<xs:element name="ElementCount" type="xs:int"/>
+							<xs:element name="ElementList">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:any namespace="##any" processContents="strict" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

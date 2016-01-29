@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1">
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
+	<xsd:element name="ApplicationResponse" type="ApplicationResponseType"/>
+	<xsd:complexType name="ApplicationResponseType">
+		<xsd:sequence>
+			<xsd:element ref="ext:UBLExtensions" minOccurs="0"/>
+			<xsd:element ref="cbc:UBLVersionID"/>
+			<xsd:element ref="cbc:CustomizationID"/>
+			<xsd:element ref="cbc:ProfileID"/>
+			<xsd:element ref="cbc:ID"/>
+			<xsd:element ref="cbc:UUID"/>
+			<xsd:element ref="cbc:IssueDate"/>
+			<xsd:element ref="cbc:IssueTime" minOccurs="0"/>
+			<xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:SenderParty"/>
+			<xsd:element ref="cac:ReceiverParty"/>
+			<xsd:element ref="cac:DocumentResponse" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
