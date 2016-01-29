@@ -1,0 +1,92 @@
+<ProcessUserAccount xmlns="http://www.hr-xml.org/3" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" releaseID="releaseID0" xsi:schemaLocation="http://www.hr-xml.org/3 ../HRXML/UserAccount.xsd         http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd         http://uri.etsi.org/01903/v1.3.2# XAdES.xsd">
+  <oa:ApplicationArea>
+   <oa:Sender>
+    <oa:LogicalID>9999999999</oa:LogicalID>
+   </oa:Sender>
+   <oa:Receiver/>
+   <oa:CreationDateTime>2013-07-11T14:11:18</oa:CreationDateTime>
+   <oa:Signature>
+   <ds:Signature Id="Signature_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:SignedInfo Id="Signed_Info_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>t5Fe68IjyQIvva3ZC+XyA3QBArantEnKbkOtmTphf/4=</ds:DigestValue></ds:Reference><ds:Reference Id="Prop_Ref_Id_f0cb787c-868c-45ce-851e-b05895aefc32" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Prop_Id_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>RxUzFmctSP/1EfnFYrFymY0Sbj4OeHM7lsiVUMxH+J8=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="Signature_Value_f0cb787c-868c-45ce-851e-b05895aefc32">MIAw4m5nvYMqgpN0N82eTjdBqg+vpNRitKG6BujGQpAN/XJojmoFMsKVmVKaFje/wg6leOM+BVyO
+AWgN+a+lsdWGMQ6TiClFYodgQ+PwKTc34nRfI05r3ybZDFact99o78iPN++m6/NcuI/dtqMu0FXA
+kU15pHLGatZbEX/EaHgHny8pkK5nZyPbsbog1OMgU9ygai9TMr3yvD8xjAFX1P5f+jAEyWdxD8GD
+1HqEnvi3s03Fg4Ew0aSjVnZO4Qldj42r0DovlIEEZznBxdEaM+WmGJx6XB6CiIE6HeRoPVZkIFaN
+R0bBSYov2yYrjwAWrTYkir+zSIL3pZLsTuVBqA==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>g4fWV5+GRbNQTnVpG5naG/4xC167blIngQJdOJVss7LSBjFkOOitvJtpV0Qvsld1HzW9A+P8aR17
+KdgZzqsc5+akR0+volN2ZH9M+q0Xza7zSQjgBzovv2R6VQWLnEyFb4i3PzEqQMDbF8n30oNWj0Bj
+BvNn+eTkxmk8ifhLDAwrrDasje5CudTNo9pIv73VcJqA3F+pKwW7MGIZeDJpLnbbqz+ELOIR3ev5
+1Ewb889QQyqlMiu2LKaDVmpsFzAlFo25ayLTJ896/cL0Lff+/W+CKeOo3f/SrAcZWp0RWmiKZDET
+9LqCodeH+2x3M8+KK2IwjABk378e8/TipjfENQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509SubjectName>CN=e-Fatura Deneme A.Ş.,2.5.4.5=#130a39393939393939393939,OU=e-Fatura Deneme A.Ş.</ds:X509SubjectName><ds:X509Certificate>MIIFrDCCBJSgAwIBAgIGAJpaGcRqMA0GCSqGSIb3DQEBCwUAMFwxCzAJBgNVBAYTAlRSMU0wSwYD
+VQQDDERNYWxpIE3DvGjDvHIgRWxla3Ryb25payBTZXJ0aWZpa2EgSGl6bWV0IFNhxJ9sYXnEsWPE
+sXPEsSAtIFPDvHLDvG0gMTAeFw0xMDAyMDQxMTI0MzlaFw0xNTAyMDMxMTI0MzlaMFUxHjAcBgNV
+BAsMFWUtRmF0dXJhIERlbmVtZSBBLsWeLjETMBEGA1UEBRMKOTk5OTk5OTk5OTEeMBwGA1UEAwwV
+ZS1GYXR1cmEgRGVuZW1lIEEuxZ4uMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg4fW
+V5+GRbNQTnVpG5naG/4xC167blIngQJdOJVss7LSBjFkOOitvJtpV0Qvsld1HzW9A+P8aR17KdgZ
+zqsc5+akR0+volN2ZH9M+q0Xza7zSQjgBzovv2R6VQWLnEyFb4i3PzEqQMDbF8n30oNWj0BjBvNn
++eTkxmk8ifhLDAwrrDasje5CudTNo9pIv73VcJqA3F+pKwW7MGIZeDJpLnbbqz+ELOIR3ev51Ewb
+889QQyqlMiu2LKaDVmpsFzAlFo25ayLTJ896/cL0Lff+/W+CKeOo3f/SrAcZWp0RWmiKZDET9LqC
+odeH+2x3M8+KK2IwjABk378e8/TipjfENQIDAQABo4ICeTCCAnUwHwYDVR0jBBgwFoAURiCpUxso
+DByu8ihRg7MevvJTFHwwHQYDVR0OBBYEFBuWz6YnIrQxH7pm5HESs3vtJx9cMA4GA1UdDwEB/wQE
+AwIHgDCCATMGA1UdIASCASowggEmMIIBIgYLYIYYAQIBAQUHBAEwggERMCoGCCsGAQUFBwIBFh5o
+dHRwOi8vZGVwby5rYW11c20uZ292LnRyL2lsa2UwgeIGCCsGAQUFBwICMIHVHoHSAEIAdQAgAHMA
+ZQByAHQAaQBmAGkAawBhACAAaQBsAGUAIABpAGwAZwBpAGwAaQAgAHMAZQByAHQAaQBmAGkAawBh
+ACAAdQB5AGcAdQBsAGEAbQBhACAAZQBzAGEAcwBsAGEAcgExAG4BMQAgAG8AawB1AG0AYQBrACAA
+aQDnAGkAbgAgAGIAZQBsAGkAcgB0AGkAbABlAG4AIAB3AGUAYgAgAHMAaQB0AGUAcwBpAG4AaQAg
+AHoAaQB5AGEAcgBlAHQAIABlAGQAaQBuAGkAegAuMAwGA1UdEwEB/wQCMAAwFgYDVR0lBA8wDQYL
+YIYYAQIBAQUHMgEwQQYDVR0fBDowODA2oDSgMoYwaHR0cDovL2RlcG8ua2FtdXNtLmdvdi50ci9r
+dXJ1bXNhbC9tbWVzaHMtczEuY3JsMIGCBggrBgEFBQcBAQR2MHQwPAYIKwYBBQUHMAKGMGh0dHA6
+Ly9kZXBvLmthbXVzbS5nb3YudHIva3VydW1zYWwvbW1lc2hzLXMxLmNydDA0BggrBgEFBQcwAYYo
+aHR0cDovL2Npc2R1cG1tczEua3VydW1zYWwua2FtdXNtLmdvdi50cjANBgkqhkiG9w0BAQsFAAOC
+AQEACYMEtQf5/4+qEZrubSB9W5vjslgmCAiWg5b02DGxknjlrCpaXWq2WnBo2r5t2wCXkVXSpHYP
+mx+AkJI7R0vOeUrNwMJokjDRG8iII2hUqrdqC+7eOKVPaoNcn1LKbvg8bMde3qcfMF1FFgCSQaon
+u/3H1hl9r6kjLln1N3gSzdlCrumzx071FguBIrtWWfIdj8SZNicuru0Jr9xKQYHSRAvm1/noiTbz
+iLj34Ayxz3/srXAJlp+9Z47D6XIUyhztwHKeS4Pf71yITWVszThmA4hm5hKPSJ3zt4tCbXwlSEkd
+MNtPl6PFVBR/l/gtIYiBsR9lpib3+Lv9g0Gorz/5XQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#Signature_f0cb787c-868c-45ce-851e-b05895aefc32"><xades:SignedProperties Id="Prop_Id_f0cb787c-868c-45ce-851e-b05895aefc32"><xades:SignedSignatureProperties><xades:SigningTime>2013-07-11T14:11:20.944+03:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>4pCQHzUOwVViUIbtc2C5LQkMH/4nS2aTFSx93qp5x8Y=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Mali Mühür Elektronik Sertifika Hizmet Sağlayıcısı - Sürüm 1, C=TR</ds:X509IssuerName><ds:X509SerialNumber>662936601706</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>Tedarikçi</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties><xades:UnsignedProperties><xades:UnsignedSignatureProperties><xades:CounterSignature><ds:Signature Id="Counter_Signature_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:SignedInfo Id="Counter_Signed_Info_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#Signature_Value_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Iekv8FVeefXMQVQHJgauD7kG+XZN0pdQXBhIIUw+1S8=</ds:DigestValue></ds:Reference><ds:Reference Id="Counter_Prop_Ref_Id_f0cb787c-868c-45ce-851e-b05895aefc32" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Counter_Prop_Id_f0cb787c-868c-45ce-851e-b05895aefc32"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>CAXD4TtKE7WOPV12CCgF8Iw5DStBbZzcJPEzAwR/dbc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="csid1">Mec6c18XutUs/iS0KrxM/1dWMAU1/oLGahpj7NYjxvD+z20bWabP045Q7mbg2s9+djWCSVQUvBR8
+I+YcHwCaXPPUEcAeAmJAjo0P/Zt93UrczfIt1oDRYVLaR7EACplQ0V8Ly2XhJnAADB1TLi7wlvmK
+V7voEFtO1QLGIjQ1pFYxPH7cbyQ9mXgRR9dc2OZNrum6Cs1HZnfzkx+dSrqq8C6I2+sPQvEs65Qs
+mSuBwa94WmBvHpqs/VIfLQWsdip0cxzToB1siDqQS5+A/nTNkfk0nSBObYTI77q+MRoq3k6+JTTx
+XbrD37+iKC/60NTKk3V0eJvPGjDcwY7ysCJRJg==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>g4fWV5+GRbNQTnVpG5naG/4xC167blIngQJdOJVss7LSBjFkOOitvJtpV0Qvsld1HzW9A+P8aR17
+KdgZzqsc5+akR0+volN2ZH9M+q0Xza7zSQjgBzovv2R6VQWLnEyFb4i3PzEqQMDbF8n30oNWj0Bj
+BvNn+eTkxmk8ifhLDAwrrDasje5CudTNo9pIv73VcJqA3F+pKwW7MGIZeDJpLnbbqz+ELOIR3ev5
+1Ewb889QQyqlMiu2LKaDVmpsFzAlFo25ayLTJ896/cL0Lff+/W+CKeOo3f/SrAcZWp0RWmiKZDET
+9LqCodeH+2x3M8+KK2IwjABk378e8/TipjfENQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509SubjectName>CN=e-Fatura Deneme A.Ş.,2.5.4.5=#130a39393939393939393939,OU=e-Fatura Deneme A.Ş.</ds:X509SubjectName><ds:X509Certificate>MIIFrDCCBJSgAwIBAgIGAJpaGcRqMA0GCSqGSIb3DQEBCwUAMFwxCzAJBgNVBAYTAlRSMU0wSwYD
+VQQDDERNYWxpIE3DvGjDvHIgRWxla3Ryb25payBTZXJ0aWZpa2EgSGl6bWV0IFNhxJ9sYXnEsWPE
+sXPEsSAtIFPDvHLDvG0gMTAeFw0xMDAyMDQxMTI0MzlaFw0xNTAyMDMxMTI0MzlaMFUxHjAcBgNV
+BAsMFWUtRmF0dXJhIERlbmVtZSBBLsWeLjETMBEGA1UEBRMKOTk5OTk5OTk5OTEeMBwGA1UEAwwV
+ZS1GYXR1cmEgRGVuZW1lIEEuxZ4uMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg4fW
+V5+GRbNQTnVpG5naG/4xC167blIngQJdOJVss7LSBjFkOOitvJtpV0Qvsld1HzW9A+P8aR17KdgZ
+zqsc5+akR0+volN2ZH9M+q0Xza7zSQjgBzovv2R6VQWLnEyFb4i3PzEqQMDbF8n30oNWj0BjBvNn
++eTkxmk8ifhLDAwrrDasje5CudTNo9pIv73VcJqA3F+pKwW7MGIZeDJpLnbbqz+ELOIR3ev51Ewb
+889QQyqlMiu2LKaDVmpsFzAlFo25ayLTJ896/cL0Lff+/W+CKeOo3f/SrAcZWp0RWmiKZDET9LqC
+odeH+2x3M8+KK2IwjABk378e8/TipjfENQIDAQABo4ICeTCCAnUwHwYDVR0jBBgwFoAURiCpUxso
+DByu8ihRg7MevvJTFHwwHQYDVR0OBBYEFBuWz6YnIrQxH7pm5HESs3vtJx9cMA4GA1UdDwEB/wQE
+AwIHgDCCATMGA1UdIASCASowggEmMIIBIgYLYIYYAQIBAQUHBAEwggERMCoGCCsGAQUFBwIBFh5o
+dHRwOi8vZGVwby5rYW11c20uZ292LnRyL2lsa2UwgeIGCCsGAQUFBwICMIHVHoHSAEIAdQAgAHMA
+ZQByAHQAaQBmAGkAawBhACAAaQBsAGUAIABpAGwAZwBpAGwAaQAgAHMAZQByAHQAaQBmAGkAawBh
+ACAAdQB5AGcAdQBsAGEAbQBhACAAZQBzAGEAcwBsAGEAcgExAG4BMQAgAG8AawB1AG0AYQBrACAA
+aQDnAGkAbgAgAGIAZQBsAGkAcgB0AGkAbABlAG4AIAB3AGUAYgAgAHMAaQB0AGUAcwBpAG4AaQAg
+AHoAaQB5AGEAcgBlAHQAIABlAGQAaQBuAGkAegAuMAwGA1UdEwEB/wQCMAAwFgYDVR0lBA8wDQYL
+YIYYAQIBAQUHMgEwQQYDVR0fBDowODA2oDSgMoYwaHR0cDovL2RlcG8ua2FtdXNtLmdvdi50ci9r
+dXJ1bXNhbC9tbWVzaHMtczEuY3JsMIGCBggrBgEFBQcBAQR2MHQwPAYIKwYBBQUHMAKGMGh0dHA6
+Ly9kZXBvLmthbXVzbS5nb3YudHIva3VydW1zYWwvbW1lc2hzLXMxLmNydDA0BggrBgEFBQcwAYYo
+aHR0cDovL2Npc2R1cG1tczEua3VydW1zYWwua2FtdXNtLmdvdi50cjANBgkqhkiG9w0BAQsFAAOC
+AQEACYMEtQf5/4+qEZrubSB9W5vjslgmCAiWg5b02DGxknjlrCpaXWq2WnBo2r5t2wCXkVXSpHYP
+mx+AkJI7R0vOeUrNwMJokjDRG8iII2hUqrdqC+7eOKVPaoNcn1LKbvg8bMde3qcfMF1FFgCSQaon
+u/3H1hl9r6kjLln1N3gSzdlCrumzx071FguBIrtWWfIdj8SZNicuru0Jr9xKQYHSRAvm1/noiTbz
+iLj34Ayxz3/srXAJlp+9Z47D6XIUyhztwHKeS4Pf71yITWVszThmA4hm5hKPSJ3zt4tCbXwlSEkd
+MNtPl6PFVBR/l/gtIYiBsR9lpib3+Lv9g0Gorz/5XQ==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#Counter_Signature_f0cb787c-868c-45ce-851e-b05895aefc32"><xades:SignedProperties Id="Counter_Prop_Id_f0cb787c-868c-45ce-851e-b05895aefc32"><xades:SignedSignatureProperties><xades:SigningTime>2013-07-11T14:11:21.114+03:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>4pCQHzUOwVViUIbtc2C5LQkMH/4nS2aTFSx93qp5x8Y=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Mali Mühür Elektronik Sertifika Hizmet Sağlayıcısı - Sürüm 1, C=TR</ds:X509IssuerName><ds:X509SerialNumber>662936601706</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>Tedarikçi</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></xades:CounterSignature></xades:UnsignedSignatureProperties></xades:UnsignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></oa:Signature>
+  </oa:ApplicationArea>
+  <DataArea>
+   <oa:Process/>
+<UserAccount>
+ <UserID>9999999999</UserID>
+ <PersonName>
+  <FormattedName>e-Fatura Deneme A.Ş.</FormattedName>
+  <oa:GivenName/>
+  <MiddleName/>
+  <FamilyName/>
+ </PersonName>
+ <AccountConfiguration>
+  <UserOptionCode>12</UserOptionCode>
+ </AccountConfiguration>
+</UserAccount>
+  </DataArea>
+</ProcessUserAccount>
