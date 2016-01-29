@@ -17,6 +17,7 @@
 package com.helger.ubl.api;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,6 +25,9 @@ import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
 
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.resource.IReadableResource;
@@ -72,31 +76,39 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   QName getQName ();
 
   /**
-   * @return The path within the classpath where the main XSD file resides.
+   * @return The list of all paths within the classpath where the main XSD file
+   *         resides.
    */
   @Nonnull
-  String getXSDPath ();
+  @Nonempty
+  @ReturnsMutableCopy
+  List <String> getAllXSDPaths ();
 
   /**
-   * @return The resource from which the XSD can be read using the current class
-   *         loader.
+   * @return The resources from which the XSD can be read using the current
+   *         class loader. Never <code>null</code> nor empty.
    */
   @Nonnull
-  default IReadableResource getXSDResource ()
+  @Nonempty
+  @ReturnsMutableCopy
+  default List <IReadableResource> getAllXSDResources ()
   {
-    return new ClassPathResource (getXSDPath ());
+    return CollectionHelper.newList (getAllXSDPaths (), s -> new ClassPathResource (s));
   }
 
   /**
    * @param aClassLoader
    *        The class loader to be used. May be <code>null</code> indicating
    *        that the default class loader should be used.
-   * @return The resource from which the XSD can be read.
+   * @return The resources from which the XSD can be read. Never
+   *         <code>null</code> nor empty.
    */
   @Nonnull
-  default IReadableResource getXSDResource (@Nullable final ClassLoader aClassLoader)
+  @Nonempty
+  @ReturnsMutableCopy
+  default List <IReadableResource> getAllXSDResources (@Nullable final ClassLoader aClassLoader)
   {
-    return new ClassPathResource (getXSDPath (), aClassLoader);
+    return CollectionHelper.newList (getAllXSDPaths (), s -> new ClassPathResource (s, aClassLoader));
   }
 
   /**

@@ -16,11 +16,15 @@
  */
 package com.helger.ubl21;
 
+import java.util.List;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.UBLDocumentType;
 
@@ -135,9 +139,11 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public String getXSDPath ()
+  @Nonempty
+  @ReturnsMutableCopy
+  public List <String> getAllXSDPaths ()
   {
-    return m_aDocType.getXSDPath ();
+    return m_aDocType.getAllXSDPaths ();
   }
 
   @Nonnull

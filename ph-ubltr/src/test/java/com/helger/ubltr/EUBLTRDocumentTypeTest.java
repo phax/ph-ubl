@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2014-2016 Philip Helger (www.helger.com)
+ * Copyright (C) TR14-TR16 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.ubl20;
+package com.helger.ubltr;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -27,16 +27,16 @@ import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
 /**
- * Test class for class {@link EUBL20DocumentType}.
+ * Test class for class {@link EUBLTRDocumentType}.
  *
  * @author Philip Helger
  */
-public final class EUBL20DocumentTypeTest
+public final class EUBLTRDocumentTypeTest
 {
   @Test
   public void testAll ()
   {
-    for (final EUBL20DocumentType e : EUBL20DocumentType.values ())
+    for (final EUBLTRDocumentType e : EUBLTRDocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
       assertNotNull (e.getPackage ());
@@ -49,7 +49,7 @@ public final class EUBL20DocumentTypeTest
         assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());
       assertSame (e.getSchema (), e.getSchema ());
-      assertSame (e, EUBL20DocumentType.valueOf (e.name ()));
+      assertSame (e, EUBLTRDocumentType.valueOf (e.name ()));
     }
   }
 }

@@ -16,13 +16,18 @@
  */
 package com.helger.ubltr;
 
+import java.util.List;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.UBLDocumentType;
+import com.helger.ubl21.CUBL21;
 
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
@@ -34,14 +39,16 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  */
 public enum EUBLTRDocumentType implements IUBLDocumentType
 {
-  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, "HRXML/UserAccount.xsd"),
-  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, "HRXML/UserAccount.xsd");
+  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
+                                                                            "HRXML/UserAccount.xsd"),
+  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
+                                                                              "HRXML/UserAccount.xsd");
 
   private final UBLDocumentType m_aDocType;
 
-  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String... aXSDPaths)
   {
-    m_aDocType = new UBLDocumentType (aClass, CUBLTR.SCHEMA_DIRECTORY + sXSDPath);
+    m_aDocType = new UBLDocumentType (aClass, aXSDPaths);
   }
 
   @Nonnull
@@ -75,9 +82,11 @@ public enum EUBLTRDocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public String getXSDPath ()
+  @Nonempty
+  @ReturnsMutableCopy
+  public List <String> getAllXSDPaths ()
   {
-    return m_aDocType.getXSDPath ();
+    return m_aDocType.getAllXSDPaths ();
   }
 
   @Nonnull

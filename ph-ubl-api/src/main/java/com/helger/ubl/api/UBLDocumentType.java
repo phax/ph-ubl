@@ -16,6 +16,8 @@
  */
 package com.helger.ubl.api;
 
+import java.util.List;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.bind.annotation.XmlSchema;
@@ -24,6 +26,9 @@ import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.ValueEnforcer;
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
@@ -42,7 +47,7 @@ public class UBLDocumentType implements IUBLDocumentType
   private final String m_sLocalName;
   private final String m_sNamespaceURI;
   private final QName m_aQName;
-  private final String m_sXSDPath;
+  private final List <String> m_aXSDPaths;
   private Schema m_aSchema;
 
   /**
@@ -50,13 +55,13 @@ public class UBLDocumentType implements IUBLDocumentType
    *
    * @param aClass
    *        The JAXB generated class of the root element.
-   * @param sXSDPath
-   *        The classpath relative path to the XML Schema.
+   * @param sXSDPaths
+   *        The classpath relative paths to the XML Schema.
    */
-  public UBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  public UBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final String... aXSDPaths)
   {
     ValueEnforcer.notNull (aClass, "Class");
-    ValueEnforcer.notEmpty (sXSDPath, "XSDPath");
+    ValueEnforcer.notEmptyNoNullValue (aXSDPaths, "XSDPaths");
 
     // Check whether it is an @XmlType class
     final XmlType aXmlType = aClass.getAnnotation (XmlType.class);
@@ -85,7 +90,7 @@ public class UBLDocumentType implements IUBLDocumentType
                                           aPackage.getName () +
                                           "' has no namespace in the @XmlSchema annotation!");
     m_aQName = new QName (m_sNamespaceURI, sLocalName);
-    m_sXSDPath = sXSDPath;
+    m_aXSDPaths = CollectionHelper.newList (aXSDPaths);
   }
 
   @Nonnull
@@ -119,9 +124,11 @@ public class UBLDocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public String getXSDPath ()
+  @Nonempty
+  @ReturnsMutableCopy
+  public List <String> getAllXSDPaths ()
   {
-    return m_sXSDPath;
+    return CollectionHelper.newList (m_aXSDPaths);
   }
 
   @Nonnull
@@ -131,7 +138,7 @@ public class UBLDocumentType implements IUBLDocumentType
     if (m_aSchema == null)
     {
       // Lazy initialization
-      final IReadableResource aXSDRes = getXSDResource (aClassLoader);
+      final List <IReadableResource> aXSDRes = getAllXSDResources (aClassLoader);
       m_aSchema = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
       if (m_aSchema == null)
         throw new IllegalStateException ("Failed to create Schema from " +

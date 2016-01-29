@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
 /**
@@ -44,8 +44,9 @@ public final class EUBL21DocumentTypeTest
       assertTrue (StringHelper.hasText (e.getLocalName ()));
       assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
       assertNotNull (e.getQName ());
-      assertTrue (StringHelper.hasText (e.getXSDPath ()));
-      assertTrue (e.name (), new ClassPathResource (e.getXSDPath ()).exists ());
+      assertTrue (e.getAllXSDPaths ().size () >= 1);
+      for (final IReadableResource aRes : e.getAllXSDResources ())
+        assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());
       assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL21DocumentType.valueOf (e.name ()));
