@@ -25,8 +25,10 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.Validator;
 
 import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.xml.schema.IHasSchema;
+import com.helger.commons.xml.schema.XMLSchemaValidationHelper;
 
 /**
  * Base interface describing a single UBL document type, independent of the
@@ -76,13 +78,26 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   String getXSDPath ();
 
   /**
+   * @return The resource from which the XSD can be read using the current class
+   *         loader.
+   */
+  @Nonnull
+  default IReadableResource getXSDResource ()
+  {
+    return new ClassPathResource (getXSDPath ());
+  }
+
+  /**
    * @param aClassLoader
    *        The class loader to be used. May be <code>null</code> indicating
    *        that the default class loader should be used.
    * @return The resource from which the XSD can be read.
    */
   @Nonnull
-  IReadableResource getXSDResource (@Nullable ClassLoader aClassLoader);
+  default IReadableResource getXSDResource (@Nullable final ClassLoader aClassLoader)
+  {
+    return new ClassPathResource (getXSDPath (), aClassLoader);
+  }
 
   /**
    * @return The non-<code>null</code> compiled {@link Schema} object retrieved
@@ -141,5 +156,10 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
    *         error occurred.
    */
   @Nonnull
-  IResourceErrorGroup validateXML (@Nonnull IReadableResource aXML, @Nullable final ClassLoader aClassLoader);
+  default IResourceErrorGroup validateXML (@Nonnull final IReadableResource aXML,
+                                           @Nullable final ClassLoader aClassLoader)
+  {
+    return XMLSchemaValidationHelper.validate (getSchema (aClassLoader), aXML);
+  }
+
 }

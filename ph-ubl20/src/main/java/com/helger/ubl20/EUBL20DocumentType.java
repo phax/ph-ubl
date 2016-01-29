@@ -25,13 +25,10 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
-import com.helger.commons.error.IResourceErrorGroup;
-import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.commons.xml.schema.XMLSchemaCache;
-import com.helger.commons.xml.schema.XMLSchemaValidationHelper;
 import com.helger.ubl.api.IUBLDocumentType;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
@@ -155,12 +152,6 @@ public enum EUBL20DocumentType implements IUBLDocumentType
   }
 
   @Nonnull
-  public IReadableResource getXSDResource (@Nullable final ClassLoader aClassLoader)
-  {
-    return new ClassPathResource (m_sXSDPath, aClassLoader);
-  }
-
-  @Nonnull
   @SuppressFBWarnings ("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")
   public Schema getSchema (@Nullable final ClassLoader aClassLoader)
   {
@@ -173,12 +164,5 @@ public enum EUBL20DocumentType implements IUBLDocumentType
         throw new IllegalStateException ("Failed to create Schema from " + aXSDRes);
     }
     return m_aSchema;
-  }
-
-  @Nonnull
-  public IResourceErrorGroup validateXML (@Nonnull final IReadableResource aXML,
-                                          @Nullable final ClassLoader aClassLoader)
-  {
-    return XMLSchemaValidationHelper.validate (getSchema (aClassLoader), aXML);
   }
 }
