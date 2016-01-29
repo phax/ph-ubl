@@ -19,14 +19,9 @@
 -->
 <bindings xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd" version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError" />
-  <bindings schemaLocation="../resources/schemas/ubltr/maindoc/UBL-ApplicationResponse-2.1.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/ubltr/Envelope/Package_1_2.xsd" node="/xsd:schema">
     <schemaBindings>
-      <package name="tr.gov.efatura.applicationresponse_21" />
-    </schemaBindings>
-  </bindings>
-  <bindings schemaLocation="../resources/schemas/ubltr/maindoc/UBL-Invoice-2.1.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="tr.gov.efatura.invoice_21" />
+      <package name="tr.gov.efatura.package_12" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/ubltr/HRXML/UserAccount.xsd" node="/xsd:schema">

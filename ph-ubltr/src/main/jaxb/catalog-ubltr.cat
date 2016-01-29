@@ -1,1 +1,7 @@
-REWRITE_SYSTEM "../common" "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common/UBL-CommonAggregateComponents-2.1.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"     "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common/UBL-CommonBasicComponents-2.1.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common/UBL-CommonExtensionComponents-2.1.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"       "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/maindoc/UBL-ApplicationResponse-2.1.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"                   "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/maindoc/UBL-Invoice-2.1.xsd"
+PUBLIC "http://www.w3.org/2000/09/xmldsig#" "maven:com.helger:ph-ubl21:jar::!/schemas/ubl21/common/UBL-xmldsig-core-schema-2.1.xsd"
+PUBLIC "StandardBusinessDocumentHeader.xsd" "maven:com.helger:ph-sbdh:jar::!/schemas/sbdh/StandardBusinessDocumentHeader.xsd"
