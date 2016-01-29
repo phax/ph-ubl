@@ -18,20 +18,11 @@ package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.xml.bind.annotation.XmlSchema;
-import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.annotation.CodingStyleguideUnaware;
-import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.lang.ClassHelper;
-import com.helger.commons.string.StringHelper;
-import com.helger.commons.xml.schema.XMLSchemaCache;
 import com.helger.ubl.api.IUBLDocumentType;
-
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import com.helger.ubl.api.UBLDocumentType;
 
 /**
  * Enumeration with all available UBL 2.1 document types.
@@ -106,97 +97,52 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   UTILITY_STATEMENT (oasis.names.specification.ubl.schema.xsd.utilitystatement_21.UtilityStatementType.class, "UBL-UtilityStatement-2.1.xsd"),
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType.class, "UBL-Waybill-2.1.xsd");
 
-  private final Class <?> m_aClass;
-  private final String m_sLocalName;
-  private final String m_sNamespaceURI;
-  private final QName m_aQName;
-  private final String m_sXSDPath;
-  @CodingStyleguideUnaware
-  private Schema m_aSchema;
+  private final UBLDocumentType m_aDocType;
 
   private EUBL21DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    ValueEnforcer.notNull (aClass, "Class");
-    ValueEnforcer.notEmpty (sXSDPath, "XSDPath");
-
-    // Check whether it is an @XmlType class
-    final XmlType aXmlType = aClass.getAnnotation (XmlType.class);
-    if (aXmlType == null)
-      throw new IllegalArgumentException ("The passed class does not have an @XMLType annotation!");
-
-    // Get the package of the passed Class
-    final Package aPackage = aClass.getPackage ();
-
-    // The package must have the annotation "XmlSchema" with the corresponding
-    // namespace it supports
-    final XmlSchema aXmlSchema = aPackage.getAnnotation (XmlSchema.class);
-    if (aXmlSchema == null)
-      throw new IllegalArgumentException ("The package '" + aPackage.getName () + "' has no @XmlSchema annotation!");
-
-    // Hack: build the element name from the type, excluding the "Type" at the
-    // end
-    String sLocalName = ClassHelper.getClassLocalName (aClass);
-    sLocalName = sLocalName.substring (0, sLocalName.length () - "Type".length ());
-
-    m_aClass = aClass;
-    m_sLocalName = sLocalName;
-    m_sNamespaceURI = aXmlSchema.namespace ();
-    if (StringHelper.hasNoText (m_sNamespaceURI))
-      throw new IllegalArgumentException ("The package '" +
-                                          aPackage.getName () +
-                                          "' has no namespace in the @XmlSchema annotation!");
-    m_aQName = new QName (m_sNamespaceURI, sLocalName);
-    m_sXSDPath = CUBL21.SCHEMA_DIRECTORY + sXSDPath;
+    m_aDocType = new UBLDocumentType (aClass, CUBL21.SCHEMA_DIRECTORY + sXSDPath);
   }
 
   @Nonnull
   public Class <?> getImplementationClass ()
   {
-    return m_aClass;
+    return m_aDocType.getImplementationClass ();
   }
 
   @Nonnull
   public Package getPackage ()
   {
-    return m_aClass.getPackage ();
+    return m_aDocType.getPackage ();
   }
 
   @Nonnull
   public String getLocalName ()
   {
-    return m_sLocalName;
+    return m_aDocType.getLocalName ();
   }
 
   @Nonnull
   public String getNamespaceURI ()
   {
-    return m_sNamespaceURI;
+    return m_aDocType.getNamespaceURI ();
   }
 
   @Nonnull
   public QName getQName ()
   {
-    return m_aQName;
+    return m_aDocType.getQName ();
   }
 
   @Nonnull
   public String getXSDPath ()
   {
-    return m_sXSDPath;
+    return m_aDocType.getXSDPath ();
   }
 
   @Nonnull
-  @SuppressFBWarnings ("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")
   public Schema getSchema (@Nullable final ClassLoader aClassLoader)
   {
-    if (m_aSchema == null)
-    {
-      // Lazy initialization
-      final IReadableResource aXSDRes = getXSDResource (aClassLoader);
-      m_aSchema = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
-      if (m_aSchema == null)
-        throw new IllegalStateException ("Failed to create Schema from " + aXSDRes);
-    }
-    return m_aSchema;
+    return m_aDocType.getSchema (aClassLoader);
   }
 }
