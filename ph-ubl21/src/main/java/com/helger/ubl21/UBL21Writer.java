@@ -103,7 +103,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ApplicationResponse.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -114,7 +114,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for AttachedDocument.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -125,7 +125,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for AwardedNotification.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -136,7 +136,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for BillOfLading.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -147,7 +147,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CallForTenders.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -158,7 +158,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Catalogue.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -169,7 +169,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CatalogueDeletion.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -180,7 +180,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CatalogueItemSpecificationUpdate.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -191,7 +191,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CataloguePricingUpdate.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -202,7 +202,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CatalogueRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -213,7 +213,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CertificateOfOrigin.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -224,7 +224,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ContractAwardNotice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -235,7 +235,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ContractNotice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -246,7 +246,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for CreditNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -257,7 +257,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for DebitNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -268,7 +268,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for DespatchAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -279,7 +279,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for DocumentStatus.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -290,7 +290,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for DocumentStatusRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -301,7 +301,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ExceptionCriteria.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -312,7 +312,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ExceptionNotification.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -323,7 +323,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Forecast.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -334,7 +334,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ForecastRevision.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -345,7 +345,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ForwardingInstructions.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -356,7 +356,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for FreightInvoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -367,7 +367,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for FulfilmentCancellation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -378,7 +378,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for GoodsItemItinerary.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -389,7 +389,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for GuaranteeCertificate.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -400,7 +400,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for InstructionForReturns.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -411,7 +411,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for InventoryReport.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -422,7 +422,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Invoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -433,7 +433,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ItemInformationRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -444,7 +444,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Order.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -455,7 +455,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for OrderCancellation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -466,7 +466,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for OrderChange.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -477,7 +477,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for OrderResponse.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -488,7 +488,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for OrderResponseSimple.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -499,7 +499,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for PackingList.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -510,7 +510,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for PriorInformationNotice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -521,7 +521,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ProductActivity.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -532,7 +532,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Quotation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -543,7 +543,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for ReceiptAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -554,7 +554,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Reminder.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -565,7 +565,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for RemittanceAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -576,7 +576,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for RequestForQuotation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -587,7 +587,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for RetailEvent.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -598,7 +598,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for SelfBilledCreditNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -609,7 +609,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for SelfBilledInvoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -620,7 +620,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Statement.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -631,7 +631,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for StockAvailabilityReport.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -642,7 +642,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Tender.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -653,7 +653,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TendererQualification.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -664,7 +664,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TendererQualificationResponse.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -675,7 +675,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TenderReceipt.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -686,7 +686,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TradeItemLocationProfile.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -697,7 +697,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportationStatus.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -708,7 +708,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportationStatusRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -719,7 +719,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportExecutionPlan.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -730,7 +730,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportExecutionPlanRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -741,7 +741,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportProgressStatus.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -752,7 +752,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportProgressStatusRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -763,7 +763,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportServiceDescription.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -774,7 +774,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for TransportServiceDescriptionRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -785,7 +785,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for UnawardedNotification.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -796,7 +796,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for UtilityStatement.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -807,7 +807,7 @@ public final class UBL21Writer
 
   /**
    * Create a writer builder for Waybill.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull

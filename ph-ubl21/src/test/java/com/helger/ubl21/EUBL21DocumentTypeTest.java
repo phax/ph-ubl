@@ -28,7 +28,7 @@ import com.helger.commons.string.StringHelper;
 
 /**
  * Test class for class {@link EUBL21DocumentType}.
- * 
+ *
  * @author Philip Helger
  */
 public final class EUBL21DocumentTypeTest

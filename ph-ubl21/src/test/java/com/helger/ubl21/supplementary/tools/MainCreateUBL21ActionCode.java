@@ -29,25 +29,10 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
   {
     return "package com.helger.ubl21;\n" +
            "\n" +
-           "import java.io.File;\n" +
-           "\n" +
            "import javax.annotation.Nonnull;\n" +
-           "import javax.annotation.Nullable;\n" +
            "import javax.annotation.concurrent.NotThreadSafe;\n" +
-           "import javax.xml.bind.ValidationEventHandler;\n" +
-           "import javax.xml.transform.Result;\n" +
-           "import javax.xml.transform.Source;\n" +
-           "import javax.xml.transform.stream.StreamResult;\n" +
-           "\n" +
-           "import org.w3c.dom.Document;\n" +
-           "import org.w3c.dom.Node;\n" +
            "\n" +
            "import com.helger.commons.annotation.PresentForCodeCoverage;\n" +
-           "import com.helger.commons.error.IResourceErrorGroup;\n" +
-           "import com.helger.commons.io.resource.IReadableResource;\n" +
-           "import com.helger.commons.state.ESuccess;\n" +
-           "import com.helger.commons.xml.transform.TransformSourceFactory;\n" +
-           "import com.helger.ubl.api.AbstractUBLDocumentMarshaller;\n" +
            "\n" +
            "import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType;\n" +
@@ -120,12 +105,11 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
            " all UBL 2.1 document types.\n" +
            " * \n" +
            " * @author Philip Helger\n" +
-           " */" +
-           "@SuppressWarnings (\"deprecation\")\n" +
+           " */\n" +
            "@NotThreadSafe\n" +
            "public final class " +
            sClassName +
-           " extends AbstractUBLDocumentMarshaller\n" +
+           "\n" +
            "{\n" +
            "  @PresentForCodeCoverage\n" +
            "  private static final " +
