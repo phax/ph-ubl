@@ -29,7 +29,7 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <IMPLTYPE>
- *          The implementation class implementing this abstract class.
+ *        The implementation class implementing this abstract class.
  */
 @NotThreadSafe
 public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <IMPLTYPE>>
@@ -72,7 +72,7 @@ public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <I
    * Set the class loader to be used. This is optional.
    *
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code>.
+   *        The class loader to be used. May be <code>null</code>.
    * @return this
    */
   @Nonnull

@@ -44,8 +44,8 @@ public final class UBLBuilderDefaultSettings
    * is used.
    *
    * @param aEventHandler
-   *          The new default event handler. May be <code>null</code> to
-   *          indicate, that the default handler should be used.
+   *        The new default event handler. May be <code>null</code> to indicate,
+   *        that the default handler should be used.
    */
   public static void setDefaultValidationEventHandler (@Nullable final ValidationEventHandler aEventHandler)
   {
@@ -70,8 +70,8 @@ public final class UBLBuilderDefaultSettings
    * used.
    *
    * @param aNamespaceContext
-   *          The namespace context to be used by default. May be
-   *          <code>null</code>.
+   *        The namespace context to be used by default. May be
+   *        <code>null</code>.
    */
   public static void setDefaultNamespaceContext (@Nullable final NamespaceContext aNamespaceContext)
   {

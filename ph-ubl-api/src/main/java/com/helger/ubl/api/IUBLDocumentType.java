@@ -77,8 +77,8 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
 
   /**
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return The resource from which the XSD can be read.
    */
   @Nonnull
@@ -96,8 +96,8 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
 
   /**
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return The non-<code>null</code> compiled {@link Schema} object retrieved
    *         by the {@link com.helger.commons.xml.schema.XMLSchemaCache}.
    */
@@ -116,8 +116,8 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
 
   /**
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return The non-<code>null</code> compiled {@link Validator} object
    *         retrieved from the schema to be obtained from
    *         {@link #getSchema(ClassLoader)}.
@@ -133,10 +133,10 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
    * type.
    *
    * @param aXML
-   *          The XML resource to be validated. May not be <code>null</code>.
+   *        The XML resource to be validated. May not be <code>null</code>.
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return A non-<code>null</code> group of validation errors. Is empty if no
    *         error occurred.
    */

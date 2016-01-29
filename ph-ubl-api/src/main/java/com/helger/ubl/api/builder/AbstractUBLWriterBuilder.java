@@ -55,9 +55,9 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be written
+ *        The UBL implementation class to be written
  * @param <IMPLTYPE>
- *          The implementation class implementing this abstract class.
+ *        The implementation class implementing this abstract class.
  */
 @NotThreadSafe
 public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLWriterBuilder <T, IMPLTYPE>>
@@ -88,7 +88,7 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Set the JAXB validation event handler to be used. May be <code>null</code>.
    *
    * @param aEventHandler
-   *          The event handler to be used. May be <code>null</code>.
+   *        The event handler to be used. May be <code>null</code>.
    * @return this for chaining
    */
   @Nonnull
@@ -113,7 +113,7 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Set the namespace context (prefix to namespace URL mapping) to be used.
    *
    * @param aNSContext
-   *          The namespace context to be used. May be <code>null</code>.
+   *        The namespace context to be used. May be <code>null</code>.
    * @return this for chaining
    */
   @Nonnull
@@ -127,7 +127,7 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a DOM {@link Document}.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @return The created DOM document or <code>null</code> in case of conversion
    *         error
    */
@@ -143,7 +143,7 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a String.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @return The created String or <code>null</code> in case of conversion error
    */
   @Nullable
@@ -157,9 +157,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a custom {@link File}.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @param aResult
-   *          The result file to write to. May not be <code>null</code>.
+   *        The result file to write to. May not be <code>null</code>.
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
@@ -173,9 +173,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a custom {@link OutputStream}.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @param aResult
-   *          The result stream to write to. May not be <code>null</code>.
+   *        The result stream to write to. May not be <code>null</code>.
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
@@ -196,9 +196,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a custom {@link IWritableResource}.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @param aResult
-   *          The result resource to write to. May not be <code>null</code>.
+   *        The result resource to write to. May not be <code>null</code>.
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */
@@ -243,9 +243,9 @@ public abstract class AbstractUBLWriterBuilder <T, IMPLTYPE extends AbstractUBLW
    * Convert the passed UBL document to a custom {@link Result}.
    *
    * @param aUBLDocument
-   *          The source object to write. May not be <code>null</code>.
+   *        The source object to write. May not be <code>null</code>.
    * @param aResult
-   *          The result object to write to. May not be <code>null</code>.
+   *        The result object to write to. May not be <code>null</code>.
    * @return {@link ESuccess#SUCCESS} in case of success,
    *         {@link ESuccess#FAILURE} in case of an error
    */

@@ -55,9 +55,9 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be read
+ *        The UBL implementation class to be read
  * @param <IMPLTYPE>
- *          The implementation class implementing this abstract class.
+ *        The implementation class implementing this abstract class.
  */
 @NotThreadSafe
 public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLReaderBuilder <T, IMPLTYPE>>
@@ -89,7 +89,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Set the JAXB validation event handler to be used. May be <code>null</code>.
    *
    * @param aEventHandler
-   *          The event handler to be used. May be <code>null</code>.
+   *        The event handler to be used. May be <code>null</code>.
    * @return this
    */
   @Nonnull
@@ -138,7 +138,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link File} as a UBL document.
    *
    * @param aSource
-   *          The source to read from. May not be <code>null</code>.
+   *        The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */
@@ -152,7 +152,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link IReadableResource} as a UBL document.
    *
    * @param aSource
-   *          The source to read from. May not be <code>null</code>.
+   *        The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */
@@ -166,7 +166,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link InputStream} as a UBL document.
    *
    * @param aSource
-   *          The stream to read from. May not be <code>null</code>.
+   *        The stream to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */
@@ -180,7 +180,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link byte[]} as a UBL document.
    *
    * @param aSource
-   *          The source to read from. May not be <code>null</code>.
+   *        The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */
@@ -194,7 +194,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Interpret the passed {@link byte[]} as a UBL document.
    *
    * @param sSource
-   *          The source to read from. May not be <code>null</code>.
+   *        The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */
@@ -229,7 +229,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Customize the unmarshaller
    *
    * @param aUnmarshaller
-   *          The unmarshaller to customize. Never <code>null</code>.
+   *        The unmarshaller to customize. Never <code>null</code>.
    */
   @OverrideOnDemand
   protected void customizeUnmarshaller (@Nonnull final Unmarshaller aUnmarshaller)
@@ -240,7 +240,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Note: this is the generic API for reading all types of UBL documents.
    *
    * @param aNode
-   *          The XML node to be converted. May not be <code>null</code>.
+   *        The XML node to be converted. May not be <code>null</code>.
    * @return <code>null</code> in case conversion to the specified class failed.
    *         See the log output for details.
    */
@@ -296,7 +296,7 @@ public abstract class AbstractUBLReaderBuilder <T, IMPLTYPE extends AbstractUBLR
    * Note: this is the generic API for reading all types of UBL documents.
    *
    * @param aSource
-   *          The source to read from. May not be <code>null</code>.
+   *        The source to read from. May not be <code>null</code>.
    * @return The evaluated UBL document or <code>null</code> in case of a
    *         parsing error
    */

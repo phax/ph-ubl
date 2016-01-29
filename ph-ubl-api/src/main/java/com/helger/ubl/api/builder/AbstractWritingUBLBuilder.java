@@ -33,9 +33,9 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be handled
+ *        The UBL implementation class to be handled
  * @param <IMPLTYPE>
- *          The implementation class implementing this abstract class.
+ *        The implementation class implementing this abstract class.
  */
 @NotThreadSafe
 public abstract class AbstractWritingUBLBuilder <T, IMPLTYPE extends AbstractWritingUBLBuilder <T, IMPLTYPE>>
@@ -51,7 +51,7 @@ public abstract class AbstractWritingUBLBuilder <T, IMPLTYPE extends AbstractWri
    *
    * @return The Marshaller and never <code>null</code>.
    * @throws JAXBException
-   *           In case creation fails
+   *         In case creation fails
    */
   @Nonnull
   @OverrideOnDemand
@@ -75,7 +75,7 @@ public abstract class AbstractWritingUBLBuilder <T, IMPLTYPE extends AbstractWri
    * Customize the marshaller
    *
    * @param aMarshaller
-   *          The marshaller to customize. Never <code>null</code>.
+   *        The marshaller to customize. Never <code>null</code>.
    */
   @OverrideOnDemand
   protected void customizeMarshaller (@Nonnull final Marshaller aMarshaller)

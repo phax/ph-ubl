@@ -34,9 +34,9 @@ import com.helger.ubl.api.IUBLDocumentType;
  *
  * @author Philip Helger
  * @param <T>
- *          The UBL implementation class to be validated
+ *        The UBL implementation class to be validated
  * @param <IMPLTYPE>
- *          The implementation class implementing this abstract class.
+ *        The implementation class implementing this abstract class.
  */
 @NotThreadSafe
 public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends AbstractUBLValidationBuilder <T, IMPLTYPE>>
@@ -51,7 +51,7 @@ public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends Abstract
    * Check if the passed UBL document is valid according to the XSD or not.
    *
    * @param aUBLDocument
-   *          The UBL document to be validated. May not be <code>null</code>.
+   *        The UBL document to be validated. May not be <code>null</code>.
    * @return <code>true</code> if the document is valid, <code>false</code> if
    *         not.
    * @see #validate(Object)
@@ -65,7 +65,7 @@ public abstract class AbstractUBLValidationBuilder <T, IMPLTYPE extends Abstract
    * Validate the passed UBL document.
    *
    * @param aUBLDocument
-   *          The UBL document to be validated. May not be <code>null</code>.
+   *        The UBL document to be validated. May not be <code>null</code>.
    * @return The validation results. Never <code>null</code>.
    */
   @Nonnull
