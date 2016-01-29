@@ -25,9 +25,6 @@ import com.helger.ubl20.EUBL20DocumentType;
 
 public class MainCreateUBL20ActionCode extends AbstractCreateUBLActionCode
 {
-  private static final String ENUM_CLASS = "EUBL20DocumentType.";
-  private static final String MARSHALLER_CLASS = "UBL20Marshaller";
-
   private static String _getPrefix (final String sWhat, final String sClassName)
   {
     return "package com.helger.ubl20;\n" +
