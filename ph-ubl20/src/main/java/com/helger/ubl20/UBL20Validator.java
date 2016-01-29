@@ -69,7 +69,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for ApplicationResponse.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -80,7 +80,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for AttachedDocument.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -91,7 +91,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for BillOfLading.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -102,7 +102,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Catalogue.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -113,7 +113,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CatalogueDeletion.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -124,7 +124,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CatalogueItemSpecificationUpdate.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -135,7 +135,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CataloguePricingUpdate.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -146,7 +146,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CatalogueRequest.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -157,7 +157,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CertificateOfOrigin.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -168,7 +168,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for CreditNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -179,7 +179,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for DebitNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -190,7 +190,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for DespatchAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -201,7 +201,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for ForwardingInstructions.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -212,7 +212,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for FreightInvoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -223,7 +223,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Invoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -234,7 +234,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Order.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -245,7 +245,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for OrderCancellation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -256,7 +256,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for OrderChange.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -267,7 +267,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for OrderResponse.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -278,7 +278,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for OrderResponseSimple.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -289,7 +289,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for PackingList.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -300,7 +300,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Quotation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -311,7 +311,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for ReceiptAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -322,7 +322,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Reminder.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -333,7 +333,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for RemittanceAdvice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -344,7 +344,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for RequestForQuotation.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -355,7 +355,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for SelfBilledCreditNote.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -366,7 +366,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for SelfBilledInvoice.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -377,7 +377,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Statement.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -388,7 +388,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for TransportationStatus.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -399,7 +399,7 @@ public final class UBL20Validator
 
   /**
    * Create a validation builder for Waybill.
-   *
+   * 
    * @return The builder and never <code>null</code>
    */
   @Nonnull

@@ -84,8 +84,8 @@ public final class UBL20DocumentTypes
    * Get the document type matching the passed namespace.
    *
    * @param sNamespace
-   *          The namespace URI of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The namespace URI of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no UBL 2.0 document type matching the
    *         specified namespace URI exists.
    */
@@ -99,8 +99,8 @@ public final class UBL20DocumentTypes
    * Get the domain object class of the passed namespace.
    *
    * @param sNamespace
-   *          The namespace URI of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The namespace URI of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -115,8 +115,8 @@ public final class UBL20DocumentTypes
    * namespace.
    *
    * @param sNamespace
-   *          The namespace URI of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The namespace URI of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -130,11 +130,11 @@ public final class UBL20DocumentTypes
    * namespace.
    *
    * @param sNamespace
-   *          The namespace URI of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The namespace URI of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -160,8 +160,8 @@ public final class UBL20DocumentTypes
    * Get the document type matching the passed document element local name.
    *
    * @param sLocalName
-   *          The document element local name of any UBL 2.0 document type. May
-   *          be <code>null</code>.
+   *        The document element local name of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no UBL 2.0 document type matching the
    *         specified local name exists.
    */
@@ -175,8 +175,8 @@ public final class UBL20DocumentTypes
    * Get the domain object class of the passed document element local name.
    *
    * @param sLocalName
-   *          The document element local name of any UBL 2.0 document type. May
-   *          be <code>null</code>.
+   *        The document element local name of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no such implementation class exists.
    */
   @Nullable
@@ -190,7 +190,7 @@ public final class UBL20DocumentTypes
    * Get the UBL 2.0 document type matching the passed implementation class.
    *
    * @param aImplClass
-   *          The implementation class to use. May be <code>null</code>.
+   *        The implementation class to use. May be <code>null</code>.
    * @return <code>null</code> if the implementation class is <code>null</code>
    *         or if no UBL 2.0 document type has the specified implementation
    *         class.
@@ -210,8 +210,8 @@ public final class UBL20DocumentTypes
    * document element local name.
    *
    * @param sLocalName
-   *          The document element local name of any UBL 2.0 document type. May
-   *          be <code>null</code>.
+   *        The document element local name of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -225,11 +225,11 @@ public final class UBL20DocumentTypes
    * document element local name.
    *
    * @param sLocalName
-   *          The document element local name of any UBL 2.0 document type. May
-   *          be <code>null</code>.
+   *        The document element local name of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -245,8 +245,8 @@ public final class UBL20DocumentTypes
    * implementation class.
    *
    * @param aImplClass
-   *          The implementation class of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The implementation class of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
@@ -260,11 +260,11 @@ public final class UBL20DocumentTypes
    * implementation class.
    *
    * @param aImplClass
-   *          The implementation class of any UBL 2.0 document type. May be
-   *          <code>null</code>.
+   *        The implementation class of any UBL 2.0 document type. May be
+   *        <code>null</code>.
    * @param aClassLoader
-   *          The class loader to be used. May be <code>null</code> indicating
-   *          that the default class loader should be used.
+   *        The class loader to be used. May be <code>null</code> indicating
+   *        that the default class loader should be used.
    * @return <code>null</code> if no such UBL 2.0 document type exists.
    */
   @Nullable
