@@ -27,6 +27,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.ubl.api.IUBLDocumentType;
 
@@ -40,10 +41,10 @@ import com.helger.ubl.api.IUBLDocumentType;
 public final class UBL21DocumentTypes
 {
   /** Maps namespaces to document types */
-  private static final Map <String, EUBL21DocumentType> s_aNamespace2DocType = new HashMap <String, EUBL21DocumentType> ();
+  private static final Map <String, EUBL21DocumentType> s_aNamespace2DocType = new HashMap <> ();
 
   /** Maps local names to document types */
-  private static final Map <String, EUBL21DocumentType> s_aLocalName2DocType = new HashMap <String, EUBL21DocumentType> ();
+  private static final Map <String, EUBL21DocumentType> s_aLocalName2DocType = new HashMap <> ();
 
   static
   {
@@ -123,11 +124,10 @@ public final class UBL21DocumentTypes
   @Nullable
   public static EUBL21DocumentType getDocumentTypeOfImplementationClass (@Nullable final Class <?> aImplClass)
   {
-    if (aImplClass != null)
-      for (final EUBL21DocumentType eDocType : EUBL21DocumentType.values ())
-        if (eDocType.getImplementationClass ().equals (aImplClass))
-          return eDocType;
-    return null;
+    if (aImplClass == null)
+      return null;
+    return ArrayHelper.findFirst (EUBL21DocumentType.values (),
+                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**
