@@ -29,7 +29,6 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.ubl.api.IUBLDocumentType;
 
 /**
  * UBL document type map. Provides sanity methods for accessing UBLTR document
@@ -40,23 +39,17 @@ import com.helger.ubl.api.IUBLDocumentType;
 @Immutable
 public final class UBLTRDocumentTypes
 {
-  /** Maps namespaces to document types */
-  private static final Map <String, EUBLTRDocumentType> s_aNamespace2DocType = new HashMap <> ();
-
   /** Maps local names to document types */
   private static final Map <String, EUBLTRDocumentType> s_aLocalName2DocType = new HashMap <> ();
 
   static
   {
+    // Does not contain a namespace-to-doctype map because the namespace is not
+    // unique!
+
     // Register all UBLTR document types
     for (final EUBLTRDocumentType eDocType : EUBLTRDocumentType.values ())
     {
-      // add to namespace map
-      final String sNamespace = eDocType.getNamespaceURI ();
-      if (s_aNamespace2DocType.containsKey (sNamespace))
-        throw new IllegalArgumentException ("The namespace '" + sNamespace + "' is already mapped!");
-      s_aNamespace2DocType.put (sNamespace, eDocType);
-
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
       if (s_aLocalName2DocType.containsKey (sLocalName))
@@ -70,81 +63,6 @@ public final class UBLTRDocumentTypes
 
   private UBLTRDocumentTypes ()
   {}
-
-  /**
-   * @return A non-<code>null</code> set of all supported UBLTR namespaces.
-   */
-  @Nonnull
-  @ReturnsMutableCopy
-  public static Set <String> getAllNamespaces ()
-  {
-    return CollectionHelper.newSet (s_aNamespace2DocType.keySet ());
-  }
-
-  /**
-   * Get the document type matching the passed namespace.
-   *
-   * @param sNamespace
-   *        The namespace URI of any UBLTR document type. May be
-   *        <code>null</code>.
-   * @return <code>null</code> if no UBLTR document type matching the specified
-   *         namespace URI exists.
-   */
-  @Nullable
-  public static EUBLTRDocumentType getDocumentTypeOfNamespace (@Nullable final String sNamespace)
-  {
-    return s_aNamespace2DocType.get (sNamespace);
-  }
-
-  /**
-   * Get the domain object class of the passed namespace.
-   *
-   * @param sNamespace
-   *        The namespace URI of any UBLTR document type. May be
-   *        <code>null</code>.
-   * @return <code>null</code> if no such UBLTR document type exists.
-   */
-  @Nullable
-  public static Class <?> getImplementationClassOfNamespace (@Nullable final String sNamespace)
-  {
-    final IUBLDocumentType eDocType = getDocumentTypeOfNamespace (sNamespace);
-    return eDocType == null ? null : eDocType.getImplementationClass ();
-  }
-
-  /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
-   * namespace.
-   *
-   * @param sNamespace
-   *        The namespace URI of any UBLTR document type. May be
-   *        <code>null</code>.
-   * @return <code>null</code> if no such UBLTR document type exists.
-   */
-  @Nullable
-  public static Schema getSchemaOfNamespace (@Nullable final String sNamespace)
-  {
-    return getSchemaOfNamespace (sNamespace, (ClassLoader) null);
-  }
-
-  /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
-   * namespace.
-   *
-   * @param sNamespace
-   *        The namespace URI of any UBLTR document type. May be
-   *        <code>null</code>.
-   * @param aClassLoader
-   *        The class loader to be used. May be <code>null</code> indicating
-   *        that the default class loader should be used.
-   * @return <code>null</code> if no such UBLTR document type exists.
-   */
-  @Nullable
-  public static Schema getSchemaOfNamespace (@Nullable final String sNamespace,
-                                             @Nullable final ClassLoader aClassLoader)
-  {
-    final EUBLTRDocumentType eDocType = getDocumentTypeOfNamespace (sNamespace);
-    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
-  }
 
   /**
    * @return A non-<code>null</code> set of all supported UBLTR document element

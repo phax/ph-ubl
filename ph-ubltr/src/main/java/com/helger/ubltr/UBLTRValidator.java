@@ -44,7 +44,7 @@ public final class UBLTRValidator
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static UBLTRValidatorBuilder <CancelUserAccountType> cancelUserAcount ()
+  public static UBLTRValidatorBuilder <CancelUserAccountType> cancelUserAccount ()
   {
     return UBLTRValidatorBuilder.create (CancelUserAccountType.class);
   }
@@ -55,7 +55,7 @@ public final class UBLTRValidator
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static UBLTRValidatorBuilder <ProcessUserAccountType> processUserAcount ()
+  public static UBLTRValidatorBuilder <ProcessUserAccountType> processUserAccount ()
   {
     return UBLTRValidatorBuilder.create (ProcessUserAccountType.class);
   }

@@ -95,7 +95,7 @@
           <instructions>
             <Export-Package>
               com.helger.ubltr.*,
-              org.openapplications.oagis._9,
+              org.openapplications.oagis._9.*,
               tr.gov.efatura.*
             </Export-Package>
             <Import-Package>
