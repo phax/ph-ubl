@@ -91,7 +91,7 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  default List <? extends IReadableResource> getAllXSDResources ()
+  default List <IReadableResource> getAllXSDResources ()
   {
     return CollectionHelper.newList (getAllXSDPaths (), s -> new ClassPathResource (s));
   }
@@ -106,7 +106,7 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  default List <? extends IReadableResource> getAllXSDResources (@Nullable final ClassLoader aClassLoader)
+  default List <IReadableResource> getAllXSDResources (@Nullable final ClassLoader aClassLoader)
   {
     return CollectionHelper.newList (getAllXSDPaths (), s -> new ClassPathResource (s, aClassLoader));
   }

@@ -138,7 +138,7 @@ public class UBLDocumentType implements IUBLDocumentType
     if (m_aSchema == null)
     {
       // Lazy initialization
-      final List <? extends IReadableResource> aXSDRes = getAllXSDResources (aClassLoader);
+      final List <IReadableResource> aXSDRes = getAllXSDResources (aClassLoader);
       m_aSchema = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
       if (m_aSchema == null)
         throw new IllegalStateException ("Failed to create Schema from " +
