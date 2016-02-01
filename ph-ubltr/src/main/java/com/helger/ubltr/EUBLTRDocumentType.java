@@ -29,6 +29,7 @@ import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.UBLDocumentType;
 import com.helger.ubl21.CUBL21;
 
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -42,7 +43,8 @@ public enum EUBLTRDocumentType implements IUBLDocumentType
   CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
                                                                             "HRXML/UserAccount.xsd"),
   PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
-                                                                              "HRXML/UserAccount.xsd");
+                                                                              "HRXML/UserAccount.xsd"),
+  PACKAGE (PackageType.class, CUBLTR.SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd");
 
   private final UBLDocumentType m_aDocType;
 

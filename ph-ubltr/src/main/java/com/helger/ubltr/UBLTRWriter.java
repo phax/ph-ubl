@@ -21,6 +21,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -58,5 +59,17 @@ public final class UBLTRWriter
   public static UBLTRWriterBuilder <ProcessUserAccountType> processUserAccount ()
   {
     return UBLTRWriterBuilder.create (ProcessUserAccountType.class);
+  }
+
+  /**
+   * Create a writer builder for PackageType.<br>
+   * Note: "package" is a reserved word.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBLTRWriterBuilder <PackageType> _package ()
+  {
+    return UBLTRWriterBuilder.create (PackageType.class);
   }
 }

@@ -21,6 +21,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -58,5 +59,17 @@ public final class UBLTRValidator
   public static UBLTRValidatorBuilder <ProcessUserAccountType> processUserAccount ()
   {
     return UBLTRValidatorBuilder.create (ProcessUserAccountType.class);
+  }
+
+  /**
+   * Create a validation builder for PackageType.<br>
+   * Note: "package" is a reserved word.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBLTRValidatorBuilder <PackageType> _package ()
+  {
+    return UBLTRValidatorBuilder.create (PackageType.class);
   }
 }

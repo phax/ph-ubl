@@ -29,7 +29,8 @@ public class UBLTRNamespaceContext extends UBL21NamespaceContext
   public UBLTRNamespaceContext ()
   {
     addMapping ("sh", CSBDH.SBDH_NS);
-    addMapping ("ef", "http://www.efatura.gov.tr/package-namespace");
-    addMapping ("oa", "http://www.openapplications.org/oagis/9");
+    addMapping ("ef", CUBLTR.XML_NS_EFATURA);
+    addMapping ("hr", CUBLTR.XML_NS_HRXML);
+    addMapping ("oa", CUBLTR.XML_NS_OAGIS);
   }
 }

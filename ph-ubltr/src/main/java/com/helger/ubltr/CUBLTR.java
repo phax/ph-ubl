@@ -31,6 +31,10 @@ public final class CUBLTR
   /** The classpath relative directory where the main XSDs reside */
   public static final String SCHEMA_DIRECTORY = "schemas/ubltr/";
 
+  public static final String XML_NS_EFATURA = "http://www.efatura.gov.tr/package-namespace";
+  public static final String XML_NS_HRXML = "http://www.hr-xml.org/3";
+  public static final String XML_NS_OAGIS = "http://www.openapplications.org/oagis/9";
+
   @PresentForCodeCoverage
   private static final CUBLTR s_aInstance = new CUBLTR ();
 
