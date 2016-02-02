@@ -26,14 +26,10 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
-import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
-import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
-import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
+import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemRecursiveIterator;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
@@ -57,6 +53,10 @@ import com.helger.jcodemodel.JMod;
 import com.helger.jcodemodel.JOp;
 import com.helger.jcodemodel.JVar;
 
+import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
+import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
+import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
+
 /**
  * Utility class to create:
  * <ul>
@@ -78,7 +78,8 @@ public final class MainCreateEnumsGenericode20
     return sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
   }
 
-  private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList) throws JClassAlreadyExistsException
+  private static void _createGenericode04 (@Nonnull final File aFile,
+                                           @Nonnull final CodeListDocument aCodeList) throws JClassAlreadyExistsException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
     {
@@ -179,9 +180,11 @@ public final class MainCreateEnumsGenericode20
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE |
+                                                                 JMod.FINAL,
                                                                  String.class,
-                                                                 "m_sDisplayName") : null;
+                                                                 "m_sDisplayName")
+                                                  : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.PRIVATE);
@@ -246,8 +249,10 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ()
-                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ().decl (JMod.FINAL,
+                                          jEnum,
+                                          "eValue",
+                                          jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
 
@@ -265,16 +270,16 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
-      m.body ()._return (JOp.cond (jID.eq (JExpr._null ()),
-                                   JExpr._null (),
-                                   jEnum.staticInvoke ("getDisplayNameFromIDOrNull").arg (jID.invoke ("value"))));
+      m.body ()
+       ._return (JOp.cond (jID.eq (JExpr._null ()),
+                           JExpr._null (),
+                           jEnum.staticInvoke ("getDisplayNameFromIDOrNull").arg (jID.invoke ("value"))));
     }
   }
 
   public static void main (final String [] args) throws JClassAlreadyExistsException, IOException
   {
-    for (final File aFile : FileSystemRecursiveIterator.create (new File ("src/main/resources/codelists"),
-                                                                new FileFilterFilenameEndsWith (".gc")))
+    for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))
     {
       System.out.println (aFile.getName ());
       final CodeListDocument aCodeList04 = new Genericode04CodeListMarshaller ().read (aFile);

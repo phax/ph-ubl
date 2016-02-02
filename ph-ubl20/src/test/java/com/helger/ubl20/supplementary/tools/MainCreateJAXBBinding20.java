@@ -34,7 +34,7 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.io.file.FileHelper;
-import com.helger.commons.io.file.filter.FileFilterFilenameEndsWith;
+import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.commons.microdom.IMicroDocument;
@@ -83,7 +83,7 @@ public final class MainCreateJAXBBinding20
   @Nonnull
   private static Iterable <File> _getFileList (final String sPath)
   {
-    return CollectionHelper.getSorted (FileSystemIterator.create (sPath, new FileFilterFilenameEndsWith (".xsd")),
+    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd")),
                                        Comparator.comparing (File::getName));
   }
 
