@@ -40,14 +40,14 @@ public final class MockUBLTRTestDocuments
     switch (eType)
     {
       case CANCEL_USER_ACCOUNT:
-        aFiles = CollectionHelper.newUnmodifiableList (PREFIX +
-                                                       "tr_useraccount/5_KULLANICI_SILME.xml",
-                                                       PREFIX + "tr_useraccount/9_FATURA_SAKLAMA_KULLANICI_SILME.xml");
+        aFiles = CollectionHelper.makeUnmodifiable (PREFIX +
+                                                    "tr_useraccount/5_KULLANICI_SILME.xml",
+                                                    PREFIX + "tr_useraccount/9_FATURA_SAKLAMA_KULLANICI_SILME.xml");
         break;
       case PROCESS_USER_ACCOUNT:
-        aFiles = CollectionHelper.newUnmodifiableList (PREFIX +
-                                                       "tr_useraccount/4_KULLANICI_ACMA.xml",
-                                                       PREFIX + "tr_useraccount/8_FATURA_SAKLAMA_KULLANICI_ACMA.xml");
+        aFiles = CollectionHelper.makeUnmodifiable (PREFIX +
+                                                    "tr_useraccount/4_KULLANICI_ACMA.xml",
+                                                    PREFIX + "tr_useraccount/8_FATURA_SAKLAMA_KULLANICI_ACMA.xml");
         break;
       default:
         throw new IllegalArgumentException ("No test files available for type " + eType);

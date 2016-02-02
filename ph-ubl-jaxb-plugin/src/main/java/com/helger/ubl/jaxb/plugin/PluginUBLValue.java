@@ -66,13 +66,15 @@ public class PluginUBLValue extends Plugin
   @Override
   public String getUsage ()
   {
-    return "  -" + OPT + "    :  create additional constructors with the 'value' as argument + getter and setter for the value";
+    return "  -" +
+           OPT +
+           "    :  create additional constructors with the 'value' as argument + getter and setter for the value";
   }
 
   @Override
   public List <String> getCustomizationURIs ()
   {
-    return CollectionHelper.newUnmodifiableList (CUBLJAXB.NSURI_PH_UBL);
+    return CollectionHelper.makeUnmodifiable (CUBLJAXB.NSURI_PH_UBL);
   }
 
   private void _recursiveAddValueConstructorToDerivedClasses (@Nonnull final Outline aOutline,
@@ -91,8 +93,11 @@ public class PluginUBLValue extends Plugin
         if (!aValueType.isPrimitive ())
           aParam.annotate (Nullable.class);
         aValueCtor.body ().invoke ("super").arg (aParam);
-        aValueCtor.javadoc ().add ("Constructor for value of type " + aValueType.name () + " calling super class constructor.");
-        aValueCtor.javadoc ().addParam (aParam).add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
+        aValueCtor.javadoc ()
+                  .add ("Constructor for value of type " + aValueType.name () + " calling super class constructor.");
+        aValueCtor.javadoc ()
+                  .addParam (aParam)
+                  .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set in all derived classes
@@ -120,15 +125,21 @@ public class PluginUBLValue extends Plugin
             final JVar aParam = aSetter.param (JMod.FINAL, aValueType, "valueParam");
             if (!aValueType.isPrimitive ())
               aParam.annotate (Nullable.class);
-            final JVar aObj = aSetter.body ().decl (aImplType, "aObj", JExpr.invoke ("get" + aMethod.name ().substring (3)));
+            final JVar aObj = aSetter.body ().decl (aImplType,
+                                                    "aObj",
+                                                    JExpr.invoke ("get" + aMethod.name ().substring (3)));
             final JConditional aIf = aSetter.body ()._if (aObj.eq (JExpr._null ()));
             aIf._then ().assign (aObj, JExpr._new (aImplType).arg (aParam));
             aIf._then ().invoke (aMethod).arg (aObj);
             aIf._else ().invoke (aObj, "setValue").arg (aParam);
             aSetter.body ()._return (aObj);
             aSetter.javadoc ().add ("Special setter with value of type " + aParam.type ().name ());
-            aSetter.javadoc ().addParam (aParam).add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
-            aSetter.javadoc ().addReturn ().add ("The created intermediary object of type " + aImplType.name () + " and never <code>null</code>");
+            aSetter.javadoc ()
+                   .addParam (aParam)
+                   .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
+            aSetter.javadoc ().addReturn ().add ("The created intermediary object of type " +
+                                                 aImplType.name () +
+                                                 " and never <code>null</code>");
             aSetter.javadoc ().add (AUTHOR);
           }
         }
@@ -143,7 +154,8 @@ public class PluginUBLValue extends Plugin
    * @param aAllCtorClasses
    *        Map from class with value (direct and derived) to value type
    */
-  private void _addValueGetter (@Nonnull final Outline aOutline, @Nonnull final Map <JDefinedClass, JType> aAllCtorClasses)
+  private void _addValueGetter (@Nonnull final Outline aOutline,
+                                @Nonnull final Map <JDefinedClass, JType> aAllCtorClasses)
   {
     final JCodeModel aCodeModel = aOutline.getCodeModel ();
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
@@ -180,10 +192,13 @@ public class PluginUBLValue extends Plugin
 
               // Javadoc
               aGetter.javadoc ().add ("Get the value of the contained " + aReturnType.name () + " object");
-              aGetter.javadoc ().addParam (aParam).add ("The value to be returned, if the owning object is <code>null</code>");
               aGetter.javadoc ()
-                     .addReturn ()
-                     .add ("Either the value of the contained " + aReturnType.name () + " object or the passed " + aParam.name ());
+                     .addParam (aParam)
+                     .add ("The value to be returned, if the owning object is <code>null</code>");
+              aGetter.javadoc ().addReturn ().add ("Either the value of the contained " +
+                                                   aReturnType.name () +
+                                                   " object or the passed " +
+                                                   aParam.name ());
               aGetter.javadoc ().add (AUTHOR);
             }
             else
@@ -194,7 +209,9 @@ public class PluginUBLValue extends Plugin
               final JVar aObj = aGetter.body ().decl (aReturnType, "aObj", JExpr.invoke (aMethod));
               aGetter.body ()._return (JOp.cond (aObj.eq (JExpr._null ()), JExpr._null (), aObj.invoke ("getValue")));
               aGetter.javadoc ().add ("Get the value of the contained " + aReturnType.name () + " object");
-              aGetter.javadoc ().addReturn ().add ("Either the value of the contained " + aReturnType.name () + " object or <code>null</code>");
+              aGetter.javadoc ()
+                     .addReturn ()
+                     .add ("Either the value of the contained " + aReturnType.name () + " object or <code>null</code>");
               aGetter.javadoc ().add (AUTHOR);
             }
           }
@@ -214,7 +231,9 @@ public class PluginUBLValue extends Plugin
    *        Error handler
    */
   @Override
-  public boolean run (@Nonnull final Outline aOutline, @Nonnull final Options aOpts, @Nonnull final ErrorHandler aErrorHandler)
+  public boolean run (@Nonnull final Outline aOutline,
+                      @Nonnull final Options aOpts,
+                      @Nonnull final ErrorHandler aErrorHandler)
   {
     final Map <JDefinedClass, JType> aAllCtorClasses = new HashMap <JDefinedClass, JType> ();
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
@@ -245,7 +264,9 @@ public class PluginUBLValue extends Plugin
           aParam.annotate (Nullable.class);
         aValueCtor.body ().invoke ("setValue").arg (aParam);
         aValueCtor.javadoc ().add ("Constructor for value of type " + aValueType.name ());
-        aValueCtor.javadoc ().addParam (aParam).add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
+        aValueCtor.javadoc ()
+                  .addParam (aParam)
+                  .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set constructor in all derived classes
