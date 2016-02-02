@@ -22,6 +22,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.string.ToStringGenerator;
+import com.helger.commons.traits.IGenericImplTrait;
 import com.helger.ubl.api.IUBLDocumentType;
 
 /**
@@ -33,6 +34,7 @@ import com.helger.ubl.api.IUBLDocumentType;
  */
 @NotThreadSafe
 public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <IMPLTYPE>>
+                                         implements IGenericImplTrait <IMPLTYPE>
 {
   protected final IUBLDocumentType m_aDocType;
   protected ClassLoader m_aClassLoader;
@@ -50,13 +52,6 @@ public abstract class AbstractUBLBuilder <IMPLTYPE extends AbstractUBLBuilder <I
   public IUBLDocumentType getUBLDocumentType ()
   {
     return m_aDocType;
-  }
-
-  @SuppressWarnings ("unchecked")
-  @Nonnull
-  protected final IMPLTYPE thisAsT ()
-  {
-    return (IMPLTYPE) this;
   }
 
   /**
