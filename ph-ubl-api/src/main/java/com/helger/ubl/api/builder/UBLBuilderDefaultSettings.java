@@ -49,9 +49,7 @@ public final class UBLBuilderDefaultSettings
    */
   public static void setDefaultValidationEventHandler (@Nullable final ValidationEventHandler aEventHandler)
   {
-    s_aRWLock.writeLocked ( () -> {
-      s_aEventHandler = aEventHandler;
-    });
+    s_aRWLock.writeLocked ( () -> s_aEventHandler = aEventHandler);
   }
 
   /**
@@ -75,9 +73,7 @@ public final class UBLBuilderDefaultSettings
    */
   public static void setDefaultNamespaceContext (@Nullable final NamespaceContext aNamespaceContext)
   {
-    s_aRWLock.writeLocked ( () -> {
-      s_aNamespaceContext = aNamespaceContext;
-    });
+    s_aRWLock.writeLocked ( () -> s_aNamespaceContext = aNamespaceContext);
   }
 
   /**
