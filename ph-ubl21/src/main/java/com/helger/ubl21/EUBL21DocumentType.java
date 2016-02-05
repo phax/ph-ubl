@@ -25,6 +25,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.UBLDocumentType;
 
@@ -105,7 +106,7 @@ public enum EUBL21DocumentType implements IUBLDocumentType
 
   private EUBL21DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    m_aDocType = new UBLDocumentType (aClass, CUBL21.SCHEMA_DIRECTORY + sXSDPath);
+    m_aDocType = new UBLDocumentType (aClass, CollectionHelper.newList (CUBL21.SCHEMA_DIRECTORY + sXSDPath));
   }
 
   @Nonnull

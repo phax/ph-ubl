@@ -16,9 +16,15 @@
  */
 package com.helger.ubltr;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.collection.CollectionHelper;
+import com.helger.ubl21.CUBL21;
+import com.helger.ubl21.EUBL21DocumentType;
 
 /**
  * Constants for UBLTR handling.
@@ -34,6 +40,23 @@ public final class CUBLTR
   public static final String XML_NS_EFATURA = "http://www.efatura.gov.tr/package-namespace";
   public static final String XML_NS_HRXML = "http://www.hr-xml.org/3";
   public static final String XML_NS_OAGIS = "http://www.openapplications.org/oagis/9";
+
+  /** List of all XSDs required for using the HRXML UserAccount type */
+  public static final List <String> XSD_HRXML_USER_ACCOUNT = CollectionHelper.makeUnmodifiable (CUBL21.XSD_UBL_XMLDSIG,
+                                                                                                SCHEMA_DIRECTORY +
+                                                                                                                        "HRXML/UserAccount.xsd");
+
+  /** List of all XSDs required for using the ULBTR Package type */
+  public static final List <String> XSD_PACKAGE;
+
+  static
+  {
+    final List <String> aPackage = new ArrayList <> ();
+    aPackage.addAll (EUBL21DocumentType.INVOICE.getAllXSDPaths ());
+    aPackage.addAll (EUBL21DocumentType.APPLICATION_RESPONSE.getAllXSDPaths ());
+    aPackage.add (SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd");
+    XSD_PACKAGE = CollectionHelper.makeUnmodifiable (aPackage);
+  }
 
   @PresentForCodeCoverage
   private static final CUBLTR s_aInstance = new CUBLTR ();

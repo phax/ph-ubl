@@ -56,9 +56,10 @@ public class UBLDocumentType implements IUBLDocumentType
    * @param aClass
    *        The JAXB generated class of the root element.
    * @param sXSDPaths
-   *        The classpath relative paths to the XML Schema.
+   *        The classpath relative paths to the XML Schema. May neither be
+   *        <code>null</code> nor empty.
    */
-  public UBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final String... aXSDPaths)
+  public UBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
     ValueEnforcer.notNull (aClass, "Class");
     ValueEnforcer.notEmptyNoNullValue (aXSDPaths, "XSDPaths");

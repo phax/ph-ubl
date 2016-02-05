@@ -27,7 +27,6 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.UBLDocumentType;
-import com.helger.ubl21.CUBL21;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
@@ -40,15 +39,13 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  */
 public enum EUBLTRDocumentType implements IUBLDocumentType
 {
-  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
-                                                                            "HRXML/UserAccount.xsd"),
-  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBL21.XSD_UBL_XMLDSIG, CUBLTR.SCHEMA_DIRECTORY +
-                                                                              "HRXML/UserAccount.xsd"),
-  PACKAGE (PackageType.class, CUBLTR.SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd");
+  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
+  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
+  PACKAGE (PackageType.class, CUBLTR.XSD_PACKAGE);
 
   private final UBLDocumentType m_aDocType;
 
-  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String... aXSDPaths)
+  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
     m_aDocType = new UBLDocumentType (aClass, aXSDPaths);
   }
