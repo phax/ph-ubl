@@ -133,19 +133,32 @@ public class UBLDocumentType implements IUBLDocumentType
   }
 
   @Nonnull
+  private Schema _createSchema (@Nullable final ClassLoader aClassLoader)
+  {
+    final List <? extends IReadableResource> aXSDRes = getAllXSDResources (aClassLoader);
+    final Schema ret = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
+    if (ret == null)
+      throw new IllegalStateException ("Failed to create Schema from " +
+                                       aXSDRes +
+                                       " using class loader " +
+                                       aClassLoader);
+    return ret;
+  }
+
+  @Nonnull
   @SuppressFBWarnings ("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")
   public Schema getSchema (@Nullable final ClassLoader aClassLoader)
   {
+    if (aClassLoader != null)
+    {
+      // Don't cache if a class loader is provided
+      return _createSchema (aClassLoader);
+    }
+
     if (m_aSchema == null)
     {
-      // Lazy initialization
-      final List <? extends IReadableResource> aXSDRes = getAllXSDResources (aClassLoader);
-      m_aSchema = XMLSchemaCache.getInstanceOfClassLoader (aClassLoader).getSchema (aXSDRes);
-      if (m_aSchema == null)
-        throw new IllegalStateException ("Failed to create Schema from " +
-                                         aXSDRes +
-                                         " using class loader " +
-                                         aClassLoader);
+      // Lazy initialization if no class loader is present
+      m_aSchema = _createSchema (aClassLoader);
     }
     return m_aSchema;
   }

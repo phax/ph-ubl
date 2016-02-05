@@ -173,5 +173,4 @@ public interface IUBLDocumentType extends IHasSchema, Serializable
   {
     return XMLSchemaValidationHelper.validate (getSchema (aClassLoader), aXML);
   }
-
 }
