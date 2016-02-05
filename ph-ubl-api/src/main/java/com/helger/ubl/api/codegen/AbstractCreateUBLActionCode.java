@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 
 import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
-import com.helger.ubl.api.IUBLDocumentType;
+import com.helger.jaxb.builder.IJAXBDocumentType;
 
 /**
  * Base class for internal code generation. You should not care too much about
@@ -37,7 +37,7 @@ public abstract class AbstractCreateUBLActionCode
     VALIDATE;
   }
 
-  protected static void append (@Nonnull final IUBLDocumentType e,
+  protected static void append (@Nonnull final IJAXBDocumentType e,
                                 @Nonnull final EPhase ePhase,
                                 @Nonnull final StringBuilder aSB,
                                 @Nonnull final String sBuilderClass)

@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
+import com.helger.jaxb.builder.AbstractJAXBWriterBuilder;
 
 /**
  * A writer builder for UBLTR documents.
@@ -30,7 +30,7 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRWriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBLTRWriterBuilder <T>>
+public class UBLTRWriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBLTRWriterBuilder <T>>
 {
   public UBLTRWriterBuilder (@Nonnull final EUBLTRDocumentType eDocType)
   {

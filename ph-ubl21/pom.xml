@@ -60,12 +60,17 @@
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
-      <artifactId>ph-ubl-api</artifactId>
+      <artifactId>ph-jaxb</artifactId>
     </dependency>
     
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-ubl-api</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

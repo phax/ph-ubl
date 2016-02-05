@@ -25,8 +25,8 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.ubl.api.IUBLDocumentType;
-import com.helger.ubl.api.UBLDocumentType;
+import com.helger.jaxb.builder.IJAXBDocumentType;
+import com.helger.jaxb.builder.JAXBDocumentType;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
@@ -37,17 +37,17 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  *
  * @author Philip Helger
  */
-public enum EUBLTRDocumentType implements IUBLDocumentType
+public enum EUBLTRDocumentType implements IJAXBDocumentType
 {
   CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
   PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
   PACKAGE (PackageType.class, CUBLTR.XSD_PACKAGE);
 
-  private final UBLDocumentType m_aDocType;
+  private final JAXBDocumentType m_aDocType;
 
   private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
-    m_aDocType = new UBLDocumentType (aClass, aXSDPaths);
+    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths);
   }
 
   @Nonnull

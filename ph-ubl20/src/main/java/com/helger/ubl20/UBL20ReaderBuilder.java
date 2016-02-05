@@ -19,7 +19,7 @@ package com.helger.ubl20;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
-import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
+import com.helger.jaxb.builder.AbstractJAXBReaderBuilder;
 
 /**
  * A reader builder for UBL 2.0 documents.
@@ -29,7 +29,7 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
  *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
-public class UBL20ReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBL20ReaderBuilder <T>>
+public class UBL20ReaderBuilder <T> extends AbstractJAXBReaderBuilder <T, UBL20ReaderBuilder <T>>
 {
   public UBL20ReaderBuilder (@Nonnull final EUBL20DocumentType eDocType, @Nonnull final Class <T> aImplClass)
   {

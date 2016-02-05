@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
+import com.helger.jaxb.builder.AbstractJAXBWriterBuilder;
 
 /**
  * A writer builder for UBL 2.1 documents.
@@ -30,7 +30,7 @@ import com.helger.ubl.api.builder.AbstractUBLWriterBuilder;
  *        The UBL 2.1 implementation class to be read
  */
 @NotThreadSafe
-public class UBL21WriterBuilder <T> extends AbstractUBLWriterBuilder <T, UBL21WriterBuilder <T>>
+public class UBL21WriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBL21WriterBuilder <T>>
 {
   public UBL21WriterBuilder (@Nonnull final EUBL21DocumentType eDocType)
   {

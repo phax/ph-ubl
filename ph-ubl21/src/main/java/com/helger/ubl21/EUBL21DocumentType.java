@@ -26,15 +26,15 @@ import javax.xml.validation.Schema;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.ubl.api.IUBLDocumentType;
-import com.helger.ubl.api.UBLDocumentType;
+import com.helger.jaxb.builder.IJAXBDocumentType;
+import com.helger.jaxb.builder.JAXBDocumentType;
 
 /**
  * Enumeration with all available UBL 2.1 document types.
  *
  * @author Philip Helger
  */
-public enum EUBL21DocumentType implements IUBLDocumentType
+public enum EUBL21DocumentType implements IJAXBDocumentType
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType.class, "UBL-ApplicationResponse-2.1.xsd"),
   ATTACHED_DOCUMENT (oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType.class, "UBL-AttachedDocument-2.1.xsd"),
@@ -102,11 +102,11 @@ public enum EUBL21DocumentType implements IUBLDocumentType
   UTILITY_STATEMENT (oasis.names.specification.ubl.schema.xsd.utilitystatement_21.UtilityStatementType.class, "UBL-UtilityStatement-2.1.xsd"),
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType.class, "UBL-Waybill-2.1.xsd");
 
-  private final UBLDocumentType m_aDocType;
+  private final JAXBDocumentType m_aDocType;
 
   private EUBL21DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    m_aDocType = new UBLDocumentType (aClass, CollectionHelper.newList (CUBL21.SCHEMA_DIRECTORY + sXSDPath));
+    m_aDocType = new JAXBDocumentType (aClass, CollectionHelper.newList (CUBL21.SCHEMA_DIRECTORY + sXSDPath));
   }
 
   @Nonnull

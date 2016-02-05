@@ -19,7 +19,7 @@ package com.helger.ubltr;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
-import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
+import com.helger.jaxb.builder.AbstractJAXBValidationBuilder;
 
 /**
  * A writer builder for UBLTR documents.
@@ -29,7 +29,7 @@ import com.helger.ubl.api.builder.AbstractUBLValidationBuilder;
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRValidatorBuilder <T> extends AbstractUBLValidationBuilder <T, UBLTRValidatorBuilder <T>>
+public class UBLTRValidatorBuilder <T> extends AbstractJAXBValidationBuilder <T, UBLTRValidatorBuilder <T>>
 {
   public UBLTRValidatorBuilder (@Nonnull final EUBLTRDocumentType eDocType)
   {

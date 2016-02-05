@@ -29,7 +29,6 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.ubl.api.IUBLDocumentType;
 
 /**
  * UBL document type map. Provides sanity methods for accessing UBL 2.1 document
@@ -108,7 +107,7 @@ public final class UBL21DocumentTypes
   @Nullable
   public static Class <?> getImplementationClassOfNamespace (@Nullable final String sNamespace)
   {
-    final IUBLDocumentType eDocType = getDocumentTypeOfNamespace (sNamespace);
+    final EUBL21DocumentType eDocType = getDocumentTypeOfNamespace (sNamespace);
     return eDocType == null ? null : eDocType.getImplementationClass ();
   }
 
@@ -202,7 +201,7 @@ public final class UBL21DocumentTypes
   @Nullable
   public static Class <?> getImplementationClassOfLocalName (@Nullable final String sLocalName)
   {
-    final IUBLDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
+    final EUBL21DocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
     return eDocType == null ? null : eDocType.getImplementationClass ();
   }
 
