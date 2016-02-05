@@ -37,7 +37,7 @@ import com.helger.commons.xml.schema.XMLSchemaCache;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
- * Standalone implementation of {@link IUBLDocumentType}
+ * Stand alone implementation of {@link IUBLDocumentType}
  *
  * @author Philip Helger
  */
@@ -55,7 +55,7 @@ public class UBLDocumentType implements IUBLDocumentType
    *
    * @param aClass
    *        The JAXB generated class of the root element.
-   * @param sXSDPaths
+   * @param aXSDPaths
    *        The classpath relative paths to the XML Schema. May neither be
    *        <code>null</code> nor empty.
    */

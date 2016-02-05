@@ -19,6 +19,7 @@ package com.helger.ubltr;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
+import com.helger.ubl.api.IUBLDocumentType;
 import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 
 /**
@@ -31,9 +32,9 @@ import com.helger.ubl.api.builder.AbstractUBLReaderBuilder;
 @NotThreadSafe
 public class UBLTRReaderBuilder <T> extends AbstractUBLReaderBuilder <T, UBLTRReaderBuilder <T>>
 {
-  public UBLTRReaderBuilder (@Nonnull final EUBLTRDocumentType eDocType, @Nonnull final Class <T> aImplClass)
+  public UBLTRReaderBuilder (@Nonnull final IUBLDocumentType aDocType, @Nonnull final Class <T> aImplClass)
   {
-    super (eDocType, aImplClass);
+    super (aDocType, aImplClass);
   }
 
   public UBLTRReaderBuilder (@Nonnull final Class <T> aClass)
