@@ -59,7 +59,7 @@ public final class UBLTRFuncTest
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLTRWriter.cancelUserAccount ().writeToDocument (aUBLObject);
+      final Document aDoc2 = UBLTRWriter.cancelUserAccount ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
@@ -99,7 +99,7 @@ public final class UBLTRFuncTest
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLTRWriter.processUserAccount ().writeToDocument (aUBLObject);
+      final Document aDoc2 = UBLTRWriter.processUserAccount ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());

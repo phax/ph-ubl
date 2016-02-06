@@ -73,7 +73,7 @@ public final class UBL20BuilderFuncTest
     assertEquals (aREG1, aREG2);
 
     // Write
-    final String s = aWriter.writeToString (aRead1);
+    final String s = aWriter.getAsString (aRead1);
     System.out.println (s);
   }
 }
