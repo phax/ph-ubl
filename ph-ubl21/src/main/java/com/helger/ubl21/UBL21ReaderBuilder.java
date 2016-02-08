@@ -19,24 +19,24 @@ package com.helger.ubl21;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
-import com.helger.jaxb.builder.AbstractJAXBReaderBuilder;
+import com.helger.jaxb.builder.JAXBReaderBuilder;
 
 /**
  * A reader builder for UBL 2.1 documents.
  *
  * @author Philip Helger
- * @param <T>
+ * @param <JAXBTYPE>
  *        The UBL 2.1 implementation class to be read
  */
 @NotThreadSafe
-public class UBL21ReaderBuilder <T> extends AbstractJAXBReaderBuilder <T, UBL21ReaderBuilder <T>>
+public class UBL21ReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBL21ReaderBuilder <JAXBTYPE>>
 {
-  public UBL21ReaderBuilder (@Nonnull final EUBL21DocumentType eDocType, @Nonnull final Class <T> aImplClass)
+  public UBL21ReaderBuilder (@Nonnull final EUBL21DocumentType eDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
   {
     super (eDocType, aImplClass);
   }
 
-  public UBL21ReaderBuilder (@Nonnull final Class <T> aClass)
+  public UBL21ReaderBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBL21DocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
   }

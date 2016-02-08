@@ -25,6 +25,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
 
@@ -47,7 +48,7 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
 
   private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths);
+    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }
 
   @Nonnull

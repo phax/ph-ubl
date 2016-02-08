@@ -20,17 +20,17 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.jaxb.builder.AbstractJAXBWriterBuilder;
+import com.helger.jaxb.builder.JAXBWriterBuilder;
 
 /**
  * A writer builder for UBLTR documents.
  *
  * @author Philip Helger
- * @param <T>
+ * @param <JAXBTYPE>
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRWriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBLTRWriterBuilder <T>>
+public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLTRWriterBuilder <JAXBTYPE>>
 {
   public UBLTRWriterBuilder (@Nonnull final EUBLTRDocumentType eDocType)
   {
@@ -43,7 +43,7 @@ public class UBLTRWriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBLTRW
     setNamespaceContext (aNSContext);
   }
 
-  public UBLTRWriterBuilder (@Nonnull final Class <T> aClass)
+  public UBLTRWriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }

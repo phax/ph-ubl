@@ -19,15 +19,11 @@ package com.helger.ubltr;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import javax.annotation.Nonnull;
-import javax.xml.bind.Marshaller;
-
 import org.junit.Test;
 
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
-import com.helger.jaxb.JAXBMarshallerHelper;
 
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 
@@ -44,14 +40,7 @@ public final class UBLTRBuilderFuncTest
   {
     final UBLTRReaderBuilder <CancelUserAccountType> aReader = UBLTRReaderBuilder.create (CancelUserAccountType.class);
     final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = UBLTRValidatorBuilder.create (CancelUserAccountType.class);
-    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder <CancelUserAccountType> (CancelUserAccountType.class)
-    {
-      @Override
-      protected void customizeMarshaller (@Nonnull final Marshaller aMarshaller)
-      {
-        JAXBMarshallerHelper.setFormattedOutput (aMarshaller, true);
-      }
-    };
+    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder <CancelUserAccountType> (CancelUserAccountType.class).setFormattedOutput (true);
 
     final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
                                                    .get (0);

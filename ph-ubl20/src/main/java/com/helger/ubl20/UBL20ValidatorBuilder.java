@@ -19,24 +19,24 @@ package com.helger.ubl20;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
-import com.helger.jaxb.builder.AbstractJAXBValidationBuilder;
+import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
  * A writer builder for UBL 2.0 documents.
  *
  * @author Philip Helger
- * @param <T>
+ * @param <JAXBTYPE>
  *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
-public class UBL20ValidatorBuilder <T> extends AbstractJAXBValidationBuilder <T, UBL20ValidatorBuilder <T>>
+public class UBL20ValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBL20ValidatorBuilder <JAXBTYPE>>
 {
   public UBL20ValidatorBuilder (@Nonnull final EUBL20DocumentType eDocType)
   {
     super (eDocType);
   }
 
-  public UBL20ValidatorBuilder (@Nonnull final Class <T> aClass)
+  public UBL20ValidatorBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }

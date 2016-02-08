@@ -20,17 +20,17 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.jaxb.builder.AbstractJAXBWriterBuilder;
+import com.helger.jaxb.builder.JAXBWriterBuilder;
 
 /**
  * A writer builder for UBL 2.0 documents.
  *
  * @author Philip Helger
- * @param <T>
+ * @param <JAXBTYPE>
  *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
-public class UBL20WriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBL20WriterBuilder <T>>
+public class UBL20WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBL20WriterBuilder <JAXBTYPE>>
 {
   public UBL20WriterBuilder (@Nonnull final EUBL20DocumentType eDocType)
   {
@@ -43,7 +43,7 @@ public class UBL20WriterBuilder <T> extends AbstractJAXBWriterBuilder <T, UBL20W
     setNamespaceContext (aNSContext);
   }
 
-  public UBL20WriterBuilder (@Nonnull final Class <T> aClass)
+  public UBL20WriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBL20DocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
