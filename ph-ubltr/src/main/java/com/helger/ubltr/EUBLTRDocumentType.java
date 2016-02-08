@@ -20,7 +20,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
@@ -58,12 +57,6 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Package getPackage ()
-  {
-    return m_aDocType.getPackage ();
-  }
-
-  @Nonnull
   public String getLocalName ()
   {
     return m_aDocType.getLocalName ();
@@ -73,12 +66,6 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
   public String getNamespaceURI ()
   {
     return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  public QName getQName ()
-  {
-    return m_aDocType.getQName ();
   }
 
   @Nonnull

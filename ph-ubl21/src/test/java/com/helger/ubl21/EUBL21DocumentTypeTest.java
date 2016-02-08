@@ -16,7 +16,6 @@
  */
 package com.helger.ubl21;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -39,11 +38,8 @@ public final class EUBL21DocumentTypeTest
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertNotNull (e.getPackage ());
-      assertEquals (e.getImplementationClass ().getPackage (), e.getPackage ());
       assertTrue (StringHelper.hasText (e.getLocalName ()));
       assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
-      assertNotNull (e.getQName ());
       assertTrue (e.getAllXSDPaths ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
