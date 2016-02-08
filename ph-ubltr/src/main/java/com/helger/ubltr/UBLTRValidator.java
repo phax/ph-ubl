@@ -21,7 +21,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
+import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -62,14 +62,14 @@ public final class UBLTRValidator
   }
 
   /**
-   * Create a validation builder for PackageType.<br>
+   * Create a validation builder for TRPackage.<br>
    * Note: "package" is a reserved word.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static UBLTRValidatorBuilder <PackageType> _package ()
+  public static UBLTRValidatorBuilder <TRPackage> _package ()
   {
-    return UBLTRValidatorBuilder.create (PackageType.class);
+    return UBLTRValidatorBuilder.create (TRPackage.class);
   }
 }

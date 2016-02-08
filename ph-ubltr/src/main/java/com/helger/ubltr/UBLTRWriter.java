@@ -21,7 +21,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
+import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -62,14 +62,14 @@ public final class UBLTRWriter
   }
 
   /**
-   * Create a writer builder for PackageType.<br>
+   * Create a writer builder for TRPackage.<br>
    * Note: "package" is a reserved word.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static UBLTRWriterBuilder <PackageType> _package ()
+  public static UBLTRWriterBuilder <TRPackage> _package ()
   {
-    return UBLTRWriterBuilder.create (PackageType.class);
+    return UBLTRWriterBuilder.create (TRPackage.class);
   }
 }

@@ -28,7 +28,7 @@ import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PackageType;
+import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
@@ -41,7 +41,7 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
 {
   CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
   PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
-  PACKAGE (PackageType.class, CUBLTR.XSD_PACKAGE);
+  PACKAGE (TRPackage.class, CUBLTR.XSD_PACKAGE);
 
   private final JAXBDocumentType m_aDocType;
 
