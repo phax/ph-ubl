@@ -57,9 +57,11 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public String getLocalName ()
+  @Nonempty
+  @ReturnsMutableCopy
+  public List <String> getAllXSDPaths ()
   {
-    return m_aDocType.getLocalName ();
+    return m_aDocType.getAllXSDPaths ();
   }
 
   @Nonnull
@@ -70,10 +72,9 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
 
   @Nonnull
   @Nonempty
-  @ReturnsMutableCopy
-  public List <String> getAllXSDPaths ()
+  public String getLocalName ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getLocalName ();
   }
 
   @Nonnull
