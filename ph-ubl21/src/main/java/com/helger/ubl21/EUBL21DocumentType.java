@@ -16,8 +16,6 @@
  */
 package com.helger.ubl21;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
@@ -25,6 +23,7 @@ import javax.xml.validation.Schema;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.ICommonsList;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -120,7 +119,7 @@ public enum EUBL21DocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public List <String> getAllXSDPaths ()
+  public ICommonsList <String> getAllXSDPaths ()
   {
     return m_aDocType.getAllXSDPaths ();
   }
