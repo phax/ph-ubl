@@ -140,6 +140,8 @@
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <extension>true</extension>
+          <!-- Important for building on Linux! -->
+          <strict>false</strict>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
