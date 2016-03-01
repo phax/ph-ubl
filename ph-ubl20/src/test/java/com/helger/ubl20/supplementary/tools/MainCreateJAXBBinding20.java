@@ -19,12 +19,7 @@ package com.helger.ubl20.supplementary.tools;
 import java.io.File;
 import java.net.URL;
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -33,6 +28,11 @@ import javax.xml.XMLConstants;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.CommonsTreeMap;
+import com.helger.commons.collection.ext.ICommonsList;
+import com.helger.commons.collection.ext.ICommonsNavigableMap;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
@@ -110,7 +110,8 @@ public final class MainCreateJAXBBinding20
       sHost = StringHelper.trimStart (sHost, "www.");
 
       // Reverse domain: helger.com -> com.helger
-      final List <String> x = CollectionHelper.getReverseList (StringHelper.getExploded ('.', sHost));
+      final ICommonsList <String> x = StringHelper.getExploded ('.', sHost);
+      x.reverse ();
 
       // Path in regular order:
       final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
@@ -148,7 +149,7 @@ public final class MainCreateJAXBBinding20
     {
       System.out.println ("UBL 2.0");
       final IMicroDocument eDoc = _createBaseDoc ();
-      final Set <String> aNamespaces = new HashSet <String> ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = "/resources/schemas/ubl20/" + sPart;
@@ -200,8 +201,8 @@ public final class MainCreateJAXBBinding20
                                                     @Nonnull @Nonempty final String sFilename,
                                                     @Nonnull final IMicroElement eBindings)
   {
-    final Set <String> aUsedNames = new HashSet <String> ();
-    final Map <String, String> aValueToConstants = new TreeMap <String, String> ();
+    final ICommonsSet <String> aUsedNames = new CommonsHashSet <> ();
+    final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap <> ();
     final IMicroElement eSimpleType = aDoc.getDocumentElement ().getFirstChildElement ();
 
     final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings").setAttribute ("node",
