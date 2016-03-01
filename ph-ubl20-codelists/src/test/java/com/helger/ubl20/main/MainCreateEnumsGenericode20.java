@@ -18,16 +18,17 @@ package com.helger.ubl20.main;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Locale;
-import java.util.Set;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.CommonsLinkedHashSet;
+import com.helger.commons.collection.ext.ICommonsOrderedSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemRecursiveIterator;
@@ -120,7 +121,8 @@ public final class MainCreateEnumsGenericode20
     final Column aColName = Genericode04Helper.getColumnOfID (aCodeList.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode04Helper.getAllColumnIDs (aCodeList.getColumnSet ()));
+    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet <> ();
+    Genericode04Helper.getAllColumnIDs (aCodeList.getColumnSet (), aOtherCols);
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
 
@@ -135,7 +137,7 @@ public final class MainCreateEnumsGenericode20
     jEnum.annotate (CodingStyleguideUnaware.class);
     jEnum.javadoc ().add ("This file is generated from Genericode file " + aFile.getName () + ". Do NOT edit!");
 
-    final Set <String> aUsedIdentifier = new HashSet <String> ();
+    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList.getSimpleCodeList ().getRow ())
     {

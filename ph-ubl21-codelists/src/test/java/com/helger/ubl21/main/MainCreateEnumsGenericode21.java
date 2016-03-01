@@ -19,7 +19,6 @@ package com.helger.ubl21.main;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Locale;
 import java.util.Set;
 
@@ -31,6 +30,10 @@ import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.CommonsLinkedHashSet;
+import com.helger.commons.collection.ext.ICommonsOrderedSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemRecursiveIterator;
@@ -107,7 +110,8 @@ public final class MainCreateEnumsGenericode21
     final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final Set <String> aOtherCols = new LinkedHashSet <String> (Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet ()));
+    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet <> ();
+    Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet (), aOtherCols);
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
     if (aFile.getName ().equals ("UnitOfMeasureCode-2.1.gc") ||
@@ -156,7 +160,7 @@ public final class MainCreateEnumsGenericode21
          .add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
 
-    final Set <String> aUsedIdentifier = new HashSet <String> ();
+    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList10.getSimpleCodeList ().getRow ())
     {
