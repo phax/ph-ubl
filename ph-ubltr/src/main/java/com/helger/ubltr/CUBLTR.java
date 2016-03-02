@@ -16,13 +16,14 @@
  */
 package com.helger.ubltr;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsArrayList;
+import com.helger.commons.collection.ext.ICommonsList;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
@@ -51,11 +52,11 @@ public final class CUBLTR
 
   static
   {
-    final List <String> aPackage = new ArrayList <> ();
+    final ICommonsList <String> aPackage = new CommonsArrayList <> ();
     aPackage.addAll (EUBL21DocumentType.INVOICE.getAllXSDPaths ());
     aPackage.addAll (EUBL21DocumentType.APPLICATION_RESPONSE.getAllXSDPaths ());
     aPackage.add (SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd");
-    XSD_PACKAGE = CollectionHelper.makeUnmodifiable (aPackage);
+    XSD_PACKAGE = aPackage.getAsUnmodifiable ();
   }
 
   @PresentForCodeCoverage
