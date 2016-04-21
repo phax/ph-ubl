@@ -80,6 +80,7 @@ public final class UBL21FuncTest
       final CatalogueType aUBLObject2 = UBL21Reader.catalogue ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.catalogue ().validate (aUBLObject2);
@@ -120,6 +121,7 @@ public final class UBL21FuncTest
       final CreditNoteType aUBLObject2 = UBL21Reader.creditNote ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.creditNote ().validate (aUBLObject2);
@@ -160,6 +162,7 @@ public final class UBL21FuncTest
       final DespatchAdviceType aUBLObject2 = UBL21Reader.despatchAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.despatchAdvice ().validate (aUBLObject2);
@@ -200,6 +203,7 @@ public final class UBL21FuncTest
       final ForwardingInstructionsType aUBLObject2 = UBL21Reader.forwardingInstructions ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.forwardingInstructions ().validate (aUBLObject2);
@@ -244,6 +248,7 @@ public final class UBL21FuncTest
       final InvoiceType aUBLObject2 = UBL21Reader.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.invoice ().validate (aUBLObject2);
@@ -285,6 +290,7 @@ public final class UBL21FuncTest
       final OrderType aUBLObject2 = UBL21Reader.order ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.order ().validate (aUBLObject2);
@@ -325,6 +331,7 @@ public final class UBL21FuncTest
       final OrderResponseSimpleType aUBLObject2 = UBL21Reader.orderResponseSimple ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.orderResponseSimple ().validate (aUBLObject2);
@@ -365,6 +372,7 @@ public final class UBL21FuncTest
       final QuotationType aUBLObject2 = UBL21Reader.quotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.quotation ().validate (aUBLObject2);
@@ -405,6 +413,7 @@ public final class UBL21FuncTest
       final ReceiptAdviceType aUBLObject2 = UBL21Reader.receiptAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.receiptAdvice ().validate (aUBLObject2);
@@ -445,6 +454,7 @@ public final class UBL21FuncTest
       final RemittanceAdviceType aUBLObject2 = UBL21Reader.remittanceAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.remittanceAdvice ().validate (aUBLObject2);
@@ -485,6 +495,7 @@ public final class UBL21FuncTest
       final RequestForQuotationType aUBLObject2 = UBL21Reader.requestForQuotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.requestForQuotation ().validate (aUBLObject2);
@@ -525,6 +536,7 @@ public final class UBL21FuncTest
       final StatementType aUBLObject2 = UBL21Reader.statement ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.statement ().validate (aUBLObject2);
@@ -565,6 +577,7 @@ public final class UBL21FuncTest
       final WaybillType aUBLObject2 = UBL21Reader.waybill ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL21Validator.waybill ().validate (aUBLObject2);

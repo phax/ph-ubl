@@ -156,6 +156,7 @@
             <arg>-Xph-tostring</arg>
             <arg>-Xph-list-extension</arg>
             <arg>-Xph-csu</arg>
+            <arg>-Xph-cloneable</arg>
             <arg>-Xph-ubl-value</arg>
           </args>
         </configuration>
