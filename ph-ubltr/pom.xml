@@ -117,7 +117,8 @@
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
             <exclude>src/main/resources/schemas/**</exclude>
-            <exclude>src/test/resources/examples/**</exclude>
+            <exclude>src/test/resources/tr_useraccount/**</exclude>
+            <exclude>src/test/resources/tr_useraccount_zarf/**</exclude>
           </excludes>
         </configuration>
       </plugin>
