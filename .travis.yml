@@ -15,7 +15,10 @@ jdk:
   - oraclejdk8
 
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U -P jdeps
+
+script:
+  - mvn test -B -P coverage
   
 cache:
   directories:
@@ -23,4 +26,5 @@ cache:
 
 after_success:
   - mvn deploy --settings travis-settings.xml -DskipTests=true -B -P travis-deploy
+  - bash <(curl -s https://codecov.io/bash)
  
