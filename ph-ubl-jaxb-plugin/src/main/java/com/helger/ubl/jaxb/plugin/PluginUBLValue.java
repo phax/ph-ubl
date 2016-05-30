@@ -16,8 +16,6 @@
  */
 package com.helger.ubl.jaxb.plugin;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -29,6 +27,10 @@ import org.xml.sax.ErrorHandler;
 
 import com.helger.commons.annotation.IsSPIImplementation;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashMap;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.ICommonsMap;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.sun.codemodel.JCodeModel;
 import com.sun.codemodel.JConditional;
 import com.sun.codemodel.JDefinedClass;
@@ -235,7 +237,7 @@ public class PluginUBLValue extends Plugin
                       @Nonnull final Options aOpts,
                       @Nonnull final ErrorHandler aErrorHandler)
   {
-    final Map <JDefinedClass, JType> aAllCtorClasses = new HashMap <JDefinedClass, JType> ();
+    final ICommonsMap <JDefinedClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
       final JDefinedClass jClass = aClassOutline.implClass;
@@ -270,7 +272,7 @@ public class PluginUBLValue extends Plugin
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set constructor in all derived classes
-        final Set <JDefinedClass> aAllRelevantClasses = new HashSet <JDefinedClass> ();
+        final ICommonsSet <JDefinedClass> aAllRelevantClasses = new CommonsHashSet<> ();
         aAllRelevantClasses.add (jClass);
         _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
 
