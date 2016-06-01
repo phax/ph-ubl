@@ -19,10 +19,8 @@ package com.helger.ubl21.supplementary.tools;
 import java.io.File;
 import java.net.URL;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -30,6 +28,8 @@ import javax.xml.XMLConstants;
 
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
@@ -143,7 +143,7 @@ public final class MainCreateJAXBBinding21
     {
       System.out.println ("UBL 2.1");
       final IMicroDocument eDoc = _createBaseDoc ();
-      final Set <String> aNamespaces = new HashSet <String> ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet<> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = BASE_XSD_PATH + sPart;

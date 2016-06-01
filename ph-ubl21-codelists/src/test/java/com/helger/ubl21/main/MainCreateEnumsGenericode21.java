@@ -18,7 +18,6 @@ package com.helger.ubl21.main;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
@@ -29,7 +28,6 @@ import javax.annotation.concurrent.Immutable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.CommonsLinkedHashSet;
 import com.helger.commons.collection.ext.ICommonsOrderedSet;
@@ -110,7 +108,7 @@ public final class MainCreateEnumsGenericode21
     final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet <> ();
+    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet<> ();
     Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet (), aOtherCols);
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
@@ -160,7 +158,7 @@ public final class MainCreateEnumsGenericode21
          .add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
 
-    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
+    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet<> ();
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList10.getSimpleCodeList ().getRow ())
     {
@@ -301,8 +299,8 @@ public final class MainCreateEnumsGenericode21
     jClass.javadoc ().add ("The number of elements is too large to create an enum from it!\n");
     jClass.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
 
-    final AbstractJClass aSetDecl = s_aCodeModel.ref (Set.class).narrow (String.class);
-    final AbstractJClass aSetImpl = s_aCodeModel.ref (HashSet.class).narrow (String.class);
+    final AbstractJClass aSetDecl = s_aCodeModel.ref (ICommonsSet.class).narrow (String.class);
+    final AbstractJClass aSetImpl = s_aCodeModel.ref (CommonsHashSet.class).narrowEmpty ();
     final JVar aCodeSet = jClass.field (JMod.PRIVATE |
                                         JMod.FINAL |
                                         JMod.STATIC,
@@ -375,13 +373,10 @@ public final class MainCreateEnumsGenericode21
     aParam.annotate (Nullable.class);
     aMethod.body ()._return (aCodeSet.invoke ("contains").arg (aParam));
 
-    aMethod = jClass.method (JMod.PUBLIC |
-                             JMod.STATIC,
-                             s_aCodeModel.ref (Set.class).narrow (String.class),
-                             "getAllCodes");
+    aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, aSetDecl, "getAllCodes");
     aMethod.annotate (Nonnull.class);
     aMethod.annotate (ReturnsMutableCopy.class);
-    aMethod.body ()._return (s_aCodeModel.ref (CollectionHelper.class).staticInvoke ("newSet").arg (aCodeSet));
+    aMethod.body ()._return (aCodeSet.invoke ("getClone"));
 
     if (bHasNameColumn && aNameSet != null)
     {
@@ -390,13 +385,10 @@ public final class MainCreateEnumsGenericode21
       aParam.annotate (Nullable.class);
       aMethod.body ()._return (aNameSet.invoke ("contains").arg (aParam));
 
-      aMethod = jClass.method (JMod.PUBLIC |
-                               JMod.STATIC,
-                               s_aCodeModel.ref (Set.class).narrow (String.class),
-                               "getAllNames");
+      aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, aSetDecl, "getAllNames");
       aMethod.annotate (Nonnull.class);
       aMethod.annotate (ReturnsMutableCopy.class);
-      aMethod.body ()._return (s_aCodeModel.ref (CollectionHelper.class).staticInvoke ("newSet").arg (aNameSet));
+      aMethod.body ()._return (aNameSet.invoke ("getClone"));
     }
   }
 

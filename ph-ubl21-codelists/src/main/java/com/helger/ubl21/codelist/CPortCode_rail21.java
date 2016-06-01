@@ -16,15 +16,12 @@
  */
 package com.helger.ubl21.codelist;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
-
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 
 
 /**
@@ -32,12 +29,11 @@ import com.helger.commons.collection.CollectionHelper;
  * It contains a total of 12457 entries!
  * The number of elements is too large to create an enum from it!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
- *
  */
 @Immutable
 public final class CPortCode_rail21 {
-    private final static Set<String> s_aCodeSet = new HashSet<String>(12457);
-    private final static Set<String> s_aNameSet = new HashSet<String>(12457);
+    private final static ICommonsSet<String> s_aCodeSet = new CommonsHashSet<>(12457);
+    private final static ICommonsSet<String> s_aNameSet = new CommonsHashSet<>(12457);
 
     static {
         new CPortCode_rail21 .CodePart1(s_aCodeSet);
@@ -71,8 +67,8 @@ public final class CPortCode_rail21 {
 
     @Nonnull
     @ReturnsMutableCopy
-    public static Set<String> getAllCodes() {
-        return CollectionHelper.newSet(s_aCodeSet);
+    public static ICommonsSet<String> getAllCodes() {
+        return s_aCodeSet.getClone();
     }
 
     public static boolean containsName(
@@ -83,15 +79,15 @@ public final class CPortCode_rail21 {
 
     @Nonnull
     @ReturnsMutableCopy
-    public static Set<String> getAllNames() {
-        return CollectionHelper.newSet(s_aNameSet);
+    public static ICommonsSet<String> getAllNames() {
+        return s_aNameSet.getClone();
     }
 
     private final static class CodePart1 {
 
         CodePart1(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ALNPP");
             aCodeSet.add("ALFIE");
             aCodeSet.add("AMABO");
@@ -1599,7 +1595,7 @@ public final class CPortCode_rail21 {
 
         CodePart2(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("CHOLO");
             aCodeSet.add("CHPHZ");
             aCodeSet.add("CHPEN");
@@ -3107,7 +3103,7 @@ public final class CPortCode_rail21 {
 
         CodePart3(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("DEHSH");
             aCodeSet.add("DEHSN");
             aCodeSet.add("DEHEC");
@@ -4615,7 +4611,7 @@ public final class CPortCode_rail21 {
 
         CodePart4(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ESBOJ");
             aCodeSet.add("ESBUR");
             aCodeSet.add("ESCYC");
@@ -6123,7 +6119,7 @@ public final class CPortCode_rail21 {
 
         CodePart5(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("GBBKB");
             aCodeSet.add("GBBHI");
             aCodeSet.add("GBBKG");
@@ -7631,7 +7627,7 @@ public final class CPortCode_rail21 {
 
         CodePart6(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("KRGRE");
             aCodeSet.add("KRGCN");
             aCodeSet.add("KRKWJ");
@@ -9139,7 +9135,7 @@ public final class CPortCode_rail21 {
 
         CodePart7(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("RUNYY");
             aCodeSet.add("RUNDK");
             aCodeSet.add("RUNMK");
@@ -10647,7 +10643,7 @@ public final class CPortCode_rail21 {
 
         CodePart8(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USGU2");
             aCodeSet.add("USGSP");
             aCodeSet.add("USGKO");
@@ -12155,7 +12151,7 @@ public final class CPortCode_rail21 {
 
         CodePart9(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USS2G");
             aCodeSet.add("USSGR");
             aCodeSet.add("USUGL");
@@ -12620,7 +12616,7 @@ public final class CPortCode_rail21 {
 
         NamePart1(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Elbasan");
             aNameSet.add("Fier");
             aNameSet.add("Abovyan");
@@ -14128,7 +14124,7 @@ public final class CPortCode_rail21 {
 
         NamePart2(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Ollon");
             aNameSet.add("Penthalaz");
             aNameSet.add("Penthaz");
@@ -15636,7 +15632,7 @@ public final class CPortCode_rail21 {
 
         NamePart3(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Hausach");
             aNameSet.add("H\u00e4uslingen");
             aNameSet.add("Hechingen");
@@ -17144,7 +17140,7 @@ public final class CPortCode_rail21 {
 
         NamePart4(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Borja");
             aNameSet.add("Burgos");
             aNameSet.add("Calera y Chozas");
@@ -18652,7 +18648,7 @@ public final class CPortCode_rail21 {
 
         NamePart5(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Bannockburn");
             aNameSet.add("Bardon Hill");
             aNameSet.add("Barking/London");
@@ -20160,7 +20156,7 @@ public final class CPortCode_rail21 {
 
         NamePart6(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Gurye-gun");
             aNameSet.add("Gwacheon");
             aNameSet.add("Gwangju");
@@ -21668,7 +21664,7 @@ public final class CPortCode_rail21 {
 
         NamePart7(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Novaya Yelovka");
             aNameSet.add("Novodvinsk");
             aNameSet.add("Novomoskovsk");
@@ -23176,7 +23172,7 @@ public final class CPortCode_rail21 {
 
         NamePart8(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Greenup");
             aNameSet.add("Greenville-Greer Apt");
             aNameSet.add("Greenwood");
@@ -24684,7 +24680,7 @@ public final class CPortCode_rail21 {
 
         NamePart9(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Sugar Grove");
             aNameSet.add("Sugar Land");
             aNameSet.add("Sugar Loaf");

@@ -16,15 +16,12 @@
  */
 package com.helger.ubl21.codelist;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
-
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 
 
 /**
@@ -32,12 +29,11 @@ import com.helger.commons.collection.CollectionHelper;
  * It contains a total of 8815 entries!
  * The number of elements is too large to create an enum from it!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
- *
  */
 @Immutable
 public final class CPortCode_air21 {
-    private final static Set<String> s_aCodeSet = new HashSet<String>(8815);
-    private final static Set<String> s_aNameSet = new HashSet<String>(8815);
+    private final static ICommonsSet<String> s_aCodeSet = new CommonsHashSet<>(8815);
+    private final static ICommonsSet<String> s_aNameSet = new CommonsHashSet<>(8815);
 
     static {
         new CPortCode_air21 .CodePart1(s_aCodeSet);
@@ -65,8 +61,8 @@ public final class CPortCode_air21 {
 
     @Nonnull
     @ReturnsMutableCopy
-    public static Set<String> getAllCodes() {
-        return CollectionHelper.newSet(s_aCodeSet);
+    public static ICommonsSet<String> getAllCodes() {
+        return s_aCodeSet.getClone();
     }
 
     public static boolean containsName(
@@ -77,15 +73,15 @@ public final class CPortCode_air21 {
 
     @Nonnull
     @ReturnsMutableCopy
-    public static Set<String> getAllNames() {
-        return CollectionHelper.newSet(s_aNameSet);
+    public static ICommonsSet<String> getAllNames() {
+        return s_aNameSet.getClone();
     }
 
     private final static class CodePart1 {
 
         CodePart1(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ADALV");
             aCodeSet.add("AEAUH");
             aCodeSet.add("AEAAN");
@@ -1593,7 +1589,7 @@ public final class CPortCode_air21 {
 
         CodePart2(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("CAZGS");
             aCodeSet.add("CAYGX");
             aCodeSet.add("CAYGB");
@@ -3101,7 +3097,7 @@ public final class CPortCode_air21 {
 
         CodePart3(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("FRTAB");
             aCodeSet.add("FRTGF");
             aCodeSet.add("FRTLN");
@@ -4609,7 +4605,7 @@ public final class CPortCode_air21 {
 
         CodePart4(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("MNERT");
             aCodeSet.add("MNKHR");
             aCodeSet.add("MNHVD");
@@ -6117,7 +6113,7 @@ public final class CPortCode_air21 {
 
         CodePart5(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("SDNUD");
             aCodeSet.add("SDGSU");
             aCodeSet.add("SDEGN");
@@ -7625,7 +7621,7 @@ public final class CPortCode_air21 {
 
         CodePart6(
             @Nonnull
-            final Set<String> aCodeSet) {
+            final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USLIJ");
             aCodeSet.add("USLOG");
             aCodeSet.add("USGGG");
@@ -8948,7 +8944,7 @@ public final class CPortCode_air21 {
 
         NamePart1(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Andorra la Vella");
             aNameSet.add("Abu Dhabi");
             aNameSet.add("Al Ain");
@@ -10456,7 +10452,7 @@ public final class CPortCode_air21 {
 
         NamePart2(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Geths\u00e9mani");
             aNameSet.add("Gillam");
             aNameSet.add("Gillies Bay");
@@ -11964,7 +11960,7 @@ public final class CPortCode_air21 {
 
         NamePart3(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Tarbes");
             aNameSet.add("Tignes");
             aNameSet.add("Toulon");
@@ -13472,7 +13468,7 @@ public final class CPortCode_air21 {
 
         NamePart4(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Erdenet");
             aNameSet.add("Kharkhorin");
             aNameSet.add("Khovd");
@@ -14980,7 +14976,7 @@ public final class CPortCode_air21 {
 
         NamePart5(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("En Nahud");
             aNameSet.add("Gedaref");
             aNameSet.add("Geneina");
@@ -16488,7 +16484,7 @@ public final class CPortCode_air21 {
 
         NamePart6(
             @Nonnull
-            final Set<String> aNameSet) {
+            final ICommonsSet<String> aNameSet) {
             aNameSet.add("Long Island");
             aNameSet.add("Longview");
             aNameSet.add("Longview-Kilgore-Gladewater Apt");

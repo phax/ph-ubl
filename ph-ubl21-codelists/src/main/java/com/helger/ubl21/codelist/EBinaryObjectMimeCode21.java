@@ -18,7 +18,6 @@ package com.helger.ubl21.codelist;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
@@ -30,7 +29,6 @@ import com.helger.commons.name.IHasDisplayName;
  * This file was automatically generated from Genericode file BinaryObjectMimeCode-2.1.gc. Do NOT edit!
  * It contains a total of 1278 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
- * 
  */
 @CodingStyleguideUnaware
 public enum EBinaryObjectMimeCode21
