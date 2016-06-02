@@ -16,10 +16,6 @@
  */
 package com.helger.ubltr;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
@@ -28,7 +24,9 @@ import javax.xml.validation.Schema;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.ArrayHelper;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsHashMap;
+import com.helger.commons.collection.ext.ICommonsMap;
+import com.helger.commons.collection.ext.ICommonsSet;
 
 /**
  * UBL document type map. Provides sanity methods for accessing UBLTR document
@@ -40,7 +38,7 @@ import com.helger.commons.collection.CollectionHelper;
 public final class UBLTRDocumentTypes
 {
   /** Maps local names to document types */
-  private static final Map <String, EUBLTRDocumentType> s_aLocalName2DocType = new HashMap <> ();
+  private static final ICommonsMap <String, EUBLTRDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
 
   static
   {
@@ -70,9 +68,9 @@ public final class UBLTRDocumentTypes
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <String> getAllLocalNames ()
+  public static ICommonsSet <String> getAllLocalNames ()
   {
-    return CollectionHelper.newSet (s_aLocalName2DocType.keySet ());
+    return s_aLocalName2DocType.copyOfKeySet ();
   }
 
   /**

@@ -20,6 +20,7 @@ import java.util.List;
 
 import javax.annotation.concurrent.Immutable;
 
+import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.collection.CollectionHelper;
 
 /**
@@ -28,6 +29,7 @@ import com.helger.commons.collection.CollectionHelper;
  * @author Philip Helger
  */
 @Immutable
+@CodingStyleguideUnaware
 public final class UBLTestFiles
 {
   public static final List <String> CATALOGUE_FILES = CollectionHelper.makeUnmodifiable ("test-ubl/catalogue/Consip_Catalogo_UBL.xml",

@@ -25,6 +25,7 @@ import javax.annotation.Nullable;
 
 import org.xml.sax.ErrorHandler;
 
+import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.IsSPIImplementation;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsHashMap;
@@ -74,6 +75,7 @@ public class PluginUBLValue extends Plugin
   }
 
   @Override
+  @CodingStyleguideUnaware
   public List <String> getCustomizationURIs ()
   {
     return CollectionHelper.makeUnmodifiable (CUBLJAXB.NSURI_PH_UBL);
@@ -237,7 +239,7 @@ public class PluginUBLValue extends Plugin
                       @Nonnull final Options aOpts,
                       @Nonnull final ErrorHandler aErrorHandler)
   {
-    final ICommonsMap <JDefinedClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
+    final ICommonsMap <JDefinedClass, JType> aAllCtorClasses = new CommonsHashMap <> ();
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
       final JDefinedClass jClass = aClassOutline.implClass;
@@ -272,7 +274,7 @@ public class PluginUBLValue extends Plugin
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set constructor in all derived classes
-        final ICommonsSet <JDefinedClass> aAllRelevantClasses = new CommonsHashSet<> ();
+        final ICommonsSet <JDefinedClass> aAllRelevantClasses = new CommonsHashSet <> ();
         aAllRelevantClasses.add (jClass);
         _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
 
