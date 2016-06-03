@@ -47,7 +47,7 @@ import oasis.names.specification.ubl.schema.xsd.statement_21.StatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 
 /**
- * Test class for class {@link UBL21DocumentMarshaller}.
+ * Some cross functionality testing
  *
  * @author Philip Helger
  */

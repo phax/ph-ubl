@@ -35,7 +35,7 @@ import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
 /**
- * Test class for class {@link UBLTRDocumentMarshaller}.
+ * Some cross functionality testing
  *
  * @author Philip Helger
  */
