@@ -60,6 +60,6 @@ public class UBL21WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
   @Nonnull
   public static <T> UBL21WriterBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBL21WriterBuilder <T> (aClass);
+    return new UBL21WriterBuilder <> (aClass);
   }
 }

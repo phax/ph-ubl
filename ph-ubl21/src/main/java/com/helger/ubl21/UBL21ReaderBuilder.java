@@ -53,7 +53,7 @@ public class UBL21ReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
   @Nonnull
   public static <T> UBL21ReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBL21ReaderBuilder <T> (aClass);
+    return new UBL21ReaderBuilder <> (aClass);
   }
 
   /**
@@ -67,6 +67,6 @@ public class UBL21ReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
   @Nonnull
   public static UBL21ReaderBuilder <?> createGeneric (@Nonnull final EUBL21DocumentType eDocType)
   {
-    return new UBL21ReaderBuilder <Object> (eDocType, Object.class);
+    return new UBL21ReaderBuilder <> (eDocType, Object.class);
   }
 }

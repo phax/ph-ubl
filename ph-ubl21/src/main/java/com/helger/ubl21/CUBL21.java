@@ -43,7 +43,6 @@ public final class CUBL21
   public static final String XSD_UBL_XMLDSIG = "schemas/ubl21/common/UBL-xmldsig-core-schema-2.1.xsd";
 
   @PresentForCodeCoverage
-  @SuppressWarnings ("unused")
   private static final CUBL21 s_aInstance = new CUBL21 ();
 
   private CUBL21 ()

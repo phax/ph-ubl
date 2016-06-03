@@ -63,7 +63,6 @@ public final class UBL21DocumentTypes
   }
 
   @PresentForCodeCoverage
-  @SuppressWarnings ("unused")
   private static final UBL21DocumentTypes s_aInstance = new UBL21DocumentTypes ();
 
   private UBL21DocumentTypes ()

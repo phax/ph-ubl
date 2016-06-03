@@ -53,7 +53,7 @@ public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
   @Nonnull
   public static <T> UBLTRReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBLTRReaderBuilder <T> (aClass);
+    return new UBLTRReaderBuilder <> (aClass);
   }
 
   /**
@@ -67,6 +67,6 @@ public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
   @Nonnull
   public static UBLTRReaderBuilder <?> createGeneric (@Nonnull final EUBLTRDocumentType eDocType)
   {
-    return new UBLTRReaderBuilder <Object> (eDocType, Object.class);
+    return new UBLTRReaderBuilder <> (eDocType, Object.class);
   }
 }

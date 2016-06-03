@@ -60,6 +60,6 @@ public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
   @Nonnull
   public static <T> UBLTRWriterBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBLTRWriterBuilder <T> (aClass);
+    return new UBLTRWriterBuilder <> (aClass);
   }
 }
