@@ -34,18 +34,18 @@ import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.io.resource.FileSystemResource;
-import com.helger.commons.microdom.IMicroDocument;
-import com.helger.commons.microdom.IMicroElement;
-import com.helger.commons.microdom.MicroDocument;
-import com.helger.commons.microdom.serialize.MicroReader;
-import com.helger.commons.microdom.serialize.MicroWriter;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.commons.url.URLHelper;
-import com.helger.commons.xml.CXML;
-import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
-import com.helger.commons.xml.serialize.write.EXMLIncorrectCharacterHandling;
-import com.helger.commons.xml.serialize.write.XMLWriterSettings;
+import com.helger.xml.CXML;
+import com.helger.xml.microdom.IMicroDocument;
+import com.helger.xml.microdom.IMicroElement;
+import com.helger.xml.microdom.MicroDocument;
+import com.helger.xml.microdom.serialize.MicroReader;
+import com.helger.xml.microdom.serialize.MicroWriter;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xml.serialize.write.EXMLIncorrectCharacterHandling;
+import com.helger.xml.serialize.write.XMLWriterSettings;
 
 /**
  * Utility class that creates:

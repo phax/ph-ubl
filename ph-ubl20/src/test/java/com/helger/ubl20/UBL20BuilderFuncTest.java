@@ -24,7 +24,7 @@ import org.junit.Test;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
-import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
 

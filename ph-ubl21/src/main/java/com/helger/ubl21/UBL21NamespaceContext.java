@@ -19,8 +19,8 @@ package com.helger.ubl21;
 import javax.annotation.Nonnull;
 
 import com.helger.commons.annotation.Singleton;
-import com.helger.commons.xml.CXML;
-import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xml.CXML;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.

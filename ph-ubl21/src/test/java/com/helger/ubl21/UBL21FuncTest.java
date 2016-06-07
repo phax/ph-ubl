@@ -29,8 +29,8 @@ import org.xml.sax.SAXException;
 import com.helger.commons.error.IResourceErrorGroup;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
-import com.helger.commons.xml.serialize.read.DOMReader;
-import com.helger.commons.xml.serialize.read.DOMReaderSettings;
+import com.helger.xml.serialize.read.DOMReader;
+import com.helger.xml.serialize.read.DOMReaderSettings;
 
 import oasis.names.specification.ubl.schema.xsd.catalogue_21.CatalogueType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
