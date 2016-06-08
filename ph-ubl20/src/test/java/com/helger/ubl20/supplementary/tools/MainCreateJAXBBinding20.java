@@ -131,7 +131,8 @@ public final class MainCreateJAXBBinding20
         }
 
       // Replace all illegal characters
-      s = s.replace (':', '.').replace ('-', '_');
+      s = StringHelper.replaceAll (s, ':', '.');
+      s = StringHelper.replaceAll (s, '-', '_');
       aParts = StringHelper.getExplodedArray ('.', s);
     }
 

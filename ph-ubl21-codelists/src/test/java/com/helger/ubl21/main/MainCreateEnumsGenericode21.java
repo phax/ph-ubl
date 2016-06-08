@@ -78,7 +78,7 @@ public final class MainCreateEnumsGenericode21
   private static String _getVarName (@Nonnull final String sOtherCol)
   {
     String sVar = sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
-    sVar = sVar.replace ('-', '_');
+    sVar = StringHelper.replaceAll (sVar, '-', '_');
     return sVar;
   }
 
@@ -108,7 +108,7 @@ public final class MainCreateEnumsGenericode21
     final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet<> ();
+    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet <> ();
     Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet (), aOtherCols);
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
@@ -139,7 +139,7 @@ public final class MainCreateEnumsGenericode21
                                      final boolean bHasNameColumn) throws JClassAlreadyExistsException
   {
     String sEnumName = "E" + aCodeList10.getIdentification ().getShortName ().getValue ();
-    sEnumName = sEnumName.replace ('-', '_');
+    sEnumName = StringHelper.replaceAll (sEnumName, '-', '_');
     if (aFile.getName ().contains ("-2.0"))
       sEnumName += "20";
     else
@@ -158,7 +158,7 @@ public final class MainCreateEnumsGenericode21
          .add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
 
-    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet<> ();
+    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList10.getSimpleCodeList ().getRow ())
     {
@@ -283,7 +283,7 @@ public final class MainCreateEnumsGenericode21
                                               final boolean bHasNameColumn) throws JClassAlreadyExistsException
   {
     String sClassName = "C" + aCodeList10.getIdentification ().getShortName ().getValue ();
-    sClassName = sClassName.replace ('-', '_');
+    sClassName = StringHelper.replaceAll (sClassName, '-', '_');
     if (aFile.getName ().contains ("-2.0"))
       sClassName += "20";
     else

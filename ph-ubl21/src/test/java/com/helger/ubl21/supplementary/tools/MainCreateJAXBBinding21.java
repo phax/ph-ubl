@@ -125,7 +125,8 @@ public final class MainCreateJAXBBinding21
         }
 
       // Replace all illegal characters
-      s = s.replace (':', '.').replace ('-', '_');
+      s = StringHelper.replaceAll (s, ':', '.');
+      s = StringHelper.replaceAll (s, '-', '_');
       aParts = StringHelper.getExplodedArray ('.', s);
     }
 
@@ -143,7 +144,7 @@ public final class MainCreateJAXBBinding21
     {
       System.out.println ("UBL 2.1");
       final IMicroDocument eDoc = _createBaseDoc ();
-      final ICommonsSet <String> aNamespaces = new CommonsHashSet<> ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = BASE_XSD_PATH + sPart;
