@@ -58,7 +58,7 @@ public class PluginUBLValue extends Plugin
 {
   public static final String OPT = "Xph-ubl-value";
   // @author is only valid for file comments
-  public static final String AUTHOR = "\nCreated by ph-ubl-jaxb-plugin -" + OPT;
+  public static final String AUTHOR = "<br>\nNote: automatically created by ph-ubl-jaxb-plugin -" + OPT;
 
   @Override
   public String getOptionName ()
