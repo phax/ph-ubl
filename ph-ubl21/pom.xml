@@ -62,6 +62,22 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-jaxb</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xmldsig</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xades132</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xades141</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -91,10 +107,7 @@
           <instructions>
             <Export-Package>
               com.helger.ubl21.*,
-              oasis.names.specification.ubl.schema.xsd.*,
-              org.etsi.uri.*,
-              org.w3._2000._09.xmldsig,
-              un.unece.uncefact.*
+              oasis.names.specification.ubl.schema.xsd.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*
@@ -159,6 +172,24 @@
             <arg>-Xph-cloneable</arg>
             <arg>-Xph-ubl-value</arg>
           </args>
+          <episodes>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xmldsig</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xades132</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xades141</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+            </episode>
+          </episodes>
         </configuration>
         <dependencies>
           <dependency>
@@ -172,6 +203,25 @@
             <version>${project.version}</version>
           </dependency>
         </dependencies>
+      </plugin>
+      <!-- Delete the directory with only ObjectFactory 
+           Source: http://stackoverflow.com/questions/32635137
+      -->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <delete dir="${basedir}/target/generated-sources/ubl21/com/" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
