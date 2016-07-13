@@ -150,7 +150,7 @@ public final class MainCreateJAXBBinding20
     {
       System.out.println ("UBL 2.0");
       final IMicroDocument eDoc = _createBaseDoc ();
-      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet<> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = "/resources/schemas/ubl20/" + sPart;
@@ -202,8 +202,8 @@ public final class MainCreateJAXBBinding20
                                                     @Nonnull @Nonempty final String sFilename,
                                                     @Nonnull final IMicroElement eBindings)
   {
-    final ICommonsSet <String> aUsedNames = new CommonsHashSet <> ();
-    final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap <> ();
+    final ICommonsSet <String> aUsedNames = new CommonsHashSet<> ();
+    final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap<> ();
     final IMicroElement eSimpleType = aDoc.getDocumentElement ().getFirstChildElement ();
 
     final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings").setAttribute ("node",
