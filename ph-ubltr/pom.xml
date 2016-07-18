@@ -30,7 +30,6 @@
   <description>Library for reading and writing UBLTR documents</description>
   <url>https://github.com/phax/ph-ubl/ph-ubltr</url>
   <inceptionYear>2016</inceptionYear>
-  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -38,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>philip</id>
@@ -52,7 +49,6 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
@@ -70,7 +66,6 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-sbdh</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -87,8 +82,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-
   <build>
     <plugins>
       <plugin>
@@ -97,14 +90,10 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Export-Package>
-              com.helger.ubltr.*,
+            <Export-Package>com.helger.ubltr.*,
               org.openapplications.oagis._9.*,
-              tr.gov.efatura.*
-            </Export-Package>
-            <Import-Package>
-              !javax.annotation.*,*
-            </Import-Package>
+              tr.gov.efatura.*</Export-Package>
+            <Import-Package>!javax.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>
