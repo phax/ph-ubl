@@ -17,6 +17,7 @@
 package com.helger.ubl.jaxb.plugin;
 
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -24,6 +25,8 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.ErrorHandler;
 
 import com.helger.commons.annotation.CodingStyleguideUnaware;
@@ -63,6 +66,8 @@ public class PluginUBLValue extends Plugin
   public static final String OPT = "Xph-ubl-value";
   // @author is only valid for file comments
   public static final String AUTHOR = "<br>\nNote: automatically created by ph-ubl-jaxb-plugin -" + OPT;
+
+  private static final Logger s_aLogger = LoggerFactory.getLogger (PluginUBLValue.class);
 
   @Override
   public String getOptionName ()
@@ -175,7 +180,21 @@ public class PluginUBLValue extends Plugin
   @ReturnsMutableCopy
   private ICommonsMap <JClass, JType> _addValueCtors (@Nonnull final Outline aOutline)
   {
+    final JCodeModel cm = aOutline.getCodeModel ();
     final ICommonsMap <String, JType> aAllSuperClassNames = new CommonsHashMap<> ();
+    {
+      // Add some classes that are known to be such super types
+      // Reside in ph-xsds-ccts-cct-schemamodule
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.AmountType", cm.ref (BigDecimal.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.BinaryObjectType", cm.ref (byte [].class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.CodeType", cm.ref (String.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.DateTimeType", cm.ref (String.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.IdentifierType", cm.ref (String.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.MeasureType", cm.ref (BigDecimal.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.NumericType", cm.ref (BigDecimal.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.QuantityType", cm.ref (BigDecimal.class));
+      aAllSuperClassNames.put ("com.helger.xsds.ccts.cct.schemamodule.TextType", cm.ref (String.class));
+    }
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
       final JDefinedClass jClass = aClassOutline.implClass;
@@ -201,12 +220,13 @@ public class PluginUBLValue extends Plugin
               }
           }
           else
-            System.err.println ("Failed to load " + sSuperClassName);
+            s_aLogger.warn ("Failed to load " + sSuperClassName);
         }
       }
     }
 
-    System.out.println ("!!!Found the following super-classes " + aAllSuperClassNames);
+    if (s_aLogger.isDebugEnabled ())
+      s_aLogger.debug ("Found the following super-classes " + aAllSuperClassNames);
 
     final ICommonsMap <JClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
 

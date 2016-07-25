@@ -154,6 +154,7 @@
               <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
             </episode>
           </episodes>
+          
         </configuration>
         <dependencies>
           <dependency>
@@ -181,7 +182,7 @@
             </goals>
             <configuration>
               <target>
-                <delete dir="${basedir}/target/generated-sources/ubl21/com/" />
+                <delete dir="${basedir}/target/generated-sources/ubl20/un/unece/uncefact/data/specification/corecomponenttypeschemamodule" />
               </target>
             </configuration>
           </execution>

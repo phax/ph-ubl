@@ -14,8 +14,7 @@ public final class InvoiceTypeTest
     if (aMTT != null)
     {
       // Ensure the "Amount getter" is created
-      // TODO
-      // aMTT.getTaxInclusiveAmountValue ();
+      aMTT.getTaxInclusiveAmountValue ();
     }
   }
 }
