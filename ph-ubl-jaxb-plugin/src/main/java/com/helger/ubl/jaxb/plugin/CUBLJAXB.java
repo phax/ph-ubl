@@ -27,6 +27,7 @@ import javax.annotation.concurrent.Immutable;
 public final class CUBLJAXB
 {
   public static final String NSURI_PH_UBL = "http://www.helger.com/namespaces/jaxb22/ubl-plugin";
+  public static final String PLUGIN_NAME = "ph-ubl-jaxb-plugin";
 
   private CUBLJAXB ()
   {}

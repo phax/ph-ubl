@@ -16,6 +16,7 @@
  */
 package com.helger.ubl.jaxb.plugin;
 
+import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -27,11 +28,14 @@ import org.xml.sax.ErrorHandler;
 
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.IsSPIImplementation;
+import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsHashMap;
 import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsMap;
 import com.helger.commons.collection.ext.ICommonsSet;
+import com.helger.commons.lang.GenericReflection;
+import com.sun.codemodel.JClass;
 import com.sun.codemodel.JCodeModel;
 import com.sun.codemodel.JConditional;
 import com.sun.codemodel.JDefinedClass;
@@ -81,18 +85,35 @@ public class PluginUBLValue extends Plugin
     return CollectionHelper.makeUnmodifiable (CUBLJAXB.NSURI_PH_UBL);
   }
 
-  private void _recursiveAddValueConstructorToDerivedClasses (@Nonnull final Outline aOutline,
-                                                              @Nonnull final JDefinedClass jParentClass,
-                                                              @Nonnull final JType aValueType,
-                                                              @Nonnull final Set <JDefinedClass> aAllRelevantClasses)
+  private void _addDefaultCtors (@Nonnull final Outline aOutline)
   {
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
       final JDefinedClass jClass = aClassOutline.implClass;
-      if (jClass._extends () == jParentClass)
+
+      // Always add default constructor
+      final JMethod aDefCtor = jClass.constructor (JMod.PUBLIC);
+      aDefCtor.javadoc ().add ("Default constructor");
+      aDefCtor.javadoc ().add (AUTHOR);
+
+      // General information
+      jClass.javadoc ()
+            .add ("<p>This class contains methods created by " + CUBLJAXB.PLUGIN_NAME + " -" + OPT + "</p>\n");
+    }
+  }
+
+  private void _recursiveAddValueConstructorToDerivedClasses (@Nonnull final Outline aOutline,
+                                                              @Nonnull final JDefinedClass jParentClass,
+                                                              @Nonnull final JType aValueType,
+                                                              @Nonnull final Set <JClass> aAllRelevantClasses)
+  {
+    for (final ClassOutline aClassOutline : aOutline.getClasses ())
+    {
+      final JDefinedClass jCurClass = aClassOutline.implClass;
+      if (jCurClass._extends () == jParentClass)
       {
-        aAllRelevantClasses.add (jClass);
-        final JMethod aValueCtor = jClass.constructor (JMod.PUBLIC);
+        aAllRelevantClasses.add (jCurClass);
+        final JMethod aValueCtor = jCurClass.constructor (JMod.PUBLIC);
         final JVar aParam = aValueCtor.param (JMod.FINAL, aValueType, "valueParam");
         if (!aValueType.isPrimitive ())
           aParam.annotate (Nullable.class);
@@ -105,14 +126,14 @@ public class PluginUBLValue extends Plugin
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set in all derived classes
-        _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
+        _recursiveAddValueConstructorToDerivedClasses (aOutline, jCurClass, aValueType, aAllRelevantClasses);
       }
     }
   }
 
   private void _addValueSetterInUsingClasses (@Nonnull final Outline aOutline,
                                               @Nonnull final JType aValueType,
-                                              @Nonnull final Set <JDefinedClass> aAllRelevantClasses)
+                                              @Nonnull final Set <JClass> aAllRelevantClasses)
   {
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
@@ -150,6 +171,97 @@ public class PluginUBLValue extends Plugin
     }
   }
 
+  @Nonnull
+  @ReturnsMutableCopy
+  private ICommonsMap <JClass, JType> _addValueCtors (@Nonnull final Outline aOutline)
+  {
+    final ICommonsMap <String, JType> aAllSuperClassNames = new CommonsHashMap<> ();
+    for (final ClassOutline aClassOutline : aOutline.getClasses ())
+    {
+      final JDefinedClass jClass = aClassOutline.implClass;
+
+      // Take only "external", meaning non-generated super classes
+      if (jClass._extends () != null && !(jClass._extends () instanceof JDefinedClass))
+      {
+        final String sSuperClassName = jClass._extends ().fullName ();
+        // Ignore all system super classes
+        if (!sSuperClassName.startsWith ("java."))
+        {
+          final Class <?> aSuperClass = GenericReflection.getClassFromNameSafe (sSuperClassName);
+          if (aSuperClass != null)
+          {
+            // Check if that class has a "value" field (name of the variable
+            // created by JAXB to indicate the content of an XML element)
+            for (final Field aField : aSuperClass.getFields ())
+              if (aField.getName ().equals ("value"))
+              {
+                // Map from super class name to codemodel value field type
+                aAllSuperClassNames.put (sSuperClassName, aOutline.getCodeModel ()._ref (aField.getType ()));
+                break;
+              }
+          }
+          else
+            System.err.println ("Failed to load " + sSuperClassName);
+        }
+      }
+    }
+
+    System.out.println ("!!!Found the following super-classes " + aAllSuperClassNames);
+
+    final ICommonsMap <JClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
+
+    // Check all defined classes
+    for (final ClassOutline aClassOutline : aOutline.getClasses ())
+    {
+      final JDefinedClass jClass = aClassOutline.implClass;
+
+      JType aValueType = null;
+      if (jClass._extends () != null && !(jClass._extends () instanceof JDefinedClass))
+      {
+        aValueType = aAllSuperClassNames.get (jClass._extends ().fullName ());
+      }
+      else
+      {
+        // Check if that class has a "value" member (name of the variable
+        // created by JAXB to indicate the content of an XML element)
+        for (final JFieldVar aField : jClass.fields ().values ())
+          if (aField.name ().equals ("value"))
+          {
+            aValueType = aField.type ();
+            break;
+          }
+      }
+      if (aValueType != null)
+      {
+        // Create constructor with value (if available)
+        final JMethod aValueCtor = jClass.constructor (JMod.PUBLIC);
+        final JVar aParam = aValueCtor.param (JMod.FINAL, aValueType, "valueParam");
+        if (!aValueType.isPrimitive ())
+          aParam.annotate (Nullable.class);
+        aValueCtor.body ().invoke ("setValue").arg (aParam);
+        aValueCtor.javadoc ().add ("Constructor for value of type " + aValueType.name ());
+        aValueCtor.javadoc ()
+                  .addParam (aParam)
+                  .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
+        aValueCtor.javadoc ().add (AUTHOR);
+
+        // Set constructor in all derived classes
+        final ICommonsSet <JClass> aAllRelevantClasses = new CommonsHashSet<> ();
+        aAllRelevantClasses.add (jClass);
+        _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
+
+        for (final JClass jRelevantClass : aAllRelevantClasses)
+          aAllCtorClasses.put (jRelevantClass, aValueType);
+
+        // Add additional setters in all classes that have a setter with one of
+        // the relevant classes
+        _addValueSetterInUsingClasses (aOutline, aValueType, aAllRelevantClasses);
+      }
+    }
+
+    return aAllCtorClasses;
+  }
+
   /**
    * Create all getter
    *
@@ -158,8 +270,7 @@ public class PluginUBLValue extends Plugin
    * @param aAllCtorClasses
    *        Map from class with value (direct and derived) to value type
    */
-  private void _addValueGetter (@Nonnull final Outline aOutline,
-                                @Nonnull final Map <JDefinedClass, JType> aAllCtorClasses)
+  private void _addValueGetter (@Nonnull final Outline aOutline, @Nonnull final Map <JClass, JType> aAllCtorClasses)
   {
     final JCodeModel aCodeModel = aOutline.getCodeModel ();
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
@@ -239,53 +350,9 @@ public class PluginUBLValue extends Plugin
                       @Nonnull final Options aOpts,
                       @Nonnull final ErrorHandler aErrorHandler)
   {
-    final ICommonsMap <JDefinedClass, JType> aAllCtorClasses = new CommonsHashMap <> ();
-    for (final ClassOutline aClassOutline : aOutline.getClasses ())
-    {
-      final JDefinedClass jClass = aClassOutline.implClass;
+    _addDefaultCtors (aOutline);
 
-      // Always add default constructor
-      {
-        final JMethod aDefCtor = jClass.constructor (JMod.PUBLIC);
-        aDefCtor.javadoc ().add ("Default constructor");
-        aDefCtor.javadoc ().add (AUTHOR);
-      }
-
-      // Create constructor with value (if available)
-      JFieldVar aValueField = null;
-      for (final JFieldVar aField : jClass.fields ().values ())
-        if (aField.name ().equals ("value"))
-        {
-          aValueField = aField;
-          break;
-        }
-      if (aValueField != null)
-      {
-        final JType aValueType = aValueField.type ();
-        final JMethod aValueCtor = jClass.constructor (JMod.PUBLIC);
-        final JVar aParam = aValueCtor.param (JMod.FINAL, aValueType, "valueParam");
-        if (!aValueType.isPrimitive ())
-          aParam.annotate (Nullable.class);
-        aValueCtor.body ().invoke ("setValue").arg (aParam);
-        aValueCtor.javadoc ().add ("Constructor for value of type " + aValueType.name ());
-        aValueCtor.javadoc ()
-                  .addParam (aParam)
-                  .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
-        aValueCtor.javadoc ().add (AUTHOR);
-
-        // Set constructor in all derived classes
-        final ICommonsSet <JDefinedClass> aAllRelevantClasses = new CommonsHashSet <> ();
-        aAllRelevantClasses.add (jClass);
-        _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
-
-        for (final JDefinedClass jRelevantClass : aAllRelevantClasses)
-          aAllCtorClasses.put (jRelevantClass, aValueType);
-
-        // Add additional setters in all classes that have a setter with one of
-        // the relevant classes
-        _addValueSetterInUsingClasses (aOutline, aValueType, aAllRelevantClasses);
-      }
-    }
+    final ICommonsMap <JClass, JType> aAllCtorClasses = _addValueCtors (aOutline);
 
     // Create all getters
     _addValueGetter (aOutline, aAllCtorClasses);
