@@ -14,23 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package oasis.names.specification.ubl.schema.xsd.invoice_21;
+package oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_2;
+
+import static org.junit.Assert.assertNull;
+
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.junit.Test;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.MonetaryTotalType;
-
-public final class InvoiceTypeTest
+public final class ActualDeliveryDateTypeTest
 {
   @Test
-  public void testInvoiceType ()
+  public void testCtor ()
   {
-    final InvoiceType aInvoice = new InvoiceType ();
-    final MonetaryTotalType aMTT = aInvoice.getLegalMonetaryTotal ();
-    if (aMTT != null)
-    {
-      // Ensure the "Amount getter" is created
-      aMTT.getTaxInclusiveAmountValue ();
-    }
+    final ActualDeliveryDateType x = new ActualDeliveryDateType ((XMLGregorianCalendar) null);
+    assertNull (x.getValue ());
   }
 }

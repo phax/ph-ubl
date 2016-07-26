@@ -144,8 +144,10 @@ public class PluginUBLValue extends Plugin
     {
       final JDefinedClass jClass = aClassOutline.implClass;
       for (final JMethod aMethod : CollectionHelper.newList (jClass.methods ()))
+        // Must be a setter
         if (aMethod.name ().startsWith ("set"))
         {
+          // Must have exactly 1 parameter that is part of aAllRelevantClasses
           final List <JVar> aParams = aMethod.params ();
           if (aParams.size () == 1 && aAllRelevantClasses.contains (aParams.get (0).type ()))
           {
@@ -236,21 +238,22 @@ public class PluginUBLValue extends Plugin
       final JDefinedClass jClass = aClassOutline.implClass;
 
       JType aValueType = null;
-      if (jClass._extends () != null && !(jClass._extends () instanceof JDefinedClass))
+      // Check if that class has a "value" member (name of the variable
+      // created by JAXB to indicate the content of an XML element)
+      for (final JFieldVar aField : jClass.fields ().values ())
+        if (aField.name ().equals ("value"))
+        {
+          aValueType = aField.type ();
+          break;
+        }
+
+      if (aValueType == null && jClass._extends () != null && !(jClass._extends () instanceof JDefinedClass))
       {
+        // Check only super classes that are not defined in this generation run
+        // but e.g. imported via episodes (bindings)
         aValueType = aAllSuperClassNames.get (jClass._extends ().fullName ());
       }
-      else
-      {
-        // Check if that class has a "value" member (name of the variable
-        // created by JAXB to indicate the content of an XML element)
-        for (final JFieldVar aField : jClass.fields ().values ())
-          if (aField.name ().equals ("value"))
-          {
-            aValueType = aField.type ();
-            break;
-          }
-      }
+
       if (aValueType != null)
       {
         // Create constructor with value (if available)
@@ -277,6 +280,8 @@ public class PluginUBLValue extends Plugin
         // the relevant classes
         _addValueSetterInUsingClasses (aOutline, aValueType, aAllRelevantClasses);
       }
+      else
+        s_aLogger.info (jClass.getClass ().getSimpleName () + " " + jClass.fullName () + " is not a value-based class");
     }
 
     return aAllCtorClasses;

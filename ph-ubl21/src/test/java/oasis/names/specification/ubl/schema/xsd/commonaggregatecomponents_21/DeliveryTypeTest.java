@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package oasis.names.specification.ubl.schema.xsd.invoice_21;
+package oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21;
+
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.MonetaryTotalType;
-
-public final class InvoiceTypeTest
+/**
+ * Test class for class {@link DeliveryType}.
+ *
+ * @author Philip Helger
+ */
+public final class DeliveryTypeTest
 {
   @Test
-  public void testInvoiceType ()
+  public void testGetterAndSetterPresent ()
   {
-    final InvoiceType aInvoice = new InvoiceType ();
-    final MonetaryTotalType aMTT = aInvoice.getLegalMonetaryTotal ();
-    if (aMTT != null)
-    {
-      // Ensure the "Amount getter" is created
-      aMTT.getTaxInclusiveAmountValue ();
-    }
+    final DeliveryType x = new DeliveryType ();
+    assertNull (x.getActualDeliveryDateValue ());
   }
 }
