@@ -25,7 +25,7 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
 import com.helger.xml.serialize.read.DOMReader;
@@ -54,7 +54,7 @@ public final class UBLTRFuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBLTRValidator.cancelUserAccount ().validate (aUBLObject);
+      IErrorList aErrors = UBLTRValidator.cancelUserAccount ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -76,7 +76,7 @@ public final class UBLTRFuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBLTRValidator.cancelUserAccount ().validate (new CancelUserAccountType ());
+    final IErrorList aErrors = UBLTRValidator.cancelUserAccount ().validate (new CancelUserAccountType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -94,7 +94,7 @@ public final class UBLTRFuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBLTRValidator.processUserAccount ().validate (aUBLObject);
+      IErrorList aErrors = UBLTRValidator.processUserAccount ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -116,7 +116,7 @@ public final class UBLTRFuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBLTRValidator.processUserAccount ().validate (new ProcessUserAccountType ());
+    final IErrorList aErrors = UBLTRValidator.processUserAccount ().validate (new ProcessUserAccountType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }

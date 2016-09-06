@@ -26,7 +26,7 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import com.helger.commons.error.IResourceErrorGroup;
+import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
 import com.helger.xml.serialize.read.DOMReader;
@@ -66,7 +66,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.catalogue ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.catalogue ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -89,7 +89,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.catalogue ().validate (new CatalogueType ());
+    final IErrorList aErrors = UBL20Validator.catalogue ().validate (new CatalogueType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -107,7 +107,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.creditNote ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.creditNote ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -130,7 +130,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.creditNote ().validate (new CreditNoteType ());
+    final IErrorList aErrors = UBL20Validator.creditNote ().validate (new CreditNoteType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -148,7 +148,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.despatchAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.despatchAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -171,7 +171,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.despatchAdvice ().validate (new DespatchAdviceType ());
+    final IErrorList aErrors = UBL20Validator.despatchAdvice ().validate (new DespatchAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -189,7 +189,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.forwardingInstructions ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.forwardingInstructions ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -212,8 +212,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.forwardingInstructions ()
-                                                      .validate (new ForwardingInstructionsType ());
+    final IErrorList aErrors = UBL20Validator.forwardingInstructions ().validate (new ForwardingInstructionsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -231,7 +230,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.invoice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -254,7 +253,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.invoice ().validate (new InvoiceType ());
+    final IErrorList aErrors = UBL20Validator.invoice ().validate (new InvoiceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -273,7 +272,7 @@ public final class UBL20FuncTest
       assertNull (UBL20Reader.applicationResponse ().read (aDoc));
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.order ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.order ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -296,7 +295,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.order ().validate (new OrderType ());
+    final IErrorList aErrors = UBL20Validator.order ().validate (new OrderType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -314,7 +313,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.orderResponseSimple ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.orderResponseSimple ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -337,7 +336,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.orderResponseSimple ().validate (new OrderResponseSimpleType ());
+    final IErrorList aErrors = UBL20Validator.orderResponseSimple ().validate (new OrderResponseSimpleType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -355,7 +354,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.quotation ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.quotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -378,7 +377,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.quotation ().validate (new QuotationType ());
+    final IErrorList aErrors = UBL20Validator.quotation ().validate (new QuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -396,7 +395,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.receiptAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.receiptAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -419,7 +418,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.receiptAdvice ().validate (new ReceiptAdviceType ());
+    final IErrorList aErrors = UBL20Validator.receiptAdvice ().validate (new ReceiptAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -437,7 +436,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.remittanceAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.remittanceAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -460,7 +459,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.remittanceAdvice ().validate (new RemittanceAdviceType ());
+    final IErrorList aErrors = UBL20Validator.remittanceAdvice ().validate (new RemittanceAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -478,7 +477,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.requestForQuotation ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.requestForQuotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -501,7 +500,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.requestForQuotation ().validate (new RequestForQuotationType ());
+    final IErrorList aErrors = UBL20Validator.requestForQuotation ().validate (new RequestForQuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -519,7 +518,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.statement ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.statement ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -542,7 +541,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.statement ().validate (new StatementType ());
+    final IErrorList aErrors = UBL20Validator.statement ().validate (new StatementType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -560,7 +559,7 @@ public final class UBL20FuncTest
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IResourceErrorGroup aErrors = UBL20Validator.waybill ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Validator.waybill ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -583,7 +582,7 @@ public final class UBL20FuncTest
     }
 
     // Validate
-    final IResourceErrorGroup aErrors = UBL20Validator.waybill ().validate (new WaybillType ());
+    final IErrorList aErrors = UBL20Validator.waybill ().validate (new WaybillType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
