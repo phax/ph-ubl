@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
 ﻿
 
-This is the readme file for the current version 4.5.0 - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
+This is the readme file for the current version 5.x - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
 
 Set of Java libraries for reading and writing OASIS UBL 2.0 and 2.1 documents.
 This is the successor of the phloc-ubl library.
@@ -18,7 +18,13 @@ The following projects are contained:
   * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
   
 ##News and noteworthy
- 
+
+  * v5.1.0 - 2016-09-09
+    * Binds to ph-commons 8.5.x
+  * v5.0.3 - 2016-07-26
+  * v5.0.1 - 2016-07-22 
+  * v5.0.0 - 2016-06-11
+    * Binds to ph-commons 8.x 
   * v4.5.0 - 2015-11-30
     * New API that this more flexible and contains less overloads - see the examples
     * Added the possibility to easily customize the namespace prefix mapping and other things
@@ -38,7 +44,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>4.5.0</version>
+  <version>5.1.0</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -51,7 +57,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>4.5.0</version>
+  <version>5.1.0</version>
 </dependency>
 ```
 
@@ -61,7 +67,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>4.5.0</version>
+  <version>5.1.0</version>
 </dependency>
 ```
 
@@ -72,7 +78,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>4.5.0</version>
+  <version>5.1.0</version>
 </dependency>
 ```
 
@@ -82,7 +88,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>4.5.0</version>
+  <version>5.1.0</version>
 </dependency>
 ```
 
