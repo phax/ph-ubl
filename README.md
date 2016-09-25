@@ -16,6 +16,7 @@ The following projects are contained:
   * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
   * **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
   * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
+  * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
   
 ##News and noteworthy
 
@@ -92,6 +93,17 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 </dependency>
 ```
 
+#Maven usage UBL-tr
+To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
+
+```
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-ubltr</artifactId>
+  <version>5.1.0</version>
+</dependency>
+```
+
 #Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
@@ -102,6 +114,7 @@ Binary versions of the artefacts can be downloaded from Maven Central:
   * http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubltr/
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
 
@@ -116,6 +129,7 @@ For further information on the Universal Business Language can be found on the f
   * https://www.oasis-open.org/committees/ubl/
   * http://ubl.xml.org
   * http://goubl.com
+  * http://www.ubltr.com/
 
 ---
 
