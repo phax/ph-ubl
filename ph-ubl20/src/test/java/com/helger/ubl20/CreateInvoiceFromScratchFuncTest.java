@@ -1,4 +1,4 @@
-package com.helger.ubl21;
+package com.helger.ubl20;
 
 import static org.junit.Assert.assertTrue;
 
@@ -10,15 +10,16 @@ import org.junit.Test;
 import com.helger.commons.state.ESuccess;
 import com.helger.datetime.util.PDTXMLConverter;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.CustomerPartyType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.InvoiceLineType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.ItemType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.MonetaryTotalType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.SupplierPartyType;
-import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.CustomerPartyType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.InvoiceLineType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.ItemType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.MonetaryTotalType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.SupplierPartyType;
+import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
+import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 
 /**
- * Create a minimal UBL 2.1 invoice from scratch.
+ * Create a minimal UBL 2.0 invoice from scratch.
  *
  * @author Philip Helger
  */
@@ -27,7 +28,7 @@ public final class CreateInvoiceFromScratchFuncTest
   @Test
   public void testCreateInvoiceFromScratch ()
   {
-    final String sCurrency = "EUR";
+    final CurrencyCodeContentType eCurrency = CurrencyCodeContentType.EUR;
 
     final InvoiceType aInvoice = new InvoiceType ();
     aInvoice.setID ("Dummy Invoice number");
@@ -40,7 +41,7 @@ public final class CreateInvoiceFromScratchFuncTest
     aInvoice.setAccountingCustomerParty (aCustomer);
 
     final MonetaryTotalType aMT = new MonetaryTotalType ();
-    aMT.setPayableAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+    aMT.setPayableAmount (BigDecimal.TEN).setCurrencyID (eCurrency);
     aInvoice.setLegalMonetaryTotal (aMT);
 
     final InvoiceLineType aLine = new InvoiceLineType ();
@@ -49,11 +50,11 @@ public final class CreateInvoiceFromScratchFuncTest
     final ItemType aItem = new ItemType ();
     aLine.setItem (aItem);
 
-    aLine.setLineExtensionAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+    aLine.setLineExtensionAmount (BigDecimal.TEN).setCurrencyID (eCurrency);
 
     aInvoice.addInvoiceLine (aLine);
 
-    final ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
+    final ESuccess eSuccess = UBL20Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 }

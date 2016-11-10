@@ -77,6 +77,11 @@
       <artifactId>ph-ubl-testfiles</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-datetime</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
