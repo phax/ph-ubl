@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -14,6 +15,7 @@ import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.collection.ext.CommonsArrayList;
 import com.helger.commons.collection.ext.CommonsHashMap;
+import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsList;
 import com.helger.commons.collection.ext.ICommonsMap;
 import com.helger.commons.collection.impl.NonBlockingStack;
@@ -121,6 +123,7 @@ public class MainFindOccurrances
 
   private static final class StackElement
   {
+    @SuppressWarnings ("unused")
     final Class <?> m_aClass;
     final String m_sXMLName;
 
@@ -157,45 +160,53 @@ public class MainFindOccurrances
     return aPerClassData;
   }
 
+  private static int i = 0;
+
   private static void _findAllRecursive (@Nonnull final Class <?> aStartClass,
                                          @Nonnull final Class <?> aFindClass,
                                          @Nonnull @Nonempty final String sXMLName,
-                                         @Nonnull final NonBlockingStack <StackElement> aStack)
+                                         @Nonnull final NonBlockingStack <StackElement> aStack,
+                                         @Nonnull final Set <Class <?>> aUniqueClasses)
   {
-    aStack.push (new StackElement (aStartClass, sXMLName));
-
-    // Find per-class data
-    PerClassData aPerClassData = s_aClassCache.get (aStartClass);
-    if (aPerClassData == null)
+    // Avoid endless loop, if the same type is already part of the stack
+    if (aUniqueClasses.add (aStartClass))
     {
-      aPerClassData = _createPerClassData (aStartClass, aFindClass);
-      s_aClassCache.put (aStartClass, aPerClassData);
-    }
+      aStack.push (new StackElement (aStartClass, sXMLName));
 
-    // Recursive always, even if data is from cache
-    for (final PerClassData.MemberData aMemberData : aPerClassData.m_aMembers)
-    {
-      // Avoid endless loop, if the same type is already part of the stack
-      if (aStack.containsNone (x -> x.m_aClass.equals (aMemberData.m_aClass)))
-        _findAllRecursive (aMemberData.m_aClass, aFindClass, aMemberData.m_sXMLName, aStack);
-    }
+      // Find per-class data
+      PerClassData aPerClassData = s_aClassCache.get (aStartClass);
+      if (aPerClassData == null)
+      {
+        aPerClassData = _createPerClassData (aStartClass, aFindClass);
+        s_aClassCache.put (aStartClass, aPerClassData);
+      }
 
-    if (aPerClassData.m_aMatches.isNotEmpty ())
-    {
-      // Found matching members
-      final String sPrefix = StringHelper.getImplodedMapped (aStack, x -> x.m_sXMLName);
-      if (false)
-        for (final Field aField : aPerClassData.m_aMatches)
-          System.out.println (sPrefix + _getXMLName (aField));
-    }
+      // Recursive always, even if data is from cache
+      for (final PerClassData.MemberData aMemberData : aPerClassData.m_aMembers)
+        _findAllRecursive (aMemberData.m_aClass, aFindClass, aMemberData.m_sXMLName, aStack, aUniqueClasses);
 
-    aStack.pop ();
+      if (aPerClassData.m_aMatches.isNotEmpty ())
+      {
+        // Found matching members
+        final String sPrefix = StringHelper.getImplodedMapped (aStack, x -> x.m_sXMLName);
+        if (false)
+          for (final Field aField : aPerClassData.m_aMatches)
+            System.out.println (++i + sPrefix + _getXMLName (aField));
+      }
+
+      aStack.pop ();
+      aUniqueClasses.remove (aStartClass);
+    }
   }
 
   public static void findAll (final Class <?> aStartClass, final Class <?> aFindClass)
   {
     final NonBlockingStack <StackElement> aStack = new NonBlockingStack<> ();
-    _findAllRecursive (aStartClass, aFindClass, StringHelper.trimEnd (aStartClass.getSimpleName (), "Type"), aStack);
+    _findAllRecursive (aStartClass,
+                       aFindClass,
+                       StringHelper.trimEnd (aStartClass.getSimpleName (), "Type"),
+                       aStack,
+                       new CommonsHashSet<> ());
   }
 
   public static void main (final String [] args)
