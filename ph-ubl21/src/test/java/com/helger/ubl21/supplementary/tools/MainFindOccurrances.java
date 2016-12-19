@@ -24,11 +24,14 @@ import oasis.names.specification.ubl.schema.xsd.order_21.OrderType;
 
 public class MainFindOccurrances
 {
-  private static boolean _isSystemClass (final Class <?> aMemberClass)
+  private static boolean _isSystemClass (@Nonnull final Class <?> aMemberClass)
   {
     final Package aPackage = aMemberClass.getPackage ();
     if (aPackage == null)
+    {
+      // E.g. for primitive type
       return true;
+    }
     final String sPackageName = aPackage.getName ();
     return sPackageName.startsWith ("java.");
   }
@@ -83,7 +86,7 @@ public class MainFindOccurrances
    * @return Never <code>null</code>.
    */
   @Nonnull
-  public static String _getXMLName (final Field aField)
+  public static String _getXMLName (@Nonnull final Field aField)
   {
     final XmlElement aElement = aField.getAnnotation (XmlElement.class);
     if (aElement != null)
@@ -123,56 +126,67 @@ public class MainFindOccurrances
 
     public StackElement (@Nonnull final Class <?> aClass, @Nonnull final String sXMLName)
     {
-      m_aClass = aClass;
+      m_aClass = ValueEnforcer.notNull (aClass, "Class");
       m_sXMLName = ValueEnforcer.notEmpty (sXMLName, "XMLName");
     }
   }
 
-  private static void _findAll (final Class <?> aStartClass,
-                                final Class <?> aFindClass,
-                                @Nonnull @Nonempty final String sXMLName,
-                                @Nonnull final NonBlockingStack <StackElement> aStack)
+  @Nonnull
+  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass,
+                                                  @Nonnull final Class <?> aFindClass)
+  {
+    final PerClassData aPerClassData = new PerClassData ();
+    for (final Field aField : getAllFields (aStartClass))
+    {
+      Class <?> aMemberClass = aField.getType ();
+      if (List.class.isAssignableFrom (aMemberClass))
+      {
+        // Get type of List
+        final Type aGenericFieldType = aField.getGenericType ();
+        aMemberClass = (Class <?>) ((ParameterizedType) aGenericFieldType).getActualTypeArguments ()[0];
+      }
+
+      // Matching class?
+      if (aMemberClass.equals (aFindClass))
+        aPerClassData.m_aMatches.add (aField);
+
+      // Recurse into class?
+      if (!_isSystemClass (aMemberClass))
+        aPerClassData.m_aMembers.add (new PerClassData.MemberData (aField, aMemberClass));
+    }
+    return aPerClassData;
+  }
+
+  private static void _findAllRecursive (@Nonnull final Class <?> aStartClass,
+                                         @Nonnull final Class <?> aFindClass,
+                                         @Nonnull @Nonempty final String sXMLName,
+                                         @Nonnull final NonBlockingStack <StackElement> aStack)
   {
     aStack.push (new StackElement (aStartClass, sXMLName));
 
+    // Find per-class data
     PerClassData aPerClassData = s_aClassCache.get (aStartClass);
     if (aPerClassData == null)
     {
-      aPerClassData = new PerClassData ();
-      // Already put in map to avoid endless recursion if a type contains itself
+      aPerClassData = _createPerClassData (aStartClass, aFindClass);
       s_aClassCache.put (aStartClass, aPerClassData);
-
-      for (final Field aField : getAllFields (aStartClass))
-      {
-        Class <?> aMemberClass = aField.getType ();
-        if (List.class.isAssignableFrom (aMemberClass))
-        {
-          final Type aGenericFieldType = aField.getGenericType ();
-          aMemberClass = (Class <?>) ((ParameterizedType) aGenericFieldType).getActualTypeArguments ()[0];
-        }
-
-        if (false)
-          System.out.println ("  " + aField.getName () + " - " + aMemberClass.getName ());
-
-        // Matching class?
-        if (aMemberClass.equals (aFindClass))
-          aPerClassData.m_aMatches.add (aField);
-
-        // Recurse down
-        if (!_isSystemClass (aMemberClass))
-          aPerClassData.m_aMembers.add (new PerClassData.MemberData (aField, aMemberClass));
-      }
     }
 
+    // Recursive always, even if data is from cache
     for (final PerClassData.MemberData aMemberData : aPerClassData.m_aMembers)
+    {
+      // Avoid endless loop, if the same type is already part of the stack
       if (aStack.containsNone (x -> x.m_aClass.equals (aMemberData.m_aClass)))
-        _findAll (aMemberData.m_aClass, aFindClass, aMemberData.m_sXMLName, aStack);
+        _findAllRecursive (aMemberData.m_aClass, aFindClass, aMemberData.m_sXMLName, aStack);
+    }
 
     if (aPerClassData.m_aMatches.isNotEmpty ())
     {
+      // Found matching members
       final String sPrefix = StringHelper.getImplodedMapped (aStack, x -> x.m_sXMLName);
-      for (final Field aField : aPerClassData.m_aMatches)
-        System.out.println (sPrefix + _getXMLName (aField));
+      if (false)
+        for (final Field aField : aPerClassData.m_aMatches)
+          System.out.println (sPrefix + _getXMLName (aField));
     }
 
     aStack.pop ();
@@ -181,7 +195,7 @@ public class MainFindOccurrances
   public static void findAll (final Class <?> aStartClass, final Class <?> aFindClass)
   {
     final NonBlockingStack <StackElement> aStack = new NonBlockingStack<> ();
-    _findAll (aStartClass, aFindClass, StringHelper.trimEnd (aStartClass.getSimpleName (), "Type"), aStack);
+    _findAllRecursive (aStartClass, aFindClass, StringHelper.trimEnd (aStartClass.getSimpleName (), "Type"), aStack);
   }
 
   public static void main (final String [] args)
