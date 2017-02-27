@@ -17,8 +17,8 @@
 package com.helger.ubl21.supplementary.tools;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 
-import com.helger.commons.charset.CCharset;
 import com.helger.commons.io.file.SimpleFileIO;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
 import com.helger.ubl21.EUBL21DocumentType;
@@ -130,21 +130,21 @@ public class MainCreateUBL21ActionCode extends AbstractCreateUBLActionCode
       append (e, EPhase.READ, aSB, "UBL21ReaderBuilder");
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Reader.java"),
                             aSB.append ("}").toString (),
-                            CCharset.CHARSET_UTF_8_OBJ);
+                            StandardCharsets.UTF_8);
 
     aSB = new StringBuilder (_getPrefix ("Write", "UBL21Writer"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
       append (e, EPhase.WRITE, aSB, "UBL21WriterBuilder");
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Writer.java"),
                             aSB.append ("}").toString (),
-                            CCharset.CHARSET_UTF_8_OBJ);
+                            StandardCharsets.UTF_8);
 
     aSB = new StringBuilder (_getPrefix ("Validate", "UBL21Validator"));
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
       append (e, EPhase.VALIDATE, aSB, "UBL21ValidatorBuilder");
     SimpleFileIO.writeFile (new File ("src/main/java/com/helger/ubl21/UBL21Validator.java"),
                             aSB.append ("}").toString (),
-                            CCharset.CHARSET_UTF_8_OBJ);
+                            StandardCharsets.UTF_8);
 
     System.out.println ("Done");
   }

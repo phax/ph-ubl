@@ -20,6 +20,8 @@ The following projects are contained:
   
 ##News and noteworthy
 
+  * v5.1.1 - work in progress
+    * Binds to ph-commons 8.6.2
   * v5.1.0 - 2016-09-09
     * Binds to ph-commons 8.5.x
   * v5.0.3 - 2016-07-26
