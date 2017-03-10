@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>WeighingMethodCode</ShortName>
+      <LongName xml:lang="en">Weighing Method Code</LongName>
+      <LongName Identifier="listID">IMO SOLAS</LongName>
+      <Version>2015-02</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:WeighingMethodCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:WeighingMethodCode:2.2</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/WeighinghodCodeMet-2.2.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="application/pdf">http://www.imo.org/en/OurWork/Safety/Cargoes/Containers/Documents/MSC.1%20Circ.1475.pdf</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">International Maritime Organization</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">54</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+        <Annotation>
+          <Description>
+            <html:p xmlns:html="http://www.w3.org/1999/xhtml">
+              The code values are obtained from
+              <html:a href="http://www.smdg.org/assets/assets/VERMAS-10.pdf">
+                those used in the UN/EDIFACT message
+              </html:a>.
+            </html:p>
+          </Description>
+        </Annotation>
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+        <Annotation>
+          <Description>
+            <html:p xmlns:html="http://www.w3.org/1999/xhtml">
+              The name values are obtained from
+              <html:a href="http://www.smdg.org/assets/assets/VERMAS-10.pdf">
+                those used in the UN/EDIFACT message
+              </html:a>.
+            </html:p>
+          </Description>
+        </Annotation>
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+        <Annotation>
+          <Description>
+            <html:p xmlns:html="http://www.w3.org/1999/xhtml">
+              The summary descriptions are obtained from
+              <html:a href="http://www.imo.org/en/MediaCentre/HotTopics/container/Pages/default.aspx">
+                this media circular published by the IMO
+              </html:a>.
+            </html:p>
+          </Description>
+        </Annotation>
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOLAS verification method 1</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Weighing the packed container using calibrated and certified equipment</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SOLAS verification method 2</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Weighing all packages and cargo items, including the mass of pallets, dunnage and other securing material to be packed in the container and adding the tare mass of the container to the sum of the single masses, using a certified method approved by the competent authority of the State in which packing of the container was completed.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>
