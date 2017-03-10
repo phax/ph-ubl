@@ -1,19 +1,3 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22;
 
 import javax.annotation.Nonnull;
@@ -25,6 +9,7 @@ import oasis.names.specification.ubl.schema.xsd.applicationresponse_22.Applicati
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_22.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.awardednotification_22.AwardedNotificationType;
 import oasis.names.specification.ubl.schema.xsd.billoflading_22.BillOfLadingType;
+import oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType;
 import oasis.names.specification.ubl.schema.xsd.callfortenders_22.CallForTendersType;
 import oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType;
 import oasis.names.specification.ubl.schema.xsd.cataloguedeletion_22.CatalogueDeletionType;
@@ -86,10 +71,9 @@ import oasis.names.specification.ubl.schema.xsd.transportservicedescriptionreque
 import oasis.names.specification.ubl.schema.xsd.unawardednotification_22.UnawardedNotificationType;
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_22.UtilityStatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_22.WaybillType;
-
 /**
- * Validate all UBL 2.2 document types.
- *
+ * Validate all UBL 2.1 document types.
+ * 
  * @author Philip Helger
  */
 @NotThreadSafe
@@ -98,721 +82,203 @@ public final class UBL22Validator
   @PresentForCodeCoverage
   private static final UBL22Validator s_aInstance = new UBL22Validator ();
 
-  private UBL22Validator ()
-  {}
-
-  /**
-   * Create a validation builder for ApplicationResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ApplicationResponseType> applicationResponse ()
-  {
-    return UBL22ValidatorBuilder.create (ApplicationResponseType.class);
-  }
-
-  /**
-   * Create a validation builder for AttachedDocument.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <AttachedDocumentType> attachedDocument ()
-  {
-    return UBL22ValidatorBuilder.create (AttachedDocumentType.class);
-  }
-
-  /**
-   * Create a validation builder for AwardedNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <AwardedNotificationType> awardedNotification ()
-  {
-    return UBL22ValidatorBuilder.create (AwardedNotificationType.class);
-  }
-
-  /**
-   * Create a validation builder for BillOfLading.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <BillOfLadingType> billOfLading ()
-  {
-    return UBL22ValidatorBuilder.create (BillOfLadingType.class);
-  }
-
-  /**
-   * Create a validation builder for CallForTenders.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CallForTendersType> callForTenders ()
-  {
-    return UBL22ValidatorBuilder.create (CallForTendersType.class);
-  }
-
-  /**
-   * Create a validation builder for Catalogue.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CatalogueType> catalogue ()
-  {
-    return UBL22ValidatorBuilder.create (CatalogueType.class);
-  }
-
-  /**
-   * Create a validation builder for CatalogueDeletion.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CatalogueDeletionType> catalogueDeletion ()
-  {
-    return UBL22ValidatorBuilder.create (CatalogueDeletionType.class);
-  }
-
-  /**
-   * Create a validation builder for CatalogueItemSpecificationUpdate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
-  {
-    return UBL22ValidatorBuilder.create (CatalogueItemSpecificationUpdateType.class);
-  }
-
-  /**
-   * Create a validation builder for CataloguePricingUpdate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
-  {
-    return UBL22ValidatorBuilder.create (CataloguePricingUpdateType.class);
-  }
-
-  /**
-   * Create a validation builder for CatalogueRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CatalogueRequestType> catalogueRequest ()
-  {
-    return UBL22ValidatorBuilder.create (CatalogueRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for CertificateOfOrigin.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CertificateOfOriginType> certificateOfOrigin ()
-  {
-    return UBL22ValidatorBuilder.create (CertificateOfOriginType.class);
-  }
-
-  /**
-   * Create a validation builder for ContractAwardNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ContractAwardNoticeType> contractAwardNotice ()
-  {
-    return UBL22ValidatorBuilder.create (ContractAwardNoticeType.class);
-  }
-
-  /**
-   * Create a validation builder for ContractNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ContractNoticeType> contractNotice ()
-  {
-    return UBL22ValidatorBuilder.create (ContractNoticeType.class);
-  }
-
-  /**
-   * Create a validation builder for CreditNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <CreditNoteType> creditNote ()
-  {
-    return UBL22ValidatorBuilder.create (CreditNoteType.class);
-  }
-
-  /**
-   * Create a validation builder for DebitNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <DebitNoteType> debitNote ()
-  {
-    return UBL22ValidatorBuilder.create (DebitNoteType.class);
-  }
-
-  /**
-   * Create a validation builder for DespatchAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <DespatchAdviceType> despatchAdvice ()
-  {
-    return UBL22ValidatorBuilder.create (DespatchAdviceType.class);
-  }
-
-  /**
-   * Create a validation builder for DocumentStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <DocumentStatusType> documentStatus ()
-  {
-    return UBL22ValidatorBuilder.create (DocumentStatusType.class);
-  }
-
-  /**
-   * Create a validation builder for DocumentStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <DocumentStatusRequestType> documentStatusRequest ()
-  {
-    return UBL22ValidatorBuilder.create (DocumentStatusRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for ExceptionCriteria.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ExceptionCriteriaType> exceptionCriteria ()
-  {
-    return UBL22ValidatorBuilder.create (ExceptionCriteriaType.class);
-  }
-
-  /**
-   * Create a validation builder for ExceptionNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ExceptionNotificationType> exceptionNotification ()
-  {
-    return UBL22ValidatorBuilder.create (ExceptionNotificationType.class);
-  }
-
-  /**
-   * Create a validation builder for Forecast.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ForecastType> forecast ()
-  {
-    return UBL22ValidatorBuilder.create (ForecastType.class);
-  }
-
-  /**
-   * Create a validation builder for ForecastRevision.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ForecastRevisionType> forecastRevision ()
-  {
-    return UBL22ValidatorBuilder.create (ForecastRevisionType.class);
-  }
-
-  /**
-   * Create a validation builder for ForwardingInstructions.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ForwardingInstructionsType> forwardingInstructions ()
-  {
-    return UBL22ValidatorBuilder.create (ForwardingInstructionsType.class);
-  }
-
-  /**
-   * Create a validation builder for FreightInvoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <FreightInvoiceType> freightInvoice ()
-  {
-    return UBL22ValidatorBuilder.create (FreightInvoiceType.class);
-  }
-
-  /**
-   * Create a validation builder for FulfilmentCancellation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <FulfilmentCancellationType> fulfilmentCancellation ()
-  {
-    return UBL22ValidatorBuilder.create (FulfilmentCancellationType.class);
-  }
-
-  /**
-   * Create a validation builder for GoodsItemItinerary.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <GoodsItemItineraryType> goodsItemItinerary ()
-  {
-    return UBL22ValidatorBuilder.create (GoodsItemItineraryType.class);
-  }
-
-  /**
-   * Create a validation builder for GuaranteeCertificate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <GuaranteeCertificateType> guaranteeCertificate ()
-  {
-    return UBL22ValidatorBuilder.create (GuaranteeCertificateType.class);
-  }
-
-  /**
-   * Create a validation builder for InstructionForReturns.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <InstructionForReturnsType> instructionForReturns ()
-  {
-    return UBL22ValidatorBuilder.create (InstructionForReturnsType.class);
-  }
-
-  /**
-   * Create a validation builder for InventoryReport.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <InventoryReportType> inventoryReport ()
-  {
-    return UBL22ValidatorBuilder.create (InventoryReportType.class);
-  }
-
-  /**
-   * Create a validation builder for Invoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <InvoiceType> invoice ()
-  {
-    return UBL22ValidatorBuilder.create (InvoiceType.class);
-  }
-
-  /**
-   * Create a validation builder for ItemInformationRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ItemInformationRequestType> itemInformationRequest ()
-  {
-    return UBL22ValidatorBuilder.create (ItemInformationRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for Order.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <OrderType> order ()
-  {
-    return UBL22ValidatorBuilder.create (OrderType.class);
-  }
-
-  /**
-   * Create a validation builder for OrderCancellation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <OrderCancellationType> orderCancellation ()
-  {
-    return UBL22ValidatorBuilder.create (OrderCancellationType.class);
-  }
-
-  /**
-   * Create a validation builder for OrderChange.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <OrderChangeType> orderChange ()
-  {
-    return UBL22ValidatorBuilder.create (OrderChangeType.class);
-  }
-
-  /**
-   * Create a validation builder for OrderResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <OrderResponseType> orderResponse ()
-  {
-    return UBL22ValidatorBuilder.create (OrderResponseType.class);
-  }
-
-  /**
-   * Create a validation builder for OrderResponseSimple.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <OrderResponseSimpleType> orderResponseSimple ()
-  {
-    return UBL22ValidatorBuilder.create (OrderResponseSimpleType.class);
-  }
-
-  /**
-   * Create a validation builder for PackingList.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <PackingListType> packingList ()
-  {
-    return UBL22ValidatorBuilder.create (PackingListType.class);
-  }
-
-  /**
-   * Create a validation builder for PriorInformationNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <PriorInformationNoticeType> priorInformationNotice ()
-  {
-    return UBL22ValidatorBuilder.create (PriorInformationNoticeType.class);
-  }
-
-  /**
-   * Create a validation builder for ProductActivity.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ProductActivityType> productActivity ()
-  {
-    return UBL22ValidatorBuilder.create (ProductActivityType.class);
-  }
-
-  /**
-   * Create a validation builder for Quotation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <QuotationType> quotation ()
-  {
-    return UBL22ValidatorBuilder.create (QuotationType.class);
-  }
-
-  /**
-   * Create a validation builder for ReceiptAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ReceiptAdviceType> receiptAdvice ()
-  {
-    return UBL22ValidatorBuilder.create (ReceiptAdviceType.class);
-  }
-
-  /**
-   * Create a validation builder for Reminder.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <ReminderType> reminder ()
-  {
-    return UBL22ValidatorBuilder.create (ReminderType.class);
-  }
-
-  /**
-   * Create a validation builder for RemittanceAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <RemittanceAdviceType> remittanceAdvice ()
-  {
-    return UBL22ValidatorBuilder.create (RemittanceAdviceType.class);
-  }
-
-  /**
-   * Create a validation builder for RequestForQuotation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <RequestForQuotationType> requestForQuotation ()
-  {
-    return UBL22ValidatorBuilder.create (RequestForQuotationType.class);
-  }
-
-  /**
-   * Create a validation builder for RetailEvent.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <RetailEventType> retailEvent ()
-  {
-    return UBL22ValidatorBuilder.create (RetailEventType.class);
-  }
-
-  /**
-   * Create a validation builder for SelfBilledCreditNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
-  {
-    return UBL22ValidatorBuilder.create (SelfBilledCreditNoteType.class);
-  }
-
-  /**
-   * Create a validation builder for SelfBilledInvoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
-  {
-    return UBL22ValidatorBuilder.create (SelfBilledInvoiceType.class);
-  }
-
-  /**
-   * Create a validation builder for Statement.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <StatementType> statement ()
-  {
-    return UBL22ValidatorBuilder.create (StatementType.class);
-  }
-
-  /**
-   * Create a validation builder for StockAvailabilityReport.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <StockAvailabilityReportType> stockAvailabilityReport ()
-  {
-    return UBL22ValidatorBuilder.create (StockAvailabilityReportType.class);
-  }
-
-  /**
-   * Create a validation builder for Tender.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TenderType> tender ()
-  {
-    return UBL22ValidatorBuilder.create (TenderType.class);
-  }
-
-  /**
-   * Create a validation builder for TendererQualification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TendererQualificationType> tendererQualification ()
-  {
-    return UBL22ValidatorBuilder.create (TendererQualificationType.class);
-  }
-
-  /**
-   * Create a validation builder for TendererQualificationResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TendererQualificationResponseType> tendererQualificationResponse ()
-  {
-    return UBL22ValidatorBuilder.create (TendererQualificationResponseType.class);
-  }
-
-  /**
-   * Create a validation builder for TenderReceipt.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TenderReceiptType> tenderReceipt ()
-  {
-    return UBL22ValidatorBuilder.create (TenderReceiptType.class);
-  }
-
-  /**
-   * Create a validation builder for TradeItemLocationProfile.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TradeItemLocationProfileType> tradeItemLocationProfile ()
-  {
-    return UBL22ValidatorBuilder.create (TradeItemLocationProfileType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportationStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportationStatusType> transportationStatus ()
-  {
-    return UBL22ValidatorBuilder.create (TransportationStatusType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportationStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportationStatusRequestType> transportationStatusRequest ()
-  {
-    return UBL22ValidatorBuilder.create (TransportationStatusRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportExecutionPlan.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportExecutionPlanType> transportExecutionPlan ()
-  {
-    return UBL22ValidatorBuilder.create (TransportExecutionPlanType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportExecutionPlanRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
-  {
-    return UBL22ValidatorBuilder.create (TransportExecutionPlanRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportProgressStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportProgressStatusType> transportProgressStatus ()
-  {
-    return UBL22ValidatorBuilder.create (TransportProgressStatusType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportProgressStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportProgressStatusRequestType> transportProgressStatusRequest ()
-  {
-    return UBL22ValidatorBuilder.create (TransportProgressStatusRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportServiceDescription.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportServiceDescriptionType> transportServiceDescription ()
-  {
-    return UBL22ValidatorBuilder.create (TransportServiceDescriptionType.class);
-  }
-
-  /**
-   * Create a validation builder for TransportServiceDescriptionRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
-  {
-    return UBL22ValidatorBuilder.create (TransportServiceDescriptionRequestType.class);
-  }
-
-  /**
-   * Create a validation builder for UnawardedNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <UnawardedNotificationType> unawardedNotification ()
-  {
-    return UBL22ValidatorBuilder.create (UnawardedNotificationType.class);
-  }
-
-  /**
-   * Create a validation builder for UtilityStatement.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <UtilityStatementType> utilityStatement ()
-  {
-    return UBL22ValidatorBuilder.create (UtilityStatementType.class);
-  }
-
-  /**
-   * Create a validation builder for Waybill.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ValidatorBuilder <WaybillType> waybill ()
-  {
-    return UBL22ValidatorBuilder.create (WaybillType.class);
-  }
+  private UBL22Validator () {}
+/** Create a validation builder for ApplicationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ApplicationResponseType> applicationResponse(){return UBL22ValidatorBuilder.create(ApplicationResponseType.class);}
+/** Create a validation builder for AttachedDocument.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<AttachedDocumentType> attachedDocument(){return UBL22ValidatorBuilder.create(AttachedDocumentType.class);}
+/** Create a validation builder for AwardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<AwardedNotificationType> awardedNotification(){return UBL22ValidatorBuilder.create(AwardedNotificationType.class);}
+/** Create a validation builder for BillOfLading.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<BillOfLadingType> billOfLading(){return UBL22ValidatorBuilder.create(BillOfLadingType.class);}
+/** Create a validation builder for BusinessCard.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<BusinessCardType> businessCard(){return UBL22ValidatorBuilder.create(BusinessCardType.class);}
+/** Create a validation builder for CallForTenders.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CallForTendersType> callForTenders(){return UBL22ValidatorBuilder.create(CallForTendersType.class);}
+/** Create a validation builder for Catalogue.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CatalogueType> catalogue(){return UBL22ValidatorBuilder.create(CatalogueType.class);}
+/** Create a validation builder for CatalogueDeletion.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CatalogueDeletionType> catalogueDeletion(){return UBL22ValidatorBuilder.create(CatalogueDeletionType.class);}
+/** Create a validation builder for CatalogueItemSpecificationUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate(){return UBL22ValidatorBuilder.create(CatalogueItemSpecificationUpdateType.class);}
+/** Create a validation builder for CataloguePricingUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CataloguePricingUpdateType> cataloguePricingUpdate(){return UBL22ValidatorBuilder.create(CataloguePricingUpdateType.class);}
+/** Create a validation builder for CatalogueRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CatalogueRequestType> catalogueRequest(){return UBL22ValidatorBuilder.create(CatalogueRequestType.class);}
+/** Create a validation builder for CertificateOfOrigin.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL22ValidatorBuilder.create(CertificateOfOriginType.class);}
+/** Create a validation builder for ContractAwardNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL22ValidatorBuilder.create(ContractAwardNoticeType.class);}
+/** Create a validation builder for ContractNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ContractNoticeType> contractNotice(){return UBL22ValidatorBuilder.create(ContractNoticeType.class);}
+/** Create a validation builder for CreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<CreditNoteType> creditNote(){return UBL22ValidatorBuilder.create(CreditNoteType.class);}
+/** Create a validation builder for DebitNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<DebitNoteType> debitNote(){return UBL22ValidatorBuilder.create(DebitNoteType.class);}
+/** Create a validation builder for DespatchAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<DespatchAdviceType> despatchAdvice(){return UBL22ValidatorBuilder.create(DespatchAdviceType.class);}
+/** Create a validation builder for DocumentStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<DocumentStatusType> documentStatus(){return UBL22ValidatorBuilder.create(DocumentStatusType.class);}
+/** Create a validation builder for DocumentStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<DocumentStatusRequestType> documentStatusRequest(){return UBL22ValidatorBuilder.create(DocumentStatusRequestType.class);}
+/** Create a validation builder for ExceptionCriteria.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ExceptionCriteriaType> exceptionCriteria(){return UBL22ValidatorBuilder.create(ExceptionCriteriaType.class);}
+/** Create a validation builder for ExceptionNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ExceptionNotificationType> exceptionNotification(){return UBL22ValidatorBuilder.create(ExceptionNotificationType.class);}
+/** Create a validation builder for Forecast.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ForecastType> forecast(){return UBL22ValidatorBuilder.create(ForecastType.class);}
+/** Create a validation builder for ForecastRevision.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ForecastRevisionType> forecastRevision(){return UBL22ValidatorBuilder.create(ForecastRevisionType.class);}
+/** Create a validation builder for ForwardingInstructions.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ForwardingInstructionsType> forwardingInstructions(){return UBL22ValidatorBuilder.create(ForwardingInstructionsType.class);}
+/** Create a validation builder for FreightInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<FreightInvoiceType> freightInvoice(){return UBL22ValidatorBuilder.create(FreightInvoiceType.class);}
+/** Create a validation builder for FulfilmentCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<FulfilmentCancellationType> fulfilmentCancellation(){return UBL22ValidatorBuilder.create(FulfilmentCancellationType.class);}
+/** Create a validation builder for GoodsItemItinerary.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<GoodsItemItineraryType> goodsItemItinerary(){return UBL22ValidatorBuilder.create(GoodsItemItineraryType.class);}
+/** Create a validation builder for GuaranteeCertificate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<GuaranteeCertificateType> guaranteeCertificate(){return UBL22ValidatorBuilder.create(GuaranteeCertificateType.class);}
+/** Create a validation builder for InstructionForReturns.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<InstructionForReturnsType> instructionForReturns(){return UBL22ValidatorBuilder.create(InstructionForReturnsType.class);}
+/** Create a validation builder for InventoryReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<InventoryReportType> inventoryReport(){return UBL22ValidatorBuilder.create(InventoryReportType.class);}
+/** Create a validation builder for Invoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<InvoiceType> invoice(){return UBL22ValidatorBuilder.create(InvoiceType.class);}
+/** Create a validation builder for ItemInformationRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL22ValidatorBuilder.create(ItemInformationRequestType.class);}
+/** Create a validation builder for Order.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<OrderType> order(){return UBL22ValidatorBuilder.create(OrderType.class);}
+/** Create a validation builder for OrderCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<OrderCancellationType> orderCancellation(){return UBL22ValidatorBuilder.create(OrderCancellationType.class);}
+/** Create a validation builder for OrderChange.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<OrderChangeType> orderChange(){return UBL22ValidatorBuilder.create(OrderChangeType.class);}
+/** Create a validation builder for OrderResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<OrderResponseType> orderResponse(){return UBL22ValidatorBuilder.create(OrderResponseType.class);}
+/** Create a validation builder for OrderResponseSimple.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<OrderResponseSimpleType> orderResponseSimple(){return UBL22ValidatorBuilder.create(OrderResponseSimpleType.class);}
+/** Create a validation builder for PackingList.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<PackingListType> packingList(){return UBL22ValidatorBuilder.create(PackingListType.class);}
+/** Create a validation builder for PriorInformationNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<PriorInformationNoticeType> priorInformationNotice(){return UBL22ValidatorBuilder.create(PriorInformationNoticeType.class);}
+/** Create a validation builder for ProductActivity.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ProductActivityType> productActivity(){return UBL22ValidatorBuilder.create(ProductActivityType.class);}
+/** Create a validation builder for Quotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<QuotationType> quotation(){return UBL22ValidatorBuilder.create(QuotationType.class);}
+/** Create a validation builder for ReceiptAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ReceiptAdviceType> receiptAdvice(){return UBL22ValidatorBuilder.create(ReceiptAdviceType.class);}
+/** Create a validation builder for Reminder.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<ReminderType> reminder(){return UBL22ValidatorBuilder.create(ReminderType.class);}
+/** Create a validation builder for RemittanceAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<RemittanceAdviceType> remittanceAdvice(){return UBL22ValidatorBuilder.create(RemittanceAdviceType.class);}
+/** Create a validation builder for RequestForQuotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<RequestForQuotationType> requestForQuotation(){return UBL22ValidatorBuilder.create(RequestForQuotationType.class);}
+/** Create a validation builder for RetailEvent.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<RetailEventType> retailEvent(){return UBL22ValidatorBuilder.create(RetailEventType.class);}
+/** Create a validation builder for SelfBilledCreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<SelfBilledCreditNoteType> selfBilledCreditNote(){return UBL22ValidatorBuilder.create(SelfBilledCreditNoteType.class);}
+/** Create a validation builder for SelfBilledInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<SelfBilledInvoiceType> selfBilledInvoice(){return UBL22ValidatorBuilder.create(SelfBilledInvoiceType.class);}
+/** Create a validation builder for Statement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<StatementType> statement(){return UBL22ValidatorBuilder.create(StatementType.class);}
+/** Create a validation builder for StockAvailabilityReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<StockAvailabilityReportType> stockAvailabilityReport(){return UBL22ValidatorBuilder.create(StockAvailabilityReportType.class);}
+/** Create a validation builder for Tender.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TenderType> tender(){return UBL22ValidatorBuilder.create(TenderType.class);}
+/** Create a validation builder for TendererQualification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TendererQualificationType> tendererQualification(){return UBL22ValidatorBuilder.create(TendererQualificationType.class);}
+/** Create a validation builder for TendererQualificationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TendererQualificationResponseType> tendererQualificationResponse(){return UBL22ValidatorBuilder.create(TendererQualificationResponseType.class);}
+/** Create a validation builder for TenderReceipt.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TenderReceiptType> tenderReceipt(){return UBL22ValidatorBuilder.create(TenderReceiptType.class);}
+/** Create a validation builder for TradeItemLocationProfile.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TradeItemLocationProfileType> tradeItemLocationProfile(){return UBL22ValidatorBuilder.create(TradeItemLocationProfileType.class);}
+/** Create a validation builder for TransportationStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportationStatusType> transportationStatus(){return UBL22ValidatorBuilder.create(TransportationStatusType.class);}
+/** Create a validation builder for TransportationStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportationStatusRequestType> transportationStatusRequest(){return UBL22ValidatorBuilder.create(TransportationStatusRequestType.class);}
+/** Create a validation builder for TransportExecutionPlan.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportExecutionPlanType> transportExecutionPlan(){return UBL22ValidatorBuilder.create(TransportExecutionPlanType.class);}
+/** Create a validation builder for TransportExecutionPlanRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportExecutionPlanRequestType> transportExecutionPlanRequest(){return UBL22ValidatorBuilder.create(TransportExecutionPlanRequestType.class);}
+/** Create a validation builder for TransportProgressStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportProgressStatusType> transportProgressStatus(){return UBL22ValidatorBuilder.create(TransportProgressStatusType.class);}
+/** Create a validation builder for TransportProgressStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportProgressStatusRequestType> transportProgressStatusRequest(){return UBL22ValidatorBuilder.create(TransportProgressStatusRequestType.class);}
+/** Create a validation builder for TransportServiceDescription.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportServiceDescriptionType> transportServiceDescription(){return UBL22ValidatorBuilder.create(TransportServiceDescriptionType.class);}
+/** Create a validation builder for TransportServiceDescriptionRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<TransportServiceDescriptionRequestType> transportServiceDescriptionRequest(){return UBL22ValidatorBuilder.create(TransportServiceDescriptionRequestType.class);}
+/** Create a validation builder for UnawardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<UnawardedNotificationType> unawardedNotification(){return UBL22ValidatorBuilder.create(UnawardedNotificationType.class);}
+/** Create a validation builder for UtilityStatement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<UtilityStatementType> utilityStatement(){return UBL22ValidatorBuilder.create(UtilityStatementType.class);}
+/** Create a validation builder for Waybill.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ValidatorBuilder<WaybillType> waybill(){return UBL22ValidatorBuilder.create(WaybillType.class);}
 }

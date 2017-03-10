@@ -43,6 +43,8 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
                         "UBL-AwardedNotification-2.2.xsd"),
   BILL_OF_LADING (oasis.names.specification.ubl.schema.xsd.billoflading_22.BillOfLadingType.class,
                   "UBL-BillOfLading-2.2.xsd"),
+  BUSINESS_CARD (oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType.class,
+                 "UBL-BusinessCard-2.2.xsd"),
   CALL_FOR_TENDERS (oasis.names.specification.ubl.schema.xsd.callfortenders_22.CallForTendersType.class,
                     "UBL-CallForTenders-2.2.xsd"),
   CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType.class, "UBL-Catalogue-2.2.xsd"),

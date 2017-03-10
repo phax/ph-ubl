@@ -40,6 +40,9 @@ public final class CUBL22
   /** The cec namespace URL */
   public static final String XML_SCHEMA_CEC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
 
+  /** The csc namespace URL */
+  public static final String XML_SCHEMA_CSC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2";
+
   public static final String XSD_UBL_XMLDSIG = "schemas/ubl22/common/UBL-xmldsig-core-schema-2.2.xsd";
 
   @PresentForCodeCoverage

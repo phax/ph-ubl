@@ -42,6 +42,7 @@ public class UBL22NamespaceContext extends MapBasedNamespaceContext
     addMapping ("cac", CUBL22.XML_SCHEMA_CAC_NAMESPACE_URL);
     addMapping ("cbc", CUBL22.XML_SCHEMA_CBC_NAMESPACE_URL);
     addMapping ("cec", CUBL22.XML_SCHEMA_CEC_NAMESPACE_URL);
+    addMapping ("csc", CUBL22.XML_SCHEMA_CSC_NAMESPACE_URL);
   }
 
   @Nonnull

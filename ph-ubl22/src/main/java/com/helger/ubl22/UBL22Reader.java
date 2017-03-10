@@ -1,19 +1,3 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22;
 
 import javax.annotation.Nonnull;
@@ -25,6 +9,7 @@ import oasis.names.specification.ubl.schema.xsd.applicationresponse_22.Applicati
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_22.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.awardednotification_22.AwardedNotificationType;
 import oasis.names.specification.ubl.schema.xsd.billoflading_22.BillOfLadingType;
+import oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType;
 import oasis.names.specification.ubl.schema.xsd.callfortenders_22.CallForTendersType;
 import oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType;
 import oasis.names.specification.ubl.schema.xsd.cataloguedeletion_22.CatalogueDeletionType;
@@ -86,10 +71,9 @@ import oasis.names.specification.ubl.schema.xsd.transportservicedescriptionreque
 import oasis.names.specification.ubl.schema.xsd.unawardednotification_22.UnawardedNotificationType;
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_22.UtilityStatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_22.WaybillType;
-
 /**
- * Read all UBL 2.2 document types.
- *
+ * Read all UBL 2.1 document types.
+ * 
  * @author Philip Helger
  */
 @NotThreadSafe
@@ -98,721 +82,203 @@ public final class UBL22Reader
   @PresentForCodeCoverage
   private static final UBL22Reader s_aInstance = new UBL22Reader ();
 
-  private UBL22Reader ()
-  {}
-
-  /**
-   * Create a reader builder for ApplicationResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ApplicationResponseType> applicationResponse ()
-  {
-    return UBL22ReaderBuilder.create (ApplicationResponseType.class);
-  }
-
-  /**
-   * Create a reader builder for AttachedDocument.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <AttachedDocumentType> attachedDocument ()
-  {
-    return UBL22ReaderBuilder.create (AttachedDocumentType.class);
-  }
-
-  /**
-   * Create a reader builder for AwardedNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <AwardedNotificationType> awardedNotification ()
-  {
-    return UBL22ReaderBuilder.create (AwardedNotificationType.class);
-  }
-
-  /**
-   * Create a reader builder for BillOfLading.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <BillOfLadingType> billOfLading ()
-  {
-    return UBL22ReaderBuilder.create (BillOfLadingType.class);
-  }
-
-  /**
-   * Create a reader builder for CallForTenders.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CallForTendersType> callForTenders ()
-  {
-    return UBL22ReaderBuilder.create (CallForTendersType.class);
-  }
-
-  /**
-   * Create a reader builder for Catalogue.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CatalogueType> catalogue ()
-  {
-    return UBL22ReaderBuilder.create (CatalogueType.class);
-  }
-
-  /**
-   * Create a reader builder for CatalogueDeletion.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CatalogueDeletionType> catalogueDeletion ()
-  {
-    return UBL22ReaderBuilder.create (CatalogueDeletionType.class);
-  }
-
-  /**
-   * Create a reader builder for CatalogueItemSpecificationUpdate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
-  {
-    return UBL22ReaderBuilder.create (CatalogueItemSpecificationUpdateType.class);
-  }
-
-  /**
-   * Create a reader builder for CataloguePricingUpdate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
-  {
-    return UBL22ReaderBuilder.create (CataloguePricingUpdateType.class);
-  }
-
-  /**
-   * Create a reader builder for CatalogueRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CatalogueRequestType> catalogueRequest ()
-  {
-    return UBL22ReaderBuilder.create (CatalogueRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for CertificateOfOrigin.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CertificateOfOriginType> certificateOfOrigin ()
-  {
-    return UBL22ReaderBuilder.create (CertificateOfOriginType.class);
-  }
-
-  /**
-   * Create a reader builder for ContractAwardNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ContractAwardNoticeType> contractAwardNotice ()
-  {
-    return UBL22ReaderBuilder.create (ContractAwardNoticeType.class);
-  }
-
-  /**
-   * Create a reader builder for ContractNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ContractNoticeType> contractNotice ()
-  {
-    return UBL22ReaderBuilder.create (ContractNoticeType.class);
-  }
-
-  /**
-   * Create a reader builder for CreditNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <CreditNoteType> creditNote ()
-  {
-    return UBL22ReaderBuilder.create (CreditNoteType.class);
-  }
-
-  /**
-   * Create a reader builder for DebitNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <DebitNoteType> debitNote ()
-  {
-    return UBL22ReaderBuilder.create (DebitNoteType.class);
-  }
-
-  /**
-   * Create a reader builder for DespatchAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <DespatchAdviceType> despatchAdvice ()
-  {
-    return UBL22ReaderBuilder.create (DespatchAdviceType.class);
-  }
-
-  /**
-   * Create a reader builder for DocumentStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <DocumentStatusType> documentStatus ()
-  {
-    return UBL22ReaderBuilder.create (DocumentStatusType.class);
-  }
-
-  /**
-   * Create a reader builder for DocumentStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <DocumentStatusRequestType> documentStatusRequest ()
-  {
-    return UBL22ReaderBuilder.create (DocumentStatusRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for ExceptionCriteria.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ExceptionCriteriaType> exceptionCriteria ()
-  {
-    return UBL22ReaderBuilder.create (ExceptionCriteriaType.class);
-  }
-
-  /**
-   * Create a reader builder for ExceptionNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ExceptionNotificationType> exceptionNotification ()
-  {
-    return UBL22ReaderBuilder.create (ExceptionNotificationType.class);
-  }
-
-  /**
-   * Create a reader builder for Forecast.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ForecastType> forecast ()
-  {
-    return UBL22ReaderBuilder.create (ForecastType.class);
-  }
-
-  /**
-   * Create a reader builder for ForecastRevision.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ForecastRevisionType> forecastRevision ()
-  {
-    return UBL22ReaderBuilder.create (ForecastRevisionType.class);
-  }
-
-  /**
-   * Create a reader builder for ForwardingInstructions.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ForwardingInstructionsType> forwardingInstructions ()
-  {
-    return UBL22ReaderBuilder.create (ForwardingInstructionsType.class);
-  }
-
-  /**
-   * Create a reader builder for FreightInvoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <FreightInvoiceType> freightInvoice ()
-  {
-    return UBL22ReaderBuilder.create (FreightInvoiceType.class);
-  }
-
-  /**
-   * Create a reader builder for FulfilmentCancellation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <FulfilmentCancellationType> fulfilmentCancellation ()
-  {
-    return UBL22ReaderBuilder.create (FulfilmentCancellationType.class);
-  }
-
-  /**
-   * Create a reader builder for GoodsItemItinerary.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <GoodsItemItineraryType> goodsItemItinerary ()
-  {
-    return UBL22ReaderBuilder.create (GoodsItemItineraryType.class);
-  }
-
-  /**
-   * Create a reader builder for GuaranteeCertificate.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <GuaranteeCertificateType> guaranteeCertificate ()
-  {
-    return UBL22ReaderBuilder.create (GuaranteeCertificateType.class);
-  }
-
-  /**
-   * Create a reader builder for InstructionForReturns.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <InstructionForReturnsType> instructionForReturns ()
-  {
-    return UBL22ReaderBuilder.create (InstructionForReturnsType.class);
-  }
-
-  /**
-   * Create a reader builder for InventoryReport.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <InventoryReportType> inventoryReport ()
-  {
-    return UBL22ReaderBuilder.create (InventoryReportType.class);
-  }
-
-  /**
-   * Create a reader builder for Invoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <InvoiceType> invoice ()
-  {
-    return UBL22ReaderBuilder.create (InvoiceType.class);
-  }
-
-  /**
-   * Create a reader builder for ItemInformationRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ItemInformationRequestType> itemInformationRequest ()
-  {
-    return UBL22ReaderBuilder.create (ItemInformationRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for Order.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <OrderType> order ()
-  {
-    return UBL22ReaderBuilder.create (OrderType.class);
-  }
-
-  /**
-   * Create a reader builder for OrderCancellation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <OrderCancellationType> orderCancellation ()
-  {
-    return UBL22ReaderBuilder.create (OrderCancellationType.class);
-  }
-
-  /**
-   * Create a reader builder for OrderChange.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <OrderChangeType> orderChange ()
-  {
-    return UBL22ReaderBuilder.create (OrderChangeType.class);
-  }
-
-  /**
-   * Create a reader builder for OrderResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <OrderResponseType> orderResponse ()
-  {
-    return UBL22ReaderBuilder.create (OrderResponseType.class);
-  }
-
-  /**
-   * Create a reader builder for OrderResponseSimple.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <OrderResponseSimpleType> orderResponseSimple ()
-  {
-    return UBL22ReaderBuilder.create (OrderResponseSimpleType.class);
-  }
-
-  /**
-   * Create a reader builder for PackingList.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <PackingListType> packingList ()
-  {
-    return UBL22ReaderBuilder.create (PackingListType.class);
-  }
-
-  /**
-   * Create a reader builder for PriorInformationNotice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <PriorInformationNoticeType> priorInformationNotice ()
-  {
-    return UBL22ReaderBuilder.create (PriorInformationNoticeType.class);
-  }
-
-  /**
-   * Create a reader builder for ProductActivity.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ProductActivityType> productActivity ()
-  {
-    return UBL22ReaderBuilder.create (ProductActivityType.class);
-  }
-
-  /**
-   * Create a reader builder for Quotation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <QuotationType> quotation ()
-  {
-    return UBL22ReaderBuilder.create (QuotationType.class);
-  }
-
-  /**
-   * Create a reader builder for ReceiptAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ReceiptAdviceType> receiptAdvice ()
-  {
-    return UBL22ReaderBuilder.create (ReceiptAdviceType.class);
-  }
-
-  /**
-   * Create a reader builder for Reminder.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <ReminderType> reminder ()
-  {
-    return UBL22ReaderBuilder.create (ReminderType.class);
-  }
-
-  /**
-   * Create a reader builder for RemittanceAdvice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <RemittanceAdviceType> remittanceAdvice ()
-  {
-    return UBL22ReaderBuilder.create (RemittanceAdviceType.class);
-  }
-
-  /**
-   * Create a reader builder for RequestForQuotation.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <RequestForQuotationType> requestForQuotation ()
-  {
-    return UBL22ReaderBuilder.create (RequestForQuotationType.class);
-  }
-
-  /**
-   * Create a reader builder for RetailEvent.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <RetailEventType> retailEvent ()
-  {
-    return UBL22ReaderBuilder.create (RetailEventType.class);
-  }
-
-  /**
-   * Create a reader builder for SelfBilledCreditNote.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
-  {
-    return UBL22ReaderBuilder.create (SelfBilledCreditNoteType.class);
-  }
-
-  /**
-   * Create a reader builder for SelfBilledInvoice.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
-  {
-    return UBL22ReaderBuilder.create (SelfBilledInvoiceType.class);
-  }
-
-  /**
-   * Create a reader builder for Statement.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <StatementType> statement ()
-  {
-    return UBL22ReaderBuilder.create (StatementType.class);
-  }
-
-  /**
-   * Create a reader builder for StockAvailabilityReport.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <StockAvailabilityReportType> stockAvailabilityReport ()
-  {
-    return UBL22ReaderBuilder.create (StockAvailabilityReportType.class);
-  }
-
-  /**
-   * Create a reader builder for Tender.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TenderType> tender ()
-  {
-    return UBL22ReaderBuilder.create (TenderType.class);
-  }
-
-  /**
-   * Create a reader builder for TendererQualification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TendererQualificationType> tendererQualification ()
-  {
-    return UBL22ReaderBuilder.create (TendererQualificationType.class);
-  }
-
-  /**
-   * Create a reader builder for TendererQualificationResponse.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TendererQualificationResponseType> tendererQualificationResponse ()
-  {
-    return UBL22ReaderBuilder.create (TendererQualificationResponseType.class);
-  }
-
-  /**
-   * Create a reader builder for TenderReceipt.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TenderReceiptType> tenderReceipt ()
-  {
-    return UBL22ReaderBuilder.create (TenderReceiptType.class);
-  }
-
-  /**
-   * Create a reader builder for TradeItemLocationProfile.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TradeItemLocationProfileType> tradeItemLocationProfile ()
-  {
-    return UBL22ReaderBuilder.create (TradeItemLocationProfileType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportationStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportationStatusType> transportationStatus ()
-  {
-    return UBL22ReaderBuilder.create (TransportationStatusType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportationStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportationStatusRequestType> transportationStatusRequest ()
-  {
-    return UBL22ReaderBuilder.create (TransportationStatusRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportExecutionPlan.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportExecutionPlanType> transportExecutionPlan ()
-  {
-    return UBL22ReaderBuilder.create (TransportExecutionPlanType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportExecutionPlanRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
-  {
-    return UBL22ReaderBuilder.create (TransportExecutionPlanRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportProgressStatus.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportProgressStatusType> transportProgressStatus ()
-  {
-    return UBL22ReaderBuilder.create (TransportProgressStatusType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportProgressStatusRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportProgressStatusRequestType> transportProgressStatusRequest ()
-  {
-    return UBL22ReaderBuilder.create (TransportProgressStatusRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportServiceDescription.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportServiceDescriptionType> transportServiceDescription ()
-  {
-    return UBL22ReaderBuilder.create (TransportServiceDescriptionType.class);
-  }
-
-  /**
-   * Create a reader builder for TransportServiceDescriptionRequest.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
-  {
-    return UBL22ReaderBuilder.create (TransportServiceDescriptionRequestType.class);
-  }
-
-  /**
-   * Create a reader builder for UnawardedNotification.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <UnawardedNotificationType> unawardedNotification ()
-  {
-    return UBL22ReaderBuilder.create (UnawardedNotificationType.class);
-  }
-
-  /**
-   * Create a reader builder for UtilityStatement.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <UtilityStatementType> utilityStatement ()
-  {
-    return UBL22ReaderBuilder.create (UtilityStatementType.class);
-  }
-
-  /**
-   * Create a reader builder for Waybill.
-   *
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL22ReaderBuilder <WaybillType> waybill ()
-  {
-    return UBL22ReaderBuilder.create (WaybillType.class);
-  }
+  private UBL22Reader () {}
+/** Create a reader builder for ApplicationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ApplicationResponseType> applicationResponse(){return UBL22ReaderBuilder.create(ApplicationResponseType.class);}
+/** Create a reader builder for AttachedDocument.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<AttachedDocumentType> attachedDocument(){return UBL22ReaderBuilder.create(AttachedDocumentType.class);}
+/** Create a reader builder for AwardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<AwardedNotificationType> awardedNotification(){return UBL22ReaderBuilder.create(AwardedNotificationType.class);}
+/** Create a reader builder for BillOfLading.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<BillOfLadingType> billOfLading(){return UBL22ReaderBuilder.create(BillOfLadingType.class);}
+/** Create a reader builder for BusinessCard.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<BusinessCardType> businessCard(){return UBL22ReaderBuilder.create(BusinessCardType.class);}
+/** Create a reader builder for CallForTenders.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CallForTendersType> callForTenders(){return UBL22ReaderBuilder.create(CallForTendersType.class);}
+/** Create a reader builder for Catalogue.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CatalogueType> catalogue(){return UBL22ReaderBuilder.create(CatalogueType.class);}
+/** Create a reader builder for CatalogueDeletion.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CatalogueDeletionType> catalogueDeletion(){return UBL22ReaderBuilder.create(CatalogueDeletionType.class);}
+/** Create a reader builder for CatalogueItemSpecificationUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate(){return UBL22ReaderBuilder.create(CatalogueItemSpecificationUpdateType.class);}
+/** Create a reader builder for CataloguePricingUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CataloguePricingUpdateType> cataloguePricingUpdate(){return UBL22ReaderBuilder.create(CataloguePricingUpdateType.class);}
+/** Create a reader builder for CatalogueRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CatalogueRequestType> catalogueRequest(){return UBL22ReaderBuilder.create(CatalogueRequestType.class);}
+/** Create a reader builder for CertificateOfOrigin.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL22ReaderBuilder.create(CertificateOfOriginType.class);}
+/** Create a reader builder for ContractAwardNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL22ReaderBuilder.create(ContractAwardNoticeType.class);}
+/** Create a reader builder for ContractNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ContractNoticeType> contractNotice(){return UBL22ReaderBuilder.create(ContractNoticeType.class);}
+/** Create a reader builder for CreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<CreditNoteType> creditNote(){return UBL22ReaderBuilder.create(CreditNoteType.class);}
+/** Create a reader builder for DebitNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<DebitNoteType> debitNote(){return UBL22ReaderBuilder.create(DebitNoteType.class);}
+/** Create a reader builder for DespatchAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<DespatchAdviceType> despatchAdvice(){return UBL22ReaderBuilder.create(DespatchAdviceType.class);}
+/** Create a reader builder for DocumentStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<DocumentStatusType> documentStatus(){return UBL22ReaderBuilder.create(DocumentStatusType.class);}
+/** Create a reader builder for DocumentStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<DocumentStatusRequestType> documentStatusRequest(){return UBL22ReaderBuilder.create(DocumentStatusRequestType.class);}
+/** Create a reader builder for ExceptionCriteria.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ExceptionCriteriaType> exceptionCriteria(){return UBL22ReaderBuilder.create(ExceptionCriteriaType.class);}
+/** Create a reader builder for ExceptionNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ExceptionNotificationType> exceptionNotification(){return UBL22ReaderBuilder.create(ExceptionNotificationType.class);}
+/** Create a reader builder for Forecast.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ForecastType> forecast(){return UBL22ReaderBuilder.create(ForecastType.class);}
+/** Create a reader builder for ForecastRevision.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ForecastRevisionType> forecastRevision(){return UBL22ReaderBuilder.create(ForecastRevisionType.class);}
+/** Create a reader builder for ForwardingInstructions.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ForwardingInstructionsType> forwardingInstructions(){return UBL22ReaderBuilder.create(ForwardingInstructionsType.class);}
+/** Create a reader builder for FreightInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<FreightInvoiceType> freightInvoice(){return UBL22ReaderBuilder.create(FreightInvoiceType.class);}
+/** Create a reader builder for FulfilmentCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<FulfilmentCancellationType> fulfilmentCancellation(){return UBL22ReaderBuilder.create(FulfilmentCancellationType.class);}
+/** Create a reader builder for GoodsItemItinerary.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<GoodsItemItineraryType> goodsItemItinerary(){return UBL22ReaderBuilder.create(GoodsItemItineraryType.class);}
+/** Create a reader builder for GuaranteeCertificate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<GuaranteeCertificateType> guaranteeCertificate(){return UBL22ReaderBuilder.create(GuaranteeCertificateType.class);}
+/** Create a reader builder for InstructionForReturns.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<InstructionForReturnsType> instructionForReturns(){return UBL22ReaderBuilder.create(InstructionForReturnsType.class);}
+/** Create a reader builder for InventoryReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<InventoryReportType> inventoryReport(){return UBL22ReaderBuilder.create(InventoryReportType.class);}
+/** Create a reader builder for Invoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<InvoiceType> invoice(){return UBL22ReaderBuilder.create(InvoiceType.class);}
+/** Create a reader builder for ItemInformationRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL22ReaderBuilder.create(ItemInformationRequestType.class);}
+/** Create a reader builder for Order.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<OrderType> order(){return UBL22ReaderBuilder.create(OrderType.class);}
+/** Create a reader builder for OrderCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<OrderCancellationType> orderCancellation(){return UBL22ReaderBuilder.create(OrderCancellationType.class);}
+/** Create a reader builder for OrderChange.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<OrderChangeType> orderChange(){return UBL22ReaderBuilder.create(OrderChangeType.class);}
+/** Create a reader builder for OrderResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<OrderResponseType> orderResponse(){return UBL22ReaderBuilder.create(OrderResponseType.class);}
+/** Create a reader builder for OrderResponseSimple.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<OrderResponseSimpleType> orderResponseSimple(){return UBL22ReaderBuilder.create(OrderResponseSimpleType.class);}
+/** Create a reader builder for PackingList.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<PackingListType> packingList(){return UBL22ReaderBuilder.create(PackingListType.class);}
+/** Create a reader builder for PriorInformationNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<PriorInformationNoticeType> priorInformationNotice(){return UBL22ReaderBuilder.create(PriorInformationNoticeType.class);}
+/** Create a reader builder for ProductActivity.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ProductActivityType> productActivity(){return UBL22ReaderBuilder.create(ProductActivityType.class);}
+/** Create a reader builder for Quotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<QuotationType> quotation(){return UBL22ReaderBuilder.create(QuotationType.class);}
+/** Create a reader builder for ReceiptAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ReceiptAdviceType> receiptAdvice(){return UBL22ReaderBuilder.create(ReceiptAdviceType.class);}
+/** Create a reader builder for Reminder.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<ReminderType> reminder(){return UBL22ReaderBuilder.create(ReminderType.class);}
+/** Create a reader builder for RemittanceAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<RemittanceAdviceType> remittanceAdvice(){return UBL22ReaderBuilder.create(RemittanceAdviceType.class);}
+/** Create a reader builder for RequestForQuotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<RequestForQuotationType> requestForQuotation(){return UBL22ReaderBuilder.create(RequestForQuotationType.class);}
+/** Create a reader builder for RetailEvent.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<RetailEventType> retailEvent(){return UBL22ReaderBuilder.create(RetailEventType.class);}
+/** Create a reader builder for SelfBilledCreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<SelfBilledCreditNoteType> selfBilledCreditNote(){return UBL22ReaderBuilder.create(SelfBilledCreditNoteType.class);}
+/** Create a reader builder for SelfBilledInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<SelfBilledInvoiceType> selfBilledInvoice(){return UBL22ReaderBuilder.create(SelfBilledInvoiceType.class);}
+/** Create a reader builder for Statement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<StatementType> statement(){return UBL22ReaderBuilder.create(StatementType.class);}
+/** Create a reader builder for StockAvailabilityReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<StockAvailabilityReportType> stockAvailabilityReport(){return UBL22ReaderBuilder.create(StockAvailabilityReportType.class);}
+/** Create a reader builder for Tender.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TenderType> tender(){return UBL22ReaderBuilder.create(TenderType.class);}
+/** Create a reader builder for TendererQualification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TendererQualificationType> tendererQualification(){return UBL22ReaderBuilder.create(TendererQualificationType.class);}
+/** Create a reader builder for TendererQualificationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TendererQualificationResponseType> tendererQualificationResponse(){return UBL22ReaderBuilder.create(TendererQualificationResponseType.class);}
+/** Create a reader builder for TenderReceipt.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TenderReceiptType> tenderReceipt(){return UBL22ReaderBuilder.create(TenderReceiptType.class);}
+/** Create a reader builder for TradeItemLocationProfile.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TradeItemLocationProfileType> tradeItemLocationProfile(){return UBL22ReaderBuilder.create(TradeItemLocationProfileType.class);}
+/** Create a reader builder for TransportationStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportationStatusType> transportationStatus(){return UBL22ReaderBuilder.create(TransportationStatusType.class);}
+/** Create a reader builder for TransportationStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportationStatusRequestType> transportationStatusRequest(){return UBL22ReaderBuilder.create(TransportationStatusRequestType.class);}
+/** Create a reader builder for TransportExecutionPlan.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportExecutionPlanType> transportExecutionPlan(){return UBL22ReaderBuilder.create(TransportExecutionPlanType.class);}
+/** Create a reader builder for TransportExecutionPlanRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportExecutionPlanRequestType> transportExecutionPlanRequest(){return UBL22ReaderBuilder.create(TransportExecutionPlanRequestType.class);}
+/** Create a reader builder for TransportProgressStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportProgressStatusType> transportProgressStatus(){return UBL22ReaderBuilder.create(TransportProgressStatusType.class);}
+/** Create a reader builder for TransportProgressStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportProgressStatusRequestType> transportProgressStatusRequest(){return UBL22ReaderBuilder.create(TransportProgressStatusRequestType.class);}
+/** Create a reader builder for TransportServiceDescription.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportServiceDescriptionType> transportServiceDescription(){return UBL22ReaderBuilder.create(TransportServiceDescriptionType.class);}
+/** Create a reader builder for TransportServiceDescriptionRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<TransportServiceDescriptionRequestType> transportServiceDescriptionRequest(){return UBL22ReaderBuilder.create(TransportServiceDescriptionRequestType.class);}
+/** Create a reader builder for UnawardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<UnawardedNotificationType> unawardedNotification(){return UBL22ReaderBuilder.create(UnawardedNotificationType.class);}
+/** Create a reader builder for UtilityStatement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<UtilityStatementType> utilityStatement(){return UBL22ReaderBuilder.create(UtilityStatementType.class);}
+/** Create a reader builder for Waybill.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22ReaderBuilder<WaybillType> waybill(){return UBL22ReaderBuilder.create(WaybillType.class);}
 }
