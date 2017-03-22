@@ -1,4 +1,4 @@
-#ph-ubl
+# ph-ubl
 
 [![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
 ﻿
@@ -18,7 +18,7 @@ The following projects are contained:
   * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
   * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
   
-##News and noteworthy
+## News and noteworthy
 
   * v5.1.1 - work in progress
     * Binds to ph-commons 8.6.2
@@ -36,7 +36,7 @@ The following projects are contained:
     * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
     * Improved OSGI support
 
-#Examples
+# Examples
 
 An example for reading and writing UBL 2.0 files can be found in the test file [UBL20FuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl20/src/test/java/com/helger/ubl20/UBL20FuncTest.java).
 An example to create an invoice from scratch can be found in the test code [CreateInvoiceFromScratchFuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl20/src/test/java/com/helger/ubl20/CreateInvoiceFromScratchFuncTest.java).
@@ -44,7 +44,7 @@ An example to create an invoice from scratch can be found in the test code [Crea
 An example for reading and writing UBL 2.1 files can be found in the test file [UBL21FuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl21/src/test/java/com/helger/ubl21/UBL21FuncTest.java).
 An example to create an invoice from scratch can be found in the test code [CreateInvoiceFromScratchFuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl21/src/test/java/com/helger/ubl21/CreateInvoiceFromScratchFuncTest.java).
 
-#Maven usage generic
+# Maven usage generic
 You can use ph-ubl as a BOM (bill of material) when you include the following in the `dependencyManagement` section of your POM:
 ```
 <dependency>
@@ -56,7 +56,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 </dependency>
 ```
 
-#Maven usage UBL 2.0
+# Maven usage UBL 2.0
 To read and write UBL 2.0 documents add the following to your pom.xml to use this artifact:
 
 ```
@@ -77,7 +77,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 </dependency>
 ```
 
-#Maven usage UBL 2.1
+# Maven usage UBL 2.1
 To read and write UBL 2.1 documents add the following to your pom.xml to use this artifact:
 
 ```
@@ -98,7 +98,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 </dependency>
 ```
 
-#Maven usage UBL-tr
+# Maven usage UBL-tr
 To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
 
 ```
@@ -109,7 +109,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 </dependency>
 ```
 
-#Download
+# Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
   * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
@@ -127,7 +127,7 @@ The following projects are required at runtime. The exact version depends on the
   * http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
   * http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
-#Other UBL sites
+# Other UBL sites
 
 For further information on the Universal Business Language can be found on the following pages:
 
