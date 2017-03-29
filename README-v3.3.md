@@ -1,4 +1,4 @@
-#ph-ubl 3.3.x
+# ph-ubl 3.3.x
 
 This is the README file for the old version 3.3.x. For the latest version please refer to [README.md](https://github.com/phax/ph-ubl/blob/master/README.md).
 
@@ -13,13 +13,13 @@ The following projects are contained:
   * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists
   * **ph-ubl** is the main project and contains the glue that combines all these JAR files (e.g. UBL20Reader, UBL20Writer etc.)
   
-#Examples
+# Examples
 
 An example for reading and writing UBL 2.0 files can be found in the test file [FuncTestUBL20.java](https://github.com/phax/ph-ubl/blob/ph-ubl-3.3.1/src/test/java/com/helger/ubl/FuncTestUBL20.java).
 
 An example for reading and writing UBL 2.1 files can be found in the test file [FuncTestUBL21.java](https://github.com/phax/ph-ubl/blob/ph-ubl-3.3.1/src/test/java/com/helger/ubl/FuncTestUBL21.java).
 
-#Maven usage
+# Maven usage
 Add the following to your pom.xml to use this artifact:
 
 ```
@@ -70,7 +70,7 @@ When you are only interested in UBL 2.1 you can manually exclude the UBL 2.0 art
 </dependency>
 ```
 
-#Download
+# Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
   * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
