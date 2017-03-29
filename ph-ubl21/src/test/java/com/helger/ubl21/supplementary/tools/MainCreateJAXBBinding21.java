@@ -30,7 +30,6 @@ import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsSet;
-import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.io.resource.FileSystemResource;
@@ -175,16 +174,16 @@ public final class MainCreateJAXBBinding21
                    .setAttribute ("name", sPackageName);
         }
       }
-      MicroWriter.writeToStream (eDoc,
-                                 FileHelper.getOutputStream (DEFAULT_BINDING_FILE),
-                                 new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
-                                                         .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
-                                                                                                                           JAXB_NS_URI)
-                                                                                                              .addMapping ("xsd",
-                                                                                                                           CXML.XML_NS_XSD)
-                                                                                                              .addMapping ("xsi",
-                                                                                                                           CXML.XML_NS_XSI))
-                                                         .setPutNamespaceContextPrefixesInRoot (true));
+      MicroWriter.writeToFile (eDoc,
+                               new File (DEFAULT_BINDING_FILE),
+                               new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
+                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
+                                                                                                                         JAXB_NS_URI)
+                                                                                                            .addMapping ("xsd",
+                                                                                                                         CXML.XML_NS_XSD)
+                                                                                                            .addMapping ("xsi",
+                                                                                                                         CXML.XML_NS_XSI))
+                                                       .setPutNamespaceContextPrefixesInRoot (true));
     }
 
     System.out.println ("Done");

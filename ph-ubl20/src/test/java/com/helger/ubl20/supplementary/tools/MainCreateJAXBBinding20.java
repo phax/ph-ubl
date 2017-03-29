@@ -33,7 +33,6 @@ import com.helger.commons.collection.ext.CommonsTreeMap;
 import com.helger.commons.collection.ext.ICommonsList;
 import com.helger.commons.collection.ext.ICommonsNavigableMap;
 import com.helger.commons.collection.ext.ICommonsSet;
-import com.helger.commons.io.file.FileHelper;
 import com.helger.commons.io.file.filter.IFileFilter;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.io.resource.FileSystemResource;
@@ -150,7 +149,7 @@ public final class MainCreateJAXBBinding20
     {
       System.out.println ("UBL 2.0");
       final IMicroDocument eDoc = _createBaseDoc ();
-      final ICommonsSet <String> aNamespaces = new CommonsHashSet<> ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = "/resources/schemas/ubl20/" + sPart;
@@ -183,16 +182,16 @@ public final class MainCreateJAXBBinding20
           }
         }
       }
-      MicroWriter.writeToStream (eDoc,
-                                 FileHelper.getOutputStream ("src/main/jaxb/bindings20.xjb"),
-                                 new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
-                                                         .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
-                                                                                                                           JAXB_NS_URI)
-                                                                                                              .addMapping ("xsd",
-                                                                                                                           CXML.XML_NS_XSD)
-                                                                                                              .addMapping ("xsi",
-                                                                                                                           CXML.XML_NS_XSI))
-                                                         .setPutNamespaceContextPrefixesInRoot (true));
+      MicroWriter.writeToFile (eDoc,
+                               new File ("src/main/jaxb/bindings20.xjb"),
+                               new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
+                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
+                                                                                                                         JAXB_NS_URI)
+                                                                                                            .addMapping ("xsd",
+                                                                                                                         CXML.XML_NS_XSD)
+                                                                                                            .addMapping ("xsi",
+                                                                                                                         CXML.XML_NS_XSI))
+                                                       .setPutNamespaceContextPrefixesInRoot (true));
     }
 
     System.out.println ("Done");
@@ -202,8 +201,8 @@ public final class MainCreateJAXBBinding20
                                                     @Nonnull @Nonempty final String sFilename,
                                                     @Nonnull final IMicroElement eBindings)
   {
-    final ICommonsSet <String> aUsedNames = new CommonsHashSet<> ();
-    final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap<> ();
+    final ICommonsSet <String> aUsedNames = new CommonsHashSet <> ();
+    final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap <> ();
     final IMicroElement eSimpleType = aDoc.getDocumentElement ().getFirstChildElement ();
 
     final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings").setAttribute ("node",
