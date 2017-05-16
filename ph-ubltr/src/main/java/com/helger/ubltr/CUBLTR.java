@@ -20,8 +20,8 @@ import java.util.List;
 
 import javax.annotation.concurrent.Immutable;
 
+import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.PresentForCodeCoverage;
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsArrayList;
 import com.helger.commons.collection.ext.ICommonsList;
 import com.helger.ubl21.CUBL21;
@@ -43,11 +43,13 @@ public final class CUBLTR
   public static final String XML_NS_OAGIS = "http://www.openapplications.org/oagis/9";
 
   /** List of all XSDs required for using the HRXML UserAccount type */
-  public static final List <String> XSD_HRXML_USER_ACCOUNT = CollectionHelper.makeUnmodifiable (CUBL21.XSD_UBL_XMLDSIG,
-                                                                                                SCHEMA_DIRECTORY +
-                                                                                                                        "HRXML/UserAccount.xsd");
+  @CodingStyleguideUnaware
+  public static final List <String> XSD_HRXML_USER_ACCOUNT = new CommonsArrayList <> (CUBL21.XSD_UBL_XMLDSIG,
+                                                                                      SCHEMA_DIRECTORY +
+                                                                                                              "HRXML/UserAccount.xsd").getAsUnmodifiable ();
 
   /** List of all XSDs required for using the ULBTR Package type */
+  @CodingStyleguideUnaware
   public static final List <String> XSD_PACKAGE;
 
   static
