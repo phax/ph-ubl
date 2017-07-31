@@ -20,8 +20,6 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.ActualDeliveryDateType;
-
 /**
  * Test class for class {@link ActualDeliveryDateType}.
  *

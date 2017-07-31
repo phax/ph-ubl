@@ -28,10 +28,10 @@ import javax.xml.XMLConstants;
 
 import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.collection.ext.CommonsHashSet;
-import com.helger.commons.collection.ext.ICommonsSet;
-import com.helger.commons.io.file.filter.IFileFilter;
-import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.commons.collection.impl.CommonsHashSet;
+import com.helger.commons.collection.impl.ICommonsSet;
+import com.helger.commons.io.file.FileSystemIterator;
+import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;

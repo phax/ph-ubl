@@ -22,9 +22,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
-
 import com.helger.commons.string.StringHelper;
+
+import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
 
 /**
  * Test class for class {@link EUnitOfMeasureCode20}.

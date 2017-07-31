@@ -22,9 +22,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
-
 import com.helger.commons.string.StringHelper;
+
+import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 
 /**
  * Test class for class {@link ECurrencyCode20}.

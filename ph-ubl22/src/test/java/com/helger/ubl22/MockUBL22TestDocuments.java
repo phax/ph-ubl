@@ -24,7 +24,6 @@ import javax.annotation.concurrent.Immutable;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.ubl.testfiles.UBLTestFiles;
-import com.helger.ubl22.EUBL22DocumentType;
 
 @Immutable
 public final class MockUBL22TestDocuments

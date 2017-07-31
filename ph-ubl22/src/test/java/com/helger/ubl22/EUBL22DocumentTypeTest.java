@@ -24,7 +24,6 @@ import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
-import com.helger.ubl22.EUBL22DocumentType;
 
 /**
  * Test class for class {@link EUBL22DocumentType}.

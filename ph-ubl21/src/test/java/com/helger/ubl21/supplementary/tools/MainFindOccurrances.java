@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlValue;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.collection.ext.CommonsArrayList;
-import com.helger.commons.collection.ext.CommonsHashMap;
-import com.helger.commons.collection.ext.CommonsHashSet;
-import com.helger.commons.collection.ext.ICommonsList;
-import com.helger.commons.collection.ext.ICommonsMap;
-import com.helger.commons.collection.impl.NonBlockingStack;
+import com.helger.commons.collection.NonBlockingStack;
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.CommonsHashMap;
+import com.helger.commons.collection.impl.CommonsHashSet;
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.collection.impl.ICommonsMap;
 import com.helger.commons.string.StringHelper;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxSchemeType;

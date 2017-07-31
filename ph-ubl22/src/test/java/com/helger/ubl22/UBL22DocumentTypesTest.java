@@ -23,9 +23,6 @@ import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
-import com.helger.ubl22.EUBL22DocumentType;
-import com.helger.ubl22.UBL22DocumentTypes;
-
 /**
  * Test class for class {@link UBL22DocumentTypes}.
  *

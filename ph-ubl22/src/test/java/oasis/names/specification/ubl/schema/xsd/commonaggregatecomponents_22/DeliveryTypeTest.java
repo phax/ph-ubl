@@ -20,8 +20,6 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.DeliveryType;
-
 /**
  * Test class for class {@link DeliveryType}.
  *
