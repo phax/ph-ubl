@@ -188,9 +188,9 @@ public final class MainCreateJAXBBinding20
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
                                                                                                                          JAXB_NS_URI)
                                                                                                             .addMapping ("xsd",
-                                                                                                                         CXML.XML_NS_XSD)
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
-                                                                                                                         CXML.XML_NS_XSI))
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
                                                        .setPutNamespaceContextPrefixesInRoot (true));
     }
 
@@ -205,19 +205,23 @@ public final class MainCreateJAXBBinding20
     final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap <> ();
     final IMicroElement eSimpleType = aDoc.getDocumentElement ().getFirstChildElement ();
 
-    final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings").setAttribute ("node",
-                                                                                                         "xsd:simpleType[@name='" +
-                                                                                                                 eSimpleType.getAttributeValue ("name") +
-                                                                                                                 "']");
+    final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings")
+                                                  .setAttribute ("node",
+                                                                 "xsd:simpleType[@name='" +
+                                                                         eSimpleType.getAttributeValue ("name") +
+                                                                         "']");
     final IMicroElement eTypesafeEnumClass = eInnerBindings.appendElement (JAXB_NS_URI, "typesafeEnumClass");
 
     final IMicroElement eRestriction = eSimpleType.getFirstChildElement ();
-    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (CXML.XML_NS_XSD, "enumeration"))
+    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (XMLConstants.W3C_XML_SCHEMA_NS_URI,
+                                                                              "enumeration"))
     {
-      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (CXML.XML_NS_XSD, "annotation");
+      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
+                                                                           "annotation");
       if (eAnnotation == null)
         throw new IllegalStateException ("annotation is missing");
-      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (CXML.XML_NS_XSD, "documentation");
+      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
+                                                                             "documentation");
       if (eDocumentation == null)
         throw new IllegalStateException ("documentation is missing");
       final IMicroElement eCodeName = eDocumentation.getFirstChildElement ("urn:un:unece:uncefact:documentation:2",

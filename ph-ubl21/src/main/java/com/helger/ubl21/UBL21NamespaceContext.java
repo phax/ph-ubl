@@ -17,9 +17,9 @@
 package com.helger.ubl21;
 
 import javax.annotation.Nonnull;
+import javax.xml.XMLConstants;
 
 import com.helger.commons.annotation.Singleton;
-import com.helger.xml.CXML;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
@@ -37,8 +37,8 @@ public class UBL21NamespaceContext extends MapBasedNamespaceContext
 
   protected UBL21NamespaceContext ()
   {
-    addMapping ("xsi", CXML.XML_NS_XSI);
-    addMapping ("xs", CXML.XML_NS_XSD);
+    addMapping ("xsi", XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
+    addMapping ("xs", XMLConstants.W3C_XML_SCHEMA_NS_URI);
     addMapping ("cac", CUBL21.XML_SCHEMA_CAC_NAMESPACE_URL);
     addMapping ("cbc", CUBL21.XML_SCHEMA_CBC_NAMESPACE_URL);
     addMapping ("cec", CUBL21.XML_SCHEMA_CEC_NAMESPACE_URL);

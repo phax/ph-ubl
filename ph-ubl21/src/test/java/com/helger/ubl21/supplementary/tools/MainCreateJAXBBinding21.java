@@ -180,9 +180,9 @@ public final class MainCreateJAXBBinding21
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
                                                                                                                          JAXB_NS_URI)
                                                                                                             .addMapping ("xsd",
-                                                                                                                         CXML.XML_NS_XSD)
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
-                                                                                                                         CXML.XML_NS_XSI))
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
                                                        .setPutNamespaceContextPrefixesInRoot (true));
     }
 

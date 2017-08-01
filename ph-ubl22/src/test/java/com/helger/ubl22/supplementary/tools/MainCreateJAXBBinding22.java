@@ -65,7 +65,7 @@ public final class MainCreateJAXBBinding22
   {
     final IMicroDocument eDoc = new MicroDocument ();
     final IMicroElement eRoot = eDoc.appendElement (JAXB_NS_URI, "bindings");
-    eRoot.setAttribute (CXML.XML_NS_XSI,
+    eRoot.setAttribute (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI,
                         "schemaLocation",
                         JAXB_NS_URI + " http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd");
     eRoot.setAttribute ("version", "2.1");
@@ -185,9 +185,9 @@ public final class MainCreateJAXBBinding22
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
                                                                                                                          JAXB_NS_URI)
                                                                                                             .addMapping ("xsd",
-                                                                                                                         CXML.XML_NS_XSD)
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
-                                                                                                                         CXML.XML_NS_XSI))
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
                                                        .setPutNamespaceContextPrefixesInRoot (true));
     }
 
