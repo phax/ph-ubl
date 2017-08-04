@@ -25,12 +25,9 @@
     <Package name="oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_21" />
   </Match>
   <Match>
-    <Package name="org.etsi.uri._01903.v1_3_21" />
-  </Match>
-  <Match>
-    <Package name="org.w3._2000._09.xmldsig" />
-  </Match>
-  <Match>
     <Package name="un.unece.uncefact.data.specification.corecomponenttypeschemamodule._21" />
+  </Match>
+  <Match>
+    <Bug code="CN_IDIOM_NO_SUPER_CALL" />
   </Match>
 </FindBugsFilter>

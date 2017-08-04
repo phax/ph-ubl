@@ -30,4 +30,7 @@
   <Match>
     <Package name="un.unece.uncefact.data.specification.unqualifieddatatypesschemamodule._2" />
   </Match>
+  <Match>
+    <Bug code="CN_IDIOM_NO_SUPER_CALL" />
+  </Match>
 </FindBugsFilter>
