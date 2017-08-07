@@ -20,7 +20,7 @@ The following projects are contained:
   
 ## News and noteworthy
 
-  * v5.1.1 - work in progress
+  * v6.0.0 - work in progress
     * Binds to ph-commons 8.6.6
     * Added initial UBL 2.2 CSPRD 01 support
     * Fixes issues #11
