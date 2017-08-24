@@ -37,8 +37,7 @@ public class UBL20WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
     super (eDocType);
 
     // Create a special namespace context for the passed document type
-    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.addMappings (UBL20NamespaceContext.getInstance ());
+    final MapBasedNamespaceContext aNSContext = UBL20NamespaceContext.getInstance ().getClone ();
     aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
