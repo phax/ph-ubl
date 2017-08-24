@@ -1,5 +1,8 @@
 language: java
 
+# Required to avoid timeout!
+sudo: true
+
 env:
   global:
     - SONATYPE_USERNAME=ph@phloc.com
