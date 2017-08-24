@@ -22,7 +22,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
@@ -162,7 +162,7 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   private EUBL22DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
     m_aDocType = new JAXBDocumentType (aClass,
-                                       CollectionHelper.newList (CUBL22.SCHEMA_DIRECTORY + sXSDPath),
+                                       new CommonsArrayList <> (CUBL22.SCHEMA_DIRECTORY + sXSDPath),
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
