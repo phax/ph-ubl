@@ -177,6 +177,7 @@
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
             <exclude>docs/**</exclude>
+            <exclude>**/*.txt</exclude>
           </excludes>
         </configuration>
       </plugin>
