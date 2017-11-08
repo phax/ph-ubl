@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            UBL-CommonExtensionComponents-2.2.xsd
-  Generated on:      2016-06-24 19:50(UTC)
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-01-02 17:20(UTC)
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
@@ -147,7 +147,7 @@ targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionCom
   </xsd:complexType>
   <xsd:complexType name="ExtensionAgencyNameType">
     <xsd:simpleContent>
-      <xsd:extension base="udt:TextType"/>
+      <xsd:extension base="udt:NameType"/>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ExtensionAgencyURIType">

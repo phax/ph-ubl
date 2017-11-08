@@ -1,33 +1,17 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 
 /**
  * This file was automatically generated from Genericode file PaymentMeansCode-2.2.gc. Do NOT edit!
- * It contains a total of 75 entries!
+ * It contains a total of 82 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -87,6 +71,12 @@ public enum EPaymentMeansCode22
     _51("51", "FR, norme 6 97-Telereglement CFONB (French Organisation for Banking Standards)  - Option A", "A French standard procedure that allows a debtor to pay an amount due to a creditor. The creditor will forward it to its bank, which will collect the money on the bank account of the debtor."),
     _52("52", "Urgent commercial payment", "Payment order which requires guaranteed processing by the most appropriate means to ensure it occurs on the requested execution date, provided that it is issued to the ordered bank before the agreed cut-off time."),
     _53("53", "Urgent Treasury Payment", "Payment order or transfer which must be executed, by the most appropriate means, as urgently as possible and before urgent commercial payments."),
+    _54("54", "Credit card", "Payment made by means of credit card."),
+    _55("55", "Debit card", "Payment made by means of debit card."),
+    _56("56", "Bankgiro", "Payment will be, or has been, made by bankgiro."),
+    _57("57", "Standing agreement", "The payment means have been previously agreed between seller and buyer and thus are not stated again."),
+    _58("58", "SEPA credit transfer", "Credit transfer inside the Single Euro Payment Area (SEPA) system."),
+    _59("59", "SEPA direct debit", "Direct debit inside the Single Euro Payment Area (SEPA) system."),
     _60("60", "Promissory note", "Payment by an unconditional promise in writing made by one person to another, signed by the maker, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
     _61("61", "Promissory note signed by the debtor", "Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
     _62("62", "Promissory note signed by the debtor and endorsed by a bank", "Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
@@ -95,6 +85,7 @@ public enum EPaymentMeansCode22
     _65("65", "Promissory note signed by a bank and endorsed by another bank", "Payment by an unconditional promise in writing made by the bank to another person, signed by the bank and endorsed by another bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
     _66("66", "Promissory note signed by a third party", "Payment by an unconditional promise in writing made by a third party to another person, signed by the third party, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
     _67("67", "Promissory note signed by a third party and endorsed by a bank", "Payment by an unconditional promise in writing made by a third party to another person, signed by the third party and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."),
+    _68("68", "Online payment service", "Payment will be made or has been made by an online payment service."),
     _70("70", "Bill drawn by the creditor on the debtor", "Bill drawn by the creditor on the debtor."),
     _74("74", "Bill drawn by the creditor on a bank", "Bill drawn by the creditor on a bank."),
     _75("75", "Bill drawn by the creditor, endorsed by another bank", "Bill drawn by the creditor, endorsed by another bank."),

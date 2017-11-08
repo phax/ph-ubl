@@ -108,11 +108,11 @@ public final class MainCreateEnumsGenericode22
     final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
 
-    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet<> ();
+    final ICommonsOrderedSet <String> aOtherCols = new CommonsLinkedHashSet <> ();
     Genericode10Helper.getAllColumnIDs (aCodeList10.getColumnSet (), aOtherCols);
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
-    if (aFile.getName ().equals ("BinaryObjectMimeCode-2.2.gc"))
+    if (aFile.getName ().equals ("BinaryObjectMimeCode-2.2.gc") || aFile.getName ().equals ("UnitOfMeasureCode-2.2.gc"))
     {
       // Otherwise we get a "code too large" in compilation
       aOtherCols.clear ();
@@ -155,7 +155,7 @@ public final class MainCreateEnumsGenericode22
          .add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode22.class.getName ());
 
-    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet<> ();
+    final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
     for (final Row aRow : aCodeList10.getSimpleCodeList ().getRow ())
     {
@@ -199,8 +199,7 @@ public final class MainCreateEnumsGenericode22
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE |
-                                                                 JMod.FINAL,
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
                                                                  String.class,
                                                                  "m_sDisplayName")
                                                   : null;
@@ -255,10 +254,11 @@ public final class MainCreateEnumsGenericode22
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()._return (s_aCodeModel.ref (EnumHelper.class)
-                                   .staticInvoke ("getFromIDOrNull")
-                                   .arg (JExpr.dotclass (jEnum))
-                                   .arg (jID));
+    m.body ()
+     ._return (s_aCodeModel.ref (EnumHelper.class)
+                           .staticInvoke ("getFromIDOrNull")
+                           .arg (JExpr.dotclass (jEnum))
+                           .arg (jID));
 
     if (bHasNameColumn)
     {
@@ -267,10 +267,8 @@ public final class MainCreateEnumsGenericode22
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ().decl (JMod.FINAL,
-                                          jEnum,
-                                          "eValue",
-                                          jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ()
+                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
   }
@@ -301,15 +299,11 @@ public final class MainCreateEnumsGenericode22
 
     final AbstractJClass aSetDecl = s_aCodeModel.ref (ICommonsSet.class).narrow (String.class);
     final AbstractJClass aSetImpl = s_aCodeModel.ref (CommonsHashSet.class).narrowEmpty ();
-    final JVar aCodeSet = jClass.field (JMod.PRIVATE |
-                                        JMod.FINAL |
-                                        JMod.STATIC,
+    final JVar aCodeSet = jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                         aSetDecl,
                                         "s_aCodeSet",
                                         JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)));
-    final JVar aNameSet = bHasNameColumn ? jClass.field (JMod.PRIVATE |
-                                                         JMod.FINAL |
-                                                         JMod.STATIC,
+    final JVar aNameSet = bHasNameColumn ? jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                                          aSetDecl,
                                                          "s_aNameSet",
                                                          JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)))
@@ -325,13 +319,9 @@ public final class MainCreateEnumsGenericode22
     {
       if ((nRowIndex % 1500) == 0 || aCodeMethod == null || aNameMethod == null)
       {
-        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE |
-                                                             JMod.STATIC |
-                                                             JMod.FINAL,
+        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
                                                              "CodePart" + nClassIndex);
-        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE |
-                                                             JMod.STATIC |
-                                                             JMod.FINAL,
+        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
                                                              "NamePart" + nClassIndex);
         nClassIndex++;
 

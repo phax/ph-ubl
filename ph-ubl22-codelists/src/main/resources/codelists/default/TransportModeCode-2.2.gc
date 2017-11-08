@@ -4,11 +4,11 @@
       <ShortName>TransportModeCode</ShortName>
       <LongName xml:lang="en">Transport Mode Code</LongName>
       <LongName Identifier="listID">UNECE Recommendation 19 - Codes for Modes of Transport</LongName>
-      <Version>2001/19</Version>
+      <Version>17A</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode:2.2</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/TransportModeCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_TransportModeCode_2.xsd</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D17A.zip!/29MAR17 2/uncefact/codelist/standard/UNECE_TransportModeCode_2.xsd</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>

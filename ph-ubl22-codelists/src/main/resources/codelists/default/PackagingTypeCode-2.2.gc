@@ -5,11 +5,11 @@
       <LongName xml:lang="en">Packaging Type Code</LongName>
       <LongName Identifier="listID">UNECE Recommendation 21 - Codes for Passengers, Types of Cargo,
       Packages and Packaging Materials (with Complementary Codes for Package Names)</LongName>
-      <Version>Revision 9 Annexes V and VI 2012</Version>
+      <Version>9e_2012</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode:2.2</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/PackagingTypeCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec21/rec21_Rev9e_2012.xls</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">jar:https://www.unece.org/fileadmin/DAM/cefact/recommendations/rec21/rec21.zip!/rec21_Rev9e_2012.xls</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
@@ -166,7 +166,7 @@
             <SimpleValue>Bag, polybag</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A type of plastic bag, typically used to wrap promotional pieces, publications, product samples, and/or catalogues. </SimpleValue>
+            <SimpleValue>A type of plastic bag, typically used to wrap promotional pieces, publications, product samples, and/or catalogues.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 or 63</SimpleValue>
@@ -265,7 +265,7 @@
             <SimpleValue>5L</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, textile </SimpleValue>
+            <SimpleValue>Bag, textile</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -276,7 +276,7 @@
             <SimpleValue>5M</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, paper </SimpleValue>
+            <SimpleValue>Bag, paper</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -368,7 +368,7 @@
             <SimpleValue>Bundle, wooden</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>Loose or unpacked pieces of wood tied or wrapped together. </SimpleValue>
+            <SimpleValue>Loose or unpacked pieces of wood tied or wrapped together.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>16</SimpleValue>
@@ -390,7 +390,7 @@
             <SimpleValue>AB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, fibre </SimpleValue>
+            <SimpleValue>Receptacle, fibre</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of fibre used for retaining substances or articles.</SimpleValue>
@@ -404,7 +404,7 @@
             <SimpleValue>AC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, paper </SimpleValue>
+            <SimpleValue>Receptacle, paper</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of paper for retaining substances or articles.</SimpleValue>
@@ -418,7 +418,7 @@
             <SimpleValue>AD</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, wooden </SimpleValue>
+            <SimpleValue>Receptacle, wooden</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of wood for retaining substances or articles.</SimpleValue>
@@ -443,7 +443,7 @@
             <SimpleValue>AF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet, modular, collars 80cms * 60cms </SimpleValue>
+            <SimpleValue>Pallet, modular, collars 80cms * 60cms</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 60 centimeters (cms).</SimpleValue>
@@ -457,7 +457,7 @@
             <SimpleValue>AG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet, shrinkwrapped </SimpleValue>
+            <SimpleValue>Pallet, shrinkwrapped</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Pallet load secured with transparent plastic film that has been wrapped around and then shrunk tightly.</SimpleValue>
@@ -471,7 +471,7 @@
             <SimpleValue>AH</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet, 100cms * 110cms </SimpleValue>
+            <SimpleValue>Pallet, 100cms * 110cms</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Standard sized pallet of dimensions 100centimeters by 110 centimeters (cms).</SimpleValue>
@@ -524,7 +524,7 @@
             <SimpleValue>AM</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Ampoule, non-protected </SimpleValue>
+            <SimpleValue>Ampoule, non-protected</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>31</SimpleValue>
@@ -535,7 +535,7 @@
             <SimpleValue>AP</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Ampoule, protected </SimpleValue>
+            <SimpleValue>Ampoule, protected</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>31</SimpleValue>
@@ -546,7 +546,7 @@
             <SimpleValue>AT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Atomizer </SimpleValue>
+            <SimpleValue>Atomizer</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>42 or 43</SimpleValue>
@@ -582,7 +582,7 @@
             <SimpleValue>BA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Barrel </SimpleValue>
+            <SimpleValue>Barrel</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -593,7 +593,7 @@
             <SimpleValue>BB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bobbin </SimpleValue>
+            <SimpleValue>Bobbin</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>91</SimpleValue>
@@ -604,7 +604,7 @@
             <SimpleValue>BC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bottlecrate / bottlerack </SimpleValue>
+            <SimpleValue>Bottlecrate / bottlerack</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>29</SimpleValue>
@@ -626,7 +626,7 @@
             <SimpleValue>BE</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bundle </SimpleValue>
+            <SimpleValue>Bundle</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>61 to 65</SimpleValue>
@@ -637,7 +637,7 @@
             <SimpleValue>BF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Balloon, non-protected </SimpleValue>
+            <SimpleValue>Balloon, non-protected</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>42 or 43</SimpleValue>
@@ -684,7 +684,7 @@
             <SimpleValue>BJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bucket </SimpleValue>
+            <SimpleValue>Bucket</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>51</SimpleValue>
@@ -695,7 +695,7 @@
             <SimpleValue>BK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Basket </SimpleValue>
+            <SimpleValue>Basket</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -706,7 +706,7 @@
             <SimpleValue>BL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bale, compressed </SimpleValue>
+            <SimpleValue>Bale, compressed</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>65</SimpleValue>
@@ -728,7 +728,7 @@
             <SimpleValue>BN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bale, non-compressed </SimpleValue>
+            <SimpleValue>Bale, non-compressed</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>65</SimpleValue>
@@ -739,7 +739,7 @@
             <SimpleValue>BO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bottle, non-protected, cylindrical </SimpleValue>
+            <SimpleValue>Bottle, non-protected, cylindrical</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A narrow-necked cylindrical shaped vessel without external protective packing material.</SimpleValue>
@@ -753,7 +753,7 @@
             <SimpleValue>BP</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Balloon, protected </SimpleValue>
+            <SimpleValue>Balloon, protected</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>42 or 43</SimpleValue>
@@ -789,7 +789,7 @@
             <SimpleValue>BS</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bottle, non-protected, bulbous </SimpleValue>
+            <SimpleValue>Bottle, non-protected, bulbous</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A narrow-necked bulb shaped vessel without external protective packing material.</SimpleValue>
@@ -803,7 +803,7 @@
             <SimpleValue>BT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bolt </SimpleValue>
+            <SimpleValue>Bolt</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>13</SimpleValue>
@@ -814,7 +814,7 @@
             <SimpleValue>BU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Butt </SimpleValue>
+            <SimpleValue>Butt</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -861,7 +861,7 @@
             <SimpleValue>BY</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Board, in bundle/bunch/truss </SimpleValue>
+            <SimpleValue>Board, in bundle/bunch/truss</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>16</SimpleValue>
@@ -883,7 +883,7 @@
             <SimpleValue>CA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Can, rectangular </SimpleValue>
+            <SimpleValue>Can, rectangular</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>22</SimpleValue>
@@ -916,7 +916,7 @@
             <SimpleValue>CD</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Can, with handle and spout </SimpleValue>
+            <SimpleValue>Can, with handle and spout</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>22</SimpleValue>
@@ -938,7 +938,7 @@
             <SimpleValue>CF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Coffer </SimpleValue>
+            <SimpleValue>Coffer</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>24</SimpleValue>
@@ -949,7 +949,7 @@
             <SimpleValue>CG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Cage </SimpleValue>
+            <SimpleValue>Cage</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>26</SimpleValue>
@@ -971,7 +971,7 @@
             <SimpleValue>CI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Canister </SimpleValue>
+            <SimpleValue>Canister</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 or 22</SimpleValue>
@@ -982,7 +982,7 @@
             <SimpleValue>CJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Coffin </SimpleValue>
+            <SimpleValue>Coffin</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>54</SimpleValue>
@@ -993,7 +993,7 @@
             <SimpleValue>CK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Cask </SimpleValue>
+            <SimpleValue>Cask</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -1004,7 +1004,7 @@
             <SimpleValue>CL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Coil </SimpleValue>
+            <SimpleValue>Coil</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>14</SimpleValue>
@@ -1087,7 +1087,7 @@
             <SimpleValue>CS</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Case </SimpleValue>
+            <SimpleValue>Case</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 25</SimpleValue>
@@ -1098,7 +1098,7 @@
             <SimpleValue>CT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Carton </SimpleValue>
+            <SimpleValue>Carton</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>22 to 24</SimpleValue>
@@ -1131,7 +1131,7 @@
             <SimpleValue>CW</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Cage, roll </SimpleValue>
+            <SimpleValue>Cage, roll</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>26</SimpleValue>
@@ -1142,7 +1142,7 @@
             <SimpleValue>CX</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Can, cylindrical </SimpleValue>
+            <SimpleValue>Can, cylindrical</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>32</SimpleValue>
@@ -1153,7 +1153,7 @@
             <SimpleValue>CY</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Cylinder </SimpleValue>
+            <SimpleValue>Cylinder</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>12</SimpleValue>
@@ -1164,7 +1164,7 @@
             <SimpleValue>CZ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Canvas </SimpleValue>
+            <SimpleValue>Canvas</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>67</SimpleValue>
@@ -1175,7 +1175,7 @@
             <SimpleValue>DA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, multiple layer, plastic </SimpleValue>
+            <SimpleValue>Crate, multiple layer, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25 or 27</SimpleValue>
@@ -1197,7 +1197,7 @@
             <SimpleValue>DC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, multiple layer, cardboard </SimpleValue>
+            <SimpleValue>Crate, multiple layer, cardboard</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25 or 27</SimpleValue>
@@ -1233,7 +1233,7 @@
             <SimpleValue>DI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Drum, iron </SimpleValue>
+            <SimpleValue>Drum, iron</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>34</SimpleValue>
@@ -1255,7 +1255,7 @@
             <SimpleValue>DK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, bulk, cardboard </SimpleValue>
+            <SimpleValue>Crate, bulk, cardboard</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25 or 27</SimpleValue>
@@ -1266,7 +1266,7 @@
             <SimpleValue>DL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, bulk, plastic </SimpleValue>
+            <SimpleValue>Crate, bulk, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25 or 27</SimpleValue>
@@ -1310,7 +1310,7 @@
             <SimpleValue>DR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Drum </SimpleValue>
+            <SimpleValue>Drum</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>34</SimpleValue>
@@ -1332,7 +1332,7 @@
             <SimpleValue>DT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tray, one layer no cover, wooden </SimpleValue>
+            <SimpleValue>Tray, one layer no cover, wooden</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -1387,7 +1387,7 @@
             <SimpleValue>DY</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tray, two layers no cover, cardboard </SimpleValue>
+            <SimpleValue>Tray, two layers no cover, cardboard</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27 or 29</SimpleValue>
@@ -1398,7 +1398,7 @@
             <SimpleValue>EC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, plastic </SimpleValue>
+            <SimpleValue>Bag, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -1409,7 +1409,7 @@
             <SimpleValue>ED</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Case, with pallet base </SimpleValue>
+            <SimpleValue>Case, with pallet base</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25</SimpleValue>
@@ -1420,7 +1420,7 @@
             <SimpleValue>EE</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Case, with pallet base, wooden </SimpleValue>
+            <SimpleValue>Case, with pallet base, wooden</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 25</SimpleValue>
@@ -1464,7 +1464,7 @@
             <SimpleValue>EI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Case, isothermic </SimpleValue>
+            <SimpleValue>Case, isothermic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>22 to 25</SimpleValue>
@@ -1475,7 +1475,7 @@
             <SimpleValue>EN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Envelope </SimpleValue>
+            <SimpleValue>Envelope</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>67</SimpleValue>
@@ -1500,7 +1500,7 @@
             <SimpleValue>FC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, fruit </SimpleValue>
+            <SimpleValue>Crate, fruit</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 27</SimpleValue>
@@ -1536,7 +1536,7 @@
             <SimpleValue>FI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Firkin </SimpleValue>
+            <SimpleValue>Firkin</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -1558,7 +1558,7 @@
             <SimpleValue>FO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Footlocker </SimpleValue>
+            <SimpleValue>Footlocker</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23</SimpleValue>
@@ -1569,7 +1569,7 @@
             <SimpleValue>FP</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Filmpack </SimpleValue>
+            <SimpleValue>Filmpack</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>67</SimpleValue>
@@ -1641,7 +1641,7 @@
             <SimpleValue>GI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Girder </SimpleValue>
+            <SimpleValue>Girder</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>16</SimpleValue>
@@ -1666,7 +1666,7 @@
             <SimpleValue>GR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, glass </SimpleValue>
+            <SimpleValue>Receptacle, glass</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of glass for retaining substances or articles.</SimpleValue>
@@ -1697,7 +1697,7 @@
             <SimpleValue>Bag, gunny</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A sack made of gunny or burlap, used for transporting coarse commodities, such as grains, potatoes, and other agricultural products. </SimpleValue>
+            <SimpleValue>A sack made of gunny or burlap, used for transporting coarse commodities, such as grains, potatoes, and other agricultural products.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>63 to 64</SimpleValue>
@@ -1708,7 +1708,7 @@
             <SimpleValue>GZ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Girders, in bundle/bunch/truss </SimpleValue>
+            <SimpleValue>Girders, in bundle/bunch/truss</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>16</SimpleValue>
@@ -1719,7 +1719,7 @@
             <SimpleValue>HA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Basket, with handle, plastic </SimpleValue>
+            <SimpleValue>Basket, with handle, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -1741,7 +1741,7 @@
             <SimpleValue>HC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Basket, with handle, cardboard </SimpleValue>
+            <SimpleValue>Basket, with handle, cardboard</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -1752,7 +1752,7 @@
             <SimpleValue>HG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Hogshead </SimpleValue>
+            <SimpleValue>Hogshead</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -1777,7 +1777,7 @@
             <SimpleValue>HR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Hamper </SimpleValue>
+            <SimpleValue>Hamper</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23</SimpleValue>
@@ -1788,7 +1788,7 @@
             <SimpleValue>IA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Package, display, wooden </SimpleValue>
+            <SimpleValue>Package, display, wooden</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 23</SimpleValue>
@@ -1843,7 +1843,7 @@
             <SimpleValue>IF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Package, flow </SimpleValue>
+            <SimpleValue>Package, flow</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A flexible tubular package or skin, possibly transparent, often used for containment of foodstuffs (e.g. salami sausage).</SimpleValue>
@@ -1879,10 +1879,10 @@
             <SimpleValue>IK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Package, cardboard, with bottle grip-holes </SimpleValue>
+            <SimpleValue>Package, cardboard, with bottle grip-holes</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>Packaging material made out of cardboard that facilitates the separation of individual glass or plastic bottles. </SimpleValue>
+            <SimpleValue>Packaging material made out of cardboard that facilitates the separation of individual glass or plastic bottles.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 23</SimpleValue>
@@ -1932,7 +1932,7 @@
             <SimpleValue>Bag, jumbo</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A flexible containment bag, widely used for storage, transportation and handling of powder, flake or granular materials. Typically constructed from woven polypropylene (PP) fabric in the form of cubic bags. </SimpleValue>
+            <SimpleValue>A flexible containment bag, widely used for storage, transportation and handling of powder, flake or granular materials. Typically constructed from woven polypropylene (PP) fabric in the form of cubic bags.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>65</SimpleValue>
@@ -2148,7 +2148,7 @@
             <SimpleValue>MR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, metal </SimpleValue>
+            <SimpleValue>Receptacle, metal</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of metal for retaining substances or articles.</SimpleValue>
@@ -2162,7 +2162,7 @@
             <SimpleValue>MS</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Sack, multi-wall </SimpleValue>
+            <SimpleValue>Sack, multi-wall</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -2184,13 +2184,13 @@
             <SimpleValue>MW</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, plastic wrapped </SimpleValue>
+            <SimpleValue>Receptacle, plastic wrapped</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel wrapped with plastic for retaining substances or articles.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
-            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43 or 61 to 63 </SimpleValue>
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43 or 61 to 63</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2198,7 +2198,7 @@
             <SimpleValue>MX</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Matchbox </SimpleValue>
+            <SimpleValue>Matchbox</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21</SimpleValue>
@@ -2220,7 +2220,7 @@
             <SimpleValue>NE</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Unpacked or unpackaged </SimpleValue>
+            <SimpleValue>Unpacked or unpackaged</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>0</SimpleValue>
@@ -2253,7 +2253,7 @@
             <SimpleValue>NS</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Nest </SimpleValue>
+            <SimpleValue>Nest</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>24</SimpleValue>
@@ -2275,7 +2275,7 @@
             <SimpleValue>NU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Net, tube, plastic </SimpleValue>
+            <SimpleValue>Net, tube, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>66</SimpleValue>
@@ -2286,7 +2286,7 @@
             <SimpleValue>NV</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Net, tube, textile </SimpleValue>
+            <SimpleValue>Net, tube, textile</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>66</SimpleValue>
@@ -2370,7 +2370,7 @@
             <SimpleValue>Platform, unspecified weight or dimension</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A pallet equivalent shipping platform of unknown dimensions or unknown weight. </SimpleValue>
+            <SimpleValue>A pallet equivalent shipping platform of unknown dimensions or unknown weight.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>92</SimpleValue>
@@ -2437,7 +2437,7 @@
             <SimpleValue>PA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Packet </SimpleValue>
+            <SimpleValue>Packet</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Small package.</SimpleValue>
@@ -2462,7 +2462,7 @@
             <SimpleValue>PC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Parcel </SimpleValue>
+            <SimpleValue>Parcel</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 23 or 61 to 63</SimpleValue>
@@ -2473,7 +2473,7 @@
             <SimpleValue>PD</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet, modular, collars 80cms * 100cms </SimpleValue>
+            <SimpleValue>Pallet, modular, collars 80cms * 100cms</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 100 centimeters (cms).</SimpleValue>
@@ -2487,7 +2487,7 @@
             <SimpleValue>PE</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet, modular, collars 80cms * 120cms </SimpleValue>
+            <SimpleValue>Pallet, modular, collars 80cms * 120cms</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 120 centimeters (cms).</SimpleValue>
@@ -2501,7 +2501,7 @@
             <SimpleValue>PF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pen </SimpleValue>
+            <SimpleValue>Pen</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A small open top enclosure for retaining animals.</SimpleValue>
@@ -2537,7 +2537,7 @@
             <SimpleValue>PI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pipe </SimpleValue>
+            <SimpleValue>Pipe</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>11</SimpleValue>
@@ -2573,7 +2573,7 @@
             <SimpleValue>PL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pail </SimpleValue>
+            <SimpleValue>Pail</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>51</SimpleValue>
@@ -2609,7 +2609,7 @@
             <SimpleValue>Piece</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A loose or unpacked article. </SimpleValue>
+            <SimpleValue>A loose or unpacked article.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>19</SimpleValue>
@@ -2620,7 +2620,7 @@
             <SimpleValue>PR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Receptacle, plastic </SimpleValue>
+            <SimpleValue>Receptacle, plastic</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment vessel made of plastic for retaining substances or articles.</SimpleValue>
@@ -2645,7 +2645,7 @@
             <SimpleValue>PU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tray </SimpleValue>
+            <SimpleValue>Tray</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -2656,7 +2656,7 @@
             <SimpleValue>PV</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pipes, in bundle/bunch/truss </SimpleValue>
+            <SimpleValue>Pipes, in bundle/bunch/truss</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>11</SimpleValue>
@@ -2667,7 +2667,7 @@
             <SimpleValue>PX</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Pallet </SimpleValue>
+            <SimpleValue>Pallet</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Platform or open-ended box, usually made of wood, on which goods are retained for ease of mechanical handling during transport and storage.</SimpleValue>
@@ -2780,7 +2780,7 @@
             <SimpleValue>QJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Barrel, wooden, removable head </SimpleValue>
+            <SimpleValue>Barrel, wooden, removable head</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>44 or 45</SimpleValue>
@@ -2857,7 +2857,7 @@
             <SimpleValue>QR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Box, plastic, expanded </SimpleValue>
+            <SimpleValue>Box, plastic, expanded</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 25</SimpleValue>
@@ -2890,7 +2890,7 @@
             <SimpleValue>RG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Ring </SimpleValue>
+            <SimpleValue>Ring</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>14</SimpleValue>
@@ -2912,7 +2912,7 @@
             <SimpleValue>RK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Rack </SimpleValue>
+            <SimpleValue>Rack</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>93</SimpleValue>
@@ -2923,7 +2923,7 @@
             <SimpleValue>RL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Reel </SimpleValue>
+            <SimpleValue>Reel</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Cylindrical rotatory device with a rim at each end on which materials are wound.</SimpleValue>
@@ -2937,7 +2937,7 @@
             <SimpleValue>RO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Roll </SimpleValue>
+            <SimpleValue>Roll</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>13</SimpleValue>
@@ -2948,7 +2948,7 @@
             <SimpleValue>RT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Rednet </SimpleValue>
+            <SimpleValue>Rednet</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Containment material made of red mesh netting for retaining articles (e.g. trees).</SimpleValue>
@@ -2973,7 +2973,7 @@
             <SimpleValue>SA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Sack </SimpleValue>
+            <SimpleValue>Sack</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>65</SimpleValue>
@@ -2995,7 +2995,7 @@
             <SimpleValue>SC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Crate, shallow </SimpleValue>
+            <SimpleValue>Crate, shallow</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>27</SimpleValue>
@@ -3028,7 +3028,7 @@
             <SimpleValue>SH</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Sachet </SimpleValue>
+            <SimpleValue>Sachet</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>61</SimpleValue>
@@ -3039,7 +3039,7 @@
             <SimpleValue>SI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Skid </SimpleValue>
+            <SimpleValue>Skid</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A low movable platform or pallet to facilitate the handling and transport of goods.</SimpleValue>
@@ -3053,7 +3053,7 @@
             <SimpleValue>SK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Case, skeleton </SimpleValue>
+            <SimpleValue>Case, skeleton</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>26</SimpleValue>
@@ -3064,7 +3064,7 @@
             <SimpleValue>SL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Slipsheet </SimpleValue>
+            <SimpleValue>Slipsheet</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Hard plastic sheeting primarily used as the base on which to stack goods to optimise the space within a container. May be used as an alternative to a palletized packaging.</SimpleValue>
@@ -3078,7 +3078,7 @@
             <SimpleValue>SM</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Sheetmetal </SimpleValue>
+            <SimpleValue>Sheetmetal</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>15</SimpleValue>
@@ -3089,7 +3089,7 @@
             <SimpleValue>SO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Spool </SimpleValue>
+            <SimpleValue>Spool</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A packaging container used in the transport of such items as wire, cable, tape and yarn.</SimpleValue>
@@ -3136,7 +3136,7 @@
             <SimpleValue>SU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Suitcase </SimpleValue>
+            <SimpleValue>Suitcase</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>21 to 23 or 61 to 63</SimpleValue>
@@ -3158,27 +3158,13 @@
             <SimpleValue>SW</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Shrinkwrapped </SimpleValue>
+            <SimpleValue>Shrinkwrapped</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Goods retained in a transparent plastic film that has been wrapped around and then shrunk tightly on to the goods.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>67</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="status">
-            <SimpleValue>X</SimpleValue>
-         </Value>
-         <Value ColumnRef="code">
-            <SimpleValue>SX</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Set</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>11 to 45</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -3211,7 +3197,7 @@
             <SimpleValue>Tablet</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A loose or unpacked article in the form of a bar, block or piece. </SimpleValue>
+            <SimpleValue>A loose or unpacked article in the form of a bar, block or piece.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>16</SimpleValue>
@@ -3374,7 +3360,7 @@
             <SimpleValue>TU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tube </SimpleValue>
+            <SimpleValue>Tube</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>11</SimpleValue>
@@ -3385,7 +3371,7 @@
             <SimpleValue>TV</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tube, with nozzle </SimpleValue>
+            <SimpleValue>Tube, with nozzle</SimpleValue>
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>A tube made of plastic, metal or cardboard fitted with a nozzle, containing a liquid or semi-liquid product, e.g. silicon.</SimpleValue>
@@ -3402,7 +3388,7 @@
             <SimpleValue>Pallet, triwall</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A lightweight pallet made from heavy duty corrugated board. </SimpleValue>
+            <SimpleValue>A lightweight pallet made from heavy duty corrugated board.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>92</SimpleValue>
@@ -3424,7 +3410,7 @@
             <SimpleValue>TZ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Tubes, in bundle/bunch/truss </SimpleValue>
+            <SimpleValue>Tubes, in bundle/bunch/truss</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>11</SimpleValue>
@@ -3435,7 +3421,7 @@
             <SimpleValue>UC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Uncaged </SimpleValue>
+            <SimpleValue>Uncaged</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>0</SimpleValue>
@@ -3482,7 +3468,7 @@
             <SimpleValue>VI</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Vial </SimpleValue>
+            <SimpleValue>Vial</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>31</SimpleValue>
@@ -3493,10 +3479,10 @@
             <SimpleValue>VK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Vanpack </SimpleValue>
+            <SimpleValue>Vanpack</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>A type of wooden crate. </SimpleValue>
+            <SimpleValue>A type of wooden crate.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>99</SimpleValue>
@@ -3507,7 +3493,7 @@
             <SimpleValue>VL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, liquid </SimpleValue>
+            <SimpleValue>Bulk, liquid</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>4</SimpleValue>
@@ -3518,7 +3504,7 @@
             <SimpleValue>VO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, solid, large particles (“nodules”) </SimpleValue>
+            <SimpleValue>Bulk, solid, large particles (“nodules”)</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>3</SimpleValue>
@@ -3540,7 +3526,7 @@
             <SimpleValue>VQ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, liquefied gas (at abnormal temperature/pressure) </SimpleValue>
+            <SimpleValue>Bulk, liquefied gas (at abnormal temperature/pressure)</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>5</SimpleValue>
@@ -3565,7 +3551,7 @@
             <SimpleValue>VR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, solid, granular particles (“grains”) </SimpleValue>
+            <SimpleValue>Bulk, solid, granular particles (“grains”)</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>2</SimpleValue>
@@ -3579,7 +3565,7 @@
             <SimpleValue>Bulk, scrap metal</SimpleValue>
          </Value>
          <Value ColumnRef="description">
-            <SimpleValue>Loose or unpacked scrap metal transported in bulk form. </SimpleValue>
+            <SimpleValue>Loose or unpacked scrap metal transported in bulk form.</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>9</SimpleValue>
@@ -3615,7 +3601,7 @@
             <SimpleValue>WB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Wickerbottle </SimpleValue>
+            <SimpleValue>Wickerbottle</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>42 or 43</SimpleValue>
@@ -3626,7 +3612,7 @@
             <SimpleValue>WC</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, steel </SimpleValue>
+            <SimpleValue>Intermediate bulk container, steel</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3637,7 +3623,7 @@
             <SimpleValue>WD</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, aluminium </SimpleValue>
+            <SimpleValue>Intermediate bulk container, aluminium</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3648,7 +3634,7 @@
             <SimpleValue>WF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, metal </SimpleValue>
+            <SimpleValue>Intermediate bulk container, metal</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3681,7 +3667,7 @@
             <SimpleValue>WJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, metal, pressure 10 kpa </SimpleValue>
+            <SimpleValue>Intermediate bulk container, metal, pressure 10 kpa</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3692,7 +3678,7 @@
             <SimpleValue>WK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, steel, liquid </SimpleValue>
+            <SimpleValue>Intermediate bulk container, steel, liquid</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3703,7 +3689,7 @@
             <SimpleValue>WL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, aluminium, liquid </SimpleValue>
+            <SimpleValue>Intermediate bulk container, aluminium, liquid</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3714,7 +3700,7 @@
             <SimpleValue>WM</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, metal, liquid </SimpleValue>
+            <SimpleValue>Intermediate bulk container, metal, liquid</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3725,7 +3711,7 @@
             <SimpleValue>WN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, woven plastic, without coat/liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, woven plastic, without coat/liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3736,7 +3722,7 @@
             <SimpleValue>WP</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, woven plastic, coated </SimpleValue>
+            <SimpleValue>Intermediate bulk container, woven plastic, coated</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3747,7 +3733,7 @@
             <SimpleValue>WQ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, woven plastic, with liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, woven plastic, with liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3758,7 +3744,7 @@
             <SimpleValue>WR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, woven plastic, coated and liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, woven plastic, coated and liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3780,7 +3766,7 @@
             <SimpleValue>WT</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, textile with out coat/liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, textile with out coat/liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3802,7 +3788,7 @@
             <SimpleValue>WV</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, textile, coated </SimpleValue>
+            <SimpleValue>Intermediate bulk container, textile, coated</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3813,7 +3799,7 @@
             <SimpleValue>WW</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, textile, with liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, textile, with liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3824,7 +3810,7 @@
             <SimpleValue>WX</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, textile, coated and liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, textile, coated and liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3835,7 +3821,7 @@
             <SimpleValue>WY</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, plywood, with inner liner </SimpleValue>
+            <SimpleValue>Intermediate bulk container, plywood, with inner liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -3857,7 +3843,7 @@
             <SimpleValue>XA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, woven plastic, without inner coat/liner </SimpleValue>
+            <SimpleValue>Bag, woven plastic, without inner coat/liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3868,7 +3854,7 @@
             <SimpleValue>XB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, woven plastic, sift proof </SimpleValue>
+            <SimpleValue>Bag, woven plastic, sift proof</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3890,7 +3876,7 @@
             <SimpleValue>XD</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, plastics film </SimpleValue>
+            <SimpleValue>Bag, plastics film</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3901,7 +3887,7 @@
             <SimpleValue>XF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, textile, without inner coat/liner </SimpleValue>
+            <SimpleValue>Bag, textile, without inner coat/liner</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3912,7 +3898,7 @@
             <SimpleValue>XG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, textile, sift proof </SimpleValue>
+            <SimpleValue>Bag, textile, sift proof</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -3934,7 +3920,7 @@
             <SimpleValue>XJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, paper, multi-wall </SimpleValue>
+            <SimpleValue>Bag, paper, multi-wall</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -4022,7 +4008,7 @@
             <SimpleValue>YH</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Composite packaging, plastic receptacle in plywood box </SimpleValue>
+            <SimpleValue>Composite packaging, plastic receptacle in plywood box</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>24 or 25</SimpleValue>
@@ -4165,7 +4151,7 @@
             <SimpleValue>YX</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Composite packaging, glass receptacle in fibreboard box </SimpleValue>
+            <SimpleValue>Composite packaging, glass receptacle in fibreboard box</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>24 or 25</SimpleValue>
@@ -4198,7 +4184,7 @@
             <SimpleValue>ZA</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, paper, multi-wall </SimpleValue>
+            <SimpleValue>Intermediate bulk container, paper, multi-wall</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -4209,7 +4195,7 @@
             <SimpleValue>ZB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bag, large </SimpleValue>
+            <SimpleValue>Bag, large</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -4275,7 +4261,7 @@
             <SimpleValue>ZJ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, liquids </SimpleValue>
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, liquids</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -4319,7 +4305,7 @@
             <SimpleValue>ZN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, composite, rigid plastic, pressurised </SimpleValue>
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, pressurised</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>23 to 26</SimpleValue>
@@ -4352,7 +4338,7 @@
             <SimpleValue>ZR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Intermediate bulk container, composite, flexible plastic, liquids </SimpleValue>
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, liquids</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>62 to 64</SimpleValue>
@@ -4440,7 +4426,7 @@
             <SimpleValue>ZZ</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Mutually defined </SimpleValue>
+            <SimpleValue>Mutually defined</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>0</SimpleValue>

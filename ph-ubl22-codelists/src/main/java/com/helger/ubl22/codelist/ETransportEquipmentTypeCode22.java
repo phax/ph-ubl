@@ -1,33 +1,17 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 
 /**
  * This file was automatically generated from Genericode file TransportEquipmentTypeCode-2.2.gc. Do NOT edit!
- * It contains a total of 72 entries!
+ * It contains a total of 73 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -79,6 +63,7 @@ public enum ETransportEquipmentTypeCode22
     DPH("DPH", "Forklift", "Equipment device for handling and moving goods."),
     DPI("DPI", "Stacking equipment", "Equipment device for stacking goods."),
     DPJ("DPJ", "Taillift", "Equipment device at the rear of a truck for loading and unloading cargo."),
+    DPL("DPL", "On-board equipment", "Equipment permanently on board a means of transport."),
     EFP("EFP", "Exchangeable EUR flat pallet", "A flat euro-pallet that may be exchanged."),
     EYP("EYP", "Exchangeable EUR Y box pallet", "A euro-pallet of type Y that may be exchanged."),
     FPN("FPN", "Flat pallet EUR non exchangeable", "A flat euro-pallet that may not be exchanged."),

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsd/maindoc/UBL-QualificationApplicationResponse-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -231,22 +231,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:TendererRoleCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Qualification Application Response. Tenderer Role Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code stating the Tenderer Role.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Tenderer Role Code</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cbc:EconomicOperatorGroupName" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -298,6 +282,77 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:ProcedureCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Qualification Application Response. Procedure Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code signifying the type of this tendering procedure.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Procedure Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                     <ccts:Examples>Open, Restricted, Negotiated</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:QualificationApplicationTypeCode"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Qualification Application Response. Qualification Application Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code specifying the type of the Qualification Application.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Qualification Application Type Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                     <ccts:Examples>"Regulated", "Self-contained"</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:WeightScoringMethodologyNote"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Qualification Application Response. Weight Scoring Methodology Note. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Free-form text to describe Weight Scoring Methodology.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Weight Scoring Methodology Note</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:WeightingTypeCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Qualification Application Response. Weighting Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code specifying the Weighting type</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Weighting Type Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                     <ccts:Examples>"Regulated", "Self-contained"</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -330,14 +385,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="1" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Qualification Application Response. Economic Operator Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The Economic Operator issuing the Qualification Application Response.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
                      <ccts:PropertyTerm>Economic Operator Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Economic Operator Party</ccts:AssociatedObjectClass>
@@ -395,7 +450,7 @@
             </xsd:annotation>
          </xsd:element>
          <xsd:element ref="cac:TenderingCriterionResponse"
-                      minOccurs="0"
+                      minOccurs="1"
                       maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -403,7 +458,7 @@
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Qualification Application Response. Tendering Criterion Response</ccts:DictionaryEntryName>
                      <ccts:Definition>Each criterion requirement response.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
                      <ccts:PropertyTerm>Tendering Criterion Response</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tendering Criterion Response</ccts:AssociatedObjectClass>
@@ -427,6 +482,22 @@
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:Evidence" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Qualification Application Response. Evidence</ccts:DictionaryEntryName>
+                     <ccts:Definition>The evidence supporting this criterion requirement response.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Qualification Application Response</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Evidence</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Evidence</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Evidence</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

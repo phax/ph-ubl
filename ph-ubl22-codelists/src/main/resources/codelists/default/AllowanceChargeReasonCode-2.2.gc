@@ -4,11 +4,11 @@
       <ShortName>AllowanceChargeReasonCode</ShortName>
       <LongName xml:lang="en">Allowance Charge Reason Code</LongName>
       <LongName Identifier="listID">UN/EDIFACT EDED 5189</LongName>
-      <Version>13A</Version>
+      <Version>17A</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode:2.2</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/AllowanceChargeReasonCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_AllowanceChargeReasonCode_D13A.xsd</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D17A.zip!/29MAR17 2/uncefact/codelist/standard/UNECE_AllowanceChargeReasonCode_D16B.xsd</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/fileadmin/DAM/trade/untdid/d16a/tred/tred3055.htm">6</Identifier>
@@ -1098,6 +1098,83 @@
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>An adjustment made due to the partner's inability to pay open debts.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>98</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect references</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect references.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>99</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect identification of the buyer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect identification of the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>100</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect product identification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect product identification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>101</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New employee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a new employee.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>102</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Employee retirement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is the retirement of an employee.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>103</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Salary change</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a salary change.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>104</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Parental leave</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a parental leave.</SimpleValue>
          </Value>
       </Row>
       <Row>

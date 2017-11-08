@@ -1,33 +1,17 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 
 /**
  * This file was automatically generated from Genericode file PackagingTypeCode-2.2.gc. Do NOT edit!
- * It contains a total of 378 entries!
+ * It contains a total of 377 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -299,7 +283,6 @@ public enum EPackagingTypeCode22
     SU("SU", "Suitcase", null, null, "21 to 23 or 61 to 63"),
     SV("SV", "Envelope, steel", null, null, "67"),
     SW("SW", "Shrinkwrapped", null, "Goods retained in a transparent plastic film that has been wrapped around and then shrunk tightly on to the goods.", "67"),
-    SX("SX", "Set", "X", null, "11 to 45"),
     SY("SY", "Sleeve", null, null, "69"),
     SZ("SZ", "Sheets, in bundle/bunch/truss", null, null, "15"),
     T1("T1", "Tablet", null, "A loose or unpacked article in the form of a bar, block or piece.", "16"),

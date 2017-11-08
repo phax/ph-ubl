@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsd/maindoc/UBL-BusinessCard-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:BusinessCard-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -248,14 +248,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:SenderParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:SenderParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Sender_ Party. Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The party sending this business card. This party could be the owner of this business card or a third-party acting on behalf of the owner (e.g. business network).</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -265,14 +265,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ReceiverParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:ReceiverParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Receiver_ Party. Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The party receiving this business card.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -282,14 +282,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:BusinessParty" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:BusinessParty" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Business_ Party. Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The party owning this business card.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Business</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>

@@ -1,28 +1,12 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 
 /**
@@ -66,7 +50,7 @@ public enum ECountryIdentificationCode22
     BW("BW", "Botswana", "072", "Botswana (le)", "BWA"),
     BV("BV", "Bouvet Island", "074", "Bouvet (l'\u00cele)", "BVT"),
     BR("BR", "Brazil", "076", "Br\u00e9sil (le)", "BRA"),
-    IO("IO", "British Indian Ocean Territory (the)", "086", "Indien (le Territoire britannique de l'oc\u00e9an)", "IOT"),
+    IO("IO", "British Indian Ocean Territory (the)", "086", "Indien (le\u00a0Territoire britannique de l'oc\u00e9an)", "IOT"),
     BN("BN", "Brunei Darussalam", "096", "Brun\u00e9i Darussalam (le)", "BRN"),
     BG("BG", "Bulgaria", "100", "Bulgarie (la)", "BGR"),
     BF("BF", "Burkina Faso", "854", "Burkina Faso (le)", "BFA"),
@@ -75,13 +59,13 @@ public enum ECountryIdentificationCode22
     KH("KH", "Cambodia", "116", "Cambodge (le)", "KHM"),
     CM("CM", "Cameroon", "120", "Cameroun (le)", "CMR"),
     CA("CA", "Canada", "124", "Canada (le)", "CAN"),
-    KY("KY", "Cayman Islands (the)", "136", "Ca\u00efmans (les \u00celes)", "CYM"),
+    KY("KY", "Cayman Islands (the)", "136", "Ca\u00efmans (les\u00a0\u00celes)", "CYM"),
     CF("CF", "Central African Republic (the)", "140", "R\u00e9publique centrafricaine (la)", "CAF"),
     TD("TD", "Chad", "148", "Tchad (le)", "TCD"),
     CL("CL", "Chile", "152", "Chili (le)", "CHL"),
     CN("CN", "China", "156", "Chine (la)", "CHN"),
     CX("CX", "Christmas Island", "162", "Christmas (l'\u00cele)", "CXR"),
-    CC("CC", "Cocos (Keeling) Islands (the)", "166", "Cocos (les \u00celes)/ Keeling (les \u00celes)", "CCK"),
+    CC("CC", "Cocos (Keeling) Islands (the)", "166", "Cocos (les\u00a0\u00celes)/ Keeling (les\u00a0\u00celes)", "CCK"),
     CO("CO", "Colombia", "170", "Colombie (la)", "COL"),
     KM("KM", "Comoros (the)", "174", "Comores (les)", "COM"),
     CD("CD", "Congo (the Democratic Republic of the)", "180", "Congo (la R\u00e9publique d\u00e9mocratique du)", "COD"),
@@ -97,7 +81,7 @@ public enum ECountryIdentificationCode22
     DK("DK", "Denmark", "208", "Danemark (le)", "DNK"),
     DJ("DJ", "Djibouti", "262", "Djibouti", "DJI"),
     DM("DM", "Dominica", "212", "Dominique (la)", "DMA"),
-    DO("DO", "Dominican Republic (the)", "214", "dominicaine (la R\u00e9publique)", "DOM"),
+    DO("DO", "Dominican Republic (the)", "214", "dominicaine (la\u00a0R\u00e9publique)", "DOM"),
     EC("EC", "Ecuador", "218", "\u00c9quateur (l')", "ECU"),
     EG("EG", "Egypt", "818", "\u00c9gypte (l')", "EGY"),
     SV("SV", "El Salvador", "222", "El Salvador", "SLV"),
@@ -110,7 +94,7 @@ public enum ECountryIdentificationCode22
     FJ("FJ", "Fiji", "242", "Fidji (les)", "FJI"),
     FI("FI", "Finland", "246", "Finlande (la)", "FIN"),
     FR("FR", "France", "250", "France (la)", "FRA"),
-    GF("GF", "French Guiana", "254", "Guyane fran\u00e7aise (la )", "GUF"),
+    GF("GF", "French Guiana", "254", "Guyane fran\u00e7aise (la\u00a0)", "GUF"),
     PF("PF", "French Polynesia", "258", "Polyn\u00e9sie fran\u00e7aise (la)", "PYF"),
     TF("TF", "French Southern Territories (the)", "260", "Terres australes fran\u00e7aises (les)", "ATF"),
     GA("GA", "Gabon", "266", "Gabon (le)", "GAB"),
@@ -151,7 +135,7 @@ public enum ECountryIdentificationCode22
     KZ("KZ", "Kazakhstan", "398", "Kazakhstan (le)", "KAZ"),
     KE("KE", "Kenya", "404", "Kenya (le)", "KEN"),
     KI("KI", "Kiribati", "296", "Kiribati", "KIR"),
-    KP("KP", "Korea (the Democratic People's Republic of)", "408", "Cor\u00e9e (la R\u00e9publique populaire d\u00e9mocratique de)", "PRK"),
+    KP("KP", "Korea (the Democratic People's Republic of)", "408", "Cor\u00e9e (la\u00a0R\u00e9publique populaire d\u00e9mocratique de)", "PRK"),
     KR("KR", "Korea (the Republic of)", "410", "Cor\u00e9e (la R\u00e9publique de)", "KOR"),
     KW("KW", "Kuwait", "414", "Kowe\u00eft (le)", "KWT"),
     KG("KG", "Kyrgyzstan", "417", "Kirghizistan (le)", "KGZ"),
@@ -179,7 +163,7 @@ public enum ECountryIdentificationCode22
     YT("YT", "Mayotte", "175", "Mayotte", "MYT"),
     MX("MX", "Mexico", "484", "Mexique (le)", "MEX"),
     FM("FM", "Micronesia (Federated States of)", "583", "Micron\u00e9sie (\u00c9tats f\u00e9d\u00e9r\u00e9s de)", "FSM"),
-    MD("MD", "Moldova (the Republic of)", "498", "Moldova , R\u00e9publique de", "MDA"),
+    MD("MD", "Moldova (the Republic of)", "498", "Moldova, R\u00e9publique de", "MDA"),
     MC("MC", "Monaco", "492", "Monaco", "MCO"),
     MN("MN", "Mongolia", "496", "Mongolie (la)", "MNG"),
     ME("ME", "Montenegro", "499", "Mont\u00e9n\u00e9gro (le)", "MNE"),
@@ -276,9 +260,9 @@ public enum ECountryIdentificationCode22
     VU("VU", "Vanuatu", "548", "Vanuatu (le)", "VUT"),
     VE("VE", "Venezuela (Bolivarian Republic of)", "862", "Venezuela (R\u00e9publique bolivarienne du)", "VEN"),
     VN("VN", "Viet Nam", "704", "Viet Nam (le)", "VNM"),
-    VG("VG", "Virgin Islands (British)", "092", "Vierges britanniques (les \u00celes)", "VGB"),
+    VG("VG", "Virgin Islands (British)", "092", "Vierges britanniques (les\u00a0\u00celes)", "VGB"),
     VI("VI", "Virgin Islands (U.S.)", "850", "Vierges des \u00c9tats-Unis (les \u00celes)", "VIR"),
-    WF("WF", "Wallis and Futuna", "876", "Wallis-et-Futuna", "WLF"),
+    WF("WF", "Wallis and Futuna", "876", "Wallis-et-Futuna\u00a0", "WLF"),
     EH("EH", "Western Sahara*", "732", "Sahara occidental (le)*", "ESH"),
     YE("YE", "Yemen", "887", "Y\u00e9men (le)", "YEM"),
     ZM("ZM", "Zambia", "894", "Zambie (la)", "ZMB"),
@@ -315,7 +299,7 @@ public enum ECountryIdentificationCode22
     BWA("BWA", "Botswana", "072", "Botswana (le)", "BW"),
     BVT("BVT", "Bouvet Island", "074", "Bouvet (l'\u00cele)", "BV"),
     BRA("BRA", "Brazil", "076", "Br\u00e9sil (le)", "BR"),
-    IOT("IOT", "British Indian Ocean Territory (the)", "086", "Indien (le Territoire britannique de l'oc\u00e9an)", "IO"),
+    IOT("IOT", "British Indian Ocean Territory (the)", "086", "Indien (le\u00a0Territoire britannique de l'oc\u00e9an)", "IO"),
     BRN("BRN", "Brunei Darussalam", "096", "Brun\u00e9i Darussalam (le)", "BN"),
     BGR("BGR", "Bulgaria", "100", "Bulgarie (la)", "BG"),
     BFA("BFA", "Burkina Faso", "854", "Burkina Faso (le)", "BF"),
@@ -324,13 +308,13 @@ public enum ECountryIdentificationCode22
     KHM("KHM", "Cambodia", "116", "Cambodge (le)", "KH"),
     CMR("CMR", "Cameroon", "120", "Cameroun (le)", "CM"),
     CAN("CAN", "Canada", "124", "Canada (le)", "CA"),
-    CYM("CYM", "Cayman Islands (the)", "136", "Ca\u00efmans (les \u00celes)", "KY"),
+    CYM("CYM", "Cayman Islands (the)", "136", "Ca\u00efmans (les\u00a0\u00celes)", "KY"),
     CAF("CAF", "Central African Republic (the)", "140", "R\u00e9publique centrafricaine (la)", "CF"),
     TCD("TCD", "Chad", "148", "Tchad (le)", "TD"),
     CHL("CHL", "Chile", "152", "Chili (le)", "CL"),
     CHN("CHN", "China", "156", "Chine (la)", "CN"),
     CXR("CXR", "Christmas Island", "162", "Christmas (l'\u00cele)", "CX"),
-    CCK("CCK", "Cocos (Keeling) Islands (the)", "166", "Cocos (les \u00celes)/ Keeling (les \u00celes)", "CC"),
+    CCK("CCK", "Cocos (Keeling) Islands (the)", "166", "Cocos (les\u00a0\u00celes)/ Keeling (les\u00a0\u00celes)", "CC"),
     COL("COL", "Colombia", "170", "Colombie (la)", "CO"),
     COM("COM", "Comoros (the)", "174", "Comores (les)", "KM"),
     COD("COD", "Congo (the Democratic Republic of the)", "180", "Congo (la R\u00e9publique d\u00e9mocratique du)", "CD"),
@@ -346,7 +330,7 @@ public enum ECountryIdentificationCode22
     DNK("DNK", "Denmark", "208", "Danemark (le)", "DK"),
     DJI("DJI", "Djibouti", "262", "Djibouti", "DJ"),
     DMA("DMA", "Dominica", "212", "Dominique (la)", "DM"),
-    DOM("DOM", "Dominican Republic (the)", "214", "dominicaine (la R\u00e9publique)", "DO"),
+    DOM("DOM", "Dominican Republic (the)", "214", "dominicaine (la\u00a0R\u00e9publique)", "DO"),
     ECU("ECU", "Ecuador", "218", "\u00c9quateur (l')", "EC"),
     EGY("EGY", "Egypt", "818", "\u00c9gypte (l')", "EG"),
     SLV("SLV", "El Salvador", "222", "El Salvador", "SV"),
@@ -359,7 +343,7 @@ public enum ECountryIdentificationCode22
     FJI("FJI", "Fiji", "242", "Fidji (les)", "FJ"),
     FIN("FIN", "Finland", "246", "Finlande (la)", "FI"),
     FRA("FRA", "France", "250", "France (la)", "FR"),
-    GUF("GUF", "French Guiana", "254", "Guyane fran\u00e7aise (la )", "GF"),
+    GUF("GUF", "French Guiana", "254", "Guyane fran\u00e7aise (la\u00a0)", "GF"),
     PYF("PYF", "French Polynesia", "258", "Polyn\u00e9sie fran\u00e7aise (la)", "PF"),
     ATF("ATF", "French Southern Territories (the)", "260", "Terres australes fran\u00e7aises (les)", "TF"),
     GAB("GAB", "Gabon", "266", "Gabon (le)", "GA"),
@@ -400,7 +384,7 @@ public enum ECountryIdentificationCode22
     KAZ("KAZ", "Kazakhstan", "398", "Kazakhstan (le)", "KZ"),
     KEN("KEN", "Kenya", "404", "Kenya (le)", "KE"),
     KIR("KIR", "Kiribati", "296", "Kiribati", "KI"),
-    PRK("PRK", "Korea (the Democratic People's Republic of)", "408", "Cor\u00e9e (la R\u00e9publique populaire d\u00e9mocratique de)", "KP"),
+    PRK("PRK", "Korea (the Democratic People's Republic of)", "408", "Cor\u00e9e (la\u00a0R\u00e9publique populaire d\u00e9mocratique de)", "KP"),
     KOR("KOR", "Korea (the Republic of)", "410", "Cor\u00e9e (la R\u00e9publique de)", "KR"),
     KWT("KWT", "Kuwait", "414", "Kowe\u00eft (le)", "KW"),
     KGZ("KGZ", "Kyrgyzstan", "417", "Kirghizistan (le)", "KG"),
@@ -428,7 +412,7 @@ public enum ECountryIdentificationCode22
     MYT("MYT", "Mayotte", "175", "Mayotte", "YT"),
     MEX("MEX", "Mexico", "484", "Mexique (le)", "MX"),
     FSM("FSM", "Micronesia (Federated States of)", "583", "Micron\u00e9sie (\u00c9tats f\u00e9d\u00e9r\u00e9s de)", "FM"),
-    MDA("MDA", "Moldova (the Republic of)", "498", "Moldova , R\u00e9publique de", "MD"),
+    MDA("MDA", "Moldova (the Republic of)", "498", "Moldova, R\u00e9publique de", "MD"),
     MCO("MCO", "Monaco", "492", "Monaco", "MC"),
     MNG("MNG", "Mongolia", "496", "Mongolie (la)", "MN"),
     MNE("MNE", "Montenegro", "499", "Mont\u00e9n\u00e9gro (le)", "ME"),
@@ -525,9 +509,9 @@ public enum ECountryIdentificationCode22
     VUT("VUT", "Vanuatu", "548", "Vanuatu (le)", "VU"),
     VEN("VEN", "Venezuela (Bolivarian Republic of)", "862", "Venezuela (R\u00e9publique bolivarienne du)", "VE"),
     VNM("VNM", "Viet Nam", "704", "Viet Nam (le)", "VN"),
-    VGB("VGB", "Virgin Islands (British)", "092", "Vierges britanniques (les \u00celes)", "VG"),
+    VGB("VGB", "Virgin Islands (British)", "092", "Vierges britanniques (les\u00a0\u00celes)", "VG"),
     VIR("VIR", "Virgin Islands (U.S.)", "850", "Vierges des \u00c9tats-Unis (les \u00celes)", "VI"),
-    WLF("WLF", "Wallis and Futuna", "876", "Wallis-et-Futuna", "WF"),
+    WLF("WLF", "Wallis and Futuna", "876", "Wallis-et-Futuna\u00a0", "WF"),
     ESH("ESH", "Western Sahara*", "732", "Sahara occidental (le)*", "EH"),
     YEM("YEM", "Yemen", "887", "Y\u00e9men (le)", "YE"),
     ZMB("ZMB", "Zambia", "894", "Zambie (la)", "ZM"),

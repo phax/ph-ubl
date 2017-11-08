@@ -3,12 +3,12 @@
    <Identification>
       <ShortName>CountryIdentificationCode</ShortName>
       <LongName xml:lang="en">Country Identification Code</LongName>
-      <LongName Identifier="listID">ISO 3166-2</LongName>
-      <Version>2016-10-21</Version>
-      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode</CanonicalUri>
-      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode:2.2</CanonicalVersionUri>
+      <LongName Identifier="listID">ISO 3166</LongName>
+      <Version>2017-10-30</Version>
+      <CanonicalUri>urn:iso:std:iso:3166</CanonicalUri>
+      <CanonicalVersionUri>urn:iso:std:iso:3166:2017-10-30</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/CountryIdentificationCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/html">http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/html">https://www.iso.org/obp/ui/#search/code/</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">International Organization for Standardization</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">5</Identifier>
@@ -596,7 +596,7 @@
             <SimpleValue>086</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Indien (le Territoire britannique de l'océan)</SimpleValue>
+            <SimpleValue>Indien (le Territoire britannique de l'océan)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>IOT</SimpleValue>
@@ -749,7 +749,7 @@
             <SimpleValue>136</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Caïmans (les Îles)</SimpleValue>
+            <SimpleValue>Caïmans (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>CYM</SimpleValue>
@@ -851,7 +851,7 @@
             <SimpleValue>166</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Cocos (les Îles)/ Keeling (les Îles)</SimpleValue>
+            <SimpleValue>Cocos (les Îles)/ Keeling (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>CCK</SimpleValue>
@@ -1123,7 +1123,7 @@
             <SimpleValue>214</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>dominicaine (la République)</SimpleValue>
+            <SimpleValue>dominicaine (la République)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>DOM</SimpleValue>
@@ -1344,7 +1344,7 @@
             <SimpleValue>254</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Guyane française (la )</SimpleValue>
+            <SimpleValue>Guyane française (la )</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>GUF</SimpleValue>
@@ -2041,7 +2041,7 @@
             <SimpleValue>408</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Corée (la République populaire démocratique de)</SimpleValue>
+            <SimpleValue>Corée (la République populaire démocratique de)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>PRK</SimpleValue>
@@ -2517,7 +2517,7 @@
             <SimpleValue>498</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Moldova , République de</SimpleValue>
+            <SimpleValue>Moldova, République de</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>MDA</SimpleValue>
@@ -4166,7 +4166,7 @@
             <SimpleValue>092</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Vierges britanniques (les Îles)</SimpleValue>
+            <SimpleValue>Vierges britanniques (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>VGB</SimpleValue>
@@ -4200,7 +4200,7 @@
             <SimpleValue>876</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Wallis-et-Futuna</SimpleValue>
+            <SimpleValue>Wallis-et-Futuna </SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>WLF</SimpleValue>
@@ -4829,7 +4829,7 @@
             <SimpleValue>086</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Indien (le Territoire britannique de l'océan)</SimpleValue>
+            <SimpleValue>Indien (le Territoire britannique de l'océan)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>IO</SimpleValue>
@@ -4982,7 +4982,7 @@
             <SimpleValue>136</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Caïmans (les Îles)</SimpleValue>
+            <SimpleValue>Caïmans (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>KY</SimpleValue>
@@ -5084,7 +5084,7 @@
             <SimpleValue>166</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Cocos (les Îles)/ Keeling (les Îles)</SimpleValue>
+            <SimpleValue>Cocos (les Îles)/ Keeling (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>CC</SimpleValue>
@@ -5356,7 +5356,7 @@
             <SimpleValue>214</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>dominicaine (la République)</SimpleValue>
+            <SimpleValue>dominicaine (la République)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>DO</SimpleValue>
@@ -5577,7 +5577,7 @@
             <SimpleValue>254</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Guyane française (la )</SimpleValue>
+            <SimpleValue>Guyane française (la )</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>GF</SimpleValue>
@@ -6274,7 +6274,7 @@
             <SimpleValue>408</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Corée (la République populaire démocratique de)</SimpleValue>
+            <SimpleValue>Corée (la République populaire démocratique de)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>KP</SimpleValue>
@@ -6750,7 +6750,7 @@
             <SimpleValue>498</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Moldova , République de</SimpleValue>
+            <SimpleValue>Moldova, République de</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>MD</SimpleValue>
@@ -8399,7 +8399,7 @@
             <SimpleValue>092</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Vierges britanniques (les Îles)</SimpleValue>
+            <SimpleValue>Vierges britanniques (les Îles)</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>VG</SimpleValue>
@@ -8433,7 +8433,7 @@
             <SimpleValue>876</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Wallis-et-Futuna</SimpleValue>
+            <SimpleValue>Wallis-et-Futuna </SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>WF</SimpleValue>

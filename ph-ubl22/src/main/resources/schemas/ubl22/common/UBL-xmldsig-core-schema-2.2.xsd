@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            UBL-xmldsig-core-schema-2.2.xsd
-  Generated on:      2016-06-24 19:50(UTC)
+  Generated on:      2017-08-15 14:20(UTC)
 
   This is a copy of
   http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/xmldsig-core-schema.xsd
-  modified only to remove these PUBLIC and SYSTEM identifiers from the DOCTYPE:
+  modified only to remove the DOCTYPE declaration that has no impact on the
+  XDM model of the XML instance of this schema fragment:
 
-        PUBLIC "-//W3C//DTD XMLSchema 200102//EN" 
-               "http://www.w3.org/2001/XMLSchema.dtd"
--->
 <!DOCTYPE schema
+  PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd"
  [
    <!ATTLIST schema 
      xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#">
@@ -21,6 +20,7 @@
    <!ENTITY % p ''>
    <!ENTITY % s ''>
   ]>
+-->
 
 <!-- Schema for XML Signatures
     http://www.w3.org/2000/09/xmldsig#

@@ -4,9 +4,9 @@
       <ShortName>CurrencyCode</ShortName>
       <LongName xml:lang="en">Currency Code</LongName>
       <LongName Identifier="listID">ISO 4217 Alpha</LongName>
-      <Version>2016-07-01</Version>
+      <Version>2017-09-22</Version>
       <CanonicalUri>urn:iso:std:iso:4217</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:4217:2016-07-01</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:4217:2017-09-22</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/default/CurrencyCode-2.1.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/xml">http://www.currency-iso.org/dam/downloads/lists/list_one.xml</AlternateFormatLocationUri>
       <Agency>
@@ -31,6 +31,10 @@
          <ShortName>FractionalDigits</ShortName>
          <Data Type="integer"/>
       </Column>
+      <Column Id="country" Use="optional">
+         <ShortName>Country</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
       <Key Id="codeKey">
          <ShortName>CodeKey</ShortName>
          <ColumnRef Ref="code"/>
@@ -50,6 +54,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UNITED ARAB EMIRATES (THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -63,6 +70,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>AFGHANISTAN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -78,6 +88,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ALBANIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -91,6 +104,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ARMENIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -106,6 +122,26 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CURAÇAO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ANG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Netherlands Antillean Guilder</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>532</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SINT MAARTEN (DUTCH PART)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -119,6 +155,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ANGOLA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -134,6 +173,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ARGENTINA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -147,6 +189,128 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>AUSTRALIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CHRISTMAS ISLAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COCOS (KEELING) ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HEARD ISLAND AND McDONALD ISLANDS</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KIRIBATI</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NAURU</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NORFOLK ISLAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AUD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Australian Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>036</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TUVALU</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -162,19 +326,25 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ARUBA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
             <SimpleValue>AZN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Azerbaijanian Manat</SimpleValue>
+            <SimpleValue>Azerbaijan Manat</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>944</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>AZERBAIJAN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -190,6 +360,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BOSNIA AND HERZEGOVINA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -203,6 +376,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BARBADOS</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -218,6 +394,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BANGLADESH</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -231,6 +410,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BULGARIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -246,6 +428,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BAHRAIN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -259,6 +444,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BURUNDI</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -274,6 +462,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BERMUDA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -287,6 +478,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BRUNEI DARUSSALAM</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -302,6 +496,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BOLIVIA (PLURINATIONAL STATE OF)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -315,6 +512,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BOLIVIA (PLURINATIONAL STATE OF)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -330,6 +530,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BRAZIL</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -343,6 +546,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BAHAMAS (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -358,6 +564,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BHUTAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -371,6 +580,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BOTSWANA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -386,19 +598,8 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
-            <SimpleValue>BYR</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Belarusian Ruble</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>974</SimpleValue>
-         </Value>
-         <Value ColumnRef="fractionaldigits">
-            <SimpleValue>0</SimpleValue>
+         <Value ColumnRef="country">
+            <SimpleValue>BELARUS</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -414,6 +615,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BELIZE</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -427,6 +631,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CANADA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -442,6 +649,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CONGO (THE DEMOCRATIC REPUBLIC OF THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -455,6 +665,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SWITZERLAND</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -470,6 +683,26 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LIECHTENSTEIN</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CHF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Swiss Franc</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>756</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SWITZERLAND</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -483,6 +716,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SWITZERLAND</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -498,6 +734,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>4</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CHILE</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -511,6 +750,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CHILE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -526,6 +768,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CHINA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -539,6 +784,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COLOMBIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -554,6 +802,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COLOMBIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -567,6 +818,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COSTA RICA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -582,6 +836,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CUBA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -595,6 +852,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CUBA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -610,6 +870,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CABO VERDE</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -623,6 +886,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CZECHIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -638,6 +904,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>DJIBOUTI</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -651,6 +920,43 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>DENMARK</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DKK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Danish Krone</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>208</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FAROE ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DKK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Danish Krone</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>208</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GREENLAND</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -666,6 +972,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>DOMINICAN REPUBLIC (THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -679,6 +988,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ALGERIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -694,6 +1006,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>EGYPT</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -707,6 +1022,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ERITREA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -722,6 +1040,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ETHIOPIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -735,6 +1056,587 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ÅLAND ISLANDS</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ANDORRA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>AUSTRIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BELGIUM</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CYPRUS</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ESTONIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>EUROPEAN UNION</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FINLAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FRANCE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FRENCH GUIANA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FRENCH SOUTHERN TERRITORIES (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GERMANY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GREECE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUADELOUPE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HOLY SEE (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>IRELAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ITALY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LATVIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LITHUANIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LUXEMBOURG</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MALTA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MARTINIQUE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MAYOTTE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MONACO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MONTENEGRO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NETHERLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PORTUGAL</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>RÉUNION</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT BARTHÉLEMY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT MARTIN (FRENCH PART)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT PIERRE AND MIQUELON</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAN MARINO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SLOVAKIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SLOVENIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EUR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Euro</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>978</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SPAIN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -750,6 +1652,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FIJI</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -763,6 +1668,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FALKLAND ISLANDS (THE) [MALVINAS]</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -778,6 +1686,60 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUERNSEY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GBP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pound Sterling</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>826</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ISLE OF MAN</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GBP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pound Sterling</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>826</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>JERSEY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GBP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pound Sterling</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>826</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -791,6 +1753,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GEORGIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -806,6 +1771,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GHANA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -819,6 +1787,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GIBRALTAR</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -834,19 +1805,25 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GAMBIA (THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
             <SimpleValue>GNF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Guinea Franc</SimpleValue>
+            <SimpleValue>Guinean Franc</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>324</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUINEA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -862,6 +1839,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUATEMALA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -875,6 +1855,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUYANA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -890,6 +1873,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HONG KONG</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -903,6 +1889,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HONDURAS</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -918,6 +1907,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CROATIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -931,6 +1923,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HAITI</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -946,6 +1941,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HUNGARY</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -959,6 +1957,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>INDONESIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -974,6 +1975,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ISRAEL</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -987,6 +1991,26 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BHUTAN</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>INR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Indian Rupee</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>356</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>INDIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1002,6 +2026,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>IRAQ</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1015,6 +2042,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>IRAN (ISLAMIC REPUBLIC OF)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1030,6 +2060,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ICELAND</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1043,6 +2076,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>JAMAICA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1058,6 +2094,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>JORDAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1071,6 +2110,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>JAPAN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1086,6 +2128,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KENYA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1099,6 +2144,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KYRGYZSTAN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1114,19 +2162,25 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CAMBODIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
             <SimpleValue>KMF</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Comoro Franc</SimpleValue>
+            <SimpleValue>Comorian Franc</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>174</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COMOROS (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1142,6 +2196,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1155,6 +2212,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KOREA (THE REPUBLIC OF)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1170,6 +2230,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KUWAIT</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1183,6 +2246,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CAYMAN ISLANDS (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1198,19 +2264,25 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>KAZAKHSTAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
             <SimpleValue>LAK</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Kip</SimpleValue>
+            <SimpleValue>Lao Kip</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>418</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LAO PEOPLE’S DEMOCRATIC REPUBLIC (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1226,6 +2298,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LEBANON</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1239,6 +2314,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SRI LANKA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1254,6 +2332,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LIBERIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1267,6 +2348,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LESOTHO</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1282,6 +2366,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LIBYA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1295,6 +2382,26 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MOROCCO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MAD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Moroccan Dirham</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>504</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>WESTERN SAHARA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1310,6 +2417,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MOLDOVA (THE REPUBLIC OF)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1323,6 +2433,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MADAGASCAR</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1338,6 +2451,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MACEDONIA (THE FORMER YUGOSLAV REPUBLIC OF)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1351,6 +2467,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MYANMAR</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1366,6 +2485,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MONGOLIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1379,6 +2501,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MACAO</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1394,6 +2519,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MAURITANIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1407,6 +2535,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MAURITIUS</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1422,6 +2553,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MALDIVES</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1435,6 +2569,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MALAWI</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1450,6 +2587,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MEXICO</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1463,6 +2603,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MEXICO</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1478,6 +2621,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MALAYSIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1491,6 +2637,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MOZAMBIQUE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1506,6 +2655,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NAMIBIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1519,6 +2671,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NIGERIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1534,6 +2689,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NICARAGUA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1547,6 +2705,43 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BOUVET ISLAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NOK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Norwegian Krone</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>578</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NORWAY</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NOK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Norwegian Krone</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>578</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SVALBARD AND JAN MAYEN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1562,6 +2757,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NEPAL</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1575,6 +2773,77 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>COOK ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New Zealand Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>554</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NEW ZEALAND</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New Zealand Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>554</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NIUE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New Zealand Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>554</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PITCAIRN</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New Zealand Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>554</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TOKELAU</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1590,6 +2859,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>OMAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1603,6 +2875,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PANAMA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1618,6 +2893,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PERU</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1632,19 +2910,25 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PAPUA NEW GUINEA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
             <SimpleValue>PHP</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Philippine Peso</SimpleValue>
+            <SimpleValue>Philippine Piso</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
             <SimpleValue>608</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PHILIPPINES (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1660,6 +2944,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PAKISTAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1673,6 +2960,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>POLAND</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1688,6 +2978,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PARAGUAY</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1701,6 +2994,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>QATAR</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1716,6 +3012,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ROMANIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1729,6 +3028,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SERBIA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1744,6 +3046,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>RUSSIAN FEDERATION (THE)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1757,6 +3062,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>RWANDA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1772,6 +3080,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAUDI ARABIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1785,6 +3096,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SOLOMON ISLANDS</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1800,6 +3114,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SEYCHELLES</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1813,6 +3130,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SUDAN (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1828,6 +3148,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SWEDEN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1841,6 +3164,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SINGAPORE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1856,6 +3182,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1869,6 +3198,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SIERRA LEONE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1884,6 +3216,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SOMALIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1897,6 +3232,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SURINAME</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1912,6 +3250,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SOUTH SUDAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1925,6 +3266,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAO TOME AND PRINCIPE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1940,6 +3284,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>EL SALVADOR</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1953,6 +3300,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SYRIAN ARAB REPUBLIC</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1968,6 +3318,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SWAZILAND</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -1981,6 +3334,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>THAILAND</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1996,6 +3352,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TAJIKISTAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2009,6 +3368,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TURKMENISTAN</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2024,6 +3386,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>3</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TUNISIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2037,6 +3402,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TONGA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2052,6 +3420,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TURKEY</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2065,6 +3436,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TRINIDAD AND TOBAGO</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2080,6 +3454,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TAIWAN (PROVINCE OF CHINA)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2093,6 +3470,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TANZANIA, UNITED REPUBLIC OF</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2108,6 +3488,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UKRAINE</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2121,6 +3504,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UGANDA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2136,6 +3522,315 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>AMERICAN SAMOA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BONAIRE, SINT EUSTATIUS AND SABA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BRITISH INDIAN OCEAN TERRITORY (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ECUADOR</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>EL SALVADOR</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUAM</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>HAITI</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MARSHALL ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MICRONESIA (FEDERATED STATES OF)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NORTHERN MARIANA ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PALAU</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PANAMA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>PUERTO RICO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TIMOR-LESTE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TURKS AND CAICOS ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UNITED STATES MINOR OUTLYING ISLANDS (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UNITED STATES OF AMERICA (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>VIRGIN ISLANDS (BRITISH)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>USD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>US Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>840</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>VIRGIN ISLANDS (U.S.)</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2149,6 +3844,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UNITED STATES OF AMERICA (THE)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2164,6 +3862,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>URUGUAY</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2177,6 +3878,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>URUGUAY</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2192,6 +3896,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>UZBEKISTAN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2205,6 +3912,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>VENEZUELA (BOLIVARIAN REPUBLIC OF)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2220,6 +3930,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>VIET NAM</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2233,6 +3946,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>VANUATU</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2248,6 +3964,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAMOA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2261,6 +3980,94 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CAMEROON</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XAF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BEAC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>950</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CENTRAL AFRICAN REPUBLIC (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XAF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BEAC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>950</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CHAD</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XAF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BEAC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>950</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CONGO (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XAF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BEAC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>950</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>EQUATORIAL GUINEA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XAF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BEAC</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>950</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GABON</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2276,6 +4083,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ11_Silver</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2289,6 +4099,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ08_Gold</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2304,6 +4117,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ01_Bond Markets Unit European_EURCO</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2317,6 +4133,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ02_Bond Markets Unit European_EMU-6</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2332,6 +4151,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ03_Bond Markets Unit European_EUA-9</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2345,6 +4167,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ04_Bond Markets Unit European_EUA-17</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2360,6 +4185,128 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ANGUILLA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ANTIGUA AND BARBUDA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>DOMINICA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GRENADA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MONTSERRAT</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT KITTS AND NEVIS</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT LUCIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XCD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>East Caribbean Dollar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>951</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SAINT VINCENT AND THE GRENADINES</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2373,6 +4320,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>INTERNATIONAL MONETARY FUND (IMF) </SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2388,6 +4338,128 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BENIN</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>BURKINA FASO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>CÔTE D'IVOIRE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>GUINEA-BISSAU</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MALI</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NIGER (THE)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SENEGAL</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XOF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFA Franc BCEAO</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>952</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>TOGO</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2401,6 +4473,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ09_Palladium</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2416,6 +4491,43 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>0</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>FRENCH POLYNESIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XPF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFP Franc</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>953</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NEW CALEDONIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XPF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CFP Franc</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>953</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>WALLIS AND FUTUNA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2429,6 +4541,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ10_Platinum</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2444,6 +4559,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS "SUCRE"</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2457,6 +4575,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ06_Testing_Code</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2472,6 +4593,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2485,6 +4609,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>N.A.</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZZ07_No_Currency</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2500,6 +4627,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>YEMEN</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2513,6 +4643,43 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>LESOTHO</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rand</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>710</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>NAMIBIA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rand</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>710</SimpleValue>
+         </Value>
+         <Value ColumnRef="fractionaldigits">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>SOUTH AFRICA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2528,6 +4695,9 @@
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
          </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZAMBIA</SimpleValue>
+         </Value>
       </Row>
       <Row>
          <Value ColumnRef="code">
@@ -2541,6 +4711,9 @@
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="country">
+            <SimpleValue>ZIMBABWE</SimpleValue>
          </Value>
       </Row>
    </SimpleCodeList>

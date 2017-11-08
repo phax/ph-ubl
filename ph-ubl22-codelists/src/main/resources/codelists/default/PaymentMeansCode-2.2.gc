@@ -4,11 +4,11 @@
       <ShortName>PaymentMeansCode</ShortName>
       <LongName xml:lang="en">Payment Means Code</LongName>
       <LongName Identifier="listID">UN/EDIFACT EDED 4461</LongName>
-      <Version>13A</Version>
+      <Version>17A</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode:2.2</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/PaymentMeansCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/xml">http://www.unece.org/fileadmin/DAM/uncefact/codelist/standard/UNECE_PaymentMeansCode_D13A.xsd</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D17A.zip!/29MAR17 2/uncefact/codelist/standard/UNECE_PaymentMeansCode_D16B.xsd</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm">6</Identifier>
@@ -618,6 +618,72 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment made by means of credit card.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>55</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Debit card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment made by means of debit card.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>56</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bankgiro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment will be, or has been, made by bankgiro.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>57</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Standing agreement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The payment means have been previously agreed between seller and buyer and thus are not stated again.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>58</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SEPA credit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Credit transfer inside the Single Euro Payment Area (SEPA) system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>59</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SEPA direct debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Direct debit inside the Single Euro Payment Area (SEPA) system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>60</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -702,6 +768,17 @@
          </Value>
          <Value ColumnRef="description">
             <SimpleValue>Payment by an unconditional promise in writing made by a third party to another person, signed by the third party and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>68</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Online payment service</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment will be made or has been made by an online payment service.</SimpleValue>
          </Value>
       </Row>
       <Row>

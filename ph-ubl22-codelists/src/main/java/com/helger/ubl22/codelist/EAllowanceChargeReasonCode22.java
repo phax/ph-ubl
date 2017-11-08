@@ -1,33 +1,17 @@
-/**
- * Copyright (C) 2014-2017 Philip Helger (www.helger.com)
- * philip[at]helger[dot]com
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.helger.ubl22.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 
 /**
  * This file was automatically generated from Genericode file AllowanceChargeReasonCode-2.2.gc. Do NOT edit!
- * It contains a total of 98 entries!
+ * It contains a total of 105 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -131,6 +115,13 @@ public enum EAllowanceChargeReasonCode22
     _95("95", "Small order processing service charge", "The reason for the adjustment is that a fee for processing of a small order (an order below a defined threshold) has been applied."),
     _96("96", "Currency exchange differences", "An adjustment made due to a change in a currency exchange rate."),
     _97("97", "Insolvency", "An adjustment made due to the partner's inability to pay open debts."),
+    _98("98", "Incorrect references", "Adjustment has taken place because of incorrect references."),
+    _99("99", "Incorrect identification of the buyer", "Adjustment has taken place because of incorrect identification of the buyer."),
+    _100("100", "Incorrect product identification", "Adjustment has taken place because of incorrect product identification."),
+    _101("101", "New employee", "The reason for the adjustment is a new employee."),
+    _102("102", "Employee retirement", "The reason for the adjustment is the retirement of an employee."),
+    _103("103", "Salary change", "The reason for the adjustment is a salary change."),
+    _104("104", "Parental leave", "The reason for the adjustment is a parental leave."),
     ZZZ("ZZZ", "Mutually defined", "A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list.");
     private final String m_sID;
     private final String m_sDisplayName;
