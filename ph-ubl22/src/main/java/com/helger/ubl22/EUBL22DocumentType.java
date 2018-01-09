@@ -169,7 +169,7 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
                         "UBL-TenderStatusRequest-2.2.xsd"),
   @Since ("2.2")
   TENDER_WITHDRAWAL(oasis.names.specification.ubl.schema.xsd.tenderwithdrawal_22.TenderWithdrawalType.class,
-                    "UBL-TenderWithDrawal-2.2.xsd"),
+                    "UBL-TenderWithdrawal-2.2.xsd"),
   TRADE_ITEM_LOCATION_PROFILE (oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_22.TradeItemLocationProfileType.class,
                                "UBL-TradeItemLocationProfile-2.2.xsd"),
   TRANSPORTATION_STATUS (oasis.names.specification.ubl.schema.xsd.transportationstatus_22.TransportationStatusType.class,
