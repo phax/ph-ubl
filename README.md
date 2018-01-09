@@ -21,8 +21,9 @@ The following projects are contained:
   * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
   
 ## News and noteworthy
+
 * v6.0.0 - work in progress
-  * Binds to ph-commons 8.6.6
+  * Binds to ph-commons 9.0.0
   * Added initial UBL 2.2 CSPRD02 support
   * Fixes issues #11
 * v5.1.0 - 2016-09-09

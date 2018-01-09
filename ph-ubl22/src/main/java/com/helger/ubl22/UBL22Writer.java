@@ -38,10 +38,16 @@ import oasis.names.specification.ubl.schema.xsd.contractnotice_22.ContractNotice
 import oasis.names.specification.ubl.schema.xsd.creditnote_22.CreditNoteType;
 import oasis.names.specification.ubl.schema.xsd.debitnote_22.DebitNoteType;
 import oasis.names.specification.ubl.schema.xsd.despatchadvice_22.DespatchAdviceType;
+import oasis.names.specification.ubl.schema.xsd.digitalagreement_22.DigitalAgreementType;
+import oasis.names.specification.ubl.schema.xsd.digitalcapability_22.DigitalCapabilityType;
 import oasis.names.specification.ubl.schema.xsd.documentstatus_22.DocumentStatusType;
 import oasis.names.specification.ubl.schema.xsd.documentstatusrequest_22.DocumentStatusRequestType;
+import oasis.names.specification.ubl.schema.xsd.enquiry_22.EnquiryType;
+import oasis.names.specification.ubl.schema.xsd.enquiryresponse_22.EnquiryResponseType;
 import oasis.names.specification.ubl.schema.xsd.exceptioncriteria_22.ExceptionCriteriaType;
 import oasis.names.specification.ubl.schema.xsd.exceptionnotification_22.ExceptionNotificationType;
+import oasis.names.specification.ubl.schema.xsd.expressionofinterestrequest_22.ExpressionOfInterestRequestType;
+import oasis.names.specification.ubl.schema.xsd.expressionofinterestresponse_22.ExpressionOfInterestResponseType;
 import oasis.names.specification.ubl.schema.xsd.forecast_22.ForecastType;
 import oasis.names.specification.ubl.schema.xsd.forecastrevision_22.ForecastRevisionType;
 import oasis.names.specification.ubl.schema.xsd.forwardinginstructions_22.ForwardingInstructionsType;
@@ -61,6 +67,8 @@ import oasis.names.specification.ubl.schema.xsd.orderresponsesimple_22.OrderResp
 import oasis.names.specification.ubl.schema.xsd.packinglist_22.PackingListType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_22.PriorInformationNoticeType;
 import oasis.names.specification.ubl.schema.xsd.productactivity_22.ProductActivityType;
+import oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_22.QualificationApplicationRequestType;
+import oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_22.QualificationApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.quotation_22.QuotationType;
 import oasis.names.specification.ubl.schema.xsd.receiptadvice_22.ReceiptAdviceType;
 import oasis.names.specification.ubl.schema.xsd.reminder_22.ReminderType;
@@ -72,9 +80,13 @@ import oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_22.SelfBilledI
 import oasis.names.specification.ubl.schema.xsd.statement_22.StatementType;
 import oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_22.StockAvailabilityReportType;
 import oasis.names.specification.ubl.schema.xsd.tender_22.TenderType;
+import oasis.names.specification.ubl.schema.xsd.tendercontract_22.TenderContractType;
 import oasis.names.specification.ubl.schema.xsd.tendererqualification_22.TendererQualificationType;
 import oasis.names.specification.ubl.schema.xsd.tendererqualificationresponse_22.TendererQualificationResponseType;
 import oasis.names.specification.ubl.schema.xsd.tenderreceipt_22.TenderReceiptType;
+import oasis.names.specification.ubl.schema.xsd.tenderstatus_22.TenderStatusType;
+import oasis.names.specification.ubl.schema.xsd.tenderstatusrequest_22.TenderStatusRequestType;
+import oasis.names.specification.ubl.schema.xsd.tenderwithdrawal_22.TenderWithdrawalType;
 import oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_22.TradeItemLocationProfileType;
 import oasis.names.specification.ubl.schema.xsd.transportationstatus_22.TransportationStatusType;
 import oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_22.TransportationStatusRequestType;
@@ -85,10 +97,13 @@ import oasis.names.specification.ubl.schema.xsd.transportprogressstatusrequest_2
 import oasis.names.specification.ubl.schema.xsd.transportservicedescription_22.TransportServiceDescriptionType;
 import oasis.names.specification.ubl.schema.xsd.transportservicedescriptionrequest_22.TransportServiceDescriptionRequestType;
 import oasis.names.specification.ubl.schema.xsd.unawardednotification_22.UnawardedNotificationType;
+import oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedurerequest_22.UnsubscribeFromProcedureRequestType;
+import oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedureresponse_22.UnsubscribeFromProcedureResponseType;
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_22.UtilityStatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_22.WaybillType;
+import oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStatementType;
 /**
- * Write all UBL 2.1 document types.
+ * Write all UBL 2.2 document types.
  * 
  * @author Philip Helger
  */
@@ -150,18 +165,36 @@ public final class UBL22Writer
 /** Create a writer builder for DespatchAdvice.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<DespatchAdviceType> despatchAdvice(){return UBL22WriterBuilder.create(DespatchAdviceType.class);}
+/** Create a writer builder for DigitalAgreement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<DigitalAgreementType> digitalAgreement(){return UBL22WriterBuilder.create(DigitalAgreementType.class);}
+/** Create a writer builder for DigitalCapability.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<DigitalCapabilityType> digitalCapability(){return UBL22WriterBuilder.create(DigitalCapabilityType.class);}
 /** Create a writer builder for DocumentStatus.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<DocumentStatusType> documentStatus(){return UBL22WriterBuilder.create(DocumentStatusType.class);}
 /** Create a writer builder for DocumentStatusRequest.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<DocumentStatusRequestType> documentStatusRequest(){return UBL22WriterBuilder.create(DocumentStatusRequestType.class);}
+/** Create a writer builder for Enquiry.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<EnquiryType> enquiry(){return UBL22WriterBuilder.create(EnquiryType.class);}
+/** Create a writer builder for EnquiryResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<EnquiryResponseType> enquiryResponse(){return UBL22WriterBuilder.create(EnquiryResponseType.class);}
 /** Create a writer builder for ExceptionCriteria.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<ExceptionCriteriaType> exceptionCriteria(){return UBL22WriterBuilder.create(ExceptionCriteriaType.class);}
 /** Create a writer builder for ExceptionNotification.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<ExceptionNotificationType> exceptionNotification(){return UBL22WriterBuilder.create(ExceptionNotificationType.class);}
+/** Create a writer builder for ExpressionOfInterestRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<ExpressionOfInterestRequestType> expressionOfInterestRequest(){return UBL22WriterBuilder.create(ExpressionOfInterestRequestType.class);}
+/** Create a writer builder for ExpressionOfInterestResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<ExpressionOfInterestResponseType> expressionOfInterestResponse(){return UBL22WriterBuilder.create(ExpressionOfInterestResponseType.class);}
 /** Create a writer builder for Forecast.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<ForecastType> forecast(){return UBL22WriterBuilder.create(ForecastType.class);}
@@ -219,6 +252,12 @@ public final class UBL22Writer
 /** Create a writer builder for ProductActivity.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<ProductActivityType> productActivity(){return UBL22WriterBuilder.create(ProductActivityType.class);}
+/** Create a writer builder for QualificationApplicationRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<QualificationApplicationRequestType> qualificationApplicationRequest(){return UBL22WriterBuilder.create(QualificationApplicationRequestType.class);}
+/** Create a writer builder for QualificationApplicationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<QualificationApplicationResponseType> qualificationApplicationResponse(){return UBL22WriterBuilder.create(QualificationApplicationResponseType.class);}
 /** Create a writer builder for Quotation.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<QuotationType> quotation(){return UBL22WriterBuilder.create(QuotationType.class);}
@@ -252,6 +291,9 @@ public final class UBL22Writer
 /** Create a writer builder for Tender.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<TenderType> tender(){return UBL22WriterBuilder.create(TenderType.class);}
+/** Create a writer builder for TenderContract.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<TenderContractType> tenderContract(){return UBL22WriterBuilder.create(TenderContractType.class);}
 /** Create a writer builder for TendererQualification.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<TendererQualificationType> tendererQualification(){return UBL22WriterBuilder.create(TendererQualificationType.class);}
@@ -261,6 +303,15 @@ public final class UBL22Writer
 /** Create a writer builder for TenderReceipt.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<TenderReceiptType> tenderReceipt(){return UBL22WriterBuilder.create(TenderReceiptType.class);}
+/** Create a writer builder for TenderStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<TenderStatusType> tenderStatus(){return UBL22WriterBuilder.create(TenderStatusType.class);}
+/** Create a writer builder for TenderStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<TenderStatusRequestType> tenderStatusRequest(){return UBL22WriterBuilder.create(TenderStatusRequestType.class);}
+/** Create a writer builder for TenderWithdrawal.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<TenderWithdrawalType> tenderWithdrawal(){return UBL22WriterBuilder.create(TenderWithdrawalType.class);}
 /** Create a writer builder for TradeItemLocationProfile.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<TradeItemLocationProfileType> tradeItemLocationProfile(){return UBL22WriterBuilder.create(TradeItemLocationProfileType.class);}
@@ -291,10 +342,19 @@ public final class UBL22Writer
 /** Create a writer builder for UnawardedNotification.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<UnawardedNotificationType> unawardedNotification(){return UBL22WriterBuilder.create(UnawardedNotificationType.class);}
+/** Create a writer builder for UnsubscribeFromProcedureRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<UnsubscribeFromProcedureRequestType> unsubscribeFromProcedureRequest(){return UBL22WriterBuilder.create(UnsubscribeFromProcedureRequestType.class);}
+/** Create a writer builder for UnsubscribeFromProcedureResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<UnsubscribeFromProcedureResponseType> unsubscribeFromProcedureResponse(){return UBL22WriterBuilder.create(UnsubscribeFromProcedureResponseType.class);}
 /** Create a writer builder for UtilityStatement.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<UtilityStatementType> utilityStatement(){return UBL22WriterBuilder.create(UtilityStatementType.class);}
 /** Create a writer builder for Waybill.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL22WriterBuilder<WaybillType> waybill(){return UBL22WriterBuilder.create(WaybillType.class);}
+/** Create a writer builder for WeightStatement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL22WriterBuilder<WeightStatementType> weightStatement(){return UBL22WriterBuilder.create(WeightStatementType.class);}
 }

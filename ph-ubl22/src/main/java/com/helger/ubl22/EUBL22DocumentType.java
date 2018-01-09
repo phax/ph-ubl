@@ -22,6 +22,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.annotation.Since;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.string.StringHelper;
@@ -43,8 +44,9 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
                         "UBL-AwardedNotification-2.2.xsd"),
   BILL_OF_LADING (oasis.names.specification.ubl.schema.xsd.billoflading_22.BillOfLadingType.class,
                   "UBL-BillOfLading-2.2.xsd"),
-  BUSINESS_CARD (oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType.class,
-                 "UBL-BusinessCard-2.2.xsd"),
+  @Since ("2.2")
+  BUSINESS_CARD(oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType.class,
+                "UBL-BusinessCard-2.2.xsd"),
   CALL_FOR_TENDERS (oasis.names.specification.ubl.schema.xsd.callfortenders_22.CallForTendersType.class,
                     "UBL-CallForTenders-2.2.xsd"),
   CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType.class, "UBL-Catalogue-2.2.xsd"),
@@ -66,14 +68,31 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_22.DebitNoteType.class, "UBL-DebitNote-2.2.xsd"),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_22.DespatchAdviceType.class,
                    "UBL-DespatchAdvice-2.2.xsd"),
+  @Since ("2.2")
+  DIGITAL_AGREEMENT(oasis.names.specification.ubl.schema.xsd.digitalagreement_22.DigitalAgreementType.class,
+                    "UBL-DigitalAgreement-2.2.xsd"),
+  @Since ("2.2")
+  DIGITAL_CAPABILITYT(oasis.names.specification.ubl.schema.xsd.digitalcapability_22.DigitalCapabilityType.class,
+                      "UBL-DigitalCapability-2.2.xsd"),
   DOCUMENT_STATUS (oasis.names.specification.ubl.schema.xsd.documentstatus_22.DocumentStatusType.class,
                    "UBL-DocumentStatus-2.2.xsd"),
   DOCUMENT_STATUS_REQUEST (oasis.names.specification.ubl.schema.xsd.documentstatusrequest_22.DocumentStatusRequestType.class,
                            "UBL-DocumentStatusRequest-2.2.xsd"),
+  @Since ("2.2")
+  ENQUIRY(oasis.names.specification.ubl.schema.xsd.enquiry_22.EnquiryType.class, "UBL-Enquiry-2.2.xsd"),
+  @Since ("2.2")
+  ENQUIRY_RESPONSE(oasis.names.specification.ubl.schema.xsd.enquiryresponse_22.EnquiryResponseType.class,
+                   "UBL-EnquiryResponse-2.2.xsd"),
   EXCEPTION_CRITERIA (oasis.names.specification.ubl.schema.xsd.exceptioncriteria_22.ExceptionCriteriaType.class,
                       "UBL-ExceptionCriteria-2.2.xsd"),
   EXCEPTION_NOTIFICATION (oasis.names.specification.ubl.schema.xsd.exceptionnotification_22.ExceptionNotificationType.class,
                           "UBL-ExceptionNotification-2.2.xsd"),
+  @Since ("2.2")
+  EXPRESSION_OF_INTEREST_REQUEST(oasis.names.specification.ubl.schema.xsd.expressionofinterestrequest_22.ExpressionOfInterestRequestType.class,
+                                 "UBL-ExpressionOfInterestRequest-2.2.xsd"),
+  @Since ("2.2")
+  EXPRESSION_OF_INTEREST_RESPONSE(oasis.names.specification.ubl.schema.xsd.expressionofinterestresponse_22.ExpressionOfInterestResponseType.class,
+                                  "UBL-ExpressionOfInterestResponse-2.2.xsd"),
   FORECAST (oasis.names.specification.ubl.schema.xsd.forecast_22.ForecastType.class, "UBL-Forecast-2.2.xsd"),
   FORECAST_REVISION (oasis.names.specification.ubl.schema.xsd.forecastrevision_22.ForecastRevisionType.class,
                      "UBL-ForecastRevision-2.2.xsd"),
@@ -109,6 +128,12 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
                             "UBL-PriorInformationNotice-2.2.xsd"),
   PRODUCT_ACTIVITY (oasis.names.specification.ubl.schema.xsd.productactivity_22.ProductActivityType.class,
                     "UBL-ProductActivity-2.2.xsd"),
+  @Since ("2.2")
+  QUALIFICATION_APPLICATION_REQUEST(oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_22.QualificationApplicationRequestType.class,
+                                    "UBL-QualificationApplicationRequest-2.2.xsd"),
+  @Since ("2.2")
+  QUALIFICATION_APPLICATION_RESPONSE(oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_22.QualificationApplicationResponseType.class,
+                                     "UBL-QualificationApplicationResponse-2.2.xsd"),
   QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_22.QuotationType.class, "UBL-Quotation-2.2.xsd"),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_22.ReceiptAdviceType.class,
                   "UBL-ReceiptAdvice-2.2.xsd"),
@@ -127,12 +152,24 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   STOCK_AVAILABILITY_REPORT (oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_22.StockAvailabilityReportType.class,
                              "UBL-StockAvailabilityReport-2.2.xsd"),
   TENDER (oasis.names.specification.ubl.schema.xsd.tender_22.TenderType.class, "UBL-Tender-2.2.xsd"),
-  TENDER_QUALIFICATION (oasis.names.specification.ubl.schema.xsd.tendererqualification_22.TendererQualificationType.class,
-                        "UBL-TendererQualification-2.2.xsd"),
-  TENDER_QUALIFICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.tendererqualificationresponse_22.TendererQualificationResponseType.class,
-                                 "UBL-TendererQualificationResponse-2.2.xsd"),
+  @Since ("2.2")
+  TENDER_CONTRACT(oasis.names.specification.ubl.schema.xsd.tendercontract_22.TenderContractType.class,
+                  "UBL-TenderContract-2.2.xsd"),
+  TENDERER_QUALIFICATION (oasis.names.specification.ubl.schema.xsd.tendererqualification_22.TendererQualificationType.class,
+                          "UBL-TendererQualification-2.2.xsd"),
+  TENDERER_QUALIFICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.tendererqualificationresponse_22.TendererQualificationResponseType.class,
+                                   "UBL-TendererQualificationResponse-2.2.xsd"),
   TENDER_RECEIPT (oasis.names.specification.ubl.schema.xsd.tenderreceipt_22.TenderReceiptType.class,
                   "UBL-TenderReceipt-2.2.xsd"),
+  @Since ("2.2")
+  TENDER_STATUS(oasis.names.specification.ubl.schema.xsd.tenderstatus_22.TenderStatusType.class,
+                "UBL-TenderStatus-2.2.xsd"),
+  @Since ("2.2")
+  TENDER_STATUS_REQUEST(oasis.names.specification.ubl.schema.xsd.tenderstatusrequest_22.TenderStatusRequestType.class,
+                        "UBL-TenderStatusRequest-2.2.xsd"),
+  @Since ("2.2")
+  TENDER_WITHDRAWAL(oasis.names.specification.ubl.schema.xsd.tenderwithdrawal_22.TenderWithdrawalType.class,
+                    "UBL-TenderWithDrawal-2.2.xsd"),
   TRADE_ITEM_LOCATION_PROFILE (oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_22.TradeItemLocationProfileType.class,
                                "UBL-TradeItemLocationProfile-2.2.xsd"),
   TRANSPORTATION_STATUS (oasis.names.specification.ubl.schema.xsd.transportationstatus_22.TransportationStatusType.class,
@@ -153,9 +190,18 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
                                          "UBL-TransportServiceDescriptionRequest-2.2.xsd"),
   UNAWARDED_NOTIFICATION (oasis.names.specification.ubl.schema.xsd.unawardednotification_22.UnawardedNotificationType.class,
                           "UBL-UnawardedNotification-2.2.xsd"),
+  @Since ("2.2")
+  UNSUBSCRIBE_FROM_PROCEDURE_REQUEST(oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedurerequest_22.UnsubscribeFromProcedureRequestType.class,
+                                     "UBL-UnsubscribeFromProcedureRequest-2.2.xsd"),
+  @Since ("2.2")
+  UNSUBSCRIBE_FROM_PROCEDURE_RESPONSE(oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedureresponse_22.UnsubscribeFromProcedureResponseType.class,
+                                      "UBL-UnsubscribeFromProcedureResponse-2.2.xsd"),
   UTILITY_STATEMENT (oasis.names.specification.ubl.schema.xsd.utilitystatement_22.UtilityStatementType.class,
                      "UBL-UtilityStatement-2.2.xsd"),
-  WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_22.WaybillType.class, "UBL-Waybill-2.2.xsd");
+  WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_22.WaybillType.class, "UBL-Waybill-2.2.xsd"),
+  @Since ("2.2")
+  WEIGHT_STATEMENT(oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStatementType.class,
+                   "UBL-WeightStatement-2.2.xsd");
 
   private final JAXBDocumentType m_aDocType;
 
