@@ -22,7 +22,7 @@ The following projects are contained:
   
 ## News and noteworthy
 
-* v6.0.0 - work in progress
+* v6.0.0 - 2018-01-09
   * Binds to ph-commons 9.0.0
   * Added initial UBL 2.2 CSPRD02 support
   * Fixes issues #11
@@ -53,7 +53,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -66,7 +66,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -76,7 +76,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -87,7 +87,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -97,7 +97,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -108,7 +108,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22</artifactId>
-  <version>x.y.z</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -118,7 +118,7 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
-  <version>x.y.z</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -129,7 +129,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubltr</artifactId>
-  <version>5.1.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
@@ -143,6 +143,8 @@ Binary versions of the artefacts can be downloaded from Maven Central:
   * http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl22/
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ubltr/
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:

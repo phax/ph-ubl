@@ -86,10 +86,9 @@ import oasis.names.specification.ubl.schema.xsd.transportservicedescriptionreque
 import oasis.names.specification.ubl.schema.xsd.unawardednotification_21.UnawardedNotificationType;
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_21.UtilityStatementType;
 import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
-
 /**
  * Write all UBL 2.1 document types.
- *
+ * 
  * @author Philip Helger
  */
 @NotThreadSafe
@@ -98,721 +97,200 @@ public final class UBL21Writer
   @PresentForCodeCoverage
   private static final UBL21Writer s_aInstance = new UBL21Writer ();
 
-  private UBL21Writer ()
-  {}
-
-  /**
-   * Create a writer builder for ApplicationResponse.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ApplicationResponseType> applicationResponse ()
-  {
-    return UBL21WriterBuilder.create (ApplicationResponseType.class);
-  }
-
-  /**
-   * Create a writer builder for AttachedDocument.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <AttachedDocumentType> attachedDocument ()
-  {
-    return UBL21WriterBuilder.create (AttachedDocumentType.class);
-  }
-
-  /**
-   * Create a writer builder for AwardedNotification.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <AwardedNotificationType> awardedNotification ()
-  {
-    return UBL21WriterBuilder.create (AwardedNotificationType.class);
-  }
-
-  /**
-   * Create a writer builder for BillOfLading.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <BillOfLadingType> billOfLading ()
-  {
-    return UBL21WriterBuilder.create (BillOfLadingType.class);
-  }
-
-  /**
-   * Create a writer builder for CallForTenders.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CallForTendersType> callForTenders ()
-  {
-    return UBL21WriterBuilder.create (CallForTendersType.class);
-  }
-
-  /**
-   * Create a writer builder for Catalogue.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CatalogueType> catalogue ()
-  {
-    return UBL21WriterBuilder.create (CatalogueType.class);
-  }
-
-  /**
-   * Create a writer builder for CatalogueDeletion.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CatalogueDeletionType> catalogueDeletion ()
-  {
-    return UBL21WriterBuilder.create (CatalogueDeletionType.class);
-  }
-
-  /**
-   * Create a writer builder for CatalogueItemSpecificationUpdate.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
-  {
-    return UBL21WriterBuilder.create (CatalogueItemSpecificationUpdateType.class);
-  }
-
-  /**
-   * Create a writer builder for CataloguePricingUpdate.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
-  {
-    return UBL21WriterBuilder.create (CataloguePricingUpdateType.class);
-  }
-
-  /**
-   * Create a writer builder for CatalogueRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CatalogueRequestType> catalogueRequest ()
-  {
-    return UBL21WriterBuilder.create (CatalogueRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for CertificateOfOrigin.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CertificateOfOriginType> certificateOfOrigin ()
-  {
-    return UBL21WriterBuilder.create (CertificateOfOriginType.class);
-  }
-
-  /**
-   * Create a writer builder for ContractAwardNotice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ContractAwardNoticeType> contractAwardNotice ()
-  {
-    return UBL21WriterBuilder.create (ContractAwardNoticeType.class);
-  }
-
-  /**
-   * Create a writer builder for ContractNotice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ContractNoticeType> contractNotice ()
-  {
-    return UBL21WriterBuilder.create (ContractNoticeType.class);
-  }
-
-  /**
-   * Create a writer builder for CreditNote.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <CreditNoteType> creditNote ()
-  {
-    return UBL21WriterBuilder.create (CreditNoteType.class);
-  }
-
-  /**
-   * Create a writer builder for DebitNote.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <DebitNoteType> debitNote ()
-  {
-    return UBL21WriterBuilder.create (DebitNoteType.class);
-  }
-
-  /**
-   * Create a writer builder for DespatchAdvice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <DespatchAdviceType> despatchAdvice ()
-  {
-    return UBL21WriterBuilder.create (DespatchAdviceType.class);
-  }
-
-  /**
-   * Create a writer builder for DocumentStatus.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <DocumentStatusType> documentStatus ()
-  {
-    return UBL21WriterBuilder.create (DocumentStatusType.class);
-  }
-
-  /**
-   * Create a writer builder for DocumentStatusRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <DocumentStatusRequestType> documentStatusRequest ()
-  {
-    return UBL21WriterBuilder.create (DocumentStatusRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for ExceptionCriteria.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ExceptionCriteriaType> exceptionCriteria ()
-  {
-    return UBL21WriterBuilder.create (ExceptionCriteriaType.class);
-  }
-
-  /**
-   * Create a writer builder for ExceptionNotification.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ExceptionNotificationType> exceptionNotification ()
-  {
-    return UBL21WriterBuilder.create (ExceptionNotificationType.class);
-  }
-
-  /**
-   * Create a writer builder for Forecast.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ForecastType> forecast ()
-  {
-    return UBL21WriterBuilder.create (ForecastType.class);
-  }
-
-  /**
-   * Create a writer builder for ForecastRevision.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ForecastRevisionType> forecastRevision ()
-  {
-    return UBL21WriterBuilder.create (ForecastRevisionType.class);
-  }
-
-  /**
-   * Create a writer builder for ForwardingInstructions.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ForwardingInstructionsType> forwardingInstructions ()
-  {
-    return UBL21WriterBuilder.create (ForwardingInstructionsType.class);
-  }
-
-  /**
-   * Create a writer builder for FreightInvoice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <FreightInvoiceType> freightInvoice ()
-  {
-    return UBL21WriterBuilder.create (FreightInvoiceType.class);
-  }
-
-  /**
-   * Create a writer builder for FulfilmentCancellation.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <FulfilmentCancellationType> fulfilmentCancellation ()
-  {
-    return UBL21WriterBuilder.create (FulfilmentCancellationType.class);
-  }
-
-  /**
-   * Create a writer builder for GoodsItemItinerary.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <GoodsItemItineraryType> goodsItemItinerary ()
-  {
-    return UBL21WriterBuilder.create (GoodsItemItineraryType.class);
-  }
-
-  /**
-   * Create a writer builder for GuaranteeCertificate.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <GuaranteeCertificateType> guaranteeCertificate ()
-  {
-    return UBL21WriterBuilder.create (GuaranteeCertificateType.class);
-  }
-
-  /**
-   * Create a writer builder for InstructionForReturns.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <InstructionForReturnsType> instructionForReturns ()
-  {
-    return UBL21WriterBuilder.create (InstructionForReturnsType.class);
-  }
-
-  /**
-   * Create a writer builder for InventoryReport.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <InventoryReportType> inventoryReport ()
-  {
-    return UBL21WriterBuilder.create (InventoryReportType.class);
-  }
-
-  /**
-   * Create a writer builder for Invoice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <InvoiceType> invoice ()
-  {
-    return UBL21WriterBuilder.create (InvoiceType.class);
-  }
-
-  /**
-   * Create a writer builder for ItemInformationRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ItemInformationRequestType> itemInformationRequest ()
-  {
-    return UBL21WriterBuilder.create (ItemInformationRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for Order.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <OrderType> order ()
-  {
-    return UBL21WriterBuilder.create (OrderType.class);
-  }
-
-  /**
-   * Create a writer builder for OrderCancellation.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <OrderCancellationType> orderCancellation ()
-  {
-    return UBL21WriterBuilder.create (OrderCancellationType.class);
-  }
-
-  /**
-   * Create a writer builder for OrderChange.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <OrderChangeType> orderChange ()
-  {
-    return UBL21WriterBuilder.create (OrderChangeType.class);
-  }
-
-  /**
-   * Create a writer builder for OrderResponse.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <OrderResponseType> orderResponse ()
-  {
-    return UBL21WriterBuilder.create (OrderResponseType.class);
-  }
-
-  /**
-   * Create a writer builder for OrderResponseSimple.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <OrderResponseSimpleType> orderResponseSimple ()
-  {
-    return UBL21WriterBuilder.create (OrderResponseSimpleType.class);
-  }
-
-  /**
-   * Create a writer builder for PackingList.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <PackingListType> packingList ()
-  {
-    return UBL21WriterBuilder.create (PackingListType.class);
-  }
-
-  /**
-   * Create a writer builder for PriorInformationNotice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <PriorInformationNoticeType> priorInformationNotice ()
-  {
-    return UBL21WriterBuilder.create (PriorInformationNoticeType.class);
-  }
-
-  /**
-   * Create a writer builder for ProductActivity.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ProductActivityType> productActivity ()
-  {
-    return UBL21WriterBuilder.create (ProductActivityType.class);
-  }
-
-  /**
-   * Create a writer builder for Quotation.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <QuotationType> quotation ()
-  {
-    return UBL21WriterBuilder.create (QuotationType.class);
-  }
-
-  /**
-   * Create a writer builder for ReceiptAdvice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ReceiptAdviceType> receiptAdvice ()
-  {
-    return UBL21WriterBuilder.create (ReceiptAdviceType.class);
-  }
-
-  /**
-   * Create a writer builder for Reminder.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <ReminderType> reminder ()
-  {
-    return UBL21WriterBuilder.create (ReminderType.class);
-  }
-
-  /**
-   * Create a writer builder for RemittanceAdvice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <RemittanceAdviceType> remittanceAdvice ()
-  {
-    return UBL21WriterBuilder.create (RemittanceAdviceType.class);
-  }
-
-  /**
-   * Create a writer builder for RequestForQuotation.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <RequestForQuotationType> requestForQuotation ()
-  {
-    return UBL21WriterBuilder.create (RequestForQuotationType.class);
-  }
-
-  /**
-   * Create a writer builder for RetailEvent.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <RetailEventType> retailEvent ()
-  {
-    return UBL21WriterBuilder.create (RetailEventType.class);
-  }
-
-  /**
-   * Create a writer builder for SelfBilledCreditNote.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
-  {
-    return UBL21WriterBuilder.create (SelfBilledCreditNoteType.class);
-  }
-
-  /**
-   * Create a writer builder for SelfBilledInvoice.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
-  {
-    return UBL21WriterBuilder.create (SelfBilledInvoiceType.class);
-  }
-
-  /**
-   * Create a writer builder for Statement.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <StatementType> statement ()
-  {
-    return UBL21WriterBuilder.create (StatementType.class);
-  }
-
-  /**
-   * Create a writer builder for StockAvailabilityReport.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <StockAvailabilityReportType> stockAvailabilityReport ()
-  {
-    return UBL21WriterBuilder.create (StockAvailabilityReportType.class);
-  }
-
-  /**
-   * Create a writer builder for Tender.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TenderType> tender ()
-  {
-    return UBL21WriterBuilder.create (TenderType.class);
-  }
-
-  /**
-   * Create a writer builder for TendererQualification.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TendererQualificationType> tendererQualification ()
-  {
-    return UBL21WriterBuilder.create (TendererQualificationType.class);
-  }
-
-  /**
-   * Create a writer builder for TendererQualificationResponse.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TendererQualificationResponseType> tendererQualificationResponse ()
-  {
-    return UBL21WriterBuilder.create (TendererQualificationResponseType.class);
-  }
-
-  /**
-   * Create a writer builder for TenderReceipt.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TenderReceiptType> tenderReceipt ()
-  {
-    return UBL21WriterBuilder.create (TenderReceiptType.class);
-  }
-
-  /**
-   * Create a writer builder for TradeItemLocationProfile.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TradeItemLocationProfileType> tradeItemLocationProfile ()
-  {
-    return UBL21WriterBuilder.create (TradeItemLocationProfileType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportationStatus.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportationStatusType> transportationStatus ()
-  {
-    return UBL21WriterBuilder.create (TransportationStatusType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportationStatusRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportationStatusRequestType> transportationStatusRequest ()
-  {
-    return UBL21WriterBuilder.create (TransportationStatusRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportExecutionPlan.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportExecutionPlanType> transportExecutionPlan ()
-  {
-    return UBL21WriterBuilder.create (TransportExecutionPlanType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportExecutionPlanRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
-  {
-    return UBL21WriterBuilder.create (TransportExecutionPlanRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportProgressStatus.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportProgressStatusType> transportProgressStatus ()
-  {
-    return UBL21WriterBuilder.create (TransportProgressStatusType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportProgressStatusRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportProgressStatusRequestType> transportProgressStatusRequest ()
-  {
-    return UBL21WriterBuilder.create (TransportProgressStatusRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportServiceDescription.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportServiceDescriptionType> transportServiceDescription ()
-  {
-    return UBL21WriterBuilder.create (TransportServiceDescriptionType.class);
-  }
-
-  /**
-   * Create a writer builder for TransportServiceDescriptionRequest.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
-  {
-    return UBL21WriterBuilder.create (TransportServiceDescriptionRequestType.class);
-  }
-
-  /**
-   * Create a writer builder for UnawardedNotification.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <UnawardedNotificationType> unawardedNotification ()
-  {
-    return UBL21WriterBuilder.create (UnawardedNotificationType.class);
-  }
-
-  /**
-   * Create a writer builder for UtilityStatement.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <UtilityStatementType> utilityStatement ()
-  {
-    return UBL21WriterBuilder.create (UtilityStatementType.class);
-  }
-
-  /**
-   * Create a writer builder for Waybill.
-   * 
-   * @return The builder and never <code>null</code>
-   */
-  @Nonnull
-  public static UBL21WriterBuilder <WaybillType> waybill ()
-  {
-    return UBL21WriterBuilder.create (WaybillType.class);
-  }
+  private UBL21Writer () {}
+/** Create a writer builder for ApplicationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ApplicationResponseType> applicationResponse(){return UBL21WriterBuilder.create(ApplicationResponseType.class);}
+/** Create a writer builder for AttachedDocument.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<AttachedDocumentType> attachedDocument(){return UBL21WriterBuilder.create(AttachedDocumentType.class);}
+/** Create a writer builder for AwardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<AwardedNotificationType> awardedNotification(){return UBL21WriterBuilder.create(AwardedNotificationType.class);}
+/** Create a writer builder for BillOfLading.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<BillOfLadingType> billOfLading(){return UBL21WriterBuilder.create(BillOfLadingType.class);}
+/** Create a writer builder for CallForTenders.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CallForTendersType> callForTenders(){return UBL21WriterBuilder.create(CallForTendersType.class);}
+/** Create a writer builder for Catalogue.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CatalogueType> catalogue(){return UBL21WriterBuilder.create(CatalogueType.class);}
+/** Create a writer builder for CatalogueDeletion.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CatalogueDeletionType> catalogueDeletion(){return UBL21WriterBuilder.create(CatalogueDeletionType.class);}
+/** Create a writer builder for CatalogueItemSpecificationUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate(){return UBL21WriterBuilder.create(CatalogueItemSpecificationUpdateType.class);}
+/** Create a writer builder for CataloguePricingUpdate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CataloguePricingUpdateType> cataloguePricingUpdate(){return UBL21WriterBuilder.create(CataloguePricingUpdateType.class);}
+/** Create a writer builder for CatalogueRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CatalogueRequestType> catalogueRequest(){return UBL21WriterBuilder.create(CatalogueRequestType.class);}
+/** Create a writer builder for CertificateOfOrigin.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL21WriterBuilder.create(CertificateOfOriginType.class);}
+/** Create a writer builder for ContractAwardNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL21WriterBuilder.create(ContractAwardNoticeType.class);}
+/** Create a writer builder for ContractNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ContractNoticeType> contractNotice(){return UBL21WriterBuilder.create(ContractNoticeType.class);}
+/** Create a writer builder for CreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<CreditNoteType> creditNote(){return UBL21WriterBuilder.create(CreditNoteType.class);}
+/** Create a writer builder for DebitNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<DebitNoteType> debitNote(){return UBL21WriterBuilder.create(DebitNoteType.class);}
+/** Create a writer builder for DespatchAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<DespatchAdviceType> despatchAdvice(){return UBL21WriterBuilder.create(DespatchAdviceType.class);}
+/** Create a writer builder for DocumentStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<DocumentStatusType> documentStatus(){return UBL21WriterBuilder.create(DocumentStatusType.class);}
+/** Create a writer builder for DocumentStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<DocumentStatusRequestType> documentStatusRequest(){return UBL21WriterBuilder.create(DocumentStatusRequestType.class);}
+/** Create a writer builder for ExceptionCriteria.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ExceptionCriteriaType> exceptionCriteria(){return UBL21WriterBuilder.create(ExceptionCriteriaType.class);}
+/** Create a writer builder for ExceptionNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ExceptionNotificationType> exceptionNotification(){return UBL21WriterBuilder.create(ExceptionNotificationType.class);}
+/** Create a writer builder for Forecast.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ForecastType> forecast(){return UBL21WriterBuilder.create(ForecastType.class);}
+/** Create a writer builder for ForecastRevision.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ForecastRevisionType> forecastRevision(){return UBL21WriterBuilder.create(ForecastRevisionType.class);}
+/** Create a writer builder for ForwardingInstructions.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ForwardingInstructionsType> forwardingInstructions(){return UBL21WriterBuilder.create(ForwardingInstructionsType.class);}
+/** Create a writer builder for FreightInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<FreightInvoiceType> freightInvoice(){return UBL21WriterBuilder.create(FreightInvoiceType.class);}
+/** Create a writer builder for FulfilmentCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<FulfilmentCancellationType> fulfilmentCancellation(){return UBL21WriterBuilder.create(FulfilmentCancellationType.class);}
+/** Create a writer builder for GoodsItemItinerary.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<GoodsItemItineraryType> goodsItemItinerary(){return UBL21WriterBuilder.create(GoodsItemItineraryType.class);}
+/** Create a writer builder for GuaranteeCertificate.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<GuaranteeCertificateType> guaranteeCertificate(){return UBL21WriterBuilder.create(GuaranteeCertificateType.class);}
+/** Create a writer builder for InstructionForReturns.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<InstructionForReturnsType> instructionForReturns(){return UBL21WriterBuilder.create(InstructionForReturnsType.class);}
+/** Create a writer builder for InventoryReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<InventoryReportType> inventoryReport(){return UBL21WriterBuilder.create(InventoryReportType.class);}
+/** Create a writer builder for Invoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<InvoiceType> invoice(){return UBL21WriterBuilder.create(InvoiceType.class);}
+/** Create a writer builder for ItemInformationRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL21WriterBuilder.create(ItemInformationRequestType.class);}
+/** Create a writer builder for Order.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<OrderType> order(){return UBL21WriterBuilder.create(OrderType.class);}
+/** Create a writer builder for OrderCancellation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<OrderCancellationType> orderCancellation(){return UBL21WriterBuilder.create(OrderCancellationType.class);}
+/** Create a writer builder for OrderChange.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<OrderChangeType> orderChange(){return UBL21WriterBuilder.create(OrderChangeType.class);}
+/** Create a writer builder for OrderResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<OrderResponseType> orderResponse(){return UBL21WriterBuilder.create(OrderResponseType.class);}
+/** Create a writer builder for OrderResponseSimple.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<OrderResponseSimpleType> orderResponseSimple(){return UBL21WriterBuilder.create(OrderResponseSimpleType.class);}
+/** Create a writer builder for PackingList.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<PackingListType> packingList(){return UBL21WriterBuilder.create(PackingListType.class);}
+/** Create a writer builder for PriorInformationNotice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<PriorInformationNoticeType> priorInformationNotice(){return UBL21WriterBuilder.create(PriorInformationNoticeType.class);}
+/** Create a writer builder for ProductActivity.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ProductActivityType> productActivity(){return UBL21WriterBuilder.create(ProductActivityType.class);}
+/** Create a writer builder for Quotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<QuotationType> quotation(){return UBL21WriterBuilder.create(QuotationType.class);}
+/** Create a writer builder for ReceiptAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ReceiptAdviceType> receiptAdvice(){return UBL21WriterBuilder.create(ReceiptAdviceType.class);}
+/** Create a writer builder for Reminder.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<ReminderType> reminder(){return UBL21WriterBuilder.create(ReminderType.class);}
+/** Create a writer builder for RemittanceAdvice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<RemittanceAdviceType> remittanceAdvice(){return UBL21WriterBuilder.create(RemittanceAdviceType.class);}
+/** Create a writer builder for RequestForQuotation.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<RequestForQuotationType> requestForQuotation(){return UBL21WriterBuilder.create(RequestForQuotationType.class);}
+/** Create a writer builder for RetailEvent.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<RetailEventType> retailEvent(){return UBL21WriterBuilder.create(RetailEventType.class);}
+/** Create a writer builder for SelfBilledCreditNote.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<SelfBilledCreditNoteType> selfBilledCreditNote(){return UBL21WriterBuilder.create(SelfBilledCreditNoteType.class);}
+/** Create a writer builder for SelfBilledInvoice.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<SelfBilledInvoiceType> selfBilledInvoice(){return UBL21WriterBuilder.create(SelfBilledInvoiceType.class);}
+/** Create a writer builder for Statement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<StatementType> statement(){return UBL21WriterBuilder.create(StatementType.class);}
+/** Create a writer builder for StockAvailabilityReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<StockAvailabilityReportType> stockAvailabilityReport(){return UBL21WriterBuilder.create(StockAvailabilityReportType.class);}
+/** Create a writer builder for Tender.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TenderType> tender(){return UBL21WriterBuilder.create(TenderType.class);}
+/** Create a writer builder for TendererQualification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TendererQualificationType> tendererQualification(){return UBL21WriterBuilder.create(TendererQualificationType.class);}
+/** Create a writer builder for TendererQualificationResponse.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TendererQualificationResponseType> tendererQualificationResponse(){return UBL21WriterBuilder.create(TendererQualificationResponseType.class);}
+/** Create a writer builder for TenderReceipt.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TenderReceiptType> tenderReceipt(){return UBL21WriterBuilder.create(TenderReceiptType.class);}
+/** Create a writer builder for TradeItemLocationProfile.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TradeItemLocationProfileType> tradeItemLocationProfile(){return UBL21WriterBuilder.create(TradeItemLocationProfileType.class);}
+/** Create a writer builder for TransportationStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportationStatusType> transportationStatus(){return UBL21WriterBuilder.create(TransportationStatusType.class);}
+/** Create a writer builder for TransportationStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportationStatusRequestType> transportationStatusRequest(){return UBL21WriterBuilder.create(TransportationStatusRequestType.class);}
+/** Create a writer builder for TransportExecutionPlan.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportExecutionPlanType> transportExecutionPlan(){return UBL21WriterBuilder.create(TransportExecutionPlanType.class);}
+/** Create a writer builder for TransportExecutionPlanRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportExecutionPlanRequestType> transportExecutionPlanRequest(){return UBL21WriterBuilder.create(TransportExecutionPlanRequestType.class);}
+/** Create a writer builder for TransportProgressStatus.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportProgressStatusType> transportProgressStatus(){return UBL21WriterBuilder.create(TransportProgressStatusType.class);}
+/** Create a writer builder for TransportProgressStatusRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportProgressStatusRequestType> transportProgressStatusRequest(){return UBL21WriterBuilder.create(TransportProgressStatusRequestType.class);}
+/** Create a writer builder for TransportServiceDescription.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportServiceDescriptionType> transportServiceDescription(){return UBL21WriterBuilder.create(TransportServiceDescriptionType.class);}
+/** Create a writer builder for TransportServiceDescriptionRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<TransportServiceDescriptionRequestType> transportServiceDescriptionRequest(){return UBL21WriterBuilder.create(TransportServiceDescriptionRequestType.class);}
+/** Create a writer builder for UnawardedNotification.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<UnawardedNotificationType> unawardedNotification(){return UBL21WriterBuilder.create(UnawardedNotificationType.class);}
+/** Create a writer builder for UtilityStatement.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<UtilityStatementType> utilityStatement(){return UBL21WriterBuilder.create(UtilityStatementType.class);}
+/** Create a writer builder for Waybill.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL21WriterBuilder<WaybillType> waybill(){return UBL21WriterBuilder.create(WaybillType.class);}
 }
