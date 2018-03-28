@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 
 /**
  * This file was automatically generated from Genericode file LanguageCode-2.2.gc. Do NOT edit!
- * It contains a total of 710 entries!
+ * It contains a total of 711 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -154,6 +154,7 @@ public enum ELanguageCode22
     CHV("CHV", "Chuvash", "tchouvache", "Tschuwaschisch", "cv"),
     CHY("CHY", "Cheyenne", "cheyenne", "Cheyenne-Sprache", null),
     CMC("CMC", "Chamic languages", "chames, langues", "Cham-Sprachen", null),
+    CNR("CNR", "Montenegrin", "mont\u00e9n\u00e9grin", "Montenegrinisch", null),
     CO("CO", "Corsican", "corse", "Korsisch", "cos"),
     COP("COP", "Coptic", "copte", "Koptisch", null),
     COR("COR", "Cornish", "cornique", "Kornisch", "kw"),

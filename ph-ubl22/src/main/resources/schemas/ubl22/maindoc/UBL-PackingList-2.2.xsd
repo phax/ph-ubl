@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
-  Release Date:      01 November 2017
+  Library:           OASIS Universal Business Language (UBL) 2.2 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.2/
+  Release Date:      22 March 2018
   Module:            xsd/maindoc/UBL-PackingList-2.2.xsd
-  Generated on:      2017-10-30 23:18z
-  Copyright (c) OASIS Open 2017. All Rights Reserved.
+  Generated on:      2018-03-17 18:40z
+  Copyright (c) OASIS Open 2018. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:PackingList-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

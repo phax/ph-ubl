@@ -4,9 +4,9 @@
       <ShortName>CurrencyCode</ShortName>
       <LongName xml:lang="en">Currency Code</LongName>
       <LongName Identifier="listID">ISO 4217 Alpha</LongName>
-      <Version>2017-09-22</Version>
+      <Version>2018-01-01</Version>
       <CanonicalUri>urn:iso:std:iso:4217</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:4217:2017-09-22</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:4217:2018-01-01</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/default/CurrencyCode-2.1.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/xml">http://www.currency-iso.org/dam/downloads/lists/list_one.xml</AlternateFormatLocationUri>
       <Agency>
@@ -2508,13 +2508,13 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>MRO</SimpleValue>
+            <SimpleValue>MRU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
             <SimpleValue>Ouguiya</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
-            <SimpleValue>478</SimpleValue>
+            <SimpleValue>929</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>
@@ -3256,13 +3256,13 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>STD</SimpleValue>
+            <SimpleValue>STN</SimpleValue>
          </Value>
          <Value ColumnRef="name">
             <SimpleValue>Dobra</SimpleValue>
          </Value>
          <Value ColumnRef="numericcode">
-            <SimpleValue>678</SimpleValue>
+            <SimpleValue>930</SimpleValue>
          </Value>
          <Value ColumnRef="fractionaldigits">
             <SimpleValue>2</SimpleValue>

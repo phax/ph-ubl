@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
-  Release Date:      01 November 2017
+  Library:           OASIS Universal Business Language (UBL) 2.2 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.2/
+  Release Date:      22 March 2018
   Module:            xsd/common/UBL-SignatureAggregateComponents-2.2.xsd
-  Generated on:      2017-10-30 23:18z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2018-03-17 18:40z
+  Copyright (c) OASIS Open 2018. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
@@ -83,36 +83,6 @@
            </xsd:annotation>
          </xsd:element>
           </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="UBLDocumentSignaturesType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>UBL Document Signatures. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>This class collects all signature information for a document.</ccts:Definition>
-               <ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="sac:SignatureInformation" minOccurs="1" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>UBL Document Signatures. Signature Information</ccts:DictionaryEntryName>
-                     <ccts:Definition>Each of these is scaffolding for a single digital signature.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature Information</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature Information</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Signature Information</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
    </xsd:complexType>
 </xsd:schema>
 <!-- ===== Copyright Notice ===== -->

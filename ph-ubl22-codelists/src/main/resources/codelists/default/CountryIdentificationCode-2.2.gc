@@ -4,9 +4,9 @@
       <ShortName>CountryIdentificationCode</ShortName>
       <LongName xml:lang="en">Country Identification Code</LongName>
       <LongName Identifier="listID">ISO 3166</LongName>
-      <Version>2017-10-30</Version>
+      <Version>2018-02-14</Version>
       <CanonicalUri>urn:iso:std:iso:3166</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:3166:2017-10-30</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:3166:2018-02-14</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/CountryIdentificationCode-2.2.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/html">https://www.iso.org/obp/ui/#search/code/</AlternateFormatLocationUri>
       <Agency>

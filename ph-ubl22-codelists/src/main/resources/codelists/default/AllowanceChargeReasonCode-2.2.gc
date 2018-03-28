@@ -4,11 +4,11 @@
       <ShortName>AllowanceChargeReasonCode</ShortName>
       <LongName xml:lang="en">Allowance Charge Reason Code</LongName>
       <LongName Identifier="listID">UN/EDIFACT EDED 5189</LongName>
-      <Version>17A</Version>
+      <Version>17B</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode:2.2</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/AllowanceChargeReasonCode-2.2.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D17A.zip!/29MAR17 2/uncefact/codelist/standard/UNECE_AllowanceChargeReasonCode_D16B.xsd</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D17B.zip!/19NOV17/uncefact/codelist/standard/UNECE_AllowanceChargeReasonCode_D17B.xsd</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/fileadmin/DAM/trade/untdid/d16a/tred/tred3055.htm">6</Identifier>

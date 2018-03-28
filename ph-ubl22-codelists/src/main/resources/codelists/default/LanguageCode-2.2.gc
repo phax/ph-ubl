@@ -4,9 +4,9 @@
       <ShortName>LanguageCode</ShortName>
       <LongName xml:lang="en">Language Code</LongName>
       <LongName Identifier="listID">ISO 639</LongName>
-      <Version>2017-10-30</Version>
+      <Version>2018-02-14</Version>
       <CanonicalUri>urn:iso:std:iso:639</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:639:2017-10-30</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:639:2018-02-14</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.2/cl/gc/default/LanguageCode-2.2.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/html">http://www.loc.gov/standards/iso639-2/php/code_list.php</AlternateFormatLocationUri>
       <Agency>
@@ -1905,6 +1905,20 @@
          </Value>
          <Value ColumnRef="german">
             <SimpleValue>Cham-Sprachen</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CNR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Montenegrin</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>monténégrin</SimpleValue>
+         </Value>
+         <Value ColumnRef="german">
+            <SimpleValue>Montenegrinisch</SimpleValue>
          </Value>
       </Row>
       <Row>

@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 
 /**
  * This file was automatically generated from Genericode file TransportEquipmentTypeCode-2.2.gc. Do NOT edit!
- * It contains a total of 73 entries!
+ * It contains a total of 95 entries!
  * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
@@ -79,8 +79,30 @@ public enum ETransportEquipmentTypeCode22
     DPH("DPH", "Forklift", "Equipment device for handling and moving goods."),
     DPI("DPI", "Stacking equipment", "Equipment device for stacking goods."),
     DPJ("DPJ", "Taillift", "Equipment device at the rear of a truck for loading and unloading cargo."),
+    DPK("DPK", "Pallet ISO 0 - 1/2 EURO Pallet", "Standard pallet with dimensions 80 X 60 cm."),
     DPL("DPL", "On-board equipment", "Equipment permanently on board a means of transport."),
+    DPM("DPM", "Pallet ISO 1 - 1/1 EURO Pallet (GS1 Temporary Code)", "Standard pallet with dimensions 80 X 120 cm."),
+    DPN("DPN", "Pallet ISO 2", "Standard pallet with dimensions 100 X 120 cm."),
+    DPO("DPO", "1/4 EURO Pallet", "Standard pallet with dimensions 60 X 40 cm."),
     EFP("EFP", "Exchangeable EUR flat pallet", "A flat euro-pallet that may be exchanged."),
+    EFQ("EFQ", "1/8 EURO Pallet", "Standard pallet with dimensions 40 X 30 cm."),
+    EFR("EFR", "Wholesaler pallet", "Pallet provided by the wholesaler."),
+    EFS("EFS", "Pallet 80 X 100 cm", "Pallet with dimensions 80 X 100 cm."),
+    EFT("EFT", "Pallet 60 X 100 cm", "Pallet with dimensions 60 X 100 cm."),
+    EFU("EFU", "Oneway pallet", "Pallet need not be returned to the point of expedition."),
+    EFV("EFV", "Returnable pallet", "Pallet must be returned to the point of expedition."),
+    EFW("EFW", "Bottlecrate", "A container for the storage or movement of bottles, a.k.a. bottlerack."),
+    EFX("EFX", "Bottle, non-protected, cylindrical", "A non-protected cylindrical container with a narrow neck made usually of glass or plastic which is especially used for liquids."),
+    EFY("EFY", "Box", "A lidded package which can be made of cardboard, wood, plastic,tin,etc."),
+    EFZ("EFZ", "CHEP Eurobox", "A box mounted on a pallet base under the control of CHEP."),
+    EGA("EGA", "Case", "A package such as a box."),
+    EGB("EGB", "Display package", "A package used for the dispaly of goods, usually during a promotion."),
+    EGC("EGC", "Isothermic case", "A case used for products which require constant temperature control."),
+    EGD("EGD", "Pallet modular collars 80*100", "Collars, with the dimensions 80cms * 100cms, which when fitted onto a pallet enable the pallet to be transformed into a box pallet with, if necessary, a lid."),
+    EGE("EGE", "Pallet modular collars 80*120", "Collars, with the dimensions 80cms * 120cms, which when fitted onto a pallet enable the pallet to be transformed into a box pallet with, if necessary, a lid."),
+    EGF("EGF", "Tray", "A flat receptacle with low sides for carrying or holding articles."),
+    EGG("EGG", "Roll cage", "A three sided cage mounted on wheels."),
+    EGH("EGH", "Trolley", "A low cart for the transportation and storage of groceries, milk, etc."),
     EYP("EYP", "Exchangeable EUR Y box pallet", "A euro-pallet of type Y that may be exchanged."),
     FPN("FPN", "Flat pallet EUR non exchangeable", "A flat euro-pallet that may not be exchanged."),
     FPR("FPR", "Flat pallet (railway property) non-exchangeable", "A non-exchangeable flat pallet owned by a railroad."),
