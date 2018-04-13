@@ -24,10 +24,10 @@ import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
-import com.helger.ublpe.EUBLTRDocumentType;
+import com.helger.ublpe.EUBLPEDocumentType;
 
 /**
- * Test class for class {@link EUBLTRDocumentType}.
+ * Test class for class {@link EUBLPEDocumentType}.
  *
  * @author Philip Helger
  */
@@ -36,7 +36,7 @@ public final class EUBLTRDocumentTypeTest
   @Test
   public void testAll ()
   {
-    for (final EUBLTRDocumentType e : EUBLTRDocumentType.values ())
+    for (final EUBLPEDocumentType e : EUBLPEDocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
       assertTrue (StringHelper.hasText (e.getLocalName ()));
@@ -46,7 +46,7 @@ public final class EUBLTRDocumentTypeTest
         assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());
       assertSame (e.getSchema (), e.getSchema ());
-      assertSame (e, EUBLTRDocumentType.valueOf (e.name ()));
+      assertSame (e, EUBLPEDocumentType.valueOf (e.name ()));
     }
   }
 }

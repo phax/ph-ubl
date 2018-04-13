@@ -24,7 +24,7 @@ import org.junit.Test;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
-import com.helger.ublpe.EUBLTRDocumentType;
+import com.helger.ublpe.EUBLPEDocumentType;
 import com.helger.ublpe.UBLTRReaderBuilder;
 import com.helger.ublpe.UBLTRValidatorBuilder;
 import com.helger.ublpe.UBLTRWriterBuilder;
@@ -46,7 +46,7 @@ public final class UBLTRBuilderFuncTest
     final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder<> (CancelUserAccountType.class);
     final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder<> (CancelUserAccountType.class).setFormattedOutput (true);
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.CANCEL_USER_ACCOUNT)
                                                    .get (0);
 
     // Read from resource

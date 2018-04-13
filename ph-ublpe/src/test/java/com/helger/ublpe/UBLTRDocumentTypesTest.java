@@ -22,11 +22,11 @@ import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
-import com.helger.ublpe.EUBLTRDocumentType;
-import com.helger.ublpe.UBLTRDocumentTypes;
+import com.helger.ublpe.EUBLPEDocumentType;
+import com.helger.ublpe.UBLPEDocumentTypes;
 
 /**
- * Test class for class {@link UBLTRDocumentTypes}.
+ * Test class for class {@link UBLPEDocumentTypes}.
  *
  * @author Philip Helger
  */
@@ -35,32 +35,32 @@ public final class UBLTRDocumentTypesTest
   @Test
   public void testGetAllNamespaces ()
   {
-    for (final String sNamespace : UBLTRDocumentTypes.getAllLocalNames ())
+    for (final String sNamespace : UBLPEDocumentTypes.getAllLocalNames ())
     {
-      assertNotNull (UBLTRDocumentTypes.getDocumentTypeOfLocalName (sNamespace));
-      assertNotNull (UBLTRDocumentTypes.getImplementationClassOfLocalName (sNamespace));
-      assertNotNull (UBLTRDocumentTypes.getSchemaOfLocalName (sNamespace));
+      assertNotNull (UBLPEDocumentTypes.getDocumentTypeOfLocalName (sNamespace));
+      assertNotNull (UBLPEDocumentTypes.getImplementationClassOfLocalName (sNamespace));
+      assertNotNull (UBLPEDocumentTypes.getSchemaOfLocalName (sNamespace));
     }
-    assertNull (UBLTRDocumentTypes.getDocumentTypeOfLocalName ("any"));
-    assertNull (UBLTRDocumentTypes.getImplementationClassOfLocalName ("any"));
-    assertNull (UBLTRDocumentTypes.getSchemaOfLocalName ("any"));
-    assertNull (UBLTRDocumentTypes.getDocumentTypeOfLocalName (null));
-    assertNull (UBLTRDocumentTypes.getImplementationClassOfLocalName (null));
-    assertNull (UBLTRDocumentTypes.getSchemaOfLocalName (null));
+    assertNull (UBLPEDocumentTypes.getDocumentTypeOfLocalName ("any"));
+    assertNull (UBLPEDocumentTypes.getImplementationClassOfLocalName ("any"));
+    assertNull (UBLPEDocumentTypes.getSchemaOfLocalName ("any"));
+    assertNull (UBLPEDocumentTypes.getDocumentTypeOfLocalName (null));
+    assertNull (UBLPEDocumentTypes.getImplementationClassOfLocalName (null));
+    assertNull (UBLPEDocumentTypes.getSchemaOfLocalName (null));
   }
 
   @Test
   public void testGetSchemaOfImplementationClass ()
   {
-    assertNull (UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (null));
-    assertNull (UBLTRDocumentTypes.getSchemaOfImplementationClass (null));
-    assertNull (UBLTRDocumentTypes.getSchemaOfImplementationClass (String.class));
-    for (final EUBLTRDocumentType eDocType : EUBLTRDocumentType.values ())
+    assertNull (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (null));
+    assertNull (UBLPEDocumentTypes.getSchemaOfImplementationClass (null));
+    assertNull (UBLPEDocumentTypes.getSchemaOfImplementationClass (String.class));
+    for (final EUBLPEDocumentType eDocType : EUBLPEDocumentType.values ())
     {
       assertSame (eDocType,
-                  UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+                  UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
       assertSame (eDocType.getSchema (),
-                  UBLTRDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+                  UBLPEDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
     }
   }

@@ -28,7 +28,7 @@ import org.xml.sax.SAXException;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
-import com.helger.ublpe.EUBLTRDocumentType;
+import com.helger.ublpe.EUBLPEDocumentType;
 import com.helger.ublpe.UBLTRReader;
 import com.helger.ublpe.UBLTRValidator;
 import com.helger.ublpe.UBLTRWriter;
@@ -48,11 +48,11 @@ public final class UBLTRFuncTest
   @Test
   public void testReadAndWriteCancelUserAccount () throws SAXException
   {
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT))
+    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.CANCEL_USER_ACCOUNT))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLTRDocumentType.CANCEL_USER_ACCOUNT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.CANCEL_USER_ACCOUNT.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final CancelUserAccountType aUBLObject = UBLTRReader.cancelUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -88,11 +88,11 @@ public final class UBLTRFuncTest
   @Test
   public void testReadAndWriteProcessUserAccount () throws SAXException
   {
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.PROCESS_USER_ACCOUNT))
+    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.PROCESS_USER_ACCOUNT))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLTRDocumentType.PROCESS_USER_ACCOUNT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.PROCESS_USER_ACCOUNT.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final ProcessUserAccountType aUBLObject = UBLTRReader.processUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);

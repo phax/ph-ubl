@@ -29,24 +29,24 @@ import com.helger.commons.collection.impl.ICommonsMap;
 import com.helger.commons.collection.impl.ICommonsSet;
 
 /**
- * UBL document type map. Provides sanity methods for accessing UBLTR document
+ * UBL document type map. Provides sanity methods for accessing UBLPE document
  * types based on different information items.
  *
  * @author Philip Helger
  */
 @Immutable
-public final class UBLTRDocumentTypes
+public final class UBLPEDocumentTypes
 {
   /** Maps local names to document types */
-  private static final ICommonsMap <String, EUBLTRDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, EUBLPEDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
 
   static
   {
     // Does not contain a namespace-to-doctype map because the namespace is not
     // unique!
 
-    // Register all UBLTR document types
-    for (final EUBLTRDocumentType eDocType : EUBLTRDocumentType.values ())
+    // Register all UBLPE document types
+    for (final EUBLPEDocumentType eDocType : EUBLPEDocumentType.values ())
     {
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
@@ -57,13 +57,13 @@ public final class UBLTRDocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final UBLTRDocumentTypes s_aInstance = new UBLTRDocumentTypes ();
+  private static final UBLPEDocumentTypes s_aInstance = new UBLPEDocumentTypes ();
 
-  private UBLTRDocumentTypes ()
+  private UBLPEDocumentTypes ()
   {}
 
   /**
-   * @return A non-<code>null</code> set of all supported UBLTR document element
+   * @return A non-<code>null</code> set of all supported UBLPE document element
    *         local names.
    */
   @Nonnull
@@ -77,13 +77,13 @@ public final class UBLTRDocumentTypes
    * Get the document type matching the passed document element local name.
    *
    * @param sLocalName
-   *        The document element local name of any UBLTR document type. May be
+   *        The document element local name of any UBLPE document type. May be
    *        <code>null</code>.
-   * @return <code>null</code> if no UBLTR document type matching the specified
+   * @return <code>null</code> if no UBLPE document type matching the specified
    *         local name exists.
    */
   @Nullable
-  public static EUBLTRDocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
+  public static EUBLPEDocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
   {
     return s_aLocalName2DocType.get (sLocalName);
   }
@@ -92,43 +92,43 @@ public final class UBLTRDocumentTypes
    * Get the domain object class of the passed document element local name.
    *
    * @param sLocalName
-   *        The document element local name of any UBLTR document type. May be
+   *        The document element local name of any UBLPE document type. May be
    *        <code>null</code>.
    * @return <code>null</code> if no such implementation class exists.
    */
   @Nullable
   public static Class <?> getImplementationClassOfLocalName (@Nullable final String sLocalName)
   {
-    final EUBLTRDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
+    final EUBLPEDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
     return eDocType == null ? null : eDocType.getImplementationClass ();
   }
 
   /**
-   * Get the UBLTR document type matching the passed implementation class.
+   * Get the UBLPE document type matching the passed implementation class.
    *
    * @param aImplClass
    *        The implementation class to use. May be <code>null</code>.
    * @return <code>null</code> if the implementation class is <code>null</code>
-   *         or if no UBLTR document type has the specified implementation
+   *         or if no UBLPE document type has the specified implementation
    *         class.
    */
   @Nullable
-  public static EUBLTRDocumentType getDocumentTypeOfImplementationClass (@Nullable final Class <?> aImplClass)
+  public static EUBLPEDocumentType getDocumentTypeOfImplementationClass (@Nullable final Class <?> aImplClass)
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBLTRDocumentType.values (),
+    return ArrayHelper.findFirst (EUBLPEDocumentType.values (),
                                   eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
+   * Get the XSD Schema object for the UBLPE document type of the passed
    * document element local name.
    *
    * @param sLocalName
-   *        The document element local name of any UBLTR document type. May be
+   *        The document element local name of any UBLPE document type. May be
    *        <code>null</code>.
-   * @return <code>null</code> if no such UBLTR document type exists.
+   * @return <code>null</code> if no such UBLPE document type exists.
    */
   @Nullable
   public static Schema getSchemaOfLocalName (@Nullable final String sLocalName)
@@ -137,33 +137,33 @@ public final class UBLTRDocumentTypes
   }
 
   /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
+   * Get the XSD Schema object for the UBLPE document type of the passed
    * document element local name.
    *
    * @param sLocalName
-   *        The document element local name of any UBLTR document type. May be
+   *        The document element local name of any UBLPE document type. May be
    *        <code>null</code>.
    * @param aClassLoader
    *        The class loader to be used. May be <code>null</code> indicating
    *        that the default class loader should be used.
-   * @return <code>null</code> if no such UBLTR document type exists.
+   * @return <code>null</code> if no such UBLPE document type exists.
    */
   @Nullable
   public static Schema getSchemaOfLocalName (@Nullable final String sLocalName,
                                              @Nullable final ClassLoader aClassLoader)
   {
-    final EUBLTRDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
+    final EUBLPEDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
     return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 
   /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
+   * Get the XSD Schema object for the UBLPE document type of the passed
    * implementation class.
    *
    * @param aImplClass
-   *        The implementation class of any UBLTR document type. May be
+   *        The implementation class of any UBLPE document type. May be
    *        <code>null</code>.
-   * @return <code>null</code> if no such UBLTR document type exists.
+   * @return <code>null</code> if no such UBLPE document type exists.
    */
   @Nullable
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass)
@@ -172,22 +172,22 @@ public final class UBLTRDocumentTypes
   }
 
   /**
-   * Get the XSD Schema object for the UBLTR document type of the passed
+   * Get the XSD Schema object for the UBLPE document type of the passed
    * implementation class.
    *
    * @param aImplClass
-   *        The implementation class of any UBLTR document type. May be
+   *        The implementation class of any UBLPE document type. May be
    *        <code>null</code>.
    * @param aClassLoader
    *        The class loader to be used. May be <code>null</code> indicating
    *        that the default class loader should be used.
-   * @return <code>null</code> if no such UBLTR document type exists.
+   * @return <code>null</code> if no such UBLPE document type exists.
    */
   @Nullable
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
                                                        @Nullable final ClassLoader aClassLoader)
   {
-    final EUBLTRDocumentType eDocType = getDocumentTypeOfImplementationClass (aImplClass);
+    final EUBLPEDocumentType eDocType = getDocumentTypeOfImplementationClass (aImplClass);
     return eDocType == null ? null : eDocType.getSchema (aClassLoader);
   }
 }

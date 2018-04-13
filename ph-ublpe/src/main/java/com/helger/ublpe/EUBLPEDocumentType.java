@@ -24,29 +24,40 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.ubl20.EUBL20DocumentType;
 
-import tr.gov.efatura.package_12.TRPackage;
-import tr.gov.efatura.useraccount.CancelUserAccountType;
-import tr.gov.efatura.useraccount.ProcessUserAccountType;
+import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
+import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
 /**
- * Enumeration with all available UBLTR document types.
+ * Enumeration with all available UBLPE document types.
  *
  * @author Philip Helger
  */
-public enum EUBLTRDocumentType implements IJAXBDocumentType
+public enum EUBLPEDocumentType implements IJAXBDocumentType
 {
-  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
-  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
-  PACKAGE (TRPackage.class, CUBLTR.XSD_PACKAGE);
+  APPLICATION_RESPONSE (EUBL20DocumentType.APPLICATION_RESPONSE),
+  CREDIT_NOTE (EUBL20DocumentType.CREDIT_NOTE),
+  DEBIT_NOTE (EUBL20DocumentType.DEBIT_NOTE),
+  INVOICE (EUBL20DocumentType.INVOICE),
+  SUMMARY_DOCUMENTS (SummaryDocumentsType.class,
+                     new CommonsArrayList <> (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd")),
+  VOIDED_DOCUMENTS (VoidedDocumentsType.class,
+                    new CommonsArrayList <> (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd"));
 
   private final JAXBDocumentType m_aDocType;
 
-  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
+  private EUBLPEDocumentType (final EUBL20DocumentType eOther)
+  {
+    this (eOther.getClass (), eOther.getAllXSDPaths ());
+  }
+
+  private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }

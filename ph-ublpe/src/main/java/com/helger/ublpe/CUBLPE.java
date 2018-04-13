@@ -16,21 +16,24 @@
  */
 package com.helger.ublpe;
 
-import com.helger.sbdh.CSBDH;
-import com.helger.ubl21.UBL21NamespaceContext;
+import javax.annotation.concurrent.Immutable;
+
+import com.helger.commons.annotation.PresentForCodeCoverage;
 
 /**
- * The namespace context to be used as the namespace prefix mapper.
+ * Constants for UBLPE handling.
  *
  * @author Philip Helger
  */
-public class UBLTRNamespaceContext extends UBL21NamespaceContext
+@Immutable
+public final class CUBLPE
 {
-  public UBLTRNamespaceContext ()
-  {
-    addMapping ("sh", CSBDH.SBDH_NS);
-    addMapping ("ef", CUBLTR.XML_NS_EFATURA);
-    addMapping ("hr", CUBLTR.XML_NS_HRXML);
-    addMapping ("oa", CUBLTR.XML_NS_OAGIS);
-  }
+  /** The classpath relative directory where the main XSDs reside */
+  public static final String SCHEMA_DIRECTORY = "schemas/ublpe/";
+
+  @PresentForCodeCoverage
+  private static final CUBLPE s_aInstance = new CUBLPE ();
+
+  private CUBLPE ()
+  {}
 }

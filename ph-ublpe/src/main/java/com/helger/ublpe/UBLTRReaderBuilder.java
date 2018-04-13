@@ -31,14 +31,14 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
 @NotThreadSafe
 public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBLTRReaderBuilder <JAXBTYPE>>
 {
-  public UBLTRReaderBuilder (@Nonnull final EUBLTRDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
+  public UBLTRReaderBuilder (@Nonnull final EUBLPEDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
   {
     super (aDocType, aImplClass);
   }
 
   public UBLTRReaderBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
-    this (UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
+    this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
   }
 
   /**
@@ -65,7 +65,7 @@ public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
    * @return The new reader builder. Never <code>null</code>.
    */
   @Nonnull
-  public static UBLTRReaderBuilder <?> createGeneric (@Nonnull final EUBLTRDocumentType eDocType)
+  public static UBLTRReaderBuilder <?> createGeneric (@Nonnull final EUBLPEDocumentType eDocType)
   {
     return new UBLTRReaderBuilder <> (eDocType, Object.class);
   }

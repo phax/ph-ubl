@@ -32,20 +32,20 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 @NotThreadSafe
 public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLTRWriterBuilder <JAXBTYPE>>
 {
-  public UBLTRWriterBuilder (@Nonnull final EUBLTRDocumentType eDocType)
+  public UBLTRWriterBuilder (@Nonnull final EUBLPEDocumentType eDocType)
   {
     super (eDocType);
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.addMappings (new UBLTRNamespaceContext ());
+    aNSContext.addMappings (new UBLPENamespaceContext ());
     aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
 
   public UBLTRWriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
-    this (UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+    this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   /**

@@ -31,14 +31,14 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
 @NotThreadSafe
 public class UBLTRValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBLTRValidatorBuilder <JAXBTYPE>>
 {
-  public UBLTRValidatorBuilder (@Nonnull final EUBLTRDocumentType eDocType)
+  public UBLTRValidatorBuilder (@Nonnull final EUBLPEDocumentType eDocType)
   {
     super (eDocType);
   }
 
   public UBLTRValidatorBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
-    this (UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+    this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   /**

@@ -23,7 +23,7 @@ import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
-import com.helger.ublpe.EUBLTRDocumentType;
+import com.helger.ublpe.EUBLPEDocumentType;
 
 @Immutable
 public final class MockUBLTRTestDocuments
@@ -35,7 +35,7 @@ public final class MockUBLTRTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentType eType)
+  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLPEDocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)
