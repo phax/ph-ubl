@@ -143,6 +143,11 @@
         <artifactId>ph-ubltr</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-ublpe</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   
@@ -165,6 +170,9 @@
     <module>ph-ubl22</module>
     <module>ph-ubl22-codelists</module>
     <module>ph-ubltr</module>
+    <!--  
+    <module>ph-ublpe</module>
+    -->
   </modules>
   
   <build>

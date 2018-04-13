@@ -1,0 +1,7 @@
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"    "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"        "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"    "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd"
+PUBLIC "urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"           "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"                      "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/maindoc/UBL-Invoice-2.0.xsd"
+PUBLIC "http://www.w3.org/2000/09/xmldsig#" "maven:com.helger:ph-ubl20:jar::!/schemas/ubl20/common/UBL-xmldsig-core-schema-2.0.xsd"
