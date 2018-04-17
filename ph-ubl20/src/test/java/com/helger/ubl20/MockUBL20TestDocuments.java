@@ -23,6 +23,7 @@ import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
 
 @Immutable
@@ -33,7 +34,7 @@ public final class MockUBL20TestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static List <String> getUBL20TestDocuments (@Nonnull final EUBL20DocumentType eType)
+  public static ICommonsList <String> getUBL20TestDocuments (@Nonnull final EUBL20DocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)
@@ -44,17 +45,29 @@ public final class MockUBL20TestDocuments
       case CREDIT_NOTE:
         aFiles = UBLTestFiles.CREDIT_NOTE_FILES;
         break;
+      case DEBIT_NOTE:
+        aFiles = UBLTestFiles.DEBIT_NOTE_FILES;
+        break;
       case DESPATCH_ADVICE:
         aFiles = UBLTestFiles.DESPATCH_ADVICE_FILES;
         break;
       case FORWARDING_INSTRUCTIONS:
         aFiles = UBLTestFiles.FORWARDING_INSTRUCTIONS_FILES;
         break;
+      case FREIGHT_INVOICE:
+        aFiles = UBLTestFiles.FREIGHT_INVOICE_FILES;
+        break;
       case INVOICE:
         aFiles = UBLTestFiles.INVOICE_FILES;
         break;
       case ORDER:
         aFiles = UBLTestFiles.ORDER_FILES;
+        break;
+      case ORDER_CANCELLATION:
+        aFiles = UBLTestFiles.ORDER_CANCELLATION_FILES;
+        break;
+      case ORDER_RESPONSE:
+        aFiles = UBLTestFiles.ORDER_RESPONSE_FILES;
         break;
       case ORDER_RESPONSE_SIMPLE:
         aFiles = UBLTestFiles.ORDER_RESPONSE_SIMPLE_FILES;
