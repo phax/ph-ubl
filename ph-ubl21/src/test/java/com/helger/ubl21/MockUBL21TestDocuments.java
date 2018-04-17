@@ -23,6 +23,7 @@ import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
 
 @Immutable
@@ -33,7 +34,7 @@ public final class MockUBL21TestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static List <String> getUBL21TestDocuments (@Nonnull final EUBL21DocumentType eType)
+  public static ICommonsList <String> getUBL21TestDocuments (@Nonnull final EUBL21DocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)
