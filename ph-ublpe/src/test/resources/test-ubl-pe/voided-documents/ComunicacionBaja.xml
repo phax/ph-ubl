@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<VoidedDocuments xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:VoidedDocuments-1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>1.0</cbc:CustomizationID>
+	<cbc:ID>RA-20171014-1</cbc:ID>
+	<cbc:ReferenceDate>2017-10-14</cbc:ReferenceDate>
+	<cbc:IssueDate>2017-10-14</cbc:IssueDate>
+	<cac:Signature>
+		<cbc:ID>IdOpenInvoicePeru</cbc:ID>
+		<cac:SignatoryParty>
+			<cac:PartyIdentification>
+				<cbc:ID>20257471609</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>FRAMEWORK PERU S.A.</cbc:Name>
+			</cac:PartyName>
+		</cac:SignatoryParty>
+		<cac:DigitalSignatureAttachment>
+			<cac:ExternalReference>
+				<cbc:URI>#IdOpenInvoicePeru</cbc:URI>
+			</cac:ExternalReference>
+		</cac:DigitalSignatureAttachment>
+	</cac:Signature>
+	<cac:AccountingSupplierParty>
+		<cbc:CustomerAssignedAccountID>20257471609</cbc:CustomerAssignedAccountID>
+		<cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+		<cac:Party>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>FRAMEWORK PERU S.A.</cbc:RegistrationName>
+			</cac:PartyLegalEntity>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<sac:VoidedDocumentsLine>
+		<cbc:LineID>1</cbc:LineID>
+		<cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+		<sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+		<sac:DocumentNumberID>111</sac:DocumentNumberID>
+		<sac:VoidReasonDescription>ANULACION DE LA FACTURA 1</sac:VoidReasonDescription>
+	</sac:VoidedDocumentsLine>
+	<sac:VoidedDocumentsLine>
+		<cbc:LineID>2</cbc:LineID>
+		<cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+		<sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+		<sac:DocumentNumberID>2</sac:DocumentNumberID>
+		<sac:VoidReasonDescription>ANULACION DE LA FACTURA 2</sac:VoidReasonDescription>
+	</sac:VoidedDocumentsLine>
+	<sac:VoidedDocumentsLine>
+		<cbc:LineID>3</cbc:LineID>
+		<cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+		<sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+		<sac:DocumentNumberID>30</sac:DocumentNumberID>
+		<sac:VoidReasonDescription>ANULACIONDE LA FACTURA 3</sac:VoidReasonDescription>
+	</sac:VoidedDocumentsLine>
+	<sac:VoidedDocumentsLine>
+		<cbc:LineID>4</cbc:LineID>
+		<cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+		<sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+		<sac:DocumentNumberID>4</sac:DocumentNumberID>
+		<sac:VoidReasonDescription>ANULACIONDE LA FACTURA 4</sac:VoidReasonDescription>
+	</sac:VoidedDocumentsLine>
+	<sac:VoidedDocumentsLine>
+		<cbc:LineID>5</cbc:LineID>
+		<cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+		<sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+		<sac:DocumentNumberID>5</sac:DocumentNumberID>
+		<sac:VoidReasonDescription>ANULACIONDE LA FACTURA 5</sac:VoidReasonDescription>
+	</sac:VoidedDocumentsLine>
+</VoidedDocuments>

@@ -31,6 +31,9 @@ public final class CUBLPE
   /** The classpath relative directory where the main XSDs reside */
   public static final String SCHEMA_DIRECTORY = "schemas/ublpe/";
 
+  /** The sac namespace URL */
+  public static final String XML_SCHEMA_SAC_NAMESPACE_URL = "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1";
+
   @PresentForCodeCoverage
   private static final CUBLPE s_aInstance = new CUBLPE ();
 

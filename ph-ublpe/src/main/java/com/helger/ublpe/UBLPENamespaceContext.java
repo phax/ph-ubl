@@ -16,6 +16,8 @@
  */
 package com.helger.ublpe;
 
+import javax.annotation.Nonnull;
+
 import com.helger.ubl20.UBL20NamespaceContext;
 
 /**
@@ -25,6 +27,19 @@ import com.helger.ubl20.UBL20NamespaceContext;
  */
 public class UBLPENamespaceContext extends UBL20NamespaceContext
 {
+  private static final class SingletonHolder
+  {
+    static final UBLPENamespaceContext s_aInstance = new UBLPENamespaceContext ();
+  }
+
   public UBLPENamespaceContext ()
-  {}
+  {
+    addMapping ("sac", CUBLPE.XML_SCHEMA_SAC_NAMESPACE_URL);
+  }
+
+  @Nonnull
+  public static UBLPENamespaceContext getInstance ()
+  {
+    return SingletonHolder.s_aInstance;
+  }
 }

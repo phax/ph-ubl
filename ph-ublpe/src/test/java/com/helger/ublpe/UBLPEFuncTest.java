@@ -28,99 +28,95 @@ import org.xml.sax.SAXException;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
-import com.helger.ublpe.EUBLPEDocumentType;
-import com.helger.ublpe.UBLTRReader;
-import com.helger.ublpe.UBLTRValidator;
-import com.helger.ublpe.UBLTRWriter;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
-import tr.gov.efatura.useraccount.CancelUserAccountType;
-import tr.gov.efatura.useraccount.ProcessUserAccountType;
+import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
+import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
 /**
  * Some cross functionality testing
  *
  * @author Philip Helger
  */
-public final class UBLTRFuncTest
+public final class UBLPEFuncTest
 {
   @Test
   public void testReadAndWriteCancelUserAccount () throws SAXException
   {
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.CANCEL_USER_ACCOUNT))
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.CANCEL_USER_ACCOUNT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.SUMMARY_DOCUMENTS.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final CancelUserAccountType aUBLObject = UBLTRReader.cancelUserAccount ().read (aDoc);
+      final SummaryDocumentsType aUBLObject = UBLPEReader.summaryDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBLTRValidator.cancelUserAccount ().validate (aUBLObject);
+      IErrorList aErrors = UBLPEValidator.summaryDocuments ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLTRWriter.cancelUserAccount ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBLPEWriter.summaryDocuments ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final CancelUserAccountType aUBLObject2 = UBLTRReader.cancelUserAccount ().read (aDoc2);
+      final SummaryDocumentsType aUBLObject2 = UBLPEReader.summaryDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBLTRValidator.cancelUserAccount ().validate (aUBLObject2);
+      aErrors = UBLPEValidator.summaryDocuments ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBLTRValidator.cancelUserAccount ().validate (new CancelUserAccountType ());
+    final IErrorList aErrors = UBLPEValidator.summaryDocuments ().validate (new SummaryDocumentsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
 
   @Test
-  public void testReadAndWriteProcessUserAccount () throws SAXException
+  public void testReadAndWriteVoidedDocuments () throws SAXException
   {
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.PROCESS_USER_ACCOUNT))
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.VOIDED_DOCUMENTS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.PROCESS_USER_ACCOUNT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.VOIDED_DOCUMENTS.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final ProcessUserAccountType aUBLObject = UBLTRReader.processUserAccount ().read (aDoc);
+      final VoidedDocumentsType aUBLObject = UBLPEReader.voidedDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBLTRValidator.processUserAccount ().validate (aUBLObject);
+      IErrorList aErrors = UBLPEValidator.voidedDocuments ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLTRWriter.processUserAccount ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBLPEWriter.voidedDocuments ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ProcessUserAccountType aUBLObject2 = UBLTRReader.processUserAccount ().read (aDoc2);
+      final VoidedDocumentsType aUBLObject2 = UBLPEReader.voidedDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBLTRValidator.processUserAccount ().validate (aUBLObject2);
+      aErrors = UBLPEValidator.voidedDocuments ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBLTRValidator.processUserAccount ().validate (new ProcessUserAccountType ());
+    final IErrorList aErrors = UBLPEValidator.voidedDocuments ().validate (new VoidedDocumentsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }

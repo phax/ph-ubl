@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<Retention 
+	xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:Retention-1" 
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
+	xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+	xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
+	xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" 
+	xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" 
+	xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent/>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>1.0</cbc:CustomizationID>
+	<cac:Signature>
+		<cbc:ID>IDFIRMA</cbc:ID>
+		<cac:SignatoryParty>
+			<cac:PartyIdentification>
+				<cbc:ID>20382567855</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>STARSOFT</cbc:Name>
+			</cac:PartyName>
+		</cac:SignatoryParty>
+		<cac:DigitalSignatureAttachment>
+			<cac:ExternalReference>
+				<cbc:URI>IDFIRMA</cbc:URI>
+			</cac:ExternalReference>
+		</cac:DigitalSignatureAttachment>
+	</cac:Signature>
+	<cbc:ID>R001-123</cbc:ID>
+	<cbc:IssueDate>2016-06-21</cbc:IssueDate>
+	<cac:AgentParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="6">20382567855</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>STARSOFT</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:ID>150136</cbc:ID>
+			<cbc:StreetName><![CDATA[CALLE TIAHUANACO 146]]></cbc:StreetName>
+			<cbc:CitySubdivisionName>URB. MARANGA</cbc:CitySubdivisionName>
+			<cbc:CityName>LIMA</cbc:CityName>
+			<cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+			<cbc:District>SAN MIGUEL</cbc:District>
+			<cac:Country>
+				<cbc:IdentificationCode>PE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyLegalEntity>
+			<cbc:RegistrationName><![CDATA[ENTERPRISE SOLUTIONS S.A.]]></cbc:RegistrationName>
+		</cac:PartyLegalEntity>
+	</cac:AgentParty>
+	<cac:ReceiverParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="6">20101295673</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name><![CDATA[FABRICACIONES ONUR SAC]]></cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:ID>150101</cbc:ID>
+			<cbc:StreetName><![CDATA[AV. ABANCAY 1023]]></cbc:StreetName>
+			<cbc:CitySubdivisionName>CERCADO DE LIMA</cbc:CitySubdivisionName>
+			<cbc:CityName>LIMA</cbc:CityName>
+			<cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+			<cbc:District>LIMA</cbc:District>
+			<cac:Country>
+				<cbc:IdentificationCode>PE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyLegalEntity>
+			<cbc:RegistrationName><![CDATA[FABRICACIONES ONUR SAC]]></cbc:RegistrationName>
+		</cac:PartyLegalEntity>
+	</cac:ReceiverParty>
+	<sac:SUNATRetentionSystemCode>01</sac:SUNATRetentionSystemCode>
+	<sac:SUNATRetentionPercent>3.00</sac:SUNATRetentionPercent>
+	<cbc:Note/>
+	<cbc:TotalInvoiceAmount currencyID="PEN">35.40</cbc:TotalInvoiceAmount>
+	<sac:SUNATTotalPaid currencyID="PEN">1144.60</sac:SUNATTotalPaid>
+	<sac:SUNATRetentionDocumentReference>
+		<cbc:ID schemeID="01">F001-540</cbc:ID>
+		<cbc:IssueDate>2016-06-01</cbc:IssueDate>
+		<cbc:TotalInvoiceAmount currencyID="PEN">1180.00</cbc:TotalInvoiceAmount>
+		<cac:Payment>
+			<cbc:ID>1</cbc:ID>
+			<cbc:PaidAmount currencyID="PEN">1180.00</cbc:PaidAmount>
+			<cbc:PaidDate>2016-06-21</cbc:PaidDate>
+		</cac:Payment>
+		<sac:SUNATRetentionInformation>
+			<sac:SUNATRetentionAmount currencyID="PEN">35.40</sac:SUNATRetentionAmount>
+			<sac:SUNATRetentionDate>2016-06-21</sac:SUNATRetentionDate>
+			<sac:SUNATNetTotalPaid currencyID="PEN">1144.60</sac:SUNATNetTotalPaid>
+		</sac:SUNATRetentionInformation>
+	</sac:SUNATRetentionDocumentReference>
+</Retention>

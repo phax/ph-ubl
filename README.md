@@ -19,9 +19,12 @@ The following projects are contained:
   * **ph-ubl22** contains the generated JAXB files for UBL 2.2 as well as the helper classes.
   * **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
   * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
+  * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
   
 # News and noteworthy
 
+* v6.0.2 - work in progress
+  * Added ph-ublpe suppport
 * v6.0.1 - 2018-04-03
   * Updated to UBL 2.2 CS 01
 * v6.0.0 - 2018-01-09

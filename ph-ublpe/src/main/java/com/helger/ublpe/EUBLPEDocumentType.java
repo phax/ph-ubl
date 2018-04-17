@@ -52,9 +52,9 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
 
   private final JAXBDocumentType m_aDocType;
 
-  private EUBLPEDocumentType (final EUBL20DocumentType eOther)
+  private EUBLPEDocumentType (@Nonnull final EUBL20DocumentType eOther)
   {
-    this (eOther.getClass (), eOther.getAllXSDPaths ());
+    this (eOther.getImplementationClass (), eOther.getAllXSDPaths ());
   }
 
   private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)

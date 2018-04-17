@@ -22,21 +22,21 @@ import javax.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.builder.JAXBReaderBuilder;
 
 /**
- * A reader builder for UBLTR documents.
+ * A reader builder for UBLPE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The UBLTR implementation class to be read
+ *        The UBLPE implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBLTRReaderBuilder <JAXBTYPE>>
+public class UBLPEReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBLPEReaderBuilder <JAXBTYPE>>
 {
-  public UBLTRReaderBuilder (@Nonnull final EUBLPEDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
+  public UBLPEReaderBuilder (@Nonnull final EUBLPEDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
   {
     super (aDocType, aImplClass);
   }
 
-  public UBLTRReaderBuilder (@Nonnull final Class <JAXBTYPE> aClass)
+  public UBLPEReaderBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
   }
@@ -48,12 +48,12 @@ public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
    *        The UBL class to be read. May not be <code>null</code>.
    * @return The new reader builder. Never <code>null</code>.
    * @param <T>
-   *        The UBLTR document implementation type
+   *        The UBLPE document implementation type
    */
   @Nonnull
-  public static <T> UBLTRReaderBuilder <T> create (@Nonnull final Class <T> aClass)
+  public static <T> UBLPEReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBLTRReaderBuilder <> (aClass);
+    return new UBLPEReaderBuilder <> (aClass);
   }
 
   /**
@@ -61,12 +61,12 @@ public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, 
    * type enumeration value is available.
    *
    * @param eDocType
-   *        The UBLTR document type to be read. May not be <code>null</code> .
+   *        The UBLPE document type to be read. May not be <code>null</code> .
    * @return The new reader builder. Never <code>null</code>.
    */
   @Nonnull
-  public static UBLTRReaderBuilder <?> createGeneric (@Nonnull final EUBLPEDocumentType eDocType)
+  public static UBLPEReaderBuilder <?> createGeneric (@Nonnull final EUBLPEDocumentType eDocType)
   {
-    return new UBLTRReaderBuilder <> (eDocType, Object.class);
+    return new UBLPEReaderBuilder <> (eDocType, Object.class);
   }
 }

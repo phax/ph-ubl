@@ -31,7 +31,7 @@ import com.helger.ublpe.EUBLPEDocumentType;
  *
  * @author Philip Helger
  */
-public final class EUBLTRDocumentTypeTest
+public final class EUBLPEDocumentTypeTest
 {
   @Test
   public void testAll ()

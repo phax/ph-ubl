@@ -23,16 +23,16 @@ import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
- * A writer builder for UBLTR documents.
+ * A writer builder for UBLPE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The UBLTR implementation class to be read
+ *        The UBLPE implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLTRWriterBuilder <JAXBTYPE>>
+public class UBLPEWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLPEWriterBuilder <JAXBTYPE>>
 {
-  public UBLTRWriterBuilder (@Nonnull final EUBLPEDocumentType eDocType)
+  public UBLPEWriterBuilder (@Nonnull final EUBLPEDocumentType eDocType)
   {
     super (eDocType);
 
@@ -43,7 +43,7 @@ public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
     setNamespaceContext (aNSContext);
   }
 
-  public UBLTRWriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
+  public UBLPEWriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
@@ -55,11 +55,11 @@ public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
    *        The UBL class to be written. May not be <code>null</code>.
    * @return The new writer builder. Never <code>null</code>.
    * @param <T>
-   *        The UBLTR document implementation type
+   *        The UBLPE document implementation type
    */
   @Nonnull
-  public static <T> UBLTRWriterBuilder <T> create (@Nonnull final Class <T> aClass)
+  public static <T> UBLPEWriterBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBLTRWriterBuilder <> (aClass);
+    return new UBLPEWriterBuilder <> (aClass);
   }
 }

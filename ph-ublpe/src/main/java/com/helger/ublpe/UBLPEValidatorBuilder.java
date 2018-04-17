@@ -22,21 +22,21 @@ import javax.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
- * A writer builder for UBLTR documents.
+ * A writer builder for UBLPE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The UBLTR implementation class to be read
+ *        The UBLPE implementation class to be read
  */
 @NotThreadSafe
-public class UBLTRValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBLTRValidatorBuilder <JAXBTYPE>>
+public class UBLPEValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBLPEValidatorBuilder <JAXBTYPE>>
 {
-  public UBLTRValidatorBuilder (@Nonnull final EUBLPEDocumentType eDocType)
+  public UBLPEValidatorBuilder (@Nonnull final EUBLPEDocumentType eDocType)
   {
     super (eDocType);
   }
 
-  public UBLTRValidatorBuilder (@Nonnull final Class <JAXBTYPE> aClass)
+  public UBLPEValidatorBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
@@ -48,11 +48,11 @@ public class UBLTRValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAX
    *        The UBL class to be validated. May not be <code>null</code>.
    * @return The new validation builder. Never <code>null</code>.
    * @param <T>
-   *        The UBLTR document implementation type
+   *        The UBLPE document implementation type
    */
   @Nonnull
-  public static <T> UBLTRValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
+  public static <T> UBLPEValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBLTRValidatorBuilder <> (aClass);
+    return new UBLPEValidatorBuilder <> (aClass);
   }
 }

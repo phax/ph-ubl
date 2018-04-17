@@ -24,37 +24,33 @@ import org.junit.Test;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
-import com.helger.ublpe.EUBLPEDocumentType;
-import com.helger.ublpe.UBLTRReaderBuilder;
-import com.helger.ublpe.UBLTRValidatorBuilder;
-import com.helger.ublpe.UBLTRWriterBuilder;
 
-import tr.gov.efatura.useraccount.CancelUserAccountType;
+import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 
 /**
- * Test class for classes {@link UBLTRReaderBuilder},
- * {@link UBLTRValidatorBuilder} and {@link UBLTRWriterBuilder}.
+ * Test class for classes {@link UBLPEReaderBuilder},
+ * {@link UBLPEValidatorBuilder} and {@link UBLPEWriterBuilder}.
  *
  * @author Philip Helger
  */
-public final class UBLTRBuilderFuncTest
+public final class UBLPEBuilderFuncTest
 {
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
-    final UBLTRReaderBuilder <CancelUserAccountType> aReader = new UBLTRReaderBuilder<> (CancelUserAccountType.class);
-    final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder<> (CancelUserAccountType.class);
-    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder<> (CancelUserAccountType.class).setFormattedOutput (true);
+    final UBLPEReaderBuilder <SummaryDocumentsType> aReader = new UBLPEReaderBuilder <> (SummaryDocumentsType.class);
+    final UBLPEValidatorBuilder <SummaryDocumentsType> aValidator = new UBLPEValidatorBuilder <> (SummaryDocumentsType.class);
+    final UBLPEWriterBuilder <SummaryDocumentsType> aWriter = new UBLPEWriterBuilder <> (SummaryDocumentsType.class).setFormattedOutput (true);
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLPEDocumentType.CANCEL_USER_ACCOUNT)
+    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS)
                                                    .get (0);
 
     // Read from resource
-    final CancelUserAccountType aRead1 = aReader.read (new ClassPathResource (sFilename));
+    final SummaryDocumentsType aRead1 = aReader.read (new ClassPathResource (sFilename));
     assertNotNull (aRead1);
 
     // Read from byte[]
-    final CancelUserAccountType aRead2 = aReader.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
+    final SummaryDocumentsType aRead2 = aReader.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
     assertNotNull (aRead2);
     assertEquals (aRead1, aRead2);
 
