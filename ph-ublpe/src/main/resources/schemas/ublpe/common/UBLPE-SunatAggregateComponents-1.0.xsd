@@ -4,7 +4,17 @@
   Document Type:     Definiciones SUNAT
   Generated On:      01 Mayo 2012
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" targetNamespace="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" 
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
+            xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+            xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" 
+            targetNamespace="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" 
+            elementFormDefault="qualified" 
+            attributeFormDefault="unqualified" 
+            version="1.0">
 	<!-- ===== Imports ===== -->
 	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" />
 	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" />

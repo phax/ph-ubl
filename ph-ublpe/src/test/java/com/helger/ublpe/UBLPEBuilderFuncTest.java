@@ -36,14 +36,15 @@ import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryD
 public final class UBLPEBuilderFuncTest
 {
   @Test
-  public void testReadAndWriteCancelUserAccount ()
+  public void testReadAndWriteSummaryDocuments ()
   {
     final UBLPEReaderBuilder <SummaryDocumentsType> aReader = new UBLPEReaderBuilder <> (SummaryDocumentsType.class);
     final UBLPEValidatorBuilder <SummaryDocumentsType> aValidator = new UBLPEValidatorBuilder <> (SummaryDocumentsType.class);
     final UBLPEWriterBuilder <SummaryDocumentsType> aWriter = new UBLPEWriterBuilder <> (SummaryDocumentsType.class).setFormattedOutput (true);
 
     final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS)
-                                                   .get (0);
+                                                   .getFirst ();
+    assertNotNull (sFilename);
 
     // Read from resource
     final SummaryDocumentsType aRead1 = aReader.read (new ClassPathResource (sFilename));
