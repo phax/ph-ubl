@@ -34,7 +34,7 @@ import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.Sup
 import oasis.names.specification.ubl.schema.xsd.invoice_22.InvoiceType;
 
 /**
- * Create a minimal UBL 2.1 invoice from scratch.
+ * Create a minimal UBL 2.2 invoice from scratch.
  *
  * @author Philip Helger
  */

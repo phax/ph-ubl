@@ -56,7 +56,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteCatalogue () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.CATALOGUE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.CATALOGUE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -97,7 +97,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteCreditNote () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.CREDIT_NOTE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.CREDIT_NOTE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -138,7 +138,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteDespatchAdvice () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.DESPATCH_ADVICE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.DESPATCH_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -179,7 +179,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteForwardingInstructions () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.FORWARDING_INSTRUCTIONS))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.FORWARDING_INSTRUCTIONS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -220,7 +220,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteInvoices () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.INVOICE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.INVOICE))
     {
       if (false)
         System.out.println (sFilename);
@@ -264,7 +264,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteOrders () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.ORDER))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.ORDER))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -306,7 +306,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteOrderResponseSimple () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.ORDER_RESPONSE_SIMPLE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.ORDER_RESPONSE_SIMPLE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -347,7 +347,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteQuotation () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.QUOTATION))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -388,7 +388,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteReceiptAdvice () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.RECEIPT_ADVICE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.RECEIPT_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -429,7 +429,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteRemittanceAdvice () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.REMITTANCE_ADVICE))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.REMITTANCE_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -470,7 +470,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteRequestForQuotation () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.REQUEST_FOR_QUOTATION))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.REQUEST_FOR_QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -511,7 +511,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteStatement () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.STATEMENT))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.STATEMENT))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
@@ -552,7 +552,7 @@ public final class UBL22FuncTest
   @Test
   public void testReadAndWriteWaybill () throws SAXException
   {
-    for (final String sFilename : MockUBL22TestDocuments.getUBL21TestDocuments (EUBL22DocumentType.WAYBILL))
+    for (final String sFilename : MockUBL22TestDocuments.getUBL22TestDocuments (EUBL22DocumentType.WAYBILL))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),

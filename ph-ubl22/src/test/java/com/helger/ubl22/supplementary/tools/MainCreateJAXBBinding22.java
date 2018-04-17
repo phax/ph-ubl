@@ -68,6 +68,7 @@ public final class MainCreateJAXBBinding22
     eRoot.setAttribute (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI,
                         "schemaLocation",
                         JAXB_NS_URI + " http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd");
+    // This is the JAXB version, not the UBL version :)
     eRoot.setAttribute ("version", "2.1");
 
     final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
