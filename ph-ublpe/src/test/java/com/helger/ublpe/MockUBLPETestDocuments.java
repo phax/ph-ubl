@@ -53,9 +53,13 @@ public final class MockUBLPETestDocuments
         aFiles = new CommonsArrayList <> (UBLTestFiles.INVOICE_FILES);
         break;
       case SUMMARY_DOCUMENTS:
-        aFiles = new CommonsArrayList <> (PREFIX + "summary-documents/ResumenDiario_1.1_NC.xml",
-                                          PREFIX + "summary-documents/ResumenDiario_1.1.xml",
-                                          PREFIX + "summary-documents/ResumenDiario.xml");
+        // The other 2 are non-compliant
+        aFiles = new CommonsArrayList <> (// PREFIX +
+                                          // "summary-documents/ResumenDiario_1.1_NC.xml",
+                                          // PREFIX +
+                                          // "summary-documents/ResumenDiario_1.1.xml",
+                                          PREFIX +
+                                          "summary-documents/ResumenDiario.xml");
         break;
       case VOIDED_DOCUMENTS:
         aFiles = new CommonsArrayList <> (PREFIX + "voided-documents/ComunicacionBaja.xml");

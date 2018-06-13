@@ -46,9 +46,29 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
   DEBIT_NOTE (EUBL20DocumentType.DEBIT_NOTE),
   INVOICE (EUBL20DocumentType.INVOICE),
   SUMMARY_DOCUMENTS (SummaryDocumentsType.class,
-                     new CommonsArrayList <> (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd")),
+                     new CommonsArrayList <> ("/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd",
+                                              "/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
+                                              "/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
+                                              "/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
+                                              "/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
+                                              "/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd",
+                                              "/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd",
+                                              "/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd",
+                                              "/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd",
+                                              CUBLPE.SCHEMA_DIRECTORY + "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                              CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd")),
   VOIDED_DOCUMENTS (VoidedDocumentsType.class,
-                    new CommonsArrayList <> (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd"));
+                    new CommonsArrayList <> ("/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd",
+                                             "/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
+                                             "/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
+                                             "/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
+                                             "/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
+                                             "/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd",
+                                             "/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd",
+                                             "/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd",
+                                             "/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd",
+                                             CUBLPE.SCHEMA_DIRECTORY + "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                             CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd"));
 
   private final JAXBDocumentType m_aDocType;
 
