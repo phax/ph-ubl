@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CS01
-                     http://docs.oasis-open.org/ubl/cs01-UBL-2.2/
-  Release Date:      22 March 2018
+  Library:           OASIS Universal Business Language (UBL) 2.2 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.2/
+  Release Date:      09 July 2018
   Module:            xsd/maindoc/UBL-Reminder-2.2.xsd
-  Generated on:      2018-03-17 18:40z
+  Generated on:      2018-07-08 20:04z
   Copyright (c) OASIS Open 2018. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
