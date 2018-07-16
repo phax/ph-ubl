@@ -25,6 +25,7 @@ The following projects are contained:
 
 * v6.0.2 - work in progress
   * Added ph-ublpe suppport
+  * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
 * v6.0.1 - 2018-04-03
   * Updated to UBL 2.2 CS 01
 * v6.0.0 - 2018-01-09
@@ -150,6 +151,7 @@ Binary versions of the artefacts can be downloaded from Maven Central:
   * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl22/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
+  * http://repo1.maven.org/maven2/com/helger/ph-ublpe/
   * http://repo1.maven.org/maven2/com/helger/ph-ubltr/
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
@@ -162,10 +164,13 @@ The following projects are required at runtime. The exact version depends on the
 
 For further information on the Universal Business Language can be found on the following pages:
 
-  * https://www.oasis-open.org/committees/ubl/
-  * http://ubl.xml.org
-  * http://goubl.com
-  * http://www.ubltr.com/
+* https://www.oasis-open.org/committees/ubl/
+    * UBL 2.0: http://docs.oasis-open.org/ubl/os-UBL-2.0/ 
+    * UBL 2.1: http://docs.oasis-open.org/ubl/os-UBL-2.1/ 
+    * UBL 2.2: http://docs.oasis-open.org/ubl/os-UBL-2.2/ 
+* http://ubl.xml.org
+* http://goubl.com
+* http://www.ubltr.com/
 
 ---
 
