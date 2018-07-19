@@ -67,7 +67,7 @@ public class PluginUBLValue extends Plugin
   // @author is only valid for file comments
   public static final String AUTHOR = "<br>\nNote: automatically created by ph-ubl-jaxb-plugin -" + OPT;
 
-  private static final Logger s_aLogger = LoggerFactory.getLogger (PluginUBLValue.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger (PluginUBLValue.class);
 
   @Override
   public String getOptionName ()
@@ -222,13 +222,13 @@ public class PluginUBLValue extends Plugin
               }
           }
           else
-            s_aLogger.warn ("Failed to load " + sSuperClassName);
+            LOGGER.warn ("Failed to load " + sSuperClassName);
         }
       }
     }
 
-    if (s_aLogger.isDebugEnabled ())
-      s_aLogger.debug ("Found the following super-classes " + aAllSuperClassNames);
+    if (LOGGER.isDebugEnabled ())
+      LOGGER.debug ("Found the following super-classes " + aAllSuperClassNames);
 
     final ICommonsMap <JClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
 
@@ -281,7 +281,7 @@ public class PluginUBLValue extends Plugin
         _addValueSetterInUsingClasses (aOutline, aValueType, aAllRelevantClasses);
       }
       else
-        s_aLogger.info (jClass.getClass ().getSimpleName () + " " + jClass.fullName () + " is not a value-based class");
+        LOGGER.info (jClass.getClass ().getSimpleName () + " " + jClass.fullName () + " is not a value-based class");
     }
 
     return aAllCtorClasses;
