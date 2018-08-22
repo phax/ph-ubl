@@ -202,8 +202,7 @@ public final class MainCreateEnumsGenericode21
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE |
-                                                                 JMod.FINAL,
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
                                                                  String.class,
                                                                  "m_sDisplayName")
                                                   : null;
@@ -258,10 +257,11 @@ public final class MainCreateEnumsGenericode21
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()._return (s_aCodeModel.ref (EnumHelper.class)
-                                   .staticInvoke ("getFromIDOrNull")
-                                   .arg (JExpr.dotclass (jEnum))
-                                   .arg (jID));
+    m.body ()
+     ._return (s_aCodeModel.ref (EnumHelper.class)
+                           .staticInvoke ("getFromIDOrNull")
+                           .arg (JExpr.dotclass (jEnum))
+                           .arg (jID));
 
     if (bHasNameColumn)
     {
@@ -270,10 +270,8 @@ public final class MainCreateEnumsGenericode21
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ().decl (JMod.FINAL,
-                                          jEnum,
-                                          "eValue",
-                                          jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ()
+                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
   }
@@ -301,15 +299,11 @@ public final class MainCreateEnumsGenericode21
 
     final AbstractJClass aSetDecl = s_aCodeModel.ref (ICommonsSet.class).narrow (String.class);
     final AbstractJClass aSetImpl = s_aCodeModel.ref (CommonsHashSet.class).narrowEmpty ();
-    final JVar aCodeSet = jClass.field (JMod.PRIVATE |
-                                        JMod.FINAL |
-                                        JMod.STATIC,
+    final JVar aCodeSet = jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                         aSetDecl,
                                         "s_aCodeSet",
                                         JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)));
-    final JVar aNameSet = bHasNameColumn ? jClass.field (JMod.PRIVATE |
-                                                         JMod.FINAL |
-                                                         JMod.STATIC,
+    final JVar aNameSet = bHasNameColumn ? jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                                          aSetDecl,
                                                          "s_aNameSet",
                                                          JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)))
@@ -325,13 +319,9 @@ public final class MainCreateEnumsGenericode21
     {
       if ((nRowIndex % 1500) == 0 || aCodeMethod == null || aNameMethod == null)
       {
-        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE |
-                                                             JMod.STATIC |
-                                                             JMod.FINAL,
+        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
                                                              "CodePart" + nClassIndex);
-        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE |
-                                                             JMod.STATIC |
-                                                             JMod.FINAL,
+        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
                                                              "NamePart" + nClassIndex);
         nClassIndex++;
 
@@ -353,12 +343,12 @@ public final class MainCreateEnumsGenericode21
       }
 
       final String sRowCode = Genericode10Helper.getRowValue (aRow, COLID_CODE).trim ();
-      aCodeMethod.body ().invoke (aCodeParam, "add").arg (sRowCode);
+      aCodeMethod.body ().add (JExpr.invoke (aCodeParam, "add").arg (sRowCode));
 
       if (bHasNameColumn && aNameMethod != null)
       {
         final String sRowName = Genericode10Helper.getRowValue (aRow, COLID_NAME).trim ();
-        aNameMethod.body ().invoke (aNameParam, "add").arg (sRowName);
+        aNameMethod.body ().add (JExpr.invoke (aNameParam, "add").arg (sRowName));
       }
 
       ++nRowIndex;

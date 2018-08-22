@@ -343,12 +343,12 @@ public final class MainCreateEnumsGenericode22
       }
 
       final String sRowCode = Genericode10Helper.getRowValue (aRow, COLID_CODE).trim ();
-      aCodeMethod.body ().invoke (aCodeParam, "add").arg (sRowCode);
+      aCodeMethod.body ().add (JExpr.invoke (aCodeParam, "add").arg (sRowCode));
 
       if (bHasNameColumn && aNameMethod != null)
       {
         final String sRowName = Genericode10Helper.getRowValue (aRow, COLID_NAME).trim ();
-        aNameMethod.body ().invoke (aNameParam, "add").arg (sRowName);
+        aNameMethod.body ().add (JExpr.invoke (aNameParam, "add").arg (sRowName));
       }
 
       ++nRowIndex;
