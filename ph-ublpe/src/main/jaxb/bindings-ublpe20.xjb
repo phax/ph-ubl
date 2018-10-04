@@ -23,8 +23,8 @@
           xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError" />
-  <bindings schemaLocation="../resources/schemas/ublpe/maindoc/UBLPE-SummaryDocuments-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/ublpe20/maindoc/UBLPE-SummaryDocuments-1.0.xsd" node="/xsd:schema">
   </bindings>
-  <bindings schemaLocation="../resources/schemas/ublpe/maindoc/UBLPE-VoidedDocuments-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/ublpe20/maindoc/UBLPE-VoidedDocuments-1.0.xsd" node="/xsd:schema">
   </bindings>
 </bindings>

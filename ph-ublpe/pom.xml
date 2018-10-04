@@ -113,12 +113,12 @@
             <goals>
               <goal>generate</goal>
             </goals>
-            <id>ubltr</id>
+            <id>ublpe20</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ublpe</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ublpe/maindoc</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/ublpe20/maindoc</schemaDirectory>
               <bindingIncludes>
-                <bindingInclude>bindings-ublpe.xjb</bindingInclude>
+                <bindingInclude>bindings-ublpe20.xjb</bindingInclude>
               </bindingIncludes>
               <catalog>src/main/jaxb/catalog-ublpe.cat</catalog>
             </configuration>

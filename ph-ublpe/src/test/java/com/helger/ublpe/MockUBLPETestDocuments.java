@@ -27,7 +27,7 @@ import com.helger.ubl.testfiles.UBLTestFiles;
 @Immutable
 public final class MockUBLPETestDocuments
 {
-  private static final String PREFIX = "test-ubl-pe/";
+  private static final String PREFIX = "test-ublpe20/";
 
   private MockUBLPETestDocuments ()
   {}
