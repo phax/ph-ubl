@@ -100,7 +100,7 @@
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
             <exclude>src/main/resources/schemas/**</exclude>
-            <exclude>src/test/resources/test-ubl-pe/**</exclude>
+            <exclude>src/test/resources/test-ublpe20/**</exclude>
           </excludes>
         </configuration>
       </plugin>
