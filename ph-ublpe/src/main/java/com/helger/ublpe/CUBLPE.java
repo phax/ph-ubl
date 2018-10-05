@@ -29,7 +29,7 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 public final class CUBLPE
 {
   /** The classpath relative directory where the main XSDs reside */
-  public static final String SCHEMA_DIRECTORY = "schemas/ublpe/";
+  public static final String SCHEMA_DIRECTORY = "schemas/ublpe20/";
 
   /** The sac namespace URL */
   public static final String XML_SCHEMA_SAC_NAMESPACE_URL = "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1";
