@@ -53,6 +53,7 @@ import com.helger.jcodemodel.JMethod;
 import com.helger.jcodemodel.JMod;
 import com.helger.jcodemodel.JOp;
 import com.helger.jcodemodel.JVar;
+import com.helger.jcodemodel.writer.JCMWriter;
 
 import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
@@ -182,8 +183,7 @@ public final class MainCreateEnumsGenericode20
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE |
-                                                                 JMod.FINAL,
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
                                                                  String.class,
                                                                  "m_sDisplayName")
                                                   : null;
@@ -239,10 +239,11 @@ public final class MainCreateEnumsGenericode20
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()._return (s_aCodeModel.ref (EnumHelper.class)
-                                   .staticInvoke ("getFromIDOrNull")
-                                   .arg (JExpr.dotclass (jEnum))
-                                   .arg (jID));
+    m.body ()
+     ._return (s_aCodeModel.ref (EnumHelper.class)
+                           .staticInvoke ("getFromIDOrNull")
+                           .arg (JExpr.dotclass (jEnum))
+                           .arg (jID));
 
     if (bHasNameColumn)
     {
@@ -251,10 +252,8 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ().decl (JMod.FINAL,
-                                          jEnum,
-                                          "eValue",
-                                          jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ()
+                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
 
@@ -264,9 +263,10 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
-      m.body ()._return (JOp.cond (jID.eq (JExpr._null ()),
-                                   JExpr._null (),
-                                   jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
+      m.body ()
+       ._return (JOp.cond (jID.eq (JExpr._null ()),
+                           JExpr._null (),
+                           jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
 
       m = jEnum.method (JMod.PUBLIC | JMod.STATIC, String.class, "getDisplayNameFromJAXBOrNull");
       m.annotate (Nullable.class);
@@ -290,6 +290,6 @@ public final class MainCreateEnumsGenericode20
       else
         throw new IllegalStateException ("Failed to read codelist file " + aFile);
     }
-    s_aCodeModel.build (new File ("src/main/java"));
+    new JCMWriter (s_aCodeModel).build (new File ("src/main/java"));
   }
 }
