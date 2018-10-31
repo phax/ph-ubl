@@ -154,7 +154,7 @@
             <arg>-Xph-tostring</arg>
             <arg>-Xph-list-extension</arg>
             <arg>-Xph-csu</arg>
-            <arg>-Xph-cloneable</arg>
+            <arg>-Xph-cloneable2</arg>
             <arg>-Xph-ubl-value</arg>
           </args>
         </configuration>
@@ -162,7 +162,7 @@
           <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-jaxb22-plugin</artifactId>
-            <version>2.2.11.11</version>
+            <version>2.2.11.12</version>
           </dependency>
           <dependency>
             <groupId>com.helger</groupId>
