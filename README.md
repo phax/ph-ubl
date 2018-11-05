@@ -23,27 +23,29 @@ The following projects are contained:
   
 # News and noteworthy
 
+* v6.0.3 - work in progress
+    * Requires at least ph-commons 9.1.8
 * v6.0.2 - 2018-07-17
-  * Added ph-ublpe suppport
-  * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
+    * Added ph-ublpe suppport
+    * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
 * v6.0.1 - 2018-04-03
-  * Updated to UBL 2.2 CS 01
+    * Updated to UBL 2.2 CS 01
 * v6.0.0 - 2018-01-09
-  * Binds to ph-commons 9.0.0
-  * Added initial UBL 2.2 CSPRD02 support
-  * Fixes issues #11
+    * Binds to ph-commons 9.0.0
+    * Added initial UBL 2.2 CSPRD02 support
+    * Fixes issues #11
 * v5.1.0 - 2016-09-09
-  * Binds to ph-commons 8.5.x
+    * Binds to ph-commons 8.5.x
 * v5.0.3 - 2016-07-26
 * v5.0.1 - 2016-07-22 
 * v5.0.0 - 2016-06-11
-  * Binds to ph-commons 8.x 
+    * Binds to ph-commons 8.x 
 * v4.5.0 - 2015-11-30
-  * New API that this more flexible and contains less overloads - see the examples
-  * Added the possibility to easily customize the namespace prefix mapping and other things
+    * New API that this more flexible and contains less overloads - see the examples
+    * Added the possibility to easily customize the namespace prefix mapping and other things
 * v4.0.0 - 2015-07-28
-  * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
-  * Improved OSGI support
+    * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
+    * Improved OSGI support
 
 # Examples
 
