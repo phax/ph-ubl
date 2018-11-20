@@ -24,7 +24,6 @@ import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
-import com.helger.ublpe.EUBLPEDocumentType;
 
 /**
  * Test class for class {@link EUBLPEDocumentType}.
@@ -41,7 +40,7 @@ public final class EUBLPEDocumentTypeTest
       assertNotNull (e.getImplementationClass ());
       assertTrue (StringHelper.hasText (e.getLocalName ()));
       assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
-      assertTrue (e.getAllXSDPaths ().size () >= 1);
+      assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());

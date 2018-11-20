@@ -44,14 +44,14 @@ public final class EUBL22DocumentTypeTest
       assertNotNull (e.getImplementationClass ());
       assertTrue (StringHelper.hasText (e.getLocalName ()));
       assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
-      assertTrue (e.getAllXSDPaths ().size () >= 1);
+      assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());
       assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL22DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
-      assertTrue (aFilenames.add (e.getAllXSDPaths ().getFirst ()));
+      assertTrue (aFilenames.add (e.getAllXSDResources ().getFirst ().getPath ()));
     }
   }
 }

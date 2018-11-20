@@ -17,7 +17,6 @@
 package com.helger.ubl22;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
@@ -25,6 +24,7 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.annotation.Since;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -203,12 +203,20 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   WEIGHT_STATEMENT(oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStatementType.class,
                    "UBL-WeightStatement-2.2.xsd");
 
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return EUBL22DocumentType.class.getClassLoader ();
+  }
+
   private final JAXBDocumentType m_aDocType;
 
   private EUBL22DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
     m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (CUBL22.SCHEMA_DIRECTORY + sXSDPath),
+                                       new CommonsArrayList <> (new ClassPathResource (CUBL22.SCHEMA_DIRECTORY +
+                                                                                       sXSDPath,
+                                                                                       _getCL ())),
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
@@ -221,9 +229,9 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <String> getAllXSDPaths ()
+  public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getAllXSDResources ();
   }
 
   @Nonnull
@@ -240,8 +248,8 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
+  public Schema getSchema ()
   {
-    return m_aDocType.getSchema (aClassLoader);
+    return m_aDocType.getSchema ();
   }
 }

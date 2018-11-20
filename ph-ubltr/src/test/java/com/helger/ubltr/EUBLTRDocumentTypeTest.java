@@ -40,7 +40,7 @@ public final class EUBLTRDocumentTypeTest
       assertNotNull (e.getImplementationClass ());
       assertTrue (StringHelper.hasText (e.getLocalName ()));
       assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
-      assertTrue (e.getAllXSDPaths ().size () >= 1);
+      assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
       assertNotNull (e.getSchema ());

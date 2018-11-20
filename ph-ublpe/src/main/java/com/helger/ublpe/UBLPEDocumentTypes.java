@@ -133,27 +133,8 @@ public final class UBLPEDocumentTypes
   @Nullable
   public static Schema getSchemaOfLocalName (@Nullable final String sLocalName)
   {
-    return getSchemaOfLocalName (sLocalName, (ClassLoader) null);
-  }
-
-  /**
-   * Get the XSD Schema object for the UBLPE document type of the passed
-   * document element local name.
-   *
-   * @param sLocalName
-   *        The document element local name of any UBLPE document type. May be
-   *        <code>null</code>.
-   * @param aClassLoader
-   *        The class loader to be used. May be <code>null</code> indicating
-   *        that the default class loader should be used.
-   * @return <code>null</code> if no such UBLPE document type exists.
-   */
-  @Nullable
-  public static Schema getSchemaOfLocalName (@Nullable final String sLocalName,
-                                             @Nullable final ClassLoader aClassLoader)
-  {
     final EUBLPEDocumentType eDocType = getDocumentTypeOfLocalName (sLocalName);
-    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
+    return eDocType == null ? null : eDocType.getSchema ();
   }
 
   /**
@@ -168,26 +149,7 @@ public final class UBLPEDocumentTypes
   @Nullable
   public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass)
   {
-    return getSchemaOfImplementationClass (aImplClass, (ClassLoader) null);
-  }
-
-  /**
-   * Get the XSD Schema object for the UBLPE document type of the passed
-   * implementation class.
-   *
-   * @param aImplClass
-   *        The implementation class of any UBLPE document type. May be
-   *        <code>null</code>.
-   * @param aClassLoader
-   *        The class loader to be used. May be <code>null</code> indicating
-   *        that the default class loader should be used.
-   * @return <code>null</code> if no such UBLPE document type exists.
-   */
-  @Nullable
-  public static Schema getSchemaOfImplementationClass (@Nullable final Class <?> aImplClass,
-                                                       @Nullable final ClassLoader aClassLoader)
-  {
     final EUBLPEDocumentType eDocType = getDocumentTypeOfImplementationClass (aImplClass);
-    return eDocType == null ? null : eDocType.getSchema (aClassLoader);
+    return eDocType == null ? null : eDocType.getSchema ();
   }
 }

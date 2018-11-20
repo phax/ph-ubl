@@ -19,13 +19,13 @@ package com.helger.ublpe;
 import java.util.List;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -70,16 +70,26 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                              CUBLPE.SCHEMA_DIRECTORY + "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                              CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd"));
 
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return EUBLPEDocumentType.class.getClassLoader ();
+  }
+
   private final JAXBDocumentType m_aDocType;
 
   private EUBLPEDocumentType (@Nonnull final EUBL20DocumentType eOther)
   {
-    this (eOther.getImplementationClass (), eOther.getAllXSDPaths ());
+    m_aDocType = new JAXBDocumentType (eOther.getImplementationClass (),
+                                       eOther.getAllXSDResources (),
+                                       s -> StringHelper.trimEnd (s, "Type"));
   }
 
   private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
+    m_aDocType = new JAXBDocumentType (aClass,
+                                       new CommonsArrayList <> (aXSDPaths, x -> new ClassPathResource (x, _getCL ())),
+                                       s -> StringHelper.trimEnd (s, "Type"));
   }
 
   @Nonnull
@@ -91,9 +101,9 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <String> getAllXSDPaths ()
+  public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getAllXSDResources ();
   }
 
   @Nonnull
@@ -110,8 +120,8 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
+  public Schema getSchema ()
   {
-    return m_aDocType.getSchema (aClassLoader);
+    return m_aDocType.getSchema ();
   }
 }

@@ -17,13 +17,13 @@
 package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -91,10 +91,18 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
 
   private final JAXBDocumentType m_aDocType;
 
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return EUBL20DocumentType.class.getClassLoader ();
+  }
+
   private EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
     m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (CUBL20.SCHEMA_DIRECTORY + sXSDPath),
+                                       new CommonsArrayList <> (new ClassPathResource (CUBL20.SCHEMA_DIRECTORY +
+                                                                                       sXSDPath,
+                                                                                       _getCL ())),
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
@@ -107,9 +115,9 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <String> getAllXSDPaths ()
+  public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getAllXSDResources ();
   }
 
   @Nonnull
@@ -126,8 +134,8 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
+  public Schema getSchema ()
   {
-    return m_aDocType.getSchema (aClassLoader);
+    return m_aDocType.getSchema ();
   }
 }

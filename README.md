@@ -24,7 +24,7 @@ The following projects are contained:
 # News and noteworthy
 
 * v6.0.3 - work in progress
-    * Requires at least ph-commons 9.1.8
+    * Requires at least ph-commons 9.2.0
 * v6.0.2 - 2018-07-17
     * Added ph-ublpe suppport
     * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
