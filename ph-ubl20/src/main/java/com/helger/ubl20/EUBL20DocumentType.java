@@ -89,13 +89,13 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
                          "UBL-TransportationStatus-2.0.xsd"),
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, "UBL-Waybill-2.0.xsd");
 
-  private final JAXBDocumentType m_aDocType;
-
   @Nonnull
   private static ClassLoader _getCL ()
   {
     return EUBL20DocumentType.class.getClassLoader ();
   }
+
+  private final JAXBDocumentType m_aDocType;
 
   private EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
