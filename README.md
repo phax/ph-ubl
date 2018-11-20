@@ -23,7 +23,7 @@ The following projects are contained:
   
 # News and noteworthy
 
-* v6.0.3 - work in progress
+* v6.1.0 - work in progress
     * Requires at least ph-commons 9.2.0
 * v6.0.2 - 2018-07-17
     * Added ph-ublpe suppport
