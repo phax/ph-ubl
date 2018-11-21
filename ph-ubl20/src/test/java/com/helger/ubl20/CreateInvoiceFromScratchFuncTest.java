@@ -22,7 +22,6 @@ import java.io.File;
 import java.math.BigDecimal;
 
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 import com.helger.commons.state.ESuccess;
 import com.helger.datetime.util.PDTXMLConverter;
@@ -80,7 +79,7 @@ public final class CreateInvoiceFromScratchFuncTest
   }
 
   @Test
-  public void testCreateInvoiceFromScratchWithCustomNamespace () throws SAXException
+  public void testCreateInvoiceFromScratchWithCustomNamespace ()
   {
     final CurrencyCodeContentType eCurrency = CurrencyCodeContentType.EUR;
 

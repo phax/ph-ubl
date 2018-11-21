@@ -23,7 +23,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
@@ -42,7 +41,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
 public final class UBLPEFuncTest
 {
   @Test
-  public void testReadAndWriteCancelUserAccount () throws SAXException
+  public void testReadAndWriteCancelUserAccount ()
   {
     for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS))
     {
@@ -82,7 +81,7 @@ public final class UBLPEFuncTest
   }
 
   @Test
-  public void testReadAndWriteVoidedDocuments () throws SAXException
+  public void testReadAndWriteVoidedDocuments ()
   {
     for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.VOIDED_DOCUMENTS))
     {

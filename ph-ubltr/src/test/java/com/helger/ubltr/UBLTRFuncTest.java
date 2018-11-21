@@ -23,7 +23,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
@@ -42,7 +41,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
 public final class UBLTRFuncTest
 {
   @Test
-  public void testReadAndWriteCancelUserAccount () throws SAXException
+  public void testReadAndWriteCancelUserAccount ()
   {
     for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT))
     {
@@ -82,7 +81,7 @@ public final class UBLTRFuncTest
   }
 
   @Test
-  public void testReadAndWriteProcessUserAccount () throws SAXException
+  public void testReadAndWriteProcessUserAccount ()
   {
     for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.PROCESS_USER_ACCOUNT))
     {

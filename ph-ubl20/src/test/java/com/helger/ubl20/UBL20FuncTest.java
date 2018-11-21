@@ -24,7 +24,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
@@ -54,7 +53,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 public final class UBL20FuncTest
 {
   @Test
-  public void testReadAndWriteCatalogue () throws SAXException
+  public void testReadAndWriteCatalogue ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.CATALOGUE))
     {
@@ -95,7 +94,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteCreditNote () throws SAXException
+  public void testReadAndWriteCreditNote ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.CREDIT_NOTE))
     {
@@ -136,7 +135,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteDespatchAdvice () throws SAXException
+  public void testReadAndWriteDespatchAdvice ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.DESPATCH_ADVICE))
     {
@@ -177,7 +176,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteForwardingInstructions () throws SAXException
+  public void testReadAndWriteForwardingInstructions ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.FORWARDING_INSTRUCTIONS))
     {
@@ -218,7 +217,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteInvoice () throws SAXException
+  public void testReadAndWriteInvoice ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE))
     {
@@ -259,7 +258,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteOrder () throws SAXException
+  public void testReadAndWriteOrder ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.ORDER))
     {
@@ -301,7 +300,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteOrderResponseSimple () throws SAXException
+  public void testReadAndWriteOrderResponseSimple ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.ORDER_RESPONSE_SIMPLE))
     {
@@ -342,7 +341,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteQuotation () throws SAXException
+  public void testReadAndWriteQuotation ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.QUOTATION))
     {
@@ -383,7 +382,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteReceiptAdvice () throws SAXException
+  public void testReadAndWriteReceiptAdvice ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.RECEIPT_ADVICE))
     {
@@ -424,7 +423,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteRemittanceAdvice () throws SAXException
+  public void testReadAndWriteRemittanceAdvice ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.REMITTANCE_ADVICE))
     {
@@ -465,7 +464,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteRequestForQuotation () throws SAXException
+  public void testReadAndWriteRequestForQuotation ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.REQUEST_FOR_QUOTATION))
     {
@@ -506,7 +505,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteStatement () throws SAXException
+  public void testReadAndWriteStatement ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.STATEMENT))
     {
@@ -547,7 +546,7 @@ public final class UBL20FuncTest
   }
 
   @Test
-  public void testReadAndWriteWaybill () throws SAXException
+  public void testReadAndWriteWaybill ()
   {
     for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.WAYBILL))
     {
