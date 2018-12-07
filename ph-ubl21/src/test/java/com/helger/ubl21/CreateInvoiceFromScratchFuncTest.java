@@ -35,6 +35,11 @@ import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.Inv
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.ItemType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.MonetaryTotalType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.SupplierPartyType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxCategoryType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxSchemeType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxSubtotalType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxTotalType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.IDType;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_21.ExtensionContentType;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_21.UBLExtensionType;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_21.UBLExtensionsType;
@@ -78,6 +83,52 @@ public final class CreateInvoiceFromScratchFuncTest
     aLine.setLineExtensionAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
 
     aInvoice.addInvoiceLine (aLine);
+
+    // Add some TaxTotal
+    /**
+     * <pre>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="EUR">10.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="EUR">10.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeID="UNCL5305" schemeAgencyID="6">Z</cbc:ID>
+        <cbc:Percent>10.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID schemeAgencyID="6" schemeID="UN/ECE 5153">VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+     * </pre>
+     */
+    {
+      final TaxSubtotalType aTaxSubtotal = new TaxSubtotalType ();
+      aTaxSubtotal.setTaxableAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+      aTaxSubtotal.setTaxAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+
+      final TaxCategoryType aTaxCategory = new TaxCategoryType ();
+      final IDType aTCID = new IDType ();
+      aTCID.setSchemeID ("UNCL5305");
+      aTCID.setSchemeAgencyID ("6");
+      aTCID.setValue ("Z");
+      aTaxCategory.setID (aTCID);
+
+      aTaxCategory.setPercent (BigDecimal.TEN);
+
+      final TaxSchemeType aTaxScheme = new TaxSchemeType ();
+      final IDType aTSID = new IDType ();
+      aTSID.setSchemeID ("UNCL5305");
+      aTSID.setSchemeAgencyID ("6");
+      aTSID.setValue ("VAT");
+      aTaxScheme.setID (aTSID);
+      aTaxCategory.setTaxScheme (aTaxScheme);
+
+      aTaxSubtotal.setTaxCategory (aTaxCategory);
+
+      final TaxTotalType aTaxTotal = new TaxTotalType ();
+      aTaxTotal.setTaxAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+      aTaxTotal.addTaxSubtotal (aTaxSubtotal);
+      aInvoice.addTaxTotal (aTaxTotal);
+    }
 
     // Write to disk
     final ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
