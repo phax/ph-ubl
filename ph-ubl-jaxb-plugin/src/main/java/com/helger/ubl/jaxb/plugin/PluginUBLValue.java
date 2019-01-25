@@ -283,7 +283,10 @@ public class PluginUBLValue extends Plugin
         _addValueSetterInUsingClasses (aOutline, aValueType, aAllRelevantClasses);
       }
       else
-        LOGGER.info (jClass.getClass ().getSimpleName () + " " + jClass.fullName () + " is not a value-based class");
+      {
+        if (LOGGER.isDebugEnabled ())
+          LOGGER.debug (jClass.getClass ().getSimpleName () + " " + jClass.fullName () + " is not a value-based class");
+      }
     }
 
     return aAllCtorClasses;
@@ -323,29 +326,29 @@ public class PluginUBLValue extends Plugin
           final JType aValueType = aAllCtorClasses.get (aReturnType);
           if (aValueType != null)
           {
+            final boolean bIsBoolean = aValueType == aCodeModel.BOOLEAN;
+            final String sMethodName;
+            if (bIsBoolean)
+              sMethodName = "is" + aMethod.name ().substring (3) + "Value";
+            else
+              sMethodName = aMethod.name () + "Value";
+            if (_containsMethodWithoutParams (jClass.methods (), sMethodName))
+            {
+              // This can happen if an XSD contains the element "X" and
+              // "XValue" in the same type.
+              // Noticed in CII D16B for BasicWorkItemType with "Index" and
+              // "IndexValue" elements
+              LOGGER.error ("Another method with name '" +
+                            sMethodName +
+                            "' and no parameters is already present in class '" +
+                            jClass.name () +
+                            "' - not creating it.");
+              continue;
+            }
+
             // The return type is a generated class
             if (aValueType.isPrimitive ())
             {
-              final boolean bIsBoolean = aValueType == aCodeModel.BOOLEAN;
-              final String sMethodName;
-              if (bIsBoolean)
-                sMethodName = "is" + aMethod.name ().substring (3) + "Value";
-              else
-                sMethodName = aMethod.name () + "Value";
-              if (_containsMethodWithoutParams (jClass.methods (), sMethodName))
-              {
-                // This can happen if an XSD contains the element "X" and
-                // "XValue" in the same type.
-                // Noticed in CII D16B for BasicWorkItemType with "Index" and
-                // "IndexValue" elements
-                LOGGER.error ("Another method with name '" +
-                              sMethodName +
-                              "' an no parameters is already present in class '" +
-                              jClass.name () +
-                              "' - not creating it.");
-                continue;
-              }
-
               final JMethod aGetter;
               final JVar aParam;
               if (bIsBoolean)
@@ -382,7 +385,7 @@ public class PluginUBLValue extends Plugin
             else
             {
               // Create the Object get...Value() method
-              final JMethod aGetter = jClass.method (JMod.PUBLIC, aValueType, aMethod.name () + "Value");
+              final JMethod aGetter = jClass.method (JMod.PUBLIC, aValueType, sMethodName);
               aGetter.annotate (Nullable.class);
               final JVar aObj = aGetter.body ().decl (aReturnType, "aObj", JExpr.invoke (aMethod));
               aGetter.body ()._return (JOp.cond (aObj.eq (JExpr._null ()), JExpr._null (), aObj.invoke ("getValue")));
