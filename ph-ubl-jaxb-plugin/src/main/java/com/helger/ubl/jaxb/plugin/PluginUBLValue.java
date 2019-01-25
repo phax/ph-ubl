@@ -18,6 +18,7 @@ package com.helger.ubl.jaxb.plugin;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -32,7 +33,7 @@ import org.xml.sax.ErrorHandler;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.IsSPIImplementation;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.CommonsHashMap;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsMap;
@@ -87,10 +88,10 @@ public class PluginUBLValue extends Plugin
   @CodingStyleguideUnaware
   public List <String> getCustomizationURIs ()
   {
-    return CollectionHelper.makeUnmodifiable (CUBLJAXB.NSURI_PH_UBL);
+    return new CommonsArrayList <> (CUBLJAXB.NSURI_PH_UBL).getAsUnmodifiable ();
   }
 
-  private void _addDefaultCtors (@Nonnull final Outline aOutline)
+  private static void _addDefaultCtors (@Nonnull final Outline aOutline)
   {
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
@@ -107,10 +108,10 @@ public class PluginUBLValue extends Plugin
     }
   }
 
-  private void _recursiveAddValueConstructorToDerivedClasses (@Nonnull final Outline aOutline,
-                                                              @Nonnull final JDefinedClass jParentClass,
-                                                              @Nonnull final JType aValueType,
-                                                              @Nonnull final Set <JClass> aAllRelevantClasses)
+  private static void _recursiveAddValueConstructorToDerivedClasses (@Nonnull final Outline aOutline,
+                                                                     @Nonnull final JDefinedClass jParentClass,
+                                                                     @Nonnull final JType aValueType,
+                                                                     @Nonnull final Set <JClass> aAllRelevantClasses)
   {
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
@@ -136,14 +137,14 @@ public class PluginUBLValue extends Plugin
     }
   }
 
-  private void _addValueSetterInUsingClasses (@Nonnull final Outline aOutline,
-                                              @Nonnull final JType aValueType,
-                                              @Nonnull final Set <JClass> aAllRelevantClasses)
+  private static void _addValueSetterInUsingClasses (@Nonnull final Outline aOutline,
+                                                     @Nonnull final JType aValueType,
+                                                     @Nonnull final Set <JClass> aAllRelevantClasses)
   {
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
       final JDefinedClass jClass = aClassOutline.implClass;
-      for (final JMethod aMethod : CollectionHelper.newList (jClass.methods ()))
+      for (final JMethod aMethod : new CommonsArrayList <> (jClass.methods ()))
         // Must be a setter
         if (aMethod.name ().startsWith ("set"))
         {
@@ -157,9 +158,8 @@ public class PluginUBLValue extends Plugin
             final JVar aParam = aSetter.param (JMod.FINAL, aValueType, "valueParam");
             if (!aValueType.isPrimitive ())
               aParam.annotate (Nullable.class);
-            final JVar aObj = aSetter.body ().decl (aImplType,
-                                                    "aObj",
-                                                    JExpr.invoke ("get" + aMethod.name ().substring (3)));
+            final JVar aObj = aSetter.body ()
+                                     .decl (aImplType, "aObj", JExpr.invoke ("get" + aMethod.name ().substring (3)));
             final JConditional aIf = aSetter.body ()._if (aObj.eq (JExpr._null ()));
             aIf._then ().assign (aObj, JExpr._new (aImplType).arg (aParam));
             aIf._then ().invoke (aMethod).arg (aObj);
@@ -169,9 +169,11 @@ public class PluginUBLValue extends Plugin
             aSetter.javadoc ()
                    .addParam (aParam)
                    .add ("The value to be set." + (aValueType.isPrimitive () ? "" : " May be <code>null</code>."));
-            aSetter.javadoc ().addReturn ().add ("The created intermediary object of type " +
-                                                 aImplType.name () +
-                                                 " and never <code>null</code>");
+            aSetter.javadoc ()
+                   .addReturn ()
+                   .add ("The created intermediary object of type " +
+                         aImplType.name () +
+                         " and never <code>null</code>");
             aSetter.javadoc ().add (AUTHOR);
           }
         }
@@ -183,7 +185,7 @@ public class PluginUBLValue extends Plugin
   private ICommonsMap <JClass, JType> _addValueCtors (@Nonnull final Outline aOutline)
   {
     final JCodeModel cm = aOutline.getCodeModel ();
-    final ICommonsMap <String, JType> aAllSuperClassNames = new CommonsHashMap<> ();
+    final ICommonsMap <String, JType> aAllSuperClassNames = new CommonsHashMap <> ();
     {
       // Add some classes that are known to be such super types
       // Reside in ph-xsds-ccts-cct-schemamodule
@@ -230,7 +232,7 @@ public class PluginUBLValue extends Plugin
     if (LOGGER.isDebugEnabled ())
       LOGGER.debug ("Found the following super-classes " + aAllSuperClassNames);
 
-    final ICommonsMap <JClass, JType> aAllCtorClasses = new CommonsHashMap<> ();
+    final ICommonsMap <JClass, JType> aAllCtorClasses = new CommonsHashMap <> ();
 
     // Check all defined classes
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
@@ -269,7 +271,7 @@ public class PluginUBLValue extends Plugin
         aValueCtor.javadoc ().add (AUTHOR);
 
         // Set constructor in all derived classes
-        final ICommonsSet <JClass> aAllRelevantClasses = new CommonsHashSet<> ();
+        final ICommonsSet <JClass> aAllRelevantClasses = new CommonsHashSet <> ();
         aAllRelevantClasses.add (jClass);
         _recursiveAddValueConstructorToDerivedClasses (aOutline, jClass, aValueType, aAllRelevantClasses);
 
@@ -287,6 +289,15 @@ public class PluginUBLValue extends Plugin
     return aAllCtorClasses;
   }
 
+  private static boolean _containsMethodWithoutParams (@Nonnull final Collection <JMethod> aMethods,
+                                                       @Nonnull final String sMethodName)
+  {
+    for (final JMethod aMethod : aMethods)
+      if (aMethod.name ().equals (sMethodName) && aMethod.params ().isEmpty ())
+        return true;
+    return false;
+  }
+
   /**
    * Create all getter
    *
@@ -295,27 +306,52 @@ public class PluginUBLValue extends Plugin
    * @param aAllCtorClasses
    *        Map from class with value (direct and derived) to value type
    */
-  private void _addValueGetter (@Nonnull final Outline aOutline, @Nonnull final Map <JClass, JType> aAllCtorClasses)
+  private static void _addValueGetter (@Nonnull final Outline aOutline,
+                                       @Nonnull final Map <JClass, JType> aAllCtorClasses)
   {
     final JCodeModel aCodeModel = aOutline.getCodeModel ();
+    // For all generated classes
     for (final ClassOutline aClassOutline : aOutline.getClasses ())
     {
+      // Get the implementation class
       final JDefinedClass jClass = aClassOutline.implClass;
-      for (final JMethod aMethod : CollectionHelper.newList (jClass.methods ()))
+      // For all methods in the class (copy!)
+      for (final JMethod aMethod : new CommonsArrayList <> (jClass.methods ()))
         if (aMethod.name ().startsWith ("get") && aMethod.params ().isEmpty ())
         {
           final JType aReturnType = aMethod.type ();
           final JType aValueType = aAllCtorClasses.get (aReturnType);
           if (aValueType != null)
           {
+            // The return type is a generated class
             if (aValueType.isPrimitive ())
             {
-              JMethod aGetter;
-              JVar aParam;
-              if (aValueType == aCodeModel.BOOLEAN)
+              final boolean bIsBoolean = aValueType == aCodeModel.BOOLEAN;
+              final String sMethodName;
+              if (bIsBoolean)
+                sMethodName = "is" + aMethod.name ().substring (3) + "Value";
+              else
+                sMethodName = aMethod.name () + "Value";
+              if (_containsMethodWithoutParams (jClass.methods (), sMethodName))
+              {
+                // This can happen if an XSD contains the element "X" and
+                // "XValue" in the same type.
+                // Noticed in CII D16B for BasicWorkItemType with "Index" and
+                // "IndexValue" elements
+                LOGGER.error ("Another method with name '" +
+                              sMethodName +
+                              "' an no parameters is already present in class '" +
+                              jClass.name () +
+                              "' - not creating it.");
+                continue;
+              }
+
+              final JMethod aGetter;
+              final JVar aParam;
+              if (bIsBoolean)
               {
                 // Create the boolean is...Value() method
-                aGetter = jClass.method (JMod.PUBLIC, aValueType, "is" + aMethod.name ().substring (3) + "Value");
+                aGetter = jClass.method (JMod.PUBLIC, aValueType, sMethodName);
                 aParam = aGetter.param (JMod.FINAL, aValueType, "nullValue");
                 final JVar aObj = aGetter.body ().decl (aReturnType, "aObj", JExpr.invoke (aMethod));
                 aGetter.body ()._return (JOp.cond (aObj.eq (JExpr._null ()), aParam, aObj.invoke ("isValue")));
@@ -324,7 +360,7 @@ public class PluginUBLValue extends Plugin
               {
                 // Create the byte/char/double/float/int/long/short
                 // get...Value() method
-                aGetter = jClass.method (JMod.PUBLIC, aValueType, aMethod.name () + "Value");
+                aGetter = jClass.method (JMod.PUBLIC, aValueType, sMethodName);
                 aParam = aGetter.param (JMod.FINAL, aValueType, "nullValue");
                 final JVar aObj = aGetter.body ().decl (aReturnType, "aObj", JExpr.invoke (aMethod));
                 aGetter.body ()._return (JOp.cond (aObj.eq (JExpr._null ()), aParam, aObj.invoke ("getValue")));
@@ -335,10 +371,12 @@ public class PluginUBLValue extends Plugin
               aGetter.javadoc ()
                      .addParam (aParam)
                      .add ("The value to be returned, if the owning object is <code>null</code>");
-              aGetter.javadoc ().addReturn ().add ("Either the value of the contained " +
-                                                   aReturnType.name () +
-                                                   " object or the passed " +
-                                                   aParam.name ());
+              aGetter.javadoc ()
+                     .addReturn ()
+                     .add ("Either the value of the contained " +
+                           aReturnType.name () +
+                           " object or the passed " +
+                           aParam.name ());
               aGetter.javadoc ().add (AUTHOR);
             }
             else
