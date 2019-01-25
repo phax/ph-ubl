@@ -23,6 +23,8 @@ The following projects are contained:
   
 # News and noteworthy
 
+* v6.1.1 - work in progress
+    * The `ph-ubl-jaxb-plugin` was improved to not create invalid code (happens in CII)
 * v6.1.0 - 2018-11-22
     * Requires at least ph-commons 9.2.0
 * v6.0.2 - 2018-07-17
