@@ -95,11 +95,6 @@
       
       <dependency>
         <groupId>com.helger</groupId>
-        <artifactId>ph-ubl-jaxb-plugin</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.helger</groupId>
         <artifactId>ph-ubl-testfiles</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -160,7 +155,6 @@
   </dependencies>
   
   <modules>
-    <module>ph-ubl-jaxb-plugin</module>
     <module>ph-ubl-testfiles</module>
     <module>ph-ubl-api</module>
     <module>ph-ubl20</module>
