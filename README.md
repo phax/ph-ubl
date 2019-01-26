@@ -7,27 +7,27 @@ This is the readme file for version 5.x or later.
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1 and 2.2 documents.
 The following projects are contained:
 
-  * **ph-ubl-testfiles** contains all UBL 2.0 and 2.1 test files (used only in Maven test scope)
-  * **ph-ubl-api** base library containing common stuff for UBL 2.0 and 2.1.
-  * **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
-  * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
-  * **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
-  * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
-  * **ph-ubl22** contains the generated JAXB files for UBL 2.2 as well as the helper classes.
-  * **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
-  * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
-  * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
+* **ph-ubl-testfiles** contains all UBL test files (used only in Maven test scope)
+* **ph-ubl-api** base library containing common stuff for UBL 2.0 and 2.1.
+* **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
+* **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
+* **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
+* **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
+* **ph-ubl22** contains the generated JAXB files for UBL 2.2 as well as the helper classes.
+* **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
+* **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
+* **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 
 Old projects:
 
-  * **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage
-      (used only in Maven generate-sources phase) - this plugin was only available until v6.1.0.
-      It was moved to [ph-jaxb22-plugin]() v2.3.1.3. The option `ph-ubl-value` was
-      renamed to `ph-value-extender` in the new project so that it can be used in other projects.
+* **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage
+    (used only in Maven generate-sources phase) - this plugin was only available until v6.1.0.
+    It was moved to [ph-jaxb22-plugin]() v2.3.1.3. The option `ph-ubl-value` was
+    renamed to `ph-value-extender` in the new project so that it can be used in other projects.
   
 # News and noteworthy
 
-* v6.1.1 - work in progress
+* v6.1.1 - 2019-01-26
     * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
 * v6.1.0 - 2018-11-22
     * Requires at least ph-commons 9.2.0
@@ -68,7 +68,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -81,7 +81,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -91,7 +91,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -102,7 +102,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -112,7 +112,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -123,7 +123,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -133,7 +133,7 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -144,7 +144,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubltr</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
@@ -155,7 +155,7 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ublpe</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
 </dependency>
 ```
 
