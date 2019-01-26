@@ -2,14 +2,11 @@
 
 [![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
 ﻿
-
-This is the readme file for the current version 5.x - for the old version 3.3.x please see [README-v3.3.md](https://github.com/phax/ph-ubl/blob/master/README-v3.3.md).
+This is the readme file for version 5.x or later.
 
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1 and 2.2 documents.
-This is the successor of the phloc-ubl library.
 The following projects are contained:
 
-  * **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage (used only in Maven generate-sources phase) 
   * **ph-ubl-testfiles** contains all UBL 2.0 and 2.1 test files (used only in Maven test scope)
   * **ph-ubl-api** base library containing common stuff for UBL 2.0 and 2.1.
   * **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
@@ -20,11 +17,18 @@ The following projects are contained:
   * **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
   * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
   * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
+
+Old projects:
+
+  * **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage
+      (used only in Maven generate-sources phase) - this plugin was only available until v6.1.0.
+      It was moved to [ph-jaxb22-plugin]() v2.3.1.3. The option `ph-ubl-value` was
+      renamed to `ph-value-extender` in the new project so that it can be used in other projects.
   
 # News and noteworthy
 
 * v6.1.1 - work in progress
-    * The `ph-ubl-jaxb-plugin` was improved to not create invalid code (happens in CII)
+    * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
 * v6.1.0 - 2018-11-22
     * Requires at least ph-commons 9.2.0
 * v6.0.2 - 2018-07-17
@@ -158,7 +162,6 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl-api/
   * http://repo1.maven.org/maven2/com/helger/ph-ubl20/
@@ -169,6 +172,10 @@ Binary versions of the artefacts can be downloaded from Maven Central:
   * http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
   * http://repo1.maven.org/maven2/com/helger/ph-ublpe/
   * http://repo1.maven.org/maven2/com/helger/ph-ubltr/
+
+Old artefacts:
+
+  * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
 
