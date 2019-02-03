@@ -242,7 +242,7 @@ public final class MainCreateEnumsGenericode20
     m.body ()
      ._return (s_aCodeModel.ref (EnumHelper.class)
                            .staticInvoke ("getFromIDOrNull")
-                           .arg (JExpr.dotclass (jEnum))
+                           .arg (JExpr.dotClass (jEnum))
                            .arg (jID));
 
     if (bHasNameColumn)
