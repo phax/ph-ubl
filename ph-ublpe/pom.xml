@@ -120,7 +120,7 @@
               <bindingIncludes>
                 <bindingInclude>bindings-ublpe20.xjb</bindingInclude>
               </bindingIncludes>
-              <catalog>src/main/jaxb/catalog-ublpe.cat</catalog>
+              <catalog>src/main/jaxb/catalog-ublpe20.cat</catalog>
             </configuration>
           </execution>
         </executions>
