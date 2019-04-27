@@ -159,6 +159,11 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 </dependency>
 ```
 
+# Gradle considerations
+
+This project relies on JDK version based Maven profile activation.
+See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
+
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
