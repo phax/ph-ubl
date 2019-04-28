@@ -1,7 +1,5 @@
+dist: xenial
 language: java
-
-# Required to avoid timeout!
-sudo: true
 
 env:
   global:
