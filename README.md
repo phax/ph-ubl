@@ -27,6 +27,8 @@ Old projects:
   
 # News and noteworthy
 
+* v6.1.2 - 2019-05-07
+    * Added Java 12 support
 * v6.1.1 - 2019-01-26
     * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
 * v6.1.0 - 2018-11-22
@@ -68,7 +70,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -81,7 +83,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -91,7 +93,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -102,7 +104,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -112,7 +114,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -123,7 +125,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -133,7 +135,7 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -144,7 +146,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubltr</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
@@ -155,7 +157,7 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ublpe</artifactId>
-  <version>6.1.1</version>
+  <version>6.1.2</version>
 </dependency>
 ```
 
