@@ -157,6 +157,7 @@
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
+            <!--  
             <arg>-Xph-default-locale</arg>
             <arg>en_US</arg>
             <arg>-Xph-annotate</arg>
@@ -170,6 +171,7 @@
             <arg>-Xph-csu</arg>
             <arg>-Xph-cloneable2</arg>
             <arg>-Xph-value-extender</arg>
+            -->
           </args>
           <episodes>
             <episode>
@@ -179,11 +181,13 @@
           </episodes>
         </configuration>
         <dependencies>
+        <!--  
           <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-jaxb22-plugin</artifactId>
             <version>2.3.2.2</version>
           </dependency>
+          -->
         </dependencies>
       </plugin>
       <!-- Delete the directory with only ObjectFactory 
