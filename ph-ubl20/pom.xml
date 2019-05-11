@@ -137,12 +137,14 @@
                 <schemaInclude>common/CCTS_CCT_SchemaModule-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UnqualifiedDataTypeSchemaModule-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-QualifiedDatatypes-2.0.xsd</schemaInclude>
+                <!--  
                 <schemaInclude>common/UBL-CoreComponentParameters-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-CommonBasicComponents-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-CommonAggregateComponents-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-CommonExtensionComponents-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-ExtensionContentDatatype-2.0.xsd</schemaInclude>
                 <schemaInclude>maindoc/UBL-ApplicationResponse-2.0.xsd</schemaInclude>
+                -->
               </schemaIncludes>
               <bindingIncludes>
                 <bindingInclude>bindings20.xjb</bindingInclude>
