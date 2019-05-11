@@ -119,7 +119,7 @@
       <plugin>
         <groupId>org.jvnet.jaxb2.maven2</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.13.3</version>
+        <version>0.14.0</version>
         <executions>
           <execution>
             <goals>
@@ -130,8 +130,19 @@
               <generateDirectory>${project.build.directory}/generated-sources/ubl20</generateDirectory>
               <schemaDirectory>${basedir}/src/main/resources/schemas/ubl20</schemaDirectory>
               <schemaIncludes>
-                <schemaInclude>common/*.xsd</schemaInclude>
-                <schemaInclude>maindoc/*.xsd</schemaInclude>
+                <schemaInclude>common/CodeList_LanguageCode_ISO_7_04.xsd</schemaInclude>
+                <schemaInclude>common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd</schemaInclude>
+                <schemaInclude>common/CodeList_UnitCode_UNECE_7_04.xsd</schemaInclude>
+                <schemaInclude>common/CodeList_CurrencyCode_ISO_7_04.xsd</schemaInclude>
+                <schemaInclude>common/CCTS_CCT_SchemaModule-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UnqualifiedDataTypeSchemaModule-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-QualifiedDatatypes-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-CoreComponentParameters-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-CommonBasicComponents-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-CommonAggregateComponents-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-CommonExtensionComponents-2.0.xsd</schemaInclude>
+                <schemaInclude>common/UBL-ExtensionContentDatatype-2.0.xsd</schemaInclude>
+                <schemaInclude>maindoc/UBL-ApplicationResponse-2.0.xsd</schemaInclude>
               </schemaIncludes>
               <bindingIncludes>
                 <bindingInclude>bindings20.xjb</bindingInclude>
