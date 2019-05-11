@@ -142,7 +142,7 @@
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <extension>true</extension>
-          <verbose>true</verbose>
+          <verbose>false</verbose>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
