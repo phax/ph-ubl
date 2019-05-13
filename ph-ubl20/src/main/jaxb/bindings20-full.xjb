@@ -1451,7 +1451,6 @@
       <package name="oasis.names.specification.ubl.schema.xsd.applicationresponse_2" />
     </schemaBindings>
   </bindings>
-  <!-- 
   <bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-AttachedDocument-2.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="oasis.names.specification.ubl.schema.xsd.attacheddocument_2" />
@@ -1602,5 +1601,4 @@
       <package name="oasis.names.specification.ubl.schema.xsd.waybill_2" />
     </schemaBindings>
   </bindings>
-   -->
 </bindings>
