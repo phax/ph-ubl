@@ -1,0 +1,868 @@
+[INFO] --- maven-jaxb2-plugin:0.14.1-SNAPSHOT:generate (ubl20) @ ph-ubl20 ---
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.pom (6.4 kB at 247 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-jaxb22-plugin/2.3.2.2/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.pom (2.8 kB at 36 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-graph/9.3.3/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.pom (2.6 kB at 108 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-matrix/9.3.3/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom (20 kB at 840 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.1/jaxb-api-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.1/jaxb-api-parent-2.3.1.pom (8.1 kB at 338 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api-parent/2.3.1/jaxb-api-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/5/jvnet-parent-5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/5/jvnet-parent-5.pom (8.9 kB at 328 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/net/java/jvnet-parent/5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/net/java/jvnet-parent/5/jvnet-parent-5.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom (4.9 kB at 189 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/activation/javax.activation-api/1.2.0/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.0/all-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/activation/all/1.2.0/all-1.2.0.pom (18 kB at 748 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/all/1.2.0/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/all/1.2.0/all-1.2.0.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/1/jvnet-parent-1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/1/jvnet-parent-1.pom (4.7 kB at 188 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/net/java/jvnet-parent/1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/net/java/jvnet-parent/1/jvnet-parent-1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.pom (4.3 kB at 180 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/2.3.1/jaxb-txw-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/2.3.1/jaxb-txw-parent-2.3.1.pom (2.8 kB at 95 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-txw-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-txw-parent/2.3.1/jaxb-txw-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.1/jaxb-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.1/jaxb-parent-2.3.1.pom (41 kB at 1.3 MB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-parent/2.3.1/jaxb-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.1/jaxb-bom-ext-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.1/jaxb-bom-ext-2.3.1.pom (5.0 kB at 208 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/jaxb-bom-ext/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/jaxb-bom-ext/2.3.1/jaxb-bom-ext-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.1/jaxb-bom-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.1/jaxb-bom-2.3.1.pom (10 kB at 408 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-bom/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-bom/2.3.1/jaxb-bom-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.pom (3.4 kB at 137 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/3.0.5/istack-commons-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/3.0.5/istack-commons-3.0.5.pom (14 kB at 534 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons/3.0.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons/3.0.5/istack-commons-3.0.5.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.pom (7.8 kB at 278 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.3.1/jaxb-runtime-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.3.1/jaxb-runtime-parent-2.3.1.pom (2.8 kB at 110 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.3.1/jaxb-runtime-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.pom (11 kB at 457 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/jvnet/staxex/stax-ex/1.7.8/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.pom (4.9 kB at 175 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/rngom/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-external-parent/2.3.1/jaxb-external-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-external-parent/2.3.1/jaxb-external-parent-2.3.1.pom (2.8 kB at 104 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-external-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-external-parent/2.3.1/jaxb-external-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.pom (2.0 kB at 85 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.pom (12 kB at 487 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/validation/validation-api/2.0.1.Final/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.pom.lastUpdated
+[DEBUG] Could not find metadata com.helger.maven:maven-jaxb2-plugin-core:0.14.1-SNAPSHOT/maven-metadata.xml in local (/home/travis/.m2/repository)
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-metadata.xml (792 B at 2.4 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/resolver-status.properties
+[DEBUG] Could not find metadata com.helger.maven:maven-jaxb2-plugin-core:0.14.1-SNAPSHOT/maven-metadata.xml in local (/home/travis/.m2/repository)
+[DEBUG] Skipped remote request for com.helger.maven:maven-jaxb2-plugin-core:0.14.1-SNAPSHOT/maven-metadata.xml, already updated during this session.
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.pom
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.pom (2.2 kB at 11 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.pom (20 kB at 779 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-lang3/3.2.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/32/commons-parent-32.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/32/commons-parent-32.pom (53 kB at 1.7 MB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-parent/32/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-parent/32/commons-parent-32.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.pom (183 B at 6.1 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/org/apache/xml/internal/resolver/20050927/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.9/plexus-interpolation-1.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.9/plexus-interpolation-1.9.pom (832 B at 32 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.9/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.9/plexus-interpolation-1.9.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.13/plexus-1.0.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.13/plexus-1.0.13.pom (11 kB at 328 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/codehaus/plexus/plexus/1.0.13/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/codehaus/plexus/plexus/1.0.13/plexus-1.0.13.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.pom (949 B at 40 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/junit/junit/4.8.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/junit/junit/4.8.1/junit-4.8.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.pom (1.7 kB at 43 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.5/maven-plugin-tools-3.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.5/maven-plugin-tools-3.5.pom (16 kB at 600 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-tools/3.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-tools/3.5/maven-plugin-tools-3.5.pom.lastUpdated
+[DEBUG] Could not find metadata com.helger.maven:maven-jaxb23-plugin:0.14.1-SNAPSHOT/maven-metadata.xml in local (/home/travis/.m2/repository)
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-metadata.xml (788 B at 3.2 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/resolver-status.properties
+[DEBUG] Could not find metadata com.helger.maven:maven-jaxb23-plugin:0.14.1-SNAPSHOT/maven-metadata.xml in local (/home/travis/.m2/repository)
+[DEBUG] Skipped remote request for com.helger.maven:maven-jaxb23-plugin:0.14.1-SNAPSHOT/maven-metadata.xml, already updated during this session.
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.pom
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.pom (3.0 kB at 13 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.pom (15 kB at 463 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-xjc/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.pom (10 kB at 347 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/xsom/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.pom (4.2 kB at 174 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/codemodel/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-codemodel-parent/2.3.1/jaxb-codemodel-parent-2.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-codemodel-parent/2.3.1/jaxb-codemodel-parent-2.3.1.pom (2.7 kB at 112 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-codemodel-parent/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/mvn/jaxb-codemodel-parent/2.3.1/jaxb-codemodel-parent-2.3.1.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.pom (6.8 kB at 262 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.2/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.pom (4.3 kB at 166 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-tools/3.0.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.pom.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.pom (6.5 kB at 217 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/javax.activation/1.2.0/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.pom.lastUpdated
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=139215, ConflictMarker.markTime=54538, ConflictMarker.nodeCount=99, ConflictIdSorter.graphTime=82015, ConflictIdSorter.topsortTime=63133, ConflictIdSorter.conflictIdCount=49, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=6654316, ConflictResolver.conflictItemCount=97, DefaultDependencyCollector.collectTime=2617522718, DefaultDependencyCollector.transformTime=7043743}
+[DEBUG] com.helger.maven:maven-jaxb2-plugin:jar:0.14.1-20190513.085455-4:
+[DEBUG]    com.helger:ph-jaxb22-plugin:jar:2.3.2.2:runtime
+[DEBUG]       com.helger:ph-commons:jar:9.3.3:runtime
+[DEBUG]          com.google.code.findbugs:jsr305:jar:3.0.2:runtime
+[DEBUG]       com.helger:ph-graph:jar:9.3.3:runtime
+[DEBUG]          com.helger:ph-matrix:jar:9.3.3:runtime
+[DEBUG]       com.helger:ph-jaxb:jar:9.3.3:runtime
+[DEBUG]          com.helger:ph-xml:jar:9.3.3:runtime
+[DEBUG]             com.helger:ph-collection:jar:9.3.3:runtime
+[DEBUG]          com.helger:ph-jaxb-pom:pom:1.0.2:runtime
+[DEBUG]             org.glassfish.jaxb:jaxb-core:jar:2.2.11:runtime
+[DEBUG]       com.sun.xml.bind.external:rngom:jar:2.3.1:compile
+[DEBUG]          com.sun.xml.bind.external:relaxng-datatype:jar:2.3.1:compile
+[DEBUG]       javax.validation:validation-api:jar:2.0.1.Final:runtime
+[DEBUG]    com.helger.maven:maven-jaxb2-plugin-core:jar:0.14.1-SNAPSHOT:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.25:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.2.1:compile
+[DEBUG]       com.sun.org.apache.xml.internal:resolver:jar:20050927:compile
+[DEBUG]       org.glassfish.jaxb:txw2:jar:2.3.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-profile:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-model:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+[DEBUG]             org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+[DEBUG]             backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.9:test
+[DEBUG]          org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]             junit:junit:jar:4.8.1:compile
+[DEBUG]             classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.5.15:compile
+[DEBUG]    com.helger.maven:maven-jaxb23-plugin:jar:0.14.1-SNAPSHOT:compile
+[DEBUG]       org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+[DEBUG]          javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[DEBUG]          com.sun.istack:istack-commons-runtime:jar:3.0.5:compile
+[DEBUG]          org.jvnet.staxex:stax-ex:jar:1.7.8:compile
+[DEBUG]          com.sun.xml.fastinfoset:FastInfoset:jar:1.2.13:compile
+[DEBUG]          javax.activation:javax.activation-api:jar:1.2.0:compile
+[DEBUG]       org.glassfish.jaxb:jaxb-xjc:jar:2.3.1:compile
+[DEBUG]          org.glassfish.jaxb:xsom:jar:2.3.1:compile
+[DEBUG]          org.glassfish.jaxb:codemodel:jar:2.3.1:compile
+[DEBUG]          com.sun.xml.dtd-parser:dtd-parser:jar:1.2:compile
+[DEBUG]          com.sun.istack:istack-commons-tools:jar:3.0.5:compile
+[DEBUG]       com.sun.activation:javax.activation:jar:1.2.0:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.2.1:compile
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://repo.maven.apache.org/maven2
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://repo.maven.apache.org/maven2
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.jar (57 kB at 1.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.jar (16 kB at 355 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.jar (44 kB at 717 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar (93 kB at 2.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.jar (81 kB at 1.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar (70 kB at 925 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar (68 kB at 812 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.jar (318 kB at 2.6 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar (237 kB at 2.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar (128 kB at 1.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar (385 kB at 2.9 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.jar (25 kB at 183 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.jar (34 kB at 243 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar (57 kB at 348 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.jar (59 kB at 303 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.jar (160 kB at 805 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.jar (27 kB at 120 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar (78 kB at 342 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.jar (14 kB at 57 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.jar (427 kB at 1.7 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.jar (987 kB at 3.8 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar (1.1 MB at 4.0 MB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-jaxb22-plugin/2.3.2.2/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-jaxb22-plugin/2.3.2.2/ph-jaxb22-plugin-2.3.2.2.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-graph/9.3.3/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-graph/9.3.3/ph-graph-9.3.3.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-matrix/9.3.3/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/ph-matrix/9.3.3/ph-matrix-9.3.3.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/rngom/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/rngom/2.3.1/rngom-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/2.3.1/relaxng-datatype-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/validation/validation-api/2.0.1.Final/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-lang3/3.2.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/org/apache/xml/internal/resolver/20050927/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/junit/junit/4.8.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/jvnet/staxex/stax-ex/1.7.8/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/jvnet/staxex/stax-ex/1.7.8/stax-ex-1.7.8.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/activation/javax.activation-api/1.2.0/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-xjc/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/jaxb-xjc/2.3.1/jaxb-xjc-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/xsom/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/xsom/2.3.1/xsom-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/codemodel/2.3.1/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/glassfish/jaxb/codemodel/2.3.1/codemodel-2.3.1.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.2/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.2/dtd-parser-1.2.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-tools/3.0.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/istack/istack-commons-tools/3.0.5/istack-commons-tools-3.0.5.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/javax.activation/1.2.0/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.jar.lastUpdated
+[DEBUG] Using transporter WagonTransporter with priority -1.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[DEBUG] Using connector BasicRepositoryConnector with priority 0.0 for https://oss.sonatype.org/content/repositories/snapshots/
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.jar
+[INFO] Downloading from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.jar
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.jar (71 kB at 345 kB/s)
+[INFO] Downloaded from central.snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.jar (35 kB at 110 kB/s)
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb2-plugin-core/0.14.1-SNAPSHOT/maven-jaxb2-plugin-core-0.14.1-20190513.085428-4.jar.lastUpdated
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/_remote.repositories
+[DEBUG] Writing tracking file /home/travis/.m2/repository/com/helger/maven/maven-jaxb23-plugin/0.14.1-SNAPSHOT/maven-jaxb23-plugin-0.14.1-20190513.085450-4.jar.lastUpdated
+[DEBUG] Created new class realm plugin>com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT
+[DEBUG] Importing foreign packages into class realm plugin>com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT
+[DEBUG]   Imported:  < project>com.helger:ph-ubl-testfiles:6.1.3-SNAPSHOT
+[DEBUG] Populating class realm plugin>com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT
+[DEBUG]   Included: com.helger.maven:maven-jaxb2-plugin:jar:0.14.1-SNAPSHOT
+[DEBUG]   Included: com.helger:ph-jaxb22-plugin:jar:2.3.2.2
+[DEBUG]   Included: com.helger:ph-commons:jar:9.3.3
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:3.0.2
+[DEBUG]   Included: com.helger:ph-graph:jar:9.3.3
+[DEBUG]   Included: com.helger:ph-matrix:jar:9.3.3
+[DEBUG]   Included: com.helger:ph-jaxb:jar:9.3.3
+[DEBUG]   Included: com.helger:ph-xml:jar:9.3.3
+[DEBUG]   Included: com.helger:ph-collection:jar:9.3.3
+[DEBUG]   Included: com.helger:ph-jaxb-pom:pom:1.0.2
+[DEBUG]   Included: org.glassfish.jaxb:jaxb-core:jar:2.2.11
+[DEBUG]   Included: com.sun.xml.bind.external:rngom:jar:2.3.1
+[DEBUG]   Included: com.sun.xml.bind.external:relaxng-datatype:jar:2.3.1
+[DEBUG]   Included: javax.validation:validation-api:jar:2.0.1.Final
+[DEBUG]   Included: com.helger.maven:maven-jaxb2-plugin-core:jar:0.14.1-SNAPSHOT
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.2.1
+[DEBUG]   Included: com.sun.org.apache.xml.internal:resolver:jar:20050927
+[DEBUG]   Included: org.glassfish.jaxb:txw2:jar:2.3.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: junit:junit:jar:4.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.15
+[DEBUG]   Included: com.helger.maven:maven-jaxb23-plugin:jar:0.14.1-SNAPSHOT
+[DEBUG]   Included: org.glassfish.jaxb:jaxb-runtime:jar:2.3.1
+[DEBUG]   Included: javax.xml.bind:jaxb-api:jar:2.3.1
+[DEBUG]   Included: com.sun.istack:istack-commons-runtime:jar:3.0.5
+[DEBUG]   Included: org.jvnet.staxex:stax-ex:jar:1.7.8
+[DEBUG]   Included: com.sun.xml.fastinfoset:FastInfoset:jar:1.2.13
+[DEBUG]   Included: javax.activation:javax.activation-api:jar:1.2.0
+[DEBUG]   Included: org.glassfish.jaxb:jaxb-xjc:jar:2.3.1
+[DEBUG]   Included: org.glassfish.jaxb:xsom:jar:2.3.1
+[DEBUG]   Included: org.glassfish.jaxb:codemodel:jar:2.3.1
+[DEBUG]   Included: com.sun.xml.dtd-parser:dtd-parser:jar:1.2
+[DEBUG]   Included: com.sun.istack:istack-commons-tools:jar:3.0.5
+[DEBUG]   Included: com.sun.activation:javax.activation:jar:1.2.0
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5
+[DEBUG] Configuring mojo com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT:generate from plugin realm ClassRealm[plugin>com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@7d4991ad]
+[DEBUG] Configuring mojo 'com.helger.maven:maven-jaxb2-plugin:0.14.1-SNAPSHOT:generate' with basic configurator -->
+[DEBUG]   (s) accessExternalDTD = all
+[DEBUG]   (s) accessExternalSchema = all
+[DEBUG]   (s) addCompileSourceRoot = true
+[DEBUG]   (s) addIfExistsToEpisodeSchemaBindings = true
+[DEBUG]   (s) addTestCompileSourceRoot = false
+[DEBUG]   (s) args = [-no-header, -quiet, -Xph-default-locale, en_US, -Xph-annotate, -Xph-fields-private, -Xph-code-quality, -Xph-implements, java.io.Serializable, -Xph-equalshashcode, -Xph-tostring, -Xph-list-extension, -Xph-csu, -Xph-cloneable2, -Xph-value-extender]
+[DEBUG]   (s) bindingDirectory = /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb
+[DEBUG]   (s) bindingIncludes = [bindings20.xjb]
+[DEBUG]   (s) cleanPackageDirectories = true
+[DEBUG]   (s) contentForWildcard = false
+[DEBUG]   (s) debug = false
+[DEBUG]   (s) disableDefaultExcludes = false
+[DEBUG]   (s) disableXmlSecurity = true
+[DEBUG]   (s) enableExternalEntityProcessing = true
+[DEBUG]   (s) enableIntrospection = false
+[DEBUG]   (s) encoding = UTF-8
+[DEBUG]   (s) episode = true
+[DEBUG]   (s) groupId = com.helger
+[DEBUG]   (s) artifactId = ph-xsds-ccts-cct-schemamodule
+[DEBUG]   (s) episodes = [Dependency {groupId=com.helger, artifactId=ph-xsds-ccts-cct-schemamodule, version=null, type=jar}]
+[DEBUG]   (s) extension = true
+[DEBUG]   (s) forceRegenerate = false
+[DEBUG]   (s) generateDirectory = /home/travis/build/phax/ph-ubl/ph-ubl20/target/generated-sources/ubl20
+[DEBUG]   (s) localRepository =       id: local
+      url: file:///home/travis/.m2/repository
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+[DEBUG]   (s) markGenerated = false
+[DEBUG]   (s) noFileHeader = false
+[DEBUG]   (s) packageLevelAnnotations = true
+[DEBUG]   (s) pluginArtifacts = [com.helger.maven:maven-jaxb2-plugin:maven-plugin:0.14.1-SNAPSHOT:, com.helger:ph-jaxb22-plugin:jar:2.3.2.2:runtime, com.helger:ph-commons:jar:9.3.3:runtime, com.google.code.findbugs:jsr305:jar:3.0.2:runtime, com.helger:ph-graph:jar:9.3.3:runtime, com.helger:ph-matrix:jar:9.3.3:runtime, com.helger:ph-jaxb:jar:9.3.3:runtime, com.helger:ph-xml:jar:9.3.3:runtime, com.helger:ph-collection:jar:9.3.3:runtime, com.helger:ph-jaxb-pom:pom:1.0.2:runtime, org.glassfish.jaxb:jaxb-core:jar:2.2.11:runtime, com.sun.xml.bind.external:rngom:jar:2.3.1:compile, com.sun.xml.bind.external:relaxng-datatype:jar:2.3.1:compile, javax.validation:validation-api:jar:2.0.1.Final:runtime, com.helger.maven:maven-jaxb2-plugin-core:jar:0.14.1-SNAPSHOT:compile, org.slf4j:slf4j-api:jar:1.7.25:compile, org.apache.commons:commons-lang3:jar:3.2.1:compile, com.sun.org.apache.xml.internal:resolver:jar:20050927:compile, org.glassfish.jaxb:txw2:jar:2.3.1:compile, org.apache.maven:maven-plugin-api:jar:2.2.1:compile, org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile, org.apache.maven:maven-project:jar:2.2.1:compile, org.apache.maven:maven-settings:jar:2.2.1:compile, org.apache.maven:maven-profile:jar:2.2.1:compile, org.apache.maven:maven-model:jar:2.2.1:compile, org.apache.maven:maven-artifact-manager:jar:2.2.1:compile, org.apache.maven:maven-repository-metadata:jar:2.2.1:compile, backport-util-concurrent:backport-util-concurrent:jar:3.1:compile, org.apache.maven:maven-plugin-registry:jar:2.2.1:compile, org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile, junit:junit:jar:4.8.1:compile, classworlds:classworlds:jar:1.1-alpha-2:compile, org.codehaus.plexus:plexus-utils:jar:1.5.15:compile, com.helger.maven:maven-jaxb23-plugin:jar:0.14.1-SNAPSHOT:compile, org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile, javax.xml.bind:jaxb-api:jar:2.3.1:compile, com.sun.istack:istack-commons-runtime:jar:3.0.5:compile, org.jvnet.staxex:stax-ex:jar:1.7.8:compile, com.sun.xml.fastinfoset:FastInfoset:jar:1.2.13:compile, javax.activation:javax.activation-api:jar:1.2.0:compile, org.glassfish.jaxb:jaxb-xjc:jar:2.3.1:compile, org.glassfish.jaxb:xsom:jar:2.3.1:compile, org.glassfish.jaxb:codemodel:jar:2.3.1:compile, com.sun.xml.dtd-parser:dtd-parser:jar:1.2:compile, com.sun.istack:istack-commons-tools:jar:3.0.5:compile, com.sun.activation:javax.activation:jar:1.2.0:compile, org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5:compile, org.apache.maven:maven-artifact:jar:2.2.1:compile]
+[DEBUG]   (s) project = MavenProject: com.helger:ph-ubl20:6.1.3-SNAPSHOT @ /home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml
+[DEBUG]   (s) readOnly = false
+[DEBUG]   (s) removeOldOutput = false
+[DEBUG]   (s) scanDependenciesForBindings = false
+[DEBUG]   (s) schemaDirectory = /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20
+[DEBUG]   (s) schemaIncludes = [common/CodeList_LanguageCode_ISO_7_04.xsd, common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, common/CodeList_UnitCode_UNECE_7_04.xsd, common/CodeList_CurrencyCode_ISO_7_04.xsd, common/CCTS_CCT_SchemaModule-2.0.xsd, common/UnqualifiedDataTypeSchemaModule-2.0.xsd, common/UBL-QualifiedDatatypes-2.0.xsd, common/UBL-CoreComponentParameters-2.0.xsd, common/UBL-CommonBasicComponents-2.0.xsd, common/UBL-CommonAggregateComponents-2.0.xsd, common/UBL-CommonExtensionComponents-2.0.xsd, common/UBL-ExtensionContentDatatype-2.0.xsd, maindoc/UBL-ApplicationResponse-2.0.xsd]
+[DEBUG]   (s) settings = org.apache.maven.execution.SettingsAdapter@1e482ecd
+[DEBUG]   (s) specVersion = 2.2
+[DEBUG]   (s) strict = true
+[DEBUG]   (s) useActiveProxyAsHttpproxy = false
+[DEBUG]   (s) verbose = true
+[DEBUG]   (s) writeCode = true
+[DEBUG] -- end configuration --
+[INFO] Started execution.
+[INFO] Using new MavenCatalogResolver
+Parse catalog: ./xcatalog
+Loading catalog: ./xcatalog
+Default BASE: file:/home/travis/build/phax/ph-ubl/xcatalog
+Catalog does not exist: file:/home/travis/build/phax/ph-ubl/xcatalog
+[INFO] EntityResolver using catalogResolver null
+[INFO] EntityResolver set to org.jvnet.jaxb2.maven2.resolver.tools.ReResolvingEntityResolverWrapper@3bcedb06
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources total: [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd]
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@35d114f4
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@3684d2c0
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@4be460e5
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@454e9d65
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@7805478c
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@6807989e
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@c2e33
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@31183ee2
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@63f3366a
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@37e491e2
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@56f84c9b
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@26679788
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd
+[INFO] getInputSources uses: org.xml.sax.InputSource@5cdda548
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[DEBUG] Checking episode file [/home/travis/.m2/repository/com/helger/ph-xsds-ccts-cct-schemamodule/2.2.2/ph-xsds-ccts-cct-schemamodule-2.2.2.jar].
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources total: [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb]
+[INFO] getInputSources of: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb
+[INFO] getInputSources uses: org.xml.sax.InputSource@4f2544b0
+[INFO]             publicID: null
+[INFO]             systemID: file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb
+[DEBUG] Resolving publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb].
+resolveSystem(file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb)
+[DEBUG] Parent resolver has resolved publicId [null], systemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] to [null].
+[DEBUG] SystemId [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[INFO] getInputSources resolved to: null
+[INFO] JAXB API is loaded from the [jar:file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!].
+[INFO] Detected JAXB API version [2.2].
+[INFO] pluginArtifacts:[com.helger.maven:maven-jaxb2-plugin:maven-plugin:0.14.1-SNAPSHOT:, com.helger:ph-jaxb22-plugin:jar:2.3.2.2:runtime, com.helger:ph-commons:jar:9.3.3:runtime, com.google.code.findbugs:jsr305:jar:3.0.2:runtime, com.helger:ph-graph:jar:9.3.3:runtime, com.helger:ph-matrix:jar:9.3.3:runtime, com.helger:ph-jaxb:jar:9.3.3:runtime, com.helger:ph-xml:jar:9.3.3:runtime, com.helger:ph-collection:jar:9.3.3:runtime, com.helger:ph-jaxb-pom:pom:1.0.2:runtime, org.glassfish.jaxb:jaxb-core:jar:2.2.11:runtime, com.sun.xml.bind.external:rngom:jar:2.3.1:compile, com.sun.xml.bind.external:relaxng-datatype:jar:2.3.1:compile, javax.validation:validation-api:jar:2.0.1.Final:runtime, com.helger.maven:maven-jaxb2-plugin-core:jar:0.14.1-SNAPSHOT:compile, org.slf4j:slf4j-api:jar:1.7.25:compile, org.apache.commons:commons-lang3:jar:3.2.1:compile, com.sun.org.apache.xml.internal:resolver:jar:20050927:compile, org.glassfish.jaxb:txw2:jar:2.3.1:compile, org.apache.maven:maven-plugin-api:jar:2.2.1:compile, org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile, org.apache.maven:maven-project:jar:2.2.1:compile, org.apache.maven:maven-settings:jar:2.2.1:compile, org.apache.maven:maven-profile:jar:2.2.1:compile, org.apache.maven:maven-model:jar:2.2.1:compile, org.apache.maven:maven-artifact-manager:jar:2.2.1:compile, org.apache.maven:maven-repository-metadata:jar:2.2.1:compile, backport-util-concurrent:backport-util-concurrent:jar:3.1:compile, org.apache.maven:maven-plugin-registry:jar:2.2.1:compile, org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile, junit:junit:jar:4.8.1:compile, classworlds:classworlds:jar:1.1-alpha-2:compile, org.codehaus.plexus:plexus-utils:jar:1.5.15:compile, com.helger.maven:maven-jaxb23-plugin:jar:0.14.1-SNAPSHOT:compile, org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile, javax.xml.bind:jaxb-api:jar:2.3.1:compile, com.sun.istack:istack-commons-runtime:jar:3.0.5:compile, org.jvnet.staxex:stax-ex:jar:1.7.8:compile, com.sun.xml.fastinfoset:FastInfoset:jar:1.2.13:compile, javax.activation:javax.activation-api:jar:1.2.0:compile, org.glassfish.jaxb:jaxb-xjc:jar:2.3.1:compile, org.glassfish.jaxb:xsom:jar:2.3.1:compile, org.glassfish.jaxb:codemodel:jar:2.3.1:compile, com.sun.xml.dtd-parser:dtd-parser:jar:1.2:compile, com.sun.istack:istack-commons-tools:jar:3.0.5:compile, com.sun.activation:javax.activation:jar:1.2.0:compile, org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5:compile, org.apache.maven:maven-artifact:jar:2.2.1:compile]
+[INFO] specVersion:2.2
+[INFO] encoding:UTF-8
+[INFO] locale:null
+[INFO] schemaLanguage:null
+[INFO] schemaDirectory:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20
+[INFO] schemaIncludes:[common/CodeList_LanguageCode_ISO_7_04.xsd, common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, common/CodeList_UnitCode_UNECE_7_04.xsd, common/CodeList_CurrencyCode_ISO_7_04.xsd, common/CCTS_CCT_SchemaModule-2.0.xsd, common/UnqualifiedDataTypeSchemaModule-2.0.xsd, common/UBL-QualifiedDatatypes-2.0.xsd, common/UBL-CoreComponentParameters-2.0.xsd, common/UBL-CommonBasicComponents-2.0.xsd, common/UBL-CommonAggregateComponents-2.0.xsd, common/UBL-CommonExtensionComponents-2.0.xsd, common/UBL-ExtensionContentDatatype-2.0.xsd, maindoc/UBL-ApplicationResponse-2.0.xsd]
+[INFO] schemaExcludes:null
+[INFO] schemas:[]
+[INFO] bindingDirectory:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb
+[INFO] bindingIncludes:[bindings20.xjb]
+[INFO] bindingExcludes:null
+[INFO] bindings:[]
+[INFO] disableDefaultExcludes:false
+[INFO] catalog:null
+[INFO] catalogResolver:null
+[INFO] generatePackage:null
+[INFO] generateDirectory:/home/travis/build/phax/ph-ubl/ph-ubl20/target/generated-sources/ubl20
+[INFO] readOnly:false
+[INFO] extension:true
+[INFO] strict:true
+[INFO] writeCode:true
+[INFO] verbose:true
+[INFO] debug:false
+[INFO] args:[-no-header, -quiet, -Xph-default-locale, en_US, -Xph-annotate, -Xph-fields-private, -Xph-code-quality, -Xph-implements, java.io.Serializable, -Xph-equalshashcode, -Xph-tostring, -Xph-list-extension, -Xph-csu, -Xph-cloneable2, -Xph-value-extender]
+[INFO] forceRegenerate:false
+[INFO] removeOldOutput:false
+[INFO] produces:[**/*.*, **/*.java, **/bgm.ser, **/jaxb.properties]
+[INFO] otherDepends:null
+[INFO] otherDependIncludes:null
+[INFO] otherDependExcludes:null
+[INFO] episodeFile:/home/travis/build/phax/ph-ubl/ph-ubl20/target/generated-sources/ubl20/META-INF/sun-jaxb.episode
+[INFO] episode:true
+[INFO] plugins:null
+[INFO] episodes:[Dependency {groupId=com.helger, artifactId=ph-xsds-ccts-cct-schemamodule, version=2.2.2, type=jar}]
+[INFO] useDependenciesAsEpisodes:false
+[INFO] scanDependenciesForBindings:false
+[INFO] xjcPlugins:null
+[INFO] episodes:[Dependency {groupId=com.helger, artifactId=ph-xsds-ccts-cct-schemamodule, version=2.2.2, type=jar}]
+[INFO] catalogURIs (calculated):[]
+[INFO] resolvedCatalogURIs (calculated):[]
+[INFO] schemaFiles (calculated):[/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, /home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd]
+[INFO] schemaURIs (calculated):[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd]
+[INFO] resolvedSchemaURIs (calculated):[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd]
+[INFO] bindingFiles (calculated):[/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb]
+[INFO] bindingURIs (calculated):[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb]
+[INFO] resolvedBindingURIs (calculated):[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb]
+[INFO] xjcPluginArtifacts (resolved):[]
+[INFO] xjcPluginFiles (resolved):[]
+[INFO] xjcPluginURLs (resolved):[]
+[INFO] episodeArtifacts (resolved):[com.helger:ph-xsds-ccts-cct-schemamodule:jar:2.2.2:runtime]
+[INFO] episodeFiles (resolved):[/home/travis/.m2/repository/com/helger/ph-xsds-ccts-cct-schemamodule/2.2.2/ph-xsds-ccts-cct-schemamodule-2.2.2.jar]
+[INFO] dependsURIs (resolved):[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb, file:/home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml]
+[INFO] optionsConfiguration:OptionsConfiguration [specVersion=2.2
+ generateDirectory=/home/travis/build/phax/ph-ubl/ph-ubl20/target/generated-sources/ubl20
+ generatePackage=null
+ schemaLanguage=null
+ grammars.systemIds=[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd]
+ bindFiles.systemIds=[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb]
+ plugins=[]
+ readOnly=false
+ packageLevelAnnotations=true
+ noFileHeader=false
+ enableIntrospection=false
+ disableXmlSecurity=true
+ accessExternalSchema=all
+ accessExternalDTD=all
+ contentForWildcard=false
+ extension=true
+ strict=true
+ verbose=true
+ debugMode=false
+ arguments=[-no-header, -quiet, -Xph-default-locale, en_US, -Xph-annotate, -Xph-fields-private, -Xph-code-quality, -Xph-implements, java.io.Serializable, -Xph-equalshashcode, -Xph-tostring, -Xph-list-extension, -Xph-csu, -Xph-cloneable2, -Xph-value-extender, -episode, /home/travis/build/phax/ph-ubl/ph-ubl20/target/generated-sources/ubl20/META-INF/sun-jaxb.episode, /home/travis/.m2/repository/com/helger/ph-xsds-ccts-cct-schemamodule/2.2.2/ph-xsds-ccts-cct-schemamodule-2.2.2.jar]]
+[DEBUG] Reinitialized com.helger.commons.locale.LocaleCache
+[DEBUG] Finished retrieving all 2 SPI implementations of interface com.helger.commons.hashcode.IHashCodeImplementationRegistrarSPI
+[DEBUG] Reinitialized com.helger.commons.hashcode.HashCodeImplementationRegistry
+[DEBUG] Found no hashCode implementation for class java.lang.String
+[DEBUG] Up-to-date check for source resources [[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb, file:/home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml]] and target resources [[]].
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] might have been changed since the last build.
+[DEBUG] File [/home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml] might have been changed since the last build.
+[DEBUG] Checking the last modification timestamp of the source resources [[file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd, file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb, file:/home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml]].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CCTS_CCT_SchemaModule-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/jaxb/bindings20.xjb] is [2019-05-13 09:01:53.000].
+[DEBUG] Last modification timestamp of the file URI [file:/home/travis/build/phax/ph-ubl/ph-ubl20/pom.xml] is [2019-05-13 09:01:53.000].
+[DEBUG] Checking the last modification timestamp of the target resources [[]].
+[DEBUG] Latest Timestamp of the source resources is [2019-05-13 09:01:53.000], however the earliest timestamp of the target resources is unknown. Assuming that something was changed.
+[INFO] Sources are not up-to-date, XJC will be executed.
+[INFO] Parsing input schema(s)...
+[DEBUG] Resolving publicId [urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2], systemId [UnqualifiedDataTypeSchemaModule-2.0.xsd].
+resolveSystem(UnqualifiedDataTypeSchemaModule-2.0.xsd)
+resolvePublic(urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2,UnqualifiedDataTypeSchemaModule-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2], systemId [UnqualifiedDataTypeSchemaModule-2.0.xsd] to [null].
+[DEBUG] SystemId [UnqualifiedDataTypeSchemaModule-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [urn:un:unece:uncefact:codelist:specification:66411:2001], systemId [CodeList_UnitCode_UNECE_7_04.xsd].
+resolveSystem(CodeList_UnitCode_UNECE_7_04.xsd)
+resolvePublic(urn:un:unece:uncefact:codelist:specification:66411:2001,CodeList_UnitCode_UNECE_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [urn:un:unece:uncefact:codelist:specification:66411:2001], systemId [CodeList_UnitCode_UNECE_7_04.xsd] to [null].
+[DEBUG] SystemId [CodeList_UnitCode_UNECE_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [urn:un:unece:uncefact:codelist:specification:5639:1988], systemId [CodeList_LanguageCode_ISO_7_04.xsd].
+resolveSystem(CodeList_LanguageCode_ISO_7_04.xsd)
+resolvePublic(urn:un:unece:uncefact:codelist:specification:5639:1988,CodeList_LanguageCode_ISO_7_04.xsd)
+[DEBUG] Parent resolver has resolved publicId [urn:un:unece:uncefact:codelist:specification:5639:1988], systemId [CodeList_LanguageCode_ISO_7_04.xsd] to [null].
+[DEBUG] SystemId [CodeList_LanguageCode_ISO_7_04.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[DEBUG] Resolving publicId [urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2], systemId [UBL-QualifiedDatatypes-2.0.xsd].
+resolveSystem(UBL-QualifiedDatatypes-2.0.xsd)
+resolvePublic(urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2,UBL-QualifiedDatatypes-2.0.xsd)
+[DEBUG] Parent resolver has resolved publicId [urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2], systemId [UBL-QualifiedDatatypes-2.0.xsd] to [null].
+[DEBUG] SystemId [UBL-QualifiedDatatypes-2.0.xsd] is not a Maven dependency resource URI. Returning parent resolver result [null].
+[ERROR] Error while parsing schema(s).Location [ file:/home/travis/build/phax/ph-ubl/ph-ubl20/src/main/resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd{44,72}].
+org.xml.sax.SAXParseException: src-resolve: Cannot resolve the name 'ext:UBLExtensions' to a(n) 'element declaration' component.
+    at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException (ErrorHandlerWrapper.java:203)
+    at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error (ErrorHandlerWrapper.java:134)
+    at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError (XMLErrorReporter.java:396)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr (XSDHandler.java:4154)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError (XSDHandler.java:4137)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getGlobalDecl (XSDHandler.java:1747)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDElementTraverser.traverseLocal (XSDElementTraverser.java:170)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.traverseLocalElements (XSDHandler.java:3610)
+    at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema (XSDHandler.java:638)
+    at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema (XMLSchemaLoader.java:610)
+    at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar (XMLSchemaLoader.java:569)
+    at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar (XMLSchemaLoader.java:535)
+    at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema (XMLSchemaFactory.java:254)
+    at com.sun.tools.xjc.reader.xmlschema.parser.SchemaConstraintChecker.check (SchemaConstraintChecker.java:111)
+    at com.sun.tools.xjc.ModelLoader.loadXMLSchema (ModelLoader.java:331)
+    at com.sun.tools.xjc.ModelLoader.load (ModelLoader.java:151)
+    at com.sun.tools.xjc.ModelLoader.load (ModelLoader.java:106)
+    at org.jvnet.mjiip.v_2_3.XJC23Mojo.loadModel (XJC23Mojo.java:50)
+    at org.jvnet.mjiip.v_2_3.XJC23Mojo.doExecute (XJC23Mojo.java:40)
+    at org.jvnet.mjiip.v_2_3.XJC23Mojo.doExecute (XJC23Mojo.java:28)
+    at org.jvnet.jaxb2.maven2.RawXJC2Mojo.doExecute (RawXJC2Mojo.java:582)
+    at org.jvnet.jaxb2.maven2.RawXJC2Mojo.execute (RawXJC2Mojo.java:378)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
