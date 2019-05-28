@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 language: java
 
 env:
@@ -14,7 +14,7 @@ Cu34TJGDtbpqbFNWi7B4dG5ASX/tjVJ/xlU3R3Wa6PlcI9k1VgdTgEb43D6dr1i64gHERXIir4Nj++8m
 
 install:
 #  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U -P jdeps
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U -e -X
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U
   
 cache:
   directories:
