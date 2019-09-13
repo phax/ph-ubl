@@ -117,6 +117,65 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.jvnet.jaxb2.maven2</groupId>
+        <artifactId>maven-jaxb2-plugin</artifactId>
+        <version>0.14.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <id>ubl20</id>
+            <configuration>
+              <generateDirectory>${project.build.directory}/generated-sources/ubl20</generateDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/ubl20</schemaDirectory>
+              <schemaIncludes>
+                <schemaInclude>common/*.xsd</schemaInclude>
+                <schemaInclude>maindoc/*.xsd</schemaInclude>
+              </schemaIncludes>
+              <bindingIncludes>
+                <bindingInclude>bindings20.xjb</bindingInclude>
+              </bindingIncludes>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
+          <extension>true</extension>
+          <args>
+            <arg>-no-header</arg>
+            <arg>-quiet</arg>
+            <arg>-Xph-default-locale</arg>
+            <arg>en_US</arg>
+            <arg>-Xph-annotate</arg>
+            <arg>-Xph-fields-private</arg>
+            <arg>-Xph-code-quality</arg>
+            <arg>-Xph-implements</arg>
+            <arg>java.io.Serializable</arg>
+            <arg>-Xph-equalshashcode</arg>
+            <arg>-Xph-tostring</arg>
+            <arg>-Xph-list-extension</arg>
+            <arg>-Xph-csu</arg>
+            <arg>-Xph-cloneable2</arg>
+            <arg>-Xph-value-extender</arg>
+          </args>
+          <episodes>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+            </episode>
+          </episodes>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.helger</groupId>
+            <artifactId>ph-jaxb22-plugin</artifactId>
+            <version>2.3.2.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <!-- 
+      <plugin>
         <groupId>com.helger.maven</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
         <version>0.14.1-SNAPSHOT</version>
@@ -130,7 +189,7 @@
               <generateDirectory>${project.build.directory}/generated-sources/ubl20</generateDirectory>
               <schemaDirectory>${basedir}/src/main/resources/schemas/ubl20</schemaDirectory>
               <schemaIncludes>
-                <!-- includes must be in the correct order! -->
+                <! - - includes must be in the correct order! - - >
                 <schemaInclude>common/CodeList_LanguageCode_ISO_7_04.xsd</schemaInclude>
                 <schemaInclude>common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd</schemaInclude>
                 <schemaInclude>common/CodeList_UnitCode_UNECE_7_04.xsd</schemaInclude>
@@ -143,7 +202,7 @@
                 <schemaInclude>common/UBL-CommonAggregateComponents-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-CommonExtensionComponents-2.0.xsd</schemaInclude>
                 <schemaInclude>common/UBL-ExtensionContentDatatype-2.0.xsd</schemaInclude>
-                <!-- Order of main documents does not matter -->
+                <! - - Order of main documents does not matter - - >
                 <schemaInclude>maindoc/*.xsd</schemaInclude>
               </schemaIncludes>
               <bindingIncludes>
@@ -188,6 +247,7 @@
           </dependency>
         </dependencies>
       </plugin>
+      -->
       <!-- Delete the directory with only ObjectFactory 
            Source: http://stackoverflow.com/questions/32635137
       -->
