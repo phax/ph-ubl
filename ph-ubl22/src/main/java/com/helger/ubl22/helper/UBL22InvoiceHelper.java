@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.ubl21.helper;
+package com.helger.ubl22.helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,80 +23,84 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.AllowanceChargeType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.BillingReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.CreditNoteLineType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.DeliveryType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.DocumentReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.InvoiceLineType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.LineReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.OrderLineReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PaymentMeansType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PaymentTermsType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PeriodType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.SignatureType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxTotalType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditNoteTypeCodeType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditedQuantityType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoiceTypeCodeType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoicedQuantityType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.NoteType;
-import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
-import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
+import com.helger.commons.collection.impl.CommonsArrayList;
+
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.AllowanceChargeType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.BillingReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.CreditNoteLineType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.DeliveryType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.DocumentReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.InvoiceLineType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.LineReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.OrderLineReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PaymentMeansType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PaymentTermsType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PeriodType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.ProjectReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.SignatureType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.TaxTotalType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.CreditNoteTypeCodeType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.CreditedQuantityType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.InvoiceTypeCodeType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.InvoicedQuantityType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.NoteType;
+import oasis.names.specification.ubl.schema.xsd.creditnote_22.CreditNoteType;
+import oasis.names.specification.ubl.schema.xsd.invoice_22.InvoiceType;
 
 /**
- * Some helper methods based on Credit Note data types.
+ * Some helper methods based on Invoice data types.
  *
  * @author Philip Helger
  * @since 6.1.3
  */
 @Immutable
-public final class UBL21CreditNoteHelper
+public final class UBL22InvoiceHelper
 {
-  private UBL21CreditNoteHelper ()
+  private UBL22InvoiceHelper ()
   {}
 
   /**
    * @param aSrc
-   *        Source {@link CreditedQuantityType}
-   * @return The created {@link InvoicedQuantityType}
+   *        Source {@link InvoicedQuantityType}
+   * @return The created {@link CreditedQuantityType}
    */
   @Nonnull
-  public static InvoicedQuantityType cloneToInvoicedQuantity (@Nonnull final CreditedQuantityType src)
+  public static CreditedQuantityType cloneToCreditedQuantity (@Nonnull final InvoicedQuantityType aSrc)
   {
-    final InvoicedQuantityType ret = new InvoicedQuantityType ();
-    src.cloneTo (ret);
-    return ret;
-  }
-
-  /**
-   * @param aSrc
-   *        Source {@link CreditNoteTypeCodeType}
-   * @return The created {@link InvoiceTypeCodeType}
-   */
-  @Nullable
-  public static InvoiceTypeCodeType cloneToInvoiceTypeCode (@Nullable final CreditNoteTypeCodeType aSrc)
-  {
-    if (aSrc == null)
-      return null;
-    final InvoiceTypeCodeType ret = new InvoiceTypeCodeType ();
+    final CreditedQuantityType ret = new CreditedQuantityType ();
     aSrc.cloneTo (ret);
     return ret;
   }
 
   /**
-   * Clone an {@link CreditNoteLineType} to a {@link InvoiceLineType}. No values
+   * @param aSrc
+   *        Source {@link InvoiceTypeCodeType}
+   * @return The created {@link CreditNoteTypeCodeType}
+   */
+  @Nullable
+  public static CreditNoteTypeCodeType cloneToCreditNoteTypeCode (@Nullable final InvoiceTypeCodeType aSrc)
+  {
+    if (aSrc == null)
+      return null;
+    final CreditNoteTypeCodeType ret = new CreditNoteTypeCodeType ();
+    aSrc.cloneTo (ret);
+    return ret;
+  }
+
+  /**
+   * Clone an {@link InvoiceLineType} to a {@link CreditNoteLineType}. No values
    * or signs or anything is changed.
    *
    * @param aSrc
-   *        Source credit note line. May not be <code>null</code>.
+   *        Source invoice line. May not be <code>null</code>.
    * @param aDst
-   *        Destination invoice line. May not be <code>null</code>.
+   *        Destination credit note line. May not be <code>null</code>.
    */
-  public static void cloneToInvoiceLine (@Nonnull final CreditNoteLineType aSrc, @Nonnull final InvoiceLineType aDst)
+  public static void cloneToCreditNoteLine (@Nonnull final InvoiceLineType aSrc, @Nonnull final CreditNoteLineType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());
+
     {
       final List <AllowanceChargeType> retAllowanceCharge = new ArrayList <> ();
       for (final AllowanceChargeType aItem : aSrc.getAllowanceCharge ())
@@ -115,8 +119,9 @@ public final class UBL21CreditNoteHelper
         retDelivery.add (aItem == null ? null : aItem.clone ());
       aDst.setDelivery (retDelivery);
     }
-    // n:1
-    aDst.setDeliveryTerms (aSrc.hasDeliveryTermsEntries () ? aSrc.getDeliveryTermsAtIndex (0).clone () : null);
+    // 1:n
+    aDst.setDeliveryTerms (aSrc.getDeliveryTerms () == null ? null : new CommonsArrayList <> (aSrc.getDeliveryTerms ()
+                                                                                                  .clone ()));
     {
       final List <LineReferenceType> retDespatchLineReference = new ArrayList <> ();
       for (final LineReferenceType aItem : aSrc.getDespatchLineReference ())
@@ -146,8 +151,8 @@ public final class UBL21CreditNoteHelper
       aDst.setInvoicePeriod (retInvoicePeriod);
     }
     // Name change
-    aDst.setInvoicedQuantity (aSrc.getCreditedQuantity () == null ? null
-                                                                  : cloneToInvoicedQuantity (aSrc.getCreditedQuantity ()));
+    aDst.setCreditedQuantity (aSrc.getInvoicedQuantity () == null ? null
+                                                                  : cloneToCreditedQuantity (aSrc.getInvoicedQuantity ()));
     aDst.setItem (aSrc.getItem () == null ? null : aSrc.getItem ().clone ());
     aDst.setItemPriceExtension (aSrc.getItemPriceExtension () == null ? null : aSrc.getItemPriceExtension ().clone ());
     aDst.setLineExtensionAmount (aSrc.getLineExtensionAmount () == null ? null
@@ -182,17 +187,17 @@ public final class UBL21CreditNoteHelper
     }
     // Name change
     {
-      final List <InvoiceLineType> retSubLine = new ArrayList <> ();
-      for (final CreditNoteLineType aItem : aSrc.getSubCreditNoteLine ())
+      final List <CreditNoteLineType> retSubLine = new ArrayList <> ();
+      for (final InvoiceLineType aItem : aSrc.getSubInvoiceLine ())
         if (aItem == null)
           retSubLine.add (null);
         else
         {
-          final InvoiceLineType aDstItem = new InvoiceLineType ();
-          cloneToInvoiceLine (aItem, aDstItem);
+          final CreditNoteLineType aDstItem = new CreditNoteLineType ();
+          cloneToCreditNoteLine (aItem, aDstItem);
           retSubLine.add (aDstItem);
         }
-      aDst.setSubInvoiceLine (retSubLine);
+      aDst.setSubCreditNoteLine (retSubLine);
     }
     aDst.setTaxPointDate (aSrc.getTaxPointDate () == null ? null : aSrc.getTaxPointDate ().clone ());
     {
@@ -202,18 +207,25 @@ public final class UBL21CreditNoteHelper
       aDst.setTaxTotal (retTaxTotal);
     }
     aDst.setUUID (aSrc.getUUID () == null ? null : aSrc.getUUID ().clone ());
+    // Not in CreditNote
+    /*
+     * { final List <TaxTotalType> retWithholdingTaxTotal = new ArrayList <> ();
+     * for (final TaxTotalType aItem : aSrc.getWithholdingTaxTotal ())
+     * retWithholdingTaxTotal.add (aItem == null ? null : aItem.clone ());
+     * aDst.seWithholdingTaxTotal (retWithholdingTaxTotal); }
+     */
   }
 
   /**
-   * Clone a {@link CreditNoteType} to an {@link InvoiceType}. No values or
+   * Clone an {@link InvoiceType} to a {@link CreditNoteType}. No values or
    * signs or anything is changed.
    *
    * @param aSrc
-   *        Source credit note. May not be <code>null</code>.
+   *        Source invoice. May not be <code>null</code>.
    * @param aDst
-   *        Destination invoice. May not be <code>null</code>.
+   *        Destination credit note. May not be <code>null</code>.
    */
-  public static void cloneCreditNoteToInvoice (@Nonnull final CreditNoteType aSrc, @Nonnull final InvoiceType aDst)
+  public static void cloneInvoiceToCreditNote (@Nonnull final InvoiceType aSrc, @Nonnull final CreditNoteType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());
@@ -256,8 +268,9 @@ public final class UBL21CreditNoteHelper
         retDelivery.add (aItem == null ? null : aItem.clone ());
       aDst.setDelivery (retDelivery);
     }
-    // n:1
-    aDst.setDeliveryTerms (aSrc.hasDeliveryTermsEntries () ? aSrc.getDeliveryTermsAtIndex (0).clone () : null);
+    // 1:n
+    aDst.setDeliveryTerms (aSrc.getDeliveryTerms () == null ? null : new CommonsArrayList <> (aSrc.getDeliveryTerms ()
+                                                                                                  .clone ()));
     {
       final List <DocumentReferenceType> retDespatchDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getDespatchDocumentReference ())
@@ -265,33 +278,23 @@ public final class UBL21CreditNoteHelper
       aDst.setDespatchDocumentReference (retDespatchDocumentReference);
     }
     // DiscrepancyResponse is not present in Invoice
-    /*
-     * { final List <ResponseType> retDiscrepancyResponse = new ArrayList <> ();
-     * for (final ResponseType aItem : src.getDiscrepancyResponse ())
-     * retDiscrepancyResponse.add (aItem == null ? null : aItem.clone ());
-     * ret.setDiscrepancyResponse (retDiscrepancyResponse); }
-     */
     aDst.setDocumentCurrencyCode (aSrc.getDocumentCurrencyCode () == null ? null
                                                                           : aSrc.getDocumentCurrencyCode ().clone ());
-    // Not in CreditNote
-    /*
-     * aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate
-     * ().clone ());
-     */
+    aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate ().clone ());
     aDst.setID (aSrc.getID () == null ? null : aSrc.getID ().clone ());
     // Name change
     {
-      final List <InvoiceLineType> retInvoiceLine = new ArrayList <> ();
-      for (final CreditNoteLineType aItem : aSrc.getCreditNoteLine ())
+      final List <CreditNoteLineType> retInvoiceLine = new ArrayList <> ();
+      for (final InvoiceLineType aItem : aSrc.getInvoiceLine ())
         if (aItem == null)
           retInvoiceLine.add (null);
         else
         {
-          final InvoiceLineType aNewLine = new InvoiceLineType ();
-          cloneToInvoiceLine (aItem, aNewLine);
+          final CreditNoteLineType aNewLine = new CreditNoteLineType ();
+          cloneToCreditNoteLine (aItem, aNewLine);
           retInvoiceLine.add (aNewLine);
         }
-      aDst.setInvoiceLine (retInvoiceLine);
+      aDst.setCreditNoteLine (retInvoiceLine);
     }
     {
       final List <PeriodType> retInvoicePeriod = new ArrayList <> ();
@@ -300,7 +303,7 @@ public final class UBL21CreditNoteHelper
       aDst.setInvoicePeriod (retInvoicePeriod);
     }
     // Name change
-    aDst.setInvoiceTypeCode (cloneToInvoiceTypeCode (aSrc.getCreditNoteTypeCode ()));
+    aDst.setCreditNoteTypeCode (cloneToCreditNoteTypeCode (aSrc.getInvoiceTypeCode ()));
     aDst.setIssueDate (aSrc.getIssueDate () == null ? null : aSrc.getIssueDate ().clone ());
     aDst.setIssueTime (aSrc.getIssueTime () == null ? null : aSrc.getIssueTime ().clone ());
     aDst.setLegalMonetaryTotal (aSrc.getLegalMonetaryTotal () == null ? null : aSrc.getLegalMonetaryTotal ().clone ());
@@ -354,13 +357,12 @@ public final class UBL21CreditNoteHelper
                                                                         : aSrc.getPricingExchangeRate ().clone ());
     aDst.setProfileExecutionID (aSrc.getProfileExecutionID () == null ? null : aSrc.getProfileExecutionID ().clone ());
     aDst.setProfileID (aSrc.getProfileID () == null ? null : aSrc.getProfileID ().clone ());
-    // Not in CreditNote
-    /*
-     * { final List <ProjectReferenceType> retProjectReference = new ArrayList
-     * <> (); for (final ProjectReferenceType aItem : aSrc.getProjectReference
-     * ()) retProjectReference.add (aItem == null ? null : aItem.clone ());
-     * aDst.setProjectReference (retProjectReference); }
-     */
+    {
+      final List <ProjectReferenceType> retProjectReference = new ArrayList <> ();
+      for (final ProjectReferenceType aItem : aSrc.getProjectReference ())
+        retProjectReference.add (aItem == null ? null : aItem.clone ());
+      aDst.setProjectReference (retProjectReference);
+    }
     {
       final List <DocumentReferenceType> retReceiptDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getReceiptDocumentReference ())
@@ -395,12 +397,11 @@ public final class UBL21CreditNoteHelper
     aDst.setUBLExtensions (aSrc.getUBLExtensions () == null ? null : aSrc.getUBLExtensions ().clone ());
     aDst.setUBLVersionID (aSrc.getUBLVersionID () == null ? null : aSrc.getUBLVersionID ().clone ());
     aDst.setUUID (aSrc.getUUID () == null ? null : aSrc.getUUID ().clone ());
-    // Not in CreditNote
-    /*
-     * { final List <TaxTotalType> retWithholdingTaxTotal = new ArrayList <> ();
-     * for (final TaxTotalType aItem : aSrc.getWithholdingTaxTotal ())
-     * retWithholdingTaxTotal.add (aItem == null ? null : aItem.clone ());
-     * aDst.setWithholdingTaxTotal (retWithholdingTaxTotal); }
-     */
+    {
+      final List <TaxTotalType> retWithholdingTaxTotal = new ArrayList <> ();
+      for (final TaxTotalType aItem : aSrc.getWithholdingTaxTotal ())
+        retWithholdingTaxTotal.add (aItem == null ? null : aItem.clone ());
+      aDst.setWithholdingTaxTotal (retWithholdingTaxTotal);
+    }
   }
 }

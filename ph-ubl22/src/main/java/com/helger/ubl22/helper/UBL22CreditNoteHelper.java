@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.ubl21.helper;
+package com.helger.ubl22.helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,26 +23,27 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.AllowanceChargeType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.BillingReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.CreditNoteLineType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.DeliveryType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.DocumentReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.InvoiceLineType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.LineReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.OrderLineReferenceType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PaymentMeansType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PaymentTermsType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PeriodType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.SignatureType;
-import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxTotalType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditNoteTypeCodeType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditedQuantityType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoiceTypeCodeType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoicedQuantityType;
-import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.NoteType;
-import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
-import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.AllowanceChargeType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.BillingReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.CreditNoteLineType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.DeliveryType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.DocumentReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.InvoiceLineType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.LineReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.OrderLineReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PaymentMeansType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PaymentTermsType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.PeriodType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.ProjectReferenceType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.SignatureType;
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.TaxTotalType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.CreditNoteTypeCodeType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.CreditedQuantityType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.InvoiceTypeCodeType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.InvoicedQuantityType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_22.NoteType;
+import oasis.names.specification.ubl.schema.xsd.creditnote_22.CreditNoteType;
+import oasis.names.specification.ubl.schema.xsd.invoice_22.InvoiceType;
 
 /**
  * Some helper methods based on Credit Note data types.
@@ -51,9 +52,9 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
  * @since 6.1.3
  */
 @Immutable
-public final class UBL21CreditNoteHelper
+public final class UBL22CreditNoteHelper
 {
-  private UBL21CreditNoteHelper ()
+  private UBL22CreditNoteHelper ()
   {}
 
   /**
@@ -273,11 +274,7 @@ public final class UBL21CreditNoteHelper
      */
     aDst.setDocumentCurrencyCode (aSrc.getDocumentCurrencyCode () == null ? null
                                                                           : aSrc.getDocumentCurrencyCode ().clone ());
-    // Not in CreditNote
-    /*
-     * aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate
-     * ().clone ());
-     */
+    aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate ().clone ());
     aDst.setID (aSrc.getID () == null ? null : aSrc.getID ().clone ());
     // Name change
     {
@@ -354,13 +351,12 @@ public final class UBL21CreditNoteHelper
                                                                         : aSrc.getPricingExchangeRate ().clone ());
     aDst.setProfileExecutionID (aSrc.getProfileExecutionID () == null ? null : aSrc.getProfileExecutionID ().clone ());
     aDst.setProfileID (aSrc.getProfileID () == null ? null : aSrc.getProfileID ().clone ());
-    // Not in CreditNote
-    /*
-     * { final List <ProjectReferenceType> retProjectReference = new ArrayList
-     * <> (); for (final ProjectReferenceType aItem : aSrc.getProjectReference
-     * ()) retProjectReference.add (aItem == null ? null : aItem.clone ());
-     * aDst.setProjectReference (retProjectReference); }
-     */
+    {
+      final List <ProjectReferenceType> retProjectReference = new ArrayList <> ();
+      for (final ProjectReferenceType aItem : aSrc.getProjectReference ())
+        retProjectReference.add (aItem == null ? null : aItem.clone ());
+      aDst.setProjectReference (retProjectReference);
+    }
     {
       final List <DocumentReferenceType> retReceiptDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getReceiptDocumentReference ())
@@ -395,12 +391,11 @@ public final class UBL21CreditNoteHelper
     aDst.setUBLExtensions (aSrc.getUBLExtensions () == null ? null : aSrc.getUBLExtensions ().clone ());
     aDst.setUBLVersionID (aSrc.getUBLVersionID () == null ? null : aSrc.getUBLVersionID ().clone ());
     aDst.setUUID (aSrc.getUUID () == null ? null : aSrc.getUUID ().clone ());
-    // Not in CreditNote
-    /*
-     * { final List <TaxTotalType> retWithholdingTaxTotal = new ArrayList <> ();
-     * for (final TaxTotalType aItem : aSrc.getWithholdingTaxTotal ())
-     * retWithholdingTaxTotal.add (aItem == null ? null : aItem.clone ());
-     * aDst.setWithholdingTaxTotal (retWithholdingTaxTotal); }
-     */
+    {
+      final List <TaxTotalType> retWithholdingTaxTotal = new ArrayList <> ();
+      for (final TaxTotalType aItem : aSrc.getWithholdingTaxTotal ())
+        retWithholdingTaxTotal.add (aItem == null ? null : aItem.clone ());
+      aDst.setWithholdingTaxTotal (retWithholdingTaxTotal);
+    }
   }
 }

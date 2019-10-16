@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.collection.impl.CommonsArrayList;
@@ -37,7 +38,9 @@ import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.Pay
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.PeriodType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.SignatureType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxTotalType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditNoteTypeCodeType;
 import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.CreditedQuantityType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoiceTypeCodeType;
 import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.InvoicedQuantityType;
 import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21.NoteType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
@@ -64,6 +67,21 @@ public final class UBL21InvoiceHelper
   public static CreditedQuantityType cloneToCreditedQuantity (@Nonnull final InvoicedQuantityType aSrc)
   {
     final CreditedQuantityType ret = new CreditedQuantityType ();
+    aSrc.cloneTo (ret);
+    return ret;
+  }
+
+  /**
+   * @param aSrc
+   *        Source {@link InvoiceTypeCodeType}
+   * @return The created {@link CreditNoteTypeCodeType}
+   */
+  @Nullable
+  public static CreditNoteTypeCodeType cloneToCreditNoteTypeCode (@Nullable final InvoiceTypeCodeType aSrc)
+  {
+    if (aSrc == null)
+      return null;
+    final CreditNoteTypeCodeType ret = new CreditNoteTypeCodeType ();
     aSrc.cloneTo (ret);
     return ret;
   }
@@ -261,6 +279,11 @@ public final class UBL21InvoiceHelper
     // DiscrepancyResponse is not present in Invoice
     aDst.setDocumentCurrencyCode (aSrc.getDocumentCurrencyCode () == null ? null
                                                                           : aSrc.getDocumentCurrencyCode ().clone ());
+    // Not in CreditNote
+    /*
+     * aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate
+     * ().clone ());
+     */
     aDst.setID (aSrc.getID () == null ? null : aSrc.getID ().clone ());
     // Name change
     {
@@ -282,11 +305,8 @@ public final class UBL21InvoiceHelper
         retInvoicePeriod.add (aItem == null ? null : aItem.clone ());
       aDst.setInvoicePeriod (retInvoicePeriod);
     }
-    // Not present
-    /*
-     * ret.setInvoiceTypeCode (src.getInvoiceTypeCode () == null ? null :
-     * src.getInvoiceTypeCode ().clone ());
-     */
+    // Name change
+    aDst.setCreditNoteTypeCode (cloneToCreditNoteTypeCode (aSrc.getInvoiceTypeCode ()));
     aDst.setIssueDate (aSrc.getIssueDate () == null ? null : aSrc.getIssueDate ().clone ());
     aDst.setIssueTime (aSrc.getIssueTime () == null ? null : aSrc.getIssueTime ().clone ());
     aDst.setLegalMonetaryTotal (aSrc.getLegalMonetaryTotal () == null ? null : aSrc.getLegalMonetaryTotal ().clone ());
