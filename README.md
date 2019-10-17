@@ -27,6 +27,8 @@ Old projects:
   
 # News and noteworthy
 
+* v6.1.3 - work in progress
+    * Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
 * v6.1.2 - 2019-05-07
     * Added Java 12 support
 * v6.1.1 - 2019-01-26
