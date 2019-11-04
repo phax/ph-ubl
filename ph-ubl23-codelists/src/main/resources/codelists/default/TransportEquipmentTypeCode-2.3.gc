@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>TransportEquipmentTypeCode</ShortName>
+      <LongName xml:lang="en">Transport Equipment Type Code</LongName>
+      <LongName Identifier="listID">UN/EDIFACT EDED 8053</LongName>
+      <Version>18B</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/TransportEquipmentTypeCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_TransportEquipmentCategoryCode_D18B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ground equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Ground equipment being fuelled or serviced.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chain</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Chain used in the securing of cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temperature recorder</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Temperature recorder to provide a record of the actual temperature.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Body trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The part of the vehicle where the cargo is loaded.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slipsheet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A cardboard platform used for holding product for storage or transportation.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>No special equipment needed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code to indicate that there is no special equipment needed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vessel hold</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A compartment forming part of a transport vessel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flat rack</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Type of open container used for carrying objects.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aircraft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To indicate that the equipment is an aircraft.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Medical device</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A device used for medical purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Refrigerated container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A refrigerated (reefer) container that is actively cooling the product.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Synthetic pallet 80*120cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A pallet with standard dimensions 80*120 centimetres made of synthetic material.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Synthetic pallet 100*120cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A standard pallet with standard dimensions 100*120 centimetres made of synthetic material.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Clothing hanger rack</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment used to store and transport clothing in a hanging position.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Road/rail trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Trailer designated for combined road/rail use.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Overhang wagon</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Empty rail wagon added to the loaded wagons, when goods are longer than the loaded wagon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Un-containerized cargo (breakbulk)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cargoes in bulk not stuffed in equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Blocks</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A piece of equipment that is normally a piece of wood to fix cargo (e.g. coils) during transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box pallet non-exchangeable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A box pallet which cannot be exchanged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck being transported</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A road vehicle capable of carrying goods which is being carried on another means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truck and trailer combination being transported</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A road vehicle capable of carrying goods with an attached trailer which is being carried on another means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tractor and trailer being transported</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A trailer accompanied by a self-propelling tractor unit which is being carried on another means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Postal bag</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bag intended primarily for the conveyance of postal items.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Letter Tray</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tray intended primarily for the conveyance of letter mail items of size slightly exceeding C5, in which the items are stood on their long edge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roller Cage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Wheeled wire cage.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flats Tray</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tray intended primarily for the conveyance of letter mail items of from C5 up to in excess of C4, in which the items are stacked one on top of another. May also be used for letter mail smaller items stood on their long edge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Out of bag parcel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Postal item which is conveyed individually, with only the wrapping provided by the mailer for protection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wheeled Platform</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Device, consisting of a flat surface mounted on a wheels, which is designed for the conveyance of items which may safely be stacked. Normally also equipped with a handle to allow the device to be easily manoeuvred.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container non-compliant with the Customs Convention on Containers</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The container is not compliant with the Customs Convention on Containers.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box pallet EUR Y non exchangeable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A euro-pallet of type Y that may not be exchanged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BPZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll Pallet 1</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>80 X 60 cm pallet on casters.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Flat bottomed inland cargo vessel for canals and rivers with or without own propulsion for the purpose of transported goods. (Synonym: Lighter).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Boxcar</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An enclosed railway goods wagon.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chassis</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wheeled carriage onto which an ocean container is mounted for inland conveyance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment item as defined by ISO for transport. It must be of: A) permanent character, strong enough for repeated use; B) designed to facilitate the carriage of goods, by one or more modes of transport, without intermediate reloading; C) fitted with devices for its ready handling, particularly.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deadlight (panel)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A set of panels fixed inside a porthole.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll Pallet 2</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>120 X 60 cm pallet on casters.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container gantry crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A fixed gantry crane ashore for container handling operations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mobile crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A mobile crane for handling operations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Floating crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A crane mounted on a dedicated vessel.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ship's equipment crane</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A crane mounted on a ship for handling operations.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Conveyor belt</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rolling carpet belt.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Forklift</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment device for handling and moving goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Stacking equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment device for stacking goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Taillift</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment device at the rear of a truck for loading and unloading cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 0 - 1/2 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 80 X 60 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>On-board equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Equipment permanently on board a means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 1 - 1/1 EURO Pallet (GS1 Temporary Code)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 80 X 120 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 2</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 100 X 120 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DPO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>1/4 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 60 X 40 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exchangeable EUR flat pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flat euro-pallet that may be exchanged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>1/8 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 40 X 30 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wholesaler pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet provided by the wholesaler.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet 80 X 100 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet with dimensions 80 X 100 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet 60 X 100 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet with dimensions 60 X 100 cm.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oneway pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet need not be returned to the point of expedition.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Returnable pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet must be returned to the point of expedition.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottlecrate</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A container for the storage or movement of bottles, a.k.a. bottlerack.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A non-protected cylindrical container with a narrow neck made usually of glass or plastic which is especially used for liquids.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A lidded package which can be made of cardboard, wood, plastic,tin,etc.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EFZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>CHEP Eurobox</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A box mounted on a pallet base under the control of CHEP.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A package such as a box.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Display package</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A package used for the dispaly of goods, usually during a promotion.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Isothermic case</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A case used for products which require constant temperature control.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet modular collars 80*100</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Collars, with the dimensions 80cms * 100cms, which when fitted onto a pallet enable the pallet to be transformed into a box pallet with, if necessary, a lid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet modular collars 80*120</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Collars, with the dimensions 80cms * 120cms, which when fitted onto a pallet enable the pallet to be transformed into a box pallet with, if necessary, a lid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flat receptacle with low sides for carrying or holding articles.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll cage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A three sided cage mounted on wheels.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trolley</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A low cart for the transportation and storage of groceries, milk, etc.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EGI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Landside power generator</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A generator located landside at a terminal, used to provide electric power to a vessel or other means of transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EYP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Exchangeable EUR Y box pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A euro-pallet of type Y that may be exchanged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FPN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flat pallet EUR non exchangeable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flat euro-pallet that may not be exchanged.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FPR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flat pallet (railway property) non-exchangeable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A non-exchangeable flat pallet owned by a railroad.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lidded stackable rigid tray (CEN TS 14482:2002)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lidded stackable rigid tray compliant with CEN TS 14482:2002.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LAR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lashing rope</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A rope for lashing cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Load/unload device on equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A mechanical device used in the loading and/or unloading of cargo into and from transport equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MPA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Movable panel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A panel which can be moved.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A platform on which goods can be stacked in order to facilitate the movement by a forklift or sling.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PBP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Identified private box pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A box pallet identified as being privately owned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PFP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Identified private flat pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flat pallet identified as being privately owned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Platform</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A piece of equipment normally having a flat surface, or prepared for carrying cargo with a specific shape.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PPA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Protecting panel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A panel used for protection.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Portable stove</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A portable heating unit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flat car</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A railway wagon without raised sides or ends.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reefer generator</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A generator used to control the temperature in temperature-controlled transport equipment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RGF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ground facility</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Storage tank or facility capable of receiving shipment of goods or commodity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rope</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rope used in the securing of cargo.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rail car</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>To identify that the equipment is a rail car.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SPP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Identified special pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A pallet identified as special.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>STR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Strap</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow strip of flexible material.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Swap body</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Rectangular equipment unit without wheels, which can be mounted on a chassis or positioned on legs.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trailer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A vehicle without motive power, designed for the carriage of cargo and to be towed by a motor vehicle.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tarpaulin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Waterproof material, e.g. canvas, to spread over cargo to protect it from getting wet.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tackles</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification of loading tackle used (sheets, ropes, chains, etc.), as specified in DCU 9 to CIM Article 13; and of containers, as specified in Articles 5 and 10 of Annex III to CIM (CIM 17).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TSU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tarpaulin support</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A device to support a tarpaulin.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ULD (Unit load device)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An aircraft container or pallet.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

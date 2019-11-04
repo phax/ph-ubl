@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>PaymentMeansCode</ShortName>
+      <LongName xml:lang="en">Payment Means Code</LongName>
+      <LongName Identifier="listID">UN/EDIFACT EDED 4461</LongName>
+      <Version>18B</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PaymentMeansCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_PaymentMeansCode_D18B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Instrument not defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Not defined legally enforceable agreement between two or more parties (expressing a contractual right or a right to the payment of money).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Automated clearing house credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the automated clearing house system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Automated clearing house debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the automated clearing house system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand debit reversal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A request to reverse an ACH debit transaction to a demand deposit account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand credit reversal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A request to reverse a credit transaction to a demand deposit account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a demand deposit account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hold</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Indicates that the bank should hold the payment for collection by the beneficiary or other instructions.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National or regional clearing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Indicates that the payment should be made using the national or regional clearing.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>In cash</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by currency (including bills and coins) in circulation, including checking account deposits.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings credit reversal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A request to reverse an ACH credit transaction to a savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings debit reversal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A request to reverse an ACH debit transaction to a savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bookentry credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit entry between two accounts at the same bank branch. Synonym: house credit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bookentry debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit entry between two accounts at the same bank branch. Synonym: house debit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand cash concentration/disbursement (CCD) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit account using the CCD payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand cash concentration/disbursement (CCD) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a demand deposit account using the CCD payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand corporate trade payment (CTP) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit account using the CTP payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cheque</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by a pre-printed form on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Banker's draft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Issue of a banker's draft in payment of the funds.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Certified banker's draft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cheque drawn by a bank on itself or its agent. A person who owes money to another buys the draft from a bank for cash and hands it to the creditor who need have no fear that it might be dishonoured.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bank cheque (issued by a banking or similar establishment)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by a pre-printed form, which has been completed by a financial institution, on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill of exchange awaiting acceptance</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on the debtor but not yet accepted by the debtor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Certified cheque</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by a pre-printed form stamped with the paying bank's certification on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient .</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Local cheque</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Indicates that the cheque is given local to the recipient.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand corporate trade payment (CTP) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a demand deposit account using the CTP payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand corporate trade exchange (CTX) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit account using the CTX payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand corporate trade exchange (CTX) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a demand account using the CTX payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by credit movement of funds from one account to another.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Debit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by debit movement of funds from one account to another.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand cash concentration/disbursement plus (CCD+) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit account using the CCD+ payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH demand cash concentration/disbursement plus (CCD+) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a demand deposit account using the CCD+ payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH prearranged payment and deposit (PPD)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A consumer credit transaction made through the ACH system to a demand deposit or savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings cash concentration/disbursement (CCD) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a demand deposit or savings account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings cash concentration/disbursement (CCD) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a savings account using the CCD payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings corporate trade payment (CTP) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a savings account using the CTP payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings corporate trade payment (CTP) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a savings account using the CTP payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings corporate trade exchange (CTX) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a savings account using the CTX payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>40</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings corporate trade exchange (CTX) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a savings account using the CTX payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings cash concentration/disbursement plus (CCD+) credit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A credit transaction made through the ACH system to a savings account using the CCD+ payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment to bank account</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an arrangement for settling debts that is operated by the Post Office.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ACH savings cash concentration/disbursement plus (CCD+) debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transaction made through the ACH system to a savings account using the CCD+ payment format.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Accepted bill of exchange</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on the debtor and accepted by the debtor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>45</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Referenced home-banking credit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A referenced credit transfer initiated through home-banking.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>46</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Interbank debit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transfer via interbank means.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>47</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Home-banking debit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A debit transfer initiated through home-banking.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>48</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bank card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by means of a card issued by a bank or other financial institution.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>49</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Direct debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The amount is to be, or has been, directly debited to the customer's bank account.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>50</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment by postgiro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A method for the transmission of funds through the postal system rather than through the banking system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>FR, norme 6 97-Telereglement CFONB (French Organisation for Banking Standards)  - Option A</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A French standard procedure that allows a debtor to pay an amount due to a creditor. The creditor will forward it to its bank, which will collect the money on the bank account of the debtor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>52</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Urgent commercial payment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment order which requires guaranteed processing by the most appropriate means to ensure it occurs on the requested execution date, provided that it is issued to the ordered bank before the agreed cut-off time.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>53</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Urgent Treasury Payment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment order or transfer which must be executed, by the most appropriate means, as urgently as possible and before urgent commercial payments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment made by means of credit card.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>55</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Debit card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment made by means of debit card.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>56</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bankgiro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment will be, or has been, made by bankgiro.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>57</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Standing agreement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The payment means have been previously agreed between seller and buyer and thus are not stated again.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>58</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SEPA credit transfer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Credit transfer inside the Single Euro Payment Area (SEPA) system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>59</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SEPA direct debit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Direct debit inside the Single Euro Payment Area (SEPA) system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>60</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by one person to another, signed by the maker, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by the debtor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>62</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by the debtor and endorsed by a bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>63</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by the debtor and endorsed by a third party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor and endorsed by a third party, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>64</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by a bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by the bank to another person, signed by the bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by a bank and endorsed by another bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by the bank to another person, signed by the bank and endorsed by another bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by a third party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by a third party to another person, signed by the third party, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promissory note signed by a third party and endorsed by a bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment by an unconditional promise in writing made by a third party to another person, signed by the third party and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>68</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Online payment service</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment will be made or has been made by an online payment service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>70</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by the creditor on the debtor</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on the debtor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>74</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by the creditor on a bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on a bank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>75</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by the creditor, endorsed by another bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor, endorsed by another bank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>76</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by the creditor on a bank and endorsed by a third party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on a bank and endorsed by a third party.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>77</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by the creditor on a third party</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by the creditor on a third party.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>78</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bill drawn by creditor on third party, accepted and endorsed by bank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bill drawn by creditor on third party, accepted and endorsed by bank.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not transferable banker's draft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Issue a bankers draft not endorsable.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not transferable local cheque</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Issue a cheque not endorsable in payment of the funds.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reference giro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Ordering customer tells the bank to use the payment system 'Reference giro'. Used in the Finnish national banking system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>94</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Urgent giro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Ordering customer tells the bank to use the bank service 'Urgent Giro' when transferring the payment. Used in Finnish national banking system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>95</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Free format giro</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Ordering customer tells the ordering bank to use the bank service 'Free Format Giro' when transferring the payment. Used in Finnish national banking system.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>96</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Requested method for payment was not used</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>If the requested method for payment was or could not be used, this code indicates that.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>97</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Clearing between partners</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Amounts which two partners owe to each other to be compensated in order to avoid useless payments.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

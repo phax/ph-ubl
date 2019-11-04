@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>ChannelCode</ShortName>
+      <LongName xml:lang="en">Channel Code</LongName>
+      <LongName Identifier="listID">UN/EDIFACT EDED 3155</LongName>
+      <Version>18B</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/ChannelCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_CommunicationMeansTypeCode_D18B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Circuit switching</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A process that, on demand, connects two or more data terminal equipments and permits the exclusive use of a data circuit between them until the connection is released (ISO).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>SITA</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Communications number assigned by Societe Internationale de Telecommunications Aeronautiques (SITA).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>ARINC</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Communications number assigned by Aeronautical Radio Inc.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AT&amp;T mailbox</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>AT&amp;T mailbox identifier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Peripheral device</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Peripheral device identification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>U.S. Defense Switched Network</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The switched telecommunications network of the United States Department of Defense.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>U.S. federal telecommunications system</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The switched telecommunications network of the United States government.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>World Wide Web</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Data exchange via the World Wide Web.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International calling country code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies that portion of an international telephone number representing the country code to be used when calling internationally.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Alternate telephone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the alternate telephone number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Videotex number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Code that identifies the communications number for the online videotex service.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cellular phone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies the cellular phone number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International telephone direct line</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The international telephone direct line number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>O.F.T.P. (ODETTE File Transfer Protocol)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>ODETTE File Transfer Protocol.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uniform Resource Location (URL)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identification of the Uniform Resource Location (URL) Synonym: World wide web address.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Very High Frequency (VHF) radio telephone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>VHF radio telephone.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>X.400 address for mail text</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The X.400 address accepting information in the body text of a message.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AS1 address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Address capable of receiving messages in accordance with the EDIINT/AS1 protocol for MIME based EDI .</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AS2 address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Address capable of receiving messages in accordance with the EDIINT/AS2 protocol.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>AS3 address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Address capable of receiving messages in accordance with the EDIINT/AS3 protocol.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>File Transfer Protocol</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Address capable for receiving message in accordance with the File Transfer Protocol (IETF RFC 959 et. al.).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inmarsat call number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Contact number based on Inmarsat.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Radio communication call sign</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Contact number for radio communication based on call sign.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cable address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The communication number identifies a cable address.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>EDI transmission</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Number identifying the service and service user.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Electronic mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Exchange of mail by electronic means.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Extension</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Telephone extension.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>File transfer access method</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>According to ISO.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telefax</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Device used for transmitting and reproducing fixed graphic material (as printing) by means of signals over telephone lines or other electronic transmission media.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>GEIS (General Electric Information Service) mailbox</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The communication number identifies a GEIS mailbox.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>IBM information exchange</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The communication number identifies an IBM IE mailbox.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Internal mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Internal mail address/number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Postal service document delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Postbox number</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The communication number identifies a postbox.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Packet switching</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The process of routing and transferring data by means of addressed packets so that a channel is occupied only during the transmission; upon completion of the transmission the channel is made available for the transfer of other packets (ISO).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>S.W.I.F.T.</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Communications address assigned by Society for Worldwide Interbank Financial Telecommunications s.c.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telephone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Voice/data transmission by telephone.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telegraph</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Text transmission via telegraph.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telex</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transmission of text/data via telex.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telemail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transmission of text/data via telemail.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Teletext</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transmission of text/data via teletext.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>TWX</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Communication service involving Teletypewriter machines connected by wire or electronic transmission media. Teletypewriter machines are the devices used to send and receive signals and produce hardcopy from them.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>X.400 address</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The X.400 address.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pager</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Identifies that the communication number is for a pager.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>International telephone switchboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The international telephone switchboard number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National telephone direct line</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The national telephone direct line number.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>National telephone switchboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The national telephone switchboard number.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

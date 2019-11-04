@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>TransportModeCode</ShortName>
+      <LongName xml:lang="en">Transport Mode Code</LongName>
+      <LongName Identifier="listID">UNECE Recommendation 19 - Codes for Modes of Transport</LongName>
+      <Version>18B</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/TransportModeCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_TransportModeCode_2.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport mode not specified</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport mode has not been specified.
+
+Notes:
+1) This code can be used when the mode is not known or when information on is not available at the time of issuing the document concerned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Maritime transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of goods and/or persons is by sea.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rail transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of goods and/or persons is by rail.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Road transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of goods and/or persons is by road.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Air transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of goods and/or persons is by air.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mail</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Method to convey goods is by mail.
+
+Notes:
+1) This code is provided for practical reasons, despite the fact that mail is not a genuine mode of transport. In many countries, the value of merchandise exported by mail is considerable, but the exporter or importer concerned would be unable to state by which mode postal items had been conveyed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Multimodal transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Method to convey goods and/or persons is by multimodal transport.
+
+Notes:
+1) This code is provided for practical reasons, despite the fact that multimodal transport is not a genuine mode of transport.
+It can be used when goods are carried by at least two different modes from a place at which the goods are taken in charge
+by a transport operator to a place designated for delivery, on the basis of one transport contract. (Operations of pick-up and
+delivery of goods carried out in the performance of a single mode of transport, as defined in such a contract, shall not be
+considered as multimodal transport).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Fixed transport installations</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of item is via a fixed transport installation.
+
+Notes:
+1) This code applies to installations for continuous transport such as pipelines, ropeways and electric power lines.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Inland water transport</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Transport of goods and/or persons is by inland water transport.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport mode not applicable</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The mode of transport is not applicable.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

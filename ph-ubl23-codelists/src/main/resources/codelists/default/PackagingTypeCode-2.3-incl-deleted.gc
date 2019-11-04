@@ -1,0 +1,4744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>PackagingTypeCode</ShortName>
+      <LongName xml:lang="en">Packaging Type Code</LongName>
+      <LongName Identifier="listID">UNECE Recommendation 21 - Codes for Passengers, Types of Cargo,
+      Packages and Packaging Materials (with Complementary Codes for Package Names)</LongName>
+      <Version>10e_2019</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/PackagingTypeCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">jar:https://www.unece.org/fileadmin/DAM/cefact/recommendations/rec21/rec21.zip!/rec21_Rev10e_Annex-V-VI_2019.xls</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="status" Use="optional">
+         <ShortName>Status</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="required">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="numericcode" Use="required">
+         <ShortName>NumericCode</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1D</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plywood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1F</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, flexible</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A packaging container of flexible construction.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1G</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, fibre</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1W</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34 or 35</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2C</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, super bulk</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A cloth plastic or paper based bag having the dimensions of the pallet on which it is constructed.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, polybag</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of plastic bag, typically used to wrap promotional pieces, publications, product samples, and/or catalogues.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 or 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, aluminium</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4C</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, natural wood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4D</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plywood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4F</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, reconstituted wood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4G</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, fibreboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5L</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5M</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6H</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25 or 33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6P</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 24 or 25 or 33 or 34 or 62 or 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, car</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of portable container designed to store equipment for carriage in an automobile.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22 or 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A case made of wood for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8A</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A platform or open-ended box, made of wood, on which goods are retained for ease of mechanical handling during transport and storage.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8B</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A receptacle, made of wood, on which goods are retained for ease of mechanical handling during transport and storage.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8C</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bundle, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Loose or unpacked pieces of wood tied or wrapped together.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, fibre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of fibre used for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, paper</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of paper for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of wood for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Aerosol</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 60cms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 60 centimeters (cms).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, shrinkwrapped</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet load secured with transparent plastic film that has been wrapped around and then shrunk tightly.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, 100cms * 110cms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard sized pallet of dimensions 100centimeters by 110 centimeters (cms).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Clamshell</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cone</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Container used in the transport of linear material such as yarn.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ball</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A spherical containment vessel for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>46</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ampoule, non-protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ampoule, protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Atomizer</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Capsule</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>B4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Belt</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A band use to retain multiple articles together.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bobbin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottlecrate / bottlerack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Board</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bundle</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 to 65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Balloon, non-protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A receptacle made of flexible material with an open or closed top.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bunch</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 to 65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bucket</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bale, compressed</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bale, non-compressed</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow-necked cylindrical shaped vessel without external protective packing material.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>32 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Balloon, protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow-necked cylindrical shaped vessel with external protective packing material.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>32 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, non-protected, bulbous</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow-necked bulb shaped vessel without external protective packing material.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bolt</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Butt</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, protected bulbous</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow-necked bulb shaped vessel with external protective packing material.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, for liquids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Board, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>BZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bars, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, rectangular</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, beer</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Churn</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>32 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, with handle and spout</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Creel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coffer</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chest</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Canister</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 or 22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coffin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cask</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Coil</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flat package usually made of fibreboard from/to which product is often hung or attached.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, not otherwise specified as transport equipment</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carboy, non-protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carboy, protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cartridge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Package containing a charge such as propelling explosive for firearms or ink toner for a printer.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Carton</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22 to 24</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cup</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cover</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage, roll</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Can, cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cylinder</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Canvas</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, multiple layer, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cage, Commonwealth Handling Equipment Pool (CHEP)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A box mounted on a pallet base under the control of CHEP.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, iron</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Demijohn, non-protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, bulk, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Dispenser</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Demijohn, protected</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, polystyrene</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, one layer no cover, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, plastic tray</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27 or 29</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27 or 29</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>DY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, two layers no cover, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27 or 29</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ED</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, with pallet base, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, isothermic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>EN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Envelope</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flexibag</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flexible containment bag made of plastic, typically for the transportation bulk non-hazardous cargoes using standard size shipping containers.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, fruit</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, framed</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flexitank</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flexible containment tank made of plastic, typically for the transportation bulk non-hazardous cargoes using standard size shipping containers.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Firkin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Flask</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Footlocker</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Filmpack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Frame</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Foodtainer</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cart, flatbed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Wheeled flat bedded device on which trays or other regular shaped items are packed for transportation purposes.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>94</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>FX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, flexible container</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 to 66</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bottle, gas</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A narrow-necked metal cylinder for retention of liquefied or compressed gas.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>31 or 35</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Girder</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, gallon</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A container with a capacity of one gallon.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, glass</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of glass for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, containing horizontally stacked flat items</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Tray containing flat items stacked on top of one another.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, gunny</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A sack made of gunny or burlap, used for transporting coarse commodities, such as grains, potatoes, and other agricultural products.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>63 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>GZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Girders, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Basket, with handle, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hogshead</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hanger</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A purpose shaped device with a hook at the top for hanging items from a rail.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>HR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Hamper</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, wooden</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, cardboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ID</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, display, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, show</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, flow</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flexible tubular package or skin, possibly transparent, often used for containment of foodstuffs (e.g. salami sausage).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 or 62</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, paper wrapped</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package, cardboard, with bottle grip-holes</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Packaging material made out of cardboard that facilitates the separation of individual glass or plastic bottles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray, rigid, lidded stackable (CEN TS 14482:2002)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Lidded stackable rigid tray compliant with CEN TS 14482:2002.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ingot</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>IZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ingots, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, jumbo</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A flexible containment bag, widely used for storage, transportation and handling of powder, flake or granular materials. Typically constructed from woven polypropylene (PP) fabric in the form of cubic bags.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, rectangular</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jug</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jar</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jutebag</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 or 65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>JY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Keg</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A set of articles or implements used for a specific purpose.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Luggage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A collection of bags, cases and/or containers which hold personal belongings for a journey.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 61 to 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Log</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lot</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>01 to 03</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Lug</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wooden box for the transportation and storage of fruit or vegetables.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Liftvan</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wooden or metal container used for packing household goods and personal effects.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22 to 24</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>LZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Logs, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment box made of metal for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, multiply</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, milk</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ME</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of containment box made of metal for retaining substances or articles, not otherwise specified as transport equipment.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of metal for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sack, multi-wall</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mat</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, plastic wrapped</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel wrapped with plastic for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43 or 61 to 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>MX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Matchbox</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Not available</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged, single unit</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unpacked or unpackaged, multiple units</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Nest</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net, tube, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>NV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Net, tube, textile</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, CHEP 40 cm x 60 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 40 centimeters x 60 centimeters.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, CHEP 80 cm x 120 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 80 centimeters x 120 centimeters.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, CHEP 100 cm x 120 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 100 centimeters x 120 centimeters.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, AS 4068-1993</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Australian standard pallet of dimensions 115.5 centimeters x 116.5 centimeters.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, ISO T11</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>ISO standard pallet of dimensions 110 centimeters x 110 centimeters, prevalent in Asia - Pacific region.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Platform, unspecified weight or dimension</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A pallet equivalent shipping platform of unknown dimensions or unknown weight.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Block</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A solid piece of a hard substance, such as granite, having one or more flat sides.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Octabin</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A standard cardboard container of large dimensions for storing for example vegetables, granules of plastics or other dry products.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Container, outer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of containment box that serves as the outer shipping container, not otherwise specified as transport equipment.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 0 - 1/2 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 80 X 60 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 1 - 1/1 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 80 X 120 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet ISO 2 – 2/1 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 100 X 120 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>1/4 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 60 X 40 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>1/8 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard pallet with dimensions 40 X 30 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Synthetic pallet ISO 1</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A standard pallet with standard dimensions 80 x 120cm made of a synthetic material for hygienic reasons.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ON</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Synthetic pallet ISO 2</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A standard pallet with standard dimensions 100 x 120cm made of a synthetic material for hygienic reasons.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wholesaler pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet provided by the wholesaler.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet 80 X 100 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet with dimensions 80 X 100 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet 60 X 100 cm</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet with dimensions 60 X 100 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oneway pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet need not be returned to the point of expedition</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Returnable pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet must be returned to the point of expedition.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Large bag, pallet sized</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A non-rigid container made of fabric, paper, plastic, etc, with an opening at the top which can be closed and which is suitable for use on pallets</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>A wheeled pallet with raised rim (81 x 67 x 135)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wheeled pallet with raised rim for the storing and transporting of loads. Dimensions: 81 x 67 x 135 cm (length x width x height).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>A Wheeled pallet with raised rim (81 x 72 x 135)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wheeled pallet with raised rim for the storing and transporting of loads. Dimensions: 81 x 72 x 135 cm (length x width x height).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>OZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wheeled pallet with raised rim ( 81 x 60 x 16)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A wheeled pallet with raised rim for the storing and transporting of loads. Dimensions: 81 x 60 x 16 cm (length x width x height).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Two sided cage on wheels with fixing strap</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A two sided cage mounted on wheels with fixing strap. Dimensions: 900 x 770 x 1513 cm (length x width x height).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trolley</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A low cart for the transportation and storage of groceries, milk, etc.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oneway pallet ISO 0 - 1/2 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Oneway pallet with dimensions 80 X 60 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oneway pallet ISO 1 - 1/1 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Oneway pallet with dimensions 80 X 120 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Oneway pallet ISO 2 - 2/1 EURO Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Oneway pallet with dimensions 100 X 120 cm.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>O6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet with exceptional dimensions</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Pallet with non-standard dimensions</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>P2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pan</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A shallow, wide, open container, usually of metal.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Packet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Small package.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, box Combined open-ended box and pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Parcel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 61 to 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 100cms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 100 centimeters (cms).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, modular, collars 80cms * 120cms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard sized pallet of dimensions 80 centimeters by 120 centimeters (cms).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pen</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A small open top enclosure for retaining animals.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plate</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pitcher</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipe</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Punnet</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Package</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Standard packaging unit.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pail</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plank</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pouch</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Piece</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A loose or unpacked article.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Receptacle, plastic</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment vessel made of plastic for retaining substances or articles.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 31 to 33 or 41 to 43 or 61 to 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pot</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tray</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pipes, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Platform or open-ended box, usually made of wood, on which goods are retained for ease of mechanical handling during transport and storage.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Plates, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>PZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Planks, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel, non-removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, steel, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium, non-removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, aluminium, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic, non-removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Drum, plastic, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden, bung type</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Barrel, wooden, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel, non-removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, steel, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic, non-removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Jerrican, plastic, removable head</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 33</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, wooden, natural wood, ordinary</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, wooden, natural wood, with sift proof walls</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic, expanded</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>QS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Box, plastic, solid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rod</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Ring</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rack, clothing hanger</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reel</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cylindrical rotatory device with a rim at each end on which materials are wound.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Roll</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rednet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Containment material made of red mesh netting for retaining articles (e.g. trees).</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rods, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slab</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16 or 17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Crate, shallow</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spindle</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sea-chest</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>22 or 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sachet</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Skid</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A low movable platform or pallet to facilitate the handling and transport of goods.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, skeleton</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Slipsheet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Hard plastic sheeting primarily used as the base on which to stack goods to optimise the space within a container. May be used as an alternative to a palletized packaging.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheetmetal</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Spool</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A packaging container used in the transport of such items as wire, cable, tape and yarn.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheet, plastic wrapping</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Case, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheet</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Suitcase</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23 or 61 to 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Envelope, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Shrinkwrapped</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods retained in a transparent plastic film that has been wrapped around and then shrunk tightly on to the goods.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sleeve</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>69</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sheets, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>T1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tablet</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A loose or unpacked article in the form of a bar, block or piece.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tub</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tea-chest</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 to 23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube, collapsible</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>61 to 65</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tyre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A ring made of rubber and/or metal surrounding a wheel.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank container, generic</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A specially constructed container for transporting liquids and gases in bulk.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tierce</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank, rectangular</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tub, with lid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tin</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>21 or 22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tun</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>44 or 45</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trunk</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, tote</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A capacious bag or basket.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 or 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tube, with nozzle</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A tube made of plastic, metal or cardboard fitted with a nozzle, containing a liquid or semi-liquid product, e.g. silicon.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>31 or 32</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pallet, triwall</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A lightweight pallet made from heavy duty corrugated board.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tank, cylindrical</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>34 or 35</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>TZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Tubes, in bundle/bunch/truss</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Uncaged</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>UN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Unit</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of package composed of a single item or object, not otherwise specified as a unit of transport equipment.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 25 or 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vat</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, gas (at 1031 mbar and 15°C)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vial</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vanpack</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A type of wooden crate.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>99</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, liquid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VO</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, large particles (“nodules”)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vacuum-packed</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, liquefied gas (at abnormal temperature/pressure)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Vehicle</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A self-propelled means of conveyance.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, granular particles (“grains”)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, scrap metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Loose or unpacked scrap metal transported in bulk form.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>VY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bulk, solid, fine particles (“powders”)</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A reusable container made of metal, plastic, textile, wood or composite materials used to facilitate transportation of bulk solids and liquids in manageable volumes.</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26 or 62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wickerbottle</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>42 or 43</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel, pressurised &gt; 10 kpa</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium, pressurised &gt; 10 kpa</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, pressure 10 kpa</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, steel, liquid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, aluminium, liquid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, liquid</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, without coat/liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, coated</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, with liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, woven plastic, coated and liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plastic film</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile with out coat/liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, natural wood, with inner liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, coated</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, with liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, textile, coated and liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plywood, with inner liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>WZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, reconstituted wood, with inner liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, without inner coat/liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, sift proof</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, woven plastic, water resistant</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, plastics film</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, without inner coat/liner</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, sift proof</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, textile, water resistant</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper, multi-wall</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>XK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, paper, multi-wall, water resistant</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in steel drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in steel crate box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in aluminium drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in aluminium crate</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in wooden box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plywood drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plywood box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in fibre drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in fibreboard box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in plastic drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, plastic receptacle in solid plastic box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in steel drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in steel crate box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in aluminium drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in aluminium crate</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in wooden box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in plywood drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in wickerwork hamper</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in fibre drum</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>33 or 34</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in fibreboard box</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>24 or 25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in expandable plastic pack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 or 63</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>YZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Composite packaging, glass receptacle in solid plastic pack</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 or 24</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, paper, multi-wall</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZB</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bag, large</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZC</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, paper, multi-wall, water resistant</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZD</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, solids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZF</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, solids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZG</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, pressurised</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZH</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, pressurised</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZJ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, with structural equipment, liquids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZK</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, rigid plastic, freestanding, liquids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZL</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, solids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZM</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, solids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, pressurised</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZP</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, pressurised</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZQ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, rigid plastic, liquids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZR</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite, flexible plastic, liquids</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, composite</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26 or 62 to 64</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZT</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, fibreboard</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, flexible</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, metal, other than steel</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZW</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, natural wood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, plywood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZY</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Intermediate bulk container, reconstituted wood</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>23 to 26</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>0</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

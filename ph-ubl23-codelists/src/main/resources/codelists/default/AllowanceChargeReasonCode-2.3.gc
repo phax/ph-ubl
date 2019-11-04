@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>AllowanceChargeReasonCode</ShortName>
+      <LongName xml:lang="en">Allowance Charge Reason Code</LongName>
+      <LongName Identifier="listID">UN/EDIFACT EDED 5189</LongName>
+      <Version>18B</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode:2.3</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/AllowanceChargeReasonCode-2.3.gc</LocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_AllowanceChargeReasonCode_D18B.xsd</AlternateFormatLocationUri>
+      <Agency>
+         <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
+         <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" Lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Column Id="description" Use="optional">
+         <ShortName>Description</ShortName>
+         <Data Type="string" Lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Agreed settlement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment made based on an agreement between partners.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Below specification goods</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods of inferior quality.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Damaged goods</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment due to the damage of goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Short delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment made because the delivered quantity was less than expected.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Price query</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment due to a price query.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Proof of delivery required</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The buyer requires that proof of delivery be made before payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Payment on account</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer is to make payment later.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Returnable container charge included</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment made to deduct the returnable container charge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Invoice error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Invoice not in accordance with the order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Costs for draft</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Cost of draft has been deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Bank charges</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Bank charges have been deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Agent commission</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Agent commission has been deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Counter claim</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer claims an existing (financial) obligation from seller which (partly) offsets the outstanding invoice(s).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wrong delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Delivery not according to specifications.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods returned to agent</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods returned to agent.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods partly returned</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods partly returned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Transport damage</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods damaged in transit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods on consignment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer does not accept invoice(s) charge as it relates to goods where the ownership remains with the seller until sold.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Trade discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Trade discount deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deduction for late delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Penalty amount deducted for later delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Advertising costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Advertising costs deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Customs duties</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Customs duties deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Telephone and postal costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Telephone and postal costs deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Repair costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Repair costs deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Attorney fees</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Attorney fees deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Taxes</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Taxes deducted from payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reclaimed deduction</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer reclaims an unspecified deduction from the invoice(s) (to be) paid.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>See separate advice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer or seller refers to separate correspondence about a related shipment(s) and/or invoice(s) and/or a payment(s).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer refused to take delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer refused to take delivery.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Direct payment to seller</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer states to have paid to seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Buyer disagrees with due date</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer disagrees with due date.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods not delivered</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer has not received the goods.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Late delivery</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Goods delivered too late.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Quoted as paid to you</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Factor informs the seller that a certain invoice(s) was paid by the buyer directly to the seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Goods returned</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer returned the goods to seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Invoice not received</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer claims he did not receive the invoice for which payment is requested.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>37</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit note to debtor/not to us</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Factor informs the seller that he did not receive copy of a credit note sent to the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>38</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deducted bonus</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer has/will deduct a bonus he is entitled to from the payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>39</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deducted discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer has/will deduct the discount he is entitled to from the payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>40</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deducted freight costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer has/will deduct freight costs from the payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Deduction against other invoices</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Deduction against invoices already settled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Credit balance(s)</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer makes use of existing credit balance(s) to offset (partly) the outstanding invoice(s).</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>43</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reason unknown</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Factor informs the seller that the reason of a commercial dispute raised by the buyer is unknown.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>44</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Awaiting message from seller</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer or factor are waiting for a (reply) message from the seller before a commercial dispute can be settled.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>45</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Debit note to seller</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer issued debit note to seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>46</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Discount beyond terms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer has taken a discount larger than the discount terms agreed with the seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>47</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>See buyer's letter</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>See correspondence from buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>48</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Allowance/charge error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Error made by seller in the amount of allowance/charge.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>49</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Substitute product</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Product delivered not fully according to specification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>50</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Terms of sale error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Terms of sale not according to purchase order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>51</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Required data missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A message sent by buyer to seller or by seller to buyer did not contain data required to take action/decision.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>52</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wrong invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Invoice issued to wrong party.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>53</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Duplicate invoice</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Invoice sent twice.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>54</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Weight error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Weight not in accordance with the order.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>55</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Additional charge not authorized</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Additional charge not authorised.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>56</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer states that calculated discount on the invoice(s) is wrongly calculated.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>57</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Price change</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Price has been changed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>58</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Variation</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment is a variation from an agreed value.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>59</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Chargeback</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Balance of one or more items charged back to seller.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>60</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Offset</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Allocation of one or more debit items to one or more credit items or vice-versa.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>61</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Indirect payment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Payment in settlement of an invoice has been made to a party other than the designated creditor.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>62</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Financial reassignment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Previously assigned invoice/credit note is being reassigned.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>63</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Reinstatement of chargeback/offset</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Reversal or cancellation of a chargeback and/or offset relating to an incorrect balance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>64</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Expecting new terms</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Buyer expects that seller revises the terms of payment of an invoice.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>65</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Settlement to agent</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Invoice has been/to be paid to seller's agent.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>66</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cash discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment has been made due to the application of a cash discount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>67</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Delcredere costs</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Costs deducted from a total amount to pay for the services of central payment.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>68</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Early payment allowance adjustment</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment results from the application of an early payment allowance.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>69</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect due date for monetary amount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has been made because an incorrect due date was referred to with regard to the monetary amount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>70</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wrong monetary amount resulting from incorrect free goods quantity</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has been made because of a wrong monetary amount resulting from an incorrect free goods quantity.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>71</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Rack or shelf replenishment service by a supplier</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment due to the replenishment of the racks or shelves by a supplier.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>72</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Temporary special promotion</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment due to a temporary special promotion.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>73</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Difference in tax rate</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment due to a difference in tax rate.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>74</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Quantity discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment due to a quantity discount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>75</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Promotion discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment due to a promotion discount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>76</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Cancellation deadline passed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The cancellation has occurred after the deadline.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>77</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Pricing discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment has been made due to the application of a pricing discount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>78</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Volume discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Discount for reaching or exceeding an agreed accumulated volume.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>79</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Sundry discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has been made due to the application of a sundry discount.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>80</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card holder signature missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the card holder not signing the filing document.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>81</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card expiry date missing</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the card acceptor not specifying the expiry date within the filing document.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>82</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card number error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the card acceptor specifying an erroneous card number within the filing document.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>83</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card expired</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the card acceptor specifying an expired expiry date within the filing document or electronic data.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>84</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Test card transaction</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to a test card transaction, used for installing, maintaining or debugging purposes.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>85</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Permission limit exceeded</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the permission limit defined by card issuer or card company was exceeded without prior authorisation. Synonym: Floor limit.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>86</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wrong authorisation code</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the authorisation code provided did not fit to the specified transaction.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>87</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Wrong authorised amount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the specified amount not meeting the authorised amount for the transaction.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>88</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Authorisation failed</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the authorisation needed had failed.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>89</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Card acceptor data error</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The adjustment was made due to the data regarding the card acceptor is erroneous.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>90</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Treasury management service charge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Charge for the service of treasury management.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>91</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Agreed discount</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is that a mutually agreed discount has been applied.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>92</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Expediting fee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is that a fee for expediting has been applied.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>93</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Invoicing fee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is that a fee for invoicing has been applied.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>94</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Freight charge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is that freight charges has been applied.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>95</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Small order processing service charge</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is that a fee for processing of a small order (an order below a defined threshold) has been applied.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>96</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Currency exchange differences</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment made due to a change in a currency exchange rate.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>97</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Insolvency</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>An adjustment made due to the partner's inability to pay open debts.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>98</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect references</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect references.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>99</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect identification of the buyer</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect identification of the buyer.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>100</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Incorrect product identification</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Adjustment has taken place because of incorrect product identification.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>101</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>New employee</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a new employee.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>102</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Employee retirement</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is the retirement of an employee.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>103</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Salary change</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a salary change.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>104</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Parental leave</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>The reason for the adjustment is a parental leave.</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ZZZ</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Mutually defined</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list.</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>
