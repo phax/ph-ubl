@@ -49,7 +49,7 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
 /**
  * Utility class that creates:
  * <ul>
- * <li>src/main/jaxb/bindings21.xjb - the JAXB binding file</li>
+ * <li>src/main/jaxb/bindings22.xjb - the JAXB binding file</li>
  * </ul>
  *
  * @author Philip Helger
