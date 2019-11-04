@@ -135,6 +135,16 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-ubl23</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-ubl23-codelists</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-ubltr</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -163,6 +173,8 @@
     <module>ph-ubl21-codelists</module>
     <module>ph-ubl22</module>
     <module>ph-ubl22-codelists</module>
+    <module>ph-ubl23</module>
+    <module>ph-ubl23-codelists</module>
     <module>ph-ubltr</module>
     <module>ph-ublpe</module>
   </modules>

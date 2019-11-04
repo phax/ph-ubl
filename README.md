@@ -4,7 +4,7 @@
 ﻿
 This is the readme file for version 5.x or later.
 
-Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1 and 2.2 documents.
+Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2 and 2.3 documents.
 The following projects are contained:
 
 * **ph-ubl-testfiles** contains all UBL test files (used only in Maven test scope)
@@ -15,6 +15,8 @@ The following projects are contained:
 * **ph-ubl21-codelists** contains the generated enums for the UBL 2.1 codelists (optional artefact)
 * **ph-ubl22** contains the generated JAXB files for UBL 2.2 as well as the helper classes.
 * **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
+* **ph-ubl23** contains the generated JAXB files for UBL 2.3 as well as the helper classes.
+* **ph-ubl23-codelists** contains the generated enums for the UBL 2.3 codelists (optional artefact)
 * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 
@@ -28,6 +30,7 @@ Old projects:
 # News and noteworthy
 
 * v6.2.0 - work in progress
+    * Added support for UBL 2.3 CSPRD01
 * v6.1.3 - 2019-10-17
     * Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
 * v6.1.2 - 2019-05-07
@@ -67,6 +70,7 @@ An example for reading and writing UBL 2.1 files can be found in the test file [
 An example to create an invoice from scratch can be found in the test code [CreateInvoiceFromScratchFuncTest.java](https://github.com/phax/ph-ubl/blob/master/ph-ubl21/src/test/java/com/helger/ubl21/CreateInvoiceFromScratchFuncTest.java).
 
 # Maven usage generic
+
 You can use ph-ubl as a BOM (bill of material) when you include the following in the `dependencyManagement` section of your POM:
 
 ```xml
@@ -80,6 +84,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 ```
 
 # Maven usage UBL 2.0
+
 To read and write UBL 2.0 documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -101,6 +106,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 ```
 
 # Maven usage UBL 2.1
+
 To read and write UBL 2.1 documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -122,6 +128,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 ```
 
 # Maven usage UBL 2.2
+
 To read and write UBL 2.2 documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -143,6 +150,7 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 ```
 
 # Maven usage UBL-tr
+
 To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -154,6 +162,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 ```
 
 # Maven usage UBL-PE
+
 To read and write UBL-PE 2.0 documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -172,35 +181,38 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl-api/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl20/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl21/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl22/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
-  * http://repo1.maven.org/maven2/com/helger/ph-ublpe/
-  * http://repo1.maven.org/maven2/com/helger/ph-ubltr/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl-api/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl20/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl21/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl22/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl23/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl23-codelists/
+* http://repo1.maven.org/maven2/com/helger/ph-ublpe/
+* http://repo1.maven.org/maven2/com/helger/ph-ubltr/
 
 Old artefacts:
 
-  * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
+* http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
 
-  * http://repo1.maven.org/maven2/com/helger/ph-commons/
-  * http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
-  * http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
+* http://repo1.maven.org/maven2/com/helger/ph-commons/
+* http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
+* http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
 # Other UBL sites
 
 For further information on the Universal Business Language can be found on the following pages:
 
 * https://www.oasis-open.org/committees/ubl/
-    * UBL 2.0: http://docs.oasis-open.org/ubl/os-UBL-2.0/ 
-    * UBL 2.1: http://docs.oasis-open.org/ubl/os-UBL-2.1/ 
-    * UBL 2.2: http://docs.oasis-open.org/ubl/os-UBL-2.2/ 
+    * UBL 2.0: https://docs.oasis-open.org/ubl/os-UBL-2.0/ 
+    * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
+    * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
+    * UBL 2.3: https://docs.oasis-open.org/ubl/csprd01-UBL-2.3/ 
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
