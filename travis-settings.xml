@@ -25,4 +25,13 @@
       <password>${env.SONATYPE_PASSWORD}</password>
     </server>
   </servers>
+  <mirrors>
+    <!-- Enforce Apache repo -->
+    <mirror>
+      <id>maven-central</id>
+      <name>Maven Central</name>
+      <url>http://repo1.maven.org/maven2</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
 </settings>
