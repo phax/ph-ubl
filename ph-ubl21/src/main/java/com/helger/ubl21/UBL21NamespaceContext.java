@@ -21,6 +21,7 @@ import javax.xml.XMLConstants;
 
 import com.helger.commons.annotation.Singleton;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -42,6 +43,7 @@ public class UBL21NamespaceContext extends MapBasedNamespaceContext
     addMapping ("cac", CUBL21.XML_SCHEMA_CAC_NAMESPACE_URL);
     addMapping ("cbc", CUBL21.XML_SCHEMA_CBC_NAMESPACE_URL);
     addMapping ("cec", CUBL21.XML_SCHEMA_CEC_NAMESPACE_URL);
+    addMapping ("ds", CXMLDSig.NAMESPACE_URI);
   }
 
   @Nonnull
