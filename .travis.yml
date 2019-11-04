@@ -29,15 +29,15 @@ jobs:
     - stage: test
       jdk: openjdk8
       script:
-        - mvn test -B -P coverage
+        - mvn test -B -P coverage --settings travis-settings.xml
       after_success:
         - mvn deploy --settings travis-settings.xml -DskipTests=true -B -P travis-deploy
         - bash <(curl -s https://codecov.io/bash)
     - stage: test
       jdk: openjdk11
       script:
-        - mvn test -B
+        - mvn test -B --settings travis-settings.xml
     - stage: test
       jdk: openjdk12
       script:
-        - mvn test -B
+        - mvn test -B --settings travis-settings.xml
