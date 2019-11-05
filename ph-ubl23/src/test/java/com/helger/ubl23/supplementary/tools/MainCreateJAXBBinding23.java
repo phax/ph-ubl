@@ -145,7 +145,7 @@ public final class MainCreateJAXBBinding23
 
   public static void main (final String [] args)
   {
-    // UBL 2.23
+    // UBL 2.3
     {
       System.out.println ("UBL 2.3");
       final IMicroDocument eDoc = _createBaseDoc ();
