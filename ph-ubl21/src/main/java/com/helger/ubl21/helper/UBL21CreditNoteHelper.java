@@ -62,10 +62,10 @@ public final class UBL21CreditNoteHelper
    * @return The created {@link InvoicedQuantityType}
    */
   @Nonnull
-  public static InvoicedQuantityType cloneToInvoicedQuantity (@Nonnull final CreditedQuantityType src)
+  public static InvoicedQuantityType cloneToInvoicedQuantity (@Nonnull final CreditedQuantityType aSrc)
   {
     final InvoicedQuantityType ret = new InvoicedQuantityType ();
-    src.cloneTo (ret);
+    aSrc.cloneTo (ret);
     return ret;
   }
 
