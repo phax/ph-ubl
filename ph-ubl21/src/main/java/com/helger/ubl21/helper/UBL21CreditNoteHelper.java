@@ -242,6 +242,7 @@ public final class UBL21CreditNoteHelper
       aDst.setBillingReference (retBillingReference);
     }
     aDst.setBuyerCustomerParty (aSrc.getBuyerCustomerParty () == null ? null : aSrc.getBuyerCustomerParty ().clone ());
+    aDst.setBuyerReference (aSrc.getBuyerReference () == null ? null : aSrc.getBuyerReference ().clone ());
     {
       final List <DocumentReferenceType> retContractDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getContractDocumentReference ())

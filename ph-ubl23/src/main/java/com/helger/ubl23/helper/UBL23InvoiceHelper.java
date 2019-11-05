@@ -51,7 +51,6 @@ import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;
  * Some helper methods based on Invoice data types.
  *
  * @author Philip Helger
- * @since 6.1.3
  */
 @Immutable
 public final class UBL23InvoiceHelper
@@ -199,6 +198,9 @@ public final class UBL23InvoiceHelper
         }
       aDst.setSubCreditNoteLine (retSubLine);
     }
+    aDst.setTaxInclusiveLineExtensionAmount (aSrc.getTaxInclusiveLineExtensionAmount () == null ? null
+                                                                                                : aSrc.getTaxInclusiveLineExtensionAmount ()
+                                                                                                      .clone ());
     aDst.setTaxPointDate (aSrc.getTaxPointDate () == null ? null : aSrc.getTaxPointDate ().clone ());
     {
       final List <TaxTotalType> retTaxTotal = new ArrayList <> ();
@@ -206,6 +208,7 @@ public final class UBL23InvoiceHelper
         retTaxTotal.add (aItem == null ? null : aItem.clone ());
       aDst.setTaxTotal (retTaxTotal);
     }
+    aDst.setUBLExtensions (aSrc.getUBLExtensions () == null ? null : aSrc.getUBLExtensions ().clone ());
     aDst.setUUID (aSrc.getUUID () == null ? null : aSrc.getUUID ().clone ());
     // Not in CreditNote
     /*
@@ -254,6 +257,7 @@ public final class UBL23InvoiceHelper
       aDst.setBillingReference (retBillingReference);
     }
     aDst.setBuyerCustomerParty (aSrc.getBuyerCustomerParty () == null ? null : aSrc.getBuyerCustomerParty ().clone ());
+    aDst.setBuyerReference (aSrc.getBuyerReference () == null ? null : aSrc.getBuyerReference ().clone ());
     {
       final List <DocumentReferenceType> retContractDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getContractDocumentReference ())
