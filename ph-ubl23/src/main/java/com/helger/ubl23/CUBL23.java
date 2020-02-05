@@ -16,9 +16,11 @@
  */
 package com.helger.ubl23;
 
+import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.io.resource.ClassPathResource;
 
 /**
  * Constants for UBL 2.3 handling.
@@ -28,6 +30,12 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 @Immutable
 public final class CUBL23
 {
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return CUBL23.class.getClassLoader ();
+  }
+
   /** The classpath relative directory where the main XSDs reside */
   public static final String SCHEMA_DIRECTORY = "schemas/ubl23/maindoc/";
 
@@ -42,6 +50,25 @@ public final class CUBL23
 
   /** The csc namespace URL */
   public static final String XML_SCHEMA_CSC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2";
+
+  public static final ClassPathResource XSD_COMMON_AGGREGATE_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-CommonAggregateComponents-2.3.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_COMMON_BASIC_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-CommonBasicComponents-2.3.xsd",
+                                                                                             _getCL ());
+  public static final ClassPathResource XSD_COMMON_EXTENSION_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-CommonExtensionComponents-2.3.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_COMMON_SIGNATURE_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-CommonSignatureComponents-2.3.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_EXTENSION_CONTENT_DATA_TYPE = new ClassPathResource ("/schemas/ubl23/common/UBL-ExtensionContentDataType-2.3.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_QUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl23/common/UBL-QualifiedDataTypes-2.3.xsd",
+                                                                                          _getCL ());
+  public static final ClassPathResource XSD_SIGNATURE_AGGREGATE_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-SignatureAggregateComponents-2.3.xsd",
+                                                                                                    _getCL ());
+  public static final ClassPathResource XSD_SIGNATURE_BASIC_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-SignatureBasicComponents-2.3.xsd",
+                                                                                                _getCL ());
+  public static final ClassPathResource XSD_UNQUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl23/common/UBL-UnqualifiedDataTypes-2.3.xsd",
+                                                                                            _getCL ());
 
   @PresentForCodeCoverage
   private static final CUBL23 s_aInstance = new CUBL23 ();
