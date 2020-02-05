@@ -133,6 +133,9 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
   @Since ("2.3")
   PROOF_OF_REEXPORTATION(oasis.names.specification.ubl.schema.xsd.proofofreexportation_23.ProofOfReexportationType.class,
                          "UBL-ProofOfReexportation-2.3.xsd"),
+  @Since ("2.3")
+  PROOF_OF_REEXPORTATION_REQUEST(oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType.class,
+                                 "UBL-ProofOfReexportationRequest-2.3.xsd"),
   QUALIFICATION_APPLICATION_REQUEST (oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_23.QualificationApplicationRequestType.class,
                                      "UBL-QualificationApplicationRequest-2.3.xsd"),
   QUALIFICATION_APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_23.QualificationApplicationResponseType.class,
@@ -143,9 +146,6 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
   REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_23.ReminderType.class, "UBL-Reminder-2.3.xsd"),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_23.RemittanceAdviceType.class,
                      "UBL-RemittanceAdvice-2.3.xsd"),
-  @Since ("2.3")
-  REQUEST_FOR_PROOF_OF_REEXPORTATION(oasis.names.specification.ubl.schema.xsd.requestforproofofreexportation_23.RequestForProofOfReexportationType.class,
-                                     "UBL-RequestForProofOfReexportation-2.3.xsd"),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_23.RequestForQuotationType.class,
                          "UBL-RequestForQuotation-2.3.xsd"),
   RETAIL_EVENT (oasis.names.specification.ubl.schema.xsd.retailevent_23.RetailEventType.class,

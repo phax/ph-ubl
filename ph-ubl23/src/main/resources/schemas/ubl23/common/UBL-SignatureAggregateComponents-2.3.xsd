@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/common/UBL-SignatureAggregateComponents-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/common/UBL-SignatureAggregateComponents-2.3.xsd
+  Generated on:      2020-01-28 20:38z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
@@ -13,12 +13,10 @@
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
                schemaLocation="UBL-SignatureBasicComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -28,55 +26,11 @@
    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
                schemaLocation="UBL-xmldsig1-schema-2.3.xsd"/>
 
-          
-   <!-- ===== Element Declarations ===== -->
-   <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+          <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
    <xsd:complexType name="SignatureInformationType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Signature Information. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>This class captures a single signature and optionally associates to a signature in the document with the corresponding identifier.</ccts:Definition>
-               <ccts:ObjectClass>Signature Information</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Signature Information. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>This specifies the identifier of the signature distinguishing it from other signatures.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Signature Information</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="sbc:ReferencedSignatureID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Signature Information. Referenced Signature Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>This associates this signature with the identifier of a signature business object in the document.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Signature Information</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Referenced Signature Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="sbc:ReferencedSignatureID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="ds:Signature" minOccurs="0" maxOccurs="1">
            <xsd:annotation>
                <xsd:documentation>This is a single digital signature as defined by the W3C specification.</xsd:documentation>

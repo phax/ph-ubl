@@ -1,381 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/maindoc/UBL-ExpressionOfInterestRequest-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/maindoc/UBL-ExpressionOfInterestRequest-2.3.xsd
+  Generated on:      2020-01-28 20:53z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestRequest-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="../common/UBL-CommonBasicComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.3.xsd"/>
-   <!-- ===== Element Declarations ===== -->
    <xsd:element name="ExpressionOfInterestRequest"
-                type="ExpressionOfInterestRequestType">
-      <xsd:annotation>
-         <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
-      </xsd:annotation>
-   </xsd:element>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+                type="ExpressionOfInterestRequestType"/>
    <xsd:complexType name="ExpressionOfInterestRequestType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Expression Of Interest Request. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>An expression of interest to a tendering process. An Economic Operator can demonstrate interest in a tendering process issuing an Expression Of Interest document to the contracting party. Upon reception, the Contracting Party registers the interest of the Economic Operator sending the relevant information for the tendering process.</ccts:Definition>
-               <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
-                     <ccts:DataType>Indicator. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ContractFolderID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Contract Folder Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier, assigned by the sender, for the process file (i.e., record) to which this document belongs.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Contract Folder Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
-                     <ccts:DataType>Date. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
-                     <ccts:DataType>Time. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ContractName" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Contract Name. Name</ccts:DictionaryEntryName>
-                     <ccts:Definition>Short title of a contract associated with this Expression of Interest.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Contract Name</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
-                     <ccts:DataType>Name. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:PreferredLanguageLocaleCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Preferred Language_ Locale Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the locale in which the language in the required documents is preferred.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Preferred Language</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Locale Code</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataTypeQualifier>Language</ccts:DataTypeQualifier>
-                     <ccts:DataType>Language_ Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Note</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Validity_ Period. Period</ccts:DictionaryEntryName>
-                     <ccts:Definition>The period for which the expression of interest is valid.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Period</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>A reference to another document associated with this document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Economic Operator Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Economic Operator issuing the expression of interest.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Economic Operator Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Economic Operator Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Economic Operator Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ContractingParty" minOccurs="1" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Contracting Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Contracting Party or the contracting parties in case of joint procurement.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Contracting Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Contracting Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Contracting Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ProcurementProject" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Procurement Project</ccts:DictionaryEntryName>
-                     <ccts:Definition>An overall definition of this procurement project.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Procurement Project</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Procurement Project</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Procurement Project</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ContractFolderID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ContractName" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:PreferredLanguageLocaleCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:ContractingParty" minOccurs="1" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ProcurementProject" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ProcurementProjectLotReference"
                       minOccurs="0"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Expression Of Interest Request. Procurement Project Lot Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>One of the procurement project lots into which this contract can be split.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Expression Of Interest Request</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Procurement Project Lot Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Procurement Project Lot Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Procurement Project Lot Reference</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+                      maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
 </xsd:schema>

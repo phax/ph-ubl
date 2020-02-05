@@ -1,55 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/common/UBL-CommonSignatureComponents-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/common/UBL-CommonSignatureComponents-2.3.xsd
+  Generated on:      2020-01-28 20:38z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
             xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
                schemaLocation="UBL-SignatureAggregateComponents-2.3.xsd"/>
-   <!-- ===== Element Declarations ===== -->
    <xsd:element name="UBLDocumentSignatures" type="UBLDocumentSignaturesType"/>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="UBLDocumentSignaturesType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>UBL Document Signatures. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>This class collects all signature information for a document.</ccts:Definition>
-               <ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="sac:SignatureInformation" minOccurs="1" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>UBL Document Signatures. Signature Information</ccts:DictionaryEntryName>
-                     <ccts:Definition>Each of these is scaffolding for a single digital signature.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature Information</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature Information</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Signature Information</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element ref="sac:SignatureInformation" minOccurs="1" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
 </xsd:schema>

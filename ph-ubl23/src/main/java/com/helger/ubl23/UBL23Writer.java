@@ -71,13 +71,13 @@ import oasis.names.specification.ubl.schema.xsd.packinglist_23.PackingListType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 import oasis.names.specification.ubl.schema.xsd.productactivity_23.ProductActivityType;
 import oasis.names.specification.ubl.schema.xsd.proofofreexportation_23.ProofOfReexportationType;
+import oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType;
 import oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_23.QualificationApplicationRequestType;
 import oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_23.QualificationApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.quotation_23.QuotationType;
 import oasis.names.specification.ubl.schema.xsd.receiptadvice_23.ReceiptAdviceType;
 import oasis.names.specification.ubl.schema.xsd.reminder_23.ReminderType;
 import oasis.names.specification.ubl.schema.xsd.remittanceadvice_23.RemittanceAdviceType;
-import oasis.names.specification.ubl.schema.xsd.requestforproofofreexportation_23.RequestForProofOfReexportationType;
 import oasis.names.specification.ubl.schema.xsd.requestforquotation_23.RequestForQuotationType;
 import oasis.names.specification.ubl.schema.xsd.retailevent_23.RetailEventType;
 import oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_23.SelfBilledCreditNoteType;
@@ -270,6 +270,9 @@ public final class UBL23Writer
 /** Create a writer builder for ProofOfReexportation.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<ProofOfReexportationType> proofOfReexportation(){return UBL23WriterBuilder.create(ProofOfReexportationType.class);}
+/** Create a writer builder for ProofOfReexportationRequest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL23WriterBuilder<ProofOfReexportationRequestType> proofOfReexportationRequest(){return UBL23WriterBuilder.create(ProofOfReexportationRequestType.class);}
 /** Create a writer builder for QualificationApplicationRequest.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<QualificationApplicationRequestType> qualificationApplicationRequest(){return UBL23WriterBuilder.create(QualificationApplicationRequestType.class);}
@@ -288,9 +291,6 @@ public final class UBL23Writer
 /** Create a writer builder for RemittanceAdvice.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<RemittanceAdviceType> remittanceAdvice(){return UBL23WriterBuilder.create(RemittanceAdviceType.class);}
-/** Create a writer builder for RequestForProofOfReexportation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23WriterBuilder<RequestForProofOfReexportationType> requestForProofOfReexportation(){return UBL23WriterBuilder.create(RequestForProofOfReexportationType.class);}
 /** Create a writer builder for RequestForQuotation.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<RequestForQuotationType> requestForQuotation(){return UBL23WriterBuilder.create(RequestForQuotationType.class);}

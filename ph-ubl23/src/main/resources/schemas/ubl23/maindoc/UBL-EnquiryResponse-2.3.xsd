@@ -1,321 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/maindoc/UBL-EnquiryResponse-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/maindoc/UBL-EnquiryResponse-2.3.xsd
+  Generated on:      2020-01-28 20:53z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="../common/UBL-CommonBasicComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.3.xsd"/>
-   <!-- ===== Element Declarations ===== -->
-   <xsd:element name="EnquiryResponse" type="EnquiryResponseType">
-      <xsd:annotation>
-         <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
-      </xsd:annotation>
-   </xsd:element>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+   <xsd:element name="EnquiryResponse" type="EnquiryResponseType"/>
    <xsd:complexType name="EnquiryResponseType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Enquiry Response. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document sent by a responder to a requester answering a particular enqury.</ccts:Definition>
-               <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>2.0.5</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>NES</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BasicProcurementProcess</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BPP-1001</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for this document, assigned by the responder.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
-                     <ccts:DataType>Indicator. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date, assigned by the responder, at which this enquiry response was issued.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
-                     <ccts:DataType>Date. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time, assigned by the responder, at which this enquiry response was issued.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
-                     <ccts:DataType>Time. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text-only enquiry response description pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:RequestorParty" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Requestor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing the enquiry.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Requestor</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ResponderParty" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Responder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that has to respond to the enquiry.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Responder</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ParentDocumentReference" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Parent_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>Reference to the enquiry that this response refers to.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Parent</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:RequestorParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:ResponderParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:ParentDocumentReference" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cac:AdditionalDocumentReference"
                       minOccurs="0"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>References to relevant documents for the response such as the Contract folder or the lot in the eTendering.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Attachment" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Attachment</ccts:DictionaryEntryName>
-                     <ccts:Definition>Attachment that includes file-based response.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Attachment</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Attachment</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Attachment</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Attachment" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
 </xsd:schema>

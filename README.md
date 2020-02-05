@@ -35,6 +35,7 @@ Old projects:
     * Fixed a classloader issue in ph-ublpe in OSGI environments
     * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
         * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
+   * Updated to UBL 2.3 CSPRD02
 * v6.2.0 - 2019-11-05
     * Added support for UBL 2.3 CSPRD01
 * v6.1.3 - 2019-10-17

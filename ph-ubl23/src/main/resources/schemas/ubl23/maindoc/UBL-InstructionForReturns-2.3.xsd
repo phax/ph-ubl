@@ -1,337 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/maindoc/UBL-InstructionForReturns-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/maindoc/UBL-InstructionForReturns-2.3.xsd
+  Generated on:      2020-01-28 20:53z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="../common/UBL-CommonBasicComponents-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.3.xsd"/>
-   <!-- ===== Element Declarations ===== -->
-   <xsd:element name="InstructionForReturns" type="InstructionForReturnsType">
-      <xsd:annotation>
-         <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
-      </xsd:annotation>
-   </xsd:element>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+   <xsd:element name="InstructionForReturns" type="InstructionForReturnsType"/>
    <xsd:complexType name="InstructionForReturnsType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Instruction For Returns. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document used to initiate a return of goods. The producer is requesting the return of products that are not selling well, either to use in other places or to free up rack or shelf space.</ccts:Definition>
-               <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>2.0.5</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>NES</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BasicProcurementProcess</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BPP-1001</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:AlternativeBusinessTerms>Document Number, Instruction for Returns Number</ccts:AlternativeBusinessTerms>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
-                     <ccts:DataType>Indicator. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
-                     <ccts:DataType>Date. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
-                     <ccts:DataType>Time. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Note</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>A reference to another document associated with this document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:SellerSupplierParty" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The seller.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Supplier Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:RetailerCustomerParty" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Retailer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The retailer.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Retailer</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Customer Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ManufacturerParty" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Manufacturer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The manufacturer.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Manufacturer</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Shipment" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Shipment</ccts:DictionaryEntryName>
-                     <ccts:Definition>The shipment.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Shipment</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Shipment</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:SellerSupplierParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:RetailerCustomerParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:ManufacturerParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:Shipment" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:InstructionForReturnsLine"
                       minOccurs="1"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Instruction For Returns. Instruction For Returns Line</ccts:DictionaryEntryName>
-                     <ccts:Definition>A line providing details about one type of article to be returned.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Instruction For Returns</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Instruction For Returns Line</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Instruction For Returns Line</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Instruction For Returns Line</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+                      maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
 </xsd:schema>

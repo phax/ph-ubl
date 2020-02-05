@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
-  Module:            xsd/common/UBL-SignatureBasicComponents-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
+  Release Date:      30 January 2020
+  Module:            xsdrt/common/UBL-SignatureBasicComponents-2.3.xsd
+  Generated on:      2020-01-28 20:38z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
             xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
@@ -15,15 +15,11 @@
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
                schemaLocation="UBL-QualifiedDataTypes-2.3.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
                schemaLocation="UBL-UnqualifiedDataTypes-2.3.xsd"/>
-   <!-- ===== Element Declarations ===== -->
    <xsd:element name="ReferencedSignatureID" type="ReferencedSignatureIDType"/>
-   <!-- ===== Type Definitions ===== -->
-   <!-- ===== Basic Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="ReferencedSignatureIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>

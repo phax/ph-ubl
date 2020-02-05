@@ -309,6 +309,11 @@
       <package name="oasis.names.specification.ubl.schema.xsd.proofofreexportation_23" />
     </schemaBindings>
   </bindings>
+  <bindings schemaLocation="../resources/schemas/ubl23/maindoc/UBL-ProofOfReexportationRequest-2.3.xsd" node="/xsd:schema">
+    <schemaBindings>
+      <package name="oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23" />
+    </schemaBindings>
+  </bindings>
   <bindings schemaLocation="../resources/schemas/ubl23/maindoc/UBL-QualificationApplicationRequest-2.3.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_23" />
@@ -337,11 +342,6 @@
   <bindings schemaLocation="../resources/schemas/ubl23/maindoc/UBL-RemittanceAdvice-2.3.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="oasis.names.specification.ubl.schema.xsd.remittanceadvice_23" />
-    </schemaBindings>
-  </bindings>
-  <bindings schemaLocation="../resources/schemas/ubl23/maindoc/UBL-RequestForProofOfReexportation-2.3.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="oasis.names.specification.ubl.schema.xsd.requestforproofofreexportation_23" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/ubl23/maindoc/UBL-RequestForQuotation-2.3.xsd" node="/xsd:schema">
