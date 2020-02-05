@@ -153,6 +153,11 @@
         <artifactId>ph-ublpe</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-ubl-dian</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   
@@ -177,6 +182,7 @@
     <module>ph-ubl23-codelists</module>
     <module>ph-ubltr</module>
     <module>ph-ublpe</module>
+    <module>ph-ubl-dian</module>
   </modules>
   
   <build>

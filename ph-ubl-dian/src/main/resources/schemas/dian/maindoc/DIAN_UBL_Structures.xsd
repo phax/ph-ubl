@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+	xmlns:dcc="dian:gov:co:facturaelectronica:DianCommonComponents-2"
+	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+	targetNamespace="dian:gov:co:facturaelectronica:Structures-2-1" elementFormDefault="qualified">
+	<import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"/>
+	<import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
+	<!-- ===== Element Declarations ===== -->
+	<element name="DianExtensions" type="sts:DianExtensionsType">
+		<annotation>
+			<documentation>Extension DIAN - DianExtensions (raíz)</documentation>
+		</annotation>
+	</element>
+	<!-- ===== Type Definitions ===== -->
+	<complexType name="DianExtensionsType">
+		<sequence>
+			<element name="InvoiceControl" type="sts:InvoiceControl" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation>Datos Resolución de Numeración de Facturas</documentation>
+				</annotation>
+			</element>
+			<element name="InvoiceSource" type="cac:CountryType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>Grupo de información de país del documento electrónico</documentation>
+				</annotation>
+			</element>
+			<element name="SoftwareProvider" type="sts:SoftwareProvider" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>Gupo de informaciones sobre el prestador de servicios</documentation>
+				</annotation>
+			</element>
+			<element name="SoftwareSecurityCode" type="udt:IdentifierType" minOccurs="1"
+				maxOccurs="1">
+				<annotation>
+					<documentation>Huella del software que autorizó la DIAN al Obligado a Facturar Electrónicamente o al Proveedor Tecnológico</documentation>
+				</annotation>
+			</element>
+			<element name="AuthorizationProvider" type="sts:AuthorizationProvider"/>
+			<element name="QRCode" minOccurs="1" maxOccurs="1" type="anyURI"/>
+			<element name="AdditionalMonetaryTotal" type="sts:AdditionalMonetaryTotal" minOccurs="0"
+				maxOccurs="0"/>
+			<element ref="cac:LegalMonetaryTotal" minOccurs="0"/>
+			<element name="FinancialInformation" type="sts:FinancialInformation" minOccurs="0"
+				maxOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="InvoiceControl">
+		<annotation>
+			<documentation>Datos Resolución de Numeración de Facturas</documentation>
+		</annotation>
+		<sequence>
+			<element name="InvoiceAuthorization" type="udt:NumericType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">
+						Número autorización: Número del código de la resolución otorgada para la numeración
+					</documentation>
+				</annotation>
+			</element>
+			<element name="AuthorizationPeriod" type="cac:PeriodType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">
+						Grupo de informaciones relativas a la fecha de autorización de la numeración
+					</documentation>
+				</annotation>
+			</element>
+			<element name="AuthorizedInvoices" type="sts:AuthrorizedInvoices" minOccurs="1"
+				maxOccurs="1">
+				<annotation>
+					<documentation>Grupo de informaciones del rango de numeración autorizado para este emisor</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AuthrorizedInvoices">
+		<sequence>
+			<element name="Prefix" type="string" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">
+						Prefijo establecido para el establecimiento
+					</documentation>
+				</annotation>
+			</element>
+			<element name="From" type="long" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">
+						Valor inicial del rango de numeración otorgado
+					</documentation>
+				</annotation>
+			</element>
+			<element name="To" type="long" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">
+						Valor final del rango de numeración otorgado
+					</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="SoftwareProvider">
+		<sequence>
+			<element name="ProviderID" type="sts:coID2Type" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>
+						Prestador de servicios: Datos del
+						Prestador de Servicios y el software utilizado
+						en la emisión de la factura. Un Obligado a
+						facturar puede ser también Prestador de
+						Servicios para sí mismo u otros, en cuyo caso
+						será Proveedor Tecnológico
+					</documentation>
+				</annotation>
+				<!--<element name="ProviderID" type="udt:IdentifierType" minOccurs="1" maxOccurs="1">-->
+			</element>
+			<element name="SoftwareID" type="udt:IdentifierType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>
+						Identificador Software: Identificador del software habilitado para la
+						emisión de facturas
+					</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AdditionalMonetaryTotal">
+		<sequence>
+			<element name="RepercussionsTotalTaxAmount" type="udt:AmountType" minOccurs="0"
+				maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">9.6 - Total impuestos repercutidos:
+						Suma de todos los impuestos repercutidos
+					</documentation>
+				</annotation>
+			</element>
+			<element name="RetainTotalTaxAmount" type="udt:AmountType" minOccurs="0" maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">9.7 - Total impuestos retenidos:
+						Suma de todos los impuestos retenidos
+					</documentation>
+				</annotation>
+			</element>
+			<element name="InvoiceTotalLocalCurrencyAmount" type="udt:AmountType" minOccurs="0"
+				maxOccurs="1">
+				<annotation>
+					<documentation xml:lang="es">9.12 - Total de Factura Peso Colombiano:
+						Obligatorio si es una factura con divisa extranjera
+					</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="FinancialInformation">
+		<annotation>
+			<documentation>
+				2.1.12 - 2.1.12 Información Financiera
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="Assignee" type="cac:PartyType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>12.3 - Cesionario: Información relativa al pago de la factura.</documentation>
+				</annotation>
+			</element>
+			<element name="PaymentDetails" type="cac:FinancialAccountType" minOccurs="1"
+				maxOccurs="1">
+				<annotation>
+					<documentation>12.4 - Datos del Pago: Datos del Pago</documentation>
+				</annotation>
+			</element>
+			<element name="Clause" type="udt:TextType" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>12.5 - Cláusula Cesión: Texto libre, explicativo sobre la cláusula de cesión</documentation>
+				</annotation>
+			</element>
+			<element name="DocumentReference" type="cac:DocumentReferenceType" minOccurs="0"
+				maxOccurs="unbounded">
+				<annotation>
+					<documentation>12.6 - Referencia Documentación Factoring: Referencia a un documento </documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="coID2Type">
+		<annotation>
+			<documentation>20181111: tipo para los documentos de identificación de Colombia</documentation>
+			<documentation xml:lang="en">
+				<ccts:UniqueID>UNDT000011</ccts:UniqueID>
+				<ccts:CategoryCode>CCT</ccts:CategoryCode>
+				<ccts:DictionaryEntryName>Identifier. Type</ccts:DictionaryEntryName>
+				<ccts:VersionID>1.0</ccts:VersionID>
+				<ccts:Definition>A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.</ccts:Definition>
+				<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</documentation>
+		</annotation>
+		<simpleContent>
+			<extension base="xsd:normalizedString">
+				<attribute name="schemeAgencyID" use="required">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC4</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme Agency. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The identification of the agency that maintains the identification scheme.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme Agency</ccts:ObjectClass>
+							<ccts:PropertyTermName>Identification</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+							<ccts:UsageRule>Defaults to the UN/EDIFACT data element 3055 code list.</ccts:UsageRule>
+						</documentation>
+					</annotation>
+					<simpleType>
+						<annotation>
+							<documentation>Código estadístico de DIAN en Naciones Unidas: 195</documentation>
+						</annotation>
+						<restriction base="xsd:string">
+							<enumeration value="195"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+				<attribute name="schemeAgencyName" use="required">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC5</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme Agency. Name. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>The name of the agency that maintains the identification scheme.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme Agency</ccts:ObjectClass>
+							<ccts:PropertyTermName>Agency Name</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Text</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+					<simpleType>
+						<annotation>
+							<documentation>Nombre estadístico de DIAN en Naciones Unidas: 195</documentation>
+						</annotation>
+						<restriction base="xsd:string">
+							<enumeration
+								value="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+				<attribute name="schemeID" use="required">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC2</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The identification of the identification scheme.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme</ccts:ObjectClass>
+							<ccts:PropertyTermName>Identification</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+					<!--use=optional|prohibited|required-->
+					<simpleType>
+						<annotation>
+							<documentation>11 	Registro civil</documentation>
+							<documentation>12 	Tarjeta de identidad</documentation>
+							<documentation>13 	Cédula de ciudadanía</documentation>
+							<documentation>21 	Tarjeta de extranjería</documentation>
+							<documentation>22 	Cédula de extranjería </documentation>
+							<documentation>31 	NIT de Colombia con DV	NIT-DV</documentation>
+							<documentation>32 	NIT de Colombia sin DV	NIT</documentation>
+							<documentation>41 	Pasaporte</documentation>
+							<documentation>42 	Documento de identificación extranjero </documentation>
+							<documentation>50 	NIT de otro país</documentation>
+							<documentation>91 	NUIP</documentation>
+						</annotation>
+						<restriction base="xsd:string">
+							<enumeration value="11"/>
+							<enumeration value="12"/>
+							<enumeration value="13"/>
+							<enumeration value="21"/>
+							<enumeration value="22"/>
+							<enumeration value="31"/>
+							<enumeration value="32"/>
+							<enumeration value="41"/>
+							<enumeration value="42"/>
+							<enumeration value="50"/>
+							<enumeration value="91"/>
+						</restriction>
+					</simpleType>
+				</attribute>
+				<attribute name="schemeName" type="xsd:string" use="optional">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC3</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme. Name. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>The name of the identification scheme.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme</ccts:ObjectClass>
+							<ccts:PropertyTermName>Name</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Text</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="schemeVersionID" type="xsd:normalizedString" use="optional">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC6</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme. Version. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The version of the identification scheme.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme</ccts:ObjectClass>
+							<ccts:PropertyTermName>Version</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="schemeDataURI" type="xsd:anyURI" use="optional">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC7</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme Data. Uniform Resource. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The Uniform Resource Identifier that identifies where the identification scheme data is located.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme Data</ccts:ObjectClass>
+							<ccts:PropertyTermName>Uniform Resource Identifier</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="schemeURI" type="xsd:anyURI" use="optional">
+					<annotation>
+						<documentation xml:lang="en">
+							<ccts:UniqueID>UNDT000011-SC8</ccts:UniqueID>
+							<ccts:CategoryCode>SC</ccts:CategoryCode>
+							<ccts:DictionaryEntryName>Identification Scheme. Uniform Resource. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The Uniform Resource Identifier that identifies where the identification scheme is located.</ccts:Definition>
+							<ccts:ObjectClass>Identification Scheme</ccts:ObjectClass>
+							<ccts:PropertyTermName>Uniform Resource Identifier</ccts:PropertyTermName>
+							<ccts:RepresentationTermName>Identifier</ccts:RepresentationTermName>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</simpleContent>
+		<!--bloque tomado de xPath: /xsd:schema/xsd:complexType[25]. - file: dian-ubl-2.1\xsd\common\UBL-DIAN-CommonComponets-2.1.xsd-->
+	</complexType>
+	<complexType name="AuthorizationProvider">
+		<annotation>
+			<documentation>
+				Informacion del Proveedor Autorizado (PA) por la DIAN
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="AuthorizationProviderID" type="sts:coID2Type" minOccurs="1" maxOccurs="1"
+			/>
+		</sequence>
+	</complexType>
+	<complexType name="QRCode">
+		<annotation>
+			<documentation>
+				Informacion sobre el QRCode.
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="QRCode" minOccurs="1" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+</schema>
