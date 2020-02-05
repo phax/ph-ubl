@@ -29,6 +29,7 @@ import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
 /**
@@ -58,7 +59,9 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
     final ICommonsList <ClassPathResource> ret = new CommonsArrayList <> ();
     if (aList.size () > 1)
       ret.addAll (aList.subList (0, aList.size () - 1));
-    ret.add (CDianUBL.DIAN_UBL_STRUCTURE_XSD);
+    ret.add (CUBL21.XSD_UNQUALIFIED_DATA_TYPES);
+    ret.add (CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS);
+    ret.add (CDianUBL.XSD_DIAN_UBL_STRUCTURE);
     ret.add (aList.getLast ());
     return ret;
   }
