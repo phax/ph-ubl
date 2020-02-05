@@ -49,7 +49,7 @@ public final class CUBL20
   public static final String XML_SCHEMA_CEC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
 
   public static final ClassPathResource XSD_CODELIST_CURRENCY_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
-                                                                                             _getCL ());
+                                                                                            _getCL ());
   public static final ClassPathResource XSD_CODELIST_LANGUAGE_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
                                                                                             _getCL ());
   public static final ClassPathResource XSD_CODELIST_MIME_MEDIA_TYPE_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
@@ -64,9 +64,9 @@ public final class CUBL20
                                                                                                  _getCL ());
   public static final ClassPathResource XSD_CORE_COMPONENT_PARAMETERS = new ClassPathResource ("/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd",
                                                                                                _getCL ());
-  public static final ClassPathResource XSD_EXTENSION_CONTENT_DATA_TYPE = new ClassPathResource ("/schemas/ubl20/common/UBL-ExtensionContentDataType-2.0.xsd",
+  public static final ClassPathResource XSD_EXTENSION_CONTENT_DATA_TYPE = new ClassPathResource ("/schemas/ubl20/common/UBL-ExtensionContentDatatype-2.0.xsd",
                                                                                                  _getCL ());
-  public static final ClassPathResource XSD_QUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl20/common/UBL-QualifiedDataTypes-2.0.xsd",
+  public static final ClassPathResource XSD_QUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd",
                                                                                           _getCL ());
   public static final ClassPathResource XSD_UNQUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
                                                                                             _getCL ());
