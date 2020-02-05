@@ -29,6 +29,7 @@ import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.ubl20.CUBL20;
 import com.helger.ubl20.EUBL20DocumentType;
 
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
@@ -46,29 +47,37 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
   DEBIT_NOTE (EUBL20DocumentType.DEBIT_NOTE),
   INVOICE (EUBL20DocumentType.INVOICE),
   SUMMARY_DOCUMENTS (SummaryDocumentsType.class,
-                     new CommonsArrayList <> ("/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd",
-                                              "/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
-                                              "/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
-                                              "/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
-                                              "/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
-                                              "/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd",
-                                              "/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd",
-                                              "/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd",
-                                              "/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd",
-                                              CUBLPE.SCHEMA_DIRECTORY + "common/UBLPE-SunatAggregateComponents-1.0.xsd",
-                                              CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd")),
+                     new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
+                                              CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
+                                              CUBL20.XSD_CODELIST_CURRENCY_CODE,
+                                              CUBL20.XSD_CODELIST_LANGUAGE_CODE,
+                                              CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
+                                              CUBL20.XSD_QUALIFIED_DATA_TYPES,
+                                              CUBL20.XSD_COMMON_BASIC_COMPONENTS,
+                                              CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                              CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
+                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                     "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                     _getCL ()),
+                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                     "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
+                                                                     _getCL ()))),
   VOIDED_DOCUMENTS (VoidedDocumentsType.class,
-                    new CommonsArrayList <> ("/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd",
-                                             "/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
-                                             "/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
-                                             "/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
-                                             "/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
-                                             "/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd",
-                                             "/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd",
-                                             "/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd",
-                                             "/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd",
-                                             CUBLPE.SCHEMA_DIRECTORY + "common/UBLPE-SunatAggregateComponents-1.0.xsd",
-                                             CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd"));
+                    new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
+                                             CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
+                                             CUBL20.XSD_CODELIST_CURRENCY_CODE,
+                                             CUBL20.XSD_CODELIST_LANGUAGE_CODE,
+                                             CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
+                                             CUBL20.XSD_QUALIFIED_DATA_TYPES,
+                                             CUBL20.XSD_COMMON_BASIC_COMPONENTS,
+                                             CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                             CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
+                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                    "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                    _getCL ()),
+                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                    "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
+                                                                    _getCL ())));
 
   @Nonnull
   private static ClassLoader _getCL ()
@@ -85,11 +94,10 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
-  private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
+  private EUBLPEDocumentType (@Nonnull final Class <?> aClass,
+                              @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (aXSDPaths, x -> new ClassPathResource (x, _getCL ())),
-                                       s -> StringHelper.trimEnd (s, "Type"));
+    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }
 
   @Nonnull
