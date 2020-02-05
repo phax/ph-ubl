@@ -19,20 +19,14 @@
 						<cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
 					</sts:InvoiceSource>
 					<sts:SoftwareProvider>
-						<sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:ProviderID>
+						<sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="11" schemeName="31">800197268</sts:ProviderID>
 						<sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">56f2ae4e-9812-4fad-9255-08fcfcd5ccb0</sts:SoftwareID>
 					</sts:SoftwareProvider>
 					<sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">81a8acf4f0f83c8908996203c767f256996a76fa981b50b466b8a1bf1c1e1067872ad1b0fe10a2d8eea5f4539b99288c</sts:SoftwareSecurityCode>
 					<sts:AuthorizationProvider>
-						<sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+						<sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="11" schemeName="31">800197268</sts:AuthorizationProviderID>
 					</sts:AuthorizationProvider>
-					<sts:QRCode>NroFactura=SETP990000007
-								NitFacturador=900508908
-								NitAdquiriente=900108281
-								FechaFactura=2019-06-20
-								ValorTotalFactura=14054.07
-								CUFE=3d794b1c5ca13446b4f41b30c7b698ee3569b4fcce67b5345338fe515108fa8402fbffecabc59bf7601469f74642f1cf
-								URL=https://catalogo-vpfe-hab.dian.gov.co/Document/FindDocument?documentKey=3d794b1c5ca13446b4f41b30c7b698ee3569b4fcce67b5345338fe515108fa8402fbffecabc59bf7601469f74642f1cf&amp;partitionKey=co|06|3d&amp;emissionDate=20190620</sts:QRCode>
+					<sts:QRCode>https://catalogo-vpfe-hab.dian.gov.co/Document/FindDocument?documentKey=3d794b1c5ca13446b4f41b30c7b698ee3569b4fcce67b5345338fe515108fa8402fbffecabc59bf7601469f74642f1cf&amp;partitionKey=co|06|3d&amp;emissionDate=20190620</sts:QRCode>
 				</sts:DianExtensions>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>		

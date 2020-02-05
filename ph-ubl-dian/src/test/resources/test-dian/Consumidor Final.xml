@@ -19,12 +19,12 @@
 						<cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
 					</sts:InvoiceSource>
 					<sts:SoftwareProvider>
-						<sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="6" schemeName="31">99998888</sts:ProviderID>
+						<sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="11" schemeName="31">99998888</sts:ProviderID>
 						<sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">20980788-349c-427a-aefd-a5674e7faf63</sts:SoftwareID>
 					</sts:SoftwareProvider>
 					<sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">31ab410dffb0fc76d44d3867514a8662963470093f5144240b0f6b066916569dfaf3d97dfe9d98bb2066713e8267a6f9</sts:SoftwareSecurityCode>
 					<sts:AuthorizationProvider>
-						<sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+						<sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="11" schemeName="31">800197268</sts:AuthorizationProviderID>
 					</sts:AuthorizationProvider>
 					<sts:QRCode>https://muisca.dian.gov.co/WebFacturaelectronica/paginas/VerificarFacturaElectronicaExterno.faces?TipoDocumento=1NroDocumento=PRUE980078932NITFacturador=890101815NumIdentAdquiriente=900108281Cufe=bf8b43bc09bdf01204dd2f1dcae2b51ea02e849f29257140fc00dc9b65aa953e</sts:QRCode>
 				</sts:DianExtensions>
