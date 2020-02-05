@@ -19,6 +19,7 @@ The following projects are contained:
 * **ph-ubl23-codelists** contains the generated enums for the UBL 2.3 codelists (optional artefact)
 * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
+* **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
 
 Old projects:
 
@@ -29,6 +30,11 @@ Old projects:
   
 # News and noteworthy
 
+* v6.2.1 - work in progress
+    * Added predefined constants for shared XSDs in the `CUBL..` classes
+    * Fixed a classloader issue in ph-ublpe in OSGI environments
+    * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
+        * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
 * v6.2.0 - 2019-11-05
     * Added support for UBL 2.3 CSPRD01
 * v6.1.3 - 2019-10-17
@@ -195,6 +201,18 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 </dependency>
 ```
 
+# Maven usage Dian UBL
+
+To read and write Dian UBL 2.1 documents add the following to your pom.xml to use this artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-ubl-dian</artifactId>
+  <version>6.2.1-SNAPSHOT</version>
+</dependency>
+```
+
 # Gradle considerations
 
 This project relies on JDK version based Maven profile activation.
@@ -203,18 +221,19 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
-* http://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl-api/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl20/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl21/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl22/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl23/
-* http://repo1.maven.org/maven2/com/helger/ph-ubl23-codelists/
-* http://repo1.maven.org/maven2/com/helger/ph-ublpe/
-* http://repo1.maven.org/maven2/com/helger/ph-ubltr/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl-api/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl20/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl21/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl22/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl23/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl23-codelists/
+* https://repo1.maven.org/maven2/com/helger/ph-ublpe/
+* https://repo1.maven.org/maven2/com/helger/ph-ubltr/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl-dian/
 
 Old artefacts:
 
@@ -222,9 +241,9 @@ Old artefacts:
   
 The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
 
-* http://repo1.maven.org/maven2/com/helger/ph-commons/
-* http://repo1.maven.org/maven2/org/slf4j/slf4j-api/
-* http://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
+* https://repo1.maven.org/maven2/com/helger/ph-commons/
+* https://repo1.maven.org/maven2/org/slf4j/slf4j-api/
+* https://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
 # Other UBL sites
 
