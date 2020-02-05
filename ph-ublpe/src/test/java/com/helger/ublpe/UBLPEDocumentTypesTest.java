@@ -30,7 +30,7 @@ import com.helger.ublpe.UBLPEDocumentTypes;
  *
  * @author Philip Helger
  */
-public final class UBLTRDocumentTypesTest
+public final class UBLPEDocumentTypesTest
 {
   @Test
   public void testGetAllNamespaces ()
