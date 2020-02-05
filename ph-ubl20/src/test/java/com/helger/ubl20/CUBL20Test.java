@@ -30,7 +30,7 @@ public final class CUBL20Test
   @Test
   public void testBasic () throws Exception
   {
-    assertTrue (CUBL20.XSD_CODELIST_CURRENTCY_CODE.exists ());
+    assertTrue (CUBL20.XSD_CODELIST_CURRENCY_CODE.exists ());
     assertTrue (CUBL20.XSD_CODELIST_LANGUAGE_CODE.exists ());
     assertTrue (CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE.exists ());
     assertTrue (CUBL20.XSD_CODELIST_UNIT_CODE.exists ());

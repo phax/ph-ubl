@@ -48,7 +48,7 @@ public final class CUBL20
   /** The cec namespace URL */
   public static final String XML_SCHEMA_CEC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
 
-  public static final ClassPathResource XSD_CODELIST_CURRENTCY_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
+  public static final ClassPathResource XSD_CODELIST_CURRENCY_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
                                                                                              _getCL ());
   public static final ClassPathResource XSD_CODELIST_LANGUAGE_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
                                                                                             _getCL ());
