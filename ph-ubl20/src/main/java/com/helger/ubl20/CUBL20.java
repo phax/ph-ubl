@@ -16,9 +16,11 @@
  */
 package com.helger.ubl20;
 
+import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.io.resource.ClassPathResource;
 
 /**
  * Constants for UBL 2.0 handling.
@@ -28,6 +30,12 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 @Immutable
 public final class CUBL20
 {
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return CUBL20.class.getClassLoader ();
+  }
+
   /** The classpath relative directory where the main XSDs reside */
   public static final String SCHEMA_DIRECTORY = "schemas/ubl20/maindoc/";
 
@@ -39,6 +47,29 @@ public final class CUBL20
 
   /** The cec namespace URL */
   public static final String XML_SCHEMA_CEC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
+
+  public static final ClassPathResource XSD_CODELIST_CURRENTCY_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd",
+                                                                                             _getCL ());
+  public static final ClassPathResource XSD_CODELIST_LANGUAGE_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd",
+                                                                                            _getCL ());
+  public static final ClassPathResource XSD_CODELIST_MIME_MEDIA_TYPE_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd",
+                                                                                                   _getCL ());
+  public static final ClassPathResource XSD_CODELIST_UNIT_CODE = new ClassPathResource ("/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd",
+                                                                                        _getCL ());
+  public static final ClassPathResource XSD_COMMON_AGGREGATE_COMPONENTS = new ClassPathResource ("/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_COMMON_BASIC_COMPONENTS = new ClassPathResource ("/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd",
+                                                                                             _getCL ());
+  public static final ClassPathResource XSD_COMMON_EXTENSION_COMPONENTS = new ClassPathResource ("/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_CORE_COMPONENT_PARAMETERS = new ClassPathResource ("/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd",
+                                                                                               _getCL ());
+  public static final ClassPathResource XSD_EXTENSION_CONTENT_DATA_TYPE = new ClassPathResource ("/schemas/ubl20/common/UBL-ExtensionContentDataType-2.0.xsd",
+                                                                                                 _getCL ());
+  public static final ClassPathResource XSD_QUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl20/common/UBL-QualifiedDataTypes-2.0.xsd",
+                                                                                          _getCL ());
+  public static final ClassPathResource XSD_UNQUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd",
+                                                                                            _getCL ());
 
   @PresentForCodeCoverage
   private static final CUBL20 s_aInstance = new CUBL20 ();
