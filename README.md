@@ -30,12 +30,12 @@ Old projects:
   
 # News and noteworthy
 
-* v6.2.1 - work in progress
+* v6.2.1 - 2020-02-06
     * Added predefined constants for shared XSDs in the `CUBL..` classes
     * Fixed a classloader issue in ph-ublpe in OSGI environments
     * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
         * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
-   * Updated to UBL 2.3 CSPRD02
+    * Updated to UBL 2.3 CSPRD02
 * v6.2.0 - 2019-11-05
     * Added support for UBL 2.3 CSPRD01
 * v6.1.3 - 2019-10-17
@@ -84,7 +84,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -98,7 +98,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -108,7 +108,7 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -120,7 +120,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -130,7 +130,7 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -142,7 +142,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -152,7 +152,7 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -164,7 +164,7 @@ To read and write UBL 2.3 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl23</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -174,7 +174,7 @@ To also use the generated enums for the UBL 2.3 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl23-codelists</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -186,7 +186,7 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubltr</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -198,7 +198,7 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ublpe</artifactId>
-  <version>6.2.0</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
@@ -210,7 +210,7 @@ To read and write Dian UBL 2.1 documents add the following to your pom.xml to us
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-dian</artifactId>
-  <version>6.2.1-SNAPSHOT</version>
+  <version>6.2.1</version>
 </dependency>
 ```
 
