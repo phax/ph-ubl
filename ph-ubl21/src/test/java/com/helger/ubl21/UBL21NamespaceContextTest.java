@@ -18,6 +18,7 @@ package com.helger.ubl21;
 
 import static org.junit.Assert.assertSame;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.helger.commons.state.EChange;
@@ -36,5 +37,28 @@ public final class UBL21NamespaceContextTest
     final MapBasedNamespaceContext aNSCtx = UBL21NamespaceContext.getInstance ().getClone ();
     assertSame (EChange.CHANGED, aNSCtx.removeMapping ("cec"));
     assertSame (EChange.UNCHANGED, aNSCtx.removeMapping ("cec"));
+  }
+
+  @Test
+  @Ignore ("Fails")
+  public void testIssue25v2 ()
+  {
+    try
+    {
+      // Get the original
+      final UBL21NamespaceContext aNSCtx0 = UBL21NamespaceContext.getInstance ();
+      // Clone
+      final MapBasedNamespaceContext aNSCtx = UBL21NamespaceContext.getInstance ().getClone ();
+      // Remove in original
+      assertSame (EChange.CHANGED, aNSCtx0.removeMapping ("cec"));
+      assertSame (EChange.UNCHANGED, aNSCtx0.removeMapping ("cec"));
+      // Remove in clone
+      assertSame (EChange.CHANGED, aNSCtx.removeMapping ("cec"));
+      assertSame (EChange.UNCHANGED, aNSCtx.removeMapping ("cec"));
+    }
+    finally
+    {
+      UBL21NamespaceContext.getInstance ().addMapping ("cec", CUBL21.XML_SCHEMA_CEC_NAMESPACE_URL);
+    }
   }
 }
