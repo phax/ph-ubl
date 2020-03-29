@@ -19,7 +19,6 @@ package oasis.names.specification.ubl.schema.xsd.invoice_23;
 import org.junit.Test;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_23.MonetaryTotalType;
-import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;
 
 public final class InvoiceTypeTest
 {

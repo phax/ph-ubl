@@ -22,9 +22,6 @@ import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
-import com.helger.dianubl.DianUBLDocumentTypes;
-import com.helger.dianubl.EDianUBLDocumentType;
-
 /**
  * Test class for class {@link DianUBLDocumentTypes}.
  *

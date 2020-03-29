@@ -24,7 +24,6 @@ import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
-import com.helger.dianubl.EDianUBLDocumentType;
 
 /**
  * Test class for class {@link EDianUBLDocumentType}.

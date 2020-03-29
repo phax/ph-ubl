@@ -22,9 +22,6 @@ import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
-import com.helger.ublpe.EUBLPEDocumentType;
-import com.helger.ublpe.UBLPEDocumentTypes;
-
 /**
  * Test class for class {@link UBLPEDocumentTypes}.
  *
