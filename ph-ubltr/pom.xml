@@ -30,6 +30,7 @@
   <description>Library for reading and writing UBLTR documents</description>
   <url>https://github.com/phax/ph-ubl/ph-ubltr</url>
   <inceptionYear>2016</inceptionYear>
+  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -37,10 +38,12 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
+  
   <developers>
     <developer>
       <id>philip</id>
@@ -49,6 +52,7 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
+  
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
@@ -82,6 +86,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <plugins>
       <plugin>
@@ -131,7 +136,7 @@
               <bindingIncludes>
                 <bindingInclude>bindings-ubltr.xjb</bindingInclude>
               </bindingIncludes>
-              <catalog>src/main/jaxb/catalog-ubltr.cat</catalog>
+              <catalog>src/main/jaxb/catalog-ubltr.txt</catalog>
             </configuration>
           </execution>
         </executions>

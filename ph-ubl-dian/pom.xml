@@ -127,7 +127,7 @@
               <bindingIncludes>
                 <bindingInclude>bindings-dian.xjb</bindingInclude>
               </bindingIncludes>
-              <catalog>src/main/jaxb/catalog-dian.cat</catalog>
+              <catalog>src/main/jaxb/catalog-dian.txt</catalog>
             </configuration>
           </execution>
         </executions>
