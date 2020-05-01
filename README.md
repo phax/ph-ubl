@@ -27,46 +27,21 @@ Old projects:
     (used only in Maven generate-sources phase) - this plugin was only available until v6.1.0.
     It was moved to [ph-jaxb22-plugin]() v2.3.1.3. The option `ph-ubl-value` was
     renamed to `ph-value-extender` in the new project so that it can be used in other projects.
-  
-# News and noteworthy
 
-* v6.2.1 - 2020-02-06
-    * Added predefined constants for shared XSDs in the `CUBL..` classes
-    * Fixed a classloader issue in ph-ublpe in OSGI environments
-    * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
-        * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
-    * Updated to UBL 2.3 CSPRD02
-* v6.2.0 - 2019-11-05
-    * Added support for UBL 2.3 CSPRD01
-* v6.1.3 - 2019-10-17
-    * Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
-* v6.1.2 - 2019-05-07
-    * Added Java 12 support
-* v6.1.1 - 2019-01-26
-    * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
-* v6.1.0 - 2018-11-22
-    * Requires at least ph-commons 9.2.0
-* v6.0.2 - 2018-07-17
-    * Added ph-ublpe suppport
-    * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
-* v6.0.1 - 2018-04-03
-    * Updated to UBL 2.2 CS 01
-* v6.0.0 - 2018-01-09
-    * Binds to ph-commons 9.0.0
-    * Added initial UBL 2.2 CSPRD02 support
-    * Fixes issues #11
-* v5.1.0 - 2016-09-09
-    * Binds to ph-commons 8.5.x
-* v5.0.3 - 2016-07-26
-* v5.0.1 - 2016-07-22 
-* v5.0.0 - 2016-06-11
-    * Binds to ph-commons 8.x 
-* v4.5.0 - 2015-11-30
-    * New API that this more flexible and contains less overloads - see the examples
-    * Added the possibility to easily customize the namespace prefix mapping and other things
-* v4.0.0 - 2015-07-28
-    * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
-    * Improved OSGI support
+# Building
+
+This project requires Java 1.8 or higher to be build and used.
+    
+The JAXB generated sources are created dynamically via `mvn process-sources` and are not part of the committed source files.
+This is also automatically called when you call `mvn clean install`.
+The folders with the generated sources differ from subproject to subproject:
+* **ph-ubl20**: `target\generated-sources\ubl20` 
+* **ph-ubl21**: `target\generated-sources\ubl21` 
+* **ph-ubl22**: `target\generated-sources\ubl22` 
+* **ph-ubl23**: `target\generated-sources\ubl23` 
+* **ph-ublpe**: `target\generated-sources\ublpe` 
+* **ph-ubltr**: `target\generated-sources\ubltr` 
+* **ph-ubl-dian**: `target\generated-sources\dian` 
 
 # Examples
 
@@ -78,19 +53,19 @@ An example to create an invoice from scratch can be found in the test code [Crea
 
 # Maven usage generic
 
-You can use ph-ubl as a BOM (bill of material) when you include the following in the `dependencyManagement` section of your POM:
+You can use ph-ubl as a BOM (bill of material) when you include the following in the `dependencyManagement` section of your POM, replacing `x.y.z` with the effective version number:
 
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
 ```
 
-# Maven usage UBL 2.0
+## Maven usage UBL 2.0
 
 To read and write UBL 2.0 documents add the following to your pom.xml to use this artifact:
 
@@ -98,7 +73,7 @@ To read and write UBL 2.0 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -108,11 +83,11 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage UBL 2.1
+## Maven usage UBL 2.1
 
 To read and write UBL 2.1 documents add the following to your pom.xml to use this artifact:
 
@@ -120,7 +95,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -130,11 +105,11 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage UBL 2.2
+## Maven usage UBL 2.2
 
 To read and write UBL 2.2 documents add the following to your pom.xml to use this artifact:
 
@@ -142,7 +117,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -152,11 +127,11 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage UBL 2.3
+## Maven usage UBL 2.3
 
 To read and write UBL 2.3 documents add the following to your pom.xml to use this artifact:
 
@@ -164,7 +139,7 @@ To read and write UBL 2.3 documents add the following to your pom.xml to use thi
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl23</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -174,11 +149,11 @@ To also use the generated enums for the UBL 2.3 codelists add the following arti
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl23-codelists</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage UBL-tr
+## Maven usage UBL-tr
 
 To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
 
@@ -186,11 +161,11 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubltr</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage UBL-PE
+## Maven usage UBL-PE
 
 To read and write UBL-PE 2.0 documents add the following to your pom.xml to use this artifact:
 
@@ -198,11 +173,11 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ublpe</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
-# Maven usage Dian UBL
+## Maven usage Dian UBL
 
 To read and write Dian UBL 2.1 documents add the following to your pom.xml to use this artifact:
 
@@ -210,7 +185,7 @@ To read and write Dian UBL 2.1 documents add the following to your pom.xml to us
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-ubl-dian</artifactId>
-  <version>6.2.1</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -258,6 +233,47 @@ For further information on the Universal Business Language can be found on the f
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
+
+  
+# News and noteworthy
+
+* v6.2.1 - 2020-02-06
+    * Added predefined constants for shared XSDs in the `CUBL..` classes
+    * Fixed a classloader issue in ph-ublpe in OSGI environments
+    * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
+        * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
+    * Updated to UBL 2.3 CSPRD02
+* v6.2.0 - 2019-11-05
+    * Added support for UBL 2.3 CSPRD01
+* v6.1.3 - 2019-10-17
+    * Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
+* v6.1.2 - 2019-05-07
+    * Added Java 12 support
+* v6.1.1 - 2019-01-26
+    * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
+* v6.1.0 - 2018-11-22
+    * Requires at least ph-commons 9.2.0
+* v6.0.2 - 2018-07-17
+    * Added ph-ublpe suppport
+    * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
+* v6.0.1 - 2018-04-03
+    * Updated to UBL 2.2 CS 01
+* v6.0.0 - 2018-01-09
+    * Binds to ph-commons 9.0.0
+    * Added initial UBL 2.2 CSPRD02 support
+    * Fixes issues #11
+* v5.1.0 - 2016-09-09
+    * Binds to ph-commons 8.5.x
+* v5.0.3 - 2016-07-26
+* v5.0.1 - 2016-07-22 
+* v5.0.0 - 2016-06-11
+    * Binds to ph-commons 8.x 
+* v4.5.0 - 2015-11-30
+    * New API that this more flexible and contains less overloads - see the examples
+    * Added the possibility to easily customize the namespace prefix mapping and other things
+* v4.0.0 - 2015-07-28
+    * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
+    * Improved OSGI support
 
 ---
 
