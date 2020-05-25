@@ -47,8 +47,8 @@ import com.helger.genericode.v10.Row;
 import com.helger.genericode.v10.SimpleCodeList;
 import com.helger.jcodemodel.AbstractJClass;
 import com.helger.jcodemodel.JBlock;
-import com.helger.jcodemodel.JClassAlreadyExistsException;
 import com.helger.jcodemodel.JCodeModel;
+import com.helger.jcodemodel.JCodeModelException;
 import com.helger.jcodemodel.JDefinedClass;
 import com.helger.jcodemodel.JEnumConstant;
 import com.helger.jcodemodel.JExpr;
@@ -83,8 +83,7 @@ public final class MainCreateEnumsGenericode22
     return sVar;
   }
 
-  private static void _createGenericode10 (final File aFile,
-                                           final CodeListDocument aCodeList10) throws JClassAlreadyExistsException
+  private static void _createGenericode10 (final File aFile, final CodeListDocument aCodeList10) throws JCodeModelException
   {
     System.out.println (aFile.getAbsolutePath ());
     final SimpleCodeList aSimpleCodeList = aCodeList10.getSimpleCodeList ();
@@ -131,7 +130,7 @@ public final class MainCreateEnumsGenericode22
   private static void _createEnum10 (final File aFile,
                                      final CodeListDocument aCodeList10,
                                      final Set <String> aOtherCols,
-                                     final boolean bHasNameColumn) throws JClassAlreadyExistsException
+                                     final boolean bHasNameColumn) throws JCodeModelException
   {
     String sEnumName = "E" + aCodeList10.getIdentification ().getShortName ().getValue ();
     sEnumName = StringHelper.replaceAll (sEnumName, '-', '_');
@@ -150,10 +149,8 @@ public final class MainCreateEnumsGenericode22
     if (bHasNameColumn)
       jEnum._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
-    jEnum.javadoc ()
-         .add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
-    jEnum.javadoc ()
-         .add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
+    jEnum.javadoc ().add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
+    jEnum.javadoc ().add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode22.class.getName ());
 
     final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
@@ -200,10 +197,7 @@ public final class MainCreateEnumsGenericode22
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
-                                                                 String.class,
-                                                                 "m_sDisplayName")
-                                                  : null;
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sDisplayName") : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.PRIVATE);
@@ -255,11 +249,7 @@ public final class MainCreateEnumsGenericode22
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()
-     ._return (s_aCodeModel.ref (EnumHelper.class)
-                           .staticInvoke ("getFromIDOrNull")
-                           .arg (JExpr.dotClass (jEnum))
-                           .arg (jID));
+    m.body ()._return (s_aCodeModel.ref (EnumHelper.class).staticInvoke ("getFromIDOrNull").arg (JExpr.dotClass (jEnum)).arg (jID));
 
     if (bHasNameColumn)
     {
@@ -268,15 +258,14 @@ public final class MainCreateEnumsGenericode22
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ()
-                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ().decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
   }
 
   private static void _createHelperClasses10 (@Nonnull final File aFile,
                                               @Nonnull final CodeListDocument aCodeList10,
-                                              final boolean bHasNameColumn) throws JClassAlreadyExistsException
+                                              final boolean bHasNameColumn) throws JCodeModelException
   {
     String sClassName = "C" + aCodeList10.getIdentification ().getShortName ().getValue ();
     sClassName = StringHelper.replaceAll (sClassName, '-', '_');
@@ -292,8 +281,7 @@ public final class MainCreateEnumsGenericode22
 
     final JDefinedClass jClass = s_aCodeModel._package (PACKAGE)._class (JMod.FINAL | JMod.PUBLIC, sClassName);
     jClass.annotate (Immutable.class);
-    jClass.javadoc ()
-          .add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
+    jClass.javadoc ().add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
     jClass.javadoc ().add ("It contains a total of " + nEntries + " entries!\n");
     jClass.javadoc ().add ("The number of elements is too large to create an enum from it!\n");
     jClass.javadoc ().add ("@author " + MainCreateEnumsGenericode22.class.getName ());
@@ -320,10 +308,8 @@ public final class MainCreateEnumsGenericode22
     {
       if ((nRowIndex % 1500) == 0 || aCodeMethod == null || aNameMethod == null)
       {
-        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
-                                                             "CodePart" + nClassIndex);
-        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
-                                                             "NamePart" + nClassIndex);
+        final JDefinedClass aInnerCodeClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL, "CodePart" + nClassIndex);
+        final JDefinedClass aInnerNameClass = jClass._class (JMod.PRIVATE | JMod.STATIC | JMod.FINAL, "NamePart" + nClassIndex);
         nClassIndex++;
 
         aCodeMethod = aInnerCodeClass.constructor (JMod.NONE);
@@ -383,7 +369,7 @@ public final class MainCreateEnumsGenericode22
     }
   }
 
-  public static void main (final String [] args) throws JClassAlreadyExistsException, IOException
+  public static void main (final String [] args) throws JCodeModelException, IOException
   {
     for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))
     {

@@ -43,8 +43,8 @@ import com.helger.genericode.v04.Column;
 import com.helger.genericode.v04.Row;
 import com.helger.genericode.v04.SimpleCodeList;
 import com.helger.jcodemodel.JBlock;
-import com.helger.jcodemodel.JClassAlreadyExistsException;
 import com.helger.jcodemodel.JCodeModel;
+import com.helger.jcodemodel.JCodeModelException;
 import com.helger.jcodemodel.JDefinedClass;
 import com.helger.jcodemodel.JEnumConstant;
 import com.helger.jcodemodel.JExpr;
@@ -80,8 +80,7 @@ public final class MainCreateEnumsGenericode20
     return sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
   }
 
-  private static void _createGenericode04 (@Nonnull final File aFile,
-                                           @Nonnull final CodeListDocument aCodeList) throws JClassAlreadyExistsException
+  private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList) throws JCodeModelException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
     {
@@ -183,10 +182,7 @@ public final class MainCreateEnumsGenericode20
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
-                                                                 String.class,
-                                                                 "m_sDisplayName")
-                                                  : null;
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sDisplayName") : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.PRIVATE);
@@ -239,11 +235,7 @@ public final class MainCreateEnumsGenericode20
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()
-     ._return (s_aCodeModel.ref (EnumHelper.class)
-                           .staticInvoke ("getFromIDOrNull")
-                           .arg (JExpr.dotClass (jEnum))
-                           .arg (jID));
+    m.body ()._return (s_aCodeModel.ref (EnumHelper.class).staticInvoke ("getFromIDOrNull").arg (JExpr.dotClass (jEnum)).arg (jID));
 
     if (bHasNameColumn)
     {
@@ -252,8 +244,7 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ()
-                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ().decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
 
@@ -264,9 +255,7 @@ public final class MainCreateEnumsGenericode20
       jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
       m.body ()
-       ._return (JOp.cond (jID.eq (JExpr._null ()),
-                           JExpr._null (),
-                           jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
+       ._return (JOp.cond (jID.eq (JExpr._null ()), JExpr._null (), jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
 
       m = jEnum.method (JMod.PUBLIC | JMod.STATIC, String.class, "getDisplayNameFromJAXBOrNull");
       m.annotate (Nullable.class);
@@ -279,7 +268,7 @@ public final class MainCreateEnumsGenericode20
     }
   }
 
-  public static void main (final String [] args) throws JClassAlreadyExistsException, IOException
+  public static void main (final String [] args) throws JCodeModelException, IOException
   {
     for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))
     {
