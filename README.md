@@ -57,7 +57,7 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
   <version>x.y.z</version>
   <type>pom</type>
@@ -65,13 +65,15 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 </dependency>
 ```
 
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
+
 ## Maven usage UBL 2.0
 
 To read and write UBL 2.0 documents add the following to your pom.xml to use this artifact:
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl20</artifactId>
   <version>x.y.z</version>
 </dependency>
@@ -81,11 +83,13 @@ To also use the generated enums for the UBL 2.0 codelists add the following arti
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl20-codelists</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage UBL 2.1
 
@@ -93,7 +97,7 @@ To read and write UBL 2.1 documents add the following to your pom.xml to use thi
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl21</artifactId>
   <version>x.y.z</version>
 </dependency>
@@ -103,11 +107,13 @@ To also use the generated enums for the UBL 2.1 codelists add the following arti
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl21-codelists</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage UBL 2.2
 
@@ -115,7 +121,7 @@ To read and write UBL 2.2 documents add the following to your pom.xml to use thi
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl22</artifactId>
   <version>x.y.z</version>
 </dependency>
@@ -125,11 +131,13 @@ To also use the generated enums for the UBL 2.2 codelists add the following arti
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl22-codelists</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage UBL 2.3
 
@@ -137,7 +145,7 @@ To read and write UBL 2.3 documents add the following to your pom.xml to use thi
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl23</artifactId>
   <version>x.y.z</version>
 </dependency>
@@ -147,11 +155,13 @@ To also use the generated enums for the UBL 2.3 codelists add the following arti
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl23-codelists</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage UBL-tr
 
@@ -159,11 +169,13 @@ To read and write UBL-tr (http://www.ubltr.com/) documents add the following to 
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubltr</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage UBL-PE
 
@@ -171,11 +183,13 @@ To read and write UBL-PE 2.0 documents add the following to your pom.xml to use 
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ublpe</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 ## Maven usage Dian UBL
 
@@ -183,11 +197,13 @@ To read and write Dian UBL 2.1 documents add the following to your pom.xml to us
 
 ```xml
 <dependency>
-  <groupId>com.helger</groupId>
+  <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl-dian</artifactId>
   <version>x.y.z</version>
 </dependency>
 ```
+
+Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 # Gradle considerations
 
@@ -237,6 +253,8 @@ For further information on the Universal Business Language can be found on the f
   
 # News and noteworthy
 
+* v6.3.0 - 2020-05-26
+    * Changed Maven groupId to `com.helger.ubl`
 * v6.2.1 - 2020-02-06
     * Added predefined constants for shared XSDs in the `CUBL..` classes
     * Fixed a classloader issue in ph-ublpe in OSGI environments
