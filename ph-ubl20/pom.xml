@@ -63,7 +63,7 @@
       <artifactId>ph-jaxb</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.helger</groupId>
+      <groupId>com.helger.xsd</groupId>
       <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
     </dependency>
     <dependency>
@@ -178,7 +178,7 @@
           </args>
           <episodes>
             <episode>
-              <groupId>com.helger</groupId>
+              <groupId>com.helger.xsd</groupId>
               <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
             </episode>
           </episodes>
