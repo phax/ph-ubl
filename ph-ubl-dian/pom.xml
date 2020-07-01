@@ -106,6 +106,7 @@
           <excludes>
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
+            <exclude>**/*.txt</exclude>
             <exclude>src/main/resources/schemas/**</exclude>
             <exclude>src/test/resources/test-dian/**</exclude>
           </excludes>

@@ -111,6 +111,7 @@
           <excludes>
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
+            <exclude>**/*.txt</exclude>
             <exclude>src/main/resources/schemas/**</exclude>
             <exclude>src/test/resources/tr_useraccount/**</exclude>
             <exclude>src/test/resources/tr_useraccount_zarf/**</exclude>
