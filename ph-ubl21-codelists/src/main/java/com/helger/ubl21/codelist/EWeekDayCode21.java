@@ -25,59 +25,55 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file WeekDayCode-2.1.gc. Do NOT edit!
- * It contains a total of 7 entries!
+ * This file was automatically generated from Genericode file
+ * WeekDayCode-2.1.gc. Do NOT edit! It contains a total of 7 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EWeekDayCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EWeekDayCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Monday"),
-    _2("2", "Tuesday"),
-    _3("3", "Wednesday"),
-    _4("4", "Thursday"),
-    _5("5", "Friday"),
-    _6("6", "Saturday"),
-    _7("7", "Sunday");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _1 ("1", "Monday"),
+  _2 ("2", "Tuesday"),
+  _3 ("3", "Wednesday"),
+  _4 ("4", "Thursday"),
+  _5 ("5", "Friday"),
+  _6 ("6", "Saturday"),
+  _7 ("7", "Sunday");
 
-    private EWeekDayCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EWeekDayCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static EWeekDayCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EWeekDayCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EWeekDayCode21 eValue = EWeekDayCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EWeekDayCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EWeekDayCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EWeekDayCode21 eValue = EWeekDayCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

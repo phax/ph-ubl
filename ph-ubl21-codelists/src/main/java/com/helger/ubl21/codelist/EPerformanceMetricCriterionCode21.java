@@ -24,41 +24,40 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file PerformanceMetricCriterionCode-2.1.gc. Do NOT edit!
- * It contains a total of 6 entries!
+ * This file was automatically generated from Genericode file
+ * PerformanceMetricCriterionCode-2.1.gc. Do NOT edit! It contains a total of 6
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EPerformanceMetricCriterionCode21
-    implements IHasID<String>
+public enum EPerformanceMetricCriterionCode21 implements IHasID <String>
 {
-    FILL_RATE("FILL_RATE"),
-    FORECAST_ACCURACY("FORECAST_ACCURACY"),
-    GROSS_MARGIN("GROSS_MARGIN"),
-    IN_STOCK("IN_STOCK"),
-    ON_TIME_DELIVERY("ON_TIME_DELIVERY"),
-    SUPPLY("SUPPLY");
-    private final String m_sID;
+  FILL_RATE ("FILL_RATE"),
+  FORECAST_ACCURACY ("FORECAST_ACCURACY"),
+  GROSS_MARGIN ("GROSS_MARGIN"),
+  IN_STOCK ("IN_STOCK"),
+  ON_TIME_DELIVERY ("ON_TIME_DELIVERY"),
+  SUPPLY ("SUPPLY");
 
-    private EPerformanceMetricCriterionCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EPerformanceMetricCriterionCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EPerformanceMetricCriterionCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EPerformanceMetricCriterionCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EPerformanceMetricCriterionCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EPerformanceMetricCriterionCode21.class, sID);
+  }
 }

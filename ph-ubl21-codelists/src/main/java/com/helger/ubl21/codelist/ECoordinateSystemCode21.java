@@ -25,55 +25,51 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file CoordinateSystemCode-2.1.gc. Do NOT edit!
- * It contains a total of 3 entries!
+ * This file was automatically generated from Genericode file
+ * CoordinateSystemCode-2.1.gc. Do NOT edit! It contains a total of 3 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ECoordinateSystemCode21
-    implements IHasID<String> , IHasDisplayName
+public enum ECoordinateSystemCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Other"),
-    _2("2", "WGS84"),
-    _3("3", "ETRS89");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _1 ("1", "Other"),
+  _2 ("2", "WGS84"),
+  _3 ("3", "ETRS89");
 
-    private ECoordinateSystemCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ECoordinateSystemCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ECoordinateSystemCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ECoordinateSystemCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ECoordinateSystemCode21 eValue = ECoordinateSystemCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ECoordinateSystemCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ECoordinateSystemCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ECoordinateSystemCode21 eValue = ECoordinateSystemCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

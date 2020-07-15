@@ -54,10 +54,8 @@ public final class DianUBLDocumentTypesTest
     assertNull (DianUBLDocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EDianUBLDocumentType eDocType : EDianUBLDocumentType.values ())
     {
-      assertSame (eDocType,
-                  DianUBLDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (),
-                  DianUBLDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType, DianUBLDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType.getSchema (), DianUBLDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
     }
   }

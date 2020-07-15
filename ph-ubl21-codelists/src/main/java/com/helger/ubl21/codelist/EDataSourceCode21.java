@@ -24,37 +24,35 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file DataSourceCode-2.1.gc. Do NOT edit!
- * It contains a total of 2 entries!
+ * This file was automatically generated from Genericode file
+ * DataSourceCode-2.1.gc. Do NOT edit! It contains a total of 2 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EDataSourceCode21
-    implements IHasID<String>
+public enum EDataSourceCode21 implements IHasID <String>
 {
-    BUYER("BUYER"),
-    SELLER("SELLER");
-    private final String m_sID;
+  BUYER ("BUYER"),
+  SELLER ("SELLER");
 
-    private EDataSourceCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EDataSourceCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EDataSourceCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EDataSourceCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EDataSourceCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EDataSourceCode21.class, sID);
+  }
 }

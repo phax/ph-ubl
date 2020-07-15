@@ -25,77 +25,73 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file TransportServiceCode-2.1.gc. Do NOT edit!
- * It contains a total of 25 entries!
+ * This file was automatically generated from Genericode file
+ * TransportServiceCode-2.1.gc. Do NOT edit! It contains a total of 25 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ETransportServiceCode21
-    implements IHasID<String> , IHasDisplayName
+public enum ETransportServiceCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Other"),
-    _2("2", "ThermoService"),
-    _3("3", "DangerousGoodsService"),
-    _4("4", "Transport"),
-    _5("5", "HandlingService"),
-    _6("6", "Consolidation"),
-    _7("7", "Splitting"),
-    _8("8", "Combined"),
-    _9("9", "Single"),
-    _10("10", "Loading"),
-    _11("11", "Unloading"),
-    _12("12", "Insurance"),
-    _13("13", "DocumentHandling"),
-    _14("14", "AgentService"),
-    _15("15", "InspectionService"),
-    _16("16", "MaintenanceService"),
-    _17("17", "DeviationNotification"),
-    _18("18", "DGdeclaration"),
-    _19("19", "CustomsDeclaration"),
-    _20("20", "ChangeOfStatusNotification"),
-    _21("21", "Warehousing"),
-    _22("22", "LCL/LCL"),
-    _23("23", "LCL/FCL"),
-    _24("24", "FCL/FCL"),
-    _25("25", "FCL/LCL");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _1 ("1", "Other"),
+  _2 ("2", "ThermoService"),
+  _3 ("3", "DangerousGoodsService"),
+  _4 ("4", "Transport"),
+  _5 ("5", "HandlingService"),
+  _6 ("6", "Consolidation"),
+  _7 ("7", "Splitting"),
+  _8 ("8", "Combined"),
+  _9 ("9", "Single"),
+  _10 ("10", "Loading"),
+  _11 ("11", "Unloading"),
+  _12 ("12", "Insurance"),
+  _13 ("13", "DocumentHandling"),
+  _14 ("14", "AgentService"),
+  _15 ("15", "InspectionService"),
+  _16 ("16", "MaintenanceService"),
+  _17 ("17", "DeviationNotification"),
+  _18 ("18", "DGdeclaration"),
+  _19 ("19", "CustomsDeclaration"),
+  _20 ("20", "ChangeOfStatusNotification"),
+  _21 ("21", "Warehousing"),
+  _22 ("22", "LCL/LCL"),
+  _23 ("23", "LCL/FCL"),
+  _24 ("24", "FCL/FCL"),
+  _25 ("25", "FCL/LCL");
 
-    private ETransportServiceCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ETransportServiceCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ETransportServiceCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ETransportServiceCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ETransportServiceCode21 eValue = ETransportServiceCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ETransportServiceCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ETransportServiceCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ETransportServiceCode21 eValue = ETransportServiceCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

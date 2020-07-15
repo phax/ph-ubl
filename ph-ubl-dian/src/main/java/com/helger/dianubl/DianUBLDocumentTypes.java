@@ -117,8 +117,7 @@ public final class DianUBLDocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EDianUBLDocumentType.values (),
-                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EDianUBLDocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

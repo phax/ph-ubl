@@ -25,66 +25,61 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file SealStatusCode-2.1.gc. Do NOT edit!
- * It contains a total of 5 entries!
+ * This file was automatically generated from Genericode file
+ * SealStatusCode-2.1.gc. Do NOT edit! It contains a total of 5 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ESealStatusCode21
-    implements IHasID<String> , IHasDisplayName
+public enum ESealStatusCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "In right condition", "The seal is in right condition."),
-    _2("2", "Damaged", "The seal is damaged."),
-    _3("3", "Missing", "A seal that is missing."),
-    _4("4", "Broken", "Used to specify that the seal is broken."),
-    _5("5", "Faulty electronic seal", "The electronic seal is faulty.");
-    private final String m_sID;
-    private final String m_sDisplayName;
-    private final String m_sDescription;
+  _1 ("1", "In right condition", "The seal is in right condition."),
+  _2 ("2", "Damaged", "The seal is damaged."),
+  _3 ("3", "Missing", "A seal that is missing."),
+  _4 ("4", "Broken", "Used to specify that the seal is broken."),
+  _5 ("5", "Faulty electronic seal", "The electronic seal is faulty.");
 
-    private ESealStatusCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName,
-        @Nullable
-        final String sDescription) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-        m_sDescription = sDescription;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
+  private final String m_sDescription;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ESealStatusCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+    m_sDescription = sDescription;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public String getDescription() {
-        return m_sDescription;
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static ESealStatusCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ESealStatusCode21 .class, sID);
-    }
+  @Nullable
+  public String getDescription ()
+  {
+    return m_sDescription;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ESealStatusCode21 eValue = ESealStatusCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ESealStatusCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ESealStatusCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ESealStatusCode21 eValue = ESealStatusCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

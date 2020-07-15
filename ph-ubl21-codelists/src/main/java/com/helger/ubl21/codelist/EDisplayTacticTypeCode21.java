@@ -24,47 +24,45 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file DisplayTacticTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 12 entries!
+ * This file was automatically generated from Genericode file
+ * DisplayTacticTypeCode-2.1.gc. Do NOT edit! It contains a total of 12 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EDisplayTacticTypeCode21
-    implements IHasID<String>
+public enum EDisplayTacticTypeCode21 implements IHasID <String>
 {
-    DISPLAY_GENERAL("DISPLAY_GENERAL"),
-    DUMP_BIN_DISPLAY("DUMP_BIN_DISPLAY"),
-    END_CAP_DISPLAY("END_CAP_DISPLAY"),
-    FLOOR_GRAPHICS("FLOOR_GRAPHICS"),
-    FLOOR_STACK_DISPLAY("FLOOR_STACK_DISPLAY"),
-    MODULE("MODULE"),
-    ON_COUNTER_DISPLAY("ON_COUNTER_DISPLAY"),
-    RACK("RACK"),
-    SHELF_EXTENDER_DISPLAY("SHELF_EXTENDER_DISPLAY"),
-    SHIPPER_DISPLAY("SHIPPER_DISPLAY"),
-    TEMPORARY_OUTPOST("TEMPORARY_OUTPOST"),
-    TRANSPARENCY("TRANSPARENCY");
-    private final String m_sID;
+  DISPLAY_GENERAL ("DISPLAY_GENERAL"),
+  DUMP_BIN_DISPLAY ("DUMP_BIN_DISPLAY"),
+  END_CAP_DISPLAY ("END_CAP_DISPLAY"),
+  FLOOR_GRAPHICS ("FLOOR_GRAPHICS"),
+  FLOOR_STACK_DISPLAY ("FLOOR_STACK_DISPLAY"),
+  MODULE ("MODULE"),
+  ON_COUNTER_DISPLAY ("ON_COUNTER_DISPLAY"),
+  RACK ("RACK"),
+  SHELF_EXTENDER_DISPLAY ("SHELF_EXTENDER_DISPLAY"),
+  SHIPPER_DISPLAY ("SHIPPER_DISPLAY"),
+  TEMPORARY_OUTPOST ("TEMPORARY_OUTPOST"),
+  TRANSPARENCY ("TRANSPARENCY");
 
-    private EDisplayTacticTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EDisplayTacticTypeCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EDisplayTacticTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EDisplayTacticTypeCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EDisplayTacticTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EDisplayTacticTypeCode21.class, sID);
+  }
 }

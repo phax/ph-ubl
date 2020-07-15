@@ -167,8 +167,7 @@ public final class MainCreateJAXBBinding20
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation",
-                                                             ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
 
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
@@ -207,32 +206,25 @@ public final class MainCreateJAXBBinding20
 
     final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings")
                                                   .setAttribute ("node",
-                                                                 "xsd:simpleType[@name='" +
-                                                                         eSimpleType.getAttributeValue ("name") +
-                                                                         "']");
+                                                                 "xsd:simpleType[@name='" + eSimpleType.getAttributeValue ("name") + "']");
     final IMicroElement eTypesafeEnumClass = eInnerBindings.appendElement (JAXB_NS_URI, "typesafeEnumClass");
 
     final IMicroElement eRestriction = eSimpleType.getFirstChildElement ();
-    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                              "enumeration"))
+    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (XMLConstants.W3C_XML_SCHEMA_NS_URI, "enumeration"))
     {
-      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                           "annotation");
+      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI, "annotation");
       if (eAnnotation == null)
         throw new IllegalStateException ("annotation is missing");
-      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                             "documentation");
+      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI, "documentation");
       if (eDocumentation == null)
         throw new IllegalStateException ("documentation is missing");
-      final IMicroElement eCodeName = eDocumentation.getFirstChildElement ("urn:un:unece:uncefact:documentation:2",
-                                                                           "CodeName");
+      final IMicroElement eCodeName = eDocumentation.getFirstChildElement ("urn:un:unece:uncefact:documentation:2", "CodeName");
       if (eCodeName == null)
         throw new IllegalStateException ("CodeName is missing");
 
       final String sValue = eEnumeration.getAttributeValue ("value");
       // Create an upper case Java identifier, without duplicate "_"
-      String sCodeName = RegExHelper.getAsIdentifier (eCodeName.getTextContent ().trim ().toUpperCase (Locale.US))
-                                    .replaceAll ("_+", "_");
+      String sCodeName = RegExHelper.getAsIdentifier (eCodeName.getTextContent ().trim ().toUpperCase (Locale.US)).replaceAll ("_+", "_");
 
       if (!aUsedNames.add (sCodeName))
       {
@@ -250,14 +242,11 @@ public final class MainCreateJAXBBinding20
         }
       }
 
-      eTypesafeEnumClass.appendElement (JAXB_NS_URI, "typesafeEnumMember")
-                        .setAttribute ("value", sValue)
-                        .setAttribute ("name", sCodeName);
+      eTypesafeEnumClass.appendElement (JAXB_NS_URI, "typesafeEnumMember").setAttribute ("value", sValue).setAttribute ("name", sCodeName);
       aValueToConstants.put (sValue, sCodeName);
     }
 
     // Write out the mapping file for easy later-on resolving
-    XMLMapHandler.writeMap (aValueToConstants,
-                            new FileSystemResource ("src/main/resources/schemas/" + sFilename + ".mapping"));
+    XMLMapHandler.writeMap (aValueToConstants, new FileSystemResource ("src/main/resources/schemas/" + sFilename + ".mapping"));
   }
 }

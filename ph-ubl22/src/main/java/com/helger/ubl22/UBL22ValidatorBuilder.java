@@ -53,6 +53,6 @@ public class UBL22ValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAX
   @Nonnull
   public static <T> UBL22ValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new UBL22ValidatorBuilder<> (aClass);
+    return new UBL22ValidatorBuilder <> (aClass);
   }
 }

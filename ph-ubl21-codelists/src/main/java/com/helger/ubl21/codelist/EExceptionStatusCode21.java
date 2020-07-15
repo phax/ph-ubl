@@ -24,40 +24,38 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file ExceptionStatusCode-2.1.gc. Do NOT edit!
- * It contains a total of 5 entries!
+ * This file was automatically generated from Genericode file
+ * ExceptionStatusCode-2.1.gc. Do NOT edit! It contains a total of 5 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EExceptionStatusCode21
-    implements IHasID<String>
+public enum EExceptionStatusCode21 implements IHasID <String>
 {
-    ACKNOWLEDGED("ACKNOWLEDGED"),
-    NEW("NEW"),
-    RESOLVED("RESOLVED"),
-    SUPERSEDED("SUPERSEDED"),
-    UNRESOLVABLE("UNRESOLVABLE");
-    private final String m_sID;
+  ACKNOWLEDGED ("ACKNOWLEDGED"),
+  NEW ("NEW"),
+  RESOLVED ("RESOLVED"),
+  SUPERSEDED ("SUPERSEDED"),
+  UNRESOLVABLE ("UNRESOLVABLE");
 
-    private EExceptionStatusCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EExceptionStatusCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EExceptionStatusCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EExceptionStatusCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EExceptionStatusCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EExceptionStatusCode21.class, sID);
+  }
 }

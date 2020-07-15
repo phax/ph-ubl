@@ -24,39 +24,37 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file ForecastTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 4 entries!
+ * This file was automatically generated from Genericode file
+ * ForecastTypeCode-2.1.gc. Do NOT edit! It contains a total of 4 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EForecastTypeCode21
-    implements IHasID<String>
+public enum EForecastTypeCode21 implements IHasID <String>
 {
-    BASE("BASE"),
-    PROMOTIONAL("PROMOTIONAL"),
-    SEASONAL("SEASONAL"),
-    TOTAL("TOTAL");
-    private final String m_sID;
+  BASE ("BASE"),
+  PROMOTIONAL ("PROMOTIONAL"),
+  SEASONAL ("SEASONAL"),
+  TOTAL ("TOTAL");
 
-    private EForecastTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EForecastTypeCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EForecastTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EForecastTypeCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EForecastTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EForecastTypeCode21.class, sID);
+  }
 }

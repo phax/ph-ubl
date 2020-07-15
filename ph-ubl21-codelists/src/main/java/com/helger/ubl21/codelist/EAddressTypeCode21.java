@@ -25,64 +25,59 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file AddressTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 3 entries!
+ * This file was automatically generated from Genericode file
+ * AddressTypeCode-2.1.gc. Do NOT edit! It contains a total of 3 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EAddressTypeCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EAddressTypeCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Postal address", "The address is representing a postal address."),
-    _2("2", "Fiscal address", "Identification of an address as required by fiscal administrations."),
-    _3("3", "Physical address", "The address represents an actual physical location.");
-    private final String m_sID;
-    private final String m_sDisplayName;
-    private final String m_sDescription;
+  _1 ("1", "Postal address", "The address is representing a postal address."),
+  _2 ("2", "Fiscal address", "Identification of an address as required by fiscal administrations."),
+  _3 ("3", "Physical address", "The address represents an actual physical location.");
 
-    private EAddressTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName,
-        @Nullable
-        final String sDescription) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-        m_sDescription = sDescription;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
+  private final String m_sDescription;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EAddressTypeCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+    m_sDescription = sDescription;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public String getDescription() {
-        return m_sDescription;
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static EAddressTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EAddressTypeCode21 .class, sID);
-    }
+  @Nullable
+  public String getDescription ()
+  {
+    return m_sDescription;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EAddressTypeCode21 eValue = EAddressTypeCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EAddressTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EAddressTypeCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EAddressTypeCode21 eValue = EAddressTypeCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

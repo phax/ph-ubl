@@ -55,7 +55,7 @@ public class MainFindOccurrances
   }
 
   // Cache for all fields of a class (incl. all fields of all super-classes)
-  private static ICommonsMap <Class <?>, ICommonsList <Field>> s_aAllFields = new CommonsHashMap<> ();
+  private static ICommonsMap <Class <?>, ICommonsList <Field>> s_aAllFields = new CommonsHashMap <> ();
 
   /**
    * Get all fields of the specified class and all super classes.
@@ -88,7 +88,7 @@ public class MainFindOccurrances
     ICommonsList <Field> ret = s_aAllFields.get (aClass);
     if (ret == null)
     {
-      ret = new CommonsArrayList<> ();
+      ret = new CommonsArrayList <> ();
       _getAllFields (aClass, ret);
       s_aAllFields.put (aClass, ret);
     }
@@ -131,11 +131,11 @@ public class MainFindOccurrances
       }
     }
 
-    ICommonsList <Field> m_aMatches = new CommonsArrayList<> ();
-    ICommonsList <MemberData> m_aMembers = new CommonsArrayList<> ();
+    ICommonsList <Field> m_aMatches = new CommonsArrayList <> ();
+    ICommonsList <MemberData> m_aMembers = new CommonsArrayList <> ();
   }
 
-  private static ICommonsMap <Class <?>, PerClassData> s_aClassCache = new CommonsHashMap<> ();
+  private static ICommonsMap <Class <?>, PerClassData> s_aClassCache = new CommonsHashMap <> ();
 
   private static final class StackElement
   {
@@ -151,8 +151,7 @@ public class MainFindOccurrances
   }
 
   @Nonnull
-  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass,
-                                                  @Nonnull final Class <?> aFindClass)
+  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass, @Nonnull final Class <?> aFindClass)
   {
     final PerClassData aPerClassData = new PerClassData ();
     for (final Field aField : getAllFields (aStartClass))
@@ -217,12 +216,12 @@ public class MainFindOccurrances
 
   public static void findAll (final Class <?> aStartClass, final Class <?> aFindClass)
   {
-    final NonBlockingStack <StackElement> aStack = new NonBlockingStack<> ();
+    final NonBlockingStack <StackElement> aStack = new NonBlockingStack <> ();
     _findAllRecursive (aStartClass,
                        aFindClass,
                        StringHelper.trimEnd (aStartClass.getSimpleName (), "Type"),
                        aStack,
-                       new CommonsHashSet<> ());
+                       new CommonsHashSet <> ());
   }
 
   public static void main (final String [] args)

@@ -122,8 +122,7 @@ public final class UBL22DocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBL22DocumentType.values (),
-                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EUBL22DocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

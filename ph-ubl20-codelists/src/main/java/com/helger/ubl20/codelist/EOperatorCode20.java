@@ -25,53 +25,47 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
  * This file is generated from Genericode file OperatorCode-2.0.gc. Do NOT edit!
- * 
  */
 @CodingStyleguideUnaware
-public enum EOperatorCode20
-    implements IHasID<String> , IHasDisplayName
+public enum EOperatorCode20 implements IHasID <String>, IHasDisplayName
 {
-    Divide("Divide", "Divide"),
-    Multiply("Multiply", "Multiply");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  Divide ("Divide", "Divide"),
+  Multiply ("Multiply", "Multiply");
 
-    private EOperatorCode20(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EOperatorCode20 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static EOperatorCode20 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EOperatorCode20 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EOperatorCode20 eValue = EOperatorCode20 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EOperatorCode20 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EOperatorCode20.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EOperatorCode20 eValue = EOperatorCode20.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

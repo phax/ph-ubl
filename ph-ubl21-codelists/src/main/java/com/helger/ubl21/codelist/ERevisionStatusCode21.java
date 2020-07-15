@@ -24,40 +24,38 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file RevisionStatusCode-2.1.gc. Do NOT edit!
- * It contains a total of 5 entries!
+ * This file was automatically generated from Genericode file
+ * RevisionStatusCode-2.1.gc. Do NOT edit! It contains a total of 5 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ERevisionStatusCode21
-    implements IHasID<String>
+public enum ERevisionStatusCode21 implements IHasID <String>
 {
-    ACCEPTED("ACCEPTED"),
-    ACKNOWLEDGED("ACKNOWLEDGED"),
-    NEW("NEW"),
-    REJECTED("REJECTED"),
-    SUPERSEDED("SUPERSEDED");
-    private final String m_sID;
+  ACCEPTED ("ACCEPTED"),
+  ACKNOWLEDGED ("ACKNOWLEDGED"),
+  NEW ("NEW"),
+  REJECTED ("REJECTED"),
+  SUPERSEDED ("SUPERSEDED");
 
-    private ERevisionStatusCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ERevisionStatusCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static ERevisionStatusCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ERevisionStatusCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static ERevisionStatusCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ERevisionStatusCode21.class, sID);
+  }
 }

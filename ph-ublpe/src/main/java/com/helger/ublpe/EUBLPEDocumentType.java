@@ -59,8 +59,7 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                               new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                      "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                      _getCL ()),
-                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                     "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
+                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
                                                                      _getCL ()))),
   VOIDED_DOCUMENTS (VoidedDocumentsType.class,
                     new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
@@ -75,8 +74,7 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                     "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                     _getCL ()),
-                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                    "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
+                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
                                                                     _getCL ())));
 
   @Nonnull
@@ -94,8 +92,7 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
-  private EUBLPEDocumentType (@Nonnull final Class <?> aClass,
-                              @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
+  private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }

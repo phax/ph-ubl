@@ -72,10 +72,8 @@ public final class UBL23DocumentTypesTest
     assertNull (UBL23DocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EUBL23DocumentType eDocType : EUBL23DocumentType.values ())
     {
-      assertSame (eDocType,
-                  UBL23DocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (),
-                  UBL23DocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType, UBL23DocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType.getSchema (), UBL23DocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator ());
     }
   }

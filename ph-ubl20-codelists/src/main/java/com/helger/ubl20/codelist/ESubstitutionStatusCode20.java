@@ -25,53 +25,48 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file is generated from Genericode file SubstitutionStatusCode-2.0.gc. Do NOT edit!
- * 
+ * This file is generated from Genericode file SubstitutionStatusCode-2.0.gc. Do
+ * NOT edit!
  */
 @CodingStyleguideUnaware
-public enum ESubstitutionStatusCode20
-    implements IHasID<String> , IHasDisplayName
+public enum ESubstitutionStatusCode20 implements IHasID <String>, IHasDisplayName
 {
-    Original("Original", "Original"),
-    Substitution("Substitution", "Substitution");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  Original ("Original", "Original"),
+  Substitution ("Substitution", "Substitution");
 
-    private ESubstitutionStatusCode20(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ESubstitutionStatusCode20 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ESubstitutionStatusCode20 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ESubstitutionStatusCode20 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ESubstitutionStatusCode20 eValue = ESubstitutionStatusCode20 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ESubstitutionStatusCode20 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ESubstitutionStatusCode20.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ESubstitutionStatusCode20 eValue = ESubstitutionStatusCode20.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

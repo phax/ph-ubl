@@ -54,10 +54,8 @@ public final class UBLPEDocumentTypesTest
     assertNull (UBLPEDocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EUBLPEDocumentType eDocType : EUBLPEDocumentType.values ())
     {
-      assertSame (eDocType,
-                  UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (),
-                  UBLPEDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType, UBLPEDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType.getSchema (), UBLPEDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
     }
   }

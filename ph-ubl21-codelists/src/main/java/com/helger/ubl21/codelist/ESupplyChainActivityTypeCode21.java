@@ -24,42 +24,41 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file SupplyChainActivityTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 7 entries!
+ * This file was automatically generated from Genericode file
+ * SupplyChainActivityTypeCode-2.1.gc. Do NOT edit! It contains a total of 7
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ESupplyChainActivityTypeCode21
-    implements IHasID<String>
+public enum ESupplyChainActivityTypeCode21 implements IHasID <String>
 {
-    CANCELED_ORDERS("CANCELED_ORDERS"),
-    EMERGENCY_ORDERS("EMERGENCY_ORDERS"),
-    ON_HAND("ON_HAND"),
-    ORDERS("ORDERS"),
-    RECEIPTS("RECEIPTS"),
-    SALES("SALES"),
-    SHIPMENTS("SHIPMENTS");
-    private final String m_sID;
+  CANCELED_ORDERS ("CANCELED_ORDERS"),
+  EMERGENCY_ORDERS ("EMERGENCY_ORDERS"),
+  ON_HAND ("ON_HAND"),
+  ORDERS ("ORDERS"),
+  RECEIPTS ("RECEIPTS"),
+  SALES ("SALES"),
+  SHIPMENTS ("SHIPMENTS");
 
-    private ESupplyChainActivityTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ESupplyChainActivityTypeCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static ESupplyChainActivityTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ESupplyChainActivityTypeCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static ESupplyChainActivityTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ESupplyChainActivityTypeCode21.class, sID);
+  }
 }

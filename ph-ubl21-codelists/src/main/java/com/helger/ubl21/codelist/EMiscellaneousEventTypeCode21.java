@@ -24,52 +24,51 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file MiscellaneousEventTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 17 entries!
+ * This file was automatically generated from Genericode file
+ * MiscellaneousEventTypeCode-2.1.gc. Do NOT edit! It contains a total of 17
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EMiscellaneousEventTypeCode21
-    implements IHasID<String>
+public enum EMiscellaneousEventTypeCode21 implements IHasID <String>
 {
-    ASSORTMENT_CHARGE("ASSORTMENT_CHARGE"),
-    DISASTER("DISASTER"),
-    FORECAST_DECREASE("FORECAST_DECREASE"),
-    FORECAST_INCREASE("FORECAST_INCREASE"),
-    FREIGHT_FLOW_ALLOCATION("FREIGHT_FLOW_ALLOCATION"),
-    INVENTORY_POLICY_CHANGE("INVENTORY_POLICY_CHANGE"),
-    LABOR("LABOR"),
-    LOCATION_OF_CLOSING("LOCATION_OF_CLOSING"),
-    LOCATION_OF_OPENING("LOCATION_OF_OPENING"),
-    OTHER("OTHER"),
-    OUT_OF_STOCK("OUT_OF_STOCK"),
-    PACKAGING_LABELING_CHANGE("PACKAGING_LABELING_CHANGE"),
-    PRICE_DECREASE("PRICE_DECREASE"),
-    PRICE_INCREASE("PRICE_INCREASE"),
-    STORE_FORMAT_OF_PLANOGRAM_CHANGE("STORE_FORMAT_OF_PLANOGRAM_CHANGE"),
-    TEST_MARKET("TEST_MARKET"),
-    WEATHER("WEATHER");
-    private final String m_sID;
+  ASSORTMENT_CHARGE ("ASSORTMENT_CHARGE"),
+  DISASTER ("DISASTER"),
+  FORECAST_DECREASE ("FORECAST_DECREASE"),
+  FORECAST_INCREASE ("FORECAST_INCREASE"),
+  FREIGHT_FLOW_ALLOCATION ("FREIGHT_FLOW_ALLOCATION"),
+  INVENTORY_POLICY_CHANGE ("INVENTORY_POLICY_CHANGE"),
+  LABOR ("LABOR"),
+  LOCATION_OF_CLOSING ("LOCATION_OF_CLOSING"),
+  LOCATION_OF_OPENING ("LOCATION_OF_OPENING"),
+  OTHER ("OTHER"),
+  OUT_OF_STOCK ("OUT_OF_STOCK"),
+  PACKAGING_LABELING_CHANGE ("PACKAGING_LABELING_CHANGE"),
+  PRICE_DECREASE ("PRICE_DECREASE"),
+  PRICE_INCREASE ("PRICE_INCREASE"),
+  STORE_FORMAT_OF_PLANOGRAM_CHANGE ("STORE_FORMAT_OF_PLANOGRAM_CHANGE"),
+  TEST_MARKET ("TEST_MARKET"),
+  WEATHER ("WEATHER");
 
-    private EMiscellaneousEventTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EMiscellaneousEventTypeCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EMiscellaneousEventTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EMiscellaneousEventTypeCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EMiscellaneousEventTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EMiscellaneousEventTypeCode21.class, sID);
+  }
 }

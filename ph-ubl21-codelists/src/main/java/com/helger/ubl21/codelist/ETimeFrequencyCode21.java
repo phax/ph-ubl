@@ -24,41 +24,39 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file TimeFrequencyCode-2.1.gc. Do NOT edit!
- * It contains a total of 6 entries!
+ * This file was automatically generated from Genericode file
+ * TimeFrequencyCode-2.1.gc. Do NOT edit! It contains a total of 6 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ETimeFrequencyCode21
-    implements IHasID<String>
+public enum ETimeFrequencyCode21 implements IHasID <String>
 {
-    DAY("DAY"),
-    MONTH("MONTH"),
-    QUARTER("QUARTER"),
-    UNSPECIFIED("UNSPECIFIED"),
-    WEEK("WEEK"),
-    YEAR("YEAR");
-    private final String m_sID;
+  DAY ("DAY"),
+  MONTH ("MONTH"),
+  QUARTER ("QUARTER"),
+  UNSPECIFIED ("UNSPECIFIED"),
+  WEEK ("WEEK"),
+  YEAR ("YEAR");
 
-    private ETimeFrequencyCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ETimeFrequencyCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static ETimeFrequencyCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ETimeFrequencyCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static ETimeFrequencyCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ETimeFrequencyCode21.class, sID);
+  }
 }

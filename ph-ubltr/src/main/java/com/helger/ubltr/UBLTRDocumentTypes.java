@@ -117,8 +117,7 @@ public final class UBLTRDocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBLTRDocumentType.values (),
-                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EUBLTRDocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

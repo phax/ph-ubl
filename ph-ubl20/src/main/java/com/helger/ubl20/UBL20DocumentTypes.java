@@ -179,8 +179,7 @@ public final class UBL20DocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBL20DocumentType.values (),
-                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EUBL20DocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

@@ -25,59 +25,56 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file EnvironmentalEmissionCode-2.1.gc. Do NOT edit!
- * It contains a total of 7 entries!
+ * This file was automatically generated from Genericode file
+ * EnvironmentalEmissionCode-2.1.gc. Do NOT edit! It contains a total of 7
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EEnvironmentalEmissionCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EEnvironmentalEmissionCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Other"),
-    _2("2", "CO2"),
-    _3("3", "NOx"),
-    _4("4", "SO2"),
-    _5("5", "CO"),
-    _6("6", "PM"),
-    _7("7", "HC");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _1 ("1", "Other"),
+  _2 ("2", "CO2"),
+  _3 ("3", "NOx"),
+  _4 ("4", "SO2"),
+  _5 ("5", "CO"),
+  _6 ("6", "PM"),
+  _7 ("7", "HC");
 
-    private EEnvironmentalEmissionCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EEnvironmentalEmissionCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static EEnvironmentalEmissionCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EEnvironmentalEmissionCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EEnvironmentalEmissionCode21 eValue = EEnvironmentalEmissionCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EEnvironmentalEmissionCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EEnvironmentalEmissionCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EEnvironmentalEmissionCode21 eValue = EEnvironmentalEmissionCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

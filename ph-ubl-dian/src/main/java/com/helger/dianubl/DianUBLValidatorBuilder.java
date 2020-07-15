@@ -29,8 +29,7 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  *        The DIAN UBL implementation class to be read
  */
 @NotThreadSafe
-public class DianUBLValidatorBuilder <JAXBTYPE> extends
-                                     JAXBValidationBuilder <JAXBTYPE, DianUBLValidatorBuilder <JAXBTYPE>>
+public class DianUBLValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, DianUBLValidatorBuilder <JAXBTYPE>>
 {
   public DianUBLValidatorBuilder (@Nonnull final EDianUBLDocumentType eDocType)
   {

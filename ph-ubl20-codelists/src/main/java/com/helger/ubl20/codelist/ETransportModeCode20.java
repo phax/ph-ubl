@@ -25,61 +25,56 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file is generated from Genericode file TransportModeCode-2.0.gc. Do NOT edit!
- * 
+ * This file is generated from Genericode file TransportModeCode-2.0.gc. Do NOT
+ * edit!
  */
 @CodingStyleguideUnaware
-public enum ETransportModeCode20
-    implements IHasID<String> , IHasDisplayName
+public enum ETransportModeCode20 implements IHasID <String>, IHasDisplayName
 {
-    _0("0", "Transport mode not specified"),
-    _1("1", "Maritime transport"),
-    _2("2", "Rail transport"),
-    _3("3", "Road transport"),
-    _4("4", "Air transport"),
-    _5("5", "Mail"),
-    _6("6", "Multimodal transport"),
-    _7("7", "Fixed transport installation"),
-    _8("8", "Inland water transport"),
-    _9("9", "Transport mode not applicable");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _0 ("0", "Transport mode not specified"),
+  _1 ("1", "Maritime transport"),
+  _2 ("2", "Rail transport"),
+  _3 ("3", "Road transport"),
+  _4 ("4", "Air transport"),
+  _5 ("5", "Mail"),
+  _6 ("6", "Multimodal transport"),
+  _7 ("7", "Fixed transport installation"),
+  _8 ("8", "Inland water transport"),
+  _9 ("9", "Transport mode not applicable");
 
-    private ETransportModeCode20(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ETransportModeCode20 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ETransportModeCode20 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ETransportModeCode20 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ETransportModeCode20 eValue = ETransportModeCode20 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ETransportModeCode20 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ETransportModeCode20.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ETransportModeCode20 eValue = ETransportModeCode20.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

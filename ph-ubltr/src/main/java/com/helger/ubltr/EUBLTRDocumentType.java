@@ -46,8 +46,7 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
 
   private final JAXBDocumentType m_aDocType;
 
-  private EUBLTRDocumentType (@Nonnull final Class <?> aClass,
-                              @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
+  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDs, s -> StringHelper.trimEnd (s, "Type"));
   }

@@ -25,56 +25,51 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file is generated from Genericode file LineStatusCode-2.0.gc. Do NOT edit!
- * 
+ * This file is generated from Genericode file LineStatusCode-2.0.gc. Do NOT
+ * edit!
  */
 @CodingStyleguideUnaware
-public enum ELineStatusCode20
-    implements IHasID<String> , IHasDisplayName
+public enum ELineStatusCode20 implements IHasID <String>, IHasDisplayName
 {
-    Added("Added", "Line has been added."),
-    Cancelled("Cancelled", "Line has been cancelled."),
-    Disputed("Disputed", "Line is disputed."),
-    NoStatus("NoStatus", "Line has no status."),
-    Revised("Revised", "Line has been revised.");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  Added ("Added", "Line has been added."),
+  Cancelled ("Cancelled", "Line has been cancelled."),
+  Disputed ("Disputed", "Line is disputed."),
+  NoStatus ("NoStatus", "Line has no status."),
+  Revised ("Revised", "Line has been revised.");
 
-    private ELineStatusCode20(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ELineStatusCode20 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ELineStatusCode20 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ELineStatusCode20 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ELineStatusCode20 eValue = ELineStatusCode20 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ELineStatusCode20 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ELineStatusCode20.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ELineStatusCode20 eValue = ELineStatusCode20.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

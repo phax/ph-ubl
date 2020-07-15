@@ -24,43 +24,41 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file ResolutionCode-2.1.gc. Do NOT edit!
- * It contains a total of 8 entries!
+ * This file was automatically generated from Genericode file
+ * ResolutionCode-2.1.gc. Do NOT edit! It contains a total of 8 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EResolutionCode21
-    implements IHasID<String>
+public enum EResolutionCode21 implements IHasID <String>
 {
-    LOCAL_INTERPOLATED_VALUE("LOCAL_INTERPOLATED_VALUE"),
-    LOCAL_ISSUE_CHANGED_VALUE("LOCAL_ISSUE_CHANGED_VALUE"),
-    LOCAL_ISSUE_LEFT_VALUE_UNCHANGED("LOCAL_ISSUE_LEFT_VALUE_UNCHANGED"),
-    NEW_VALUE_JOINTLY_IDENTIFIED("NEW_VALUE_JOINTLY_IDENTIFIED"),
-    OBSOLETE_VALUE("OBSOLETE_VALUE"),
-    PARTNER_ISSUE_CHANGED_VALUE("PARTNER_ISSUE_CHANGED_VALUE"),
-    PARTNER_ISSUE_LEFT_VALUE_UNCHANGED("PARTNER_ISSUE_LEFT_VALUE_UNCHANGED"),
-    UNRESOLVABLE("UNRESOLVABLE");
-    private final String m_sID;
+  LOCAL_INTERPOLATED_VALUE ("LOCAL_INTERPOLATED_VALUE"),
+  LOCAL_ISSUE_CHANGED_VALUE ("LOCAL_ISSUE_CHANGED_VALUE"),
+  LOCAL_ISSUE_LEFT_VALUE_UNCHANGED ("LOCAL_ISSUE_LEFT_VALUE_UNCHANGED"),
+  NEW_VALUE_JOINTLY_IDENTIFIED ("NEW_VALUE_JOINTLY_IDENTIFIED"),
+  OBSOLETE_VALUE ("OBSOLETE_VALUE"),
+  PARTNER_ISSUE_CHANGED_VALUE ("PARTNER_ISSUE_CHANGED_VALUE"),
+  PARTNER_ISSUE_LEFT_VALUE_UNCHANGED ("PARTNER_ISSUE_LEFT_VALUE_UNCHANGED"),
+  UNRESOLVABLE ("UNRESOLVABLE");
 
-    private EResolutionCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EResolutionCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EResolutionCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EResolutionCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EResolutionCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EResolutionCode21.class, sID);
+  }
 }

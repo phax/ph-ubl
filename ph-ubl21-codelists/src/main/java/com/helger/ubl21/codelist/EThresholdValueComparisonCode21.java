@@ -24,37 +24,36 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file ThresholdValueComparisonCode-2.1.gc. Do NOT edit!
- * It contains a total of 2 entries!
+ * This file was automatically generated from Genericode file
+ * ThresholdValueComparisonCode-2.1.gc. Do NOT edit! It contains a total of 2
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EThresholdValueComparisonCode21
-    implements IHasID<String>
+public enum EThresholdValueComparisonCode21 implements IHasID <String>
 {
-    EXCEEDS_EXCEPTION_VALUE("EXCEEDS_EXCEPTION_VALUE"),
-    FALLS_BELOW_EXCEPTION_VALUE("FALLS_BELOW_EXCEPTION_VALUE");
-    private final String m_sID;
+  EXCEEDS_EXCEPTION_VALUE ("EXCEEDS_EXCEPTION_VALUE"),
+  FALLS_BELOW_EXCEPTION_VALUE ("FALLS_BELOW_EXCEPTION_VALUE");
 
-    private EThresholdValueComparisonCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EThresholdValueComparisonCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static EThresholdValueComparisonCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EThresholdValueComparisonCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EThresholdValueComparisonCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EThresholdValueComparisonCode21.class, sID);
+  }
 }

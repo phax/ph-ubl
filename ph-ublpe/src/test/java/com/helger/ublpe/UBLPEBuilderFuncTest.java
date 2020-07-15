@@ -42,8 +42,7 @@ public final class UBLPEBuilderFuncTest
     final UBLPEValidatorBuilder <SummaryDocumentsType> aValidator = new UBLPEValidatorBuilder <> (SummaryDocumentsType.class);
     final UBLPEWriterBuilder <SummaryDocumentsType> aWriter = new UBLPEWriterBuilder <> (SummaryDocumentsType.class).setFormattedOutput (true);
 
-    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS)
-                                                   .getFirst ();
+    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS).getFirst ();
     assertNotNull (sFilename);
 
     // Read from resource

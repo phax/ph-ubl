@@ -25,59 +25,55 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file NotificationTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 7 entries!
+ * This file was automatically generated from Genericode file
+ * NotificationTypeCode-2.1.gc. Do NOT edit! It contains a total of 7 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ENotificationTypeCode21
-    implements IHasID<String> , IHasDisplayName
+public enum ENotificationTypeCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Other"),
-    _2("2", "Pickup"),
-    _3("3", "Delivery"),
-    _4("4", "Schedule deviation"),
-    _5("5", "Cargo condition deviation"),
-    _6("6", "Itinerary"),
-    _7("7", "All execution statuses");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _1 ("1", "Other"),
+  _2 ("2", "Pickup"),
+  _3 ("3", "Delivery"),
+  _4 ("4", "Schedule deviation"),
+  _5 ("5", "Cargo condition deviation"),
+  _6 ("6", "Itinerary"),
+  _7 ("7", "All execution statuses");
 
-    private ENotificationTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ENotificationTypeCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static ENotificationTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ENotificationTypeCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final ENotificationTypeCode21 eValue = ENotificationTypeCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static ENotificationTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ENotificationTypeCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final ENotificationTypeCode21 eValue = ENotificationTypeCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

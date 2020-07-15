@@ -24,44 +24,42 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file RetailEventStatusCode-2.1.gc. Do NOT edit!
- * It contains a total of 9 entries!
+ * This file was automatically generated from Genericode file
+ * RetailEventStatusCode-2.1.gc. Do NOT edit! It contains a total of 9 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ERetailEventStatusCode21
-    implements IHasID<String>
+public enum ERetailEventStatusCode21 implements IHasID <String>
 {
-    ACKNOWLEDGED("ACKNOWLEDGED"),
-    ACTIVE("ACTIVE"),
-    CANCELED("CANCELED"),
-    COMPLETED("COMPLETED"),
-    EXPIRED("EXPIRED"),
-    PLANNED("PLANNED"),
-    PROPOSED("PROPOSED"),
-    REJECTED("REJECTED"),
-    TERMINATED("TERMINATED");
-    private final String m_sID;
+  ACKNOWLEDGED ("ACKNOWLEDGED"),
+  ACTIVE ("ACTIVE"),
+  CANCELED ("CANCELED"),
+  COMPLETED ("COMPLETED"),
+  EXPIRED ("EXPIRED"),
+  PLANNED ("PLANNED"),
+  PROPOSED ("PROPOSED"),
+  REJECTED ("REJECTED"),
+  TERMINATED ("TERMINATED");
 
-    private ERetailEventStatusCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ERetailEventStatusCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static ERetailEventStatusCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ERetailEventStatusCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static ERetailEventStatusCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ERetailEventStatusCode21.class, sID);
+  }
 }

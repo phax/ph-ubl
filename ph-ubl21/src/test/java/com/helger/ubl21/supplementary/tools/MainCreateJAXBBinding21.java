@@ -166,8 +166,7 @@ public final class MainCreateJAXBBinding21
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation",
-                                                             ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
                    .appendElement (JAXB_NS_URI, "package")

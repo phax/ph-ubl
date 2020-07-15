@@ -38,12 +38,11 @@ public final class UBLTRBuilderFuncTest
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
-    final UBLTRReaderBuilder <CancelUserAccountType> aReader = new UBLTRReaderBuilder<> (CancelUserAccountType.class);
-    final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder<> (CancelUserAccountType.class);
-    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder<> (CancelUserAccountType.class).setFormattedOutput (true);
+    final UBLTRReaderBuilder <CancelUserAccountType> aReader = new UBLTRReaderBuilder <> (CancelUserAccountType.class);
+    final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder <> (CancelUserAccountType.class);
+    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder <> (CancelUserAccountType.class).setFormattedOutput (true);
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
-                                                   .get (0);
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT).get (0);
 
     // Read from resource
     final CancelUserAccountType aRead1 = aReader.read (new ClassPathResource (sFilename));

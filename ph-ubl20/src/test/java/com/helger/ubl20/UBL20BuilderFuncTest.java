@@ -39,11 +39,10 @@ public final class UBL20BuilderFuncTest
   @Test
   public void testReadAndWriteInvoice ()
   {
-    final UBL20ReaderBuilder <InvoiceType> aReader = new UBL20ReaderBuilder<> (InvoiceType.class);
-    final UBL20ValidatorBuilder <InvoiceType> aValidator = new UBL20ValidatorBuilder<> (InvoiceType.class);
-    final UBL20WriterBuilder <InvoiceType> aWriter = new UBL20WriterBuilder<> (InvoiceType.class).setFormattedOutput (true);
-    aWriter.setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("bla",
-                                                                             EUBL20DocumentType.INVOICE.getNamespaceURI ()));
+    final UBL20ReaderBuilder <InvoiceType> aReader = new UBL20ReaderBuilder <> (InvoiceType.class);
+    final UBL20ValidatorBuilder <InvoiceType> aValidator = new UBL20ValidatorBuilder <> (InvoiceType.class);
+    final UBL20WriterBuilder <InvoiceType> aWriter = new UBL20WriterBuilder <> (InvoiceType.class).setFormattedOutput (true);
+    aWriter.setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("bla", EUBL20DocumentType.INVOICE.getNamespaceURI ()));
 
     final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE).get (0);
 

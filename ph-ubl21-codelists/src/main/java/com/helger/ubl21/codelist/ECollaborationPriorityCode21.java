@@ -24,38 +24,37 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-
 /**
- * This file was automatically generated from Genericode file CollaborationPriorityCode-2.1.gc. Do NOT edit!
- * It contains a total of 3 entries!
+ * This file was automatically generated from Genericode file
+ * CollaborationPriorityCode-2.1.gc. Do NOT edit! It contains a total of 3
+ * entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ECollaborationPriorityCode21
-    implements IHasID<String>
+public enum ECollaborationPriorityCode21 implements IHasID <String>
 {
-    HIGH("HIGH"),
-    LOW("LOW"),
-    MEDIUM("MEDIUM");
-    private final String m_sID;
+  HIGH ("HIGH"),
+  LOW ("LOW"),
+  MEDIUM ("MEDIUM");
 
-    private ECollaborationPriorityCode21(
-        @Nonnull
-        @Nonempty
-        final String sID) {
-        m_sID = sID;
-    }
+  private final String m_sID;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private ECollaborationPriorityCode21 (@Nonnull @Nonempty final String sID)
+  {
+    m_sID = sID;
+  }
 
-    @Nullable
-    public static ECollaborationPriorityCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(ECollaborationPriorityCode21 .class, sID);
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static ECollaborationPriorityCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (ECollaborationPriorityCode21.class, sID);
+  }
 }

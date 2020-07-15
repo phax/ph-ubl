@@ -25,60 +25,56 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file DocumentStatusCode-2.1.gc. Do NOT edit!
- * It contains a total of 8 entries!
+ * This file was automatically generated from Genericode file
+ * DocumentStatusCode-2.1.gc. Do NOT edit! It contains a total of 8 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EDocumentStatusCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EDocumentStatusCode21 implements IHasID <String>, IHasDisplayName
 {
-    Cancelled("Cancelled", "Document has been cancelled"),
-    Disputed("Disputed", "Document is disputed"),
-    NoStatus("NoStatus", "No status on document"),
-    Revised("Revised", "Document has been revised"),
-    Confirmed("Confirmed", "Document has been confirmed"),
-    NotConfirmed("NotConfirmed", "Document has not been confirmed"),
-    Rejected("Rejected", "Document has been rejected"),
-    Completed("Completed", "Document has been completed");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  Cancelled ("Cancelled", "Document has been cancelled"),
+  Disputed ("Disputed", "Document is disputed"),
+  NoStatus ("NoStatus", "No status on document"),
+  Revised ("Revised", "Document has been revised"),
+  Confirmed ("Confirmed", "Document has been confirmed"),
+  NotConfirmed ("NotConfirmed", "Document has not been confirmed"),
+  Rejected ("Rejected", "Document has been rejected"),
+  Completed ("Completed", "Document has been completed");
 
-    private EDocumentStatusCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EDocumentStatusCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static EDocumentStatusCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EDocumentStatusCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EDocumentStatusCode21 eValue = EDocumentStatusCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EDocumentStatusCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EDocumentStatusCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EDocumentStatusCode21 eValue = EDocumentStatusCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

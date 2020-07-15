@@ -25,63 +25,58 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file AccountTypeCode-2.1.gc. Do NOT edit!
- * It contains a total of 2 entries!
+ * This file was automatically generated from Genericode file
+ * AccountTypeCode-2.1.gc. Do NOT edit! It contains a total of 2 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EAccountTypeCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EAccountTypeCode21 implements IHasID <String>, IHasDisplayName
 {
-    _1("1", "Saving", "The type of financial account is saving."),
-    _2("2", "Checking", "The type of financial account is checking.");
-    private final String m_sID;
-    private final String m_sDisplayName;
-    private final String m_sDescription;
+  _1 ("1", "Saving", "The type of financial account is saving."),
+  _2 ("2", "Checking", "The type of financial account is checking.");
 
-    private EAccountTypeCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName,
-        @Nullable
-        final String sDescription) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-        m_sDescription = sDescription;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
+  private final String m_sDescription;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EAccountTypeCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+    m_sDescription = sDescription;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public String getDescription() {
-        return m_sDescription;
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static EAccountTypeCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EAccountTypeCode21 .class, sID);
-    }
+  @Nullable
+  public String getDescription ()
+  {
+    return m_sDescription;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EAccountTypeCode21 eValue = EAccountTypeCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EAccountTypeCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EAccountTypeCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EAccountTypeCode21 eValue = EAccountTypeCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

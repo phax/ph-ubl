@@ -25,56 +25,52 @@ import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
 
-
 /**
- * This file was automatically generated from Genericode file HumanSexesCode-2.1.gc. Do NOT edit!
- * It contains a total of 4 entries!
+ * This file was automatically generated from Genericode file
+ * HumanSexesCode-2.1.gc. Do NOT edit! It contains a total of 4 entries!
+ * 
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EHumanSexesCode21
-    implements IHasID<String> , IHasDisplayName
+public enum EHumanSexesCode21 implements IHasID <String>, IHasDisplayName
 {
-    _0("0", "not known"),
-    _1("1", "male"),
-    _2("2", "female"),
-    _9("9", "not applicable");
-    private final String m_sID;
-    private final String m_sDisplayName;
+  _0 ("0", "not known"),
+  _1 ("1", "male"),
+  _2 ("2", "female"),
+  _9 ("9", "not applicable");
 
-    private EHumanSexesCode21(
-        @Nonnull
-        @Nonempty
-        final String sID,
-        @Nonnull
-        final String sDisplayName) {
-        m_sID = sID;
-        m_sDisplayName = sDisplayName;
-    }
+  private final String m_sID;
+  private final String m_sDisplayName;
 
-    @Nonnull
-    @Nonempty
-    public String getID() {
-        return m_sID;
-    }
+  private EHumanSexesCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
+  {
+    m_sID = sID;
+    m_sDisplayName = sDisplayName;
+  }
 
-    @Nonnull
-    public String getDisplayName() {
-        return m_sDisplayName;
-    }
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
 
-    @Nullable
-    public static EHumanSexesCode21 getFromIDOrNull(
-        @Nullable
-        final String sID) {
-        return EnumHelper.getFromIDOrNull(EHumanSexesCode21 .class, sID);
-    }
+  @Nonnull
+  public String getDisplayName ()
+  {
+    return m_sDisplayName;
+  }
 
-    @Nullable
-    public static String getDisplayNameFromIDOrNull(
-        @Nullable
-        final String sID) {
-        final EHumanSexesCode21 eValue = EHumanSexesCode21 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
-    }
+  @Nullable
+  public static EHumanSexesCode21 getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EHumanSexesCode21.class, sID);
+  }
+
+  @Nullable
+  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
+  {
+    final EHumanSexesCode21 eValue = EHumanSexesCode21.getFromIDOrNull (sID);
+    return ((eValue == null) ? null : eValue.getDisplayName ());
+  }
 }

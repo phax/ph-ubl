@@ -50,10 +50,7 @@ public abstract class AbstractCreateUBLActionCode
     {
       case READ:
         // Builder<T> read ()
-        aSB.append ("/** Create a reader builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
+        aSB.append ("/** Create a reader builder for " + sName + ".\n" + "@return The builder and never <code>null</code> */\n");
         aSB.append ("@Nonnull public static ")
            .append (sBuilderClass)
            .append ('<')
@@ -68,10 +65,7 @@ public abstract class AbstractCreateUBLActionCode
         break;
       case WRITE:
         // Builder<T> write ()
-        aSB.append ("/** Create a writer builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
+        aSB.append ("/** Create a writer builder for " + sName + ".\n" + "@return The builder and never <code>null</code> */\n");
         aSB.append ("@Nonnull public static ")
            .append (sBuilderClass)
            .append ('<')
@@ -86,10 +80,7 @@ public abstract class AbstractCreateUBLActionCode
         break;
       case VALIDATE:
         // Builder<T> validate ()
-        aSB.append ("/** Create a validation builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
+        aSB.append ("/** Create a validation builder for " + sName + ".\n" + "@return The builder and never <code>null</code> */\n");
         aSB.append ("@Nonnull public static ")
            .append (sBuilderClass)
            .append ('<')
