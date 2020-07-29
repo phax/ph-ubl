@@ -19,6 +19,7 @@ package com.helger.ubl21.main;
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
@@ -41,8 +42,10 @@ import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.genericode.Genericode10CodeListMarshaller;
 import com.helger.genericode.Genericode10Helper;
+import com.helger.genericode.v10.Agency;
 import com.helger.genericode.v10.CodeListDocument;
 import com.helger.genericode.v10.Column;
+import com.helger.genericode.v10.LongName;
 import com.helger.genericode.v10.Row;
 import com.helger.genericode.v10.SimpleCodeList;
 import com.helger.jcodemodel.AbstractJClass;
@@ -155,6 +158,21 @@ public final class MainCreateEnumsGenericode21
     jEnum.javadoc ().add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
     jEnum.javadoc ().add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
+
+    Agency agency = aCodeList10.getIdentification().getAgency();
+    if (agency != null) {
+      String agencyID = agency.getIdentifier().get(0).getValue();
+      String agencyName = agency.getLongName().get(0).getValue();
+
+      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "agencyID", JExpr.lit(agencyID));
+      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "agencyName", JExpr.lit(agencyName));
+    }
+
+    Optional<LongName> listId = aCodeList10.getIdentification().getLongName().stream()
+            .filter(e -> e.getIdentifier() != null && e.getIdentifier().equals("listID")).findAny();
+    if (listId.isPresent()) {
+      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "listID", JExpr.lit(listId.get().getValue()));
+    }
 
     final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
