@@ -91,6 +91,10 @@ public final class MainCreateJAXBBinding23
            .setAttribute ("name", "java.time.LocalTime")
            .setAttribute ("xmlType", "xsd:time")
            .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalTime");
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.Duration")
+           .setAttribute ("xmlType", "xsd:duration")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterDuration");
 
     return eDoc;
   }
