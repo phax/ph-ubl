@@ -16,46 +16,45 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * RevisionStatusCode-2.1.gc. Do NOT edit! It contains a total of 5 entries!
- * 
+ * This file was automatically generated from Genericode file RevisionStatusCode-2.1.gc. Do NOT edit!
+ * It contains a total of 5 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ERevisionStatusCode21 implements IHasID <String>
+public enum ERevisionStatusCode21
+    implements IHasID<String>
 {
-  ACCEPTED ("ACCEPTED"),
-  ACKNOWLEDGED ("ACKNOWLEDGED"),
-  NEW ("NEW"),
-  REJECTED ("REJECTED"),
-  SUPERSEDED ("SUPERSEDED");
+    ACCEPTED("ACCEPTED"),
+    ACKNOWLEDGED("ACKNOWLEDGED"),
+    NEW("NEW"),
+    REJECTED("REJECTED"),
+    SUPERSEDED("SUPERSEDED");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
 
-  private final String m_sID;
+    private ERevisionStatusCode21(@Nonnull @Nonempty final String sID) {
+        m_sID = sID;
+    }
 
-  private ERevisionStatusCode21 (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static ERevisionStatusCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ERevisionStatusCode21.class, sID);
-  }
+    @Nullable
+    public static ERevisionStatusCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ERevisionStatusCode21 .class, sID);
+    }
 }

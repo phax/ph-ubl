@@ -19,7 +19,6 @@ package com.helger.ubl21.main;
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
-import java.util.Optional;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
@@ -29,6 +28,7 @@ import javax.annotation.concurrent.Immutable;
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.CommonsLinkedHashSet;
 import com.helger.commons.collection.impl.ICommonsOrderedSet;
@@ -45,6 +45,7 @@ import com.helger.genericode.Genericode10Helper;
 import com.helger.genericode.v10.Agency;
 import com.helger.genericode.v10.CodeListDocument;
 import com.helger.genericode.v10.Column;
+import com.helger.genericode.v10.Identification;
 import com.helger.genericode.v10.LongName;
 import com.helger.genericode.v10.Row;
 import com.helger.genericode.v10.SimpleCodeList;
@@ -136,6 +137,30 @@ public final class MainCreateEnumsGenericode21
       _createEnum10 (aFile, aCodeList10, aOtherCols, bHasNameColumn);
   }
 
+  private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
+  {
+    final Identification aIdentification = aCodeList10.getIdentification ();
+
+    final Agency aAgency = aIdentification.getAgency ();
+    if (aAgency != null)
+    {
+      if (aAgency.hasIdentifierEntries ())
+        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_ID", JExpr.lit (aAgency.getIdentifierAtIndex (0).getValue ()));
+
+      if (aAgency.hasLongNameEntries ())
+        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_LONG_NAME", JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
+    }
+
+    final LongName aListID = CollectionHelper.findFirst (aIdentification.getLongName (),
+                                                         x -> x.getIdentifier () != null && x.getIdentifier ().equals ("listID"));
+    if (aListID != null)
+      jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_ID", JExpr.lit (aListID.getValue ()));
+
+    final String sVersion = aIdentification.getVersion ();
+    if (StringHelper.hasText (sVersion))
+      jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
+  }
+
   private static void _createEnum10 (final File aFile,
                                      final CodeListDocument aCodeList10,
                                      final Set <String> aOtherCols,
@@ -159,20 +184,7 @@ public final class MainCreateEnumsGenericode21
     jEnum.javadoc ().add ("It contains a total of " + aCodeList10.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
 
-    Agency agency = aCodeList10.getIdentification().getAgency();
-    if (agency != null) {
-      String agencyID = agency.getIdentifier().get(0).getValue();
-      String agencyName = agency.getLongName().get(0).getValue();
-
-      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "agencyID", JExpr.lit(agencyID));
-      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "agencyName", JExpr.lit(agencyName));
-    }
-
-    Optional<LongName> listId = aCodeList10.getIdentification().getLongName().stream()
-            .filter(e -> e.getIdentifier() != null && e.getIdentifier().equals("listID")).findAny();
-    if (listId.isPresent()) {
-      jEnum.field(JMod.PUBLIC_STATIC_FINAL, String.class, "listID", JExpr.lit(listId.get().getValue()));
-    }
+    _classConstants (aCodeList10, jEnum);
 
     final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;
@@ -303,6 +315,8 @@ public final class MainCreateEnumsGenericode21
     jClass.javadoc ().add ("It contains a total of " + nEntries + " entries!\n");
     jClass.javadoc ().add ("The number of elements is too large to create an enum from it!\n");
     jClass.javadoc ().add ("@author " + MainCreateEnumsGenericode21.class.getName ());
+
+    _classConstants (aCodeList10, jClass);
 
     final AbstractJClass aSetDecl = s_aCodeModel.ref (ICommonsSet.class).narrow (String.class);
     final AbstractJClass aSetImpl = s_aCodeModel.ref (CommonsHashSet.class).narrowEmpty ();

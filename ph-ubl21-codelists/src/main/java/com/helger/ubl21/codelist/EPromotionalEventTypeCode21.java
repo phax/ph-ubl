@@ -16,53 +16,51 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * PromotionalEventTypeCode-2.1.gc. Do NOT edit! It contains a total of 11
- * entries!
- * 
+ * This file was automatically generated from Genericode file PromotionalEventTypeCode-2.1.gc. Do NOT edit!
+ * It contains a total of 11 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EPromotionalEventTypeCode21 implements IHasID <String>
+public enum EPromotionalEventTypeCode21
+    implements IHasID<String>
 {
-  COMMUNITY_EVENT ("COMMUNITY_EVENT"),
-  HOLIDAY ("HOLIDAY"),
-  JOINTLY_SPONSORED_RETAILER_EVENT ("JOINTLY_SPONSORED_RETAILER_EVENT"),
-  MANUFACTURER_PROMOTION ("MANUFACTURER_PROMOTION"),
-  OTHER ("OTHER"),
-  RETAILER_EVENT ("RETAILER_EVENT"),
-  SEASONAL_EVENT ("SEASONAL_EVENT"),
-  STORE_CLOSING ("STORE_CLOSING"),
-  STORE_OPENING ("STORE_OPENING"),
-  TRADE_ITEM_DISCONTINUATION ("TRADE_ITEM_DISCONTINUATION"),
-  TRADE_ITEM_INTRODUCTION ("TRADE_ITEM_INTRODUCTION");
+    COMMUNITY_EVENT("COMMUNITY_EVENT"),
+    HOLIDAY("HOLIDAY"),
+    JOINTLY_SPONSORED_RETAILER_EVENT("JOINTLY_SPONSORED_RETAILER_EVENT"),
+    MANUFACTURER_PROMOTION("MANUFACTURER_PROMOTION"),
+    OTHER("OTHER"),
+    RETAILER_EVENT("RETAILER_EVENT"),
+    SEASONAL_EVENT("SEASONAL_EVENT"),
+    STORE_CLOSING("STORE_CLOSING"),
+    STORE_OPENING("STORE_OPENING"),
+    TRADE_ITEM_DISCONTINUATION("TRADE_ITEM_DISCONTINUATION"),
+    TRADE_ITEM_INTRODUCTION("TRADE_ITEM_INTRODUCTION");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
 
-  private final String m_sID;
+    private EPromotionalEventTypeCode21(@Nonnull @Nonempty final String sID) {
+        m_sID = sID;
+    }
 
-  private EPromotionalEventTypeCode21 (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static EPromotionalEventTypeCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EPromotionalEventTypeCode21.class, sID);
-  }
+    @Nullable
+    public static EPromotionalEventTypeCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(EPromotionalEventTypeCode21 .class, sID);
+    }
 }

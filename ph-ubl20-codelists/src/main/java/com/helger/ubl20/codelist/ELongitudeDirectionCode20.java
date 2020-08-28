@@ -16,57 +16,56 @@
  */
 package com.helger.ubl20.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file is generated from Genericode file LongitudeDirectionCode-2.0.gc. Do
- * NOT edit!
+ * This file was automatically generated from Genericode file LongitudeDirectionCode-2.0.gc. Do NOT edit!
+ * It contains a total of 2 entries!
+ * @author com.helger.ubl20.main.MainCreateEnumsGenericode20
  */
 @CodingStyleguideUnaware
-public enum ELongitudeDirectionCode20 implements IHasID <String>, IHasDisplayName
+public enum ELongitudeDirectionCode20
+    implements IHasID<String> , IHasDisplayName
 {
-  East ("East", "East"),
-  West ("West", "West");
+    East("East", "East"),
+    West("West", "West");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.0";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  private final String m_sID;
-  private final String m_sDisplayName;
+    private ELongitudeDirectionCode20(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  private ELongitudeDirectionCode20 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @Nonnull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @Nonnull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static ELongitudeDirectionCode20 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ELongitudeDirectionCode20 .class, sID);
+    }
 
-  @Nullable
-  public static ELongitudeDirectionCode20 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ELongitudeDirectionCode20.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final ELongitudeDirectionCode20 eValue = ELongitudeDirectionCode20.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final ELongitudeDirectionCode20 eValue = ELongitudeDirectionCode20 .getFromIDOrNull(sID);
+        return ((eValue == null)?null:eValue.getDisplayName());
+    }
 }

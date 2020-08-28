@@ -16,59 +16,55 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * CommodityIdentificationCode-2.1.gc. Do NOT edit! It contains a total of 1
- * entries!
- * 
+ * This file was automatically generated from Genericode file CommodityIdentificationCode-2.1.gc. Do NOT edit!
+ * It contains a total of 1 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ECommodityIdentificationCode21 implements IHasID <String>, IHasDisplayName
+public enum ECommodityIdentificationCode21
+    implements IHasID<String> , IHasDisplayName
 {
-  ZZZ ("ZZZ", "Mutually defined");
+    ZZZ("ZZZ", "Mutually defined");
+    public static final String AGENCY_ID = "6";
+    public static final String AGENCY_LONG_NAME = "United Nations Economic Commission for Europe";
+    public static final String LIST_VERSION = "D10B";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  private final String m_sID;
-  private final String m_sDisplayName;
+    private ECommodityIdentificationCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  private ECommodityIdentificationCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @Nonnull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @Nonnull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static ECommodityIdentificationCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ECommodityIdentificationCode21 .class, sID);
+    }
 
-  @Nullable
-  public static ECommodityIdentificationCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ECommodityIdentificationCode21.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final ECommodityIdentificationCode21 eValue = ECommodityIdentificationCode21.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final ECommodityIdentificationCode21 eValue = ECommodityIdentificationCode21 .getFromIDOrNull(sID);
+        return ((eValue == null)?null:eValue.getDisplayName());
+    }
 }

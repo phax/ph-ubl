@@ -16,62 +16,58 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * TransportationStatusTypeCode-2.1.gc. Do NOT edit! It contains a total of 4
- * entries!
- * 
+ * This file was automatically generated from Genericode file TransportationStatusTypeCode-2.1.gc. Do NOT edit!
+ * It contains a total of 4 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ETransportationStatusTypeCode21 implements IHasID <String>, IHasDisplayName
+public enum ETransportationStatusTypeCode21
+    implements IHasID<String> , IHasDisplayName
 {
-  _1 ("1", "Schedule deviations"),
-  _2 ("2", "Cargo conditions"),
-  _3 ("3", "All deviations"),
-  _4 ("4", "All execution statuses");
+    _1("1", "Schedule deviations"),
+    _2("2", "Cargo conditions"),
+    _3("3", "All deviations"),
+    _4("4", "All execution statuses");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  private final String m_sID;
-  private final String m_sDisplayName;
+    private ETransportationStatusTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  private ETransportationStatusTypeCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @Nonnull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @Nonnull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static ETransportationStatusTypeCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ETransportationStatusTypeCode21 .class, sID);
+    }
 
-  @Nullable
-  public static ETransportationStatusTypeCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ETransportationStatusTypeCode21.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final ETransportationStatusTypeCode21 eValue = ETransportationStatusTypeCode21.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final ETransportationStatusTypeCode21 eValue = ETransportationStatusTypeCode21 .getFromIDOrNull(sID);
+        return ((eValue == null)?null:eValue.getDisplayName());
+    }
 }

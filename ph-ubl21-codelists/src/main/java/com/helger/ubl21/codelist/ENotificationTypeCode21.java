@@ -16,64 +16,61 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 import com.helger.commons.name.IHasDisplayName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * NotificationTypeCode-2.1.gc. Do NOT edit! It contains a total of 7 entries!
- * 
+ * This file was automatically generated from Genericode file NotificationTypeCode-2.1.gc. Do NOT edit!
+ * It contains a total of 7 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ENotificationTypeCode21 implements IHasID <String>, IHasDisplayName
+public enum ENotificationTypeCode21
+    implements IHasID<String> , IHasDisplayName
 {
-  _1 ("1", "Other"),
-  _2 ("2", "Pickup"),
-  _3 ("3", "Delivery"),
-  _4 ("4", "Schedule deviation"),
-  _5 ("5", "Cargo condition deviation"),
-  _6 ("6", "Itinerary"),
-  _7 ("7", "All execution statuses");
+    _1("1", "Other"),
+    _2("2", "Pickup"),
+    _3("3", "Delivery"),
+    _4("4", "Schedule deviation"),
+    _5("5", "Cargo condition deviation"),
+    _6("6", "Itinerary"),
+    _7("7", "All execution statuses");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  private final String m_sID;
-  private final String m_sDisplayName;
+    private ENotificationTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  private ENotificationTypeCode21 (@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @Nonnull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @Nonnull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static ENotificationTypeCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ENotificationTypeCode21 .class, sID);
+    }
 
-  @Nullable
-  public static ENotificationTypeCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ENotificationTypeCode21.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final ENotificationTypeCode21 eValue = ENotificationTypeCode21.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final ENotificationTypeCode21 eValue = ENotificationTypeCode21 .getFromIDOrNull(sID);
+        return ((eValue == null)?null:eValue.getDisplayName());
+    }
 }

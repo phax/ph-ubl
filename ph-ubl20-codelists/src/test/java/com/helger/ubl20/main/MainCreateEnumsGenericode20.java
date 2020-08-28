@@ -25,6 +25,7 @@ import javax.annotation.Nullable;
 
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.CommonsLinkedHashSet;
 import com.helger.commons.collection.impl.ICommonsOrderedSet;
@@ -38,8 +39,11 @@ import com.helger.commons.regex.RegExHelper;
 import com.helger.commons.string.StringHelper;
 import com.helger.genericode.Genericode04CodeListMarshaller;
 import com.helger.genericode.Genericode04Helper;
+import com.helger.genericode.v04.Agency;
 import com.helger.genericode.v04.CodeListDocument;
 import com.helger.genericode.v04.Column;
+import com.helger.genericode.v04.Identification;
+import com.helger.genericode.v04.LongName;
 import com.helger.genericode.v04.Row;
 import com.helger.genericode.v04.SimpleCodeList;
 import com.helger.jcodemodel.JBlock;
@@ -78,6 +82,30 @@ public final class MainCreateEnumsGenericode20
   private static String _getVarName (@Nonnull final String sOtherCol)
   {
     return sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
+  }
+
+  private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
+  {
+    final Identification aIdentification = aCodeList10.getIdentification ();
+
+    final Agency aAgency = aIdentification.getAgency ();
+    if (aAgency != null)
+    {
+      if (aAgency.hasIdentifierEntries ())
+        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_ID", JExpr.lit (aAgency.getIdentifierAtIndex (0).getValue ()));
+
+      if (aAgency.hasLongNameEntries ())
+        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_LONG_NAME", JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
+    }
+
+    final LongName aListID = CollectionHelper.findFirst (aIdentification.getLongName (),
+                                                         x -> x.getIdentifier () != null && x.getIdentifier ().equals ("listID"));
+    if (aListID != null)
+      jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_ID", JExpr.lit (aListID.getValue ()));
+
+    final String sVersion = aIdentification.getVersion ();
+    if (StringHelper.hasText (sVersion))
+      jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
   private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList) throws JCodeModelException
@@ -135,7 +163,11 @@ public final class MainCreateEnumsGenericode20
                                             ._implements (s_aCodeModel.ref (IHasID.class).narrow (String.class))
                                             ._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
-    jEnum.javadoc ().add ("This file is generated from Genericode file " + aFile.getName () + ". Do NOT edit!");
+    jEnum.javadoc ().add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
+    jEnum.javadoc ().add ("It contains a total of " + aCodeList.getSimpleCodeList ().getRow ().size () + " entries!\n");
+    jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode20.class.getName ());
+
+    _classConstants (aCodeList, jEnum);
 
     final ICommonsSet <String> aUsedIdentifier = new CommonsHashSet <> ();
     boolean bHasEmptyID = false;

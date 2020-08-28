@@ -16,62 +16,61 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * AdjustmentReasonCode-2.1.gc. Do NOT edit! It contains a total of 21 entries!
- * 
+ * This file was automatically generated from Genericode file AdjustmentReasonCode-2.1.gc. Do NOT edit!
+ * It contains a total of 21 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum EAdjustmentReasonCode21 implements IHasID <String>
+public enum EAdjustmentReasonCode21
+    implements IHasID<String>
 {
-  CANCELED_PROMOTION ("CANCELED_PROMOTION"),
-  DISCONTINUED_PRODUCT ("DISCONTINUED_PRODUCT"),
-  DISTRIBUTION_ISSUE ("DISTRIBUTION_ISSUE"),
-  EXPANDED_PROMOTION ("EXPANDED_PROMOTION"),
-  FORWARD_BUY ("FORWARD_BUY"),
-  INVENTORY_POLICY_CHANGE ("INVENTORY_POLICY_CHANGE"),
-  MISCELLANEOUS_EVENT ("MISCELLANEOUS_EVENT"),
-  NEW_LOCATION ("NEW_LOCATION"),
-  NEW_PRODUCT ("NEW_PRODUCT"),
-  NEW_PROMOTION ("NEW_PROMOTION"),
-  ORDER_POLICY_CHANGE ("ORDER_POLICY_CHANGE"),
-  OVERSTOCK_CONDITION ("OVERSTOCK_CONDITION"),
-  PRICE_CHANGE ("PRICE_CHANGE"),
-  PRODUCTION_ISSUE ("PRODUCTION_ISSUE"),
-  PRODUCT_CHANGEOVER ("PRODUCT_CHANGEOVER"),
-  REDUCED_PROMOTION ("REDUCED_PROMOTION"),
-  REVISED_PLAN ("REVISED_PLAN"),
-  REVISED_PROMOTION ("REVISED_PROMOTION"),
-  STORE_CLOSURE ("STORE_CLOSURE"),
-  TRANSPORTATION_ISSUE ("TRANSPORTATION_ISSUE"),
-  WEATHER_RELATED_EVENT ("WEATHER_RELATED_EVENT");
+    CANCELED_PROMOTION("CANCELED_PROMOTION"),
+    DISCONTINUED_PRODUCT("DISCONTINUED_PRODUCT"),
+    DISTRIBUTION_ISSUE("DISTRIBUTION_ISSUE"),
+    EXPANDED_PROMOTION("EXPANDED_PROMOTION"),
+    FORWARD_BUY("FORWARD_BUY"),
+    INVENTORY_POLICY_CHANGE("INVENTORY_POLICY_CHANGE"),
+    MISCELLANEOUS_EVENT("MISCELLANEOUS_EVENT"),
+    NEW_LOCATION("NEW_LOCATION"),
+    NEW_PRODUCT("NEW_PRODUCT"),
+    NEW_PROMOTION("NEW_PROMOTION"),
+    ORDER_POLICY_CHANGE("ORDER_POLICY_CHANGE"),
+    OVERSTOCK_CONDITION("OVERSTOCK_CONDITION"),
+    PRICE_CHANGE("PRICE_CHANGE"),
+    PRODUCTION_ISSUE("PRODUCTION_ISSUE"),
+    PRODUCT_CHANGEOVER("PRODUCT_CHANGEOVER"),
+    REDUCED_PROMOTION("REDUCED_PROMOTION"),
+    REVISED_PLAN("REVISED_PLAN"),
+    REVISED_PROMOTION("REVISED_PROMOTION"),
+    STORE_CLOSURE("STORE_CLOSURE"),
+    TRANSPORTATION_ISSUE("TRANSPORTATION_ISSUE"),
+    WEATHER_RELATED_EVENT("WEATHER_RELATED_EVENT");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
 
-  private final String m_sID;
+    private EAdjustmentReasonCode21(@Nonnull @Nonempty final String sID) {
+        m_sID = sID;
+    }
 
-  private EAdjustmentReasonCode21 (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static EAdjustmentReasonCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EAdjustmentReasonCode21.class, sID);
-  }
+    @Nullable
+    public static EAdjustmentReasonCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(EAdjustmentReasonCode21 .class, sID);
+    }
 }

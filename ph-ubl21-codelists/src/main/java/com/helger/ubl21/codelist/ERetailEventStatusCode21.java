@@ -16,50 +16,49 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * RetailEventStatusCode-2.1.gc. Do NOT edit! It contains a total of 9 entries!
- * 
+ * This file was automatically generated from Genericode file RetailEventStatusCode-2.1.gc. Do NOT edit!
+ * It contains a total of 9 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ERetailEventStatusCode21 implements IHasID <String>
+public enum ERetailEventStatusCode21
+    implements IHasID<String>
 {
-  ACKNOWLEDGED ("ACKNOWLEDGED"),
-  ACTIVE ("ACTIVE"),
-  CANCELED ("CANCELED"),
-  COMPLETED ("COMPLETED"),
-  EXPIRED ("EXPIRED"),
-  PLANNED ("PLANNED"),
-  PROPOSED ("PROPOSED"),
-  REJECTED ("REJECTED"),
-  TERMINATED ("TERMINATED");
+    ACKNOWLEDGED("ACKNOWLEDGED"),
+    ACTIVE("ACTIVE"),
+    CANCELED("CANCELED"),
+    COMPLETED("COMPLETED"),
+    EXPIRED("EXPIRED"),
+    PLANNED("PLANNED"),
+    PROPOSED("PROPOSED"),
+    REJECTED("REJECTED"),
+    TERMINATED("TERMINATED");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
 
-  private final String m_sID;
+    private ERetailEventStatusCode21(@Nonnull @Nonempty final String sID) {
+        m_sID = sID;
+    }
 
-  private ERetailEventStatusCode21 (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static ERetailEventStatusCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ERetailEventStatusCode21.class, sID);
-  }
+    @Nullable
+    public static ERetailEventStatusCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ERetailEventStatusCode21 .class, sID);
+    }
 }

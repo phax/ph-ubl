@@ -16,49 +16,47 @@
  */
 package com.helger.ubl21.codelist;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file
- * SupplyChainActivityTypeCode-2.1.gc. Do NOT edit! It contains a total of 7
- * entries!
- * 
+ * This file was automatically generated from Genericode file SupplyChainActivityTypeCode-2.1.gc. Do NOT edit!
+ * It contains a total of 7 entries!
  * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
-public enum ESupplyChainActivityTypeCode21 implements IHasID <String>
+public enum ESupplyChainActivityTypeCode21
+    implements IHasID<String>
 {
-  CANCELED_ORDERS ("CANCELED_ORDERS"),
-  EMERGENCY_ORDERS ("EMERGENCY_ORDERS"),
-  ON_HAND ("ON_HAND"),
-  ORDERS ("ORDERS"),
-  RECEIPTS ("RECEIPTS"),
-  SALES ("SALES"),
-  SHIPMENTS ("SHIPMENTS");
+    CANCELED_ORDERS("CANCELED_ORDERS"),
+    EMERGENCY_ORDERS("EMERGENCY_ORDERS"),
+    ON_HAND("ON_HAND"),
+    ORDERS("ORDERS"),
+    RECEIPTS("RECEIPTS"),
+    SALES("SALES"),
+    SHIPMENTS("SHIPMENTS");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.1";
+    private final String m_sID;
 
-  private final String m_sID;
+    private ESupplyChainActivityTypeCode21(@Nonnull @Nonempty final String sID) {
+        m_sID = sID;
+    }
 
-  private ESupplyChainActivityTypeCode21 (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+    @Nonnull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static ESupplyChainActivityTypeCode21 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (ESupplyChainActivityTypeCode21.class, sID);
-  }
+    @Nullable
+    public static ESupplyChainActivityTypeCode21 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(ESupplyChainActivityTypeCode21 .class, sID);
+    }
 }
