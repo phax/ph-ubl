@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger.ubl</groupId>
     <artifactId>ph-ubl-parent-pom</artifactId>
-    <version>6.3.1-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl20</artifactId>
   <packaging>bundle</packaging>
@@ -87,6 +87,11 @@
       <artifactId>ph-datetime</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+  <groupId>org.glassfish.jaxb</groupId>
+  <artifactId>jaxb-xjc</artifactId>
+  <version>2.3.3</version>
+</dependency>
   </dependencies>
   
   <build>

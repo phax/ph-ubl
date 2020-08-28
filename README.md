@@ -253,7 +253,7 @@ For further information on the Universal Business Language can be found on the f
   
 # News and noteworthy
 
-* v6.3.1 - work in progress
+* v6.4.0 - work in progress
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
     * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
 * v6.3.0 - 2020-05-26
