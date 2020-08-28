@@ -25,8 +25,8 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.state.ESuccess;
-import com.helger.datetime.util.PDTXMLConverter;
 import com.helger.xml.XMLFactory;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
@@ -62,7 +62,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     // Fill it
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTXMLConverter.getXMLCalendarDateNow ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);
@@ -149,7 +149,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     // Fill it
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTXMLConverter.getXMLCalendarDateNow ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);
