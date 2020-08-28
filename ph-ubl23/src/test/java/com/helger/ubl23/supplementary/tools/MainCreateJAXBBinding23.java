@@ -81,7 +81,7 @@ public final class MainCreateJAXBBinding23
   private static Iterable <File> _getFileList (final String sPath)
   {
     return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx ("^CCTS.*",
+                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx (".*CCTS.*",
                                                                                                                     ".*xmldsig.*",
                                                                                                                     ".*XAdES.*")),
                                        Comparator.comparing (File::getName));
@@ -100,7 +100,7 @@ public final class MainCreateJAXBBinding23
     String s = sNamespaceURI.toLowerCase (Locale.US);
 
     String [] aParts;
-    final URL aURL = URLHelper.getAsURL (sNamespaceURI);
+    final URL aURL = URLHelper.getAsURL (sNamespaceURI, false);
     if (aURL != null)
     {
       // Host
@@ -160,7 +160,7 @@ public final class MainCreateJAXBBinding23
           final String sTargetNamespace = _getTargetNamespace (aDoc);
           if (!aNamespaces.add (sTargetNamespace))
           {
-            System.out.println ("Ignored namespace URI " + sTargetNamespace + " in " + aFile.getName ());
+            System.out.println ("Ignored namespace URI '" + sTargetNamespace + "' in '" + aFile.getName () + "'");
             continue;
           }
           String sPackageName = _convertToPackage (sTargetNamespace);
@@ -174,6 +174,7 @@ public final class MainCreateJAXBBinding23
                                               .appendElement (JAXB_NS_URI, "bindings")
                                               .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
+          eBindings.appendComment ("Target namespace: " + sTargetNamespace);
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
                    .appendElement (JAXB_NS_URI, "package")
                    .setAttribute ("name", sPackageName);

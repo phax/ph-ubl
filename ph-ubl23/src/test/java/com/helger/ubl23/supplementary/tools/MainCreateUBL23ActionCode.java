@@ -71,6 +71,7 @@ public class MainCreateUBL23ActionCode extends AbstractCreateUBLActionCode
            "import oasis.names.specification.ubl.schema.xsd.goodsitemitinerary_23.GoodsItemItineraryType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.goodsitempassport_23.GoodsItemPassportType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.guaranteecertificate_23.GuaranteeCertificateType;\n" +
+           "import oasis.names.specification.ubl.schema.xsd.importcustomsdeclaration_23.ImportCustomsDeclarationType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.instructionforreturns_23.InstructionForReturnsType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.inventoryreport_23.InventoryReportType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;\n" +
@@ -85,6 +86,7 @@ public class MainCreateUBL23ActionCode extends AbstractCreateUBLActionCode
            "import oasis.names.specification.ubl.schema.xsd.productactivity_23.ProductActivityType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.proofofreexportation_23.ProofOfReexportationType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType;\n" +
+           "import oasis.names.specification.ubl.schema.xsd.proofofreexportationreminder_23.ProofOfReexportationReminderType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_23.QualificationApplicationRequestType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_23.QualificationApplicationResponseType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.quotation_23.QuotationType;\n" +
@@ -106,6 +108,7 @@ public class MainCreateUBL23ActionCode extends AbstractCreateUBLActionCode
            "import oasis.names.specification.ubl.schema.xsd.tenderstatusrequest_23.TenderStatusRequestType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.tenderwithdrawal_23.TenderWithdrawalType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_23.TradeItemLocationProfileType;\n" +
+           "import oasis.names.specification.ubl.schema.xsd.transitcustomsdeclaration_23.TransitCustomsDeclarationType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.transportationstatus_23.TransportationStatusType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_23.TransportationStatusRequestType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.transportexecutionplan_23.TransportExecutionPlanType;\n" +

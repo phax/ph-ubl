@@ -100,6 +100,9 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
                       "UBL-GoodsItemPassport-2.3.xsd"),
   GUARANTEE_CERTIFICATE (oasis.names.specification.ubl.schema.xsd.guaranteecertificate_23.GuaranteeCertificateType.class,
                          "UBL-GuaranteeCertificate-2.3.xsd"),
+  @Since ("2.3")
+  IMPORT_CUSTOMS_DECLARATION(oasis.names.specification.ubl.schema.xsd.importcustomsdeclaration_23.ImportCustomsDeclarationType.class,
+                             "UBL-ImportCustomsDeclaration-2.3.xsd"),
   INSTRUCTION_FOR_RETURNS (oasis.names.specification.ubl.schema.xsd.instructionforreturns_23.InstructionForReturnsType.class,
                            "UBL-InstructionForReturns-2.3.xsd"),
   INVENTORY_REPORT (oasis.names.specification.ubl.schema.xsd.inventoryreport_23.InventoryReportType.class, "UBL-InventoryReport-2.3.xsd"),
@@ -120,6 +123,9 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
   @Since ("2.3")
   PROOF_OF_REEXPORTATION(oasis.names.specification.ubl.schema.xsd.proofofreexportation_23.ProofOfReexportationType.class,
                          "UBL-ProofOfReexportation-2.3.xsd"),
+  @Since ("2.3")
+  PROOF_OF_REEXPORTATION_REMINDER(oasis.names.specification.ubl.schema.xsd.proofofreexportationreminder_23.ProofOfReexportationReminderType.class,
+                                  "UBL-ProofOfReexportationReminder-2.3.xsd"),
   @Since ("2.3")
   PROOF_OF_REEXPORTATION_REQUEST(oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType.class,
                                  "UBL-ProofOfReexportationRequest-2.3.xsd"),
@@ -156,6 +162,9 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
                      "UBL-TenderWithdrawal-2.3.xsd"),
   TRADE_ITEM_LOCATION_PROFILE (oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_23.TradeItemLocationProfileType.class,
                                "UBL-TradeItemLocationProfile-2.3.xsd"),
+  @Since ("2.3")
+  TRANSIT_CUSTOMS_DECLARATION(oasis.names.specification.ubl.schema.xsd.transitcustomsdeclaration_23.TransitCustomsDeclarationType.class,
+                              "UBL-TransitCustomsDeclaration-2.3.xsd"),
   TRANSPORTATION_STATUS (oasis.names.specification.ubl.schema.xsd.transportationstatus_23.TransportationStatusType.class,
                          "UBL-TransportationStatus-2.3.xsd"),
   TRANSPORTATION_STATUS_REQUEST (oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_23.TransportationStatusRequestType.class,

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      30 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.3/
+  Release Date:      10 April 2020
   Module:            xsdrt/common/UBL-QualifiedDataTypes-2.3.xsd
-  Generated on:      2020-01-28 20:53z
+  Generated on:      2020-07-29 19:49z
   Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
-            xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+            xmlns:udt="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.3">
-   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
-               schemaLocation="UBL-UnqualifiedDataTypes-2.3.xsd"/>
+   <xsd:import namespace="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"
+               schemaLocation="BDNDR-UnqualifiedDataTypes-1.1.xsd"/>
    <xsd:complexType name="AllowanceChargeReasonCodeType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:CodeType"/>

@@ -67,7 +67,7 @@ public final class CUBL23
                                                                                                     _getCL ());
   public static final ClassPathResource XSD_SIGNATURE_BASIC_COMPONENTS = new ClassPathResource ("/schemas/ubl23/common/UBL-SignatureBasicComponents-2.3.xsd",
                                                                                                 _getCL ());
-  public static final ClassPathResource XSD_UNQUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl23/common/UBL-UnqualifiedDataTypes-2.3.xsd",
+  public static final ClassPathResource XSD_UNQUALIFIED_DATA_TYPES = new ClassPathResource ("/schemas/ubl23/common/BDNDR-UnqualifiedDataTypes-1.1.xsd",
                                                                                             _getCL ());
 
   @PresentForCodeCoverage

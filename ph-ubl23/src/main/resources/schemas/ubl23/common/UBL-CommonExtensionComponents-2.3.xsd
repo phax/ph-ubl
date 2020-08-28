@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      29 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.3/
+  Release Date:      02 December 2019
   Module:            UBL-CommonExtensionComponents-2.3.xsd
   Generated on:      2017-01-02 17:20(UTC)
   Copyright (c) OASIS Open 2017. All Rights Reserved.
@@ -10,13 +10,13 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+xmlns:udt="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"
 targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
             elementFormDefault="qualified" attributeFormDefault="unqualified" 
             version="2.2">
 <!-- ===== Imports ===== -->
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
-              schemaLocation="UBL-UnqualifiedDataTypes-2.3.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"
+              schemaLocation="BDNDR-UnqualifiedDataTypes-1.1.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
               schemaLocation="UBL-CommonBasicComponents-2.3.xsd"/>
 <!-- ===== Includes ===== -->
