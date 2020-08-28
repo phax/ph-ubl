@@ -254,6 +254,7 @@ For further information on the Universal Business Language can be found on the f
 # News and noteworthy
 
 * v6.4.0 - work in progress
+    * Binds to ph-commons 9.4.7
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
     * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
     * Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` ([see #27](https://github.com/phax/ph-ubl/issues/27))
