@@ -231,7 +231,7 @@ public final class UBL20FuncTest
       // Validate
       IErrorList aErrors = UBL20Validator.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
-      assertFalse (sFilename, aErrors.containsAtLeastOneError ());
+      assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // write again
       final Document aDoc2 = UBL20Writer.invoice ().getAsDocument (aUBLObject);

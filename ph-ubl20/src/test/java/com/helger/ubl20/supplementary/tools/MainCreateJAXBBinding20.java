@@ -70,19 +70,37 @@ public final class MainCreateJAXBBinding20
   {
     final IMicroDocument eDoc = new MicroDocument ();
     final IMicroElement eRoot = eDoc.appendElement (JAXB_NS_URI, "bindings");
-    eRoot.setAttribute ("xsi:schemaLocation", JAXB_NS_URI + " http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd");
+    if (false)
+      eRoot.setAttribute ("xsi:schemaLocation", JAXB_NS_URI + " http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd");
     eRoot.setAttribute ("version", "2.1");
 
     final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
     eGlobal.setAttribute ("typesafeEnumMaxMembers", "2000");
     eGlobal.setAttribute ("typesafeEnumMemberName", "generateError");
+
+    // When in "xjc" namespace "adapter" can be used, when in "jaxb"
+    // namespace, parse and print must be used
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalDateTime")
+           .setAttribute ("xmlType", "xsd:dateTime")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDateTime");
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalDate")
+           .setAttribute ("xmlType", "xsd:date")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDate");
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalTime")
+           .setAttribute ("xmlType", "xsd:time")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalTime");
+
     return eDoc;
   }
 
   @Nonnull
   private static Iterable <File> _getFileList (final String sPath)
   {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd")),
+    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
+                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx ("^CCTS.*")),
                                        Comparator.comparing (File::getName));
   }
 
@@ -143,59 +161,6 @@ public final class MainCreateJAXBBinding20
     return StringHelper.getImploded (".", aParts);
   }
 
-  public static void main (final String [] args)
-  {
-    // UBL 2.0
-    {
-      System.out.println ("UBL 2.0");
-      final IMicroDocument eDoc = _createBaseDoc ();
-      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
-      for (final String sPart : new String [] { "common", "maindoc" })
-      {
-        final String sBasePath = "/resources/schemas/ubl20/" + sPart;
-        for (final File aFile : _getFileList ("src/main" + sBasePath))
-        {
-          // Each namespace should handled only once
-          final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
-          final String sTargetNamespace = _getTargetNamespace (aDoc);
-          if (!aNamespaces.add (sTargetNamespace))
-          {
-            System.out.println ("Ignored " + sTargetNamespace + " in " + aFile.getName ());
-            continue;
-          }
-          final String sPackageName = _convertToPackage (sTargetNamespace);
-          // schemaLocation must be relative to bindings file!
-          final IMicroElement eBindings = eDoc.getDocumentElement ()
-                                              .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
-                                              .setAttribute ("node", "/xsd:schema");
-
-          eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
-                   .appendElement (JAXB_NS_URI, "package")
-                   .setAttribute ("name", sPackageName);
-
-          if (aFile.getName ().equals ("CodeList_UnitCode_UNECE_7_04.xsd") ||
-              aFile.getName ().equals ("CodeList_LanguageCode_ISO_7_04.xsd"))
-          {
-            _generateExplicitEnumMapping (aDoc, aFile.getName (), eBindings);
-          }
-        }
-      }
-      MicroWriter.writeToFile (eDoc,
-                               new File ("src/main/jaxb/bindings20.xjb"),
-                               new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
-                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
-                                                                                                                         JAXB_NS_URI)
-                                                                                                            .addMapping ("xsd",
-                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
-                                                                                                            .addMapping ("xsi",
-                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
-                                                       .setPutNamespaceContextPrefixesInRoot (true));
-    }
-
-    System.out.println ("Done");
-  }
-
   private static void _generateExplicitEnumMapping (@Nonnull final IMicroDocument aDoc,
                                                     @Nonnull @Nonempty final String sFilename,
                                                     @Nonnull final IMicroElement eBindings)
@@ -248,5 +213,59 @@ public final class MainCreateJAXBBinding20
 
     // Write out the mapping file for easy later-on resolving
     XMLMapHandler.writeMap (aValueToConstants, new FileSystemResource ("src/main/resources/schemas/" + sFilename + ".mapping"));
+  }
+
+  public static void main (final String [] args)
+  {
+    // UBL 2.0
+    {
+      System.out.println ("UBL 2.0");
+      final IMicroDocument eDoc = _createBaseDoc ();
+      final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
+      for (final String sPart : new String [] { "common", "maindoc" })
+      {
+        final String sBasePath = "/resources/schemas/ubl20/" + sPart;
+        for (final File aFile : _getFileList ("src/main" + sBasePath))
+        {
+          // Each namespace should handled only once
+          final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
+          final String sTargetNamespace = _getTargetNamespace (aDoc);
+          if (!aNamespaces.add (sTargetNamespace))
+          {
+            System.out.println ("Ignored " + sTargetNamespace + " in " + aFile.getName ());
+            continue;
+          }
+          final String sPackageName = _convertToPackage (sTargetNamespace);
+          // schemaLocation must be relative to bindings file!
+          final IMicroElement eBindings = eDoc.getDocumentElement ()
+                                              .appendElement (JAXB_NS_URI, "bindings")
+                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("node", "/xsd:schema");
+
+          eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
+                   .appendElement (JAXB_NS_URI, "package")
+                   .setAttribute ("name", sPackageName);
+
+          if (aFile.getName ().equals ("CodeList_UnitCode_UNECE_7_04.xsd") ||
+              aFile.getName ().equals ("CodeList_LanguageCode_ISO_7_04.xsd"))
+          {
+            _generateExplicitEnumMapping (aDoc, aFile.getName (), eBindings);
+          }
+        }
+      }
+      MicroWriter.writeToFile (eDoc,
+                               new File ("src/main/jaxb/bindings20.xjb"),
+                               new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
+                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
+                                                                                                                         JAXB_NS_URI)
+                                                                                                            .addMapping ("xjc", XJC_NS_URI)
+                                                                                                            .addMapping ("xsd",
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
+                                                                                                            .addMapping ("xsi",
+                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
+                                                       .setPutNamespaceContextPrefixesInRoot (true));
+    }
+
+    System.out.println ("Done");
   }
 }

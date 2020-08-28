@@ -23,8 +23,8 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
+import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.state.ESuccess;
-import com.helger.datetime.util.PDTXMLConverter;
 import com.helger.xml.serialize.read.DOMReader;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.CustomerPartyType;
@@ -52,7 +52,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     final InvoiceType aInvoice = new InvoiceType ();
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTXMLConverter.getXMLCalendarDateNow ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);
@@ -85,7 +85,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     final InvoiceType aInvoice = new InvoiceType ();
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTXMLConverter.getXMLCalendarDateNow ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);

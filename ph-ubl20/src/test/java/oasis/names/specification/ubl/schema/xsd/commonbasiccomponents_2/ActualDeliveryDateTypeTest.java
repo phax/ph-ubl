@@ -18,7 +18,7 @@ package oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_2;
 
 import static org.junit.Assert.assertNull;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.time.LocalDate;
 
 import org.junit.Test;
 
@@ -27,7 +27,7 @@ public final class ActualDeliveryDateTypeTest
   @Test
   public void testCtor ()
   {
-    final ActualDeliveryDateType x = new ActualDeliveryDateType ((XMLGregorianCalendar) null);
+    final ActualDeliveryDateType x = new ActualDeliveryDateType ((LocalDate) null);
     assertNull (x.getValue ());
   }
 }
