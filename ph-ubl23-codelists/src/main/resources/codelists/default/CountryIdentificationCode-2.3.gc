@@ -4,9 +4,9 @@
       <ShortName>CountryIdentificationCode</ShortName>
       <LongName xml:lang="en">Country Identification Code</LongName>
       <LongName Identifier="listID">ISO 3166</LongName>
-      <Version>2019-08-05</Version>
+      <Version>2020-04-17</Version>
       <CanonicalUri>urn:iso:std:iso:3166</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:3166:2019-08-05</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:3166:2020-04-17</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/CountryIdentificationCode-2.3.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/html">https://www.iso.org/obp/ui/#search/code/</AlternateFormatLocationUri>
       <Agency>
@@ -60,23 +60,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>AX</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Åland Islands</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>248</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Åland(les Îles)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>ALA</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>AL</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -961,23 +944,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>CI</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Côte d'Ivoire</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>384</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Côte d'Ivoire (la)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>CIV</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>HR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -1059,6 +1025,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>CZE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CI</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Côte d'Ivoire</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>384</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Côte d'Ivoire (la)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>CIV</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -3120,23 +3103,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>RE</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Réunion</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>638</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Réunion (La)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>REU</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>RO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -3184,6 +3150,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>RWA</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>RE</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Réunion</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>638</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Réunion (La)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>REU</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -4200,7 +4183,7 @@
             <SimpleValue>876</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Wallis-et-Futuna </SimpleValue>
+            <SimpleValue>Wallis-et-Futuna</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>WLF</SimpleValue>
@@ -4272,6 +4255,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>ZWE</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>AX</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Åland Islands</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>248</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Åland(les Îles)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>ALA</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -4293,23 +4293,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>ALA</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Åland Islands</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>248</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Åland(les Îles)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>AX</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>ALB</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -5194,23 +5177,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>CIV</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Côte d'Ivoire</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>384</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Côte d'Ivoire (la)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>CI</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>HRV</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -5292,6 +5258,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>CZ</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>CIV</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Côte d'Ivoire</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>384</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Côte d'Ivoire (la)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>CI</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -7353,23 +7336,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>REU</SimpleValue>
-         </Value>
-         <Value ColumnRef="name">
-            <SimpleValue>Réunion</SimpleValue>
-         </Value>
-         <Value ColumnRef="numericcode">
-            <SimpleValue>638</SimpleValue>
-         </Value>
-         <Value ColumnRef="french">
-            <SimpleValue>Réunion (La)</SimpleValue>
-         </Value>
-         <Value ColumnRef="ref">
-            <SimpleValue>RE</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>ROU</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -7417,6 +7383,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>RW</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>REU</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Réunion</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>638</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Réunion (La)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>RE</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -8433,7 +8416,7 @@
             <SimpleValue>876</SimpleValue>
          </Value>
          <Value ColumnRef="french">
-            <SimpleValue>Wallis-et-Futuna </SimpleValue>
+            <SimpleValue>Wallis-et-Futuna</SimpleValue>
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>WF</SimpleValue>
@@ -8505,6 +8488,23 @@
          </Value>
          <Value ColumnRef="ref">
             <SimpleValue>ZW</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ALA</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Åland Islands</SimpleValue>
+         </Value>
+         <Value ColumnRef="numericcode">
+            <SimpleValue>248</SimpleValue>
+         </Value>
+         <Value ColumnRef="french">
+            <SimpleValue>Åland(les Îles)</SimpleValue>
+         </Value>
+         <Value ColumnRef="ref">
+            <SimpleValue>AX</SimpleValue>
          </Value>
       </Row>
    </SimpleCodeList>

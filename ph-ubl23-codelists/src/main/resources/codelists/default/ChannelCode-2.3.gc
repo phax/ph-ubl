@@ -8,7 +8,7 @@
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ChannelCode:2.3</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/ChannelCode-2.3.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19A.zip!/04APR19 1/uncefact/codelist/standard/UNECE_CommunicationMeansTypeCode_D18B.xsd</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="text/xml">jar:http://www.unece.org/fileadmin/DAM/uncefact/xml_schemas/D19B.zip!/uncefact/codelist/standard/UNECE_CommunicationMeansTypeCode_D19A.xsd</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>

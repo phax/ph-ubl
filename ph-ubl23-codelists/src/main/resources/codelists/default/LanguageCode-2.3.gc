@@ -4,9 +4,9 @@
       <ShortName>LanguageCode</ShortName>
       <LongName xml:lang="en">Language Code</LongName>
       <LongName Identifier="listID">ISO 639</LongName>
-      <Version>2019-08-05</Version>
+      <Version>2020-04-17</Version>
       <CanonicalUri>urn:iso:std:iso:639</CanonicalUri>
-      <CanonicalVersionUri>urn:iso:std:iso:639:2019-08-05</CanonicalVersionUri>
+      <CanonicalVersionUri>urn:iso:std:iso:639:2020-04-17</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/LanguageCode-2.3.gc</LocationUri>
       <AlternateFormatLocationUri MimeType="text/html">http://www.loc.gov/standards/iso639-2/php/code_list.php</AlternateFormatLocationUri>
       <Agency>

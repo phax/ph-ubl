@@ -8,7 +8,7 @@
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:UnitOfMeasureCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:UnitOfMeasureCode:2.3</CanonicalVersionUri>
       <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.3/cl/gc/default/UnitOfMeasureCode-2.3.gc</LocationUri>
-      <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">jar:https://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20.zip!/rec20/rec20_Rev12e_2016.xls</AlternateFormatLocationUri>
+      <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">jar:https://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20.zip!/rec20/rec20_Rev13e_2017.xls</AlternateFormatLocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier Identifier="http://www.unece.org/trade/untdid/d18a/tred/tred3055.htm">6</Identifier>
@@ -19437,6 +19437,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>KWN</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kilowatt hour per normalized cubic metre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Kilowatt hour per normalized cubic metre (temperature 0°C and pressure 101325 millibars ).</SimpleValue>
+         </Value>
+         <Value ColumnRef="levelcategory">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>KWO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
@@ -19450,6 +19464,20 @@
          </Value>
          <Value ColumnRef="symbol">
             <SimpleValue>kg WO₃</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>KWS</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Kilowatt hour per standard cubic metre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Kilowatt hour per standard cubic metre (temperature 15°C and pressure 101325 millibars).</SimpleValue>
+         </Value>
+         <Value ColumnRef="levelcategory">
+            <SimpleValue>2</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -28515,6 +28543,34 @@
          </Value>
          <Value ColumnRef="conversionfactor">
             <SimpleValue>2.77778 × 10-4 m3/s</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>Q41</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Joule per normalised cubic metre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Joule per normalised cubic metre (temperature 0°C and pressure 101325 millibars).</SimpleValue>
+         </Value>
+         <Value ColumnRef="levelcategory">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>Q42</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>Joule per standard cubic metre</SimpleValue>
+         </Value>
+         <Value ColumnRef="description">
+            <SimpleValue>Joule per standard cubic metre (temperature 15°C and pressure 101325 millibars).</SimpleValue>
+         </Value>
+         <Value ColumnRef="levelcategory">
+            <SimpleValue>2</SimpleValue>
          </Value>
       </Row>
       <Row>

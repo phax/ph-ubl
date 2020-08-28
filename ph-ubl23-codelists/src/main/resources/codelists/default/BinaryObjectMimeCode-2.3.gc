@@ -4,7 +4,7 @@
       <ShortName>BinaryObjectMimeCode</ShortName>
       <LongName xml:lang="en">Binary Object Mime Code</LongName>
       <LongName Identifier="listID">IANA Media Types</LongName>
-      <Version>2019-07-25</Version>
+      <Version>2020-04-14</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:BinaryObjectMimeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:BinaryObjectMimeCode:2.3</CanonicalVersionUri>
       <LocationUri>http://www.iana.org/assignments/media-types/media-types.xml</LocationUri>
@@ -1150,6 +1150,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/ISUP</SimpleValue>
+         </Value>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc3204</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/ISUP</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>video/JPEG</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -1492,6 +1503,28 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/SGML</SimpleValue>
+         </Value>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc1874</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/SGML</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>text/SGML</SimpleValue>
+         </Value>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc1874</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>text/SGML</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>video/SMPTE292M</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -1546,6 +1579,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>audio/TETRA_ACELP</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>audio/TETRA_ACELP_BB</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ETSI</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Miguel_Angel_Reina_Ortega</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>audio/TETRA_ACELP_BB</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1796,6 +1843,28 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/alto-updatestreamcontrol+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-alto-incr-update-sse-22</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/alto-updatestreamcontrol+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/alto-updatestreamparams+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-alto-incr-update-sse-22</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/alto-updatestreamparams+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>audio/amr-wb+</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -1931,6 +2000,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/atsc-dynamic-event-message</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ATSC</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/atsc-dynamic-event-message</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/atsc-held+xml</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -1938,6 +2018,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/atsc-held+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/atsc-rdt+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ATSC</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/atsc-rdt+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2122,6 +2213,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/cap+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-ecrit-data-only-ea-22</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/cap+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/cbor</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -2129,6 +2231,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/cbor</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/cbor-seq</SimpleValue>
+         </Value>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc8742</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/cbor-seq</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2283,6 +2396,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>audio/clearmode</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/clue+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-clue-protocol-19</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/clue+xml</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2728,6 +2852,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/dns-message</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/dots+cbor</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-dots-signal-channel-41</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/dots+cbor</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -3864,17 +3999,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>application/isup</SimpleValue>
-         </Value>
-         <Value ColumnRef="rfc1">
-            <SimpleValue>rfc3204</SimpleValue>
-         </Value>
-         <Value ColumnRef="template">
-            <SimpleValue>application/isup</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>application/its+xml</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -4166,6 +4290,28 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>image/jxs</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ISO-IEC_JTC1</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>image/jxs</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>image/jxsc</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ISO-IEC_JTC1</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>image/jxsc</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>image/jxsi</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -4289,6 +4435,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/lostsync+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/lpf+zip</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>W3C</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Ivan_Herman</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/lpf+zip</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -4612,6 +4772,23 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>audio/mhas</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ISO-IEC_JTC1</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Nils_Peters</SimpleValue>
+         </Value>
+         <Value ColumnRef="person3">
+            <SimpleValue>Ingo_Hofmann</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>audio/mhas</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/mikey</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -4619,6 +4796,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/mikey</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/mipc</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/mipc</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -4949,6 +5140,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>model/mtl</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>DICOM_Standards_Committee</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Luiza_Kowalczyk</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>model/mtl</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/mud+json</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -4967,6 +5172,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>multipart/multilingual</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/multipart-core</SimpleValue>
+         </Value>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc8710</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/multipart-core</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -5119,6 +5335,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>video/nv</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>model/obj</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>DICOM_Standards_Committee</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Luiza_Kowalczyk</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>model/obj</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -5853,6 +6083,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/pvd+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-intarea-provisioning-domains-11</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/pvd+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>image/pwg-raster</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -6395,6 +6636,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/sbe</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>FIX_Trading_Community</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Donald_L._Mendelson</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/sbe</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/sbml+xml</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -6477,8 +6732,8 @@
          <Value ColumnRef="code">
             <SimpleValue>application/sdp</SimpleValue>
          </Value>
-         <Value ColumnRef="rfc1">
-            <SimpleValue>rfc4566</SimpleValue>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-mmusic-rfc4566bis-37</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/sdp</SimpleValue>
@@ -6526,6 +6781,28 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/senml+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/senml-etch+cbor</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-core-senml-etch-07</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/senml-etch+cbor</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/senml-etch+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-core-senml-etch-07</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/senml-etch+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -6682,28 +6959,6 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
-            <SimpleValue>application/sgml</SimpleValue>
-         </Value>
-         <Value ColumnRef="rfc1">
-            <SimpleValue>rfc1874</SimpleValue>
-         </Value>
-         <Value ColumnRef="template">
-            <SimpleValue>application/sgml</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
-            <SimpleValue>text/sgml</SimpleValue>
-         </Value>
-         <Value ColumnRef="rfc1">
-            <SimpleValue>rfc1874</SimpleValue>
-         </Value>
-         <Value ColumnRef="template">
-            <SimpleValue>text/sgml</SimpleValue>
-         </Value>
-      </Row>
-      <Row>
-         <Value ColumnRef="code">
             <SimpleValue>application/sgml-open-catalog</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -6788,6 +7043,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>message/sip</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/sipc</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/sipc</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -7032,6 +7301,23 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/swid+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>ISO-IEC_JTC1</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>David_Waltermire</SimpleValue>
+         </Value>
+         <Value ColumnRef="person3">
+            <SimpleValue>Ron_Brill</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/swid+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>text/t140</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -7218,6 +7504,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/taxii+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/td+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>W3C</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Matthias_Kovatsch</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/td+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -7980,6 +8280,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.3gpp.mcvideo-info+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Frederic_Firmin</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.3gpp.mcvideo-info+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.3gpp.mcvideo-location-info+xml</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -8577,6 +8888,50 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.afplinedata-pagedef</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.afplinedata-pagedef</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.foca-charset</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.foca-charset</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.foca-codedfont</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.foca-codedfont</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.foca-codepage</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.foca-codepage</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.afpc.modca</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -8584,6 +8939,61 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.afpc.modca</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.modca-formdef</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.modca-formdef</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.modca-mediummap</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.modca-mediummap</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.modca-objectcontainer</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.modca-objectcontainer</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.modca-overlay</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.modca-overlay</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.afpc.modca-pagesegment</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Jörg_Palmer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.afpc.modca-pagesegment</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -8788,6 +9198,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.api+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.aplextor.warrp+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Oleg_Uryutin</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.aplextor.warrp+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -9004,7 +9425,7 @@
             <SimpleValue>application/vnd.bbf.usp.error</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
-            <SimpleValue>William_Lupton</SimpleValue>
+            <SimpleValue>Broadband_Forum</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.bbf.usp.error</SimpleValue>
@@ -9015,7 +9436,7 @@
             <SimpleValue>application/vnd.bbf.usp.msg</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
-            <SimpleValue>William_Lupton</SimpleValue>
+            <SimpleValue>Broadband_Forum</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.bbf.usp.msg</SimpleValue>
@@ -9026,7 +9447,7 @@
             <SimpleValue>application/vnd.bbf.usp.msg+json</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
-            <SimpleValue>William_Lupton</SimpleValue>
+            <SimpleValue>Broadband_Forum</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.bbf.usp.msg+json</SimpleValue>
@@ -9129,6 +9550,34 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.bmi</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.bpf</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.bpf</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.bpf3</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.bpf3</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -9683,6 +10132,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.crypto-shade-file</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Connor_Horman</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.crypto-shade-file</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.ctc-posml</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -9855,6 +10315,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.dataresource+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.dbf</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Mi_Tar</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.dbf</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -10386,6 +10857,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.dvb.ait</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.dvb.dvbisl+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Emily_DUBS</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.dvb.dvbisl+xml</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -11410,6 +11892,28 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.ficlab.flb+zip</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Steve_Gilberd</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.ficlab.flb+zip</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>text/vnd.ficlab.flt</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Steve_Gilberd</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>text/vnd.ficlab.flt</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.filmit.zfc</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -11666,7 +12170,7 @@
             <SimpleValue>application/vnd.fujixerox.docuworks</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
-            <SimpleValue>Yasuo_Taguchi</SimpleValue>
+            <SimpleValue>Takatomo_Wakibayashi</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.fujixerox.docuworks</SimpleValue>
@@ -11791,6 +12295,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.genomatix.tuxedo</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.gentics.grd+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Philipp_Gortan</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.gentics.grd+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -13218,6 +13733,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.las</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.las</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.las.las+json</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -13236,6 +13765,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.las.las+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.laszip</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>NCGIS</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Bryan_Blank</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.laszip</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -15212,6 +15755,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.ocf+cbor</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.oci.image.manifest.v1+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Steven_Lasker</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.oci.image.manifest.v1+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -17721,6 +18275,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.sar</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Markus_Strehle</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.sar</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.sbm.cid</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -18098,6 +18663,28 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.shp</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Mi_Tar</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.shp</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.shx</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Mi_Tar</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.shx</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.sigrok.session</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -18149,6 +18736,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.smart.teacher</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.snesdev-page-table</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Connor_Horman</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.snesdev-page-table</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -19744,6 +20342,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>text/vtt</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>W3C</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Silvia_Pfeiffer</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>text/vtt</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/watcherinfo+xml</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -19896,6 +20508,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/x-pki-message</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-gutmann-scep-16</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/x-pki-message</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/x-www-form-urlencoded</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -19906,6 +20529,39 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/x-www-form-urlencoded</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/x-x509-ca-cert</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-gutmann-scep-16</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/x-x509-ca-cert</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/x-x509-ca-ra-cert</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-gutmann-scep-16</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/x-x509-ca-ra-cert</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/x-x509-next-ca-cert</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-gutmann-scep-16</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/x-x509-next-ca-cert</SimpleValue>
          </Value>
       </Row>
       <Row>
