@@ -54,7 +54,7 @@ public final class DianUBLFuncTest
       // Validate
       IErrorList aErrors = DianUBLValidator.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
-      assertFalse (sFilename, aErrors.containsAtLeastOneError ());
+      assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // write again
       final Document aDoc2 = DianUBLWriter.invoice ().getAsDocument (aUBLObject);
