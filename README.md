@@ -256,6 +256,7 @@ For further information on the Universal Business Language can be found on the f
 * v6.4.0 - work in progress
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
     * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
+    * Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` ([see #27](https://github.com/phax/ph-ubl/issues/27))
 * v6.3.0 - 2020-05-26
     * Changed Maven groupId to `com.helger.ubl`
 * v6.2.1 - 2020-02-06

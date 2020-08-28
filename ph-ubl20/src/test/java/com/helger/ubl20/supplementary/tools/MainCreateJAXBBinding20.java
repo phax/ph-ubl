@@ -62,8 +62,8 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
  */
 public final class MainCreateJAXBBinding20
 {
-  public static final String JAXB_NS_URI = "http://java.sun.com/xml/ns/jaxb";
-  public static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
+  private static final String JAXB_NS_URI = "http://java.sun.com/xml/ns/jaxb";
+  private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
   @Nonnull
   private static IMicroDocument _createBaseDoc ()

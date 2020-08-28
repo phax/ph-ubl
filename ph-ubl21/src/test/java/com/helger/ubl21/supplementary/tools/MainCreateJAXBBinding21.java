@@ -57,7 +57,7 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
 public final class MainCreateJAXBBinding21
 {
   private static final String JAXB_NS_URI = "http://java.sun.com/xml/ns/jaxb";
-  public static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
+  private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
   private static final String BASE_XSD_PATH = "/resources/schemas/ubl21/";
   private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings21.xjb";

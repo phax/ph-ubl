@@ -23,8 +23,8 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
+import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.state.ESuccess;
-import com.helger.datetime.util.PDTXMLConverter;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.CustomerPartyType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.InvoiceLineType;
@@ -47,7 +47,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     final InvoiceType aInvoice = new InvoiceType ();
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTXMLConverter.getXMLCalendarDateNow ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);

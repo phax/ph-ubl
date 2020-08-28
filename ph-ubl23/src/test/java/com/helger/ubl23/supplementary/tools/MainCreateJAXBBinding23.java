@@ -57,6 +57,8 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
 public final class MainCreateJAXBBinding23
 {
   private static final String JAXB_NS_URI = "http://java.sun.com/xml/ns/jaxb";
+  private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
+
   private static final String BASE_XSD_PATH = "/resources/schemas/ubl23/";
   private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings23.xjb";
 
@@ -74,6 +76,22 @@ public final class MainCreateJAXBBinding23
     final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
     eGlobal.setAttribute ("typesafeEnumMaxMembers", "2000");
     eGlobal.setAttribute ("typesafeEnumMemberName", "generateError");
+
+    // When in "xjc" namespace "adapter" can be used, when in "jaxb"
+    // namespace, parse and print must be used
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalDateTime")
+           .setAttribute ("xmlType", "xsd:dateTime")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDateTime");
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalDate")
+           .setAttribute ("xmlType", "xsd:date")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDate");
+    eGlobal.appendElement (XJC_NS_URI, "javaType")
+           .setAttribute ("name", "java.time.LocalTime")
+           .setAttribute ("xmlType", "xsd:time")
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalTime");
+
     return eDoc;
   }
 
@@ -183,8 +201,9 @@ public final class MainCreateJAXBBinding23
       MicroWriter.writeToFile (eDoc,
                                new File (DEFAULT_BINDING_FILE),
                                new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
-                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping (XMLConstants.DEFAULT_NS_PREFIX,
+                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
                                                                                                                          JAXB_NS_URI)
+                                                                                                            .addMapping ("xjc", XJC_NS_URI)
                                                                                                             .addMapping ("xsd",
                                                                                                                          XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
