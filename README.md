@@ -245,7 +245,7 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.0: https://docs.oasis-open.org/ubl/os-UBL-2.0/ 
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
-    * UBL 2.3: https://docs.oasis-open.org/ubl/csprd01-UBL-2.3/ 
+    * UBL 2.3: https://docs.oasis-open.org/ubl/csd03-UBL-2.3/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
@@ -253,7 +253,7 @@ For further information on the Universal Business Language can be found on the f
   
 # News and noteworthy
 
-* v6.4.0 - work in progress
+* v6.4.0 - 2020-08-30
     * Binds to ph-commons 9.4.7
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
     * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
