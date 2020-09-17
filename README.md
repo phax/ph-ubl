@@ -252,7 +252,9 @@ For further information on the Universal Business Language can be found on the f
 
   
 # News and noteworthy
-
+ 
+* v6.4.1 - 2020-09-17
+    * Updated to Jakarta JAXB 2.3.3
 * v6.4.0 - 2020-08-30
     * Binds to ph-commons 9.4.7
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
