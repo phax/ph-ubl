@@ -56,6 +56,9 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
                      "UBL-CatalogueRequest-2.3.xsd"),
   CERTIFICATE_OF_ORIGIN (oasis.names.specification.ubl.schema.xsd.certificateoforigin_23.CertificateOfOriginType.class,
                          "UBL-CertificateOfOrigin-2.3.xsd"),
+  @Since ("2.3")
+  COMMON_TRANSPORTATION_REPORT(oasis.names.specification.ubl.schema.xsd.commontransportationreport_23.CommonTransportationReportType.class,
+                               "UBL-CommonTransportationReport-2.3.xsd"),
   CONTRACT_AWARD_NOTICE (oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType.class,
                          "UBL-ContractAwardNotice-2.3.xsd"),
   CONTRACT_NOTICE (oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType.class, "UBL-ContractNotice-2.3.xsd"),
@@ -109,6 +112,8 @@ public enum EUBL23DocumentType implements IJAXBDocumentType
   INVOICE (oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType.class, "UBL-Invoice-2.3.xsd"),
   ITEM_INFORMATION_REQUEST (oasis.names.specification.ubl.schema.xsd.iteminformationrequest_23.ItemInformationRequestType.class,
                             "UBL-ItemInformationRequest-2.3.xsd"),
+  @Since ("2.3")
+  MANIFEST(oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType.class, "UBL-Manifest-2.3.xsd"),
   ORDER (oasis.names.specification.ubl.schema.xsd.order_23.OrderType.class, "UBL-Order-2.3.xsd"),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_23.OrderCancellationType.class,
                       "UBL-OrderCancellation-2.3.xsd"),

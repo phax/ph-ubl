@@ -46,6 +46,7 @@ public class MainCreateUBL23ActionCode extends AbstractCreateUBLActionCode
            "import oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_23.CataloguePricingUpdateType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.cataloguerequest_23.CatalogueRequestType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.certificateoforigin_23.CertificateOfOriginType;\n" +
+           "import oasis.names.specification.ubl.schema.xsd.commontransportationreport_23.CommonTransportationReportType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.creditnote_23.CreditNoteType;\n" +
@@ -76,6 +77,7 @@ public class MainCreateUBL23ActionCode extends AbstractCreateUBLActionCode
            "import oasis.names.specification.ubl.schema.xsd.inventoryreport_23.InventoryReportType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.iteminformationrequest_23.ItemInformationRequestType;\n" +
+           "import oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.order_23.OrderType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.ordercancellation_23.OrderCancellationType;\n" +
            "import oasis.names.specification.ubl.schema.xsd.orderchange_23.OrderChangeType;\n" +

@@ -33,6 +33,7 @@ import oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate
 import oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_23.CataloguePricingUpdateType;
 import oasis.names.specification.ubl.schema.xsd.cataloguerequest_23.CatalogueRequestType;
 import oasis.names.specification.ubl.schema.xsd.certificateoforigin_23.CertificateOfOriginType;
+import oasis.names.specification.ubl.schema.xsd.commontransportationreport_23.CommonTransportationReportType;
 import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_23.CreditNoteType;
@@ -63,6 +64,7 @@ import oasis.names.specification.ubl.schema.xsd.instructionforreturns_23.Instruc
 import oasis.names.specification.ubl.schema.xsd.inventoryreport_23.InventoryReportType;
 import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;
 import oasis.names.specification.ubl.schema.xsd.iteminformationrequest_23.ItemInformationRequestType;
+import oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType;
 import oasis.names.specification.ubl.schema.xsd.order_23.OrderType;
 import oasis.names.specification.ubl.schema.xsd.ordercancellation_23.OrderCancellationType;
 import oasis.names.specification.ubl.schema.xsd.orderchange_23.OrderChangeType;
@@ -159,6 +161,9 @@ public final class UBL23Validator
 /** Create a validation builder for CertificateOfOrigin.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23ValidatorBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL23ValidatorBuilder.create(CertificateOfOriginType.class);}
+/** Create a validation builder for CommonTransportationReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL23ValidatorBuilder<CommonTransportationReportType> commonTransportationReport(){return UBL23ValidatorBuilder.create(CommonTransportationReportType.class);}
 /** Create a validation builder for ContractAwardNotice.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23ValidatorBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL23ValidatorBuilder.create(ContractAwardNoticeType.class);}
@@ -249,6 +254,9 @@ public final class UBL23Validator
 /** Create a validation builder for ItemInformationRequest.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23ValidatorBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL23ValidatorBuilder.create(ItemInformationRequestType.class);}
+/** Create a validation builder for Manifest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL23ValidatorBuilder<ManifestType> manifest(){return UBL23ValidatorBuilder.create(ManifestType.class);}
 /** Create a validation builder for Order.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23ValidatorBuilder<OrderType> order(){return UBL23ValidatorBuilder.create(OrderType.class);}

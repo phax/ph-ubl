@@ -33,6 +33,7 @@ import oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate
 import oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_23.CataloguePricingUpdateType;
 import oasis.names.specification.ubl.schema.xsd.cataloguerequest_23.CatalogueRequestType;
 import oasis.names.specification.ubl.schema.xsd.certificateoforigin_23.CertificateOfOriginType;
+import oasis.names.specification.ubl.schema.xsd.commontransportationreport_23.CommonTransportationReportType;
 import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_23.CreditNoteType;
@@ -63,6 +64,7 @@ import oasis.names.specification.ubl.schema.xsd.instructionforreturns_23.Instruc
 import oasis.names.specification.ubl.schema.xsd.inventoryreport_23.InventoryReportType;
 import oasis.names.specification.ubl.schema.xsd.invoice_23.InvoiceType;
 import oasis.names.specification.ubl.schema.xsd.iteminformationrequest_23.ItemInformationRequestType;
+import oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType;
 import oasis.names.specification.ubl.schema.xsd.order_23.OrderType;
 import oasis.names.specification.ubl.schema.xsd.ordercancellation_23.OrderCancellationType;
 import oasis.names.specification.ubl.schema.xsd.orderchange_23.OrderChangeType;
@@ -159,6 +161,9 @@ public final class UBL23Writer
 /** Create a writer builder for CertificateOfOrigin.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL23WriterBuilder.create(CertificateOfOriginType.class);}
+/** Create a writer builder for CommonTransportationReport.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL23WriterBuilder<CommonTransportationReportType> commonTransportationReport(){return UBL23WriterBuilder.create(CommonTransportationReportType.class);}
 /** Create a writer builder for ContractAwardNotice.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL23WriterBuilder.create(ContractAwardNoticeType.class);}
@@ -249,6 +254,9 @@ public final class UBL23Writer
 /** Create a writer builder for ItemInformationRequest.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL23WriterBuilder.create(ItemInformationRequestType.class);}
+/** Create a writer builder for Manifest.
+@return The builder and never <code>null</code> */
+@Nonnull public static UBL23WriterBuilder<ManifestType> manifest(){return UBL23WriterBuilder.create(ManifestType.class);}
 /** Create a writer builder for Order.
 @return The builder and never <code>null</code> */
 @Nonnull public static UBL23WriterBuilder<OrderType> order(){return UBL23WriterBuilder.create(OrderType.class);}

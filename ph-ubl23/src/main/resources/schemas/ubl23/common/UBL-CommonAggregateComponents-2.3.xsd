@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSD03
-                     http://docs.oasis-open.org/ubl/csd03-UBL-2.3/
-  Release Date:      10 April 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSD04
+                     http://docs.oasis-open.org/ubl/csd04-UBL-2.3/
+  Release Date:      25 November 2020
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.3.xsd
-  Generated on:      2020-07-29 19:49z
+  Generated on:      2020-11-18 22:08z
   Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -48,6 +48,7 @@
    <xsd:element name="AdditionalNoticeLanguage" type="LanguageType"/>
    <xsd:element name="AdditionalPortCallPurpose" type="PortCallPurposeType"/>
    <xsd:element name="AdditionalQualifyingParty" type="QualifyingPartyType"/>
+   <xsd:element name="AdditionalSecurityMeasure" type="SecurityMeasureType"/>
    <xsd:element name="AdditionalTemperature" type="TemperatureType"/>
    <xsd:element name="AdditionalTransportationService" type="TransportationServiceType"/>
    <xsd:element name="AdditionalWebSite" type="WebSiteType"/>
@@ -63,7 +64,6 @@
    <xsd:element name="AlternativeCurrencyPrice" type="PriceType"/>
    <xsd:element name="AlternativeDeliveryLocation" type="LocationType"/>
    <xsd:element name="AlternativeLineItem" type="LineItemType"/>
-   <xsd:element name="AntennaLocation" type="LocationType"/>
    <xsd:element name="AnticipatedMonetaryTotal" type="MonetaryTotalType"/>
    <xsd:element name="AppealInformationParty" type="PartyType"/>
    <xsd:element name="AppealReceiverParty" type="PartyType"/>
@@ -74,12 +74,15 @@
    <xsd:element name="ApplicableTaxCategory" type="TaxCategoryType"/>
    <xsd:element name="ApplicableTerritoryAddress" type="AddressType"/>
    <xsd:element name="ApplicableTransportMeans" type="TransportMeansType"/>
+   <xsd:element name="ApplicantParty" type="PartyType"/>
+   <xsd:element name="AppliedSecurityMeasure" type="SecurityMeasureType"/>
    <xsd:element name="AtLocation" type="LocationType"/>
    <xsd:element name="AttachedTransportEquipment" type="TransportEquipmentType"/>
    <xsd:element name="Attachment" type="AttachmentType"/>
    <xsd:element name="Attestation" type="AttestationType"/>
    <xsd:element name="AttestationLine" type="AttestationLineType"/>
    <xsd:element name="AuctionTerms" type="AuctionTermsType"/>
+   <xsd:element name="AuthorityParty" type="PartyType"/>
    <xsd:element name="Authorization" type="AuthorizationType"/>
    <xsd:element name="AvailabilityTransportEvent" type="TransportEventType"/>
    <xsd:element name="AwardedTenderedProject" type="TenderedProjectType"/>
@@ -94,6 +97,7 @@
    <xsd:element name="BillToParty" type="PartyType"/>
    <xsd:element name="BillingReference" type="BillingReferenceType"/>
    <xsd:element name="BillingReferenceLine" type="BillingReferenceLineType"/>
+   <xsd:element name="BirthplaceLocation" type="LocationType"/>
    <xsd:element name="BonusPaymentTerms" type="PaymentTermsType"/>
    <xsd:element name="Branch" type="BranchType"/>
    <xsd:element name="BrochureDocumentReference" type="DocumentReferenceType"/>
@@ -548,6 +552,7 @@
    <xsd:element name="PortCallPurpose" type="PortCallPurposeType"/>
    <xsd:element name="PortCallRecord" type="PortCallRecordType"/>
    <xsd:element name="PortFacilityLocation" type="LocationType"/>
+   <xsd:element name="PositionOnBoardStowage" type="StowageType"/>
    <xsd:element name="PositioningTransportEvent" type="TransportEventType"/>
    <xsd:element name="PostAwardProcess" type="PostAwardProcessType"/>
    <xsd:element name="PostalAddress" type="AddressType"/>
@@ -628,12 +633,15 @@
    <xsd:element name="ReminderLine" type="ReminderLineType"/>
    <xsd:element name="ReminderPeriod" type="PeriodType"/>
    <xsd:element name="RemittanceAdviceLine" type="RemittanceAdviceLineType"/>
+   <xsd:element name="RemittanceDocumentDistribution" type="DocumentDistributionType"/>
    <xsd:element name="Renewal" type="RenewalType"/>
    <xsd:element name="ReplacedNoticeDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ReplacedRelatedItem" type="RelatedItemType"/>
    <xsd:element name="ReplacementRelatedItem" type="RelatedItemType"/>
    <xsd:element name="ReportLocation" type="LocationType"/>
    <xsd:element name="ReportedShipment" type="ShipmentType"/>
+   <xsd:element name="ReporterParty" type="PartyType"/>
+   <xsd:element name="ReportingLocation" type="LocationType"/>
    <xsd:element name="ReportingPerson" type="PersonType"/>
    <xsd:element name="RepresentativeParty" type="PartyType"/>
    <xsd:element name="RequestForQuotationDocumentReference"
@@ -686,6 +694,7 @@
    <xsd:element name="ScheduledServiceFrequency" type="ServiceFrequencyType"/>
    <xsd:element name="SecondaryHazard" type="SecondaryHazardType"/>
    <xsd:element name="SecurityClearanceTerm" type="SecurityClearanceTermType"/>
+   <xsd:element name="SecurityMeasure" type="SecurityMeasureType"/>
    <xsd:element name="SecurityOfficerPerson" type="PersonType"/>
    <xsd:element name="SelfBilledCreditNoteDocumentReference"
                 type="DocumentReferenceType"/>
@@ -697,6 +706,7 @@
    <xsd:element name="SellersItemIdentification" type="ItemIdentificationType"/>
    <xsd:element name="SenderParty" type="PartyType"/>
    <xsd:element name="SendingDigitalService" type="DigitalServiceType"/>
+   <xsd:element name="SendingLogisticsOperatorParty" type="PartyType"/>
    <xsd:element name="ServiceAllowanceCharge" type="AllowanceChargeType"/>
    <xsd:element name="ServiceAvailabilityPeriod" type="PeriodType"/>
    <xsd:element name="ServiceChargePaymentTerms" type="PaymentTermsType"/>
@@ -708,6 +718,7 @@
    <xsd:element name="ServiceStartTimePeriod" type="PeriodType"/>
    <xsd:element name="SettlementPeriod" type="PeriodType"/>
    <xsd:element name="ShareholderParty" type="ShareholderPartyType"/>
+   <xsd:element name="ShipRequirement" type="ShipRequirementType"/>
    <xsd:element name="ShipSanitationControlCertificate" type="CertificateType"/>
    <xsd:element name="ShipSanitationControlExemptionDocumentReference"
                 type="DocumentReferenceType"/>
@@ -1009,8 +1020,8 @@
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:AcceptanceIndicator" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:IssuerParty" minOccurs="1" maxOccurs="1"/>
-         <xsd:element ref="cac:AttestationLine" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:IssuerParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:AttestationLine" minOccurs="1" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="AttestationLineType">
@@ -1339,7 +1350,7 @@
          <xsd:element ref="cbc:CertificateTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CertificateType" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:Remarks" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:IssuerParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:IssuerParty" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
@@ -2670,6 +2681,7 @@
          <xsd:element ref="cbc:HazardousRegulationCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:InhalationToxicityZoneCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TransportAuthorizationCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:TransitDescription" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:MaximumTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:MinimumTemperature" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
@@ -2687,6 +2699,7 @@
          <xsd:element ref="cbc:EmergencyProceduresCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:MedicalFirstAidGuideCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TunnelRestrictionCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:MaritimePollutantCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TechnicalName" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CategoryName" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:HazardousCategoryCode" minOccurs="0" maxOccurs="1"/>
@@ -2703,6 +2716,7 @@
          <xsd:element ref="cac:EmergencyTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:FlashpointTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:AdditionalTemperature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:PositionOnBoardStowage" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="ISPSRequirementsType">
@@ -2722,7 +2736,7 @@
          <xsd:element ref="cbc:AdditionalMattersDescription"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:AdditionalSecurityMeasures"
+         <xsd:element ref="cac:AdditionalSecurityMeasure"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
          <xsd:element ref="cac:PortCallRecord" minOccurs="0" maxOccurs="unbounded"/>
@@ -3166,11 +3180,11 @@
          <xsd:element ref="cbc:SegregatedBallastMeasure" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ShipConfigurationCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:INFShipClassCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:AntennaLocus" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:RegistryCertificateDocumentReference"
                       minOccurs="0"
                       maxOccurs="1"/>
          <xsd:element ref="cac:RegistryPortLocation" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:AntennaLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:VesselDynamics" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
@@ -3483,12 +3497,17 @@
          <xsd:element ref="cbc:InstructionID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:InstructionNote" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:PaymentID" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:ChargeBearerCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ServiceLevelCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:CardAccount" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:PayerFinancialAccount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:PayeeFinancialAccount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:CreditAccount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:PaymentMandate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:TradeFinancing" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:RemittanceDocumentDistribution"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="PaymentTermsType">
@@ -3555,6 +3574,7 @@
          <xsd:element ref="cbc:BirthplaceName" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:OrganizationDepartment" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:RoleCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:BirthplaceLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:CitizenshipCountry" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Contact" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:FinancialAccount" minOccurs="0" maxOccurs="1"/>
@@ -3629,9 +3649,7 @@
          <xsd:element ref="cbc:CargoAndBallastTankConditionDescription"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:ShipRequirementsDescription"
-                      minOccurs="0"
-                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ShipRequirement" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:PrimaryPortCallPurpose" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:AdditionalPortCallPurpose"
                       minOccurs="0"
@@ -3652,7 +3670,7 @@
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:SecurityLevelCode" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:PrimaryPurposeIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:SecurityMeasure" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:PortFacilityLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
@@ -4167,6 +4185,13 @@
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:complexType name="SecurityMeasureType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Description" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="ServiceFrequencyType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
@@ -4229,12 +4254,20 @@
          <xsd:element ref="cac:Party" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:complexType name="ShipRequirementType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Description" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="ShipStoreArticleType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:OfficialUse" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Stowage" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
@@ -4243,7 +4276,7 @@
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Description" minOccurs="1" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:AppliedSecurityMeasures"
+         <xsd:element ref="cac:AppliedSecurityMeasure"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
          <xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
@@ -4253,7 +4286,7 @@
    <xsd:complexType name="ShipmentType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ShippingPriorityLevelCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:HandlingCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:HandlingInstructions" minOccurs="0" maxOccurs="unbounded"/>
@@ -4297,11 +4330,15 @@
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ShipmentStageTypeCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ShipmentStageType" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:TransportModeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TransportMeansTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TransitDirectionCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PreCarriageIndicator" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:OnCarriageIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CabotageIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:HazardousRiskIndicator" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:EstimatedDeliveryDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:EstimatedDeliveryTime" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:RequiredDeliveryDate" minOccurs="0" maxOccurs="1"/>
@@ -4378,6 +4415,7 @@
          <xsd:element ref="cac:MasterPerson" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ShipsSurgeonPerson" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:DestinationPortCall" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:ShipStoreArticle" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:CrewPersonEffect" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:MaritimeWaste" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:BallastWaterSummary" minOccurs="0" maxOccurs="1"/>
@@ -4791,7 +4829,7 @@
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CompanyLegalFormCode" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:CompanyLegalForm" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CompanyLegalForm" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:PersonalSituation" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:OperatingYearsQuantity" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:EmployeeQuantity" minOccurs="0" maxOccurs="1"/>
