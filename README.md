@@ -245,7 +245,7 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.0: https://docs.oasis-open.org/ubl/os-UBL-2.0/ 
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
-    * UBL 2.3: https://docs.oasis-open.org/ubl/csd04-UBL-2.3/
+    * UBL 2.3: https://docs.oasis-open.org/ubl/cs01-UBL-2.3/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
@@ -253,6 +253,8 @@ For further information on the Universal Business Language can be found on the f
   
 # News and noteworthy
  
+* v6.4.3 - work in progress
+    * Updated to UBL 2.3 CS01 - https://docs.oasis-open.org/ubl/cs01-UBL-2.3/UBL-2.3.html
 * v6.4.2 - 2020-12-18
     * Updated to UBL 2.3 CSD04 - https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html
 * v6.4.1 - 2020-09-17
