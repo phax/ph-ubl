@@ -26,7 +26,7 @@
   </parent>
   <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>6.4.3-SNAPSHOT</version>
+  <version>6.4.3</version>
   <packaging>pom</packaging>
   <name>ph-ubl-parent-pom</name>
   <description>Base POM to build the ph-ubl projects</description>
@@ -45,7 +45,7 @@
     <connection>scm:git:git@github.com:phax/ph-ubl.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-ubl.git</developerConnection>
     <url>http://github.com/phax/ph-ubl</url>
-    <tag>HEAD</tag>
+    <tag>ph-ubl-parent-pom-6.4.3</tag>
   </scm>
 
   <organization>

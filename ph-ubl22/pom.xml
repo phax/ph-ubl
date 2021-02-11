@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger.ubl</groupId>
     <artifactId>ph-ubl-parent-pom</artifactId>
-    <version>6.4.3-SNAPSHOT</version>
+    <version>6.4.3</version>
   </parent>
   <artifactId>ph-ubl22</artifactId>
   <packaging>bundle</packaging>
