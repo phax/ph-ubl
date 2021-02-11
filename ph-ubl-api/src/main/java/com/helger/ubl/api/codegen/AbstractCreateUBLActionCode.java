@@ -30,7 +30,7 @@ import com.helger.jaxb.builder.IJAXBDocumentType;
  */
 public abstract class AbstractCreateUBLActionCode
 {
-  protected static enum EPhase
+  public enum EPhase
   {
     READ,
     WRITE,
