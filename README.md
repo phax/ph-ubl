@@ -207,7 +207,7 @@ Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
 # Gradle considerations
 
-This project relies on JDK version based Maven profile activation.
+Old versions of this project rely on JDK version based Maven profile activation.
 See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 # Download
@@ -230,12 +230,6 @@ Binary versions of the artefacts can be downloaded from Maven Central:
 Old artefacts:
 
 * http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
-  
-The following projects are required at runtime. The exact version depends on the ph-ubl version you are using:
-
-* https://repo1.maven.org/maven2/com/helger/ph-commons/
-* https://repo1.maven.org/maven2/org/slf4j/slf4j-api/
-* https://repo1.maven.org/maven2/com/google/code/findbugs/annotations/ (optional - annotations only)
 
 # Other UBL sites
 
@@ -250,10 +244,9 @@ For further information on the Universal Business Language can be found on the f
 * http://goubl.com
 * http://www.ubltr.com/
 
-  
 # News and noteworthy
  
-* v6.4.3 - work in progress
+* v6.4.3 - 2021-02-11
     * Updated to UBL 2.3 CS01 - https://docs.oasis-open.org/ubl/cs01-UBL-2.3/UBL-2.3.html
 * v6.4.2 - 2020-12-18
     * Updated to UBL 2.3 CSD04 - https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html
