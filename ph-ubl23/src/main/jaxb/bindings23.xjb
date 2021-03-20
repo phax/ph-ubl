@@ -19,28 +19,32 @@
 -->
 <jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd" version="2.1">
   <jaxb:globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError">
-    <xjc:javaType name="java.time.LocalDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterLocalDateTime" />
-    <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterLocalDate" />
-    <xjc:javaType name="java.time.LocalTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterLocalTime" />
+    <xjc:javaType name="java.time.OffsetDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterOffsetDateTime" />
+    <xjc:javaType name="com.helger.commons.datetime.OffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterOffsetDate" />
+    <xjc:javaType name="java.time.OffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterOffsetTime" />
     <xjc:javaType name="java.time.Duration" xmlType="xsd:duration" adapter="com.helger.jaxb.adapter.AdapterDuration" />
   </jaxb:globalBindings>
   <jaxb:bindings schemaLocation="../resources/schemas/ubl23/common/BDNDR-UnqualifiedDataTypes-1.1.xsd" node="/xsd:schema">
-    <!--Target namespace: urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1-->    <jaxb:schemaBindings>
+    <!--Target namespace: urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1-->
+    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.bdndr.schema.xsd.unqualifieddatatypes_1" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/schemas/ubl23/common/UBL-CommonAggregateComponents-2.3.xsd" node="/xsd:schema">
-    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2-->    <jaxb:schemaBindings>
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2-->
+    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_23" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/schemas/ubl23/common/UBL-CommonBasicComponents-2.3.xsd" node="/xsd:schema">
-    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2-->    <jaxb:schemaBindings>
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2-->
+    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_23" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/schemas/ubl23/common/UBL-CommonExtensionComponents-2.3.xsd" node="/xsd:schema">
-    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2-->    <jaxb:schemaBindings>
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2-->
+    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23" />
     </jaxb:schemaBindings>
   </jaxb:bindings>

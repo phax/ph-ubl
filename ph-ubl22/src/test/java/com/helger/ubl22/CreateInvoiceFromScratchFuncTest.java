@@ -47,7 +47,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     final InvoiceType aInvoice = new InvoiceType ();
     aInvoice.setID ("Dummy Invoice number");
-    aInvoice.setIssueDate (PDTFactory.getCurrentLocalDate ());
+    aInvoice.setIssueDate (PDTFactory.getCurrentOffsetDateUTC ());
 
     final SupplierPartyType aSupplier = new SupplierPartyType ();
     aInvoice.setAccountingSupplierParty (aSupplier);

@@ -55,11 +55,11 @@
   
   <dependencies>
     <dependency>
-      <groupId>com.helger</groupId>
+      <groupId>com.helger.commons</groupId>
       <artifactId>ph-commons</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.helger</groupId>
+      <groupId>com.helger.commons</groupId>
       <artifactId>ph-jaxb</artifactId>
     </dependency>
     <dependency>
@@ -153,13 +153,14 @@
             <arg>-Xph-csu</arg>
             <arg>-Xph-cloneable2</arg>
             <arg>-Xph-value-extender</arg>
+            <arg>-Xph-offset-dt-extension</arg>
           </args>
         </configuration>
         <dependencies>
           <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-jaxb22-plugin</artifactId>
-            <version>2.3.3.1</version>
+            <version>2.3.3.2-SNAPSHOT</version>
           </dependency>
         </dependencies>
       </plugin>

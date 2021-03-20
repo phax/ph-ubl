@@ -18,16 +18,16 @@ package oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_2;
 
 import static org.junit.Assert.assertNull;
 
-import java.time.LocalDate;
-
 import org.junit.Test;
+
+import com.helger.commons.datetime.OffsetDate;
 
 public final class ActualDeliveryDateTypeTest
 {
   @Test
   public void testCtor ()
   {
-    final ActualDeliveryDateType x = new ActualDeliveryDateType ((LocalDate) null);
+    final ActualDeliveryDateType x = new ActualDeliveryDateType ((OffsetDate) null);
     assertNull (x.getValue ());
   }
 }

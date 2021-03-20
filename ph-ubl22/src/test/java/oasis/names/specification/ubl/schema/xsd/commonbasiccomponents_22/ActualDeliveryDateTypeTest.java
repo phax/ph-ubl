@@ -20,6 +20,8 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
+import com.helger.commons.datetime.OffsetDate;
+
 /**
  * Test class for class {@link ActualDeliveryDateType}.
  *
@@ -32,6 +34,6 @@ public final class ActualDeliveryDateTypeTest
   {
     final ActualDeliveryDateType x = new ActualDeliveryDateType ();
     assertNull (x.getValue ());
-    x.setValue (null);
+    x.setValue ((OffsetDate) null);
   }
 }

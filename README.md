@@ -246,6 +246,9 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
  
+* v6.5.0 - work in progress
+    * Updated to ph-commons 10.0.0
+    * Changed the JAXB binding for date time types `Offset(Date|Time|DateTime)`
 * v6.4.3 - 2021-02-11
     * Updated to UBL 2.3 CS01 - https://docs.oasis-open.org/ubl/cs01-UBL-2.3/UBL-2.3.html
 * v6.4.2 - 2020-12-18

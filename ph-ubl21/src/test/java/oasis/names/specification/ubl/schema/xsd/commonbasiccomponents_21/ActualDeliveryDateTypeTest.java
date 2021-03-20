@@ -18,6 +18,8 @@ package oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_21;
 
 import static org.junit.Assert.assertNull;
 
+import java.time.LocalDate;
+
 import org.junit.Test;
 
 /**
@@ -32,6 +34,6 @@ public final class ActualDeliveryDateTypeTest
   {
     final ActualDeliveryDateType x = new ActualDeliveryDateType ();
     assertNull (x.getValue ());
-    x.setValue (null);
+    x.setValue ((LocalDate) null);
   }
 }

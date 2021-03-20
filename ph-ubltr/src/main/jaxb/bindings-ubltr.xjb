@@ -17,12 +17,18 @@
     limitations under the License.
 
 -->
-<bindings xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd" 
-          version="2.1" 
+<bindings version="2.1" 
           xmlns="http://java.sun.com/xml/ns/jaxb" 
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
           xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError" />
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
+  <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError">
+    <xjc:javaType name="java.time.OffsetDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterOffsetDateTime" />
+    <xjc:javaType name="com.helger.commons.datetime.OffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterOffsetDate" />
+    <xjc:javaType name="java.time.OffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterOffsetTime" />
+    <xjc:javaType name="java.time.Duration" xmlType="xsd:duration" adapter="com.helger.jaxb.adapter.AdapterDuration" />
+  </globalBindings>
   <bindings schemaLocation="../resources/schemas/ubltr/Envelope/Package_1_2.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="tr.gov.efatura.package_12" />
