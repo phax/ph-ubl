@@ -20,14 +20,14 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import com.helger.commons.datetime.OffsetDate;
+import com.helger.commons.datetime.XMLOffsetDate;
 
 public final class ActualDeliveryDateTypeTest
 {
   @Test
   public void testCtor ()
   {
-    final ActualDeliveryDateType x = new ActualDeliveryDateType ((OffsetDate) null);
+    final ActualDeliveryDateType x = new ActualDeliveryDateType ((XMLOffsetDate) null);
     assertNull (x.getValue ());
   }
 }

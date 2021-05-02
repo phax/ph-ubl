@@ -20,7 +20,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import com.helger.commons.datetime.OffsetDate;
+import com.helger.commons.datetime.XMLOffsetDate;
 
 /**
  * Test class for class {@link ActualDeliveryDateType}.
@@ -34,6 +34,6 @@ public final class ActualDeliveryDateTypeTest
   {
     final ActualDeliveryDateType x = new ActualDeliveryDateType ();
     assertNull (x.getValue ());
-    x.setValue ((OffsetDate) null);
+    x.setValue ((XMLOffsetDate) null);
   }
 }
