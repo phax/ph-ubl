@@ -20,6 +20,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
@@ -35,6 +37,8 @@ import tr.gov.efatura.useraccount.CancelUserAccountType;
  */
 public final class UBLTRBuilderFuncTest
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (UBLTRBuilderFuncTest.class);
+
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
@@ -42,7 +46,8 @@ public final class UBLTRBuilderFuncTest
     final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder <> (CancelUserAccountType.class);
     final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder <> (CancelUserAccountType.class).setFormattedOutput (true);
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT).get (0);
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
+                                                   .get (0);
 
     // Read from resource
     final CancelUserAccountType aRead1 = aReader.read (new ClassPathResource (sFilename));
@@ -59,7 +64,7 @@ public final class UBLTRBuilderFuncTest
     assertEquals (aREG1, aREG2);
 
     // Write
-    final String s = aWriter.getAsString (aRead1);
-    System.out.println (s);
+    final String sXML = aWriter.getAsString (aRead1);
+    LOGGER.info ("Created XML:\n" + sXML);
   }
 }
