@@ -22,6 +22,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import com.helger.commons.error.list.IErrorList;
@@ -40,11 +42,15 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  */
 public final class UBLTRFuncTest
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (UBLTRFuncTest.class);
+
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
     for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT))
     {
+      LOGGER.info ("Reading '" + sFilename + "'");
+
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBLTRDocumentType.CANCEL_USER_ACCOUNT.getSchema ()));
@@ -85,6 +91,8 @@ public final class UBLTRFuncTest
   {
     for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.PROCESS_USER_ACCOUNT))
     {
+      LOGGER.info ("Reading '" + sFilename + "'");
+
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
                                                   new DOMReaderSettings ().setSchema (EUBLTRDocumentType.PROCESS_USER_ACCOUNT.getSchema ()));

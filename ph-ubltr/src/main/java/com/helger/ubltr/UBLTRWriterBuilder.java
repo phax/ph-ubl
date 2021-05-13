@@ -38,9 +38,9 @@ public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new UBLTRNamespaceContext ();
-    // Avoid overwriting an already mapped context
-    if (!aNSContext.isNamespaceURIMapped (m_aDocType.getNamespaceURI ()))
-      aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
+    // For backwards compatibility we leave this potential override (from "hr"
+    // to "")
+    aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
 
