@@ -1,7 +1,8 @@
 # ph-ubl
 
-[![Build Status](https://travis-ci.org/phax/ph-ubl.svg?branch=master)](https://travis-ci.org/phax/ph-ubl)
-﻿
+[![Build Status](https://travis-ci.com/phax/ph-ubl.svg?branch=master)](https://travis-ci.com/phax/ph-ubl)
+﻿[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom) 
+
 This is the readme file for version 5.x or later.
 
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2 and 2.3 documents.
