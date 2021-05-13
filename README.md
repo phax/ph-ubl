@@ -246,6 +246,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
  
+* v6.6.1 - 2021-05-13
+    * Improved the handling for the Dian Extension and ensuring the "sts" namespace prefix is used.
 * v6.6.0 - 2021-05-02
     * Updated to ph-commons 10.1.0
     * Changed the JAXB binding for date time types `XMLOffset(Date|Time|DateTime)` - last change - sorry
