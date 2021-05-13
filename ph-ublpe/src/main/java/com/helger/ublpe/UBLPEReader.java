@@ -37,7 +37,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
 public final class UBLPEReader
 {
   @PresentForCodeCoverage
-  private static final UBLPEReader s_aInstance = new UBLPEReader ();
+  private static final UBLPEReader INSTANCE = new UBLPEReader ();
 
   private UBLPEReader ()
   {}

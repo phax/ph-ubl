@@ -57,7 +57,7 @@ public final class UBLPEDocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final UBLPEDocumentTypes s_aInstance = new UBLPEDocumentTypes ();
+  private static final UBLPEDocumentTypes INSTANCE = new UBLPEDocumentTypes ();
 
   private UBLPEDocumentTypes ()
   {}

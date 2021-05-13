@@ -130,7 +130,7 @@ public class MainCreateUBL22ActionCode extends AbstractCreateUBLActionCode
            "  @PresentForCodeCoverage\n" +
            "  private static final " +
            sClassName +
-           " s_aInstance = new " +
+           " INSTANCE = new " +
            sClassName +
            " ();\n" +
            "\n" +

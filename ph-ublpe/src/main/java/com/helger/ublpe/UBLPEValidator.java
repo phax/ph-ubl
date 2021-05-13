@@ -37,7 +37,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
 public final class UBLPEValidator
 {
   @PresentForCodeCoverage
-  private static final UBLPEValidator s_aInstance = new UBLPEValidator ();
+  private static final UBLPEValidator INSTANCE = new UBLPEValidator ();
 
   private UBLPEValidator ()
   {}

@@ -46,7 +46,7 @@ public final class CDianUBL
                                                                                         _getCL ());
 
   @PresentForCodeCoverage
-  private static final CDianUBL s_aInstance = new CDianUBL ();
+  private static final CDianUBL INSTANCE = new CDianUBL ();
 
   private CDianUBL ()
   {}

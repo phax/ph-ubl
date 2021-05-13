@@ -62,7 +62,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 public final class UBL20Reader
 {
   @PresentForCodeCoverage
-  private static final UBL20Reader s_aInstance = new UBL20Reader ();
+  private static final UBL20Reader INSTANCE = new UBL20Reader ();
 
   private UBL20Reader ()
   {}

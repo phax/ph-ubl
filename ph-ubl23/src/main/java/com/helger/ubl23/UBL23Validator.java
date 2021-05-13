@@ -122,7 +122,7 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_23.WeightStateme
 public final class UBL23Validator
 {
   @PresentForCodeCoverage
-  private static final UBL23Validator s_aInstance = new UBL23Validator ();
+  private static final UBL23Validator INSTANCE = new UBL23Validator ();
 
   private UBL23Validator () {}
 /** Create a validation builder for ApplicationResponse.

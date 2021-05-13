@@ -37,7 +37,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
 public final class UBLPEWriter
 {
   @PresentForCodeCoverage
-  private static final UBLPEWriter s_aInstance = new UBLPEWriter ();
+  private static final UBLPEWriter INSTANCE = new UBLPEWriter ();
 
   private UBLPEWriter ()
   {}

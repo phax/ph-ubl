@@ -112,7 +112,7 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStateme
 public final class UBL22Validator
 {
   @PresentForCodeCoverage
-  private static final UBL22Validator s_aInstance = new UBL22Validator ();
+  private static final UBL22Validator INSTANCE = new UBL22Validator ();
 
   private UBL22Validator ()
   {}

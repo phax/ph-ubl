@@ -63,7 +63,7 @@ public final class UBL23DocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final UBL23DocumentTypes s_aInstance = new UBL23DocumentTypes ();
+  private static final UBL23DocumentTypes INSTANCE = new UBL23DocumentTypes ();
 
   private UBL23DocumentTypes ()
   {}

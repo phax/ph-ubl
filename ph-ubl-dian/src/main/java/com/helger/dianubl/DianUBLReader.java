@@ -37,7 +37,7 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 public final class DianUBLReader
 {
   @PresentForCodeCoverage
-  private static final DianUBLReader s_aInstance = new DianUBLReader ();
+  private static final DianUBLReader INSTANCE = new DianUBLReader ();
 
   private DianUBLReader ()
   {}

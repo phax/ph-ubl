@@ -71,7 +71,7 @@ public final class CUBLTR
   }
 
   @PresentForCodeCoverage
-  private static final CUBLTR s_aInstance = new CUBLTR ();
+  private static final CUBLTR INSTANCE = new CUBLTR ();
 
   private CUBLTR ()
   {}

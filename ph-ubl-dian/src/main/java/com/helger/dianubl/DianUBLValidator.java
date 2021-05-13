@@ -37,7 +37,7 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 public final class DianUBLValidator
 {
   @PresentForCodeCoverage
-  private static final DianUBLValidator s_aInstance = new DianUBLValidator ();
+  private static final DianUBLValidator INSTANCE = new DianUBLValidator ();
 
   private DianUBLValidator ()
   {}

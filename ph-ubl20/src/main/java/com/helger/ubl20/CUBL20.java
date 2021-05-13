@@ -72,7 +72,7 @@ public final class CUBL20
                                                                                             _getCL ());
 
   @PresentForCodeCoverage
-  private static final CUBL20 s_aInstance = new CUBL20 ();
+  private static final CUBL20 INSTANCE = new CUBL20 ();
 
   private CUBL20 ()
   {}

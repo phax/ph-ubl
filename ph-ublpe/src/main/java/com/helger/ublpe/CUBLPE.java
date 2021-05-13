@@ -35,7 +35,7 @@ public final class CUBLPE
   public static final String XML_SCHEMA_SAC_NAMESPACE_URL = "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1";
 
   @PresentForCodeCoverage
-  private static final CUBLPE s_aInstance = new CUBLPE ();
+  private static final CUBLPE INSTANCE = new CUBLPE ();
 
   private CUBLPE ()
   {}

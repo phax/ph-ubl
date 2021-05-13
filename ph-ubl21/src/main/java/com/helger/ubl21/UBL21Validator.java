@@ -96,7 +96,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 public final class UBL21Validator
 {
   @PresentForCodeCoverage
-  private static final UBL21Validator s_aInstance = new UBL21Validator ();
+  private static final UBL21Validator INSTANCE = new UBL21Validator ();
 
   private UBL21Validator ()
   {}

@@ -37,7 +37,7 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 public final class DianUBLWriter
 {
   @PresentForCodeCoverage
-  private static final DianUBLWriter s_aInstance = new DianUBLWriter ();
+  private static final DianUBLWriter INSTANCE = new DianUBLWriter ();
 
   private DianUBLWriter ()
   {}

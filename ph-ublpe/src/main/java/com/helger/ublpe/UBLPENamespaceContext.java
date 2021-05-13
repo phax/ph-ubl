@@ -29,7 +29,7 @@ public class UBLPENamespaceContext extends UBL20NamespaceContext
 {
   private static final class SingletonHolder
   {
-    static final UBLPENamespaceContext s_aInstance = new UBLPENamespaceContext ();
+    static final UBLPENamespaceContext INSTANCE = new UBLPENamespaceContext ();
   }
 
   public UBLPENamespaceContext ()
@@ -40,6 +40,6 @@ public class UBLPENamespaceContext extends UBL20NamespaceContext
   @Nonnull
   public static UBLPENamespaceContext getInstance ()
   {
-    return SingletonHolder.s_aInstance;
+    return SingletonHolder.INSTANCE;
   }
 }

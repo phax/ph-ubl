@@ -122,7 +122,7 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_23.WeightStateme
 public final class UBL23Writer
 {
   @PresentForCodeCoverage
-  private static final UBL23Writer s_aInstance = new UBL23Writer ();
+  private static final UBL23Writer INSTANCE = new UBL23Writer ();
 
   private UBL23Writer () {}
 /** Create a writer builder for ApplicationResponse.

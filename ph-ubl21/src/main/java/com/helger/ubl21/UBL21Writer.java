@@ -96,7 +96,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 public final class UBL21Writer
 {
   @PresentForCodeCoverage
-  private static final UBL21Writer s_aInstance = new UBL21Writer ();
+  private static final UBL21Writer INSTANCE = new UBL21Writer ();
 
   private UBL21Writer ()
   {}

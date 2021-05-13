@@ -34,7 +34,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
 public final class UBLTRWriter
 {
   @PresentForCodeCoverage
-  private static final UBLTRWriter s_aInstance = new UBLTRWriter ();
+  private static final UBLTRWriter INSTANCE = new UBLTRWriter ();
 
   private UBLTRWriter ()
   {}

@@ -57,7 +57,7 @@ public final class UBLTRDocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final UBLTRDocumentTypes s_aInstance = new UBLTRDocumentTypes ();
+  private static final UBLTRDocumentTypes INSTANCE = new UBLTRDocumentTypes ();
 
   private UBLTRDocumentTypes ()
   {}

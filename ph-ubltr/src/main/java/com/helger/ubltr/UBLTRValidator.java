@@ -34,7 +34,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
 public final class UBLTRValidator
 {
   @PresentForCodeCoverage
-  private static final UBLTRValidator s_aInstance = new UBLTRValidator ();
+  private static final UBLTRValidator INSTANCE = new UBLTRValidator ();
 
   private UBLTRValidator ()
   {}

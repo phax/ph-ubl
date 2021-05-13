@@ -122,7 +122,7 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_23.WeightStateme
 public final class UBL23Reader
 {
   @PresentForCodeCoverage
-  private static final UBL23Reader s_aInstance = new UBL23Reader ();
+  private static final UBL23Reader INSTANCE = new UBL23Reader ();
 
   private UBL23Reader () {}
 /** Create a reader builder for ApplicationResponse.

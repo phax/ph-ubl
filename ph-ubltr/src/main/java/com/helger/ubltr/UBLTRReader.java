@@ -34,7 +34,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
 public final class UBLTRReader
 {
   @PresentForCodeCoverage
-  private static final UBLTRReader s_aInstance = new UBLTRReader ();
+  private static final UBLTRReader INSTANCE = new UBLTRReader ();
 
   private UBLTRReader ()
   {}

@@ -63,7 +63,7 @@ public final class UBL20DocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final UBL20DocumentTypes s_aInstance = new UBL20DocumentTypes ();
+  private static final UBL20DocumentTypes INSTANCE = new UBL20DocumentTypes ();
 
   private UBL20DocumentTypes ()
   {}

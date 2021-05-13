@@ -112,7 +112,7 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStateme
 public final class UBL22Writer
 {
   @PresentForCodeCoverage
-  private static final UBL22Writer s_aInstance = new UBL22Writer ();
+  private static final UBL22Writer INSTANCE = new UBL22Writer ();
 
   private UBL22Writer ()
   {}
