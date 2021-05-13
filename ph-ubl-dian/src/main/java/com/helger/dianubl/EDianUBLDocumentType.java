@@ -46,7 +46,10 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
   CREDIT_NOTE (EUBL21DocumentType.CREDIT_NOTE),
   DEBIT_NOTE (EUBL21DocumentType.DEBIT_NOTE),
   INVOICE (EUBL21DocumentType.INVOICE),
-  DIAN_EXTENSIONS (DianExtensionsType.class, new CommonsArrayList <> (CDianUBL.XSD_DIAN_UBL_STRUCTURE));
+  DIAN_EXTENSIONS (DianExtensionsType.class,
+                   new CommonsArrayList <> (CUBL21.XSD_UNQUALIFIED_DATA_TYPES,
+                                            CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                            CDianUBL.XSD_DIAN_UBL_STRUCTURE));
 
   @Nonnull
   private static ClassLoader _getCL ()

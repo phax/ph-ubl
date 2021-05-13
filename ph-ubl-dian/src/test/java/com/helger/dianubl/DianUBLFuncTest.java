@@ -109,7 +109,7 @@ public final class DianUBLFuncTest
     final InvoiceType aInvoice = DianUBLReader.invoice ().read (new File ("src/test/resources/test-ubl/invoice1.xml"));
     assertNotNull (aInvoice);
 
-    // The main extension
+    // The main extension, filled with values from test-dian/Generica.xml
     final DianExtensionsType aDian = new DianExtensionsType ();
     {
       final InvoiceControl aIC = new InvoiceControl ();
@@ -187,8 +187,10 @@ public final class DianUBLFuncTest
     final UBLExtensionType aExtension = new UBLExtensionType ();
     final ExtensionContentType aExtCont = new ExtensionContentType ();
     {
+      final Document aDoc = DianUBLWriter.dianExtensions ().getAsDocument (aDian);
+      assertNotNull (aDoc);
       // Must set as "org.w3c.Element"
-      aExtCont.setAny (DianUBLWriter.dianExtensions ().getAsDocument (aDian).getDocumentElement ());
+      aExtCont.setAny (aDoc.getDocumentElement ());
     }
     aExtension.setExtensionContent (aExtCont);
     aExtensions.addUBLExtension (aExtension);
