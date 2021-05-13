@@ -38,7 +38,9 @@ public class UBL22WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, 
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = UBL22NamespaceContext.getInstance ().getClone ();
-    aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
+    // Avoid overwriting an already mapped context
+    if (!aNSContext.isNamespaceURIMapped (m_aDocType.getNamespaceURI ()))
+      aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
 

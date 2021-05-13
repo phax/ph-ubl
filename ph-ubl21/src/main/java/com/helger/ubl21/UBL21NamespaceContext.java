@@ -33,7 +33,7 @@ public class UBL21NamespaceContext extends MapBasedNamespaceContext
 {
   private static final class SingletonHolder
   {
-    static final UBL21NamespaceContext s_aInstance = new UBL21NamespaceContext ();
+    static final UBL21NamespaceContext INSTANCE = new UBL21NamespaceContext ();
   }
 
   protected UBL21NamespaceContext ()
@@ -49,6 +49,6 @@ public class UBL21NamespaceContext extends MapBasedNamespaceContext
   @Nonnull
   public static UBL21NamespaceContext getInstance ()
   {
-    return SingletonHolder.s_aInstance;
+    return SingletonHolder.INSTANCE;
   }
 }
