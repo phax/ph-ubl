@@ -32,6 +32,8 @@ import com.helger.jaxb.builder.JAXBDocumentType;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
+import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
+
 /**
  * Enumeration with all available DIAN UBL document types.
  *
@@ -43,7 +45,8 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
   ATTACHED_DOCUMENT (EUBL21DocumentType.ATTACHED_DOCUMENT),
   CREDIT_NOTE (EUBL21DocumentType.CREDIT_NOTE),
   DEBIT_NOTE (EUBL21DocumentType.DEBIT_NOTE),
-  INVOICE (EUBL21DocumentType.INVOICE);
+  INVOICE (EUBL21DocumentType.INVOICE),
+  DIAN_EXTENSIONS (DianExtensionsType.class, new CommonsArrayList <> (CDianUBL.XSD_DIAN_UBL_STRUCTURE));
 
   @Nonnull
   private static ClassLoader _getCL ()
@@ -57,27 +60,28 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
   private static ICommonsList <ClassPathResource> _injectSTS (@Nonnull final ICommonsList <ClassPathResource> aList)
   {
     final ICommonsList <ClassPathResource> ret = new CommonsArrayList <> ();
+    // Copy everything EXCEPT the last item
     if (aList.size () > 1)
       ret.addAll (aList.subList (0, aList.size () - 1));
+    // Inject DIAN stuff in the middle
     ret.add (CUBL21.XSD_UNQUALIFIED_DATA_TYPES);
     ret.add (CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS);
     ret.add (CDianUBL.XSD_DIAN_UBL_STRUCTURE);
+    // Add the root element last
     ret.add (aList.getLast ());
     return ret;
   }
 
-  private EDianUBLDocumentType (@Nonnull final EUBL21DocumentType eOther)
+  EDianUBLDocumentType (@Nonnull final EUBL21DocumentType eOther)
   {
     m_aDocType = new JAXBDocumentType (eOther.getImplementationClass (),
                                        _injectSTS (eOther.getAllXSDResources ()),
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
-  private EDianUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <String> aXSDPaths)
+  EDianUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (aXSDPaths, x -> new ClassPathResource (x, _getCL ())),
-                                       s -> StringHelper.trimEnd (s, "Type"));
+    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }
 
   @Nonnull

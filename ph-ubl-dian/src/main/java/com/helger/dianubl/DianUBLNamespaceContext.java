@@ -29,18 +29,22 @@ public class DianUBLNamespaceContext extends UBL21NamespaceContext
 {
   private static final class SingletonHolder
   {
-    static final DianUBLNamespaceContext s_aInstance = new DianUBLNamespaceContext ();
+    static final DianUBLNamespaceContext INSTANCE = new DianUBLNamespaceContext ();
   }
 
   public DianUBLNamespaceContext ()
   {
     super ();
+    // Change cec to ext
+    addMapping ("ext", getCustomNamespaceURI ("cec"));
+    removeMapping ("cec");
+    // Add Dian mapping
     addMapping ("sts", CDianUBL.XML_SCHEMA_STS_NAMESPACE_URL);
   }
 
   @Nonnull
   public static DianUBLNamespaceContext getInstance ()
   {
-    return SingletonHolder.s_aInstance;
+    return SingletonHolder.INSTANCE;
   }
 }

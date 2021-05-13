@@ -57,7 +57,7 @@ public final class DianUBLDocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final DianUBLDocumentTypes s_aInstance = new DianUBLDocumentTypes ();
+  private static final DianUBLDocumentTypes INSTANCE = new DianUBLDocumentTypes ();
 
   private DianUBLDocumentTypes ()
   {}

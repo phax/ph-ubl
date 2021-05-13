@@ -21,6 +21,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
+import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
@@ -40,6 +41,17 @@ public final class DianUBLWriter
 
   private DianUBLWriter ()
   {}
+
+  /**
+   * Create a writer builder for {@link DianExtensionsType}.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static DianUBLWriterBuilder <DianExtensionsType> dianExtensions ()
+  {
+    return DianUBLWriterBuilder.create (DianExtensionsType.class);
+  }
 
   /**
    * Create a writer builder for ApplicationResponseType.
