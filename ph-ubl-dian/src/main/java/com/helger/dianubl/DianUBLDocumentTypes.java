@@ -38,7 +38,7 @@ import com.helger.commons.collection.impl.ICommonsSet;
 public final class DianUBLDocumentTypes
 {
   /** Maps local names to document types */
-  private static final ICommonsMap <String, EDianUBLDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, EDianUBLDocumentType> LOCAL_NAME_TO_DOC_TYPE = new CommonsHashMap <> ();
 
   static
   {
@@ -50,9 +50,9 @@ public final class DianUBLDocumentTypes
     {
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
-      if (s_aLocalName2DocType.containsKey (sLocalName))
+      if (LOCAL_NAME_TO_DOC_TYPE.containsKey (sLocalName))
         throw new IllegalArgumentException ("The local name '" + sLocalName + "' is already mapped!");
-      s_aLocalName2DocType.put (sLocalName, eDocType);
+      LOCAL_NAME_TO_DOC_TYPE.put (sLocalName, eDocType);
     }
   }
 
@@ -70,7 +70,7 @@ public final class DianUBLDocumentTypes
   @ReturnsMutableCopy
   public static ICommonsSet <String> getAllLocalNames ()
   {
-    return s_aLocalName2DocType.copyOfKeySet ();
+    return LOCAL_NAME_TO_DOC_TYPE.copyOfKeySet ();
   }
 
   /**
@@ -85,7 +85,7 @@ public final class DianUBLDocumentTypes
   @Nullable
   public static EDianUBLDocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
   {
-    return s_aLocalName2DocType.get (sLocalName);
+    return LOCAL_NAME_TO_DOC_TYPE.get (sLocalName);
   }
 
   /**
