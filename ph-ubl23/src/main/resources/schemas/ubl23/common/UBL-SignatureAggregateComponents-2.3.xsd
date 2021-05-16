@@ -23,8 +23,7 @@
                schemaLocation="UBL-CommonBasicComponents-2.3.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
-   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="UBL-xmldsig1-schema-2.3.xsd"/>
+   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" />
 
           <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
    <xsd:complexType name="SignatureInformationType">

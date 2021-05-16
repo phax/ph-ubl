@@ -166,6 +166,7 @@
         </executions>
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
+          <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
           <extension>true</extension>
           <!-- Important for building on Linux! -->
           <strict>false</strict>
