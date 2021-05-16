@@ -78,21 +78,17 @@ public final class MainCreateJAXBBinding21
     // When in "xjc" namespace "adapter" can be used, when in "jaxb"
     // namespace, parse and print must be used
     eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "java.time.LocalDateTime")
+           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetDateTime")
            .setAttribute ("xmlType", "xsd:dateTime")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDateTime");
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetDateTime");
     eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "java.time.LocalDate")
+           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetDate")
            .setAttribute ("xmlType", "xsd:date")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalDate");
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetDate");
     eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "java.time.LocalTime")
+           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetTime")
            .setAttribute ("xmlType", "xsd:time")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterLocalTime");
-    eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "java.time.Duration")
-           .setAttribute ("xmlType", "xsd:duration")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterDuration");
+           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetTime");
 
     return eDoc;
   }
@@ -192,7 +188,8 @@ public final class MainCreateJAXBBinding21
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("schemaLocation",
+                                                             ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
                    .appendElement (JAXB_NS_URI, "package")
@@ -204,7 +201,8 @@ public final class MainCreateJAXBBinding21
                                new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
                                                                                                                          JAXB_NS_URI)
-                                                                                                            .addMapping ("xjc", XJC_NS_URI)
+                                                                                                            .addMapping ("xjc",
+                                                                                                                         XJC_NS_URI)
                                                                                                             .addMapping ("xsd",
                                                                                                                          XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
