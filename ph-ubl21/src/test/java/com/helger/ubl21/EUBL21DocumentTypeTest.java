@@ -22,6 +22,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.helger.commons.collection.impl.CommonsHashSet;
+import com.helger.commons.collection.impl.ICommonsSet;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
@@ -35,6 +37,8 @@ public final class EUBL21DocumentTypeTest
   @Test
   public void testAll ()
   {
+    final ICommonsSet <Class <?>> aClasses = new CommonsHashSet <> ();
+    final ICommonsSet <String> aFilenames = new CommonsHashSet <> ();
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
@@ -46,6 +50,8 @@ public final class EUBL21DocumentTypeTest
       assertNotNull (e.getSchema ());
       assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL21DocumentType.valueOf (e.name ()));
+      assertTrue (aClasses.add (e.getImplementationClass ()));
+      assertTrue (aFilenames.add (e.getAllXSDResources ().getLast ().getPath ()));
     }
   }
 }
