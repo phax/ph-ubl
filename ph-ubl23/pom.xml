@@ -68,10 +68,6 @@
     </dependency>
     <dependency>
       <groupId>com.helger.xsd</groupId>
-      <artifactId>ph-xsds-xmldsig11</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.helger.xsd</groupId>
       <artifactId>ph-xsds-xades132</artifactId>
     </dependency>
     <dependency>
@@ -192,10 +188,6 @@
             <episode>
               <groupId>com.helger.xsd</groupId>
               <artifactId>ph-xsds-xmldsig</artifactId>
-            </episode>
-            <episode>
-              <groupId>com.helger.xsd</groupId>
-              <artifactId>ph-xsds-xmldsig11</artifactId>
             </episode>
             <episode>
               <groupId>com.helger.xsd</groupId>
