@@ -247,6 +247,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
  
+* v6.6.2 - 2021-05-16
+    * Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts.
 * v6.6.1 - 2021-05-13
     * Improved the handling for the Dian Extension and ensuring the "sts" namespace prefix is used.
 * v6.6.0 - 2021-05-02
