@@ -51,7 +51,7 @@ public final class EUBL22DocumentTypeTest
       assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL22DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
-      assertTrue (aFilenames.add (e.getAllXSDResources ().getFirst ().getPath ()));
+      assertTrue (aFilenames.add (e.getAllXSDResources ().getLast ().getPath ()));
     }
   }
 }
