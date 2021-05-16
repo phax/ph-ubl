@@ -24,14 +24,11 @@
                schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
-   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="UBL-xmldsig-core-schema-2.1.xsd"/>
+   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" />
 
    <!-- ===== Incorporate ETSI signature specifications-->
-   <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"
-               schemaLocation="UBL-XAdESv132-2.1.xsd"/>
-   <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"
-               schemaLocation="UBL-XAdESv141-2.1.xsd"/>
+   <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#" />
+   <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#" />
           
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
