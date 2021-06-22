@@ -210,4 +210,52 @@ public final class CreateInvoiceFromScratchFuncTest
       assertTrue (eSuccess.isSuccess ());
     }
   }
+
+  @Test
+  public void testCreateInvoiceFromScratchWithEmptyExtensionIssue38 ()
+  {
+    final String sCurrency = "EUR";
+
+    // Create domain object
+    final InvoiceType aInvoice = new InvoiceType ();
+
+    // Fill it
+    aInvoice.setID ("Dummy Invoice number");
+    aInvoice.setIssueDate (PDTFactory.getCurrentXMLOffsetDateUTC ());
+
+    final SupplierPartyType aSupplier = new SupplierPartyType ();
+    aInvoice.setAccountingSupplierParty (aSupplier);
+
+    final CustomerPartyType aCustomer = new CustomerPartyType ();
+    aInvoice.setAccountingCustomerParty (aCustomer);
+
+    final MonetaryTotalType aMT = new MonetaryTotalType ();
+    aMT.setPayableAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+    aInvoice.setLegalMonetaryTotal (aMT);
+
+    final InvoiceLineType aLine = new InvoiceLineType ();
+    aLine.setID ("1");
+
+    final ItemType aItem = new ItemType ();
+    aLine.setItem (aItem);
+
+    aLine.setLineExtensionAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+
+    aInvoice.addInvoiceLine (aLine);
+
+    // Now add the extension
+    final UBLExtensionsType aExtensions = new UBLExtensionsType ();
+    final UBLExtensionType aExtension = new UBLExtensionType ();
+    final ExtensionContentType aExtensionContent = new ExtensionContentType ();
+    aExtension.setExtensionContent (aExtensionContent);
+    aExtensions.addUBLExtension (aExtension);
+    aInvoice.setUBLExtensions (aExtensions);
+
+    // Write to disk ("as is")
+    final ESuccess eSuccess = UBL21Writer.invoice ()
+                                         .setUseSchema (false)
+                                         .setFormattedOutput (true)
+                                         .write (aInvoice, new File ("target/dummy-invoice-with-empty-extension.xml"));
+    assertTrue (eSuccess.isSuccess ());
+  }
 }
