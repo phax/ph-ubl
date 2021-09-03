@@ -240,15 +240,17 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.0: https://docs.oasis-open.org/ubl/os-UBL-2.0/ 
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
-    * UBL 2.3: https://docs.oasis-open.org/ubl/cs01-UBL-2.3/
+    * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
 
 # News and noteworthy
  
+* v6.6.3 - work in progress
+    * Updated to the final UBL 2.3 XML Schemas - no changes compared to CS01 except for comments
 * v6.6.2 - 2021-05-16
-    * Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts.
+    * Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts. This might be an incompatible change, if you reference the files in a JAXB ctaalog file.
 * v6.6.1 - 2021-05-13
     * Improved the handling for the Dian Extension and ensuring the "sts" namespace prefix is used.
 * v6.6.0 - 2021-05-02

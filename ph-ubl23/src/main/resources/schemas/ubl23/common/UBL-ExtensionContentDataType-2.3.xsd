@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CS01
-                     http://docs.oasis-open.org/ubl/cs01-UBL-2.3/
-  Release Date:      19 January 2021
+  Library:           OASIS Universal Business Language (UBL) 2.3 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.3/
+  Release Date:      15 June 2021
   Module:            UBL-ExtensionContentDataType-2.3.xsd
   Generated on:      2016-06-24 19:50(UTC)
   Copyright (c) OASIS Open 2016. All Rights Reserved.
@@ -27,8 +27,8 @@
               schemaLocation="UBL-CommonSignatureComponents-2.3.xsd"/>
 
   <!-- Incorporate ETSI signature specifications -->
-  <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#" />
-  <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#" />
+  <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"/>
+  <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"/>
 
   <!-- ===== Type Declaration ===== -->
   <xsd:complexType name="ExtensionContentType">
