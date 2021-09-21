@@ -20,6 +20,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.time.temporal.ChronoUnit;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -256,6 +257,75 @@ public final class CreateInvoiceFromScratchFuncTest
                                          .setUseSchema (false)
                                          .setFormattedOutput (true)
                                          .write (aInvoice, new File ("target/dummy-invoice-with-empty-extension.xml"));
+    assertTrue (eSuccess.isSuccess ());
+  }
+
+  @Test
+  public void testCreateInvoiceFromScratchNoSecondFractionIssue40 ()
+  {
+    final String sCurrency = "EUR";
+
+    // Create domain object
+    final InvoiceType aInvoice = new InvoiceType ();
+
+    // Fill it
+    aInvoice.setID ("Dummy Invoice number");
+    aInvoice.setIssueDate (PDTFactory.getCurrentXMLOffsetDateUTC ());
+    aInvoice.setIssueTime (PDTFactory.getCurrentLocalTime ().truncatedTo (ChronoUnit.SECONDS));
+
+    final SupplierPartyType aSupplier = new SupplierPartyType ();
+    aInvoice.setAccountingSupplierParty (aSupplier);
+
+    final CustomerPartyType aCustomer = new CustomerPartyType ();
+    aInvoice.setAccountingCustomerParty (aCustomer);
+
+    final MonetaryTotalType aMT = new MonetaryTotalType ();
+    aMT.setPayableAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+    aInvoice.setLegalMonetaryTotal (aMT);
+
+    final InvoiceLineType aLine = new InvoiceLineType ();
+    aLine.setID ("1");
+
+    final ItemType aItem = new ItemType ();
+    aLine.setItem (aItem);
+
+    aLine.setLineExtensionAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+
+    aInvoice.addInvoiceLine (aLine);
+
+    // Add some TaxTotal
+    {
+      final TaxSubtotalType aTaxSubtotal = new TaxSubtotalType ();
+      aTaxSubtotal.setTaxableAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+      aTaxSubtotal.setTaxAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+
+      final TaxCategoryType aTaxCategory = new TaxCategoryType ();
+      final IDType aTCID = new IDType ();
+      aTCID.setSchemeID ("UNCL5305");
+      aTCID.setSchemeAgencyID ("6");
+      aTCID.setValue ("Z");
+      aTaxCategory.setID (aTCID);
+
+      aTaxCategory.setPercent (BigDecimal.TEN);
+
+      final TaxSchemeType aTaxScheme = new TaxSchemeType ();
+      final IDType aTSID = new IDType ();
+      aTSID.setSchemeID ("UNCL5305");
+      aTSID.setSchemeAgencyID ("6");
+      aTSID.setValue ("VAT");
+      aTaxScheme.setID (aTSID);
+      aTaxCategory.setTaxScheme (aTaxScheme);
+
+      aTaxSubtotal.setTaxCategory (aTaxCategory);
+
+      final TaxTotalType aTaxTotal = new TaxTotalType ();
+      aTaxTotal.setTaxAmount (BigDecimal.TEN).setCurrencyID (sCurrency);
+      aTaxTotal.addTaxSubtotal (aTaxSubtotal);
+      aInvoice.addTaxTotal (aTaxTotal);
+    }
+
+    // Write to disk
+    final ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice-no-second-fraction.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 }
