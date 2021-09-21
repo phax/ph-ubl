@@ -247,8 +247,9 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
  
-* v6.6.3 - work in progress
+* v6.6.3 - 2021-09-21
     * Updated to the final UBL 2.3 XML Schemas - no changes compared to CS01 except for comments
+    * Updated dependencies, so that the date/time objects now implement `Serializable` and that date/time objects are allowed to have no second fractions. The same effect can be reached by explicitly using v6.6.2 with ph-commons 10.1.3
 * v6.6.2 - 2021-05-16
     * Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts. This might be an incompatible change, if you reference the files in a JAXB ctaalog file.
 * v6.6.1 - 2021-05-13
