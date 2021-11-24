@@ -123,13 +123,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <!-- Using my own version of the plugin, because of build errors on Travis Xenial when
-             using the highsource plugin.
-             See https://github.com/highsource/maven-jaxb2-plugin/issues/173 for details.
-         -->
-        <groupId>com.helger.maven</groupId>
-        <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.14.3</version>
+        <groupId>com.evolvedbinary.maven.jvnet</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>0.15.0</version>
         <executions>
           <execution>
             <goals>
