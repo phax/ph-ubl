@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:190482-2020:TEXT:EN:HTML
+-->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>16</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.carabinieri.it/Internet/</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Comando generale dell'Arma dei carabinieri </cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>viale Romania 45</cbc:StreetName>
+									<cbc:CityName>Roma</cbc:CityName>
+									<cbc:PostalZone>00197</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+39 0680982269</cbc:Telephone>
+									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Ufficio Approvvigionamenti</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>viale Romania 45</cbc:StreetName>
+									<cbc:CityName>Roma</cbc:CityName>
+									<cbc:PostalZone>00197</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>+39 0680982269</cbc:Telephone>
+									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Direzione di Commissariato</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>viale Romania 45</cbc:StreetName>
+									<cbc:CityName>Roma</cbc:CityName>
+									<cbc:PostalZone>00197</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>+39 0680982710</cbc:Telephone>
+									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Tribunale amministrativo regionale del Lazio</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>via Flaminia 189</cbc:StreetName>
+									<cbc:CityName>Roma</cbc:CityName>
+									<cbc:PostalZone>00197</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">222 222 222</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+39 06328721</cbc:Telephone>
+									<cbc:Telefax>+39 0632872310</cbc:Telefax>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>c77a5424-249b-499b-a45b-2265edb941bb</cbc:ID>
+	<cbc:ContractFolderID>2b81ba62-3167-4618-bbfc-98db716e2f38</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-23+01:00</cbc:IssueDate>
+	<cbc:IssueTime>07:06:04+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ITA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>http://www.carabinieri.it/Internet/</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cac:TendererQualificationRequest>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.FRAUD</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
+			</cac:SpecificTendererRequirement>
+		</cac:TendererQualificationRequest>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+		<cac:ProcessJustification>
+			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
+			<cbc:ProcessReason languageID="ITA">Urgente necessità logistico-operativa di assicurare la fruizione dei posti letto</cbc:ProcessReason>
+		</cac:ProcessJustification>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>not available</cbc:ID>
+		<cbc:Name languageID="ITA">Procedura aperta accelerata per la fornitura di n. 212 posti letto, ognuno composto da arredi e complementi di arredo, per le esigenze della Scuola marescialli e brigadieri di Firenze</cbc:Name>
+		<cbc:Description languageID="ITA">Fornitura di n. 212 posti letto ognuno composto da: — arredi (n. 1 armadio a due ante, n. 1 comodino a un cassetto, n, 1 scarpiera, n. 1 mobile basso a due ante, n. 1 scrivania singola con alzata e n. 1 struttura per letto con cassettone contenitore), — complementi d’arredo (n. 1 cassetta porta pistola, n. 1 scala in alluminio, n. 1 rete a doghe di legno, n. 1 materasso, n. 1 sopraffodera, n. 1 guanciale e n. 1 sedia).</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ITA">a) le procedure approvvigionative di cui al presente bando sono state autorizzate – ai sensi dell’art. 32, comma 2 del D.Lgs. n. 50/2016 – con determina a contrarre n. 180 RUA in data 25.3.2020; b) la presente procedura viene pubblicata nonostante la sospensione dei termini ordinatori, perentori, propedeutici, endoprocedimentali, finali ed esecutivi relativi allo svolgimento di procedimenti amministrativi prevista dall’art. 103 del D.L. n. 18 del 17.3.2020 vista la necessità e l’urgenza di disporre dei materiali in approvvigionamento, sin dall’AA 2020-2021, presso la Scuola marescialli e brigadieri dei Carabinieri di Firenze; c) il disciplinare di gara, che contiene tutte le condizioni di partecipazione, unitamente ai relativi allegati, alle specifiche tecniche ed alla bozza di contratto sono disponibili, unitamente al presente bando, sul sito: www.carabinieri.it, nella sezione «amministrazione trasparente», sotto-sezione «bandi di gara e contratti», al seguente URL: http://www.carabinieri.it/cittadino/informazioni/gare-appalto/gare-appalto/approvvigionamento-di-212-posti-letto-per-la-scuola-mar.-e-brig.-di-firenze e sul sito Internet: www.acquistinretepa.it (nome iniziativa: procedura aperta per la fornitura di n. 212 posti letto – numero/codice iniziativa: 2554061 accessibile dalla sottocartella «altre gare»); d) il presente appalto non è stato suddiviso in lotti funzionali, in ragione dell’omogeneità del materiale in acquisizione; e) non è stato redatto il DUVRI in ragione dell’assenza di interferenze; f) il CIG (Codice identificativo di gara) attribuito al presente procedimento dall’ANAC è: 8266589D09; g) il codice unico di progetto (CUP) attribuito al presente procedimento è: D19E20000110001; h) il presente bando di gara è stato trasmesso per la pubblicazione sulla GUUE all’Ufficio delle pubblicazioni dell’Unione europea in data 23.4.2020; i) ai sensi del regolamento CE n. 593 del 17.6.2008 del Parlamento europeo e del Consiglio, alle obbligazioni contrattuali derivanti dalla presente gara di appalto sarà applicata la legislazione italiana; j) responsabile del procedimento è il capo pro-tempore del centro unico contrattuale del Comando generale dell’Arma dei carabinieri; k) direttore dell’esecuzione del contratto è il direttore pro-tempore della Direzione di commissariato del Comando generale dell’Arma dei carabinieri.</cbc:Note>
+		<cac:RequestedTenderTotal>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">291934.60</cbc:EstimatedOverallContractAmount>
+		</cac:RequestedTenderTotal>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">39143100</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ITA">Sono ammessi tutti gli operatori economici previsti dall’art. 45 del D.Lgs. n. 50/2016, compresi i concorrenti appositamente e temporaneamente raggruppati ai sensi dell’art. 45, comma 2, lett. d) del D.Lgs. n. 50/2016 e aggregazioni tra imprese aderenti al contratto di rete ai sensi dell’art. 45, comma 2, lett. f) del D.Lgs. n. 50/2016, secondo le modalità indicate nel disciplinare di gara.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ITA">Ciascuna impresa concorrente (anche se ausiliaria, consorziata, mandante o retista) dovrà produrre due idonee dichiarazioni bancarie.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ITA">Sono ammesse a partecipare le imprese e/o raggruppamenti e/o reti specializzati nella produzione dei manufatti per cui chiedono di concorrere. A tal fine, ciascun concorrente dovrà dichiarare/dimostrare il possesso dei seguenti requisiti minimi: a) fasi di lavorazione essenziali che ogni operatore economico partecipante dovrà possedere (esclusi rete, sedia e cassetta porta pistola e gli accessori come viti, maniglie e guide): — taglio, fresatura, foratura, piallatura, levigatura e incollaggio del legno, — assemblaggio delle parti componenti i singoli arredi, — imballaggio, — montaggio a destinazione; b) organizzazione complessiva d’impresa desumibile da: — elenco descrittivo delle attrezzature tecniche possedute afferenti la lavorazione completi dei manufatti in legno, — stabilimenti di produzione e forza lavoro, — capacità produttiva giornaliera riferita a prodotti finiti analoghi a quelli dell’appalto in linea con i termini di approntamento e montaggio degli arredi in fornitura (55 giorni); c) certificazione di qualità in corso di validità, attestante l’ottemperanza alle norme UNI EN ISO 9001-2015, rilasciata da ente accreditato Accredia o altro ente in mutuo riconoscimento, relativa al settore di accreditamento (EA) e processi verificati e certificati (indicati nello «scopo» o «campo di applicazione») concernenti la/e fase/i di lavorazione svolta/e dall’operatore economico per la tipologia di manufatti per i quali chiede di partecipare; d) fatturato specifico: le ditte partecipanti dovranno presentare l’elenco dettagliato di forniture, realizzate nel triennio 2017-2019, relativo a prodotti finiti analoghi per materia prima utilizzata (manufatti in legno) a quelli per cui si chiede di partecipare, la cui media annua deve essere pari ad almeno il valore della gara (291 934,60 EUR, IVA esclusa). L’elenco deve contenere l’indicazione dettagliata di tipologia dei prodotti, importi fatturati, date dei contratti e beneficiari. L’amministrazione si riserva la facoltà di disporre sopralluoghi tecnici presso le sedi, anche secondarie, dei concorrenti, per verificarne la capacità tecnica. Le relative spese sono a carico del concorrente. I livelli minimi di capacità tecnica ed economica sono giustificati dall’oggettiva complessità della fornitura (quanto a tempi di approntamento e consegna dei prodotti finiti, specie per richiesta di «V d’urgenza» o «V d’obbligo»), in quanto i materiali dovranno essere adattati all’ambiente dove dovranno essere consegnati ed installati.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+			<cac:CallForTendersDocumentReference>
+				<cbc:ID></cbc:ID>
+				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<cbc:URI>http://www.carabinieri.it/cittadino/informazioni/gare-appalto/gare-appalto/approvvigionamento-di-212-posti-letto-per-la-scuola-mar.-e-brig.-di-firenze</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:CallForTendersDocumentReference>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="ecatalog-submission">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">TPO-0002</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:TenderRecipientParty>
+				<cbc:EndpointID>https://www.acquistinretepa.it/negoziazioni/prv?pagina=iniziativaIns_stepMain&amp;idT=2554061&amp;submit=elenco&amp;backPage=get:3338017180&amp;hmac=ed61bcf821de9dcbc24205e2c515b0ca</cbc:EndpointID>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
+			<cac:TenderValidityPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+			</cac:TenderValidityPeriod>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ITA">Informazioni dettagliate sui termini di presentazione dei ricorsi:   30 giorni dalla notifica o dall’effettiva conoscenza dell’avvenuta aggiudicazione, per ricorrere al competente Tribunale amministrativo regionale del Lazio, sede di Roma.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ITA</cbc:ID>
+			</cac:Language>
+			<cac:PostAwardProcess>
+				<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+				<cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
+			</cac:PostAwardProcess>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:TenderSubmissionDeadlinePeriod>
+				<cbc:EndDate>2020-05-18+01:00</cbc:EndDate>
+				<cbc:EndTime>18:00:00+01:00</cbc:EndTime>
+			</cac:TenderSubmissionDeadlinePeriod>
+			<cac:OpenTenderEvent>
+				<cbc:OccurrenceDate>2020-05-19+01:00</cbc:OccurrenceDate>
+				<cbc:OccurrenceTime>09:30:00+01:00</cbc:OccurrenceTime>
+				<cac:OccurenceLocation>
+					<cbc:Description languageID="ITA">Piattaforma telematica di negoziazione messa a disposizione dalla Consip SpA (in qualità di gestore del sistema), sul sito Internet: www.acquistinretepa.it</cbc:Description>
+				</cac:OccurenceLocation>
+			</cac:OpenTenderEvent>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>not available</cbc:ID>
+			<cbc:Name languageID="ITA">Procedura aperta accelerata per la fornitura di n. 212 posti letto, ognuno composto da arredi e complementi di arredo, per le esigenze della Scuola marescialli e brigadieri di Firenze</cbc:Name>
+			<cbc:Description languageID="ITA">Fornitura di n. 212 posti letto ognuno composto da: — arredi (n. 1 armadio a due ante, n. 1 comodino a un cassetto, n, 1 scarpiera, n. 1 mobile basso a due ante, n. 1 scrivania singola con alzata e n. 1 struttura per letto con cassettone contenitore), — complementi d’arredo (n. 1 cassetta porta pistola, n. 1 scala in alluminio, n. 1 rete a doghe di legno, n. 1 materasso, n. 1 sopraffodera, n. 1 guanciale e n. 1 sedia).</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">39143100</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ITA">Firenze</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">ITI14</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="DAY">55</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>

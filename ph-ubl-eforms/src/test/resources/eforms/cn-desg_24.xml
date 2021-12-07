@@ -1,0 +1,336 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:176972-2020:TEXT:EN:HTML
+-->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>23</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://cc-vallee-doller.fr</cbc:WebsiteURI>
+								<cbc:EndpointID>https://marchespublics-amhr.omnikles.com</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Communauté de Communes de la Vallée de la Doller et du Soultzbach</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>9 place des Alliés</cbc:StreetName>
+									<cbc:CityName>Masevaux-Niederbruck</cbc:CityName>
+									<cbc:PostalZone>68290</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>24680067600016</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>T. Ciavarella</cbc:Name>
+									<cbc:Telephone> +33 389388175</cbc:Telephone>
+									<cbc:ElectronicMail>t.ciavarella@cc-vallee-doller.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://tout-un-programme.com</cbc:WebsiteURI>
+								<cbc:EndpointID>https://marchespublics-amhr.omnikles.com</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Tout un programme (assistant à maîtrise d'ouvrage)</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>16 rue de la Sinne</cbc:StreetName>
+									<cbc:CityName>Mulhouse</cbc:CityName>
+									<cbc:PostalZone>68100</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>83044938500012</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Matthieu Fortin</cbc:Name>
+									<cbc:Telephone>+33 680800655</cbc:Telephone>
+									<cbc:ElectronicMail>matthieu@t1prog.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://strasbourg.tribunal-administratif.fr</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Tribunal administratif de Strasbourg</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>31 avenue de la Paix</cbc:StreetName>
+									<cbc:CityName>Strasbourg</cbc:CityName>
+									<cbc:PostalZone>67000</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+33 388212323</cbc:Telephone>
+									<cbc:ElectronicMail>contact@strasbourg.tribunal-administratif.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Comité consultatif interrégional de règlement amiable des différends relatifs aux marchés publics de Nancy</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>1 rue du Préfet Claude Érignac</cbc:StreetName>
+									<cbc:CityName>Nancy</cbc:CityName>
+									<cbc:PostalZone>54038</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+33 383342565</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>f37b9a55-0684-4d4b-a98f-0ba819d6d6f2</cbc:ID>
+	<cbc:ContractFolderID>8655f8a5-b5e9-4d6e-9dee-a360f820ecbe</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-11+01:00</cbc:IssueDate>
+	<cbc:IssueTime>09:09:09+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-desg</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">la</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>xyz</cbc:ID>
+		<cbc:Name languageID="FRA">Concours restreint de maîtrise d'œuvre en vue de la construction d'un accueil périscolaire à Burnhaupt-le-Bas</cbc:Name>
+		<cbc:Description languageID="FRA">Concours restreint de maîtrise d'œuvre en vue de la construction d'un nouvel accueil périscolaire à Burnhaupt-Le-Bas (68520). — Le présent marché a pour objet de confier au maître d'œuvre une mission de base, constituée des éléments suivants: — les études d'Esquisse (ESQ); — les études d'Avant-projet (AVP): Avant-projet sommaire (APS), Avant-projet définitif (APD); — les études de Projet (PRO-DCE); — l'Assistance à la passation des contrats de travaux (ACT); — la Direction de l'exécution des contrats de travaux (DET); — l'assistance lors des opérations de réception et pendant la période de garantie de parfait achèvement (AOR). La mission comprend également les missions complémentaires suivantes: — les études d'exécution (EXE); — Ordonnancement, pilotage et coordination (OPC). Le contenu de chaque élément de mission est celui qui figure à l'annexe I de l'arrêté du 22.3.2019 détaillant les modalités techniques d'exécution des éléments de mission de maîtrise d'œuvre; — la mission de coordination en matière de Système sécurité incendie (SSI), telle que définie par les textes réglementaires et normes en vigueur, est intégrée dans la mission du maître d'œuvre (mission de base).</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="FRA">Les documents de la consultation sont à télécharger et les offres sont à déposer sur la plate-forme des marchés publics de l'association des maires du Haut-Rhin: www.marchespublics-amhr.omnikles.com</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">Cf. règlement de consultation.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">La participation est réservée à la profession d'architecte.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+			<cac:CallForTendersDocumentReference>
+				<cbc:ID>DocID1</cbc:ID>
+				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<cbc:URI>https://marchespublics-amhr.omnikles.com/</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:CallForTendersDocumentReference>
+			<cac:TendererQualificationRequest></cac:TendererQualificationRequest>
+			<cac:AwardingTerms>
+				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="FRA">Jugement des candidatures:
+
+						— les candidatures seront jugées et sélectionnées au regard des critères suivants:
+						
+						1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus);
+						
+						2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles:
+						
+						— références du ou des architectes:
+						
+						—— une référence minimale de projet de construction d'un accueil périscolaire;
+						
+						—— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %;
+						
+						—— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT;
+						
+						— les références de moins de cinq ans seront appréciées;
+						
+						3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé.
+						
+						Jugement des prestations:
+						
+						— le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants:
+						
+						1) respect du programme de l'opération;
+						
+						2) qualité architecturale du projet et cohérence de son insertion dans le site;
+						
+						3) respect et crédibilité du coût estimé des travaux;
+						
+						4) respect des délais et crédibilité du planning prévisionnel.
+					</cbc:Description>
+				</cac:AwardingCriterion>
+				<cac:TechnicalCommitteePerson>
+					<cbc:FirstName>Sa composition n'est pas arrêtée à ce jour. Il sera composé selon le code de la commande publique</cbc:FirstName>
+				</cac:TechnicalCommitteePerson>
+				<cac:Prize>
+					<cbc:RankCode>1</cbc:RankCode>
+					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
+					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
+				</cac:Prize>
+				<cac:Prize>
+					<cbc:RankCode>>= 1</cbc:RankCode>
+					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
+					<cbc:Description languageID="FRA">Les trois concurrents (candidats admis à concourir) recevront une indemnisation forfaitaire maximale de 10 000 EUR HT. Pour les prestations fournies, sous réserve de la recevabilité de leurs prestations au regard du règlement du concours et du respect du programme. Les indemnisations sont forfaitaires, conformément aux dispositions de l'article R. 2172-4 du code de la commande publique, l'acheteur, sur proposition du jury, se réserve le droit, dans le cas d'un projet qu'il jugerait incomplet ou dont les prestations seraient non conformes par rapport au règlement de concours et ou au programme, de supprimer totalement ou partiellement l'indemnité.</cbc:Description>
+				</cac:Prize>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:TenderRecipientParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>FRA</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
+				<cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>dbl</cbc:ID>
+			<cbc:Name languageID="FRA">Concours restreint de maîtrise d'œuvre en vue de la construction d'un accueil périscolaire à Burnhaupt-le-Bas</cbc:Name>
+			<cbc:Description languageID="FRA">Concours restreint de maîtrise d'œuvre en vue de la construction d'un nouvel accueil périscolaire à Burnhaupt-Le-Bas (68520). — Le présent marché a pour objet de confier au maître d'œuvre une mission de base, constituée des éléments suivants: — les études d'Esquisse (ESQ); — les études d'Avant-projet (AVP): Avant-projet sommaire (APS), Avant-projet définitif (APD); — les études de Projet (PRO-DCE); — l'Assistance à la passation des contrats de travaux (ACT); — la Direction de l'exécution des contrats de travaux (DET); — l'assistance lors des opérations de réception et pendant la période de garantie de parfait achèvement (AOR). La mission comprend également les missions complémentaires suivantes: — les études d'exécution (EXE); — Ordonnancement, pilotage et coordination (OPC). Le contenu de chaque élément de mission est celui qui figure à l'annexe I de l'arrêté du 22.3.2019 détaillant les modalités techniques d'exécution des éléments de mission de maîtrise d'œuvre; — la mission de coordination en matière de Système sécurité incendie (SSI), telle que définie par les textes réglementaires et normes en vigueur, est intégrée dans la mission du maître d'œuvre (mission de base).</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>

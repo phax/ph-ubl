@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:563384-2019:TEXT:EN:HTML 
+-->
+<ContractNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>16</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://op.europa.eu/</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="BUL">Служба за публикации на Европейския съюз</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="CES">Úřad pro publikace Evropské unie</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DAN">Den Europæiske Unions Publikationskontor</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Amt für Veröffentlichungen der Europäischen Union</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ELL">Υπηρεσία Εκδόσεων της Ευρωπαϊκής Ένωσης</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Publications Office of the European Union</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="EST">Euroopa Liidu Väljaannete Talitus</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FIN">Euroopan unionin julkaisutoimisto</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Office des publications de l'Union européenne</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="GLE">Oifig Foilseachán an Aontais Eorpaigh</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HRV">Ured za publikacije Europske unije</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HUN">Az Európai Unió Kiadóhivatala</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Ufficio delle pubblicazioni dell'Unione europea</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LAV">Eiropas Savienības Publikāciju birojs</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LIT">Europos Sąjungos leidinių biuras</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="MLT">L-Uffiċċju tal-Pubblikazzjonijiet tal-Unjoni Ewropea</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="NLD">Bureau voor publicaties van de Europese Unie</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POL">Urząd Publikacji Unii Europejskiej</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POR">Serviço das Publicações da União Europeia</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="RON">Oficiul pentru Publicații al Uniunii Europene</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLK">Úrad pre vydávanie publikácií Európskej únie</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLV">Urad za publikacije Evropske unije</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">Oficina de Publicaciones de la Unión Europea</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SWE">Europeiska unionens publikationsbyrå</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>2, rue Mercier</cbc:StreetName>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>L-2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="ABC">EU-PO</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Valeria Sciarrino</cbc:Name>
+									<cbc:Telephone>+352 292944331</cbc:Telephone>
+									<cbc:ElectronicMail>op-appels-offres@publications.europa.eu</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://curia.europa.eu/</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="BUL">Общ съд</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">Tribunal General</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="CES">Tribunál</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DAN">Retten</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Gericht</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="EST">Üldkohus</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ELL">Γενικό Δικαστήριο</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">General Court</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Tribunal</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="GLE">Cúirt Ghinearálta</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HRV">Opći sud</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Tribunale</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LAV">Vispārējā tiesa</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LIT">Bendrasis Teismas</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HUN">Törvényszék</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="MLT">Il-Qorti Ġenerali</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="NLD">Gerecht</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POL">Sąd</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POR">Tribunal Geral</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="RON">Tribunalul</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLK">Všeobecný súd</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLV">Splošno sodišče</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FIN">Unionin yleinen tuomioistuin</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SWE">Tribunalen</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>rue du Fort Niedergrünewald</cbc:StreetName>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>L-2925</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="eu">GCEU</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 4303-1</cbc:Telephone>
+									<cbc:Telefax>+352 4303-2100</cbc:Telefax>
+									<cbc:ElectronicMail>GeneralCourt.Registry@curia.europa.eu</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="BUL">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="CES">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DAN">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ELL">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="EST">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FIN">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="GLE">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HRV">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HUN">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LAV">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LIT">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="MLT">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="NLD">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POL">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POR">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="RON">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLK">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLV">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SWE">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="BUL">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="CES">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DAN">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ELL">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="EST">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FIN">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="GLE">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HRV">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="HUN">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LAV">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="LIT">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="MLT">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="NLD">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POL">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="POR">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="RON">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLK">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SLV">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PartyName>
+									<cbc:Name languageID="SWE">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>55aae64f-88a8-44a5-b2fb-8228e97fe6ee</cbc:ID>
+	<cbc:ContractFolderID>46c9ce89-5986-40d9-992f-e1a2469a48f8</cbc:ContractFolderID>
+	<cbc:IssueDate>2019-11-21+01:00</cbc:IssueDate>
+	<cbc:IssueTime>00:00:00+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>BUL</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>CES</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>DAN</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>DEU</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>ELL</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>SPA</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>EST</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>FIN</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>FRA</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>GLE</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>HRV</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>HUN</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>ITA</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>LIT</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>LAV</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>MLT</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>NLD</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>POL</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>POR</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>RON</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>SLK</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>SLV</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>SWE</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>http://publications.europa.eu/en/web/about-us/procurement</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">eu-ins-bod-ag</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+		<cac:TendererQualificationRequest>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="BUL">Както е определено в документите за обществена поръчка.</cbc:Description>
+				<cbc:Description languageID="CES">Jak je uvedeno v zadávací dokumentaci.</cbc:Description>
+				<cbc:Description languageID="DAN">Som angivet i udbudsdokumenterne.</cbc:Description>
+				<cbc:Description languageID="DEU">Wie in den Ausschreibungsunterlagen angegeben.</cbc:Description>
+				<cbc:Description languageID="ELL">Όπως ορίζεται στα έγγραφα διαγωνισμού.</cbc:Description>
+				<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+				<cbc:Description languageID="EST">Vt hankedokumente.</cbc:Description>
+				<cbc:Description languageID="FIN">ilmoitetaan hankinta-asiakirjoissa.</cbc:Description>
+				<cbc:Description languageID="FRA">Voir dossier d'appel d'offres.</cbc:Description>
+				<cbc:Description languageID="GLE">Mar atá luaite sna doiciméid soláthair.</cbc:Description>
+				<cbc:Description languageID="HRV">Kako je navedeno u dokumentaciji o nabavi.</cbc:Description>
+				<cbc:Description languageID="HUN">Lásd a közbeszerzési dokumentációt.</cbc:Description>
+				<cbc:Description languageID="ITA">Come indicato nei documenti di gara.</cbc:Description>
+				<cbc:Description languageID="LAV">kā norādīts iepirkuma dokumentos.</cbc:Description>
+				<cbc:Description languageID="LIT">Kaip nurodyta pirkimo dokumentuose.</cbc:Description>
+				<cbc:Description languageID="MLT">Kif mistqarr fid-dokumenti tal-ksib.</cbc:Description>
+				<cbc:Description languageID="NLD">zoals vermeld in de aanbestedingsstukken.</cbc:Description>
+				<cbc:Description languageID="POL">Jak określono w dokumentacji zamówienia.</cbc:Description>
+				<cbc:Description languageID="POR">Tal como indicado na documentação do concurso.</cbc:Description>
+				<cbc:Description languageID="RON">Astfel cum se indică în dosarul achiziției.</cbc:Description>
+				<cbc:Description languageID="SLK">Ako je uvedené v súťažných podkladoch.</cbc:Description>
+				<cbc:Description languageID="SLV">Kot je navedeno v razpisni dokumentaciji.</cbc:Description>
+				<cbc:Description languageID="SPA">Véanse los documentos de contratación.</cbc:Description>
+				<cbc:Description languageID="SWE">Enligt vad som anges i upphandlingsdokumenten.</cbc:Description>
+			</cac:SpecificTendererRequirement>
+		</cac:TendererQualificationRequest>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>AO 10786</cbc:ID>
+		<cbc:Name languageID="BUL">Предоставяне на ИТ услуги, свързани с ИТ системите на Службата за публикации (EUR-Lex, N-Lex, Search Layer и други)</cbc:Name>
+		<cbc:Name languageID="CES">Poskytování IT služeb souvisejících s IT systémy Úřadu pro publikace (EUR-Lex, N-Lex, Search Layer a další)</cbc:Name>
+		<cbc:Name languageID="DAN">Levering af IT-tjenester relateret til operationelle (OP) IT-systemer (EUR-Lex, N-Lex, søgelag m.fl.)</cbc:Name>
+		<cbc:Name languageID="DEU">Bereitstellung von IT-Dienstleistungen im Zusammenhang mit OP-IT-Systemen (EUR-Lex, N-Lex, Search Layer und weitere)</cbc:Name>
+		<cbc:Name languageID="ELL">Παροχή υπηρεσιών πληροφορικής σχετικών με λειτουργικά συστήματα πληροφορικής (EUR-Lex, N-Lex, Layer Search και άλλα)</cbc:Name>
+		<cbc:Name languageID="ENG">Provision of IT Services Related to OP IT Systems (EUR-Lex, N-Lex, Search Layer, and Others)</cbc:Name>
+		<cbc:Name languageID="EST">Euroopa Liidu Väljaannete Talituse IT-süsteemidega (EUR-Lex, N-Lex, otsingukiht jt) seotud IT-teenuste osutamine</cbc:Name>
+		<cbc:Name languageID="FIN">julkaisutoimiston tietoteknisiin järjestelmiin (EUR-Lex, N-Lex, hakukerros ja muut) liittyvien tietoteknisten palvelujen toimittaminen</cbc:Name>
+		<cbc:Name languageID="FRA">Fourniture de services informatiques liés aux systèmes informatiques OP (EUR-Lex, N-Lex, Search Layer, etc.)</cbc:Name>
+		<cbc:Name languageID="GLE">Soláthar Seirbhísí TF i ndáil le Córais TF Oifig na bhFoilseachán (EUR-Lex, N-Lex, Search Layer, agus Eile)</cbc:Name>
+		<cbc:Name languageID="HRV">Pružanje IT usluga koje se odnose na IT sustave Ureda za publikacije (EUR-Lex, N-Lex, Search Layer i ostale)</cbc:Name>
+		<cbc:Name languageID="HUN">A Kiadóhivatal IT-rendszereivel kapcsolatos IT-szolgáltatások biztosítása (EUR-Lex, N-Lex, Search Layer és egyebek)</cbc:Name>
+		<cbc:Name languageID="ITA">Prestazione di servizi informatici relativi ai sistemi informativi dell'Ufficio delle pubblicazioni (EUR-Lex, N-Lex, Search Layer e altri)</cbc:Name>
+		<cbc:Name languageID="LAV">IT pakalpojumu sniegšana saistībā ar OP IT sistēmām (“EUR-Lex”, “N-Lex”, “Search Layer” u. c.)</cbc:Name>
+		<cbc:Name languageID="LIT">IT paslaugų, susijusių su OP IT sistemomis (EUR-Lex, N-Lex, Search Layer ir kitomis), teikimas</cbc:Name>
+		<cbc:Name languageID="MLT">Provvista ta' Servizzi tat-TI Relatati ma' Sistemi tat-TI tal-OP (EUR-lex, N-Lex, Search Layer, u Oħrajn)</cbc:Name>
+		<cbc:Name languageID="NLD">Verlening van IT-diensten die verband houden met de IT-systemen van het Bureau voor publicaties (onder meer EUR-Lex, N-Lex en Search Layer)</cbc:Name>
+		<cbc:Name languageID="POL">Świadczenie usług informatycznych związanych z systemami informatycznymi Urzędu Publikacji (EUR-Lex, N-Lex i Search Layer i inne)</cbc:Name>
+		<cbc:Name languageID="POR">Prestação de serviços de TI relacionados com sistemas informáticos do Serviço de Publicações (EUR-Lex, N-Lex, Search Layer, e outros)</cbc:Name>
+		<cbc:Name languageID="RON">Furnizarea de servicii IT legate de sistemele OP IT (EUR-Lex, N-Lex, Strat de căutare și altele)</cbc:Name>
+		<cbc:Name languageID="SLK">Poskytovanie IT služieb súvisiacich s IT systémami Úradu pre vydávanie publikácií (EUR-Lex, N-Lex, Search Layer a ďalšie)</cbc:Name>
+		<cbc:Name languageID="SLV">Zagotavljanje storitev IT, povezanih s sistemi IT Urada za publikacije (EUR-Lex, N-Lex, Search Layer in drugo)</cbc:Name>
+		<cbc:Name languageID="SPA">Prestación de servicios informáticos relacionados con los sistemas informáticos de la OP (EUR-Lex, N-Lex, Search Layer y otros)</cbc:Name>
+		<cbc:Name languageID="SWE">Tillhandahållande av IT-tjänster avseende OP IT Systems (EUR-Lex, N-Lex, Search Layer, och andra)</cbc:Name>
+		<cbc:Description languageID="BUL">Предоставяне на ИТ услуги, свързани с информационните системи на Службата за публикации (именно EUR-Lex, N-Lex и Search Layer) с възможност да се удължи предоставянето на други информационни системи.</cbc:Description>
+		<cbc:Description languageID="CES">Poskytování IT služeb souvisejících s informačními systémy Úřadu pro publikace (konkrétně EUR-Lex, N-Lex a Search Layer), s možností rozšíření poskytování služeb o další informační systémy.</cbc:Description>
+		<cbc:Description languageID="DAN">Levering af IT-systemer relateret til Publikationskontorets informationssystemer (dvs. EUR-Lex, N-Lex og søgelag), med mulighed for at udvide leverancen til andre informationssystemer.</cbc:Description>
+		<cbc:Description languageID="DEU">IT-Dienste im Zusammenhang mit Informationssystemen des Büros für Veröffentlichungen (nämlich EUR-Lex, N-Lex und Search Layer) mit der Möglichkeit, die Bereitstellung auf andere Informationssysteme auszuweiten.</cbc:Description>
+		<cbc:Description languageID="ELL">Παροχή υπηρεσιών πληροφορικής που σχετίζονται με τα πληροφοριακά συστήματα του γραφείου δημοσιεύσεων (ήτοι EUR-Lex, N-Lex και Layer Search), με δυνατότητα επέκτασης της παροχής υπηρεσιών σε άλλα πληροφοριακά συστήματα.</cbc:Description>
+		<cbc:Description languageID="ENG">Provision of IT services related to the information systems of the publications office (namely EUR-Lex, N-Lex, and Search Layer), with the possibility to extend the provision to other information systems.</cbc:Description>
+		<cbc:Description languageID="EST">Väljaannete talituse infosüsteemidega (st EUR-Lex, N-Lex ja otsingukiht) seotud infotehnoloogiateenuste osutamine, võimalusega laiendada teenuste osutamist muudele infosüsteemidele.</cbc:Description>
+		<cbc:Description languageID="FIN">Sopimuksen kohteena on julkaisutoimiston tietoteknisiin järjestelmiin (EUR-Lex, N-Lex ja hakukerros (Search Layer) liittyvien tietoteknisten palvelujen toimittaminen. Lisäksi sopimukseen voidaan sisällyttää muihin tietoteknisiin järjestelmiin liittyvien palvelujen toimittaminen.</cbc:Description>
+		<cbc:Description languageID="FRA">Fourniture de services informatiques liés aux systèmes d'information de l'Office des publications (à savoir EUR-Lex, N-Lex et Search Layer), avec la possibilité d'étendre cette prestation à d'autres systèmes d'information.</cbc:Description>
+		<cbc:Description languageID="GLE">Seirbhísí TF a sholáthar i ndáil le córais faisnéise d’oifig na bhfoilseachán (eadhon EUR-Lex, N-Lex, agus Search Layer), leis an bhféidearthacht an soláthar a leathnú chuig córais faisnéise eile.</cbc:Description>
+		<cbc:Description languageID="HRV">Pružanje IT usluga koje se odnose na informacijske sustave Ureda za publikacije (konkretno, EUR-Lex, N-Lex i Search Layer), s mogućnošću proširenja nabave na druge informacijske sustave.</cbc:Description>
+		<cbc:Description languageID="HUN">A Kiadóhivatal IT-rendszereivel (nevezetesen az EUR-Lex, az N-Lex és a Search Layer) kapcsolatos IT-szolgáltatások biztosítása, a szolgáltatásnyújtás egyéb információs rendszerekre történő kiterjesztésének lehetőségével.</cbc:Description>
+		<cbc:Description languageID="ITA">Fornitura di servizi informatici relativi ai sistemi informativi dell'Ufficio delle pubblicazioni (ovvero EUR-Lex, N-Lex e Search Layer), con la possibilità di estendere la prestazione ad altri sistemi informativi.</cbc:Description>
+		<cbc:Description languageID="LAV">IT pakalpojumu sniegšana saistībā ar Publikāciju biroja (OP) informācijas sistēmām (“EUR-Lex”, “N-Lex”, “Search Layer”) ar iespēju paplašināt pakalpojumu nodrošināšanu arī citām informācijas sistēmām.</cbc:Description>
+		<cbc:Description languageID="LIT">IT paslaugų, susijusių su Leidinių biuro informacinėmis sistemomis (būtent EUR-Lex, N-Lex ir Search Layer), teikimas, su galimybe papildyti teikimą kitomis informacinėmis sistemomis.</cbc:Description>
+		<cbc:Description languageID="MLT">Il-provvista ta' servizzi tat-TI relatati mas-sistemi tal-informazzjoni tal-uffiċċju tal-pubblikazzjonijiet (bħal EUR-Lex, N-Lex, u Search Layer), bil-possibilità li tiġi estiża l-provvista għal sistemi tal-informazzjoni oħrajn.</cbc:Description>
+		<cbc:Description languageID="NLD">Verlening van IT-diensten die verband houden met de informatiesystemen van het Bureau voor publicaties (met name EUR-Lex, N-Lex en Search Layer), met mogelijke uitbreiding van de dienstverlening naar andere informatiesystemen.</cbc:Description>
+		<cbc:Description languageID="POL">Świadczenie usług informatycznych związanych z systemami informatycznymi Urzędu Publikacji (EUR-Lex, N-Lex i Search Layer), z możliwością rozszerzenia tych usług na inne systemy informatyczne.</cbc:Description>
+		<cbc:Description languageID="POR">Prestação de serviços de TI relacionados com sistemas de informação do serviço das publicações (nomeadamente EUR-Lex, N-Lex e Search Layer), com a possibilidade de ampliar a prestação a outros sistemas de informação.</cbc:Description>
+		<cbc:Description languageID="RON">Furnizarea de servicii IT legate de sistemele de informații ale biroului de publicații (respectiv EUR-Lex, N-Lex și Strat de căutare), cu posibilitatea de a extinde furnizarea la alte sisteme informaționale.</cbc:Description>
+		<cbc:Description languageID="SLK">Poskytovanie IT služieb súvisiacich s informačnými systémami úradu pre vydávanie publikácií (menovite EUR-Lex, N-Lex a Search Layer) s možnosťou rozšírenia poskytovania na ďalšie informačné systémy.</cbc:Description>
+		<cbc:Description languageID="SLV">Zagotavljanje storitev IT, povezanih z informacijskimi sistemi Urada za publikacije (tj. EUR-Lex, N-Lex in Search Layer), z možnostjo razširitve storitev še na druge informacijske sisteme.</cbc:Description>
+		<cbc:Description languageID="SPA">Prestación de servicios informáticos relacionados con los sistemas de información de la Oficina de Publicaciones (concretamente EUR-Lex, N-Lex y Search Layer), con la posibilidad de ampliar la prestación de servicios a otros sistemas de información.</cbc:Description>
+		<cbc:Description languageID="SWE">Tillhandahållande av IT-tjänster avseende publikationsbyråns informationssystem (EUR-Lex, N-Lex, och Search Layer) med möjlighet att utöka tillhandahållandet till andra informationssystem.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:RequestedTenderTotal>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">4500000</cbc:EstimatedOverallContractAmount>
+		</cac:RequestedTenderTotal>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">72230000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">72260000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="BUL">Основното място на изпълнение е помещенията на изпълнителя и помещенията на възлагащия орган.</cbc:Description>
+			<cbc:Description languageID="CES">Hlavním místem provedení jsou prostory poskytovatele služeb a prostory veřejného zadavatele.</cbc:Description>
+			<cbc:Description languageID="DAN">Udførelsesstedet er hovedsageligt kontrahentens lokaler og den ordregivende myndigheds lokaler.</cbc:Description>
+			<cbc:Description languageID="DEU">Hauptausführungsort sind die Räumlichkeiten des Auftragnehmers und die Räumlichkeiten des öffentlichen Auftraggebers.</cbc:Description>
+			<cbc:Description languageID="ELL">Ο τόπος παροχής είναι οι εγκαταστάσεις του αναδόχου και οι εγκαταστάσεις της αναθέτουσας αρχής.</cbc:Description>
+			<cbc:Description languageID="ENG">The main place of performance is the contractor's premises and the contracting authority's premises.</cbc:Description>
+			<cbc:Description languageID="EST">Peamine teostamise koht on töövõtja ruumid ja avaliku sektori hankija ruumid.</cbc:Description>
+			<cbc:Description languageID="FIN">pääasiallinen suorituspaikka on sopimusosapuolen toimitilat ja hankintaviranomaisen toimitilat.</cbc:Description>
+			<cbc:Description languageID="FRA">Le lieu d'exécution principal correspond aux locaux du contractant et du pouvoir adjudicateur.</cbc:Description>
+			<cbc:Description languageID="GLE">Is ionann an phríomhláthair feidhmíochta agus áitreabh an chonraitheora agus áitreabh an údaráis chonarthaigh.</cbc:Description>
+			<cbc:Description languageID="HRV">Glavno su mjesto izvedbe prostori izvoditelja te prostori javnog naručitelja.</cbc:Description>
+			<cbc:Description languageID="HUN">A végrehajtás fő helye a nyertes ajánlattevő telephelye és az ajánlatkérő telephelye.</cbc:Description>
+			<cbc:Description languageID="ITA">Il luogo principale di esecuzione è la sede del contraente e la sede dell'ente appaltante.</cbc:Description>
+			<cbc:Description languageID="LAV">galvenā izpildes vieta ir darbuzņēmēja telpas un līgumslēdzējas iestādes telpas.</cbc:Description>
+			<cbc:Description languageID="LIT">Pagrindinė įgyvendinimo vieta yra rangovo patalpos ir perkančiosios organizacijos patalpos.</cbc:Description>
+			<cbc:Description languageID="MLT">Il-post ewlieni tat-twettiq huwa l-bini tal-kuntrattur u l-bini tal-awtorità li qiegħda toħroġ il-kuntratt.</cbc:Description>
+			<cbc:Description languageID="NLD">de voornaamste plaats van uitvoering is in de kantoren van de contractant en in de kantoren van de aanbestedende dienst.</cbc:Description>
+			<cbc:Description languageID="POL">Głównym miejscem realizacji jest siedziba wykonawcy oraz siedziba instytucji zamawiającej.</cbc:Description>
+			<cbc:Description languageID="POR">O local de execução principal é nas instalações do contratante e nas instalações da entidade adjudicante.</cbc:Description>
+			<cbc:Description languageID="RON">Locul principal de executare este sediul contractantului și sediile autorității contractante.</cbc:Description>
+			<cbc:Description languageID="SLK">Hlavným miestom vykonania sú priestory dodávateľa a priestory verejného obstarávateľa.</cbc:Description>
+			<cbc:Description languageID="SLV">Glavni kraj izvedbe bodo prostori izvajalca in prostori naročnika.</cbc:Description>
+			<cbc:Description languageID="SPA">El principal lugar de ejecución son las instalaciones del contratista y las instalaciones del órgano de contratación.</cbc:Description>
+			<cbc:Description languageID="SWE">Plats för utförande är huvudsakligen uppdragstagarens lokaler och den upphandlande myndighetens lokaler.</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">LU00</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode>LUX</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+		<cac:PlannedPeriod>
+			<cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
+		</cac:PlannedPeriod>
+		<cac:ContractExtension>
+			<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+		</cac:ContractExtension>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="BUL">Както е определено в документите за обществена поръчка.</cbc:Description>
+								<cbc:Description languageID="CES">Jak je uvedeno v zadávací dokumentaci.</cbc:Description>
+								<cbc:Description languageID="DAN">Som angivet i udbudsdokumenterne.</cbc:Description>
+								<cbc:Description languageID="DEU">Wie in den Ausschreibungsunterlagen angegeben.</cbc:Description>
+								<cbc:Description languageID="ELL">Όπως ορίζεται στα έγγραφα διαγωνισμού.</cbc:Description>
+								<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+								<cbc:Description languageID="EST">Vt hankedokumente.</cbc:Description>
+								<cbc:Description languageID="FIN">ilmoitetaan hankinta-asiakirjoissa.</cbc:Description>
+								<cbc:Description languageID="FRA">Voir dossier d'appel d'offres.</cbc:Description>
+								<cbc:Description languageID="GLE">Mar atá luaite sna doiciméid soláthair.</cbc:Description>
+								<cbc:Description languageID="HRV">Kako je navedeno u dokumentaciji o nabavi.</cbc:Description>
+								<cbc:Description languageID="HUN">Lásd a közbeszerzési dokumentációt.</cbc:Description>
+								<cbc:Description languageID="ITA">Come indicato nei documenti di gara.</cbc:Description>
+								<cbc:Description languageID="LAV">kā norādīts iepirkuma dokumentos.</cbc:Description>
+								<cbc:Description languageID="LIT">Kaip nurodyta pirkimo dokumentuose.</cbc:Description>
+								<cbc:Description languageID="MLT">Kif mistqarr fid-dokumenti tal-ksib.</cbc:Description>
+								<cbc:Description languageID="NLD">zoals vermeld in de aanbestedingsstukken.</cbc:Description>
+								<cbc:Description languageID="POL">Jak określono w dokumentacji zamówienia.</cbc:Description>
+								<cbc:Description languageID="POR">Tal como indicado na documentação do concurso.</cbc:Description>
+								<cbc:Description languageID="RON">Astfel cum se indică în dosarul achiziției.</cbc:Description>
+								<cbc:Description languageID="SLK">Ako je uvedené v súťažných podkladoch.</cbc:Description>
+								<cbc:Description languageID="SLV">Kot je navedeno v razpisni dokumentaciji.</cbc:Description>
+								<cbc:Description languageID="SPA">Véanse los documentos de contratación.</cbc:Description>
+								<cbc:Description languageID="SWE">Enligt vad som anges i upphandlingsdokumenten.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="BUL">Както е определено в документите за обществена поръчка.</cbc:Description>
+								<cbc:Description languageID="CES">Jak je uvedeno v zadávací dokumentaci.</cbc:Description>
+								<cbc:Description languageID="DAN">Som angivet i udbudsdokumenterne.</cbc:Description>
+								<cbc:Description languageID="DEU">Wie in den Ausschreibungsunterlagen angegeben.</cbc:Description>
+								<cbc:Description languageID="ELL">Όπως ορίζεται στα έγγραφα διαγωνισμού.</cbc:Description>
+								<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+								<cbc:Description languageID="EST">Vt hankedokumente.</cbc:Description>
+								<cbc:Description languageID="FIN">ilmoitetaan hankinta-asiakirjoissa.</cbc:Description>
+								<cbc:Description languageID="FRA">Voir dossier d'appel d'offres.</cbc:Description>
+								<cbc:Description languageID="GLE">Mar atá luaite sna doiciméid soláthair.</cbc:Description>
+								<cbc:Description languageID="HRV">Kako je navedeno u dokumentaciji o nabavi.</cbc:Description>
+								<cbc:Description languageID="HUN">Lásd a közbeszerzési dokumentációt.</cbc:Description>
+								<cbc:Description languageID="ITA">Come indicato nei documenti di gara.</cbc:Description>
+								<cbc:Description languageID="LAV">kā norādīts iepirkuma dokumentos.</cbc:Description>
+								<cbc:Description languageID="LIT">Kaip nurodyta pirkimo dokumentuose.</cbc:Description>
+								<cbc:Description languageID="MLT">Kif mistqarr fid-dokumenti tal-ksib.</cbc:Description>
+								<cbc:Description languageID="NLD">zoals vermeld in de aanbestedingsstukken.</cbc:Description>
+								<cbc:Description languageID="POL">Jak określono w dokumentacji zamówienia.</cbc:Description>
+								<cbc:Description languageID="POR">Tal como indicado na documentação do concurso.</cbc:Description>
+								<cbc:Description languageID="RON">Astfel cum se indică în dosarul achiziției.</cbc:Description>
+								<cbc:Description languageID="SLK">Ako je uvedené v súťažných podkladoch.</cbc:Description>
+								<cbc:Description languageID="SLV">Kot je navedeno v razpisni dokumentaciji.</cbc:Description>
+								<cbc:Description languageID="SPA">Véanse los documentos de contratación.</cbc:Description>
+								<cbc:Description languageID="SWE">Enligt vad som anges i upphandlingsdokumenten.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="BUL">Както е определено в документите за обществена поръчка.</cbc:Description>
+								<cbc:Description languageID="CES">Jak je uvedeno v zadávací dokumentaci.</cbc:Description>
+								<cbc:Description languageID="DAN">Som angivet i udbudsdokumenterne.</cbc:Description>
+								<cbc:Description languageID="DEU">Wie in den Ausschreibungsunterlagen angegeben.</cbc:Description>
+								<cbc:Description languageID="ELL">Όπως ορίζεται στα έγγραφα διαγωνισμού.</cbc:Description>
+								<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+								<cbc:Description languageID="EST">Vt hankedokumente.</cbc:Description>
+								<cbc:Description languageID="FIN">ilmoitetaan hankinta-asiakirjoissa.</cbc:Description>
+								<cbc:Description languageID="FRA">Voir dossier d'appel d'offres.</cbc:Description>
+								<cbc:Description languageID="GLE">Mar atá luaite sna doiciméid soláthair.</cbc:Description>
+								<cbc:Description languageID="HRV">Kako je navedeno u dokumentaciji o nabavi.</cbc:Description>
+								<cbc:Description languageID="HUN">Lásd a közbeszerzési dokumentációt.</cbc:Description>
+								<cbc:Description languageID="ITA">Come indicato nei documenti di gara.</cbc:Description>
+								<cbc:Description languageID="LAV">kā norādīts iepirkuma dokumentos.</cbc:Description>
+								<cbc:Description languageID="LIT">Kaip nurodyta pirkimo dokumentuose.</cbc:Description>
+								<cbc:Description languageID="MLT">Kif mistqarr fid-dokumenti tal-ksib.</cbc:Description>
+								<cbc:Description languageID="NLD">zoals vermeld in de aanbestedingsstukken.</cbc:Description>
+								<cbc:Description languageID="POL">Jak określono w dokumentacji zamówienia.</cbc:Description>
+								<cbc:Description languageID="POR">Tal como indicado na documentação do concurso.</cbc:Description>
+								<cbc:Description languageID="RON">Astfel cum se indică în dosarul achiziției.</cbc:Description>
+								<cbc:Description languageID="SLK">Ako je uvedené v súťažných podkladoch.</cbc:Description>
+								<cbc:Description languageID="SLV">Kot je navedeno v razpisni dokumentaciji.</cbc:Description>
+								<cbc:Description languageID="SPA">Véanse los documentos de contratación.</cbc:Description>
+								<cbc:Description languageID="SWE">Enligt vad som anges i upphandlingsdokumenten.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cbc:RequiredCurriculaCode listName="performing-staff-qualification">t-requ</cbc:RequiredCurriculaCode>
+			<cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+			<cac:CallForTendersDocumentReference>
+				<cbc:ID>5629</cbc:ID>
+				<cbc:DocumentTypeCode listName="communication-justification" name="AccessRestriction">ipr-iss</cbc:DocumentTypeCode>
+				<cbc:DocumentType>restricted-document</cbc:DocumentType>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<cbc:URI>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=5629</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
+			</cac:CallForTendersDocumentReference>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="ecatalog-submission">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="BUL">Технически критерии за възлагане, както е изложено в документите за обществена поръчка</cbc:Description>
+					<cbc:Description languageID="CES">Technická kritéria pro zadání zakázky dle zadávací dokumentace</cbc:Description>
+					<cbc:Description languageID="DAN">Tekniske tildelingskriterier som angivet i udbudsdokumenterne</cbc:Description>
+					<cbc:Description languageID="DEU">Technische Zuschlagskriterien gemäß den Ausschreibungsunterlagen</cbc:Description>
+					<cbc:Description languageID="ELL">Τεχνικά κριτήρια ανάθεσης, όπως ορίζονται στα έγγραφα της σύμβασης</cbc:Description>
+					<cbc:Description languageID="ENG">Technical award criteria as stated in the procurement documents</cbc:Description>
+					<cbc:Description languageID="EST">hankedokumentides sätestatud lepingu sõlmimise tehnilised kriteeriumid</cbc:Description>
+					<cbc:Description languageID="FIN">tekniset ratkaisuperusteet hankinta-asiakirjoissa määritetyn mukaisesti.</cbc:Description>
+					<cbc:Description languageID="FRA">Critères d'attribution tels qu'énoncés dans le dossier d'appel d'offres</cbc:Description>
+					<cbc:Description languageID="GLE">Na critéir dhámhachtana teicniúla de réir mar atá luaite sna doiciméid soláthair</cbc:Description>
+					<cbc:Description languageID="HRV">Tehnički kriteriji za dodjelu kako su navedeni u dokumentaciji o nabavi</cbc:Description>
+					<cbc:Description languageID="HUN">A közbeszerzési dokumentumok szerinti technikai odaítélési kritériumok</cbc:Description>
+					<cbc:Description languageID="ITA">Criteri di aggiudicazione tecnici stabiliti nei documenti di gara</cbc:Description>
+					<cbc:Description languageID="LAV">Tehniskie piešķiršanas kritēriji, kā norādīts iepirkuma dokumentos</cbc:Description>
+					<cbc:Description languageID="LIT">Techniniai skyrimo kriterijai, kaip nurodyta pirkimo dokumentuose</cbc:Description>
+					<cbc:Description languageID="MLT">Il-kriterji tekniċi tal-għoti kif mistqarra fid-dokumenti tal-ksib</cbc:Description>
+					<cbc:Description languageID="NLD">technische gunningscriteria zoals vermeld in de aanbestedingsstukken</cbc:Description>
+					<cbc:Description languageID="POL">techniczne kryteria kwalifikacji zgodnie z dokumentami zamówienia</cbc:Description>
+					<cbc:Description languageID="POR">Critérios de adjudicação técnicos, conforme indicados na documentação do concurso</cbc:Description>
+					<cbc:Description languageID="RON">Criterii tehnice de atribuire prevăzute în dosarul achiziției</cbc:Description>
+					<cbc:Description languageID="SLK">Technické kritériá vyhodnotenia ponúk, ako sú uvedené v súťažných podkladoch</cbc:Description>
+					<cbc:Description languageID="SLV">Tehnična merila za oddajo, kot je navedeno v razpisni dokumentaciji</cbc:Description>
+					<cbc:Description languageID="SPA">Criterios técnicos de adjudicación indicados en los documentos de contratación</cbc:Description>
+					<cbc:Description languageID="SWE">Tekniska uttagningskriterier enligt vad som anges i upphandlingsdokumenten</cbc:Description>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>70</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>30</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:TenderRecipientParty>
+				<cbc:EndpointID>https://etendering.ted.europa.eu/cft/cft-display.html?cftId=5629</cbc:EndpointID>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
+			<cac:TenderValidityPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+			</cac:TenderValidityPeriod>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="BUL">В рамките на 2 месеца от получаването на известието от ищеца или, в случай че такова липсва, от деня, в който е станало известно на ищеца. Жалба до Европейския омбудсман нито спира този срок, нито води до откриване на нов срок за подаване на жалби.</cbc:Description>
+					<cbc:Description languageID="CES">Ve lhůtě 2 měsíců od oznámení žalobci nebo, není-li k dispozici, ode dne, kdy vstoupilo ve známost žalobce. Stížnost podaná evropskému veřejnému ochránci práv nebude mít za následek ani pozastavení této lhůty, ani započetí nové lhůty pro podání odvolání.</cbc:Description>
+					<cbc:Description languageID="DAN">Senest 2 måneder efter meddelelse af klageren eller, i mangel heraf, efter den dag, klageren har taget sagen til efterretning. En klage til Den Europæiske Ombudsmand bevirker ikke, at denne periode afbrydes, eller at der påbegyndes en ny periode for indgivelse af klager.</cbc:Description>
+					<cbc:Description languageID="DEU">Binnen 2 Monaten ab Mitteilung an den Kläger oder, in Ermangelung dessen, vom Zeitpunkt der Kenntnisnahme durch den Kläger an. Eine Beschwerde beim Europäischen Bürgerbeauftragten bewirkt weder die Unterbrechung dieses Zeitraums noch den Beginn eines neuen Zeitraums für die Einlegung von Rechtsbehelfen.</cbc:Description>
+					<cbc:Description languageID="ELL">Εντός 2 μηνών από την κοινοποίηση στον προσφεύγοντα ή, ελλείψει τέτοιας, από την ημέρα που ο ίδιος έλαβε γνώση. Οι καταγγελίες στον Ευρωπαίο Διαμεσολαβητή δεν έχουν ως αποτέλεσμα ούτε την αναστολή της εν λόγω προθεσμίας ούτε την έναρξη νέας προθεσμίας υποβολής προσφυγών.</cbc:Description>
+					<cbc:Description languageID="ENG">Within 2 months of the notification to the plaintiff, or, in absence thereof, of the day on which it came to the knowledge of the plaintiff. A complaint to the European Ombudsman does not have as an effect either to suspend this period or to open a new period for lodging appeals.</cbc:Description>
+					<cbc:Description languageID="EST">2 kuu jooksul hageja teavitamisest, või kui teavitamist ei toimu, 2 kuu jooksul päevast, mil hageja asjast teada sai. Kaebuse esitamine Euroopa Ombudsmanile ei too kaasa apellatsioonide esitamise tähtaja peatamist ega uue tähtaja määramist.</cbc:Description>
+					<cbc:Description languageID="FIN">Muutosta on haettava 2 kuukauden kuluessa ilmoituksesta asianosaiselle tai, jos ilmoitusta ei ole tehty, siitä päivästä, jona asia tuli hänen tietoonsa. Euroopan oikeusasiamiehelle tehty kantelu ei vaikuta määräaikaan, eikä sen vuoksi muutoksenhaulle määrätä uutta määräaikaa.</cbc:Description>
+					<cbc:Description languageID="FRA">Dans les 2 mois à compter de la notification au requérant ou, à défaut, du jour où celui-ci en a eu connaissance. L'introduction d'une plainte auprès du Médiateur européen n'a pour effet ni la suspension de ce délai, ni l'ouverture d'un nouveau délai de recours.</cbc:Description>
+					<cbc:Description languageID="GLE">Laistigh de 2 mhí ón bhfógra chuig an ngearánaí, nó dá éagmais sin, ón lá a tháinig sé chun feasa an ghearánaí. Ní chuirfear an tréimhse sin ar fionraí ná ní thosófar tréimhse nua le haghaidh achomharc a dhéanamh mar thoradh ar ghearán a dhéantar leis an Ombudsman Eorpach.</cbc:Description>
+					<cbc:Description languageID="HRV">U roku od 2 mjeseca od slanja obavijesti podnositelju žalbe, a u slučaju izostanka obavijesti, od datuma primanja na znanje okolnosti koje su povod žalbi. Podnošenjem pritužbe Europskom ombudsmanu to se razdoblje ne obustavlja niti se ne otvara novo razdoblje za podnošenje žalbi.</cbc:Description>
+					<cbc:Description languageID="HUN">A vesztes fél értesítésétől, illetve – ennek hiányában – az eredmény ismertté válásától számított 2 hónapon belül. Az európai ombudsmanhoz benyújtott panasz nem eredményezi sem ezen időszak felfüggesztését, sem új fellebbezési időszak megnyílását.</cbc:Description>
+					<cbc:Description languageID="ITA">Entro 2 mesi dalla notifica al ricorrente o, in assenza, dal giorno in cui ne è venuto a conoscenza. La denuncia al Mediatore europeo non produce né l'effetto di sospendere tale periodo, né di aprirne uno nuovo per la presentazione di ricorsi.</cbc:Description>
+					<cbc:Description languageID="LAV">2 mēnešu laikā no prasītāja informēšanas vai, ja tā nav notikusi, no dienas, kad prasītājs to uzzinājis. Sūdzības iesniegšana Eiropas Ombudam nevar ne atlikt šo periodu, ne arī atklāt jaunu periodu pārsūdzību iesniegšanai.</cbc:Description>
+					<cbc:Description languageID="LIT">Per 2 mėnesius po to, kai apie tai pranešta ieškovui, arba, jei pranešimas neparengiamas, nuo dienos, kai informacija tampa žinoma. Dėl Europos ombudsmenui pateikto skundo šis laikotarpis nebus sustabdytas ar inicijuotas naujas apeliacijų teikimo laikotarpis.</cbc:Description>
+					<cbc:Description languageID="MLT">Fi żmien xahrejn (2) mill-avviż li jintbagħat lil min qiegħed iressaq l-ilment, jew, fin-nuqqas ta' dan, mill-jum li fih min qiegħed iressaq l-ilment isir jaf b'dan. It-tressiq ta' lment quddiem l-Ombudsman Ewropew mhux se jkollu effett biex jew jissospendi dan il-perijodu jew biex jinfetaħ perijodu ġdid għat-tressiq tal-appelli.</cbc:Description>
+					<cbc:Description languageID="NLD">Binnen 2 maanden na de kennisgeving aan de klager of, bij ontbreken daarvan, binnen 2 maanden na de dag waarop het de klager bekend werd. Een klacht bij de Europese Ombudsman leidt niet tot een opschorting van die periode, noch tot de opening van een nieuwe periode voor het instellen van een beroep.</cbc:Description>
+					<cbc:Description languageID="POL">W ciągu 2 miesięcy od zawiadomienia strony skarżącej lub, w przypadku braku zawiadomienia, od dnia podania do wiadomości. Wniesienie skargi do Europejskiego Rzecznika Praw Obywatelskich nie skutkuje zawieszeniem ani rozpoczęciem na nowo biegu terminu składania odwołań.</cbc:Description>
+					<cbc:Description languageID="POR">Num prazo de 2 meses a contar da data de notificação ao requerente ou, na sua falta, a contar do dia em que o requerente tenha tomado conhecimento do ato. As queixas efetuadas ao Provedor de Justiça Europeu não têm como efeito a suspensão do período em questão, nem a abertura de um novo prazo para a interposição de recursos.</cbc:Description>
+					<cbc:Description languageID="RON">În termen de 2 luni de la notificarea reclamantului sau, în lipsa acesteia, de la ziua în care acesta a luat cunoștință de actul respectiv. O plângere depusă la Ombudsmanul European nu are drept efect suspendarea acestui termen sau deschiderea unui nou termen pentru utilizarea căilor de atac.</cbc:Description>
+					<cbc:Description languageID="SLK">Do 2 mesiacov od vyrozumenia osoby podávajúcej odvolanie alebo, ak to nie je možné, odo dňa, keď túto skutočnosť zistila. Sťažnosť predložená európskemu ombudsmanovi nebude mať za následok prerušenie tohto obdobia, ani začatie novej lehoty na predloženie odvolaní.</cbc:Description>
+					<cbc:Description languageID="SLV">V 2 mesecih od uradnega obvestila tožniku ali, če tega ni bilo, od dneva, ko je tožnik zanj izvedel. Pritožba Evropskemu varuhu človekovih pravic ne prekine navedenega obdobja niti ne začne novega obdobja za vložitev pritožb.</cbc:Description>
+					<cbc:Description languageID="SPA">En un plazo de 2 meses a partir de la notificación al recurrente o, en su defecto, del día en que este haya tenido conocimiento del acto en cuestión. Una reclamación ante el Defensor del Pueblo Europeo no tendrá como efecto la suspensión de dicho plazo ni la apertura de un nuevo plazo de presentación de recursos.</cbc:Description>
+					<cbc:Description languageID="SWE">Inom 2 månader efter att käranden fick meddelandet eller, om så inte skett, från den dag då käranden fick kännedom om saken. Ett klagomål till Europeiska ombudsmannen leder varken till att denna period avbryts eller till att en ny period för inlämning av ett överklagande inleds.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>BUL</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>CES</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>DAN</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>DEU</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>ELL</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>ENG</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>SPA</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>EST</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>FIN</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>FRA</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>GLE</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>HRV</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>HUN</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>ITA</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>LIT</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>LAV</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>MLT</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>NLD</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>POL</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>POR</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>RON</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>SLK</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>SLV</cbc:ID>
+			</cac:Language>
+			<cac:Language>
+				<cbc:ID>SWE</cbc:ID>
+			</cac:Language>
+			<cac:PostAwardProcess>
+				<cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+				<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+			</cac:PostAwardProcess>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efbc:AccessToolName>e-Tendering</efbc:AccessToolName>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:TenderSubmissionDeadlinePeriod>
+				<cbc:EndDate>2020-02-03Z</cbc:EndDate>
+				<cbc:EndTime>13:00:00Z</cbc:EndTime>
+			</cac:TenderSubmissionDeadlinePeriod>
+			<cac:OpenTenderEvent>
+				<cbc:OccurrenceDate>2020-02-04Z</cbc:OccurrenceDate>
+				<cbc:OccurrenceTime>09:00:00Z</cbc:OccurrenceTime>
+				<cbc:Description languageID="BUL">Както е определено в документите за обществена поръчка.</cbc:Description>
+				<cbc:Description languageID="CES">Jak je uvedeno v zadávací dokumentaci.</cbc:Description>
+				<cbc:Description languageID="DAN">Som angivet i udbudsdokumenterne.</cbc:Description>
+				<cbc:Description languageID="DEU">Wie in den Ausschreibungsunterlagen angegeben.</cbc:Description>
+				<cbc:Description languageID="ELL">Όπως ορίζεται στα έγγραφα διαγωνισμού.</cbc:Description>
+				<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+				<cbc:Description languageID="EST">Vt hankedokumente.</cbc:Description>
+				<cbc:Description languageID="FIN">ilmoitetaan hankinta-asiakirjoissa.</cbc:Description>
+				<cbc:Description languageID="FRA">Voir dossier d'appel d'offres.</cbc:Description>
+				<cbc:Description languageID="GLE">Mar atá luaite sna doiciméid soláthair.</cbc:Description>
+				<cbc:Description languageID="HRV">Kako je navedeno u dokumentaciji o nabavi.</cbc:Description>
+				<cbc:Description languageID="HUN">Lásd a közbeszerzési dokumentációt.</cbc:Description>
+				<cbc:Description languageID="ITA">Come indicato nei documenti di gara.</cbc:Description>
+				<cbc:Description languageID="LAV">kā norādīts iepirkuma dokumentos.</cbc:Description>
+				<cbc:Description languageID="LIT">Kaip nurodyta pirkimo dokumentuose.</cbc:Description>
+				<cbc:Description languageID="MLT">Kif mistqarr fid-dokumenti tal-ksib.</cbc:Description>
+				<cbc:Description languageID="NLD">zoals vermeld in de aanbestedingsstukken.</cbc:Description>
+				<cbc:Description languageID="POL">Jak określono w dokumentacji zamówienia.</cbc:Description>
+				<cbc:Description languageID="POR">Tal como indicado na documentação do concurso.</cbc:Description>
+				<cbc:Description languageID="RON">Astfel cum se indică în dosarul achiziției.</cbc:Description>
+				<cbc:Description languageID="SLK">Ako je uvedené v súťažných podkladoch.</cbc:Description>
+				<cbc:Description languageID="SLV">Kot je navedeno v razpisni dokumentaciji.</cbc:Description>
+				<cbc:Description languageID="SPA">Véanse los documentos de contratación.</cbc:Description>
+				<cbc:Description languageID="SWE">Enligt vad som anges i upphandlingsdokumenten.</cbc:Description>
+				<cac:OccurenceLocation>
+					<cbc:Description languageID="BUL">Помещенията на Службата за публикации в Люксембург.</cbc:Description>
+					<cbc:Description languageID="CES">Prostory Úřadu pro publikace v Lucemburku.</cbc:Description>
+					<cbc:Description languageID="DAN">Publikationskontorets lokaler i Luxembourg.</cbc:Description>
+					<cbc:Description languageID="DEU">Räumlichkeiten des Amtes für Veröffentlichungen in Luxemburg.</cbc:Description>
+					<cbc:Description languageID="ELL">Στις εγκαταστάσεις της Υπηρεσίας Εκδόσεων στο Λουξεμβούργο.</cbc:Description>
+					<cbc:Description languageID="ENG">Premises of the Publications Office in LUXEMBOURG.</cbc:Description>
+					<cbc:Description languageID="EST">Väljaannete talituse ruumid Luxembourgis.</cbc:Description>
+					<cbc:Description languageID="FIN">julkaisutoimiston toimitilat Luxemburgissa.</cbc:Description>
+					<cbc:Description languageID="FRA">Locaux de l'Office des publications à Luxembourg.</cbc:Description>
+					<cbc:Description languageID="GLE">Áitreabh Oifig na bhFoilseachán i Lucsamburg.</cbc:Description>
+					<cbc:Description languageID="HRV">Prostori Ureda za publikacije u Luxembourgu.</cbc:Description>
+					<cbc:Description languageID="HUN">A Kiadóhivatal luxembourgi helyiségei.</cbc:Description>
+					<cbc:Description languageID="ITA">Locali dell'Ufficio delle pubblicazioni a Lussemburgo.</cbc:Description>
+					<cbc:Description languageID="LAV">Publikāciju biroja telpas Luksemburgā</cbc:Description>
+					<cbc:Description languageID="LIT">Leidinių biuro patalpos Liuksemburge.</cbc:Description>
+					<cbc:Description languageID="MLT">Il-bini tal-Uffiċċju tal-Pubblikazzjonijiet fil-Lussemburgu.</cbc:Description>
+					<cbc:Description languageID="NLD">de kantoren van het Bureau voor publicaties in Luxemburg.</cbc:Description>
+					<cbc:Description languageID="POL">siedziba Urzędu Publikacji w Luksemburgu.</cbc:Description>
+					<cbc:Description languageID="POR">Instalações do Serviço das Publicações em Luxemburgo.</cbc:Description>
+					<cbc:Description languageID="RON">Sediul Oficiului pentru Publicații din Luxemburg.</cbc:Description>
+					<cbc:Description languageID="SLK">Priestory Úradu pre vydávanie publikácií Európskej únie v Luxemburgu.</cbc:Description>
+					<cbc:Description languageID="SLV">prostori Urada za publikacije v Luxembourgu.</cbc:Description>
+					<cbc:Description languageID="SPA">Instalaciones de la Oficina de Publicaciones en Luxemburgo.</cbc:Description>
+					<cbc:Description languageID="SWE">Publikationsbyråns lokaler i Luxemburg.</cbc:Description>
+				</cac:OccurenceLocation>
+			</cac:OpenTenderEvent>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:FrameworkAgreement>
+				<cbc:MaximumOperatorQuantity>3</cbc:MaximumOperatorQuantity>
+			</cac:FrameworkAgreement>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID schemeName="InternalID">AO 10786 Lot 1</cbc:ID>
+			<cbc:Name languageID="BUL">Предоставяне на ИТ услуги, свързани с ИТ системите на Службата за публикации (EUR-Lex, N-Lex, Search Layer и други)</cbc:Name>
+			<cbc:Name languageID="CES">Poskytování IT služeb souvisejících s IT systémy Úřadu pro publikace (EUR-Lex, N-Lex, Search Layer a další)</cbc:Name>
+			<cbc:Name languageID="DAN">Levering af IT-tjenester relateret til operationelle (OP) IT-systemer (EUR-Lex, N-Lex, søgelag m.fl.)</cbc:Name>
+			<cbc:Name languageID="DEU">Bereitstellung von IT-Dienstleistungen im Zusammenhang mit OP-IT-Systemen (EUR-Lex, N-Lex, Search Layer und weitere)</cbc:Name>
+			<cbc:Name languageID="ELL">Παροχή υπηρεσιών πληροφορικής σχετικών με λειτουργικά συστήματα πληροφορικής (EUR-Lex, N-Lex, Layer Search και άλλα)</cbc:Name>
+			<cbc:Name languageID="ENG">Provision of IT Services Related to OP IT Systems (EUR-Lex, N-Lex, Search Layer, and Others)</cbc:Name>
+			<cbc:Name languageID="EST">Euroopa Liidu Väljaannete Talituse IT-süsteemidega (EUR-Lex, N-Lex, otsingukiht jt) seotud IT-teenuste osutamine</cbc:Name>
+			<cbc:Name languageID="FIN">julkaisutoimiston tietoteknisiin järjestelmiin (EUR-Lex, N-Lex, hakukerros ja muut) liittyvien tietoteknisten palvelujen toimittaminen</cbc:Name>
+			<cbc:Name languageID="FRA">Fourniture de services informatiques liés aux systèmes informatiques OP (EUR-Lex, N-Lex, Search Layer, etc.)</cbc:Name>
+			<cbc:Name languageID="GLE">Soláthar Seirbhísí TF i ndáil le Córais TF Oifig na bhFoilseachán (EUR-Lex, N-Lex, Search Layer, agus Eile)</cbc:Name>
+			<cbc:Name languageID="HRV">Pružanje IT usluga koje se odnose na IT sustave Ureda za publikacije (EUR-Lex, N-Lex, Search Layer i ostale)</cbc:Name>
+			<cbc:Name languageID="HUN">A Kiadóhivatal IT-rendszereivel kapcsolatos IT-szolgáltatások biztosítása (EUR-Lex, N-Lex, Search Layer és egyebek)</cbc:Name>
+			<cbc:Name languageID="ITA">Prestazione di servizi informatici relativi ai sistemi informativi dell'Ufficio delle pubblicazioni (EUR-Lex, N-Lex, Search Layer e altri)</cbc:Name>
+			<cbc:Name languageID="LAV">IT pakalpojumu sniegšana saistībā ar OP IT sistēmām (“EUR-Lex”, “N-Lex”, “Search Layer” u. c.)</cbc:Name>
+			<cbc:Name languageID="LIT">IT paslaugų, susijusių su OP IT sistemomis (EUR-Lex, N-Lex, Search Layer ir kitomis), teikimas</cbc:Name>
+			<cbc:Name languageID="MLT">Provvista ta' Servizzi tat-TI Relatati ma' Sistemi tat-TI tal-OP (EUR-lex, N-Lex, Search Layer, u Oħrajn)</cbc:Name>
+			<cbc:Name languageID="NLD">Verlening van IT-diensten die verband houden met de IT-systemen van het Bureau voor publicaties (onder meer EUR-Lex, N-Lex en Search Layer)</cbc:Name>
+			<cbc:Name languageID="POL">Świadczenie usług informatycznych związanych z systemami informatycznymi Urzędu Publikacji (EUR-Lex, N-Lex i Search Layer i inne)</cbc:Name>
+			<cbc:Name languageID="POR">Prestação de serviços de TI relacionados com sistemas informáticos do Serviço de Publicações (EUR-Lex, N-Lex, Search Layer, e outros)</cbc:Name>
+			<cbc:Name languageID="RON">Furnizarea de servicii IT legate de sistemele OP IT (EUR-Lex, N-Lex, Strat de căutare și altele)</cbc:Name>
+			<cbc:Name languageID="SLK">Poskytovanie IT služieb súvisiacich s IT systémami Úradu pre vydávanie publikácií (EUR-Lex, N-Lex, Search Layer a ďalšie)</cbc:Name>
+			<cbc:Name languageID="SLV">Zagotavljanje storitev IT, povezanih s sistemi IT Urada za publikacije (EUR-Lex, N-Lex, Search Layer in drugo)</cbc:Name>
+			<cbc:Name languageID="SPA">Prestación de servicios informáticos relacionados con los sistemas informáticos de la OP (EUR-Lex, N-Lex, Search Layer y otros)</cbc:Name>
+			<cbc:Name languageID="SWE">Tillhandahållande av IT-tjänster avseende OP IT Systems (EUR-Lex, N-Lex, Search Layer, och andra)</cbc:Name>
+			<cbc:Description languageID="BUL">Предоставяне на ИТ услуги, свързани с информационните системи на Службата за публикации (именно EUR-Lex, N-Lex и Search Layer) с възможност да се удължи предоставянето на други информационни системи.</cbc:Description>
+			<cbc:Description languageID="CES">Poskytování IT služeb souvisejících s informačními systémy Úřadu pro publikace (konkrétně EUR-Lex, N-Lex a Search Layer), s možností rozšíření poskytování služeb o další informační systémy.</cbc:Description>
+			<cbc:Description languageID="DAN">Levering af IT-systemer relateret til Publikationskontorets informationssystemer (dvs. EUR-Lex, N-Lex og søgelag), med mulighed for at udvide leverancen til andre informationssystemer.</cbc:Description>
+			<cbc:Description languageID="DEU">IT-Dienste im Zusammenhang mit Informationssystemen des Büros für Veröffentlichungen (nämlich EUR-Lex, N-Lex und Search Layer) mit der Möglichkeit, die Bereitstellung auf andere Informationssysteme auszuweiten.</cbc:Description>
+			<cbc:Description languageID="ELL">Παροχή υπηρεσιών πληροφορικής που σχετίζονται με τα πληροφοριακά συστήματα του γραφείου δημοσιεύσεων (ήτοι EUR-Lex, N-Lex και Layer Search), με δυνατότητα επέκτασης της παροχής υπηρεσιών σε άλλα πληροφοριακά συστήματα.</cbc:Description>
+			<cbc:Description languageID="ENG">Provision of IT services related to the information systems of the publications office (namely EUR-Lex, N-Lex, and Search Layer), with the possibility to extend the provision to other information systems.</cbc:Description>
+			<cbc:Description languageID="EST">Väljaannete talituse infosüsteemidega (st EUR-Lex, N-Lex ja otsingukiht) seotud infotehnoloogiateenuste osutamine, võimalusega laiendada teenuste osutamist muudele infosüsteemidele.</cbc:Description>
+			<cbc:Description languageID="FIN">Sopimuksen kohteena on julkaisutoimiston tietoteknisiin järjestelmiin (EUR-Lex, N-Lex ja hakukerros (Search Layer) liittyvien tietoteknisten palvelujen toimittaminen. Lisäksi sopimukseen voidaan sisällyttää muihin tietoteknisiin järjestelmiin liittyvien palvelujen toimittaminen.</cbc:Description>
+			<cbc:Description languageID="FRA">Fourniture de services informatiques liés aux systèmes d'information de l'Office des publications (à savoir EUR-Lex, N-Lex et Search Layer), avec la possibilité d'étendre cette prestation à d'autres systèmes d'information.</cbc:Description>
+			<cbc:Description languageID="GLE">Seirbhísí TF a sholáthar i ndáil le córais faisnéise d’oifig na bhfoilseachán (eadhon EUR-Lex, N-Lex, agus Search Layer), leis an bhféidearthacht an soláthar a leathnú chuig córais faisnéise eile.</cbc:Description>
+			<cbc:Description languageID="HRV">Pružanje IT usluga koje se odnose na informacijske sustave Ureda za publikacije (konkretno, EUR-Lex, N-Lex i Search Layer), s mogućnošću proširenja nabave na druge informacijske sustave.</cbc:Description>
+			<cbc:Description languageID="HUN">A Kiadóhivatal IT-rendszereivel (nevezetesen az EUR-Lex, az N-Lex és a Search Layer) kapcsolatos IT-szolgáltatások biztosítása, a szolgáltatásnyújtás egyéb információs rendszerekre történő kiterjesztésének lehetőségével.</cbc:Description>
+			<cbc:Description languageID="ITA">Fornitura di servizi informatici relativi ai sistemi informativi dell'Ufficio delle pubblicazioni (ovvero EUR-Lex, N-Lex e Search Layer), con la possibilità di estendere la prestazione ad altri sistemi informativi.</cbc:Description>
+			<cbc:Description languageID="LAV">IT pakalpojumu sniegšana saistībā ar Publikāciju biroja (OP) informācijas sistēmām (“EUR-Lex”, “N-Lex”, “Search Layer”) ar iespēju paplašināt pakalpojumu nodrošināšanu arī citām informācijas sistēmām.</cbc:Description>
+			<cbc:Description languageID="LIT">IT paslaugų, susijusių su Leidinių biuro informacinėmis sistemomis (būtent EUR-Lex, N-Lex ir Search Layer), teikimas, su galimybe papildyti teikimą kitomis informacinėmis sistemomis.</cbc:Description>
+			<cbc:Description languageID="MLT">Il-provvista ta' servizzi tat-TI relatati mas-sistemi tal-informazzjoni tal-uffiċċju tal-pubblikazzjonijiet (bħal EUR-Lex, N-Lex, u Search Layer), bil-possibilità li tiġi estiża l-provvista għal sistemi tal-informazzjoni oħrajn.</cbc:Description>
+			<cbc:Description languageID="NLD">Verlening van IT-diensten die verband houden met de informatiesystemen van het Bureau voor publicaties (met name EUR-Lex, N-Lex en Search Layer), met mogelijke uitbreiding van de dienstverlening naar andere informatiesystemen.</cbc:Description>
+			<cbc:Description languageID="POL">Świadczenie usług informatycznych związanych z systemami informatycznymi Urzędu Publikacji (EUR-Lex, N-Lex i Search Layer), z możliwością rozszerzenia tych usług na inne systemy informatyczne.</cbc:Description>
+			<cbc:Description languageID="POR">Prestação de serviços de TI relacionados com sistemas de informação do serviço das publicações (nomeadamente EUR-Lex, N-Lex e Search Layer), com a possibilidade de ampliar a prestação a outros sistemas de informação.</cbc:Description>
+			<cbc:Description languageID="RON">Furnizarea de servicii IT legate de sistemele de informații ale biroului de publicații (respectiv EUR-Lex, N-Lex și Strat de căutare), cu posibilitatea de a extinde furnizarea la alte sisteme informaționale.</cbc:Description>
+			<cbc:Description languageID="SLK">Poskytovanie IT služieb súvisiacich s informačnými systémami úradu pre vydávanie publikácií (menovite EUR-Lex, N-Lex a Search Layer) s možnosťou rozšírenia poskytovania na ďalšie informačné systémy.</cbc:Description>
+			<cbc:Description languageID="SLV">Zagotavljanje storitev IT, povezanih z informacijskimi sistemi Urada za publikacije (tj. EUR-Lex, N-Lex in Search Layer), z možnostjo razširitve storitev še na druge informacijske sisteme.</cbc:Description>
+			<cbc:Description languageID="SPA">Prestación de servicios informáticos relacionados con los sistemas de información de la Oficina de Publicaciones (concretamente EUR-Lex, N-Lex y Search Layer), con la posibilidad de ampliar la prestación de servicios a otros sistemas de información.</cbc:Description>
+			<cbc:Description languageID="SWE">Tillhandahållande av IT-tjänster avseende publikationsbyråns informationssystem (EUR-Lex, N-Lex, och Search Layer) med möjlighet att utöka tillhandahållandet till andra informationssystem.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:RequestedTenderTotal>
+				<cbc:EstimatedOverallContractAmount currencyID="EUR">4500000</cbc:EstimatedOverallContractAmount>
+			</cac:RequestedTenderTotal>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">72230000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">72260000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="BUL">Основното място на изпълнение е помещенията на изпълнителя и помещенията на възлагащия орган.</cbc:Description>
+				<cbc:Description languageID="CES">Hlavním místem provedení jsou prostory poskytovatele služeb a prostory veřejného zadavatele.</cbc:Description>
+				<cbc:Description languageID="DAN">Udførelsesstedet er hovedsageligt kontrahentens lokaler og den ordregivende myndigheds lokaler.</cbc:Description>
+				<cbc:Description languageID="DEU">Hauptausführungsort sind die Räumlichkeiten des Auftragnehmers und die Räumlichkeiten des öffentlichen Auftraggebers.</cbc:Description>
+				<cbc:Description languageID="ELL">Ο τόπος παροχής είναι οι εγκαταστάσεις του αναδόχου και οι εγκαταστάσεις της αναθέτουσας αρχής.</cbc:Description>
+				<cbc:Description languageID="ENG">The main place of performance is the contractor's premises and the contracting authority's premises.</cbc:Description>
+				<cbc:Description languageID="EST">Peamine teostamise koht on töövõtja ruumid ja avaliku sektori hankija ruumid.</cbc:Description>
+				<cbc:Description languageID="FIN">pääasiallinen suorituspaikka on sopimusosapuolen toimitilat ja hankintaviranomaisen toimitilat.</cbc:Description>
+				<cbc:Description languageID="FRA">Le lieu d'exécution principal correspond aux locaux du contractant et du pouvoir adjudicateur.</cbc:Description>
+				<cbc:Description languageID="GLE">Is ionann an phríomhláthair feidhmíochta agus áitreabh an chonraitheora agus áitreabh an údaráis chonarthaigh.</cbc:Description>
+				<cbc:Description languageID="HRV">Glavno su mjesto izvedbe prostori izvoditelja te prostori javnog naručitelja.</cbc:Description>
+				<cbc:Description languageID="HUN">A végrehajtás fő helye a nyertes ajánlattevő telephelye és az ajánlatkérő telephelye.</cbc:Description>
+				<cbc:Description languageID="ITA">Il luogo principale di esecuzione è la sede del contraente e la sede dell'ente appaltante.</cbc:Description>
+				<cbc:Description languageID="LAV">galvenā izpildes vieta ir darbuzņēmēja telpas un līgumslēdzējas iestādes telpas.</cbc:Description>
+				<cbc:Description languageID="LIT">Pagrindinė įgyvendinimo vieta yra rangovo patalpos ir perkančiosios organizacijos patalpos.</cbc:Description>
+				<cbc:Description languageID="MLT">Il-post ewlieni tat-twettiq huwa l-bini tal-kuntrattur u l-bini tal-awtorità li qiegħda toħroġ il-kuntratt.</cbc:Description>
+				<cbc:Description languageID="NLD">de voornaamste plaats van uitvoering is in de kantoren van de contractant en in de kantoren van de aanbestedende dienst.</cbc:Description>
+				<cbc:Description languageID="POL">Głównym miejscem realizacji jest siedziba wykonawcy oraz siedziba instytucji zamawiającej.</cbc:Description>
+				<cbc:Description languageID="POR">O local de execução principal é nas instalações do contratante e nas instalações da entidade adjudicante.</cbc:Description>
+				<cbc:Description languageID="RON">Locul principal de executare este sediul contractantului și sediile autorității contractante.</cbc:Description>
+				<cbc:Description languageID="SLK">Hlavným miestom vykonania sú priestory dodávateľa a priestory verejného obstarávateľa.</cbc:Description>
+				<cbc:Description languageID="SLV">Glavni kraj izvedbe bodo prostori izvajalca in prostori naročnika.</cbc:Description>
+				<cbc:Description languageID="SPA">El principal lugar de ejecución son las instalaciones del contratista y las instalaciones del órgano de contratación.</cbc:Description>
+				<cbc:Description languageID="SWE">Plats för utförande är huvudsakligen uppdragstagarens lokaler och den upphandlande myndighetens lokaler.</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">LU00</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode>LUX</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>

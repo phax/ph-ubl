@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:173695-2020:TEXT:EN:HTML
+-->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>18</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.gov.uk</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Ministry of Defence</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Land Equipment, Special Projects SCM (SPSCM)</cbc:StreetName>
+									<cbc:CityName>Bristol</cbc:CityName>
+									<cbc:PostalZone>G33 6FB</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Name>not available</cbc:Name>
+									<cbc:Telephone>+44 3067988090</cbc:Telephone>
+									<cbc:ElectronicMail>DESLESTSP-SPCME-TENDERS@mod.gov.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>fc9cfb17-81d0-4f26-9a00-0c4bd25cf0a2</cbc:ID>
+	<cbc:ContractFolderID>82c626cc-83e1-4644-9cf1-6ed82b3e3dbc</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
+	<cbc:IssueTime>03:23:02+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyType>Ministry of Defence</cbc:PartyType>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>700029324</cbc:ID>
+		<cbc:Name languageID="ENG">Procurement of Military Working Dogs</cbc:Name>
+		<cbc:Description languageID="ENG">Livestock. PQQ Access Code: NTV9J9643N
+		Dog training services — military working dogs delivery team are looking for interested parties to supply military working dogs with a requirement for canine protection and detection and also military working dogs to provide a specialist search capability.
+		The authority is considering placing an 18 month enabling contract (with options for a further 3 years).
+		The welfare of the dogs must meet the five dog welfare needs listed in the Animal Welfare Act 2006 and detailed in the DEFRA Code of Practice for the welfare of Dogs 2018.
+		http://www.legislation.gov.uk/ukpga/2006/45/contents
+		https://www.gov.uk/government/publications/code-of-practice-for-the-welfare-of-dogs
+		The dog(s) shall be available within eight weeks and thirty weeks respectively from the point of tasking.
+		The dogs shall be trained to an initial capability and pass an authority veterinary and capability assessment prior to acceptance. Full details shall be included at the Invitation To Tender (ITT) stage.
+		This requirement is subject to approval.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:RequestedTenderTotal>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">0000000000</cbc:EstimatedOverallContractAmount>
+		</cac:RequestedTenderTotal>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">80512000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="ENG">United Kingdom</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:TenderSubcontractingRequirements>
+								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">none</efbc:TenderSubcontractingRequirementsCode>
+							</efac:TenderSubcontractingRequirements>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+			<cac:RequiredFinancialGuarantee>
+				<cbc:GuaranteeTypeCode listName="tender-guarantee-required">false</cbc:GuaranteeTypeCode>
+			</cac:RequiredFinancialGuarantee>
+			<cac:PaymentTerms>
+				<cbc:Note languageID="ENG">None.</cbc:Note>
+			</cac:PaymentTerms>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:TendererQualificationRequest>
+				<cbc:CompanyLegalFormCode>false</cbc:CompanyLegalFormCode>
+			</cac:TendererQualificationRequest>
+			<cac:AllowedSubcontractTerms>
+				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
+			</cac:AllowedSubcontractTerms>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="ENG">None</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="ENG">The most economically advantageous tender in terms of the criteria stated in the specifications, in the invitation to tender or to negotiate or in the descriptive document</cbc:Description>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ENG">An appeal can...</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ENG</cbc:ID>
+			</cac:Language>
+			<cac:PostAwardProcess>
+				<cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+				<cbc:ElectronicPaymentUsageIndicator>false</cbc:ElectronicPaymentUsageIndicator>
+			</cac:PostAwardProcess>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cac:TenderSubmissionDeadlinePeriod>
+				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
+				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
+			</cac:TenderSubmissionDeadlinePeriod>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
+				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+			<cac:AdditionalInformationRequestPeriod>
+				<cbc:EndDate>2020-04-30+01:00</cbc:EndDate>
+			</cac:AdditionalInformationRequestPeriod>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>700029324</cbc:ID>
+			<cbc:Name languageID="ENG">Procurement of Military Working Dogs</cbc:Name>
+			<cbc:Description languageID="ENG">Livestock. PQQ Access Code: NTV9J9643N
+			Dog training services — military working dogs delivery team are looking for interested parties to supply military working dogs with a requirement for canine protection and detection and also military working dogs to provide a specialist search capability.
+			The authority is considering placing an 18 month enabling contract (with options for a further 3 years).
+			The welfare of the dogs must meet the five dog welfare needs listed in the Animal Welfare Act 2006 and detailed in the DEFRA Code of Practice for the welfare of Dogs 2018.
+			http://www.legislation.gov.uk/ukpga/2006/45/contents
+			https://www.gov.uk/government/publications/code-of-practice-for-the-welfare-of-dogs
+			The dog(s) shall be available within eight weeks and thirty weeks respectively from the point of tasking.
+			The dogs shall be trained to an initial capability and pass an authority veterinary and capability assessment prior to acceptance. Full details shall be included at the Invitation To Tender (ITT) stage.
+			This requirement is subject to approval.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="ENG">The authority reserves the right to amend any condition related to security of information to reflect any changes in national law or government policy. If any contract documents are accompanied by instructions on safeguarding classified information (e.g. a Security Aspects Letter), the authority reserves the right to amend the terms of these instructions to reflect any changes in national law or government policy, whether in respect of the applicable protective marking scheme, specific protective markings given, the aspects to which any protective marking applies, or otherwise. The link below to the Gov.uk website provides information on the Government Security Classification.
+			https://www.gov.uk/government/publications/government-security-classifications
+			Advertising Regime OJEU: this contract opportunity is published in the Official Journal of the European Union (OJEU), the MoD Defence Contracts Bulletin and www.contracts.mod.uk GO Reference: GO-202048-DCB-16327732</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">80512000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">United Kingdom</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">18</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:OptionsDescription languageID="ENG">The authority is considering placing an 18 month enabling contract (with options for a further 3 years).</cbc:OptionsDescription>
+				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="ENG">None</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>

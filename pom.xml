@@ -184,6 +184,7 @@
     <module>ph-ubltr</module>
     <module>ph-ublpe</module>
     <module>ph-ubl-dian</module>
+    <module>ph-ubl-eforms</module>
   </modules>
   
   <build>

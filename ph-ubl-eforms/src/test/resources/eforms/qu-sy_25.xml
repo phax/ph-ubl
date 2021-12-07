@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:165297-2020:TEXT:EN:HTML
+-->
+<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>15</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.acquebresciane.it</cbc:WebsiteURI>
+								<cbc:EndpointID>https://acquebresciane.acquistitelematici.it/</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Acque Bresciane srl</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>via XXV Aprile 18</cbc:StreetName>
+									<cbc:Department>Acquisti e appalti</cbc:Department>
+									<cbc:CityName>Rovato</cbc:CityName>
+									<cbc:PostalZone>25038</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITC47</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>SQASF2020</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Franca Filini</cbc:Name>
+									<cbc:Telephone>+39 03077141</cbc:Telephone>
+									<cbc:Telefax>+39 0307714529</cbc:Telefax>
+									<cbc:ElectronicMail>acquistiegare@acquebresciane.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">Responsabile del Procedimento</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>via XXV Aprile 18</cbc:StreetName>
+									<cbc:CityName>Rovato</cbc:CityName>
+									<cbc:PostalZone>25038</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>+39 03077199</cbc:Telephone>
+									<cbc:ElectronicMail>contact@acquebresciane.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">TAR per la Lombardia — sez. di Brescia</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Brescia</cbc:CityName>
+									<cbc:PostalZone>25121</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>Tribunale Amministrativo Regionale</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>8439f5f1-ad52-46a0-b363-533779a02e4b</cbc:ID>
+	<cbc:ContractFolderID>0bc9e721-7916-4b3d-bbd0-2350efc3f00e</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-03+01:00</cbc:IssueDate>
+	<cbc:IssueTime>12:30:00+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="planning">qu-sy</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ITA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://acquebresciane.acquistitelematici.it</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">water</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:ProcurementProject>
+		<cbc:ID>SQASF2020</cbc:ID>
+		<cbc:Name languageID="ITA">Sistema di qualificazione lavori di asfaltatura dei rappezzi e delle tracce di scavo</cbc:Name>
+		<cbc:Description languageID="ITA">Acque Bresciane, ai sensi dell’art. 134 del Codice e in conformità a quanto previsto dal regolamento dei contratti, intende istituire un sistema di qualificazione di operatori economici qualificati per l’esecuzione dei lavori di asfaltatura dei rappezzi e delle tracce di scavo derivanti da: — interventi di manutenzione e allacciamenti alle reti di distribuzione acquedotto e fognatura, — estendimenti e/o rifacimenti delle reti di distribuzione acquedotto e fognatura. Il sistema di qualificazione potrà essere utilizzato anche dalle società del gruppo Cogeme e/o da altra società, sempreché controllante o controllata, ai sensi e per gli effetti di cui all’art. 2359 del Codice civile, o comunque partecipante o partecipata. Il sistema di qualificazione ha lo scopo di: — definire le regole con cui viene istituito e gestito il sistema di qualificazione, i requisiti che devono essere posseduti dagli operatori economici al fine di ottenere la qualificazione e la documentazione comprovante il possesso dei predetti requisiti, — costituire elenchi di operatori economici qualificati nell’attività specifica dei lavori oggetto del presente regolamento e di comprovata idoneità tecnico-professionale (disponibilità minima di mezzi, attrezzature, personale) nell’ambito dei quali la SA, e nell’eventualità le società del gruppo Cogeme (e/o altra società, sempreché controllante o controllata, ai sensi e per gli effetti di cui all’art. 2359 del Codice civile, o comunque partecipante o partecipata) individua i soggetti da invitare — nel rispetto dei principi di non discriminazione, parità di trattamento, proporzionalità, trasparenza e rotazione — alle singole procedure di affidamento di lavori, siano esse procedure ristrette o negoziate di importo inferiore o superiore alla soglia comunitaria. A tali procedure potranno partecipare solo gli operatori economici qualificati, fatto salvo le eccezioni di cui all'art. 10) del regolamento. Il presente regolamento e l’istituzione del sistema di qualificazione non vincolano in alcun modo Acque Bresciane e non costituiscono l’avvio di una procedura di affidamento e/o di aggiudicazione di appalti; il regolamento, l’avviso, le dichiarazioni e la documentazione forniti dagli operatori economici hanno il solo scopo di manifestare la volontà dei medesimi di essere iscritti nel sistema di qualificazione, senza che questo costituisca un vincolo per la SA, atteso che il sistema di qualificazione rappresenta per Acque Bresciane uno strumento da utilizzare, secondo le proprie necessità, per la selezione di operatori economici nell’ambito di affidamento degli appalti appartenenti alle predette categorie di lavori o altre categorie di lavori analoghi e affini. Le disposizioni del presente regolamento devono intendersi sostituite, modificate, abrogate ovvero disapplicate automaticamente ove il relativo contenuto sia incompatibile con sopravvenute inderogabili disposizioni legislative o regolamentari.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ITA">A) Controversie. Ai sensi e per gli effetti degli art. 119 e 120 del D.Lgs. 104/2010 e s.m.i. così come recentemente modificato dal codice dei contratti, mediante ricorso al Tribunale amministrativo regionale della Lombardia, sez. di Brescia. Per gli oneri e le tempistiche di impugnazione, posti a pena di inammissibilità del ricorso, si rinvia integralmente a quanto previsto dal predetto art. 120 del D.Lgs. 104/2010 e s.m.i. Tutte le controversie derivanti dall’esecuzione dei contratti afferenti al presente sistema di qualificazione, previo esperimento dei tentativi di transazione e di accordo bonario ai sensi degli art. 205 e 206 del Codice, saranno deferite alla giurisdizione dell’Autorità giudiziaria di Brescia, con esclusione della giurisdizione arbitrale. B) Riserva di aggiudicazione. Acque Bresciane si riserva la facoltà di non procedere agli inviti mediante procedure ristrette/negoziate ai sensi del presente regolamento e di avvalersi per l’aggiudicazione di tali lavori di altre procedure consentite e regolamentate dal codice; Acque Bresciane si riserva, altresì, la facoltà di revocare le successive aggiudicazioni qualora accerti, in qualsiasi momento e con qualunque mezzo di prova, l’assenza di uno o più d’uno dei requisiti minimi richiesti dal presente regolamento, oppure quando accerti una violazione in materia di dichiarazioni, a prescindere dalle verifiche già effettuate, nonché il mancato rispetto della legge n. 136/2010 e s.m.i. C) Trattamento dei dati personali: Acque Bresciane tratterà le informazioni finalizzate all’iscrizione nel «Sistema di qualificazione» nel rispetto dei legittimi interessi dell’operatore economico, riguardante la protezione dei segreti tecnici e commerciali, e della normativa sulla privacy di cui al regolamento europeo n. 2016/679 («GDPR») ed alla normativa applicabile in materia di protezione dei dati personali. Il trattamento suddetto verrà svolto dalla SA secondo le modalità descritte nell’informativa ai sensi dell’art. 13 del GDPR, disponibile sul Portale al seguente indirizzo https://acquebresciane.acquistitelematici.it D) Responsabile del procedimento. Verrà nominato per ciascuna procedura ristretta o negoziata.</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">45233222</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="ITA">Comuni della Provincia di Brescia il cui elenco è disponibile al link https://www.acquebresciane.it/public/acquebresciane-portal/home/societa/comuni-gestiti.</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">ITC47</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+		<cac:PlannedPeriod>
+			<cbc:StartDate>2020-05-01+02:00</cbc:StartDate>
+			<cbc:EndDate>2023-04-30+02:00</cbc:EndDate>
+		</cac:PlannedPeriod>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ITA">L’istanza di ammissione al sistema di qualificazione è gestita tramite il Portale (https://acquebresciane.acquistitelematici.it) al quale si rinvia per le modalità di registrazione. La procedura di accreditamento è descritta nell'art. 3 del regolamento. Sono ammessi a presentare l’istanza di ammissione al sistema di qualificazione i soggetti di cui all’art. 45 del codice dei contratti. All'art. 5) del regolamento sono elencati i requisiti minimi per accedere al sistema di qualificazione, pena l'esclusione.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="ITA">Il prezzo non è il solo criterio di aggiudicazione e tutti i criteri sono indicati solo nei documenti di gara</cbc:Description>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ITA</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:SubmissionMethodCode listName="esubmission">allowed</cbc:SubmissionMethodCode>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>SQASF2020</cbc:ID>
+			<cbc:Name languageID="ITA">Sistema di qualificazione lavori di asfaltatura dei rappezzi e delle tracce di scavo</cbc:Name>
+			<cbc:Description languageID="ITA">Acque Bresciane, ai sensi dell’art. 134 del Codice e in conformità a quanto previsto dal regolamento dei contratti, intende istituire un sistema di qualificazione di operatori economici qualificati per l’esecuzione dei lavori di asfaltatura dei rappezzi e delle tracce di scavo derivanti da: — interventi di manutenzione e allacciamenti alle reti di distribuzione acquedotto e fognatura, — estendimenti e/o rifacimenti delle reti di distribuzione acquedotto e fognatura. Il sistema di qualificazione potrà essere utilizzato anche dalle società del gruppo Cogeme e/o da altra società, sempreché controllante o controllata, ai sensi e per gli effetti di cui all’art. 2359 del Codice civile, o comunque partecipante o partecipata. Il sistema di qualificazione ha lo scopo di: — definire le regole con cui viene istituito e gestito il sistema di qualificazione, i requisiti che devono essere posseduti dagli operatori economici al fine di ottenere la qualificazione e la documentazione comprovante il possesso dei predetti requisiti, — costituire elenchi di operatori economici qualificati nell’attività specifica dei lavori oggetto del presente regolamento e di comprovata idoneità tecnico-professionale (disponibilità minima di mezzi, attrezzature, personale) nell’ambito dei quali la SA, e nell’eventualità le società del gruppo Cogeme (e/o altra società, sempreché controllante o controllata, ai sensi e per gli effetti di cui all’art. 2359 del Codice civile, o comunque partecipante o partecipata) individua i soggetti da invitare — nel rispetto dei principi di non discriminazione, parità di trattamento, proporzionalità, trasparenza e rotazione — alle singole procedure di affidamento di lavori, siano esse procedure ristrette o negoziate di importo inferiore o superiore alla soglia comunitaria. A tali procedure potranno partecipare solo gli operatori economici qualificati, fatto salvo le eccezioni di cui all'art. 10) del regolamento. Il presente regolamento e l’istituzione del sistema di qualificazione non vincolano in alcun modo Acque Bresciane e non costituiscono l’avvio di una procedura di affidamento e/o di aggiudicazione di appalti; il regolamento, l’avviso, le dichiarazioni e la documentazione forniti dagli operatori economici hanno il solo scopo di manifestare la volontà dei medesimi di essere iscritti nel sistema di qualificazione, senza che questo costituisca un vincolo per la SA, atteso che il sistema di qualificazione rappresenta per Acque Bresciane uno strumento da utilizzare, secondo le proprie necessità, per la selezione di operatori economici nell’ambito di affidamento degli appalti appartenenti alle predette categorie di lavori o altre categorie di lavori analoghi e affini. Le disposizioni del presente regolamento devono intendersi sostituite, modificate, abrogate ovvero disapplicate automaticamente ove il relativo contenuto sia incompatibile con sopravvenute inderogabili disposizioni legislative o regolamentari.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="ITA">A) Controversie. Ai sensi e per gli effetti degli art. 119 e 120 del D.Lgs. 104/2010 e s.m.i. così come recentemente modificato dal codice dei contratti, mediante ricorso al Tribunale amministrativo regionale della Lombardia, sez. di Brescia. Per gli oneri e le tempistiche di impugnazione, posti a pena di inammissibilità del ricorso, si rinvia integralmente a quanto previsto dal predetto art. 120 del D.Lgs. 104/2010 e s.m.i. Tutte le controversie derivanti dall’esecuzione dei contratti afferenti al presente sistema di qualificazione, previo esperimento dei tentativi di transazione e di accordo bonario ai sensi degli art. 205 e 206 del Codice, saranno deferite alla giurisdizione dell’Autorità giudiziaria di Brescia, con esclusione della giurisdizione arbitrale. B) Riserva di aggiudicazione. Acque Bresciane si riserva la facoltà di non procedere agli inviti mediante procedure ristrette/negoziate ai sensi del presente regolamento e di avvalersi per l’aggiudicazione di tali lavori di altre procedure consentite e regolamentate dal codice; Acque Bresciane si riserva, altresì, la facoltà di revocare le successive aggiudicazioni qualora accerti, in qualsiasi momento e con qualunque mezzo di prova, l’assenza di uno o più d’uno dei requisiti minimi richiesti dal presente regolamento, oppure quando accerti una violazione in materia di dichiarazioni, a prescindere dalle verifiche già effettuate, nonché il mancato rispetto della legge n. 136/2010 e s.m.i. C) Trattamento dei dati personali: Acque Bresciane tratterà le informazioni finalizzate all’iscrizione nel «Sistema di qualificazione» nel rispetto dei legittimi interessi dell’operatore economico, riguardante la protezione dei segreti tecnici e commerciali, e della normativa sulla privacy di cui al regolamento europeo n. 2016/679 («GDPR») ed alla normativa applicabile in materia di protezione dei dati personali. Il trattamento suddetto verrà svolto dalla SA secondo le modalità descritte nell’informativa ai sensi dell’art. 13 del GDPR, disponibile sul Portale al seguente indirizzo https://acquebresciane.acquistitelematici.it D) Responsabile del procedimento. Verrà nominato per ciascuna procedura ristretta o negoziata.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">45233222</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ITA">Comuni della Provincia di Brescia il cui elenco è disponibile al link https://www.acquebresciane.it/public/acquebresciane-portal/home/societa/comuni-gestiti.</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">ITC47</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-05-01+02:00</cbc:StartDate>
+				<cbc:EndDate>2023-04-30+02:00</cbc:EndDate>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="ITA">Nessun rinnovo</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</PriorInformationNotice>
