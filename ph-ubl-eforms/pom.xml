@@ -28,7 +28,7 @@
   <packaging>bundle</packaging>
   <name>ph-ubl-eforms</name>
   <description>Library for reading and writing UBL eforms documents</description>
-  <url>https://github.com/phax/ph-ubl/ph-ubl</url>
+  <url>https://github.com/phax/ph-ubl/ph-ubl-eforms</url>
   <inceptionYear>2021</inceptionYear>
   
   <licenses>
