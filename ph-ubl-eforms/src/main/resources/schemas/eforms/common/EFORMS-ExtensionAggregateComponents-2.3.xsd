@@ -39,7 +39,8 @@
 	<xsd:element name="CriterionParameter" type="ParameterType"/>
 	<xsd:element name="DecisionReason" type="DecisionReasonType"/>
 	<xsd:element name="DurationJustification" type="DurationJustificationType"/>
-	<xsd:element name="EvaluationCriterion" type="cac:AwardingCriterionType"/>
+	<!-- Following element not needed. To be removed -->
+	<!-- xsd:element name="EvaluationCriterion" type="cac:AwardingCriterionType"/ -->
 	<xsd:element name="FieldsPrivacy" type="FieldsPrivacyType"/>
 	<xsd:element name="FrameworkAgreementValues" type="FrameworkAgreementValuesType"/>
 	<xsd:element name="Funding" type="FundingType"/>
@@ -238,8 +239,8 @@
 			<xsd:element ref="cbc:MinimumAmount" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:MaximumAmount" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:MinimumImprovementBid" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="CriterionParameter" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="SubordinateCriterion" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:CriterionParameter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:SubordinateCriterion" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="DecisionReasonType">

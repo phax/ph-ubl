@@ -362,7 +362,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="TenderSubcontractingRequirementsDescriptionType">
 		<xsd:simpleContent>
-			<xsd:restriction base="udt:CodeType"/>
+			<xsd:restriction base="udt:TextType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="TenderVariantIndicatorType">
