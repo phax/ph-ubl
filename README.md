@@ -1,7 +1,7 @@
 # ph-ubl
 
-[![Build Status](https://travis-ci.com/phax/ph-ubl.svg?branch=master)](https://travis-ci.com/phax/ph-ubl)
-﻿[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom) 
+[![javadoc](https://javadoc.io/badge2/com.helger.ubl/ph-ubl-parent-pom/javadoc.svg)](https://javadoc.io/doc/com.helger.ubl/ph-ubl-parent-pom)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom) 
 
 This is the readme file for version 5.x or later.
 
