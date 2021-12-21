@@ -1,0 +1,429 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:173144-2020:TEXT:EN:HTML
+-->
+<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>11</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.stuttgart-airport.com/</cbc:WebsiteURI>
+								<cbc:EndpointID>http://www.subreport.de/E49898235</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Flughafen Stuttgart GmbH</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Flughafenstraße 32</cbc:StreetName>
+									<cbc:Department>Zentraleinkauf</cbc:Department>
+									<cbc:CityName>Stuttgart</cbc:CityName>
+									<cbc:PostalZone>70629</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>DEU</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Herr Klemm</cbc:Name>
+									<cbc:Telephone>+49 711948-3513</cbc:Telephone>
+									<cbc:Telefax>+49 711948-5680</cbc:Telefax>
+									<cbc:ElectronicMail>klemm@stuttgart-airport.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.rp-karlsruhe.de/servlet/PB/menu/1159131/index.html</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Vergabekammer Baden-Württemberg beim Regierungspräsidium Karlsruhe</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Duracher Allee 100</cbc:StreetName>
+									<cbc:CityName>Karlsruhe</cbc:CityName>
+									<cbc:PostalZone>76131</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>DEU</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+49 7219264049</cbc:Telephone>
+									<cbc:Telefax>+49 7219263985</cbc:Telefax>
+									<cbc:ElectronicMail>poststelle@rpk.bwl.de</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="DEU">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>c48d000f-2598-47b3-856e-de93bf654518</cbc:ID>
+	<cbc:ContractFolderID>c2a0dcd1-4d17-4072-9252-38de16ead921</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
+	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="planning">pin-cfc-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+			<cbc:PartyType>airport</cbc:PartyType>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">airport</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cac:LotDistribution>
+			<cbc:MaximumLotsAwardedNumeric>2</cbc:MaximumLotsAwardedNumeric>
+			<cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
+		</cac:LotDistribution>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>xyz</cbc:ID>
+		<cbc:Name languageID="DEU">Instandhaltung Brandschutztüren</cbc:Name>
+		<cbc:Description languageID="DEU">Wartung, Funktionsprüfung und Instandsetzung von ca. 3 700 Brandschutztüren – inkl. ca. 100 integrierter Feststelleinrichtungen – am Flughafen Stuttgart. Die Wartungsplanung wird vom AG vorgegeben und vom AN mittels gestelltem Ipad dokumentiert. Der Auftraggeber führt vorliegend ein Vergabeverfahren mit Interessenbekundung, Interessenbestätigung und Aufforderung zur Abgabe eines Angebots im Wege eines Verhandlungsverfahrens ohne gesonderte Auftragsbekanntmachung durch. In Ziffer VI.3 b) der vorliegenden Bekanntmachung ist der Ablauf konkretisiert.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="DEU">a) Der Auftraggeber ist ausschließlich Sektorenauftraggeber nach § 100 Abs. 1 Nr. 2 GWB. b) Hinweise zum Verfahrensablauf: In der 1. Phase der Interessenbekundung haben Unternehmen zunächst nur allgemein ihr Interesse an der Teilnahme am Vergabeverfahren zu bekunden. Der Auftraggeber hat hierfür ein Formblatt erstellt. Das Formblatt kann nach Ziffer I.3 der vorliegenden Bekanntmachung abgerufen werden. Die Interessenbekundungen müssen in Textform über die Vergabeplattform des Auftraggebers bis zum Schlusstermin für deren Eingang nach Ziffer IV.2.2) eingehen. Eine Interessenbekundung als Bewerbergemeinschaft ist möglich. Die Einreichung der Eignungsunterlagen (entsprechend dem Teilnahmeantrag) ist in dieser Phase nicht erforderlich. Ein Unternehmen, das sein Interesse in der 1. Phase nicht bekundet hat, kann im weiteren Verlauf des Vergabeverfahrens nicht berücksichtigt werden. Der Auftraggeber wird in der 2. Phase des Vergabeverfahrens die Unternehmen, die frist- und formgerecht eine Interessenbekundung eingereicht haben, auffordern ihr Interesse zu bestätigen (Interessensbestätigung), in dem die in der entsprechenden Aufforderung aufgeführten Eignungsunterlagen eingereicht werden (Teilnahmeantrag). Eine Bewerbergemeinschaft kann in dieser Phase nur noch mit Unternehmen gebildet werden, die zur Interessenbestätigung aufgefordert wurden. In der Aufforderung zur Interessenbestätigung werden die für die Teilnahme maßgeblichen Informationen mitgeteilt werden. In der 3. Phase werden die erfolgreichen Bewerber zur Angabe eines Angebots aufgefordert. Der Auftraggeber behält sich nach § 15 Abs. 4 SektVO vor, den Auftrag auf der Grundlage der Erstangebote zu vergeben, ohne in Verhandlungen einzutreten. c) Die in Ziffer II.2.7) und in Ziffer IV.2.3) enthaltenen Zeitangaben stehen unter dem Vorbehalt der Anpassung und Aktualisierung. d) Fragen zum Vergabeverfahren sind elektronisch in Textform über die eVergabe-Plattform gem. Ziffer I.3 einzureichen. Fragen sind rechtzeitig gestellt, wenn sie bis spätestens zum 20.3.2020 eingegangen sind. e) Der Auftraggeber behält sich vor, bei Unterschreitung der Mindestzahl von drei zulassungsfähigen Bewerbungen das vorliegende Vergabeverfahren einzustellen. Der Auftraggeber behält sich zudem vor, bei einer Unterschreitung der Mindestzahl von drei wertungsfähigen Angeboten das vorliegende Vergabeverfahren einzustellen. Bei einer losweisen Vergabe gelten die voranstehenden Vorbehalte für jedes Los.</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">50712000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="DEU">Auf die Rügeobliegenheiten nach § 160 Abs. 3 GWB wird verwiesen. Ein Nachprüfungsantrag ist nach § 160 Abs. 3 S.1 Nr. 4 GWB insbesondere unzulässig, soweit mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, vergangen sind.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>DEU</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2020-05-18+01:00</cbc:EndDate>
+								<cbc:EndTime>23:59:59+01:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:InvitationSubmissionPeriod>
+				<cbc:StartDate>2020-05-18+01:00</cbc:StartDate>
+			</cac:InvitationSubmissionPeriod>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>lot 1</cbc:ID>
+			<cbc:Name languageID="DEU">Instandhaltung Brandschutztüren Terminals</cbc:Name>
+			<cbc:Description languageID="DEU">Instandhaltung der Brandschutztüren in folgenden Gebäuden: — Terminal 1; — Terminal 2; — Terminal 3; — Terminal 4; — VL-Gebäude; — OPS-Gebäude; — LVT-Gebäude. Massen: — BS-Tür 1-Flügel mit Türschließer: 346; — BS-Tür 1-Flügel ohne Türschließer: 18; — BS-Tür 2-Flügel mit Türschließer: 153; — Tür 1-Flügel mit Türschließer: 311; — Tür 1-Flügel ohne Türschließer:35; — Tür 2-Flügel mit Türschließer: 87; — Tür 2-Flügel ohne Türschließer: 10. Der AG gibt die grobe Wartungs- und Prüfplanung vor. Der AN macht die Detailplanung, führt Wartungen und Funktionsprüfungen durch. Die Dokumentation der Wartung erfolgt in vom AG gestellten Ipads, eine separate Dokumentation seitens des AN ist nicht gewünscht. Die Dokumentation der Funktionsprüfungen erfolgt in Papierform.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">50712000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="DEU">Flughafen Stuttgart</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:MaximumNumberNumeric>2</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="DEU">Zweimalige Option auf Verlängerung um jeweils 24 Monate (max. 48 Monate).</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="DEU">Die vorliegend maßgeblichen Eignungsunterlagen werden in der Aufforderung zur Interessenbestätigung nach § 36 Abs. 5 SektVO mitgeteilt werden. Für die Interessenbekundung interessierter Unternehmen wird auf Ziffer VI.3 b) der vorliegenden Bekanntmachung verwiesen.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="DEU">Auf die Rügeobliegenheiten nach § 160 Abs. 3 GWB wird verwiesen. Ein Nachprüfungsantrag ist nach § 160 Abs. 3 S.1 Nr. 4 GWB insbesondere unzulässig, soweit mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, vergangen sind.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>DEU</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2020-05-18+01:00</cbc:EndDate>
+								<cbc:EndTime>23:59:59+01:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>lot 2</cbc:ID>
+			<cbc:Name languageID="DEU">Lot No: 2</cbc:Name>
+			<cbc:Description languageID="DEU">Instandhaltung der Brandschutztüren in folgenden Gebäuden: — CCS; — Feuerwache; — SkyLoop. Massen: — BS-Tür 1-Flügel mit Türschließer: 400; — BS-Tür 1-Flügel ohne Türschließer: 31; — BS-Tür 2-Flügel mit Türschließer: 121; — Drehflügeltür 1-Flügel mit FSA: 25; — Drehflügeltür 2-Flügel mit FSA: 58; — Tür 1-Flügel mit Türschließer: 295; — Tür 1-Flügel ohne Türschließer: 90; — Tür 2-Flügel mit Türschließer: 136; — Tür 2-Flügel ohne Türschließer: 24. Der AG gibt die grobe Wartungs- und Prüfplanung vor. Der AN macht die Detailplanung, führt Wartungen und Funktionsprüfungen durch. Die Dokumentation der Wartung erfolgt in vom AG gestellten Ipads, eine separate Dokumentation seitens des AN ist nicht gewünscht. Die Dokumentation der Funktionsprüfungen erfolgt in Papierform.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">50712000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="DEU">Flughafen Stuttgart</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:MaximumNumberNumeric>2</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="DEU">Zweimalige Option auf Verlängerung um jeweils 24 Monate (max. 48 Monate).</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</PriorInformationNotice>

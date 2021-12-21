@@ -1,0 +1,283 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:565004-2019:TEXT:EN:HTML
+-->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>20</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.scotland-excel.org.uk</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.publictendersscotland.publiccontractsscotland.gov.uk</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Scotland Excel</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Renfrewshire House, Cotton Street</cbc:StreetName>
+									<cbc:CityName>Paisley</cbc:CityName>
+									<cbc:PostalZone>PA1 1AR</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>n/a</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>n/a</cbc:Name>
+									<cbc:Telephone>+44 3003001200</cbc:Telephone>
+									<cbc:Telefax>+44 1416187423</cbc:Telefax>
+									<cbc:ElectronicMail>socialcare@scotland-excel.org.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Sheriff Court</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>court</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example-court.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>76c82dad-10b1-4e6a-9326-9312b4bf9baf</cbc:ID>
+	<cbc:ContractFolderID>1adea6cf-8780-4298-a915-55f6796bf847</cbc:ContractFolderID>
+	<cbc:IssueDate>2019-11-25+01:00</cbc:IssueDate>
+	<cbc:IssueTime>11:11:11+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-social</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://www.publiccontractsscotland.gov.uk/search/Search_AuthProfile.aspx?ID=AA10383</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-ra</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:Description languageID="ENG">Procedure involving negotiations</cbc:Description>
+		<cbc:ProcedureCode listName="procurement-procedure-type">oth-single</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>0219</cbc:ID>
+		<cbc:Name languageID="ENG">Secure Care Services</cbc:Name>
+		<cbc:Description languageID="ENG">See II.2.4) (below) for a description of the procurement. In response to ESPD (Scotland) question 4A.2 where it is required, within a bidder’s country of establishment they must confirm which authorisation or memberships of the relevant organisation(s) are required in order to perform this service. Bidders must confirm if they hold the following particular authorisation or memberships: — approval by Scottish Ministers under the Social Care and Social Work Improvement Scotland (Requirements for Care Services) Regulations 2011 for accommodations to be provided for the sole purpose of restricting the liberty of children in residential premises where care services are provided, — registration in accordance with the Education (Scotland) Act 1980, as amended, with the Registrar of Independent Schools, — registration with the Social Care and Social Work Improvement Scotland (‘Care Inspectorate’) as the provider of a secure accommodation service under the Public Services Reform (Scotland) Act 2010.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ENG">Full details of all requirements can be found in the document ‘0219 Secure Care Contract Terms and Conditions’ found in the attachments area of the IT. Financial stability Scotland Excel will conduct a financial analysis for each bidder based on reports from a credit referencing agency. The bidder is to confirm that a search will not return a ‘Warning’ or ‘caution’ returnable code or any neutral code, or the bidder must confirm that it can provide documents to prove to Scotland Excel that the bidder does/would not represent an unmanageable risk should it be appointed onto the proposed framework agreement. Bidders who are unable to demonstrate satisfactory financial stability will be excluded. The buyer is using PCS-Tender to conduct this ITT exercise. The project code is 14746. For more information see: http://www.publiccontractsscotland.gov.uk/info/InfoCentre.aspx?ID=2343 A sub-contract clause has been included in this contract. For more information see: http://www.publiccontractsscotland.gov.uk/info/InfoCentre.aspx?ID=2363 Community benefits are included in this requirement. For more information see: http://www.publiccontractsscotland.gov.uk/info/InfoCentre.aspx?ID=2361 A summary of the expected community benefits has been provided as follows: In accordance with section 25(3) of the Procurement Reform (Scotland) Act 2014 note that, Scotland Excel intends to include community benefit requirements. As part of your response within the technical envelope, bidders will be requested to commit to delivery of community benefits against various spend bands. Details regarding the community benefits can be found in the document ‘0219 Community Benefits’ in the attachment area of the ITT. (SC Ref:604796)</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85311300</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85311300</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85310000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85000000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="ENG">Various locations throughout SCOTLAND.</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">UKM</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ENG">Qualification Stage (Pass/Fail):
+									Assessment of suitability and selection of Bidder’s response via ESPD (Scotland).</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:RequiredFinancialGuarantee>
+				<cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+				<cbc:Description languageID="ENG">It is a requirement of this contract that bidders hold, or can commit to obtain prior to the commencement of any subsequently awarded contract, the types and levels of insurance indicated below: — employers’ liability (compulsory insurance): to a minimum indemnity limit of 5 000 000 GBP , — public liability insurance including treatment risk and/or administration of medicines: minimum 20 000 000 GBP in respect of any one. Incident: — medical malpractice insurance: minimum of 10 000 000 GBP in respect of any 1 incident and in the aggregate, — motor vehicle insurance: minimum of 5 000 000 GBP in respect of any 1 incident in respect of third party liability, — professional indemnity insurance: minimum of 2 000 000 GBP in respect of any 1 incident or in the aggregate and where in the aggregate a minimum of 1 automatic reinstatement of the sum insured to apply in any 1 period.</cbc:Description>
+			</cac:RequiredFinancialGuarantee>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:TendererQualificationRequest>
+				<cbc:CompanyLegalFormCode>true</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalForm languageID="ENG">Scotland Excel will require the members of any tendering group of entities (including, but not limited to, consortium members, members of a group of economic operators and/or sub-contractors) to be jointly and severally liable for the performance of the contract (no matter the legal form taken by those entities in order to enter into the contract). Consortium information may be disclosed in accordance with the Regulations. The anticipated value is estimated and may be subject to change. Bidders should note there is no guarantee of any business, use, level of use or continuity of business through the contract.</cbc:CompanyLegalForm>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="ENG">Evaluation of bidders responses in quality stage.</cbc:Description>
+					<cbc:CalculationExpression languageID="ENG">Quality Stage (60 %):</cbc:CalculationExpression>
+				</cac:AwardingCriterion>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="ENG">Evaluation of bidders responses in commercial stage. Scotland Excel reserves the right to negotiate on any element following submission, or to accept submissions without any further negotiation, to award in part or in whole, or not to make any award.</cbc:Description>
+					<cbc:CalculationExpression languageID="ENG">Commercial STAGE (40 %):</cbc:CalculationExpression>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ENG</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-01-06+01:00</cbc:EndDate>
+				<cbc:EndTime>12:00:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>0219</cbc:ID>
+			<cbc:Name languageID="ENG">Secure Care Services</cbc:Name>
+			<cbc:Description languageID="ENG">Provision of secure care (secure accommodation) services. The scope of services to be provided under the advertised arrangement falls within the definition of social and other specific services in Schedule 3 to the Public Contracts (Scotland) Regulations 2015 (‘the Regulations’) and therefore the procurement process shall be subject to the requirements of section 7 of the Regulations. Any application of or reference to other Regulations unless clearly identified is not to be implied and should not be construed as applying any of them to the exercise or bringing any of them into force. Tenderers are asked to note that Regulation 75(2) of the Regulations applies to this exercise. Notwithstanding that, Scotland Excel has elected, voluntarily, to place this notice for reasons of transparency. Accordingly, this secure care service will be awarded to parties already identified using a form of the negotiated procedure developed in accordance with Regulation 76(8) of the Regulations.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85311300</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85311300</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85310000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85300000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85000000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">80000000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">Various locations throughout SCOTLAND.</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">UKM</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>

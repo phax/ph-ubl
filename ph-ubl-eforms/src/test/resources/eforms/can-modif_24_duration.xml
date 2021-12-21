@@ -1,0 +1,301 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:175479-2020:TEXT:EN:HTML
+-->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:ContractModification>
+						<efbc:ChangedNoticeIdentifier>268231-2010</efbc:ChangedNoticeIdentifier>
+						<efac:Change>
+							<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
+							<efbc:ChangeDescription languageID="ENG">Extension of six (6) months</efbc:ChangeDescription>
+						</efac:Change>
+						<efac:Change>
+							<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
+							<efbc:ChangeDescription languageID="ENG">Updated total contract value before the modifications (taking into account possible earlier contract modifications and price adaptions and, in the case of Directive 2014/23/EU, average inflation in the Member State concerned) Value excluding VAT: 95 000 000.00 GBP Total contract value after the modifications Value excluding VAT: 105 000 000.00 GBP</efbc:ChangeDescription>
+						</efac:Change>
+						<efac:ChangeReason>
+							<cbc:ReasonCode listName="modification-justification">mod-cir</cbc:ReasonCode>
+							<efbc:ReasonDescription languageID="ENG">The above contract is due to expire between 1 May 2020 and 31 December 2020. Due to the on-going COVID-19 outbreak and associated restrictions we are unable to implement the new ALMS Contract as anticipated. In line with Regulation 72(1)(c) of the PCR 2015 it is proposed to extend the above contract based on the following trust specific dates: Belfast Health &amp; Social Care Trust – 31 October 2020 Western Health &amp; Social Care Trust – 31 January 2021 Southern Health &amp; Social Care Trust – 31 January 2021 Northern Health &amp; Social Care Trust – 30 June 2021 (prices, terms &amp; conditions to remain the same).</efbc:ReasonDescription>
+						</efac:ChangeReason>
+					</efac:ContractModification>
+					<efac:NoticeResult>
+						<cbc:TotalAmount currencyID="GBP">105000000</cbc:TotalAmount>
+						<efac:LotResult>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<cbc:RankCode>1</cbc:RankCode>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">105000000</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>BID/BSO/2000-03</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<cbc:AwardDate>2010-07-22+02:00</cbc:AwardDate>
+							<cbc:IssueDate>2010-09-07+02:00</cbc:IssueDate>
+							<cbc:Title languageID="ENG">Automated Laboratory Medicine Systems.</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<cbc:ID>BSO/2010/REV-01</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>38</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://etenders.gov.uk/epps</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Gransha Hospital Procurement and Logistics Service</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Clooney Road</cbc:StreetName>
+									<cbc:Department>Supplies Centre</cbc:Department>
+									<cbc:CityName>Londonderry</cbc:CityName>
+									<cbc:PostalZone>BT47 6YZ</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>palsgransha.sourcing@hscni.net</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Business Services Organisation, PaLS</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>77 Boucher Crescent</cbc:StreetName>
+									<cbc:CityName>Belfast</cbc:CityName>
+									<cbc:PostalZone>BT12 6HU</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Roche Diagnostics Ltd</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Charles Avenue</cbc:StreetName>
+									<cbc:CityName>Burgess Hill</cbc:CityName>
+									<cbc:PostalZone>RH15 9RY</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>n/a</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>1f8687c9-8cca-493a-b0ee-553ed23d8402</cbc:ID>
+	<cbc:ContractFolderID>b492c659-4893-4796-b7db-4e511d85e0c8</cbc:ContractFolderID>
+	<cbc:IssueDate>2010-10-07+01:00</cbc:IssueDate>
+	<cbc:IssueTime>06:06:06+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="cont-modif">can-modif</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:ProcurementProject>
+		<cbc:ID> 103420</cbc:ID>
+		<cbc:Name languageID="ENG">Automated Laboratory Medicine Systems</cbc:Name>
+		<cbc:Description languageID="ENG">Automated laboratory medicine systems incorporating clinical chemistry, haematology, immunology and blood bank.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">33159000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">38434570</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">85111800</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>103420</cbc:ID>
+			<cbc:Name languageID="ENG">Automated Laboratory Medicine Systems</cbc:Name>
+			<cbc:Description languageID="ENG">Automated laboratory medicine systems incorporating clinical chemistry, haematology, immunology and blood bank.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">33159000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">38434570</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85111800</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

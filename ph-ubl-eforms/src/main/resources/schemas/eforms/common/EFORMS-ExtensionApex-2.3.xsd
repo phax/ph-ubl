@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Library:           eForms (UBL) 2.3 Test
+                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
+  Release Date:      07 August 2019
+  Module:            EFORMS-ExtensionApex-2.3.xsd
+  Generated on:      2016-06-24 19:50(UTC)
+
+  This is a copy of http://uri.etsi.org/01903/v1.3.2/XAdES01903v132-201601.xsd
+  modified only to change the importing URI for the W3C dsig schema.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" targetNamespace="http://data.europa.eu/p27/eforms-ubl-extensions/1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" schemaLocation="EFORMS-ExtensionAggregateComponents-2.3.xsd"/>
+	<xsd:import namespace="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" schemaLocation="EFORMS-ExtensionBasicComponents-2.3.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="UBL-CommonAggregateComponents-2.3.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="UBL-CommonBasicComponents-2.3.xsd"/>
+	<!-- NOT needed anymore !!
+	<xsd:group name="other">
+		<xsd:choice> -->
+	<!--
+			<xsd:any namespace="##other" processContents="skip"/>
+-->
+	<!--			<xsd:element ref="cbc:LowerTenderAmount" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:HigherTenderAmount" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:group> -->
+	<xsd:element name="EformsExtension">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="efbc:AccessToolName" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efbc:ProcedureRelaunchIndicator" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:AnswerReceptionPeriod" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:AppealRequestsStatistics" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:AppealsInformation" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:AwardCriterionParameter" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:BuyingPartyReference" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:Changes" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:ContractModification" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:InterestExpressionReceptionPeriod" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:NoticeResult" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:NoticeSubType" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:Organizations" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:Publication" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="efac:SelectionCriteria" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:StrategicProcurementStatistics" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:SubsidiaryClassification" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:ReferencedDocumentPart" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:TenderSubcontractingRequirements" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2014-2021 Philip Helger (www.helger.com)
+    philip[at]helger[dot]com
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.helger.ubl</groupId>
+    <artifactId>ph-ubl-parent-pom</artifactId>
+    <version>6.6.4-SNAPSHOT</version>
+  </parent>
+  <artifactId>ph-ubl-eforms</artifactId>
+  <packaging>bundle</packaging>
+  <name>ph-ubl-eforms</name>
+  <description>Library for reading and writing UBL eforms documents</description>
+  <url>https://github.com/phax/ph-ubl/ph-ubl-eforms</url>
+  <inceptionYear>2021</inceptionYear>
+  
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Philip Helger</name>
+    <url>http://www.helger.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>philip</id>
+      <name>Philip Helger</name>
+      <email>ph(at)helger.com</email>
+      <url>http://www.helger.com</url>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-commons</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-jaxb-adapter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-jaxb</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-datetime</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.ubl</groupId>
+      <artifactId>ph-ubl-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.ubl</groupId>
+      <artifactId>ph-ubl-testfiles</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.xsd</groupId>
+      <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.xsd</groupId>
+      <artifactId>ph-xsds-xmldsig</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+<!--      todo: add correct packages -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Automatic-Module-Name>com.helger.eforms</Automatic-Module-Name>
+            <Export-Package>com.helger.eforms.*,
+              eu.europa.data.p27.*</Export-Package>
+            <Import-Package>!javax.annotation.*,*</Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/LICENSE</exclude>
+            <exclude>**/NOTICE</exclude>
+            <exclude>src/main/resources/schemas/**</exclude>
+            <exclude>src/test/resources/examples/**</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.evolvedbinary.maven.jvnet</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>0.15.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <id>eforms</id>
+            <configuration>
+              <generateDirectory>${project.build.directory}/generated-sources/eforms</generateDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/eforms/maindoc</schemaDirectory>
+               <bindingIncludes>
+                 <bindingInclude>bindings-eforms.xjb</bindingInclude>
+               </bindingIncludes>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
+          <extension>true</extension>
+          <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
+          <strict>false</strict>
+          <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+          <args>
+            <arg>-no-header</arg>
+            <arg>-quiet</arg>
+            <arg>-Xph-default-locale</arg>
+            <arg>en_US</arg>
+            <arg>-Xph-annotate</arg>
+            <arg>-Xph-fields-private</arg>
+            <arg>-Xph-code-quality</arg>
+            <arg>-Xph-implements</arg>
+            <arg>java.io.Serializable</arg>
+            <arg>-Xph-equalshashcode</arg>
+            <arg>-Xph-tostring</arg>
+            <arg>-Xph-list-extension</arg>
+            <arg>-Xph-csu</arg>
+            <arg>-Xph-cloneable2</arg>
+            <arg>-Xph-value-extender</arg>
+            <arg>-Xph-offset-dt-extension</arg>
+          </args>
+          <episodes>
+            <episode>
+              <groupId>com.helger.xsd</groupId>
+              <artifactId>ph-xsds-xmldsig</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger.xsd</groupId>
+              <artifactId>ph-xsds-xades132</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger.xsd</groupId>
+              <artifactId>ph-xsds-xades141</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger.xsd</groupId>
+              <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+            </episode>
+          </episodes>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.helger</groupId>
+            <artifactId>ph-jaxb22-plugin</artifactId>
+            <version>2.3.3.3</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <doclint>none</doclint>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

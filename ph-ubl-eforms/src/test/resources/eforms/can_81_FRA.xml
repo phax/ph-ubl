@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Based on https://ted.europa.eu/udl?uri=TED:NOTICE:245489-2021:TEXT:FR:HTML
+-->
+<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<!--BT-161-->
+						<cbc:TotalAmount currencyID="EUR">375950.00</cbc:TotalAmount>
+						<efac:LotResult>
+							<cbc:HigherTenderAmount currencyID="EUR">400000</cbc:HigherTenderAmount>
+							<cbc:LowerTenderAmount currencyID="EUR">300000</cbc:LowerTenderAmount>
+							<!--BT-142-->
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<!--OPT-320-->
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760-->
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<!--BT-759-->
+								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760-->
+								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+								<!--BT-759-->
+								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<!--OPT-315-->
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="EUR">375950</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<!--BT-193-->
+							<efac:SubcontractingTerm>
+								<!--BT-773-->
+								<efbc:TermCode listName="applicability">no</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>BID-012-2010-01</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<!--BT-1451-->
+							<cbc:AwardDate>2021-04-20+02:00</cbc:AwardDate>
+							<!--BT-721-->
+							<cac:NoticeDocumentReference>
+								<!--OPT-100-->
+								<cbc:ID>dbd1d208-7e54-4abf-8f9c-fd67077f18f8-01</cbc:ID>
+							</cac:NoticeDocumentReference>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<!--OPT-300-->
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<!--BT-150-->
+							<efac:ContractReference>
+								<cbc:ID>CRN - 2010/02</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<!--BT-3202-->
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<!--OPT-210-->
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<!--OPT-300-->
+								<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								<!--OPT-170-->
+								<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>31</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.cea.fr</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Commissariat à l'énergie atomique et aux énergies alternatives</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>CEA/DAM Île-de-France DCG/SAPI/BGI bâtiment U Bruyères-le-Châtel</cbc:StreetName>
+									<cbc:CityName>Arpajon Cedex</cbc:CityName>
+									<cbc:PostalZone>91297</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FR104</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Name>M Vincent Gourdin</cbc:Name>
+									<cbc:Telephone>+44 3067988090</cbc:Telephone>
+									<cbc:Telefax>+33 169267009</cbc:Telefax>
+									<cbc:ElectronicMail>sapi.bgi@cea.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500-->
+									<cbc:Name languageID="FRA">Tribunal administratif de Paris</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510-->
+									<cbc:StreetName>7 rue de Jouy</cbc:StreetName>
+									<!--BT-16-->
+									<cbc:Department>Finance</cbc:Department>
+									<!--BT-513-->
+									<cbc:CityName>Paris Cedex 04</cbc:CityName>
+									<!--BT-512-->
+									<cbc:PostalZone>75181</cbc:PostalZone>
+									<cac:Country>
+										<!--BT-514-->
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-503-->
+									<cbc:Telephone>+33 144594400</cbc:Telephone>
+									<!--BT-739-->
+									<cbc:Telefax>+33 144594646</cbc:Telefax>
+									<!--BT-506-->
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500-->
+									<cbc:Name languageID="FRA">Greffe du Tribunal administratif de Paris</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510-->
+									<cbc:StreetName>7 rue de Jouy</cbc:StreetName>
+									<!--BT-16-->
+									<cbc:Department>Greffe</cbc:Department>
+									<!--BT-513-->
+									<cbc:CityName>Paris Cedex 04</cbc:CityName>
+									<!--BT-512-->
+									<cbc:PostalZone>75181</cbc:PostalZone>
+									<cac:Country>
+										<!--BT-514-->
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-503-->
+									<cbc:Telephone>+33 144594400</cbc:Telephone>
+									<!--BT-739-->
+									<cbc:Telefax>+33 144594646</cbc:Telefax>
+									<!--BT-506-->
+									<cbc:ElectronicMail>contact-greffe@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500-->
+									<cbc:Name languageID="FRA">I</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-513-->
+									<cbc:CityName>I</cbc:CityName>
+									<cac:Country>
+										<!--BT-514-->
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-503-->
+									<cbc:Telephone>+33 0101010101</cbc:Telephone>
+									<!--BT-506-->
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500-->
+									<cbc:Name languageID="FRA">Assystem energy et infrastructure</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510-->
+									<cbc:StreetName>9/11 allée de l'Arche Tour Egée</cbc:StreetName>
+									<!--BT-513-->
+									<cbc:CityName>Courbevoie</cbc:CityName>
+									<!--BT-512-->
+									<cbc:PostalZone>92400</cbc:PostalZone>
+									<cac:Country>
+										<!--BT-514-->
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-503-->
+									<cbc:Telephone>+33 12121212</cbc:Telephone>
+									<!--BT-506-->
+									<cbc:ElectronicMail>contact@example-corp.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+					<efac:Publication>
+						<efbc:NoticePublicationID schemeName="ojs-notice-id">245489-2021</efbc:NoticePublicationID>
+						<efbc:GazetteID schemeName="ojs-id">93/2021</efbc:GazetteID>
+						<efbc:PublicationDate>2021-05-14+02:00</efbc:PublicationDate>
+					</efac:Publication>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<!--BT-701-->
+	<cbc:ID>f71da99f-763b-43bd-a1bb-f54bf9560fd6</cbc:ID>
+	<!--BT-04-->
+	<cbc:ContractFolderID>2d2d24a2-df84-449e-8695-fb66ef504a5a</cbc:ContractFolderID>
+	<!--BT-05-->
+	<cbc:IssueDate>2021-05-11+01:00</cbc:IssueDate>
+	<cbc:IssueTime>18:00:00+01:00</cbc:IssueTime>
+	<!--BT-757-->
+	<cbc:VersionID>01</cbc:VersionID>
+	<!--BT-01-->
+	<cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+	<!--BT-03-->
+	<!--BT-02-->
+	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+	<!--BT-702-->
+	<cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://www.marches-publics.gouv.fr</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:Name languageID="FRA">
+			Assistance à maîtrise d’œuvre en suivi de réalisation dans le cadre du projet de construction d’un poste de garde et d’un parking sur plusieurs niveaux sur le site CEA de Cadarache pour le compte du CEA DAM
+		</cbc:Name>
+		<cbc:Description languageID="FRA">
+			Les prestations consistent à assurer une assistance de la maîtrise d’œuvre dans le suivi de réalisation du projet PGZ. 
+			Le projet PGZ comprend la construction de deux sous-ensembles:
+			— le sous-ensemble PGZ consiste en la construction d’un bâtiment d’accueil d’environ 300 m2; 
+			— d’une vigie d’environ 60 m2 et d’une zone de contrôle de véhicules et de piétons. 
+			La réalisation de ces ouvrages sera assurée par les titulaires des quatre lots suivants: lot VRD, lot construction des bâtiment en tout corps d’état, lot courant faible et protection et le lot clôture;
+			— le sous-ensemble parking consiste en la construction d’un parking aérien sur trois niveaux permettant le stationnement d’environ 650 véhicules. La réalisation sera confiée à un titulaire spécialisé dans la construction de ce type d’ouvrage.
+		</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71336000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="FRA">CEA Cadarache — 13115 Saint-Paul-lez-Durance.</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--BT-5421-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--BT-541-->
+											<efbc:ParameterNumeric>50</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--BT-539-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--BT-734-->
+						<cbc:Name languageID="FRA">crterion 1</cbc:Name>
+						<!--BT-540-->
+						<cbc:Description languageID="FRA">Prix (DPGF et BPU)</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--BT-5421-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--BT-541-->
+											<efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--BT-539-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--BT-734-->
+						<cbc:Name languageID="FRA">crterion 2</cbc:Name>
+						<!--BT-540-->
+						<cbc:Description languageID="FRA">Méthodologie et outils de maitrise de l'exécution des prestations</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--BT-5421-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--BT-541-->
+											<efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--BT-539-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--BT-734-->
+						<cbc:Name languageID="FRA">criterion 4</cbc:Name>
+						<!--BT-540-->
+						<cbc:Description languageID="FRA">Planning</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!--BT-99-->
+					<cbc:Description languageID="FRA">
+						Le référé contractuel peut être introduit dans les conditions des articles L. 551-13 et suivants du code de justice administrative.
+						Le recours en contestation de la validité du marché par un tiers peut être intenté dans un délai de deux mois à compter des mesures de publicité appropriées.
+					</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cac:NoticeDocumentReference>
+				<!--BT-125-->
+				<cbc:ID>362098-2020</cbc:ID>
+				<cbc:ReferencedDocumentInternalAddress>B20-05327</cbc:ReferencedDocumentInternalAddress>
+			</cac:NoticeDocumentReference>
+			<cac:AuctionTerms>
+				<!--BT-767-->
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:Name languageID="FRA">
+			Assistance à maîtrise d’œuvre en suivi de réalisation dans le cadre du projet de construction d’un poste de garde et d’un parking sur plusieurs niveaux sur le site CEA de Cadarache pour le compte du CEA DAM
+		</cbc:Name>
+			<cbc:Description languageID="FRA">
+			Les prestations consistent à assurer une assistance de la maîtrise d’œuvre dans le suivi de réalisation du projet PGZ. 
+			Le projet PGZ comprend la construction de deux sous-ensembles:
+			— le sous-ensemble PGZ consiste en la construction d’un bâtiment d’accueil d’environ 300 m2; 
+			— d’une vigie d’environ 60 m2 et d’une zone de contrôle de véhicules et de piétons. 
+			La réalisation de ces ouvrages sera assurée par les titulaires des quatre lots suivants: lot VRD, lot construction des bâtiment en tout corps d’état, lot courant faible et protection et le lot clôture;
+			— le sous-ensemble parking consiste en la construction d’un parking aérien sur trois niveaux permettant le stationnement d’environ 650 véhicules. La réalisation sera confiée à un titulaire spécialisé dans la construction de ce type d’ouvrage.
+		</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71336000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="FRA">CEA Cadarache — 13115 Saint-Paul-lez-Durance.</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>
