@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,37 +28,39 @@ import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
+import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.ubl23.CUBL23;
+import com.helger.ubl23.EUBL23DocumentType;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
+import com.helger.xsds.xades132.CXAdES132;
+import com.helger.xsds.xades141.CXAdES141;
+import com.helger.xsds.xmldsig.CXMLDSig;
 
-import eu.europa.data.p27.eforms_business_registration_information_notice._1.BusinessRegistrationInformationNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractawardnotice_2.ContractAwardNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractnotice_2.ContractNoticeType;
-import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_2.PriorInformationNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
+import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
 public enum EFormsUBLDocumentType implements IJAXBDocumentType
 {
-  CONTRACT_AWARD_NOTICE(ContractAwardNoticeType.class,
-          new CommonsArrayList <> (
-                  CEformsUBL.XSD_CAN_XML_STRUCTURE
-          )),
-  CONTRACT_NOTICE(ContractNoticeType .class,
-          new CommonsArrayList <> (
-                  CEformsUBL.XSD_CN_XML_STRUCTURE
-        )),
-  PRIOR_INFORMATION_NOTICE(PriorInformationNoticeType.class,
-          new CommonsArrayList <> (
-                  CEformsUBL.XSD_PIN_XML_STRUCTURE
-          )),
-  BUSINESS_REGISTRATION_INFORMATION_NOTICE(BusinessRegistrationInformationNoticeType.class,
-          new CommonsArrayList <> (
-                  CEformsUBL.XSD_BRIN_XML_STRUCTURE
-          ))
-  ;
+  CONTRACT_AWARD_NOTICE (ContractAwardNoticeType.class, EUBL23DocumentType.CONTRACT_AWARD_NOTICE.getAllXSDResources ()),
+  CONTRACT_NOTICE (ContractNoticeType.class, EUBL23DocumentType.CONTRACT_NOTICE.getAllXSDResources ()),
+  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class, EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
+  BUSINESS_REGISTRATION_INFORMATION_NOTICE (BusinessRegistrationInformationNoticeType.class,
+                                            new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                     CXMLDSig.getXSDResource (),
+                                                                     CXAdES132.getXSDResource (),
+                                                                     CXAdES141.getXSDResource (),
+                                                                     CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                     CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
+                                                                     CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
+                                                                     CEformsUBL.XSD_EFORMS_EXTENSION_APEX,
+                                                                     CEformsUBL.XSD_EFORMS_BRIN));
 
   private final JAXBDocumentType m_aDocType;
 
-  EFormsUBLDocumentType(@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
+  EFormsUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }

@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,21 +23,21 @@ import javax.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 @NotThreadSafe
-public class EformsUBLValidatorBuilder<JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, EformsUBLValidatorBuilder<JAXBTYPE>>
+public class EformsUBLValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, EformsUBLValidatorBuilder <JAXBTYPE>>
 {
-  public EformsUBLValidatorBuilder(@Nonnull final EFormsUBLDocumentType eDocType)
+  public EformsUBLValidatorBuilder (@Nonnull final EFormsUBLDocumentType eDocType)
   {
     super (eDocType);
   }
 
-  public EformsUBLValidatorBuilder(@Nonnull final Class <JAXBTYPE> aClass)
+  public EformsUBLValidatorBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (EformsUBLDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   @Nonnull
-  public static <T> EformsUBLValidatorBuilder<T> create (@Nonnull final Class <T> aClass)
+  public static <T> EformsUBLValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new EformsUBLValidatorBuilder<>(aClass);
+    return new EformsUBLValidatorBuilder <> (aClass);
   }
 }

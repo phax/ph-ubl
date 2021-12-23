@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,9 +24,9 @@ import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 @NotThreadSafe
-public class EformsUBLWriterBuilder<JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, EformsUBLWriterBuilder<JAXBTYPE>>
+public class EformsUBLWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, EformsUBLWriterBuilder <JAXBTYPE>>
 {
-  public EformsUBLWriterBuilder(@Nonnull final EFormsUBLDocumentType eDocType)
+  public EformsUBLWriterBuilder (@Nonnull final EFormsUBLDocumentType eDocType)
   {
     super (eDocType);
 
@@ -38,14 +39,14 @@ public class EformsUBLWriterBuilder<JAXBTYPE> extends JAXBWriterBuilder <JAXBTYP
     setNamespaceContext (aNSContext);
   }
 
-  public EformsUBLWriterBuilder(@Nonnull final Class <JAXBTYPE> aClass)
+  public EformsUBLWriterBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (EformsUBLDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
   }
 
   @Nonnull
-  public static <T> EformsUBLWriterBuilder<T> create (@Nonnull final Class <T> aClass)
+  public static <T> EformsUBLWriterBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new EformsUBLWriterBuilder<>(aClass);
+    return new EformsUBLWriterBuilder <> (aClass);
   }
 }

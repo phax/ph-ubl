@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2014-2021 Philip Helger (www.helger.com)
+    Copyright (C) 2021 Jonatan Sunden
+    Copyright (C) 2021 Philip Helger (www.helger.com)
     philip[at]helger[dot]com
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +18,6 @@
     limitations under the License.
 
 -->
-
 <bindings version="2.1"
           xmlns="http://java.sun.com/xml/ns/jaxb"
           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
@@ -30,16 +30,25 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime"     xmlType="xsd:time"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </globalBindings>
 
-  <bindings schemaLocation="../resources/schemas/eforms/maindoc/EFORMS-BusinessRegistrationInformationNotice.xsd">
+  <bindings schemaLocation="../resources/schemas/eforms/EFORMS-ExtensionAggregateComponents-2.3.xsd">
+    <schemaBindings>
+      <package name="com.helger.eforms.jaxb.eac" />
+    </schemaBindings>
   </bindings>
-
-  <bindings schemaLocation="../resources/schemas/eforms/maindoc/UBL-ContractAwardNotice-2.3.xsd">
+  <bindings schemaLocation="../resources/schemas/eforms/EFORMS-ExtensionApex-2.3.xsd">
+    <schemaBindings>
+      <package name="com.helger.eforms.jaxb.ext" />
+    </schemaBindings>
   </bindings>
-
-  <bindings schemaLocation="../resources/schemas/eforms/maindoc/UBL-ContractNotice-2.3.xsd">
+  <bindings schemaLocation="../resources/schemas/eforms/EFORMS-ExtensionBasicComponents-2.3.xsd">
+    <schemaBindings>
+      <package name="com.helger.eforms.jaxb.ebc" />
+    </schemaBindings>
   </bindings>
-
-  <bindings schemaLocation="../resources/schemas/eforms/maindoc/UBL-PriorInformationNotice-2.3.xsd">
+  <bindings schemaLocation="../resources/schemas/eforms/EFORMS-BusinessRegistrationInformationNotice.xsd">
+    <schemaBindings>
+      <package name="com.helger.eforms.jaxb.brin" />
+    </schemaBindings>
   </bindings>
 </bindings>
 

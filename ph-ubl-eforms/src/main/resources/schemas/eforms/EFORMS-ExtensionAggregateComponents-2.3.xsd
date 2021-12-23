@@ -9,9 +9,9 @@
 -->
 <xsd:schema xmlns="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
 	<!-- ===== Imports ===== -->
-	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="UBL-CommonBasicComponents-2.3.xsd"/>
-	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="UBL-CommonAggregateComponents-2.3.xsd"/>
-	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="UBL-CommonExtensionComponents-2.3.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" />
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" />
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" />
 	<xsd:import namespace="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" schemaLocation="EFORMS-ExtensionBasicComponents-2.3.xsd"/>
 	<!-- ===== Element Declarations ===== -->
 	<xsd:element name="AnswerReceptionPeriod" type="cac:PeriodType"/>

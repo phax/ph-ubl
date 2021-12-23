@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,41 +21,42 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
 
-import eu.europa.data.p27.eforms_business_registration_information_notice._1.BusinessRegistrationInformationNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractawardnotice_2.ContractAwardNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractnotice_2.ContractNoticeType;
-import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_2.PriorInformationNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
+import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
 @NotThreadSafe
 public final class EformsUBLReader
 {
   @PresentForCodeCoverage
-  private static final EformsUBLReader INSTANCE = new EformsUBLReader();
+  private static final EformsUBLReader INSTANCE = new EformsUBLReader ();
 
-  private EformsUBLReader()
+  private EformsUBLReader ()
   {}
 
   @Nonnull
-  public static EformsUBLReaderBuilder<ContractAwardNoticeType> contractAwardNotice ()
+  public static EformsUBLReaderBuilder <ContractAwardNoticeType> contractAwardNotice ()
   {
     return EformsUBLReaderBuilder.create (ContractAwardNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLReaderBuilder<ContractNoticeType> contractNotice ()
+  public static EformsUBLReaderBuilder <ContractNoticeType> contractNotice ()
   {
     return EformsUBLReaderBuilder.create (ContractNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLReaderBuilder<PriorInformationNoticeType> priorInformationNotice ()
+  public static EformsUBLReaderBuilder <PriorInformationNoticeType> priorInformationNotice ()
   {
     return EformsUBLReaderBuilder.create (PriorInformationNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLReaderBuilder<BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice () {
+  public static EformsUBLReaderBuilder <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
+  {
     return EformsUBLReaderBuilder.create (BusinessRegistrationInformationNoticeType.class);
   }
 }

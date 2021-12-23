@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,27 +44,21 @@ public final class CEformsUBL
   /** The efbc namespace URL */
   public static final String XML_SCHEMA_EFBC_NAMESPACE_URL = "http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1";
 
-  /** The cac namespace URL */
-  public static final String XML_SCHEMA_CAC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2";
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_BASIC_COMPONENTS = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionBasicComponents-2.3.xsd",
+                                                                                                       _getCL ());
 
-  /** The cbc namespace URL */
-  public static final String XML_SCHEMA_CBC_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2";
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionAggregateComponents-2.3.xsd",
+                                                                                                           _getCL ());
 
-  /** The ext namespace URL */
-  public static final String XML_SCHEMA_EXT_NAMESPACE_URL = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_APEX = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionApex-2.3.xsd",
+                                                                                           _getCL ());
 
-  public static final ClassPathResource XSD_CAN_XML_STRUCTURE =
-          new ClassPathResource("/schemas/eforms/maindoc/UBL-ContractAwardNotice-2.3.xsd", _getCL());
-  public static final ClassPathResource XSD_CN_XML_STRUCTURE =
-          new ClassPathResource("/schemas/eforms/maindoc/UBL-ContractNotice-2.3.xsd", _getCL());
-  public static final ClassPathResource XSD_PIN_XML_STRUCTURE =
-          new ClassPathResource("/schemas/eforms/maindoc/UBL-PriorInformationNotice-2.3.xsd", _getCL());
-  public static final ClassPathResource XSD_BRIN_XML_STRUCTURE =
-          new ClassPathResource("/schemas/eforms/maindoc/EFORMS-BusinessRegistrationInformationNotice.xsd", _getCL());
+  public static final ClassPathResource XSD_EFORMS_BRIN = new ClassPathResource ("/schemas/eforms/EFORMS-BusinessRegistrationInformationNotice.xsd",
+                                                                                 _getCL ());
 
   @PresentForCodeCoverage
-  private static final CEformsUBL INSTANCE = new CEformsUBL();
+  private static final CEformsUBL INSTANCE = new CEformsUBL ();
 
-  private CEformsUBL()
+  private CEformsUBL ()
   {}
 }

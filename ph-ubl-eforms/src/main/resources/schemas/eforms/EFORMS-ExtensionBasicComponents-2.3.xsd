@@ -9,7 +9,7 @@
 -->
 <xsd:schema xmlns="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns:udt="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" elementFormDefault="qualified">
 	<!-- ===== Imports ===== -->
-	<xsd:import namespace="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1" schemaLocation="BDNDR-UnqualifiedDataTypes-1.1.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1" />
 	<!-- ===== Element Declarations ===== -->
 	<xsd:element name="AccessToolName" type="AccessToolNameType"/>
 	<xsd:element name="AcquiringCPBIndicator" type="AcquiringCPBIndicatorType"/>

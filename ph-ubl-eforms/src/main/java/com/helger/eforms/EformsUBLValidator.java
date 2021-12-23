@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,43 +21,42 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
 
-import eu.europa.data.p27.eforms_business_registration_information_notice._1.BusinessRegistrationInformationNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractawardnotice_2.ContractAwardNoticeType;
-import oasis.names.specification.ubl.schema.xsd.contractnotice_2.ContractNoticeType;
-import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_2.PriorInformationNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
+import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
 @NotThreadSafe
 public final class EformsUBLValidator
 {
   @PresentForCodeCoverage
-  private static final EformsUBLValidator INSTANCE = new EformsUBLValidator();
+  private static final EformsUBLValidator INSTANCE = new EformsUBLValidator ();
 
-  private EformsUBLValidator()
+  private EformsUBLValidator ()
   {}
 
   @Nonnull
-  public static EformsUBLValidatorBuilder<ContractAwardNoticeType> contractAwardNotice ()
+  public static EformsUBLValidatorBuilder <ContractAwardNoticeType> contractAwardNotice ()
   {
     return EformsUBLValidatorBuilder.create (ContractAwardNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLValidatorBuilder<ContractNoticeType> contractNotice ()
+  public static EformsUBLValidatorBuilder <ContractNoticeType> contractNotice ()
   {
     return EformsUBLValidatorBuilder.create (ContractNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLValidatorBuilder<PriorInformationNoticeType> priorInformationNotice ()
+  public static EformsUBLValidatorBuilder <PriorInformationNoticeType> priorInformationNotice ()
   {
     return EformsUBLValidatorBuilder.create (PriorInformationNoticeType.class);
   }
 
   @Nonnull
-  public static EformsUBLValidatorBuilder<BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
+  public static EformsUBLValidatorBuilder <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
   {
     return EformsUBLValidatorBuilder.create (BusinessRegistrationInformationNoticeType.class);
   }
-
 }

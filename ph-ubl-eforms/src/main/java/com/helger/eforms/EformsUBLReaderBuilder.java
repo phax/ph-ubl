@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,27 +23,27 @@ import javax.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.builder.JAXBReaderBuilder;
 
 @NotThreadSafe
-public class EformsUBLReaderBuilder<JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, EformsUBLReaderBuilder<JAXBTYPE>>
+public class EformsUBLReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, EformsUBLReaderBuilder <JAXBTYPE>>
 {
-  public EformsUBLReaderBuilder(@Nonnull final EFormsUBLDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
+  public EformsUBLReaderBuilder (@Nonnull final EFormsUBLDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
   {
     super (aDocType, aImplClass);
   }
 
-  public EformsUBLReaderBuilder(@Nonnull final Class <JAXBTYPE> aClass)
+  public EformsUBLReaderBuilder (@Nonnull final Class <JAXBTYPE> aClass)
   {
     this (EformsUBLDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
   }
 
   @Nonnull
-  public static <T> EformsUBLReaderBuilder<T> create (@Nonnull final Class <T> aClass)
+  public static <T> EformsUBLReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new EformsUBLReaderBuilder<>(aClass);
+    return new EformsUBLReaderBuilder <> (aClass);
   }
 
   @Nonnull
-  public static EformsUBLReaderBuilder<?> createGeneric (@Nonnull final EFormsUBLDocumentType eDocType)
+  public static EformsUBLReaderBuilder <?> createGeneric (@Nonnull final EFormsUBLDocumentType eDocType)
   {
-    return new EformsUBLReaderBuilder<>(eDocType, Object.class);
+    return new EformsUBLReaderBuilder <> (eDocType, Object.class);
   }
 }

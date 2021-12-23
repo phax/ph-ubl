@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,12 +18,10 @@
 package com.helger.eforms;
 
 import javax.annotation.Nonnull;
-import javax.xml.XMLConstants;
 
-import com.helger.xml.namespace.MapBasedNamespaceContext;
-import com.helger.xsds.xmldsig.CXMLDSig;
+import com.helger.ubl23.UBL23NamespaceContext;
 
-public class EformsUBLNamespaceContext extends MapBasedNamespaceContext
+public class EformsUBLNamespaceContext extends UBL23NamespaceContext
 {
   private static final class SingletonHolder
   {
@@ -31,16 +30,9 @@ public class EformsUBLNamespaceContext extends MapBasedNamespaceContext
 
   protected EformsUBLNamespaceContext ()
   {
-    addMapping ("xsi", XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
-    addMapping ("xs", XMLConstants.W3C_XML_SCHEMA_NS_URI);
-    addMapping ("ext", CEformsUBL.XML_SCHEMA_EXT_NAMESPACE_URL);
     addMapping ("efext", CEformsUBL.XML_SCHEMA_EFEXT_NAMESPACE_URL);
     addMapping ("efbc", CEformsUBL.XML_SCHEMA_EFBC_NAMESPACE_URL);
     addMapping ("efac", CEformsUBL.XML_SCHEMA_EFAC_NAMESPACE_URL);
-    addMapping ("cac", CEformsUBL.XML_SCHEMA_CAC_NAMESPACE_URL);
-    addMapping ("cbc", CEformsUBL.XML_SCHEMA_CBC_NAMESPACE_URL);
-    addMapping ("ds", CXMLDSig.NAMESPACE_URI);
-
   }
 
   @Nonnull

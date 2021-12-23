@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020-2021 Philip Helger (www.helger.com)
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -47,9 +48,9 @@ public final class EformsUBLDocumentTypes
   }
 
   @PresentForCodeCoverage
-  private static final EformsUBLDocumentTypes INSTANCE = new EformsUBLDocumentTypes();
+  private static final EformsUBLDocumentTypes INSTANCE = new EformsUBLDocumentTypes ();
 
-  private EformsUBLDocumentTypes()
+  private EformsUBLDocumentTypes ()
   {}
 
   @Nullable
