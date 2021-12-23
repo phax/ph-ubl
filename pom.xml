@@ -196,8 +196,16 @@
           <excludes>
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
-            <exclude>docs/**</exclude>
             <exclude>**/*.txt</exclude>
+            <exclude>docs/**</exclude>
+            <exclude>src/main/resources/codelists/**</exclude>
+            <exclude>src/main/resources/schemas/**</exclude>
+            <exclude>src/main/resources/test-ubl/**</exclude>
+            <exclude>src/test/resources/examples/**</exclude>
+            <exclude>src/test/resources/test-dian/**</exclude>
+            <exclude>src/test/resources/test-ublpe20/**</exclude>
+            <exclude>src/test/resources/tr_useraccount/**</exclude>
+            <exclude>src/test/resources/tr_useraccount_zarf/**</exclude>
           </excludes>
         </configuration>
       </plugin>
