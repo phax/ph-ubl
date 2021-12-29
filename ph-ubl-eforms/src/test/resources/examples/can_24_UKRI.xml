@@ -1,0 +1,441 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:177511-2020:TEXT:EN:HTML
+-->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<cbc:TotalAmount currencyID="GBP">60000000</cbc:TotalAmount>
+						<efac:LotResult>
+							<cbc:HigherTenderAmount currencyID="GBP">80000000</cbc:HigherTenderAmount>
+							<cbc:LowerTenderAmount currencyID="GBP">60000000</cbc:LowerTenderAmount>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<cbc:RankCode>1</cbc:RankCode>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">60000000</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:SubcontractingTerm>
+								<efbc:TermCode listName="applicability">not-known</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>TEN 123/ABC-2020:01</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<cbc:AwardDate>2020-04-09+02:00</cbc:AwardDate>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<cbc:ID>SCRN ABC EFG:2020-001</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.uksbs.co.uk</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">UK Research and Innovation</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Polaris House</cbc:StreetName>
+									<cbc:CityName>Swindon</cbc:CityName>
+									<cbc:PostalZone>SN2 1FF</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKK14</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>n/a</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Nicola Turner</cbc:Name>
+									<cbc:Telephone>+44 1793867005</cbc:Telephone>
+									<cbc:ElectronicMail>fmprocurement@uksbs.co.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Policy Department</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Swindon</cbc:CityName>
+									<cbc:PostalZone>SN2 1FF</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>policy@uksbs.co.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Ramboll UK Ltd</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>240 Blackfriars Road</cbc:StreetName>
+									<cbc:CityName>London</cbc:CityName>
+									<cbc:PostalZone>SE1 8NW</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>n/a</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>75b70657-c146-4b5c-8d66-1ded90cdcd1d</cbc:ID>
+	<cbc:ContractFolderID>7b400e9a-0469-440b-8d64-9a68d4677806</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-14+01:00</cbc:IssueDate>
+	<cbc:IssueTime>01:01:01+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:Description languageID="ENG">Procurement overview UK Shared Business Services Ltd (UK SBS) on behalf of UK Research and Innovation (UKRI), wishes to establish a framework agreement for the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor. UK SBS is managing this procurement process in accordance with the Public Contracts Regulations 2015 (as may be amended from time to time) (the ‘Regulations’). This is a services framework agreement being procured under the Open OJEU Procedure regulations. This RFP sets out details of the framework agreement and expectations of any successful supplier. This framework agreement is for a duration of 10 years and will be awarded to a sole supplier. It is intended that the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor call off services will be managed using NEC4 term service contracts and task orders. Introduction The purpose of this framework agreement is to appoint a contractor to provide polar technical advisor services to the Antarctic Infrastructure Modernisation Programme (AIMP) Future Phases. Background to BAS BAS is an institute of the Natural Environment Research Council (NERC) which is an executive non-departmental public body funded by the Department for Business, Energy and Industrial Strategy (BEIS). BAS also provides the UK presence in the British Antarctic Territory, a role BAS undertakes on behalf of the Foreign and Commonwealth Office (FCO). Both NERC and BAS form a part of the UK Research and Innovation (UKRI). UKRI is the Contracting Authority and will delegate contract and project management responsibilities for this contract to BAS. BAS delivers and enables world-leading interdisciplinary research in the polar regions. Its skilled science and support staff based in Cambridge, Antarctica, the Falkland Islands and the Arctic, work together to deliver research that uses the Polar Regions to advance our understanding of Earth and our impact on it. Through its extensive logistic capability and know-how, BAS facilitates access for British and international science communities to UK polar research. Numerous national and international collaborations, combined with an excellent infrastructure, help sustain a world-leading position for the UK in Antarctic affairs. The UK is one of over thirty countries operating scientific research facilities in Antarctica. Overview The tender is for the procurement of a TA to support BAS (referred to as the Client) in the delivery of a wide range of projects overseas. The framework agreement is for a period of 10 years. The Contracting Authority shall be UKRI. The full scope of projects that shall be undertaken during the framework agreement period is not known, and therefore no guarantee can be given as to the actual amount or type of work that may be ordered during the framework agreement period. However, a series of potential projects have been identified and, subject to confirmation of funding, may require technical support from the TA. These include; • Rothera Research Station: — new accommodation block(s) — energy efficiency, renewables and sustainability projects — site services upgrade — rothera point operational improvements — new boat shed — replacement bonner laboratory • Rothera Air Capability: — runway refurbishment and possible extension — hangar upgrade (or replacement) • KEP Research Station Master Planning; • Bird Island Master Planning; • Signy Master Planning; • Falkland Islands logistics and biosecurity hub; • Halley VI decommissioning and future replacement; • new build fuel storage (various locations); • energy efficiency and sustainability (all stations), and • various demolition works. A brief summary of the requirements has been provided above, please ensure you review all additional appendices for full details of this requirement. All additional appendices can be found within the RFx attachments tab on the eSourcing Portal.</cbc:Description>
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>CON19006</cbc:ID>
+		<cbc:Name languageID="ENG">Antarctic Infrastructure Modernisation Programme (AIMP) technical Advisor</cbc:Name>
+		<cbc:Description languageID="ENG">Procurement overview UK Shared Business Services Ltd (UK SBS) on behalf of UK Research and Innovation (UKRI), wishes to establish a framework agreement for the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor. UK SBS is managing this procurement process in accordance with the Public Contracts Regulations 2015 (as may be amended from time to time) (the ‘Regulations’). This is a services framework agreement being procured under the Open OJEU Procedure regulations. This RFP sets out details of the framework agreement and expectations of any successful supplier. This framework agreement is for a duration of 10 years and will be awarded to a sole supplier. It is intended that the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor call off services will be managed using NEC4 term service contracts and task orders. Introduction The purpose of this framework agreement is to appoint a contractor to provide polar technical advisor services to the Antarctic Infrastructure Modernisation Programme (AIMP) Future Phases. Background to BAS BAS is an institute of the Natural Environment Research Council (NERC) which is an executive non-departmental public body funded by the Department for Business, Energy and Industrial Strategy (BEIS). BAS also provides the UK presence in the British Antarctic Territory, a role BAS undertakes on behalf of the Foreign and Commonwealth Office (FCO). Both NERC and BAS form a part of the UK Research and Innovation (UKRI). UKRI is the Contracting Authority and will delegate contract and project management responsibilities for this contract to BAS. BAS delivers and enables world-leading interdisciplinary research in the polar regions. Its skilled science and support staff based in Cambridge, Antarctica, the Falkland Islands and the Arctic, work together to deliver research that uses the Polar Regions to advance our understanding of Earth and our impact on it. Through its extensive logistic capability and know-how, BAS facilitates access for British and international science communities to UK polar research. Numerous national and international collaborations, combined with an excellent infrastructure, help sustain a world-leading position for the UK in Antarctic affairs. The UK is one of over thirty countries operating scientific research facilities in Antarctica. Overview The tender is for the procurement of a TA to support BAS (referred to as the Client) in the delivery of a wide range of projects overseas. The framework agreement is for a period of 10 years. The Contracting Authority shall be UKRI. The full scope of projects that shall be undertaken during the framework agreement period is not known, and therefore no guarantee can be given as to the actual amount or type of work that may be ordered during the framework agreement period. However, a series of potential projects have been identified and, subject to confirmation of funding, may require technical support from the TA. These include; • Rothera Research Station: — new accommodation block(s) — energy efficiency, renewables and sustainability projects — site services upgrade — rothera point operational improvements — new boat shed — replacement bonner laboratory • Rothera Air Capability: — runway refurbishment and possible extension — hangar upgrade (or replacement) • KEP Research Station Master Planning; • Bird Island Master Planning; • Signy Master Planning; • Falkland Islands logistics and biosecurity hub; • Halley VI decommissioning and future replacement; • new build fuel storage (various locations); • energy efficiency and sustainability (all stations), and • various demolition works. A brief summary of the requirements has been provided above, please ensure you review all additional appendices for full details of this requirement. All additional appendices can be found within the RFx attachments tab on the eSourcing Portal.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ENG">All submissions will be assessed in accordance with the Public Contracts Regulations 2015, for procurement values that exceed Regulation 5 (Threshold amounts). This procurement will be managed electronically via the Crown Commercial Service's eSourcing Suite. To participate in this procurement, participants shall first be registered on the eSourcing Suite, this can be done online at https://gpsesourcing.cabinetoffice.gov.uk/emptorisby following the link ‘Supplier eSourcing Registration’. Please note that, to register, bidders must have a valid DUNS number (as provided by Dun and Bradstreet) for the organisation which you are registering, who will be entering into a contract if invited to do so. Note: registration may take some time please ensure that you allow a sufficient amount of time to register. Full instructions for registrations and use of the system can be found at https://www.gov.uk/government/publications/becomea-crown-commercial-service-supplier registered user can express an interest for a specific procurement.This is done by emailingExpressionOfInterest@crowncommercial.gov.uk Your email must clearly state: the name and reference for the procurement you wish to register for; your organisations full name as a registered supplier; the name and contact details for the registered individual sending the email. Crown Commercial Service (CCS) will process the email and then enable the bidder to access the procurement online via the e-Sourcing Suite. The registered user will receive a notification email to alert them once this has been done. As a user of the e-Sourcing Suite you will have access to Emptoris email messaging service which facilitates all messages sent to you and from you in relation to any specific RFX event. Please note it is your responsibility to access these emails on a regular basis to ensure you have sight of all relevant information applicable to this opportunity. For technical assistance on use of the e-Sourcing Suite please contact Crown Commercial Service(CCS) Helpdesk (Not UK SBS Ltd): Freephone: 0345010 3503 email: eenablement@crowncommercial.gov.uk The Contracting Authority expressly reserves the right: (i) not to award any contract as a result of the procurement process commenced by publication of this notice; and (ii) to make whatever changes it may see fit to the content and structure of the procurement; and in no circumstances will the contracting authority be liable for any costs incurred by any supplier. If the contracting authority decides to enter into a contract with the successful supplier, this does not mean that there is any guarantee of subsequent contracts being awarded. Any expenditure, work or effort undertaken prior to contract award is accordingly a matter solely for the commercial judgement of bidders. The sourcing documents can be accessed at: https://gpsesourcing.cabinetoffice.gov.uk using the instructions detailed in I.3</cbc:Note>
+		<cac:RequestedTenderTotal>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">60000000</cbc:EstimatedOverallContractAmount>
+		</cac:RequestedTenderTotal>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71311200</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71311100</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71312000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71313000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71314300</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71315100</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71315200</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71315210</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71621000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">73000000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">73200000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="ENG">British Antarctic Survey</cbc:Description>
+			<cac:Address>
+				<cbc:StreetName>High Cross</cbc:StreetName>
+				<cbc:AdditionalStreetName>Madingley Road</cbc:AdditionalStreetName>
+				<cbc:CityName>Cambridge</cbc:CityName>
+				<cbc:PostalZone>CB3 0ET</cbc:PostalZone>
+				<cbc:CountrySubentityCode listName="nuts">UKH12</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>70</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Quality</cbc:Name>
+						<cbc:Description languageID="ENG">Quality</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>15</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Presentation</cbc:Name>
+						<cbc:Description languageID="ENG">Presentation</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>15</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Price</cbc:Name>
+						<cbc:Description languageID="ENG">Price</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ENG">An appeal can...</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:Name languageID="ENG">Antarctic Infrastructure Modernisation Programme (AIMP) technical Advisor</cbc:Name>
+			<cbc:Description languageID="ENG">Procurement overview UK Shared Business Services Ltd (UK SBS) on behalf of UK Research and Innovation (UKRI), wishes to establish a framework agreement for the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor. UK SBS is managing this procurement process in accordance with the Public Contracts Regulations 2015 (as may be amended from time to time) (the ‘Regulations’). This is a services framework agreement being procured under the Open OJEU Procedure regulations. This RFP sets out details of the framework agreement and expectations of any successful supplier. This framework agreement is for a duration of 10 years and will be awarded to a sole supplier. It is intended that the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor call off services will be managed using NEC4 term service contracts and task orders. Introduction The purpose of this framework agreement is to appoint a contractor to provide polar technical advisor services to the Antarctic Infrastructure Modernisation Programme (AIMP) Future Phases. Background to BAS BAS is an institute of the Natural Environment Research Council (NERC) which is an executive non-departmental public body funded by the Department for Business, Energy and Industrial Strategy (BEIS). BAS also provides the UK presence in the British Antarctic Territory, a role BAS undertakes on behalf of the Foreign and Commonwealth Office (FCO). Both NERC and BAS form a part of the UK Research and Innovation (UKRI). UKRI is the Contracting Authority and will delegate contract and project management responsibilities for this contract to BAS. BAS delivers and enables world-leading interdisciplinary research in the polar regions. Its skilled science and support staff based in Cambridge, Antarctica, the Falkland Islands and the Arctic, work together to deliver research that uses the Polar Regions to advance our understanding of Earth and our impact on it. Through its extensive logistic capability and know-how, BAS facilitates access for British and international science communities to UK polar research. Numerous national and international collaborations, combined with an excellent infrastructure, help sustain a world-leading position for the UK in Antarctic affairs. The UK is one of over thirty countries operating scientific research facilities in Antarctica. Overview The tender is for the procurement of a TA to support BAS (referred to as the Client) in the delivery of a wide range of projects overseas. The framework agreement is for a period of 10 years. The Contracting Authority shall be UKRI. The full scope of projects that shall be undertaken during the framework agreement period is not known, and therefore no guarantee can be given as to the actual amount or type of work that may be ordered during the framework agreement period. However, a series of potential projects have been identified and, subject to confirmation of funding, may require technical support from the TA. These include; • Rothera Research Station: — new accommodation block(s) — energy efficiency, renewables and sustainability projects — site services upgrade — rothera point operational improvements — new boat shed — replacement bonner laboratory • Rothera Air Capability: — runway refurbishment and possible extension — hangar upgrade (or replacement) • KEP Research Station Master Planning; • Bird Island Master Planning; • Signy Master Planning; • Falkland Islands logistics and biosecurity hub; • Halley VI decommissioning and future replacement; • new build fuel storage (various locations); • energy efficiency and sustainability (all stations), and • various demolition works. A brief summary of the requirements has been provided above, please ensure you review all additional appendices for full details of this requirement. All additional appendices can be found within the RFx attachments tab on the eSourcing Portal.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71000000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71311200</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71311100</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71312000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71313000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71314300</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71315100</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71315200</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71315210</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">71621000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">73000000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">73200000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">British Antarctic Survey</cbc:Description>
+				<cac:Address>
+					<cbc:StreetName>High Cross</cbc:StreetName>
+					<cbc:AdditionalStreetName>Madingley Road</cbc:AdditionalStreetName>
+					<cbc:CityName>Cambridge</cbc:CityName>
+					<cbc:PostalZone>CB3 0ET</cbc:PostalZone>
+					<cbc:CountrySubentityCode listName="nuts">UKH12</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2020-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

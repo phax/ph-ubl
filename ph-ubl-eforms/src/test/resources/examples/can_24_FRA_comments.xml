@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:40003-2020:TEXT:EN:HTML
+-->
+<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<!--CAN related values-->
+						<!--BT-161 Notice Value-->
+						<cbc:TotalAmount currencyID="EUR">390697.84</cbc:TotalAmount>
+						<efac:LotResult>
+							<!--BT-711 Tender Value Highest-->
+							<cbc:HigherTenderAmount currencyID="EUR">95414</cbc:HigherTenderAmount>
+							<!--BT-710 Tender Value Lowest-->
+							<cbc:LowerTenderAmount currencyID="EUR">59299.64</cbc:LowerTenderAmount>
+							<!--BT-142 Winner Chosen  |  BT-144 Not Awarded Reason-->
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<!--number of complaints-->
+							<efac:AppealRequestsStatistics>
+								<!--BT-712 Buyer Review Complainants -->
+								<efbc:StatisticsCode listName="review-type">complainants</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:AppealRequestsStatistics>
+							<!--number of review requests per type of irregularity suspicions-->
+							<efac:AppealRequestsStatistics>
+								<!--BT-636 Buyer Review Requests Irregularity Type -->
+								<efbc:StatisticsCode listName="irregularity-type">noex-timl</efbc:StatisticsCode>
+								<!--BT-635 Buyer Review Requests Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:AppealRequestsStatistics>
+							<efac:LotTender>
+								<!--OPT-320-->
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<!--number of submitted tenders per category-->
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<!--OPT-315-->
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<!--BT-13713 Result Lot Identifier-->
+								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotResult>
+							<!--BT-711 Tender Value Highest-->
+							<cbc:HigherTenderAmount currencyID="EUR">26500</cbc:HigherTenderAmount>
+							<!--BT-710 Tender Value Lowest-->
+							<cbc:LowerTenderAmount currencyID="EUR">14802.46</cbc:LowerTenderAmount>
+							<!--BT-142 Winner Chosen  |  BT-144 Not Awarded Reason-->
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<!--number of complaints-->
+							<efac:AppealRequestsStatistics>
+								<!--BT-712 Buyer Review Complainants -->
+								<efbc:StatisticsCode listName="review-type">complainants</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:AppealRequestsStatistics>
+							<!--number of review requests per type of irregularity suspicions-->
+							<efac:AppealRequestsStatistics>
+								<!--BT-636 Buyer Review Requests Irregularity Type -->
+								<efbc:StatisticsCode listName="irregularity-type">noex-timl</efbc:StatisticsCode>
+								<!--BT-635 Buyer Review Requests Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:AppealRequestsStatistics>
+							<efac:LotTender>
+								<!--OPT-320-->
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
+							<!--number of submitted tenders per category-->
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--BT-760 Received Submissions Type-->
+								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+								<!--BT-759 Received Submissions Count -->
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<!--OPT-315-->
+								<cbc:ID schemeName="contract">CON-0002</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<!--BT-13713 Result Lot Identifier-->
+								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<!--BT-171 Tender Rank-->
+							<cbc:RankCode>1</cbc:RankCode>
+							<!--BT-193 Tender Variant-->
+							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
+							<!--BT-720 Tender Value for lots & group of lots all together-->
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="EUR">95414</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:SubcontractingTerm>
+								<!--BT-773 Subcontracting-->
+								<efbc:TermCode listName="applicability">no</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<!--OPT-310 Tendering Party ID Reference-->
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<!--BT-13714 Tender Lot Identifier-->
+								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+							</efac:TenderLot>
+							<!--BT-3201 Tender Identifier-->
+							<efac:TenderReference>
+								<cbc:ID>BID/ABC/2020-003</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:LotTender>
+							<!--BT-3201 Tender Identifier-->
+							<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							<!--BT-171 Tender Rank-->
+							<cbc:RankCode>1</cbc:RankCode>
+							<!--BT-193 Tender Variant-->
+							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
+							<!--BT-720 Tender Value for lots & group of lots all together-->
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="EUR">26500</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:SubcontractingTerm>
+								<!--BT-773 Subcontracting-->
+								<efbc:TermCode listName="applicability">no</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<!--OPT-310 Tendering Party ID Reference-->
+								<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<!--BT-13714 Tender Lot Identifier-->
+								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<cbc:ID>BID/EFG/2020-001</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<!--OPT-316 Contract Technical Identifier-->
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<!--BT-1451 Winner Decision Date -->
+							<cbc:AwardDate>2019-09-02+02:00</cbc:AwardDate>
+							<!--BT-145 Contract Conclusion Date-->
+							<cbc:IssueDate>2019-09-03+02:00</cbc:IssueDate>
+							<!--BT-721 Contract Title-->
+							<cbc:Title languageID="FRA">Agence Centre</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<!--BT-150 Contract Identifier-->
+								<cbc:ID>SC/ABC/234/01</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<!--BT-3202 Tender Identifier Reference-->
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:SettledContract>
+							<!--OPT-316 Contract Technical Identifier-->
+							<cbc:ID schemeName="contract">CON-0002</cbc:ID>
+							<!--BT-1451 Winner Decision Date -->
+							<cbc:AwardDate>2019-09-02+02:00</cbc:AwardDate>
+							<!--BT-145 Contract Conclusion Date-->
+							<cbc:IssueDate>2019-09-03+02:00</cbc:IssueDate>
+							<!--BT-721 Contract Title-->
+							<cbc:Title languageID="FRA">Agence Hauts de Rouen</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<!--BT-150 Contract Identifier-->
+								<cbc:ID>SC/DEF/124/01</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<!--BT-3202 Tender Identifier Reference-->
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<!--OPT-210 Tendering Party ID-->
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<!--OPT-300 Tenderer ID Reference-->
+								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+						<efac:TenderingParty>
+							<!--OPT-210 Tendering Party ID-->
+							<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							<efac:Tenderer>
+								<!--OPT-300 Tenderer ID Reference-->
+								<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<!--BT-505 Organization Internet Address-->
+								<cbc:WebsiteURI>http://www.marches-publics.info/accueil.htm</cbc:WebsiteURI>
+								<!--BT-509 Organization eDelivery Gateway or BT-18 Submission URL-->
+								<cbc:EndpointID>https://www.marches-publics.info/accueil.htm</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500 Organisation Name-->
+									<cbc:Name languageID="FRA">Rouen Habitat</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510 Organization Street (Line 1)-->
+									<cbc:StreetName>5 place du Général de Gaulle</cbc:StreetName>
+									<!--BT-513 Organization City-->
+									<cbc:CityName>Rouen Cedex 1</cbc:CityName>
+									<!--BT-512 Organization Post Code-->
+									<cbc:PostalZone>76001</cbc:PostalZone>
+									<!--BT-507 Organization Country Subdivision-->
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+									<!--BT-514 Organization Country Code-->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<!--BT-501 using ISO ICD list - Peppol codelist -->
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<!--BT-502 Organization Contact Point (Role or Department preferred, Individual name only when strictly necessary)-->
+									<!--<cbc:Name>?</cbc:Name>-->
+									<!--BT-503 Organization Contact Telephone Number-->
+									<cbc:Telephone>+33 235156161</cbc:Telephone>
+									<!--BT-739 Organization Contact Fax-->
+									<!--<cbc:Telefax>?</cbc:Telefax>-->
+									<!--BT-506 Organization Contact Email Address-->
+									<cbc:ElectronicMail>contact@rouenhabitat.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<!--BT-500 Organisation Name-->
+									<cbc:Name languageID="FRA">Tribunal administratif de Rouen</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510 Organization Street (Line 1)-->
+									<cbc:StreetName>53 avenue Gustave Flaubert</cbc:StreetName>
+									<!--BT-513 Organization City-->
+									<cbc:CityName>Rouen</cbc:CityName>
+									<!--BT-512 Organization Post Code-->
+									<cbc:PostalZone>76000</cbc:PostalZone>
+									<!--BT-507 Organization Country Subdivision-->
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+									<!--BT-514 Organization Country Code-->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<!--BT-502 Organization COntact Point (Role or Department preferred, Individual name only when strictly necessary)-->
+									<!--<cbc:Name>?</cbc:Name>-->
+									<!--BT-503 Organization Contact Telephone Number-->
+									<cbc:Telephone>+33 232081270</cbc:Telephone>
+									<!--BT-739 Organization Contact Fax-->
+									<!--<cbc:Telefax>?</cbc:Telefax>-->
+									<!--BT-506 Organization Contact Email Address-->
+									<cbc:ElectronicMail>greffe.ta-rouen@juradm.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.espaces-verts-lemire.fr</cbc:WebsiteURI>
+								<efbc:CompanySizeCode listName="economic-operator-size">micro</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Espaces Verts Lemire</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>rue Pierre Corneille</cbc:StreetName>
+									<cbc:CityName>Le Grand-Quevilly</cbc:CityName>
+									<cbc:PostalZone>76120</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<!--BT-501 Organisation Identifier -->
+									<cbc:CompanyID schemeID="SIREN">326 912 557</cbc:CompanyID>
+									<!-- Beneficial owner of the winning organisation-->
+									<cac:ShareholderParty>
+										<cac:Party>
+											<cac:Person>
+												<!--BT-706 Winner Owner Nationality -->
+												<cbc:NationalityID schemeName="country">FRA</cbc:NationalityID>
+											</cac:Person>
+										</cac:Party>
+									</cac:ShareholderParty>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+33 2 35 67 82 82</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://idverde.com/</cbc:WebsiteURI>
+								<efbc:CompanySizeCode listName="economic-operator-size">medium</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">ID Verde SASU</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>122 Rue Edouard Vaillant</cbc:StreetName>
+									<cbc:CityName>Levallois-Perret,</cbc:CityName>
+									<cbc:PostalZone>92309 </cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:RegistrationName>SIREN</cbc:RegistrationName>
+									<!--BT-501 using ISO ICD list - Peppol codelist -->
+									<cbc:CompanyID schemeID="002">339 609 661</cbc:CompanyID>
+									<!-- Beneficial owner of the winning organisation-->
+									<cac:ShareholderParty>
+										<cac:Party>
+											<cac:Person>
+												<!--BT-706 Winner Owner Nationality -->
+												<cbc:NationalityID schemeName="country">FRA</cbc:NationalityID>
+											</cac:Person>
+										</cac:Party>
+									</cac:ShareholderParty>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+33 1 82 97 04 80</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<!--BT-701 Notice Identifier-->
+	<cbc:ID>df45f4d1-2208-47cb-bc7a-9c7edcf8d2b8</cbc:ID>
+	<!--BT-04 Procedure Identifier-->
+	<cbc:ContractFolderID>e3cdabf1-e057-47a5-9210-b1f6fc757228</cbc:ContractFolderID>
+	<!--BT-05 Notice Dispatch Date-->
+	<cbc:IssueDate>2019-10-23+01:00</cbc:IssueDate>
+	<cbc:IssueTime>00:00:00+01:00</cbc:IssueTime>
+	<!-- Notive Version number, to distinguish versions of a same notice within a same procedure -->
+	<!--BT-757 Version Identifier-->
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RequestedPublicationDate>2020-01-28+01:00</cbc:RequestedPublicationDate>
+	<!--BT-01 Procedure Legal Basis -->
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<!--BT-03 Form Type / BT-02 Notice Type-->
+	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+	<!--BT-702 Notice Official Language-->
+	<cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<!--BT-508 Buyer Profile URL-->
+		<cbc:BuyerProfileURI>http://www.marches-publics.info/accueil.htm</cbc:BuyerProfileURI>
+		<!--BT-11 Buyer Legal Type (see http://publications.europa.eu/resource/authority/buyer-legal-type)-->
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-la</cbc:PartyTypeCode>
+			<!--if other than Buyer Legal type codes -->
+			<cbc:PartyType languageID="FRA">OPH</cbc:PartyType>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<!--BT-10 Activity Authority (see http://publications.europa.eu/resource/authority/main-activity) -->
+			<cbc:ActivityTypeCode listName="authority-activity">hc-am</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<!--BT-105 Procedure Type-->
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<!--BT-22 Procedure Internal Identifier-->
+		<cbc:ID schemeName="InternalID">19S0001</cbc:ID>
+		<!--BT-21 Procedure Title-->
+		<cbc:Name languageID="FRA">Service d'entretien de remise en état et de nettoyage des espaces verts</cbc:Name>
+		<!--BT-24 Procedure Description-->
+		<cbc:Description languageID="FRA">Service d'entretien de remise en état et de nettoyage des espaces verts.</cbc:Description>
+		<!--BT-23 Procedure Main Nature (Goods, Works, Supplies)-->
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<!--BT-26 Classification Type (e.g. CPV) -->
+			<!--BT-262 Procedure Main Classification Code-->
+			<cbc:ItemClassificationCode listName="cpv">77310000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<!--BT-5071 Place Performance Country Subdivision-->
+				<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+				<!--BT-5141 Place Performance Country Code-->
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:CalculationExpression languageID="FRA">Le calcul du score prix-qualité est basé sur …</cbc:CalculationExpression>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="FRA">Prix</cbc:Name>
+						<cbc:Description languageID="FRA">Le prix contribue for 40 % …</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="FRA">Qualité</cbc:Name>
+						<cbc:Description languageID="FRA">La valeur technique participle pour 60 % …</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!--BT-99 review deadline description-->
+					<cbc:Description languageID="FRA">Un appel ...</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<!-- covers Organization sub-role = "Organization providing more information on the time limits for review" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<!-- covers Organization Role = "Review Organization" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<!-- covers Organization Role = "Mediation Organization" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<!--BT-115 GPA Coverage -->
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<!--BT-125 Previous Planning Identifier-->
+			<cac:NoticeDocumentReference>
+				<cbc:ID>219497-2019</cbc:ID>
+			</cac:NoticeDocumentReference>
+			<!--BT-767 - Electronic Auction-->
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<!--BT-765 - Framework Agreement-->
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<!--BT-766 - Dynamic Purchasing System-->
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<!--BT-22 Internal Identifier-->
+			<cbc:ID schemeName="InternalID">1</cbc:ID>
+			<!--BT-21 Lot Title-->
+			<cbc:Name languageID="FRA">Agence centre</cbc:Name>
+			<!--BT-24 Lot Description-->
+			<cbc:Description languageID="FRA">Service d'entretien de remise en état et de nettoyage des espaces verts.</cbc:Description>
+			<!--BT-23 Lot Main Nature (services, Works, Supplies)-->
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<!--BT-300 Additional Information-->
+			<cbc:Note languageID="FRA">Il est ici précisé que dans le but de mieux assurer la satisfaction de ses besoins en s'adressant à une pluralité de cocontractants ou de favoriser l'émergence d'une plus grande concurrence, le pouvoir adjudicateur impose une limitation du nombre de lots attribués à 1 pour un même attributaire. La règle d'attribution est explicitée à l'article 3-7 du règlement de la consultation.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<!--BT-26 Classification Type (e.g. CPV) -->
+				<!--BT-262 Procedure Main Classification Code-->
+				<cbc:ItemClassificationCode listName="cpv">77310000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<!--BT-728 Place of Performance Additional Information-->
+				<cbc:Description languageID="FRA">La liste exhaustive des lieux d'exécution se trouve dans le document de consultation intitulé «Décomposition du prix global et forfaitaires (DPGF) lot 1».</cbc:Description>
+				<cac:Address>
+					<!--BT-5071 Place Performance Country Subdivision-->
+					<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+					<!--BT-5141 Place Performance Country Code-->
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<!--BT-536 Lot - Duration Start Date -->
+				<cbc:StartDate>2019-09-01+02:00</cbc:StartDate>
+				<!--BT-537 Lot - Duration Start Date -->
+				<cbc:EndDate>2020-12-31+02:00</cbc:EndDate>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<!--BT-57 Lot - Renewal Description-->
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="FRA">L'accord-cadre est reconductible de manière tacite, dans les conditions définies au cahier des clauses administratives particulières, 3 fois, pour une période de 12 mois, à compter du 1.1.2021, sans pouvoir excéder le 31.12.2023.</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:CalculationExpression languageID="FRA">Le calcul du score prix-qualité est basé sur …</cbc:CalculationExpression>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="FRA">Prix</cbc:Name>
+						<cbc:Description languageID="FRA">Le prix contribue for 60 % …</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="FRA">Qualité</cbc:Name>
+						<cbc:Description languageID="FRA">La valeur technique participle pour 40 % …</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!--BT-99 review deadline description-->
+					<cbc:Description languageID="FRA">Un appel ...</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<!-- covers Organization subr-ole = "Organization providing more information on the time limits for review" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<!-- covers Organization Role = "Review Organization" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<!-- covers Organization Role = "Mediation Organization" -->
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<!--BT-115 GPA Coverage -->
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<!--BT-767 - Electronic Auction-->
+			<!--BT-125 Previous Planning Identifier-->
+			<cac:NoticeDocumentReference>
+				<cbc:ID>219497-2019</cbc:ID>
+			</cac:NoticeDocumentReference>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<!--BT-765 - Framework Agreement-->
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<!--BT-766 - Dynamic Purchasing System-->
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<!--BT-22 Internal Identifier-->
+			<cbc:ID schemeName="InternalID">2</cbc:ID>
+			<!--BT-21 Lot Title-->
+			<cbc:Name languageID="FRA">Agence Hauts de Rouen</cbc:Name>
+			<!--BT-24 Lot Description-->
+			<cbc:Description languageID="FRA">Service d'entretien de remise en état et de nettoyage des espaces verts.</cbc:Description>
+			<!--BT-23 Lot Main Nature (services, Works, Supplies)-->
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<!--BT-300 Additional Information-->
+			<cbc:Note languageID="FRA">Il est ici précisé que dans le but de mieux assurer la satisfaction de ses besoins en s'adressant à une pluralité de cocontractants ou de favoriser l'émergence d'une plus grande concurrence, le pouvoir adjudicateur impose une limitation du nombre de lots attribués à 1 pour un même attributaire. La règle d'attribution est explicitée à l'article 3-7 du règlement de la consultation.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<!--BT-26 Classification Type (e.g. CPV) -->
+				<!--BT-262 Procedure Main Classification Code-->
+				<cbc:ItemClassificationCode listName="cpv">77310000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<!--BT-728 Place of Performance Additional Information-->
+				<cbc:Description languageID="FRA">La liste exhaustive des lieux d'exécution se trouve dans le document de consultation intitulé «Décomposition du prix global et forfaitaires (DPGF) lot 1».</cbc:Description>
+				<cac:Address>
+					<!--BT-5071 Place Performance Country Subdivision-->
+					<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
+					<!--BT-5141 Place Performance Country Code-->
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<!--BT-536 Lot - Duration Start Date -->
+				<cbc:StartDate>2019-09-01+02:00</cbc:StartDate>
+				<!--BT-537 Lot - Duration Start Date -->
+				<cbc:EndDate>2020-12-31+01:00</cbc:EndDate>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<!--BT-58 - Renewal Maximum-->
+				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
+				<!--BT-57 Lot - Renewal Description-->
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="FRA">L'accord-cadre est reconductible de manière tacite, dans les conditions définies au cahier des clauses administratives particulières, 3 fois, pour une période de 12 mois, à compter du 1.1.2021, sans pouvoir excéder le 31.12.2023.</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

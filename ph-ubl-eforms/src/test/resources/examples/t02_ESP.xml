@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<!-- Currently filled in with fake values.
+-->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<efac:LotResult>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<efbc:PublicTransportationCumulatedDistance unitCode="km">988754432110987</efbc:PublicTransportationCumulatedDistance>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="EUR">9693759000.00</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">cost-comp</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Description of the costs parameters blablabla ...</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">exc-right</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Explotar en exclusiva los servicios objeto del contrato durante la vigencia del mismo sin perjuicio de lo establecido en la cláusula 3.ª bis.</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">soc-stand</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Description of the social-standards blablabla ...</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">publ-ser-obl</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Sí.</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">other</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Las fijadas en el contrato.</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<efac:ContractTerm>
+								<efbc:TermCode listName="customer-service">rew-pen</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">Information on Rewards and Penalties ....</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>
+							<!--<efac:ContractTerm>
+								<efbc:TermCode listName="contract-detail">all-rev-tic</efbc:TermCode>
+								<efbc:TermDescription languageID="SPA">100.0</efbc:TermDescription>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+							</efac:ContractTerm>-->
+							<efac:ContractTerm>
+								<efbc:TermCode>all-rev-ic</efbc:TermCode>
+								<efbc:TermIndicator>true</efbc:TermIndicator>
+								<efbc:TermPercent>100</efbc:TermPercent>
+							</efac:ContractTerm>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>TDR ABC:2020-01</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<!--<cbc:ID>CONTRACT 627836</cbc:ID>-->
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<cbc:AwardDate>2020-02-12+01:00</cbc:AwardDate>
+							<cbc:IssueDate>2020-04-09+02:00</cbc:IssueDate>
+							<efac:ContractReference>
+								<cbc:ID>RN CON:2020-02/SC</cbc:ID>
+							</efac:ContractReference>
+							<efac:DurationJustification>
+								<efbc:ExtendedDurationIndicator>true</efbc:ExtendedDurationIndicator>
+								<efac:AssetsList>
+									<efac:Asset>
+										<efbc:AssetDescription languageID="SPA">Asset 1 blabla</efbc:AssetDescription>
+										<efbc:AssetSignificance languageID="SPA">30</efbc:AssetSignificance>
+										<efbc:AssetPredominance languageID="SPA">40</efbc:AssetPredominance>
+									</efac:Asset>
+									<efac:Asset>
+										<efbc:AssetDescription languageID="SPA">Asset 2 blibli</efbc:AssetDescription>
+										<efbc:AssetSignificance languageID="SPA">35</efbc:AssetSignificance>
+										<efbc:AssetPredominance languageID="SPA">25</efbc:AssetPredominance>
+									</efac:Asset>
+								</efac:AssetsList>
+							</efac:DurationJustification>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">T02</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.mitma.es/</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">Ministerio de Transportes, Movilidad y Agenda Urbana</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Paseo Castellana, 67</cbc:StreetName>
+									<cbc:CityName>Madrid</cbc:CityName>
+									<cbc:PostalZone>28071</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>S 2800113 I</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Dirección General de Transporte Terrestre</cbc:Name>
+									<cbc:Telephone>+34 915977000</cbc:Telephone>
+									<cbc:ElectronicMail>sgatt@fomento.es</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<!-- Winner Listed (BT-746) -->
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<!--BT-633 Organization Natural Person-->
+							<efbc:NaturalPersonIndicator>false</efbc:NaturalPersonIndicator>
+							<!-- When not listed, and not a natural-person, then shall be linked to at least one Beneficial Owner -->
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.renfe.com/</cbc:WebsiteURI>
+								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="SPA">Sociedad Mercantil Estatal Renfe Viajeros, Sociedad Anónima</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Avenida Pío XII, 110</cbc:StreetName>
+									<cbc:CityName>Madrid</cbc:CityName>
+									<cbc:PostalZone>2836</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>AB12345</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+234) 98765</cbc:Telephone>
+									<cbc:ElectronicMail>contact@hulk-comp.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<cbc:FirstName>Mickey</cbc:FirstName>
+							<cbc:FamilyName>Mouse</cbc:FamilyName>
+							<cac:Contact>
+								<cbc:Telephone>(+12)34567890</cbc:Telephone>
+								<cbc:ElectronicMail>contact@acme.es</cbc:ElectronicMail>
+							</cac:Contact>
+							<cac:ResidenceAddress>
+								<cbc:StreetName>Calle hancha, 78</cbc:StreetName>
+								<cbc:CityName>Madrid</cbc:CityName>
+								<cbc:PostalZone>2836</cbc:PostalZone>
+								<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+								<cac:Country>
+									<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:ResidenceAddress>
+							<!-- Winner Owner Nationality (BT-706) -->
+							<efac:Nationality>
+								<cbc:NationalityID>ESP</cbc:NationalityID>
+							</efac:Nationality>
+							<efac:Nationality>
+								<cbc:NationalityID>FRA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
+					</efac:Organizations>
+					<efac:Publication>
+						<efbc:NoticePublicationID schemeName="ojs-notice-id">483706-2020</efbc:NoticePublicationID>
+						<efbc:GazetteID schemeName="ojs-id">199/2020</efbc:GazetteID>
+						<efbc:PublicationDate>2020-10-13+01:00</efbc:PublicationDate>
+					</efac:Publication>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>17f00f55-7178-4597-822a-545d2f55a150</cbc:ID>
+	<!-- element required for this doctype -->
+	<cbc:ContractFolderID>00000000-0000-0000-0000-000000000000</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-05-08+01:00</cbc:IssueDate>
+	<cbc:IssueTime>01:01:01+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<!--<cbc:PlannedDate>2020-10-08+01:00</cbc:PlannedDate>-->
+	<cbc:RegulatoryDomain>32007R1370</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="result">can-tran</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>SPA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="service-provider-type">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cac:TendererQualificationRequest>
+			<cac:SpecificTendererRequirement>
+				<cbc:Description languageID="SPA">description on Exclusion Grounds</cbc:Description>
+			</cac:SpecificTendererRequirement>
+		</cac:TendererQualificationRequest>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>77635</cbc:ID>
+		<cbc:Name languageID="SPA">Public transport services by railways</cbc:Name>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="SPA">Any additional information blabla ...</cbc:Note>
+		<cac:ProcurementAdditionalType>
+			<cbc:ProcurementTypeCode listName="transport-service">other</cbc:ProcurementTypeCode>
+		</cac:ProcurementAdditionalType>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">60210000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">ticket</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for information and tickets</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">reliability</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for punctuality and reliability</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">cancel</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for cancellations of services</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">clean</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for cleanliness of rolling stocks and station facilities</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">sat-surv</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for customer satisfaction survey</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">complaint</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for complaint handling</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">assistance</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for assistance to persons with reduced mobility</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="customer-service">other</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="SPA">Quality target description for other quality targets</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:Name languageID="SPA">Prestación de los servicios públicos de transporte de viajeros por ferrocarril competencia de la AGE, sujetos a OSP en el periodo 2018-2027</cbc:Name>
+			<cbc:Description languageID="SPA">Contrato entre la Administración General del Estado y la Sociedad Mercantil Estatal Renfe Viajeros, S. M. E., S. A., para la prestación de los servicios públicos de transporte de viajeros por ferrocarril de Cercanías, Media Distancia Convencional, Alta Velocidad Media Distancia (Avant) y ancho métrico, competencia de la Administración General del Estado, sujetos a obligaciones de servicio público en el periodo 2018-2027.
+(nature and quantity of services or indication of needs and requirements)</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">60210000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">ES</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<!-- information required by XSD but not in form -->
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

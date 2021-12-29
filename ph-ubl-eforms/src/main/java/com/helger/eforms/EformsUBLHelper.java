@@ -1,0 +1,85 @@
+/*
+ * Copyright (C) 2021 Jonatan Sunden
+ * Copyright (C) 2021 Philip Helger (www.helger.com)
+ * philip[at]helger[dot]com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.helger.eforms;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.concurrent.Immutable;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import com.helger.commons.ValueEnforcer;
+import com.helger.commons.state.ESuccess;
+import com.helger.eforms.jaxb.ext.EformsExtension;
+
+import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.ExtensionContentType;
+
+/**
+ * Helper for encapsulating the EForms extension correctly
+ *
+ * @author Philip Helger
+ */
+@Immutable
+public final class EformsUBLHelper
+{
+  private EformsUBLHelper ()
+  {}
+
+  /**
+   * Get the {@link EformsExtension} from the provided
+   * {@link ExtensionContentType}.
+   *
+   * @param aExt
+   *        The extension content. May not be <code>null</code>.
+   * @return <code>null</code> if the content is no {@link EformsExtension}.
+   */
+  @Nullable
+  public static EformsExtension getFormsExtension (@Nonnull final ExtensionContentType aExt)
+  {
+    ValueEnforcer.notNull (aExt, "Ext");
+
+    final Object aAny = aExt.getAny ();
+    if (aAny instanceof Element)
+      return new EFormsExtensionMarshaller ().read ((Element) aAny);
+    return null;
+  }
+
+  /**
+   * Set the {@link EformsExtension} to the provided
+   * {@link ExtensionContentType}.
+   *
+   * @param aExt
+   *        The extension content. May not be <code>null</code>.
+   * @param aEformsExtension
+   *        The EForms Extension content itself.
+   * @return Never <code>null</code>.
+   */
+  @Nonnull
+  public static ESuccess setFormsExtension (@Nonnull final ExtensionContentType aExt, @Nonnull final EformsExtension aEformsExtension)
+  {
+    ValueEnforcer.notNull (aExt, "Ext");
+    ValueEnforcer.notNull (aEformsExtension, "EformsExtension");
+
+    final Document aDoc = new EFormsExtensionMarshaller ().getAsDocument (aEformsExtension);
+    if (aDoc == null)
+      return ESuccess.FAILURE;
+    aExt.setAny (aDoc.getDocumentElement ());
+    return ESuccess.SUCCESS;
+  }
+}

@@ -1,0 +1,409 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:125030-2020:TEXT:EN:HTML
+-->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<cbc:TotalAmount currencyID="EUR">3000000</cbc:TotalAmount>
+						<efac:LotResult>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>4</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">t-no-eea</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>5</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0002</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">2000000</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:ConcessionRevenue>
+								<efbc:RevenueBuyerAmount currencyID="GBP">456</efbc:RevenueBuyerAmount>
+								<efbc:RevenueUserAmount currencyID="GBP">123</efbc:RevenueUserAmount>
+								<efbc:ValueDescription languageID="ENG">Any other details relevant to the value of the concession according to Art. 8(3) of the directive:
+									It is recognised that an indication of the volumes of business likely to be conducted is required. It is not however possible to predict the impact of the Councils requirements as a result of any future unforeseen circumstances, market changes or forthcoming initiatives. We cannot therefore give any guarantee of likely or potential business levels with this agreement.</efbc:ValueDescription>
+							</efac:ConcessionRevenue>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>ABC DEF-2020-01</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:LotTender>
+							<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">1000000</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:ConcessionRevenue>
+								<efbc:RevenueBuyerAmount currencyID="GBP">456</efbc:RevenueBuyerAmount>
+								<efbc:RevenueUserAmount currencyID="GBP">123</efbc:RevenueUserAmount>
+								<efbc:ValueDescription languageID="ENG">Any other details relevant to the value of the concession according to Art. 8(3) of the directive:
+									It is recognised that an indication of the volumes of business likely to be conducted is required. It is not however possible to predict the impact of the Councils requirements as a result of any future unforeseen circumstances, market changes or forthcoming initiatives. We cannot therefore give any guarantee of likely or potential business levels with this agreement.</efbc:ValueDescription>
+							</efac:ConcessionRevenue>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderReference>
+								<cbc:ID>ABC DEF/2020-07</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<cbc:AwardDate>2020-02-19+01:00</cbc:AwardDate>
+							<cbc:Title languageID="ENG">Concession Contract for the Supply of Enforcement Agency Services (Call-off from the YPO Enforcement Services DPS — 774)</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<cbc:ID>DF JDHF/2020-05</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0002</cbc:ID>
+							<cbc:AwardDate>2020-02-19+01:00</cbc:AwardDate>
+							<cbc:Title languageID="ENG">Concession Contract for the Supply of Enforcement Agency Services (Call-off from the YPO Enforcement Services DPS — 774)</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<cbc:ID>DF DFGH/2020-07</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>32</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.wakefield.gov.uk/?home=true</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">The Council of the City of Wakefield</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Town Hall, Wood Street</cbc:StreetName>
+									<cbc:CityName>Wakefield</cbc:CityName>
+									<cbc:PostalZone>WF1 2HQ</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKE</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Karen Towers</cbc:Name>
+									<cbc:Telephone>+44 1924306780</cbc:Telephone>
+									<cbc:ElectronicMail>ktowers@wakefield.gov.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Corporate Procurement Team Wakefield</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>One Burton Street</cbc:StreetName>
+									<cbc:CityName>Wakefield</cbc:CityName>
+									<cbc:PostalZone> WF1 2EB</cbc:PostalZone>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>+44 1924306781</cbc:Telephone>
+									<cbc:ElectronicMail>procurement@wakefield.gov.uk</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<efbc:CompanySizeCode listName="economic-operator-size">medium</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Jacobs</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Birkenhead</cbc:CityName>
+									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="222">222 222 222</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>321 654 987</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<efbc:CompanySizeCode listName="economic-operator-size">medium</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Phoenix commercial collections</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Bolton</cbc:CityName>
+									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="222">333 333 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>123 456 789</cbc:Telephone>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>f4308a76-5393-477c-ba91-f4c9fb8818a6</cbc:ID>
+	<cbc:ContractFolderID>37f6106b-c2e1-45f1-b88a-14888693ee36</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-03-10+01:00</cbc:IssueDate>
+	<cbc:IssueTime>03:33:33+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0023</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://tendering.ypo.co.uk/procontract/ypo/supplier.nsf/frm_home?ReadForm</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">la</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">not-cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:ProcurementProject>
+		<cbc:ID>DPS — 774</cbc:ID>
+		<cbc:Name languageID="ENG">Concession Contract for the Supply of Enforcement Agency Services (Call-off from the YPO Enforcement Services DPS — 774)</cbc:Name>
+		<cbc:Description languageID="ENG">The Council of the Wakefield will be undertaking a call for further competition under the YPO Enforcement Agency Services DPS pursuant to the requirements of the Concession Contracts Regulations 2016 and the procedures laid down in the in the DPS to enter into a concession contract under which the Council will entrust the provision of the enforcement agency services to concessionaires in relation to debts accruing regarding non-payment of the outlined in II.2.4). Only those suppliers registered on the DPS will be invited to participate. The Council is looking to award one contract for first line referrals and one contract for second line referrals under service concession contracts. Successful suppliers must be able to provide all the service required as outlined in the ITB. Contracts will be for 1 year with the option to extend for a further three, 12 month period.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ENG">Pricing is as set out in the Taking Control of Goods (Fees) Regulations 2014. Prices for ancillary service requirements are as stated in the tender documents. Terms and conditions: the Council has opted to use its own terms and conditions. The terms and conditions are as stated in the tender documents.</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">75242110</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">75000000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">79940000</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:AdditionalCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">98351110</cbc:ItemClassificationCode>
+		</cac:AdditionalCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">UKE4</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="ENG">Quality</cbc:Description>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Quality</cbc:Name>
+						<cbc:Description languageID="ENG">Quality</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ENG">The Council will incorporate a minimum 10 calendar day standstill period at the point when information on the award of the contract is communicated to tenderers. If an appeal regarding the award of a contract has not been successfully resolved the Concession Contracts Regulations 2016 provide for aggrieved parties who have been harmed or are at risk of harm by a breach of the rules to take action in the High Court (England, Wales and Northern Ireland).</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>DPS — 774</cbc:ID>
+			<cbc:Name languageID="ENG">Concession Contract for the Supply of Enforcement Agency Services (Call-off from the YPO Enforcement Services DPS — 774)</cbc:Name>
+			<cbc:Description languageID="ENG">Wakefield Council is looking to award two services concession contracts under this call-off from the YPO Enforcement Services DPS – 774 in compliance with CCR 16. Under the concession contracts the Council will entrust the provision of the enforcement agency services to concessionaires in relation to debts accruing regarding non-payment of the following: • Council, • Tax Business Rates, • BID Levy, • civil parking enforcement, • overpaid housing benefits debt recovery, • Sundry Income Debt Recovery including High Court Enforcement, • Miscellaneous Debt Recovery together with the following ancillary services, • tracing service. The Council is looking to appoint one supplier for first line referrals and a different supplier for second line referrals under services concession contracts. Successful suppliers must be able to provide all of the above-mentioned services which will be described in more detail in the tender documents to be published under the call for competition. All first line referrals will be awarded to the highest scoring bidder following the evaluation. All second line referrals will be awarded to the 2nd highest scoring bidder.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="ENG">Pricing is as set out in the Taking Control of Goods (Fees) Regulations 2014. Prices for ancillary service requirements are as stated in the tender documents. Terms and conditions: the Council has opted to use its own terms and conditions. The terms and conditions are as stated in the tender documents.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">75242110</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">75000000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">79940000</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:AdditionalCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">98351110</cbc:ItemClassificationCode>
+			</cac:AdditionalCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">UKE4</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:362098-2020:TEXT:FR:HTML
+-->
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode>18</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>http://www.cea.fr</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">Commissariat à l'énergie atomique et aux énergies alternatives</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>CEA/DAM Île-de-France DCG/SAPI/BGI bâtiment U Bruyères-le-Châtel</cbc:StreetName>
+									<cbc:CityName>Arpajon Cedex</cbc:CityName>
+									<cbc:PostalZone>91297</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FR</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Name>M Vincent Gourdin</cbc:Name>
+									<cbc:Telephone>+44 3067988090</cbc:Telephone>
+									<cbc:Telefax>+33 169267009</cbc:Telefax>
+									<cbc:ElectronicMail>sapi.bgi@cea.fr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="FRA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+					<efac:Publication>
+						<efbc:NoticePublicationID schemeName="ojs-notice-id">362098-2020</efbc:NoticePublicationID>
+						<efbc:GazetteID schemeName="ojs-id">147/2020</efbc:GazetteID>
+						<efbc:PublicationDate>2020-07-31+02:00</efbc:PublicationDate>
+					</efac:Publication>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:ID>fc9cfb17-81d0-4f26-9a00-0c4bd25cf0a2</cbc:ID>
+	<cbc:ContractFolderID>82c626cc-83e1-4644-9cf1-6ed82b3e3dbc</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
+	<cbc:IssueTime>03:23:02+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>FRA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://www.marches-publics.gouv.fr</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>700029324</cbc:ID>
+		<cbc:Name languageID="FRA">
+			Assistance à maîtrise d’œuvre en suivi de réalisation dans le cadre du projet de construction d’un poste de garde et d’un parking sur plusieurs niveaux sur le site CEA de Cadarache pour le compte du CEA DAM
+		</cbc:Name>
+		<cbc:Description languageID="FRA">
+			Les prestations consistent à assurer une assistance de la maîtrise d’œuvre dans le suivi de réalisation du projet PGZ. 
+			Le projet PGZ comprend la construction de deux sous-ensembles:
+			— le sous-ensemble PGZ consiste en la construction d’un bâtiment d’accueil d’environ 300 m2; 
+			— d’une vigie d’environ 60 m2 et d’une zone de contrôle de véhicules et de piétons. 
+			La réalisation de ces ouvrages sera assurée par les titulaires des quatre lots suivants: lot VRD, lot construction des bâtiment en tout corps d’état, lot courant faible et protection et le lot clôture;
+			— le sous-ensemble parking consiste en la construction d’un parking aérien sur trois niveaux permettant le stationnement d’environ 650 véhicules. La réalisation sera confiée à un titulaire spécialisé dans la construction de ce type d’ouvrage.
+		</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">71336000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="FRA">CEA Cadarache — 13115 Saint-Paul-lez-Durance.</cbc:Description>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<!--Financial-->
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">
+									Les entreprises candidates doivent fournir à l’appui de leur candidature un dossier de présentation du candidat, et le cas échéant de chaque co-traitant, comprenant entre autres:
+									— les caractéristiques de l’entreprise: statuts, forme juridique, composition du capital, principaux actionnaires, participations, représentants engageant l’entreprise, effectif total, dimensions, activités, organigramme;
+									— un extrait k-bis ou équivalent;
+									— une attestation d’assurance en cours de validité pour le candidat et chaque cotraitant;
+									— le chiffre d’affaire global et le CA concernant les fournitures, services ou travaux objet du marché, réalisés au cours des trois derniers exercices disponibles, ainsi que le nombre total de salariés de l’entreprise candidate;
+									— les trois derniers bilans et comptes de résultat des opérateurs économiques pour lesquels l’établissement des bilans est obligatoire en vertu de la loi.
+									Lorsqu’il appartient à un groupe, une attestation certifiant de son autonomie commerciale et de sa situation de concurrence vis-à-vis des autres entreprises du groupe.
+									Si le candidat recourt à la sous-traitance, il doit produire les mêmes renseignements et documents concernant son/ses sous-traitants. En outre, pour justifier qu’il dispose des capacités de ce(s) sous-traitant(s) pour l’exécution du marché, il apporte la preuve par tout moyen approprié.
+									La sous-traitance totale est interdite.
+								</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<!--technical-->
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">
+									La sélection des candidats se fera sur les critères techniques suivants:
+									— maîtrise de l’assistance à maîtrise d’œuvre en suivi de réalisation d’installations tertiaires;
+									— moyens matériels/logiciels et méthodologiques disponibles et maîtrisés pour le marché dans les métiers/domaines techniques cités au III.2.3.2).
+									L’atteinte de ces critères sera démontrée par les dossiers listés ci-après. Chaque entreprise candidate (le mandataire et chacun des cotraitants dans le cadre d‘un groupement) devra présenter:
+									1) Un dossier précis et détaillé de références en assistance à MOE en suivi de réalisation d’installations tertiaires de même complexité exécutée dans les cinq dernières années et précisant:
+									1.1) Les caractéristiques des installations et des procédés techniques qu’elles intègrent;
+									1.2) En cas de groupement, les tâches exécutées en propre par l’entreprise.
+									Devront notamment être précisés: la nature du projet, la date, le lieu d’exécution, les références du client correspondant avec ses coordonnées postales et téléphoniques ainsi que celles de la personne en charge du projet, un descriptif précis des responsabilités exercées et des actions conduites par le candidat dans le projet;
+									2) Ressources et compétences disponibles pour le marché, sur sa durée, dans les métiers/domaines techniques suivants:
+									2.1) Terrassement;
+									2.2) VRD;
+									2.3) Construction tous corps d'état;
+									2.4) Génie civil;
+									2.5) Ventilation;
+									2.6) Fluides industriel;
+									2.7) Construction mécanique;
+									2.8) Électricité courants forts;
+									2.9) Électricité courants faibles et de sécurité;
+									2.10) Protection physique;
+									2.11) Clôtures;
+									2.12) Management projet, organisation et gestion des ressources associées;
+									2.13) OPC;
+									2.14) Ingénierie système – planification, maîtrise du logiciel MS project, version 2010 ou supérieure, nécessaire pour l’élaboration et le suivi de la planification de réalisation;
+									2.15) Ingénierie système – synthèse, maîtrise du logiciel REVIT, version 2017 ou supérieure, nécessaire pour la mise à jour et l’exploitation d’une maquette numérique 3D;
+									2.16) Maîtrise du logiciel AutocAD, version 2016 ou supérieure, nécessaire pour la vérification, la création et la mise à jour de plans techniques.
+									Si le candidat recourt à la sous-traitance, il doit produire les mêmes renseignements et documents concernant ce sous-traitant. En outre, pour justifier qu’il dispose des capacités de ce(s) sous-traitant(s) pour l’exécution du marché, il apporte la preuve par tout moyen approprié.
+								</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<!--Professional-->
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">
+									Le CEA procédera à l'analyse et à la sélection des candidatures conformément aux critères suivants:
+									— conformité administrative;
+									— capacité financière;
+									— capacité technique [détaillé en III.2.3)].
+									1) Présentation des candidatures:
+									Les entreprises candidates doivent fournir à l’appui de leur candidature:
+									— le formulaire DC1 (lettre de candidature et désignation du mandataire par ses cotraitants) ou équivalent;
+									— le formulaire DC2 (déclaration du candidat individuel ou du membre du groupement), ou équivalent.
+									Les formulaires sont disponibles sur le site internet du ministère de l'économie, de l'industrie et de l'emploi:
+									http://www.economie.gouv.fr/daj/formulairesdeclaration-du-candidat
+									— la copie du ou des jugements prononcés s'il est en redressement judiciaire ou dans une procédure étrangère équivalente;
+									— les attestations de régularité fiscales et sociales.
+									Il est interdit de cumuler les candidatures:
+									— en tant que candidat individuel et membre d’un ou plusieurs groupements y compris en tant que mandataire;
+									— en tant que membre d’un groupement et mandataire d’un autre.
+									2) Les entreprises nouvellement créées sont autorisées à présenter leur candidature. Si elles ne sont pas en mesure de produire certains des documents demandés dans le présent avis de marché, elles peuvent justifier de leurs capacités financières et professionnelles par d’autres moyens que ceux indiqués dans le présent avis et notamment par la présentation de titres ou de l’expérience professionnelle du ou de leurs responsables.
+									Le recours à la sous-traitance sera effectué dans le cadre des dispositions du code de la commande publique et des dispositions applicables aux marchés publics de défense ou de sécurité. 
+									Le formulaire DC4 est à compléter pour chaque demande d’acceptation de sous-traitant.
+								</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:TenderSubcontractingRequirements>
+								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">shar-subc</efbc:TenderSubcontractingRequirementsCode>
+							</efac:TenderSubcontractingRequirements>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+			<cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+			<cac:RequiredFinancialGuarantee>
+				<cbc:GuaranteeTypeCode listName="tender-guarantee-required">false</cbc:GuaranteeTypeCode>
+			</cac:RequiredFinancialGuarantee>
+			<cac:PaymentTerms>
+				<cbc:Note languageID="FRA">Non</cbc:Note>
+			</cac:PaymentTerms>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+					<cbc:Description languageID="FRA">
+					</cbc:Description>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:TendererQualificationRequest>
+				<cbc:CompanyLegalFormCode>true</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalForm languageID="FRA">En cas de groupement, ce dernier doit revêtir la forme d’un Groupement momentané d’entreprises (GME) solidaire ou à défaut d’un GME conjoint. 
+En tout état de cause, le mandataire doit être solidaire de tous les membres du groupement.</cbc:CompanyLegalForm>
+			</cac:TendererQualificationRequest>
+			<cac:AllowedSubcontractTerms>
+				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">subc-chng</cbc:SubcontractingConditionsCode>
+			</cac:AllowedSubcontractTerms>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="conditions">yes</cbc:ExecutionRequirementCode>
+				<cbc:Description languageID="FRA">
+					Ce marché est un marché « Confidentiel défense — CD » au sens de l’arrêté du 30.11.2011 portant approbation de l’instruction générale interministérielle no 1300 sur la protection du secret de la défense nationale. Ce marché donne accès à des informations classifiées intéressant la défense nationale. Il ne nécessite pas la détention d’informations et/ou de supports classifiés « Confidentiel défense — CD » par le titulaire dans ses locaux.
+					En conséquence, le dossier de candidature doit contenir sous enveloppe séparée:
+					— soit une attestation d’une décision d’habilitation DGA en cours de validité;
+					— soit une demande d’habilitation (pour tout renseignement contacter OS DAM CAD — Tél: 06.87.91.94.90).
+					Les mêmes démarches doivent être engagées pour les entreprises associées, en cas de candidature en Groupement Momentané d’Entreprises ou des sous-traitants pressentis par les candidats audit marché.
+				</cbc:Description>
+			</cac:ContractExecutionRequirement>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cbc:Description languageID="FRA">Offre économiquement la plus avantageuse, appréciée en fonction des critères suivants des critères énoncés dans le cahier des charges, dans l’invitation à soumissionner ou à négocier, ou dans le document descriptif</cbc:Description>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<!-- "Organization providing additional information on procurement procedure" -->
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<cac:TenderRecipientParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!--BT-99-->
+					<cbc:Description languageID="FRA">
+						Le référé pré-contractuel peut être introduit depuis le début de la procédure de passation jusqu’à la signature du marché.
+						Le référé contractuel peut être introduit dans les conditions des articles L. 551-13 et suivants du code de justice administrative.
+						Le recours en contestation de la validité du marché par un tiers peut être intenté dans un délai de deux mois à compter des mesures de publicité appropriées.
+					</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>FRA</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cac:TenderSubmissionDeadlinePeriod>
+				<cbc:EndDate>2020-09-14+01:00</cbc:EndDate>
+				<cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+			</cac:TenderSubmissionDeadlinePeriod>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-09-14+01:00</cbc:EndDate>
+				<cbc:EndTime>16:00:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<!--missing data-->
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>700029324</cbc:ID>
+			<cbc:Name languageID="FRA">Procurement of Military Working Dogs</cbc:Name>
+			<cbc:Description languageID="FRA">Prestation composée de trois missions principales:
+Mission 1 – supervision des études: assurer le suivi des études, d’en vérifier la conformité vis-à-vis des spécifications de chaque marché du projet, d’établir les fiches d’analyse documentaire et d’assurer le pilotage et le suivi des interfaces.
+Mission 2 – assistance au pilotage du chantier: consiste à assurer les missions d’OPC.
+Mission 3 – supervision des travaux et essais: regroupant les missions de direction de l’exécution des travaux et d’assistance aux opérations de réception des marchés de travaux.
+Les métiers concernés pour ces missions sont les VRD, le génie civil (gros œuvre et 2nd œuvre), les courants forts, le traitement d’air, les courants faibles et courants faibles de sécurité et la clôture.Livestock. PQQ Access Code: NTV9J9643N</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="FRA">La réglementation applicable à la présente procédure est définie par le code de la commande publique et les dispositions applicables aux marchés publics de défense ou de sécurité.
+						1) Confidentialité et mise a disposition du dossier de consultation des entreprises:
+						1.1) Afin de protéger la confidentialité de certaines informations, certains documents de la consultation seront mis à disposition des seuls candidats admis à soumissionner;
+						1.2) Documents DR:
+						Les documents de la consultation contiennent des informations sensibles et font l'objet d'une mention particulière « Diffusion restreinte», visant à garantir leur confidentialité. Afin de permettre l'envoi de ces documents (en phase offre) sous format informatique via la plate-forme PLACE ou via support amovible (clé USB, CD-ROM), les candidats doivent retourner à l'appui de leur candidature le document « Engagement du Soumissionnaire en matière de protection de l’information de diffusion restreinte — déclinaison en règles de sécurité informatique » dûment signé. Dans le cas contraire, les documents sensibles ne pourront pas faire l'objet d'un envoi électronique et seront adressés sous format papier uniquement par courrier suivant les dispositions de l'annexe 3 de l’IGI 1300 du 31.11.2011;
+						1.3) Le présent avis, l'engagement du soumissionnaire en matière de protection de l'information DR et une partie du DCE non confidentiel sont à retirer sur https://www.marches-publics.gouv.fr
+						2) Remise des candidatures:
+						La candidature contiendra tous les éléments demandés dans le présent avis de marché. Tout dossier transmis incomplet pourra être écarté.
+						Les candidatures peuvent être remises soit par voie électronique, soit par courrier;
+						2.1) Formalisme pour la remise de la candidature par voie électronique:
+						a) Afin de répondre de façon électronique, les candidats doivent déposer leur candidature sur la plateforme de dématérialisation des marchés (https://www.marches-publics.gouv.fr) en suivant les étapes décrites dans le guide d’utilisation en ligne (rubrique "aide"). La plateforme est dotée d’outils de signature et de chiffrement agréés. En cas de réponse électronique, la signature électronique du dossier est requise;
+						b) Le candidat doit avoir au préalable fait l'acquisition d'un certificat électronique. Obtenir un certificat électronique prend plusieurs jours, voire plusieurs semaines;
+						c) Envoi par le candidat de plusieurs réponses électroniques à un même avis de marché: le candidat peut remettre au CEA plusieurs réponses électroniques pour un même avis de marché, notamment en cas d’oubli, de correction, de complément, et ce avant la date limite de réponse telle que définie dans le présent avis de marché. Dans ce cas, le CEA ne prendra en compte que la dernière réponse reçue. Les envois précédents ne seront pas ouverts. En conséquence, le candidat prendra toutes les dispositions utiles pour envoyer un dossier complet à chaque réponse, dans les délais impartis;
+						2.2) Formalisme spécifique à la remise de candidature par courrier:
+						La candidature sera établie en deux exemplaires (un original et une copie) et un exemplaire sur CD-ROM sous double enveloppe cachetée. 
+						L’enveloppe extérieure indique:
+						CEA/DAM — Île-de-France — DCG/SAPI/BGI – bâtiment U — à l'attention de Vincent Gourdin
+						«B20-05327/ne pas ouvrir» — Bruyères-le-Châtel/domaine du Rué — 91297 Arpajon Cedex.
+						L'enveloppe intérieure comporte la mention « B20-05327 » et la dénomination sociale du soumissionnaire.
+						La remise de cette double enveloppe se fait:
+						— par courrier recommandé;
+						— ou par envoi coursier, le pli doit être déposé à l’adresse indiquée ci-dessus (entre 9 h 00 et 16 h 00 à la réception du centre);
+						— dans le respect de la date et heure de remise des candidatures (telles que définies au IV.3.4).
+						En cas de contradictions entre la version papier et la version électronique, la première prévaut, dans sa version originale.
+					</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">80512000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="FRA">United Kingdom</cbc:Description>
+				<cac:Address>
+					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">27</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
+			<cac:ContractExtension>
+				<cbc:OptionsDescription languageID="FRA">Le marché comprend les options suivantes:
+— options 1 &amp; 2: prolongation de la mission 2 de deux mois chacune;
+— options 3 &amp; 4: prolongation de la mission 3 de deux mois chacune;
+— option 5: assistance à la levée des réserves pour une durée de trois mois;
+— option 6: PSE1: mission de synthèse pour une durée de 20 mois.
+				</cbc:OptionsDescription>
+				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<cbc:Description languageID="FRA">Aucun</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</ContractNotice>
