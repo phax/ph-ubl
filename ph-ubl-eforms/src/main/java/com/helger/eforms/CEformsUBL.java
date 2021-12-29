@@ -25,6 +25,10 @@ import com.helger.commons.io.resource.ClassPathResource;
 
 /**
  * Constants for Eforms UBL handling.
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
  */
 @Immutable
 public final class CEformsUBL

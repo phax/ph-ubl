@@ -21,6 +21,12 @@ import javax.annotation.Nonnull;
 
 import com.helger.ubl23.UBL23NamespaceContext;
 
+/**
+ * EForms XML Namespace context
+ *
+ * @author Philip Helger
+ * @since 6.7.0
+ */
 public class EformsUBLNamespaceContext extends UBL23NamespaceContext
 {
   private static final class SingletonHolder

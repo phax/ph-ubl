@@ -23,6 +23,15 @@ import javax.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
+/**
+ * eForms XML writer builder
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ * @param <JAXBTYPE>
+ *        JAXB implementation type
+ */
 @NotThreadSafe
 public class EformsUBLWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, EformsUBLWriterBuilder <JAXBTYPE>>
 {

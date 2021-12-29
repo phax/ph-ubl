@@ -33,6 +33,7 @@ import com.helger.xsds.xmldsig.CXMLDSig;
  * internally, but it may be helpful for external callers in rare circumstances.
  *
  * @author Philip Helger
+ * @since 6.7.0
  */
 public final class EFormsExtensionMarshaller extends GenericJAXBMarshaller <EformsExtension>
 {

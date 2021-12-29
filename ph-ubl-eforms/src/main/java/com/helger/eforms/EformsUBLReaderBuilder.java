@@ -22,6 +22,15 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.jaxb.builder.JAXBReaderBuilder;
 
+/**
+ * eForms XML reader builder
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ * @param <JAXBTYPE>
+ *        JAXB type
+ */
 @NotThreadSafe
 public class EformsUBLReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, EformsUBLReaderBuilder <JAXBTYPE>>
 {

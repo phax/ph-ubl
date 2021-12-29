@@ -22,6 +22,15 @@ import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
+/**
+ * eForms XML validator builder
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ * @param <JAXBTYPE>
+ *        JAXB implementation type
+ */
 @NotThreadSafe
 public class EformsUBLValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, EformsUBLValidatorBuilder <JAXBTYPE>>
 {

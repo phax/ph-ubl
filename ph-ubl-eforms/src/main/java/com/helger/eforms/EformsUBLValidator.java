@@ -27,6 +27,13 @@ import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractA
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
+/**
+ * eForms XML validator
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ */
 @NotThreadSafe
 public final class EformsUBLValidator
 {

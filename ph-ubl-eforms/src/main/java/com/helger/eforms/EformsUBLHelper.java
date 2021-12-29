@@ -34,6 +34,7 @@ import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.Ext
  * Helper for encapsulating the EForms extension correctly
  *
  * @author Philip Helger
+ * @since 6.7.0
  */
 @Immutable
 public final class EformsUBLHelper

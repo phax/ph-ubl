@@ -25,6 +25,13 @@ import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.impl.CommonsHashMap;
 import com.helger.commons.collection.impl.ICommonsMap;
 
+/**
+ * Document types
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ */
 @Immutable
 public final class EformsUBLDocumentTypes
 {

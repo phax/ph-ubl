@@ -42,6 +42,13 @@ import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractA
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
+/**
+ * EForms document types
+ *
+ * @author Jonatan Sunden
+ * @author Philip Helger
+ * @since 6.7.0
+ */
 public enum EFormsUBLDocumentType implements IJAXBDocumentType
 {
   CONTRACT_AWARD_NOTICE (ContractAwardNoticeType.class, EUBL23DocumentType.CONTRACT_AWARD_NOTICE.getAllXSDResources ()),
