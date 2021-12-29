@@ -227,6 +227,7 @@ Binary versions of the artefacts can be downloaded from Maven Central:
 * https://repo1.maven.org/maven2/com/helger/ph-ublpe/
 * https://repo1.maven.org/maven2/com/helger/ph-ubltr/
 * https://repo1.maven.org/maven2/com/helger/ph-ubl-dian/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl-eforms/
 
 Old artefacts:
 
@@ -247,6 +248,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
  
+* v6.7.0 - 2021-12-29
+    * Added support for "eForms" from https://github.com/OP-TED/eForms-SDK - see [see #42](https://github.com/phax/ph-ubl/issues/42) - Thx to @jonatanprins and @DKamerbeek
 * v6.6.3 - 2021-09-21
     * Updated to the final UBL 2.3 XML Schemas - no changes compared to CS01 except for comments
     * Updated dependencies, so that the date/time objects now implement `Serializable` and that date/time objects are allowed to have no second fractions. The same effect can be reached by explicitly using v6.6.2 with ph-commons 10.1.3
@@ -270,7 +273,7 @@ For further information on the Universal Business Language can be found on the f
     * Binds to ph-commons 9.4.7
     * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
     * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
-    * Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` ([see #27](https://github.com/phax/ph-ubl/issues/27))
+    * Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` - [see #27](https://github.com/phax/ph-ubl/issues/27)
 * v6.3.0 - 2020-05-26
     * Changed Maven groupId to `com.helger.ubl`
 * v6.2.1 - 2020-02-06
