@@ -21,6 +21,7 @@ The following projects are contained:
 * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 * **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
+* **ph-ubl-eforms** contains the generated JAXB files for the EU eForms objects (optional artefact) - see https://ec.europa.eu/growth/single-market/public-procurement/digital-procurement/eforms_en
 
 Old projects:
 
@@ -43,6 +44,7 @@ The folders with the generated sources differ from subproject to subproject:
 * **ph-ublpe**: `target\generated-sources\ublpe` 
 * **ph-ubltr**: `target\generated-sources\ubltr` 
 * **ph-ubl-dian**: `target\generated-sources\dian` 
+* **ph-ubl-eforms**: `target\generated-sources\eforms` 
 
 # Examples
 
@@ -205,6 +207,20 @@ To read and write Dian UBL 2.1 documents add the following to your pom.xml to us
 ```
 
 Note: prior to v6.3.0 the Maven groupId was `com.helger`.
+
+## Maven usage eForms UBL
+
+To read and write eForms UBL 2.3 documents add the following to your pom.xml to use this artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl-eforms</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+Supported since v6.7.0
 
 # Gradle considerations
 
