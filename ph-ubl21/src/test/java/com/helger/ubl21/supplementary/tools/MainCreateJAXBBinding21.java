@@ -71,6 +71,7 @@ public final class MainCreateJAXBBinding21
     final IMicroElement eRoot = eDoc.appendElement (JAXB_NS_URI, "bindings");
     eRoot.setAttribute (new MicroQName (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI, "schemaLocation"),
                         JAXB_NS_URI + " https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd");
+    // This is the JAXB version, not the UBL version :)
     eRoot.setAttribute ("version", "3.0");
 
     final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
