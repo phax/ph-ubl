@@ -23,9 +23,6 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlValue;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.Nonempty;
@@ -37,6 +34,9 @@ import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.collection.impl.ICommonsMap;
 import com.helger.commons.string.StringHelper;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlValue;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_21.TaxSchemeType;
 import oasis.names.specification.ubl.schema.xsd.order_21.OrderType;
 
@@ -151,7 +151,8 @@ public class MainFindOccurrances
   }
 
   @Nonnull
-  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass, @Nonnull final Class <?> aFindClass)
+  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass,
+                                                  @Nonnull final Class <?> aFindClass)
   {
     final PerClassData aPerClassData = new PerClassData ();
     for (final Field aField : getAllFields (aStartClass))

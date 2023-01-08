@@ -18,10 +18,8 @@ package com.helger.ubl21;
 
 import static org.junit.Assert.assertSame;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
-import com.helger.commons.state.EChange;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
@@ -35,12 +33,11 @@ public final class UBL21NamespaceContextTest
   public void testIssue25 ()
   {
     final MapBasedNamespaceContext aNSCtx = UBL21NamespaceContext.getInstance ().getClone ();
-    assertSame (EChange.CHANGED, aNSCtx.removeMapping ("cec"));
-    assertSame (EChange.UNCHANGED, aNSCtx.removeMapping ("cec"));
+    assertSame (aNSCtx, aNSCtx.removeMapping ("cec"));
+    assertSame (aNSCtx, aNSCtx.removeMapping ("cec"));
   }
 
   @Test
-  @Ignore ("Fails")
   public void testIssue25v2 ()
   {
     try
@@ -50,14 +47,15 @@ public final class UBL21NamespaceContextTest
       // Clone
       final MapBasedNamespaceContext aNSCtx = UBL21NamespaceContext.getInstance ().getClone ();
       // Remove in original
-      assertSame (EChange.CHANGED, aNSCtx0.removeMapping ("cec"));
-      assertSame (EChange.UNCHANGED, aNSCtx0.removeMapping ("cec"));
+      assertSame (aNSCtx0, aNSCtx0.removeMapping ("cec"));
+      assertSame (aNSCtx0, aNSCtx0.removeMapping ("cec"));
       // Remove in clone
-      assertSame (EChange.CHANGED, aNSCtx.removeMapping ("cec"));
-      assertSame (EChange.UNCHANGED, aNSCtx.removeMapping ("cec"));
+      assertSame (aNSCtx, aNSCtx.removeMapping ("cec"));
+      assertSame (aNSCtx, aNSCtx.removeMapping ("cec"));
     }
     finally
     {
+      // Restore original state
       UBL21NamespaceContext.getInstance ().addMapping ("cec", CUBL21.XML_SCHEMA_CEC_NAMESPACE_URL);
     }
   }
