@@ -263,7 +263,11 @@ For further information on the Universal Business Language can be found on the f
 * http://www.ubltr.com/
 
 # News and noteworthy
- 
+
+* v7.0.0 - 2022-01-09
+    * Using Java 11 as the baseline
+    * Updated to ph-commons 11
+    * Using JAXB 4.0 as the baseline
 * v6.7.0 - 2021-12-29
     * Added support for "eForms" from https://github.com/OP-TED/eForms-SDK - see [see #42](https://github.com/phax/ph-ubl/issues/42) - Thx to @jonatanprins and @DKamerbeek
 * v6.6.3 - 2021-09-21

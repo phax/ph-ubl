@@ -138,7 +138,7 @@
           <extension>true</extension>
           <strict>false</strict>
           <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
-          <verbose>true</verbose>
+          <verbose>false</verbose>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
