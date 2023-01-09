@@ -43,6 +43,7 @@ import com.helger.xml.CXML;
 import com.helger.xml.microdom.IMicroDocument;
 import com.helger.xml.microdom.IMicroElement;
 import com.helger.xml.microdom.MicroDocument;
+import com.helger.xml.microdom.MicroQName;
 import com.helger.xml.microdom.serialize.MicroReader;
 import com.helger.xml.microdom.serialize.MicroWriter;
 import com.helger.xml.microdom.util.XMLMapHandler;
@@ -62,17 +63,19 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
  */
 public final class MainCreateJAXBBinding20
 {
-  private static final String JAXB_NS_URI = "http://java.sun.com/xml/ns/jaxb";
+  private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
   @Nonnull
   private static IMicroDocument _createBaseDoc ()
   {
     final IMicroDocument eDoc = new MicroDocument ();
+    eDoc.appendComment ("This file is generated. Do NOT edit.\n");
     final IMicroElement eRoot = eDoc.appendElement (JAXB_NS_URI, "bindings");
-    if (false)
-      eRoot.setAttribute ("xsi:schemaLocation", JAXB_NS_URI + " http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd");
-    eRoot.setAttribute ("version", "2.1");
+    eRoot.setAttribute (new MicroQName (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI, "schemaLocation"),
+                        JAXB_NS_URI + " https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd");
+    // This is the JAXB version, not the UBL version :)
+    eRoot.setAttribute ("version", "3.0");
 
     final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
     eGlobal.setAttribute ("typesafeEnumMaxMembers", "2000");
@@ -117,7 +120,7 @@ public final class MainCreateJAXBBinding20
     String s = sNamespaceURI.toLowerCase (Locale.US);
 
     String [] aParts;
-    final URL aURL = URLHelper.getAsURL (sNamespaceURI);
+    final URL aURL = URLHelper.getAsURL (sNamespaceURI, false);
     if (aURL != null)
     {
       // Host
