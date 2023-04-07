@@ -27,7 +27,7 @@ import com.helger.commons.collection.impl.ICommonsList;
 @Immutable
 public final class MockEformsUBLTestDocuments
 {
-  private static final String PREFIX = "examples/";
+  private static final String PREFIX = "external/examples/";
 
   private MockEformsUBLTestDocuments ()
   {}

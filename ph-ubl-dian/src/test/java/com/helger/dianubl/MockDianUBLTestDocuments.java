@@ -26,7 +26,7 @@ import com.helger.commons.collection.impl.ICommonsList;
 @Immutable
 public final class MockDianUBLTestDocuments
 {
-  private static final String PREFIX = "test-dian/";
+  private static final String PREFIX = "external/test-dian/";
 
   private MockDianUBLTestDocuments ()
   {}

@@ -27,7 +27,7 @@ import com.helger.commons.collection.CollectionHelper;
 @Immutable
 public final class MockUBLTRTestDocuments
 {
-  private static final String PREFIX = "";
+  private static final String PREFIX = "external/";
 
   private MockUBLTRTestDocuments ()
   {}

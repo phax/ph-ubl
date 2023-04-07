@@ -106,7 +106,8 @@ public final class DianUBLFuncTest
   public void testReadInstanceAndAddExtension ()
   {
     // This is based on test-dian/Generica.xml
-    final InvoiceType aInvoice = DianUBLReader.invoice ().read (new File ("src/test/resources/test-ubl/invoice1.xml"));
+    final InvoiceType aInvoice = DianUBLReader.invoice ()
+                                              .read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
     assertNotNull (aInvoice);
 
     // The main extension, filled with values from test-dian/Generica.xml
