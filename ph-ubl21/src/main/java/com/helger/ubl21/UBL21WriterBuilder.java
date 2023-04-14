@@ -28,6 +28,7 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBL 2.1 implementation class to be read
+ * @deprecated Use {@link UBL21Marshaller} instead
  */
 @NotThreadSafe
 @Deprecated (forRemoval = true, since = "8.0.0")

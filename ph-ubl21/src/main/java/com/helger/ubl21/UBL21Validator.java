@@ -91,6 +91,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
  * Validate all UBL 2.1 document types.
  *
  * @author Philip Helger
+ * @deprecated Use {@link UBL21Marshaller} instead
  */
 @NotThreadSafe
 @Deprecated (forRemoval = true, since = "8.0.0")
