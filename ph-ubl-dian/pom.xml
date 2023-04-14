@@ -87,11 +87,6 @@
       <artifactId>jaxb-impl</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>phoss-smp-webapp-sql</artifactId>
-      <version>7.0.0-SNAPSHOT</version>
-    </dependency>
   </dependencies>
   
   <build>

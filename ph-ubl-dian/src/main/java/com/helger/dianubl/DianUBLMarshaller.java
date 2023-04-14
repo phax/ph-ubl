@@ -12,6 +12,7 @@ import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 
 import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
@@ -31,13 +32,17 @@ public final class DianUBLMarshaller
 {
   public static class DianUBLJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
-    private static final ICommonsList <ClassPathResource> DIAN_XSDS = new CommonsArrayList <> (CUBL21.XSD_UNQUALIFIED_DATA_TYPES,
+    private static final ICommonsList <ClassPathResource> DIAN_XSDS = new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                                               CUBL21.XSD_UNQUALIFIED_DATA_TYPES,
                                                                                                CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS,
                                                                                                CDianUBL.XSD_DIAN_UBL_STRUCTURE);
 
     @Nonnull
-    public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ICommonsList <ClassPathResource> aList)
+    public static ICommonsList <ClassPathResource> getAllXSDs (@Nullable final ICommonsList <ClassPathResource> aList)
     {
+      if (aList == null)
+        return DIAN_XSDS;
+
       final ICommonsList <ClassPathResource> ret = new CommonsArrayList <> ();
       // Copy everything EXCEPT the last item
       if (aList.size () > 1)
@@ -53,9 +58,7 @@ public final class DianUBLMarshaller
                                   @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
                                   @Nonnull final QName aRootElementQName)
     {
-      super (aType,
-             aSourceXSDs == null ? DIAN_XSDS : getAllXSDs (aSourceXSDs),
-             createSimpleJAXBElement (aRootElementQName, aType));
+      super (aType, getAllXSDs (aSourceXSDs), createSimpleJAXBElement (aRootElementQName, aType));
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = DianUBLNamespaceContext.getInstance ().getClone ();
