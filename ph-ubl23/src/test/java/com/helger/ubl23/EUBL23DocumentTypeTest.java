@@ -32,6 +32,7 @@ import com.helger.commons.string.StringHelper;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EUBL23DocumentTypeTest
 {
   @Test

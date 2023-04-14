@@ -60,7 +60,7 @@ public final class MainCreateJAXBBinding23
   private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
-  private static final String BASE_XSD_PATH = "/resources/schemas/ubl23/";
+  private static final String BASE_XSD_PATH = "/resources/external/schemas/ubl23/";
   private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings23.xjb";
 
   @Nonnull

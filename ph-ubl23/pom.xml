@@ -133,7 +133,7 @@
             <id>ubl21</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ubl23</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ubl23</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/ubl23</schemaDirectory>
               <schemaIncludes>
                 <schemaInclude>common/*.xsd</schemaInclude>
                 <schemaInclude>maindoc/*.xsd</schemaInclude>

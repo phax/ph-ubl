@@ -35,6 +35,7 @@ import com.helger.commons.collection.impl.ICommonsSet;
  * @author Philip Helger
  */
 @Immutable
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBL23DocumentTypes
 {
   /** Maps namespaces to document types */
@@ -122,7 +123,8 @@ public final class UBL23DocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBL23DocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EUBL23DocumentType.values (),
+                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

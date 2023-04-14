@@ -69,7 +69,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     aInvoice.addInvoiceLine (aLine);
 
-    final ESuccess eSuccess = UBL23Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
+    final ESuccess eSuccess = UBL23Marshaller.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 }

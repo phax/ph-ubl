@@ -74,8 +74,8 @@ import oasis.names.specification.ubl.schema.xsd.packinglist_23.PackingListType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 import oasis.names.specification.ubl.schema.xsd.productactivity_23.ProductActivityType;
 import oasis.names.specification.ubl.schema.xsd.proofofreexportation_23.ProofOfReexportationType;
-import oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType;
 import oasis.names.specification.ubl.schema.xsd.proofofreexportationreminder_23.ProofOfReexportationReminderType;
+import oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_23.ProofOfReexportationRequestType;
 import oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_23.QualificationApplicationRequestType;
 import oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_23.QualificationApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.quotation_23.QuotationType;
@@ -115,287 +115,1018 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_23.WeightStateme
 
 /**
  * Read all UBL 2.3 document types.
- * 
+ *
  * @author Philip Helger
+ * @deprecated Use {@link UBL23Marshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBL23Reader
 {
   @PresentForCodeCoverage
   private static final UBL23Reader INSTANCE = new UBL23Reader ();
 
-  private UBL23Reader () {}
-/** Create a reader builder for ApplicationResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ApplicationResponseType> applicationResponse(){return UBL23ReaderBuilder.create(ApplicationResponseType.class);}
-/** Create a reader builder for AttachedDocument.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<AttachedDocumentType> attachedDocument(){return UBL23ReaderBuilder.create(AttachedDocumentType.class);}
-/** Create a reader builder for AwardedNotification.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<AwardedNotificationType> awardedNotification(){return UBL23ReaderBuilder.create(AwardedNotificationType.class);}
-/** Create a reader builder for BillOfLading.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<BillOfLadingType> billOfLading(){return UBL23ReaderBuilder.create(BillOfLadingType.class);}
-/** Create a reader builder for BusinessCard.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<BusinessCardType> businessCard(){return UBL23ReaderBuilder.create(BusinessCardType.class);}
-/** Create a reader builder for CallForTenders.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CallForTendersType> callForTenders(){return UBL23ReaderBuilder.create(CallForTendersType.class);}
-/** Create a reader builder for Catalogue.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CatalogueType> catalogue(){return UBL23ReaderBuilder.create(CatalogueType.class);}
-/** Create a reader builder for CatalogueDeletion.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CatalogueDeletionType> catalogueDeletion(){return UBL23ReaderBuilder.create(CatalogueDeletionType.class);}
-/** Create a reader builder for CatalogueItemSpecificationUpdate.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate(){return UBL23ReaderBuilder.create(CatalogueItemSpecificationUpdateType.class);}
-/** Create a reader builder for CataloguePricingUpdate.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CataloguePricingUpdateType> cataloguePricingUpdate(){return UBL23ReaderBuilder.create(CataloguePricingUpdateType.class);}
-/** Create a reader builder for CatalogueRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CatalogueRequestType> catalogueRequest(){return UBL23ReaderBuilder.create(CatalogueRequestType.class);}
-/** Create a reader builder for CertificateOfOrigin.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CertificateOfOriginType> certificateOfOrigin(){return UBL23ReaderBuilder.create(CertificateOfOriginType.class);}
-/** Create a reader builder for CommonTransportationReport.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CommonTransportationReportType> commonTransportationReport(){return UBL23ReaderBuilder.create(CommonTransportationReportType.class);}
-/** Create a reader builder for ContractAwardNotice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ContractAwardNoticeType> contractAwardNotice(){return UBL23ReaderBuilder.create(ContractAwardNoticeType.class);}
-/** Create a reader builder for ContractNotice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ContractNoticeType> contractNotice(){return UBL23ReaderBuilder.create(ContractNoticeType.class);}
-/** Create a reader builder for CreditNote.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<CreditNoteType> creditNote(){return UBL23ReaderBuilder.create(CreditNoteType.class);}
-/** Create a reader builder for DebitNote.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DebitNoteType> debitNote(){return UBL23ReaderBuilder.create(DebitNoteType.class);}
-/** Create a reader builder for DespatchAdvice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DespatchAdviceType> despatchAdvice(){return UBL23ReaderBuilder.create(DespatchAdviceType.class);}
-/** Create a reader builder for DigitalAgreement.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DigitalAgreementType> digitalAgreement(){return UBL23ReaderBuilder.create(DigitalAgreementType.class);}
-/** Create a reader builder for DigitalCapability.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DigitalCapabilityType> digitalCapability(){return UBL23ReaderBuilder.create(DigitalCapabilityType.class);}
-/** Create a reader builder for DocumentStatus.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DocumentStatusType> documentStatus(){return UBL23ReaderBuilder.create(DocumentStatusType.class);}
-/** Create a reader builder for DocumentStatusRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<DocumentStatusRequestType> documentStatusRequest(){return UBL23ReaderBuilder.create(DocumentStatusRequestType.class);}
-/** Create a reader builder for Enquiry.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<EnquiryType> enquiry(){return UBL23ReaderBuilder.create(EnquiryType.class);}
-/** Create a reader builder for EnquiryResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<EnquiryResponseType> enquiryResponse(){return UBL23ReaderBuilder.create(EnquiryResponseType.class);}
-/** Create a reader builder for ExceptionCriteria.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ExceptionCriteriaType> exceptionCriteria(){return UBL23ReaderBuilder.create(ExceptionCriteriaType.class);}
-/** Create a reader builder for ExceptionNotification.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ExceptionNotificationType> exceptionNotification(){return UBL23ReaderBuilder.create(ExceptionNotificationType.class);}
-/** Create a reader builder for ExportCustomsDeclaration.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ExportCustomsDeclarationType> exportCustomsDeclaration(){return UBL23ReaderBuilder.create(ExportCustomsDeclarationType.class);}
-/** Create a reader builder for ExpressionOfInterestRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ExpressionOfInterestRequestType> expressionOfInterestRequest(){return UBL23ReaderBuilder.create(ExpressionOfInterestRequestType.class);}
-/** Create a reader builder for ExpressionOfInterestResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ExpressionOfInterestResponseType> expressionOfInterestResponse(){return UBL23ReaderBuilder.create(ExpressionOfInterestResponseType.class);}
-/** Create a reader builder for Forecast.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ForecastType> forecast(){return UBL23ReaderBuilder.create(ForecastType.class);}
-/** Create a reader builder for ForecastRevision.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ForecastRevisionType> forecastRevision(){return UBL23ReaderBuilder.create(ForecastRevisionType.class);}
-/** Create a reader builder for ForwardingInstructions.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ForwardingInstructionsType> forwardingInstructions(){return UBL23ReaderBuilder.create(ForwardingInstructionsType.class);}
-/** Create a reader builder for FreightInvoice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<FreightInvoiceType> freightInvoice(){return UBL23ReaderBuilder.create(FreightInvoiceType.class);}
-/** Create a reader builder for FulfilmentCancellation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<FulfilmentCancellationType> fulfilmentCancellation(){return UBL23ReaderBuilder.create(FulfilmentCancellationType.class);}
-/** Create a reader builder for GoodsCertificate.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<GoodsCertificateType> goodsCertificate(){return UBL23ReaderBuilder.create(GoodsCertificateType.class);}
-/** Create a reader builder for GoodsItemItinerary.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<GoodsItemItineraryType> goodsItemItinerary(){return UBL23ReaderBuilder.create(GoodsItemItineraryType.class);}
-/** Create a reader builder for GoodsItemPassport.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<GoodsItemPassportType> goodsItemPassport(){return UBL23ReaderBuilder.create(GoodsItemPassportType.class);}
-/** Create a reader builder for GuaranteeCertificate.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<GuaranteeCertificateType> guaranteeCertificate(){return UBL23ReaderBuilder.create(GuaranteeCertificateType.class);}
-/** Create a reader builder for ImportCustomsDeclaration.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ImportCustomsDeclarationType> importCustomsDeclaration(){return UBL23ReaderBuilder.create(ImportCustomsDeclarationType.class);}
-/** Create a reader builder for InstructionForReturns.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<InstructionForReturnsType> instructionForReturns(){return UBL23ReaderBuilder.create(InstructionForReturnsType.class);}
-/** Create a reader builder for InventoryReport.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<InventoryReportType> inventoryReport(){return UBL23ReaderBuilder.create(InventoryReportType.class);}
-/** Create a reader builder for Invoice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<InvoiceType> invoice(){return UBL23ReaderBuilder.create(InvoiceType.class);}
-/** Create a reader builder for ItemInformationRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ItemInformationRequestType> itemInformationRequest(){return UBL23ReaderBuilder.create(ItemInformationRequestType.class);}
-/** Create a reader builder for Manifest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ManifestType> manifest(){return UBL23ReaderBuilder.create(ManifestType.class);}
-/** Create a reader builder for Order.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<OrderType> order(){return UBL23ReaderBuilder.create(OrderType.class);}
-/** Create a reader builder for OrderCancellation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<OrderCancellationType> orderCancellation(){return UBL23ReaderBuilder.create(OrderCancellationType.class);}
-/** Create a reader builder for OrderChange.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<OrderChangeType> orderChange(){return UBL23ReaderBuilder.create(OrderChangeType.class);}
-/** Create a reader builder for OrderResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<OrderResponseType> orderResponse(){return UBL23ReaderBuilder.create(OrderResponseType.class);}
-/** Create a reader builder for OrderResponseSimple.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<OrderResponseSimpleType> orderResponseSimple(){return UBL23ReaderBuilder.create(OrderResponseSimpleType.class);}
-/** Create a reader builder for PackingList.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<PackingListType> packingList(){return UBL23ReaderBuilder.create(PackingListType.class);}
-/** Create a reader builder for PriorInformationNotice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<PriorInformationNoticeType> priorInformationNotice(){return UBL23ReaderBuilder.create(PriorInformationNoticeType.class);}
-/** Create a reader builder for ProductActivity.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ProductActivityType> productActivity(){return UBL23ReaderBuilder.create(ProductActivityType.class);}
-/** Create a reader builder for ProofOfReexportation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ProofOfReexportationType> proofOfReexportation(){return UBL23ReaderBuilder.create(ProofOfReexportationType.class);}
-/** Create a reader builder for ProofOfReexportationReminder.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ProofOfReexportationReminderType> proofOfReexportationReminder(){return UBL23ReaderBuilder.create(ProofOfReexportationReminderType.class);}
-/** Create a reader builder for ProofOfReexportationRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ProofOfReexportationRequestType> proofOfReexportationRequest(){return UBL23ReaderBuilder.create(ProofOfReexportationRequestType.class);}
-/** Create a reader builder for QualificationApplicationRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<QualificationApplicationRequestType> qualificationApplicationRequest(){return UBL23ReaderBuilder.create(QualificationApplicationRequestType.class);}
-/** Create a reader builder for QualificationApplicationResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<QualificationApplicationResponseType> qualificationApplicationResponse(){return UBL23ReaderBuilder.create(QualificationApplicationResponseType.class);}
-/** Create a reader builder for Quotation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<QuotationType> quotation(){return UBL23ReaderBuilder.create(QuotationType.class);}
-/** Create a reader builder for ReceiptAdvice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ReceiptAdviceType> receiptAdvice(){return UBL23ReaderBuilder.create(ReceiptAdviceType.class);}
-/** Create a reader builder for Reminder.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<ReminderType> reminder(){return UBL23ReaderBuilder.create(ReminderType.class);}
-/** Create a reader builder for RemittanceAdvice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<RemittanceAdviceType> remittanceAdvice(){return UBL23ReaderBuilder.create(RemittanceAdviceType.class);}
-/** Create a reader builder for RequestForQuotation.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<RequestForQuotationType> requestForQuotation(){return UBL23ReaderBuilder.create(RequestForQuotationType.class);}
-/** Create a reader builder for RetailEvent.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<RetailEventType> retailEvent(){return UBL23ReaderBuilder.create(RetailEventType.class);}
-/** Create a reader builder for SelfBilledCreditNote.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<SelfBilledCreditNoteType> selfBilledCreditNote(){return UBL23ReaderBuilder.create(SelfBilledCreditNoteType.class);}
-/** Create a reader builder for SelfBilledInvoice.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<SelfBilledInvoiceType> selfBilledInvoice(){return UBL23ReaderBuilder.create(SelfBilledInvoiceType.class);}
-/** Create a reader builder for Statement.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<StatementType> statement(){return UBL23ReaderBuilder.create(StatementType.class);}
-/** Create a reader builder for StockAvailabilityReport.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<StockAvailabilityReportType> stockAvailabilityReport(){return UBL23ReaderBuilder.create(StockAvailabilityReportType.class);}
-/** Create a reader builder for Tender.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderType> tender(){return UBL23ReaderBuilder.create(TenderType.class);}
-/** Create a reader builder for TenderContract.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderContractType> tenderContract(){return UBL23ReaderBuilder.create(TenderContractType.class);}
-/** Create a reader builder for TendererQualification.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TendererQualificationType> tendererQualification(){return UBL23ReaderBuilder.create(TendererQualificationType.class);}
-/** Create a reader builder for TendererQualificationResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TendererQualificationResponseType> tendererQualificationResponse(){return UBL23ReaderBuilder.create(TendererQualificationResponseType.class);}
-/** Create a reader builder for TenderReceipt.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderReceiptType> tenderReceipt(){return UBL23ReaderBuilder.create(TenderReceiptType.class);}
-/** Create a reader builder for TenderStatus.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderStatusType> tenderStatus(){return UBL23ReaderBuilder.create(TenderStatusType.class);}
-/** Create a reader builder for TenderStatusRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderStatusRequestType> tenderStatusRequest(){return UBL23ReaderBuilder.create(TenderStatusRequestType.class);}
-/** Create a reader builder for TenderWithdrawal.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TenderWithdrawalType> tenderWithdrawal(){return UBL23ReaderBuilder.create(TenderWithdrawalType.class);}
-/** Create a reader builder for TradeItemLocationProfile.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TradeItemLocationProfileType> tradeItemLocationProfile(){return UBL23ReaderBuilder.create(TradeItemLocationProfileType.class);}
-/** Create a reader builder for TransitCustomsDeclaration.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransitCustomsDeclarationType> transitCustomsDeclaration(){return UBL23ReaderBuilder.create(TransitCustomsDeclarationType.class);}
-/** Create a reader builder for TransportationStatus.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportationStatusType> transportationStatus(){return UBL23ReaderBuilder.create(TransportationStatusType.class);}
-/** Create a reader builder for TransportationStatusRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportationStatusRequestType> transportationStatusRequest(){return UBL23ReaderBuilder.create(TransportationStatusRequestType.class);}
-/** Create a reader builder for TransportExecutionPlan.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportExecutionPlanType> transportExecutionPlan(){return UBL23ReaderBuilder.create(TransportExecutionPlanType.class);}
-/** Create a reader builder for TransportExecutionPlanRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportExecutionPlanRequestType> transportExecutionPlanRequest(){return UBL23ReaderBuilder.create(TransportExecutionPlanRequestType.class);}
-/** Create a reader builder for TransportProgressStatus.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportProgressStatusType> transportProgressStatus(){return UBL23ReaderBuilder.create(TransportProgressStatusType.class);}
-/** Create a reader builder for TransportProgressStatusRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportProgressStatusRequestType> transportProgressStatusRequest(){return UBL23ReaderBuilder.create(TransportProgressStatusRequestType.class);}
-/** Create a reader builder for TransportServiceDescription.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportServiceDescriptionType> transportServiceDescription(){return UBL23ReaderBuilder.create(TransportServiceDescriptionType.class);}
-/** Create a reader builder for TransportServiceDescriptionRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<TransportServiceDescriptionRequestType> transportServiceDescriptionRequest(){return UBL23ReaderBuilder.create(TransportServiceDescriptionRequestType.class);}
-/** Create a reader builder for UnawardedNotification.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<UnawardedNotificationType> unawardedNotification(){return UBL23ReaderBuilder.create(UnawardedNotificationType.class);}
-/** Create a reader builder for UnsubscribeFromProcedureRequest.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<UnsubscribeFromProcedureRequestType> unsubscribeFromProcedureRequest(){return UBL23ReaderBuilder.create(UnsubscribeFromProcedureRequestType.class);}
-/** Create a reader builder for UnsubscribeFromProcedureResponse.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<UnsubscribeFromProcedureResponseType> unsubscribeFromProcedureResponse(){return UBL23ReaderBuilder.create(UnsubscribeFromProcedureResponseType.class);}
-/** Create a reader builder for UtilityStatement.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<UtilityStatementType> utilityStatement(){return UBL23ReaderBuilder.create(UtilityStatementType.class);}
-/** Create a reader builder for Waybill.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<WaybillType> waybill(){return UBL23ReaderBuilder.create(WaybillType.class);}
-/** Create a reader builder for WeightStatement.
-@return The builder and never <code>null</code> */
-@Nonnull public static UBL23ReaderBuilder<WeightStatementType> weightStatement(){return UBL23ReaderBuilder.create(WeightStatementType.class);}
+  private UBL23Reader ()
+  {}
+
+  /**
+   * Create a reader builder for ApplicationResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ApplicationResponseType> applicationResponse ()
+  {
+    return UBL23ReaderBuilder.create (ApplicationResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for AttachedDocument.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <AttachedDocumentType> attachedDocument ()
+  {
+    return UBL23ReaderBuilder.create (AttachedDocumentType.class);
+  }
+
+  /**
+   * Create a reader builder for AwardedNotification.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <AwardedNotificationType> awardedNotification ()
+  {
+    return UBL23ReaderBuilder.create (AwardedNotificationType.class);
+  }
+
+  /**
+   * Create a reader builder for BillOfLading.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <BillOfLadingType> billOfLading ()
+  {
+    return UBL23ReaderBuilder.create (BillOfLadingType.class);
+  }
+
+  /**
+   * Create a reader builder for BusinessCard.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <BusinessCardType> businessCard ()
+  {
+    return UBL23ReaderBuilder.create (BusinessCardType.class);
+  }
+
+  /**
+   * Create a reader builder for CallForTenders.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CallForTendersType> callForTenders ()
+  {
+    return UBL23ReaderBuilder.create (CallForTendersType.class);
+  }
+
+  /**
+   * Create a reader builder for Catalogue.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CatalogueType> catalogue ()
+  {
+    return UBL23ReaderBuilder.create (CatalogueType.class);
+  }
+
+  /**
+   * Create a reader builder for CatalogueDeletion.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CatalogueDeletionType> catalogueDeletion ()
+  {
+    return UBL23ReaderBuilder.create (CatalogueDeletionType.class);
+  }
+
+  /**
+   * Create a reader builder for CatalogueItemSpecificationUpdate.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
+  {
+    return UBL23ReaderBuilder.create (CatalogueItemSpecificationUpdateType.class);
+  }
+
+  /**
+   * Create a reader builder for CataloguePricingUpdate.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CataloguePricingUpdateType> cataloguePricingUpdate ()
+  {
+    return UBL23ReaderBuilder.create (CataloguePricingUpdateType.class);
+  }
+
+  /**
+   * Create a reader builder for CatalogueRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CatalogueRequestType> catalogueRequest ()
+  {
+    return UBL23ReaderBuilder.create (CatalogueRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for CertificateOfOrigin.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CertificateOfOriginType> certificateOfOrigin ()
+  {
+    return UBL23ReaderBuilder.create (CertificateOfOriginType.class);
+  }
+
+  /**
+   * Create a reader builder for CommonTransportationReport.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CommonTransportationReportType> commonTransportationReport ()
+  {
+    return UBL23ReaderBuilder.create (CommonTransportationReportType.class);
+  }
+
+  /**
+   * Create a reader builder for ContractAwardNotice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ContractAwardNoticeType> contractAwardNotice ()
+  {
+    return UBL23ReaderBuilder.create (ContractAwardNoticeType.class);
+  }
+
+  /**
+   * Create a reader builder for ContractNotice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ContractNoticeType> contractNotice ()
+  {
+    return UBL23ReaderBuilder.create (ContractNoticeType.class);
+  }
+
+  /**
+   * Create a reader builder for CreditNote.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <CreditNoteType> creditNote ()
+  {
+    return UBL23ReaderBuilder.create (CreditNoteType.class);
+  }
+
+  /**
+   * Create a reader builder for DebitNote.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DebitNoteType> debitNote ()
+  {
+    return UBL23ReaderBuilder.create (DebitNoteType.class);
+  }
+
+  /**
+   * Create a reader builder for DespatchAdvice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DespatchAdviceType> despatchAdvice ()
+  {
+    return UBL23ReaderBuilder.create (DespatchAdviceType.class);
+  }
+
+  /**
+   * Create a reader builder for DigitalAgreement.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DigitalAgreementType> digitalAgreement ()
+  {
+    return UBL23ReaderBuilder.create (DigitalAgreementType.class);
+  }
+
+  /**
+   * Create a reader builder for DigitalCapability.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DigitalCapabilityType> digitalCapability ()
+  {
+    return UBL23ReaderBuilder.create (DigitalCapabilityType.class);
+  }
+
+  /**
+   * Create a reader builder for DocumentStatus.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DocumentStatusType> documentStatus ()
+  {
+    return UBL23ReaderBuilder.create (DocumentStatusType.class);
+  }
+
+  /**
+   * Create a reader builder for DocumentStatusRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <DocumentStatusRequestType> documentStatusRequest ()
+  {
+    return UBL23ReaderBuilder.create (DocumentStatusRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for Enquiry.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <EnquiryType> enquiry ()
+  {
+    return UBL23ReaderBuilder.create (EnquiryType.class);
+  }
+
+  /**
+   * Create a reader builder for EnquiryResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <EnquiryResponseType> enquiryResponse ()
+  {
+    return UBL23ReaderBuilder.create (EnquiryResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for ExceptionCriteria.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ExceptionCriteriaType> exceptionCriteria ()
+  {
+    return UBL23ReaderBuilder.create (ExceptionCriteriaType.class);
+  }
+
+  /**
+   * Create a reader builder for ExceptionNotification.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ExceptionNotificationType> exceptionNotification ()
+  {
+    return UBL23ReaderBuilder.create (ExceptionNotificationType.class);
+  }
+
+  /**
+   * Create a reader builder for ExportCustomsDeclaration.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ExportCustomsDeclarationType> exportCustomsDeclaration ()
+  {
+    return UBL23ReaderBuilder.create (ExportCustomsDeclarationType.class);
+  }
+
+  /**
+   * Create a reader builder for ExpressionOfInterestRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ExpressionOfInterestRequestType> expressionOfInterestRequest ()
+  {
+    return UBL23ReaderBuilder.create (ExpressionOfInterestRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for ExpressionOfInterestResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ExpressionOfInterestResponseType> expressionOfInterestResponse ()
+  {
+    return UBL23ReaderBuilder.create (ExpressionOfInterestResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for Forecast.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ForecastType> forecast ()
+  {
+    return UBL23ReaderBuilder.create (ForecastType.class);
+  }
+
+  /**
+   * Create a reader builder for ForecastRevision.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ForecastRevisionType> forecastRevision ()
+  {
+    return UBL23ReaderBuilder.create (ForecastRevisionType.class);
+  }
+
+  /**
+   * Create a reader builder for ForwardingInstructions.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ForwardingInstructionsType> forwardingInstructions ()
+  {
+    return UBL23ReaderBuilder.create (ForwardingInstructionsType.class);
+  }
+
+  /**
+   * Create a reader builder for FreightInvoice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <FreightInvoiceType> freightInvoice ()
+  {
+    return UBL23ReaderBuilder.create (FreightInvoiceType.class);
+  }
+
+  /**
+   * Create a reader builder for FulfilmentCancellation.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <FulfilmentCancellationType> fulfilmentCancellation ()
+  {
+    return UBL23ReaderBuilder.create (FulfilmentCancellationType.class);
+  }
+
+  /**
+   * Create a reader builder for GoodsCertificate.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <GoodsCertificateType> goodsCertificate ()
+  {
+    return UBL23ReaderBuilder.create (GoodsCertificateType.class);
+  }
+
+  /**
+   * Create a reader builder for GoodsItemItinerary.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <GoodsItemItineraryType> goodsItemItinerary ()
+  {
+    return UBL23ReaderBuilder.create (GoodsItemItineraryType.class);
+  }
+
+  /**
+   * Create a reader builder for GoodsItemPassport.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <GoodsItemPassportType> goodsItemPassport ()
+  {
+    return UBL23ReaderBuilder.create (GoodsItemPassportType.class);
+  }
+
+  /**
+   * Create a reader builder for GuaranteeCertificate.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <GuaranteeCertificateType> guaranteeCertificate ()
+  {
+    return UBL23ReaderBuilder.create (GuaranteeCertificateType.class);
+  }
+
+  /**
+   * Create a reader builder for ImportCustomsDeclaration.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ImportCustomsDeclarationType> importCustomsDeclaration ()
+  {
+    return UBL23ReaderBuilder.create (ImportCustomsDeclarationType.class);
+  }
+
+  /**
+   * Create a reader builder for InstructionForReturns.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <InstructionForReturnsType> instructionForReturns ()
+  {
+    return UBL23ReaderBuilder.create (InstructionForReturnsType.class);
+  }
+
+  /**
+   * Create a reader builder for InventoryReport.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <InventoryReportType> inventoryReport ()
+  {
+    return UBL23ReaderBuilder.create (InventoryReportType.class);
+  }
+
+  /**
+   * Create a reader builder for Invoice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <InvoiceType> invoice ()
+  {
+    return UBL23ReaderBuilder.create (InvoiceType.class);
+  }
+
+  /**
+   * Create a reader builder for ItemInformationRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ItemInformationRequestType> itemInformationRequest ()
+  {
+    return UBL23ReaderBuilder.create (ItemInformationRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for Manifest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ManifestType> manifest ()
+  {
+    return UBL23ReaderBuilder.create (ManifestType.class);
+  }
+
+  /**
+   * Create a reader builder for Order.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <OrderType> order ()
+  {
+    return UBL23ReaderBuilder.create (OrderType.class);
+  }
+
+  /**
+   * Create a reader builder for OrderCancellation.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <OrderCancellationType> orderCancellation ()
+  {
+    return UBL23ReaderBuilder.create (OrderCancellationType.class);
+  }
+
+  /**
+   * Create a reader builder for OrderChange.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <OrderChangeType> orderChange ()
+  {
+    return UBL23ReaderBuilder.create (OrderChangeType.class);
+  }
+
+  /**
+   * Create a reader builder for OrderResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <OrderResponseType> orderResponse ()
+  {
+    return UBL23ReaderBuilder.create (OrderResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for OrderResponseSimple.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <OrderResponseSimpleType> orderResponseSimple ()
+  {
+    return UBL23ReaderBuilder.create (OrderResponseSimpleType.class);
+  }
+
+  /**
+   * Create a reader builder for PackingList.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <PackingListType> packingList ()
+  {
+    return UBL23ReaderBuilder.create (PackingListType.class);
+  }
+
+  /**
+   * Create a reader builder for PriorInformationNotice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <PriorInformationNoticeType> priorInformationNotice ()
+  {
+    return UBL23ReaderBuilder.create (PriorInformationNoticeType.class);
+  }
+
+  /**
+   * Create a reader builder for ProductActivity.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ProductActivityType> productActivity ()
+  {
+    return UBL23ReaderBuilder.create (ProductActivityType.class);
+  }
+
+  /**
+   * Create a reader builder for ProofOfReexportation.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ProofOfReexportationType> proofOfReexportation ()
+  {
+    return UBL23ReaderBuilder.create (ProofOfReexportationType.class);
+  }
+
+  /**
+   * Create a reader builder for ProofOfReexportationReminder.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ProofOfReexportationReminderType> proofOfReexportationReminder ()
+  {
+    return UBL23ReaderBuilder.create (ProofOfReexportationReminderType.class);
+  }
+
+  /**
+   * Create a reader builder for ProofOfReexportationRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ProofOfReexportationRequestType> proofOfReexportationRequest ()
+  {
+    return UBL23ReaderBuilder.create (ProofOfReexportationRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for QualificationApplicationRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <QualificationApplicationRequestType> qualificationApplicationRequest ()
+  {
+    return UBL23ReaderBuilder.create (QualificationApplicationRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for QualificationApplicationResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <QualificationApplicationResponseType> qualificationApplicationResponse ()
+  {
+    return UBL23ReaderBuilder.create (QualificationApplicationResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for Quotation.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <QuotationType> quotation ()
+  {
+    return UBL23ReaderBuilder.create (QuotationType.class);
+  }
+
+  /**
+   * Create a reader builder for ReceiptAdvice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ReceiptAdviceType> receiptAdvice ()
+  {
+    return UBL23ReaderBuilder.create (ReceiptAdviceType.class);
+  }
+
+  /**
+   * Create a reader builder for Reminder.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <ReminderType> reminder ()
+  {
+    return UBL23ReaderBuilder.create (ReminderType.class);
+  }
+
+  /**
+   * Create a reader builder for RemittanceAdvice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <RemittanceAdviceType> remittanceAdvice ()
+  {
+    return UBL23ReaderBuilder.create (RemittanceAdviceType.class);
+  }
+
+  /**
+   * Create a reader builder for RequestForQuotation.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <RequestForQuotationType> requestForQuotation ()
+  {
+    return UBL23ReaderBuilder.create (RequestForQuotationType.class);
+  }
+
+  /**
+   * Create a reader builder for RetailEvent.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <RetailEventType> retailEvent ()
+  {
+    return UBL23ReaderBuilder.create (RetailEventType.class);
+  }
+
+  /**
+   * Create a reader builder for SelfBilledCreditNote.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <SelfBilledCreditNoteType> selfBilledCreditNote ()
+  {
+    return UBL23ReaderBuilder.create (SelfBilledCreditNoteType.class);
+  }
+
+  /**
+   * Create a reader builder for SelfBilledInvoice.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <SelfBilledInvoiceType> selfBilledInvoice ()
+  {
+    return UBL23ReaderBuilder.create (SelfBilledInvoiceType.class);
+  }
+
+  /**
+   * Create a reader builder for Statement.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <StatementType> statement ()
+  {
+    return UBL23ReaderBuilder.create (StatementType.class);
+  }
+
+  /**
+   * Create a reader builder for StockAvailabilityReport.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <StockAvailabilityReportType> stockAvailabilityReport ()
+  {
+    return UBL23ReaderBuilder.create (StockAvailabilityReportType.class);
+  }
+
+  /**
+   * Create a reader builder for Tender.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderType> tender ()
+  {
+    return UBL23ReaderBuilder.create (TenderType.class);
+  }
+
+  /**
+   * Create a reader builder for TenderContract.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderContractType> tenderContract ()
+  {
+    return UBL23ReaderBuilder.create (TenderContractType.class);
+  }
+
+  /**
+   * Create a reader builder for TendererQualification.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TendererQualificationType> tendererQualification ()
+  {
+    return UBL23ReaderBuilder.create (TendererQualificationType.class);
+  }
+
+  /**
+   * Create a reader builder for TendererQualificationResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TendererQualificationResponseType> tendererQualificationResponse ()
+  {
+    return UBL23ReaderBuilder.create (TendererQualificationResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for TenderReceipt.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderReceiptType> tenderReceipt ()
+  {
+    return UBL23ReaderBuilder.create (TenderReceiptType.class);
+  }
+
+  /**
+   * Create a reader builder for TenderStatus.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderStatusType> tenderStatus ()
+  {
+    return UBL23ReaderBuilder.create (TenderStatusType.class);
+  }
+
+  /**
+   * Create a reader builder for TenderStatusRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderStatusRequestType> tenderStatusRequest ()
+  {
+    return UBL23ReaderBuilder.create (TenderStatusRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for TenderWithdrawal.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TenderWithdrawalType> tenderWithdrawal ()
+  {
+    return UBL23ReaderBuilder.create (TenderWithdrawalType.class);
+  }
+
+  /**
+   * Create a reader builder for TradeItemLocationProfile.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TradeItemLocationProfileType> tradeItemLocationProfile ()
+  {
+    return UBL23ReaderBuilder.create (TradeItemLocationProfileType.class);
+  }
+
+  /**
+   * Create a reader builder for TransitCustomsDeclaration.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransitCustomsDeclarationType> transitCustomsDeclaration ()
+  {
+    return UBL23ReaderBuilder.create (TransitCustomsDeclarationType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportationStatus.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportationStatusType> transportationStatus ()
+  {
+    return UBL23ReaderBuilder.create (TransportationStatusType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportationStatusRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportationStatusRequestType> transportationStatusRequest ()
+  {
+    return UBL23ReaderBuilder.create (TransportationStatusRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportExecutionPlan.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportExecutionPlanType> transportExecutionPlan ()
+  {
+    return UBL23ReaderBuilder.create (TransportExecutionPlanType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportExecutionPlanRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
+  {
+    return UBL23ReaderBuilder.create (TransportExecutionPlanRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportProgressStatus.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportProgressStatusType> transportProgressStatus ()
+  {
+    return UBL23ReaderBuilder.create (TransportProgressStatusType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportProgressStatusRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportProgressStatusRequestType> transportProgressStatusRequest ()
+  {
+    return UBL23ReaderBuilder.create (TransportProgressStatusRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportServiceDescription.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportServiceDescriptionType> transportServiceDescription ()
+  {
+    return UBL23ReaderBuilder.create (TransportServiceDescriptionType.class);
+  }
+
+  /**
+   * Create a reader builder for TransportServiceDescriptionRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
+  {
+    return UBL23ReaderBuilder.create (TransportServiceDescriptionRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for UnawardedNotification.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <UnawardedNotificationType> unawardedNotification ()
+  {
+    return UBL23ReaderBuilder.create (UnawardedNotificationType.class);
+  }
+
+  /**
+   * Create a reader builder for UnsubscribeFromProcedureRequest.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <UnsubscribeFromProcedureRequestType> unsubscribeFromProcedureRequest ()
+  {
+    return UBL23ReaderBuilder.create (UnsubscribeFromProcedureRequestType.class);
+  }
+
+  /**
+   * Create a reader builder for UnsubscribeFromProcedureResponse.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <UnsubscribeFromProcedureResponseType> unsubscribeFromProcedureResponse ()
+  {
+    return UBL23ReaderBuilder.create (UnsubscribeFromProcedureResponseType.class);
+  }
+
+  /**
+   * Create a reader builder for UtilityStatement.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <UtilityStatementType> utilityStatement ()
+  {
+    return UBL23ReaderBuilder.create (UtilityStatementType.class);
+  }
+
+  /**
+   * Create a reader builder for Waybill.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <WaybillType> waybill ()
+  {
+    return UBL23ReaderBuilder.create (WaybillType.class);
+  }
+
+  /**
+   * Create a reader builder for WeightStatement.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static UBL23ReaderBuilder <WeightStatementType> weightStatement ()
+  {
+    return UBL23ReaderBuilder.create (WeightStatementType.class);
+  }
 }
