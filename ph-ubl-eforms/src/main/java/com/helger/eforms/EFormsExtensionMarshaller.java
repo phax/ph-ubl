@@ -34,8 +34,10 @@ import com.helger.xsds.xmldsig.CXMLDSig;
  *
  * @author Philip Helger
  * @since 6.7.0
+ * @deprecated Use {@link EformsUBLMarshaller#eFormsExtension()} instead
  */
-public final class EFormsExtensionMarshaller extends GenericJAXBMarshaller <EformsExtension>
+@Deprecated (forRemoval = true, since = "8.0.0")
+public class EFormsExtensionMarshaller extends GenericJAXBMarshaller <EformsExtension>
 {
   public EFormsExtensionMarshaller ()
   {
@@ -48,7 +50,8 @@ public final class EFormsExtensionMarshaller extends GenericJAXBMarshaller <Efor
                                     CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
                                     CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
                                     CEformsUBL.XSD_EFORMS_EXTENSION_APEX),
-           createSimpleJAXBElement (new QName (CEformsUBL.XML_SCHEMA_EFEXT_NAMESPACE_URL, "EformsExtension"), EformsExtension.class));
+           createSimpleJAXBElement (new QName (CEformsUBL.XML_SCHEMA_EFEXT_NAMESPACE_URL, "EformsExtension"),
+                                    EformsExtension.class));
     setNamespaceContext (EformsUBLNamespaceContext.getInstance ());
   }
 }

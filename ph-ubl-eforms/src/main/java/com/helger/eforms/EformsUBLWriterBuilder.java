@@ -31,8 +31,10 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  * @since 6.7.0
  * @param <JAXBTYPE>
  *        JAXB implementation type
+ * @deprecated Use {@link EformsUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class EformsUBLWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, EformsUBLWriterBuilder <JAXBTYPE>>
 {
   public EformsUBLWriterBuilder (@Nonnull final EFormsUBLDocumentType eDocType)

@@ -33,12 +33,6 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CEformsUBL
 {
-  @Nonnull
-  private static ClassLoader _getCL ()
-  {
-    return CEformsUBL.class.getClassLoader ();
-  }
-
   /** The efext namespace URL */
   public static final String XML_SCHEMA_EFEXT_NAMESPACE_URL = "http://data.europa.eu/p27/eforms-ubl-extensions/1";
 
@@ -48,21 +42,34 @@ public final class CEformsUBL
   /** The efbc namespace URL */
   public static final String XML_SCHEMA_EFBC_NAMESPACE_URL = "http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1";
 
-  public static final ClassPathResource XSD_EFORMS_EXTENSION_BASIC_COMPONENTS = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionBasicComponents-2.3.xsd",
-                                                                                                       _getCL ());
+  /** The classpath relative directory where the main XSDs reside */
+  public static final String SCHEMA_DIRECTORY = "external/schemas/eforms/";
 
-  public static final ClassPathResource XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionAggregateComponents-2.3.xsd",
-                                                                                                           _getCL ());
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_BASIC_COMPONENTS = new ClassPathResource (SCHEMA_DIRECTORY +
+                                                                                                       "EFORMS-ExtensionBasicComponents-2.3.xsd",
+                                                                                                       getCL ());
 
-  public static final ClassPathResource XSD_EFORMS_EXTENSION_APEX = new ClassPathResource ("/schemas/eforms/EFORMS-ExtensionApex-2.3.xsd",
-                                                                                           _getCL ());
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS = new ClassPathResource (SCHEMA_DIRECTORY +
+                                                                                                           "EFORMS-ExtensionAggregateComponents-2.3.xsd",
+                                                                                                           getCL ());
 
-  public static final ClassPathResource XSD_EFORMS_BRIN = new ClassPathResource ("/schemas/eforms/EFORMS-BusinessRegistrationInformationNotice.xsd",
-                                                                                 _getCL ());
+  public static final ClassPathResource XSD_EFORMS_EXTENSION_APEX = new ClassPathResource (SCHEMA_DIRECTORY +
+                                                                                           "EFORMS-ExtensionApex-2.3.xsd",
+                                                                                           getCL ());
+
+  public static final ClassPathResource XSD_EFORMS_BRIN = new ClassPathResource (SCHEMA_DIRECTORY +
+                                                                                 "EFORMS-BusinessRegistrationInformationNotice.xsd",
+                                                                                 getCL ());
 
   @PresentForCodeCoverage
   private static final CEformsUBL INSTANCE = new CEformsUBL ();
 
   private CEformsUBL ()
   {}
+
+  @Nonnull
+  public static ClassLoader getCL ()
+  {
+    return CEformsUBL.class.getClassLoader ();
+  }
 }

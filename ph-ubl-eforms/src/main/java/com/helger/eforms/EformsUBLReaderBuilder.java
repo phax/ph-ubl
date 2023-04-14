@@ -30,11 +30,14 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  * @since 6.7.0
  * @param <JAXBTYPE>
  *        JAXB type
+ * @deprecated Use {@link EformsUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class EformsUBLReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, EformsUBLReaderBuilder <JAXBTYPE>>
 {
-  public EformsUBLReaderBuilder (@Nonnull final EFormsUBLDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
+  public EformsUBLReaderBuilder (@Nonnull final EFormsUBLDocumentType aDocType,
+                                 @Nonnull final Class <JAXBTYPE> aImplClass)
   {
     super (aDocType, aImplClass);
   }

@@ -34,6 +34,7 @@ import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
 import com.helger.eforms.jaxb.ext.EformsExtension;
+import com.helger.ubl23.UBL23Marshaller.UBL23JAXBMarshaller;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -52,38 +53,40 @@ public final class EformsUBLFuncTest
   @Test
   public void testCANForms ()
   {
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_AWARD_NOTICE))
+    final UBL23JAXBMarshaller <ContractAwardNoticeType> m = EformsUBLMarshaller.contractAwardNotice ();
+
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.CONTRACT_AWARD_NOTICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EFormsUBLDocumentType.CONTRACT_AWARD_NOTICE.getSchema ()));
-      final ContractAwardNoticeType aUBLObject = EformsUBLReader.contractAwardNotice ().read (aDoc);
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final ContractAwardNoticeType aUBLObject = EformsUBLMarshaller.contractAwardNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = EformsUBLValidator.contractAwardNotice ().validate (aUBLObject);
+      IErrorList aErrors = EformsUBLMarshaller.contractAwardNotice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = EformsUBLWriter.contractAwardNotice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = EformsUBLMarshaller.contractAwardNotice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ContractAwardNoticeType aUBLObject2 = EformsUBLReader.contractAwardNotice ().read (aDoc2);
+      final ContractAwardNoticeType aUBLObject2 = EformsUBLMarshaller.contractAwardNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = EformsUBLValidator.contractAwardNotice ().validate (aUBLObject2);
+      aErrors = EformsUBLMarshaller.contractAwardNotice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = EformsUBLValidator.contractAwardNotice ().validate (new ContractAwardNoticeType ());
+    final IErrorList aErrors = EformsUBLMarshaller.contractAwardNotice ().validate (new ContractAwardNoticeType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -91,38 +94,40 @@ public final class EformsUBLFuncTest
   @Test
   public void testCNForms ()
   {
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_NOTICE))
+    final UBL23JAXBMarshaller <ContractNoticeType> m = EformsUBLMarshaller.contractNotice ();
+
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.CONTRACT_NOTICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EFormsUBLDocumentType.CONTRACT_NOTICE.getSchema ()));
-      final ContractNoticeType aUBLObject = EformsUBLReader.contractNotice ().read (aDoc);
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final ContractNoticeType aUBLObject = EformsUBLMarshaller.contractNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = EformsUBLValidator.contractNotice ().validate (aUBLObject);
+      IErrorList aErrors = EformsUBLMarshaller.contractNotice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = EformsUBLWriter.contractNotice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = EformsUBLMarshaller.contractNotice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ContractNoticeType aUBLObject2 = EformsUBLReader.contractNotice ().read (aDoc2);
+      final ContractNoticeType aUBLObject2 = EformsUBLMarshaller.contractNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = EformsUBLValidator.contractNotice ().validate (aUBLObject2);
+      aErrors = EformsUBLMarshaller.contractNotice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = EformsUBLValidator.contractNotice ().validate (new ContractNoticeType ());
+    final IErrorList aErrors = EformsUBLMarshaller.contractNotice ().validate (new ContractNoticeType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -130,38 +135,41 @@ public final class EformsUBLFuncTest
   @Test
   public void testPINForms ()
   {
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.PRIOR_INFORMATION_NOTICE))
+    final UBL23JAXBMarshaller <PriorInformationNoticeType> m = EformsUBLMarshaller.priorInformationNotice ();
+
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.PRIOR_INFORMATION_NOTICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EFormsUBLDocumentType.PRIOR_INFORMATION_NOTICE.getSchema ()));
-      final PriorInformationNoticeType aUBLObject = EformsUBLReader.priorInformationNotice ().read (aDoc);
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final PriorInformationNoticeType aUBLObject = EformsUBLMarshaller.priorInformationNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = EformsUBLValidator.priorInformationNotice ().validate (aUBLObject);
+      IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = EformsUBLWriter.priorInformationNotice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = EformsUBLMarshaller.priorInformationNotice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final PriorInformationNoticeType aUBLObject2 = EformsUBLReader.priorInformationNotice ().read (aDoc2);
+      final PriorInformationNoticeType aUBLObject2 = EformsUBLMarshaller.priorInformationNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = EformsUBLValidator.priorInformationNotice ().validate (aUBLObject2);
+      aErrors = EformsUBLMarshaller.priorInformationNotice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = EformsUBLValidator.priorInformationNotice ().validate (new PriorInformationNoticeType ());
+    final IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ()
+                                                  .validate (new PriorInformationNoticeType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -169,12 +177,12 @@ public final class EformsUBLFuncTest
   @Test
   public void testUpdateInstanceAndAddExtension ()
   {
-    final ContractAwardNoticeType aSourceDoc = EformsUBLReader.contractAwardNotice ()
-                                                              .read (new File ("src/test/resources/examples/can_24_maximal.xml"));
+    final ContractAwardNoticeType aSourceDoc = EformsUBLMarshaller.contractAwardNotice ()
+                                                                  .read (new File ("src/test/resources/external/examples/can_24_maximal.xml"));
     assertNotNull (aSourceDoc);
 
-    final ContractAwardNoticeType aTargetDoc = EformsUBLReader.contractAwardNotice ()
-                                                              .read (new File ("src/test/resources/examples/can_24_minimal.xml"));
+    final ContractAwardNoticeType aTargetDoc = EformsUBLMarshaller.contractAwardNotice ()
+                                                                  .read (new File ("src/test/resources/external/examples/can_24_minimal.xml"));
     assertNotNull (aTargetDoc);
 
     final EformsExtension aEformsExtension = EformsUBLHelper.getFormsExtension (aSourceDoc.getUBLExtensions ()
@@ -202,7 +210,9 @@ public final class EformsUBLFuncTest
     }
 
     // Write XML to String
-    final String sResult = EformsUBLWriter.contractAwardNotice ().setFormattedOutput (true).getAsString (aTargetDoc);
+    final String sResult = EformsUBLMarshaller.contractAwardNotice ()
+                                              .setFormattedOutput (true)
+                                              .getAsString (aTargetDoc);
     assertNotNull (sResult);
     LOGGER.info (sResult);
   }

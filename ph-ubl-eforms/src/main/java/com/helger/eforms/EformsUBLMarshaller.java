@@ -1,0 +1,116 @@
+package com.helger.eforms;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.xml.namespace.QName;
+import javax.xml.validation.Schema;
+
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
+import com.helger.eforms.jaxb.ext.EformsExtension;
+import com.helger.jaxb.GenericJAXBMarshaller;
+import com.helger.ubl23.CUBL23;
+import com.helger.ubl23.UBL23Marshaller;
+import com.helger.ubl23.UBL23Marshaller.UBL23JAXBMarshaller;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
+import com.helger.xsds.xades132.CXAdES132;
+import com.helger.xsds.xades141.CXAdES141;
+import com.helger.xsds.xmldsig.CXMLDSig;
+
+import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
+import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
+import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
+
+/**
+ * The class provides all the eForms UBL marshallers for reading, writing and
+ * validation.
+ *
+ * @author Philip Helger
+ * @since 8.0.0
+ */
+public final class EformsUBLMarshaller
+{
+  public static class EformsUBLJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
+  {
+    public EformsUBLJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
+                                    @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
+                                    @Nonnull final QName aRootElementQName)
+    {
+      super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
+
+      // Create a special namespace context for the passed document type
+      final MapBasedNamespaceContext aNSContext = EformsUBLNamespaceContext.getInstance ().getClone ();
+      // Avoid overwriting an already mapped context
+      if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
+        aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
+      setNamespaceContext (aNSContext);
+    }
+
+    @Nullable
+    public Schema getSchema ()
+    {
+      return createValidationSchema ();
+    }
+  }
+
+  private EformsUBLMarshaller ()
+  {}
+
+  @Nonnull
+  private static ClassPathResource _getCPR (@Nonnull final String sXSDPath)
+  {
+    return new ClassPathResource (CEformsUBL.SCHEMA_DIRECTORY + sXSDPath, CEformsUBL.getCL ());
+  }
+
+  @Nonnull
+  public static UBL23JAXBMarshaller <ContractAwardNoticeType> contractAwardNotice ()
+  {
+    return UBL23Marshaller.contractAwardNotice ();
+  }
+
+  @Nonnull
+  public static UBL23JAXBMarshaller <ContractNoticeType> contractNotice ()
+  {
+    return UBL23Marshaller.contractNotice ();
+  }
+
+  @Nonnull
+  public static UBL23JAXBMarshaller <PriorInformationNoticeType> priorInformationNotice ()
+  {
+    return UBL23Marshaller.priorInformationNotice ();
+  }
+
+  @Nonnull
+  public static EformsUBLJAXBMarshaller <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
+  {
+    return new EformsUBLJAXBMarshaller <> (BusinessRegistrationInformationNoticeType.class,
+                                           new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                    CXMLDSig.getXSDResource (),
+                                                                    CXAdES132.getXSDResource (),
+                                                                    CXAdES141.getXSDResource (),
+                                                                    CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_APEX,
+                                                                    CEformsUBL.XSD_EFORMS_BRIN),
+                                           com.helger.eforms.jaxb.brin.ObjectFactory._BusinessRegistrationInformationNotice_QNAME);
+  }
+
+  @Nonnull
+  public static EformsUBLJAXBMarshaller <EformsExtension> eFormsExtension ()
+  {
+    return new EformsUBLJAXBMarshaller <> (EformsExtension.class,
+                                           new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                    CXMLDSig.getXSDResource (),
+                                                                    CXAdES132.getXSDResource (),
+                                                                    CXAdES141.getXSDResource (),
+                                                                    CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
+                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_APEX),
+                                           new QName (CEformsUBL.XML_SCHEMA_EFEXT_NAMESPACE_URL, "EformsExtension"));
+  }
+}

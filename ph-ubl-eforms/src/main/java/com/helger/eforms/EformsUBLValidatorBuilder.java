@@ -30,9 +30,12 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  * @since 6.7.0
  * @param <JAXBTYPE>
  *        JAXB implementation type
+ * @deprecated Use {@link EformsUBLMarshaller} instead
  */
 @NotThreadSafe
-public class EformsUBLValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, EformsUBLValidatorBuilder <JAXBTYPE>>
+@Deprecated (forRemoval = true, since = "8.0.0")
+public class EformsUBLValidatorBuilder <JAXBTYPE> extends
+                                       JAXBValidationBuilder <JAXBTYPE, EformsUBLValidatorBuilder <JAXBTYPE>>
 {
   public EformsUBLValidatorBuilder (@Nonnull final EFormsUBLDocumentType eDocType)
   {

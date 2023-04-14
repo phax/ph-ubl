@@ -26,6 +26,7 @@ import org.junit.Test;
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EformsUBLDocumentTypeTest
 {
   @Test

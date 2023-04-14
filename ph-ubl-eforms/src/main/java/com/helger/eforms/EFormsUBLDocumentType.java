@@ -49,11 +49,13 @@ import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorI
  * @author Philip Helger
  * @since 6.7.0
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public enum EFormsUBLDocumentType implements IJAXBDocumentType
 {
   CONTRACT_AWARD_NOTICE (ContractAwardNoticeType.class, EUBL23DocumentType.CONTRACT_AWARD_NOTICE.getAllXSDResources ()),
   CONTRACT_NOTICE (ContractNoticeType.class, EUBL23DocumentType.CONTRACT_NOTICE.getAllXSDResources ()),
-  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class, EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
+  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class,
+                            EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
   BUSINESS_REGISTRATION_INFORMATION_NOTICE (BusinessRegistrationInformationNoticeType.class,
                                             new CommonsArrayList <> (CCCTS.getXSDResource (),
                                                                      CXMLDSig.getXSDResource (),

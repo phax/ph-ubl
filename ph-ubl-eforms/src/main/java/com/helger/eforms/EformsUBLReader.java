@@ -33,8 +33,10 @@ import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorI
  * @author Jonatan Sunden
  * @author Philip Helger
  * @since 6.7.0
+ * @deprecated Use {@link EformsUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EformsUBLReader
 {
   @PresentForCodeCoverage

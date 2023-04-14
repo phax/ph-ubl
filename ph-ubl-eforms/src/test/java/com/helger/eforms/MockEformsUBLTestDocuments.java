@@ -34,7 +34,7 @@ public final class MockEformsUBLTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getTestDocuments (@Nonnull final EFormsUBLDocumentType eType)
+  public static ICommonsList <String> getTestDocuments (@Nonnull final EFormsUBLDocumentTypeSimple eType)
   {
     switch (eType)
     {

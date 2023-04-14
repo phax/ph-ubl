@@ -33,6 +33,7 @@ import com.helger.commons.collection.impl.ICommonsMap;
  * @since 6.7.0
  */
 @Immutable
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EformsUBLDocumentTypes
 {
   /** Maps local names to document types */
@@ -65,6 +66,7 @@ public final class EformsUBLDocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EFormsUBLDocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EFormsUBLDocumentType.values (),
+                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 }

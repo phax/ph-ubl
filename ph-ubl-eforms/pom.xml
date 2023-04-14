@@ -116,7 +116,7 @@
             <id>eforms</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/eforms</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/eforms</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/eforms</schemaDirectory>
               <bindingIncludes>
                 <bindingInclude>bindings-eforms.xjb</bindingInclude>
               </bindingIncludes>

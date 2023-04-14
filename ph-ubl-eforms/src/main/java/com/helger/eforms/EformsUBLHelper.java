@@ -21,7 +21,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import com.helger.commons.ValueEnforcer;
@@ -57,7 +56,7 @@ public final class EformsUBLHelper
 
     final Object aAny = aExt.getAny ();
     if (aAny instanceof Element)
-      return new EFormsExtensionMarshaller ().read ((Element) aAny);
+      return EformsUBLMarshaller.eFormsExtension ().read ((Element) aAny);
     return null;
   }
 
@@ -72,15 +71,16 @@ public final class EformsUBLHelper
    * @return Never <code>null</code>.
    */
   @Nonnull
-  public static ESuccess setFormsExtension (@Nonnull final ExtensionContentType aExt, @Nonnull final EformsExtension aEformsExtension)
+  public static ESuccess setFormsExtension (@Nonnull final ExtensionContentType aExt,
+                                            @Nonnull final EformsExtension aEformsExtension)
   {
     ValueEnforcer.notNull (aExt, "Ext");
     ValueEnforcer.notNull (aEformsExtension, "EformsExtension");
 
-    final Document aDoc = new EFormsExtensionMarshaller ().getAsDocument (aEformsExtension);
-    if (aDoc == null)
+    final Element aElement = EformsUBLMarshaller.eFormsExtension ().getAsElement (aEformsExtension);
+    if (aElement == null)
       return ESuccess.FAILURE;
-    aExt.setAny (aDoc.getDocumentElement ());
+    aExt.setAny (aElement);
     return ESuccess.SUCCESS;
   }
 }
