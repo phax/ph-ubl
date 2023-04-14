@@ -28,6 +28,6 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate"     xmlType="xsd:date"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime"     xmlType="xsd:time"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </globalBindings>
-  <bindings schemaLocation="../resources/schemas/dian/maindoc/DIAN_UBL_Structures.xsd">
+  <bindings schemaLocation="../resources/external/schemas/dian/maindoc/DIAN_UBL_Structures.xsd">
   </bindings>
 </bindings>

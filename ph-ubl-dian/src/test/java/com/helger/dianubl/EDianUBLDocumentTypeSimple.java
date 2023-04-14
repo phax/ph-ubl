@@ -16,35 +16,17 @@
  */
 package com.helger.dianubl;
 
-import javax.annotation.Nonnull;
-
-import com.helger.ubl21.UBL21NamespaceContext;
-
 /**
- * The namespace context to be used as the namespace prefix mapper.
+ * Enumeration with all available DIAN UBL document types.
  *
  * @author Philip Helger
  */
-public class DianUBLNamespaceContext extends UBL21NamespaceContext
+public enum EDianUBLDocumentTypeSimple
 {
-  private static final class SingletonHolder
-  {
-    static final DianUBLNamespaceContext INSTANCE = new DianUBLNamespaceContext ();
-  }
-
-  protected DianUBLNamespaceContext ()
-  {
-    super ();
-    // Change cec to ext
-    addMapping ("ext", getCustomNamespaceURI ("cec"));
-    removeMapping ("cec");
-    // Add Dian mapping
-    addMapping ("sts", CDianUBL.XML_SCHEMA_STS_NAMESPACE_URL);
-  }
-
-  @Nonnull
-  public static DianUBLNamespaceContext getInstance ()
-  {
-    return SingletonHolder.INSTANCE;
-  }
+  APPLICATION_RESPONSE,
+  ATTACHED_DOCUMENT,
+  CREDIT_NOTE,
+  DEBIT_NOTE,
+  INVOICE,
+  DIAN_EXTENSIONS
 }

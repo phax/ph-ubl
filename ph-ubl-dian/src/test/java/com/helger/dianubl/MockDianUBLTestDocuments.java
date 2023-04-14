@@ -33,7 +33,7 @@ public final class MockDianUBLTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EDianUBLDocumentType eType)
+  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EDianUBLDocumentTypeSimple eType)
   {
     ICommonsList <String> aFiles;
     switch (eType)

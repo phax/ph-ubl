@@ -1,9 +1,12 @@
 package com.helger.ubl20;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
+import javax.xml.validation.Schema;
 
 import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
@@ -49,13 +52,19 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
  */
 public final class UBL20Marshaller
 {
-  protected static class UBL20JAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
+  public static class UBL20JAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
+    @Nonnull
+    public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ClassPathResource aXSD)
+    {
+      return new CommonsArrayList <> (aXSD);
+    }
+
     public UBL20JAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
                                 @Nonnull final ClassPathResource aXSD,
                                 @Nonnull final QName aRootElementQName)
     {
-      super (aType, new CommonsArrayList <> (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
+      super (aType, getAllXSDs (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = UBL20NamespaceContext.getInstance ().getClone ();
@@ -63,6 +72,12 @@ public final class UBL20Marshaller
       if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
         aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
       setNamespaceContext (aNSContext);
+    }
+
+    @Nullable
+    public Schema getSchema ()
+    {
+      return createValidationSchema ();
     }
   }
 
@@ -76,7 +91,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <ApplicationResponseType> applicationResponse ()
+  public static UBL20JAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return new UBL20JAXBMarshaller <> (ApplicationResponseType.class,
                                        _getCPR ("UBL-ApplicationResponse-2.0.xsd"),
@@ -84,7 +99,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <AttachedDocumentType> attachedDocument ()
+  public static UBL20JAXBMarshaller <AttachedDocumentType> attachedDocument ()
   {
     return new UBL20JAXBMarshaller <> (AttachedDocumentType.class,
                                        _getCPR ("UBL-AttachedDocument-2.0.xsd"),
@@ -92,7 +107,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <BillOfLadingType> billOfLading ()
+  public static UBL20JAXBMarshaller <BillOfLadingType> billOfLading ()
   {
     return new UBL20JAXBMarshaller <> (BillOfLadingType.class,
                                        _getCPR ("UBL-BillOfLading-2.0.xsd"),
@@ -100,7 +115,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CatalogueType> catalogue ()
+  public static UBL20JAXBMarshaller <CatalogueType> catalogue ()
   {
     return new UBL20JAXBMarshaller <> (CatalogueType.class,
                                        _getCPR ("UBL-Catalogue-2.0.xsd"),
@@ -108,7 +123,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CatalogueDeletionType> catalogueDeletion ()
+  public static UBL20JAXBMarshaller <CatalogueDeletionType> catalogueDeletion ()
   {
     return new UBL20JAXBMarshaller <> (CatalogueDeletionType.class,
                                        _getCPR ("UBL-CatalogueDeletion-2.0.xsd"),
@@ -116,7 +131,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
+  public static UBL20JAXBMarshaller <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
   {
     return new UBL20JAXBMarshaller <> (CatalogueItemSpecificationUpdateType.class,
                                        _getCPR ("UBL-CatalogueItemSpecificationUpdate-2.0.xsd"),
@@ -124,7 +139,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CataloguePricingUpdateType> cataloguePricingUpdate ()
+  public static UBL20JAXBMarshaller <CataloguePricingUpdateType> cataloguePricingUpdate ()
   {
     return new UBL20JAXBMarshaller <> (CataloguePricingUpdateType.class,
                                        _getCPR ("UBL-CataloguePricingUpdate-2.0.xsd"),
@@ -132,7 +147,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CatalogueRequestType> catalogueRequest ()
+  public static UBL20JAXBMarshaller <CatalogueRequestType> catalogueRequest ()
   {
     return new UBL20JAXBMarshaller <> (CatalogueRequestType.class,
                                        _getCPR ("UBL-CatalogueRequest-2.0.xsd"),
@@ -140,7 +155,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CertificateOfOriginType> certificateOfOrigin ()
+  public static UBL20JAXBMarshaller <CertificateOfOriginType> certificateOfOrigin ()
   {
     return new UBL20JAXBMarshaller <> (CertificateOfOriginType.class,
                                        _getCPR ("UBL-CertificateOfOrigin-2.0.xsd"),
@@ -148,7 +163,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <CreditNoteType> creditNote ()
+  public static UBL20JAXBMarshaller <CreditNoteType> creditNote ()
   {
     return new UBL20JAXBMarshaller <> (CreditNoteType.class,
                                        _getCPR ("UBL-CreditNote-2.0.xsd"),
@@ -156,7 +171,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <DebitNoteType> debitNote ()
+  public static UBL20JAXBMarshaller <DebitNoteType> debitNote ()
   {
     return new UBL20JAXBMarshaller <> (DebitNoteType.class,
                                        _getCPR ("UBL-DebitNote-2.0.xsd"),
@@ -164,7 +179,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <DespatchAdviceType> despatchAdvice ()
+  public static UBL20JAXBMarshaller <DespatchAdviceType> despatchAdvice ()
   {
     return new UBL20JAXBMarshaller <> (DespatchAdviceType.class,
                                        _getCPR ("UBL-DespatchAdvice-2.0.xsd"),
@@ -172,7 +187,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <ForwardingInstructionsType> forwardingInstructions ()
+  public static UBL20JAXBMarshaller <ForwardingInstructionsType> forwardingInstructions ()
   {
     return new UBL20JAXBMarshaller <> (ForwardingInstructionsType.class,
                                        _getCPR ("UBL-ForwardingInstructions-2.0.xsd"),
@@ -180,7 +195,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <FreightInvoiceType> freightInvoice ()
+  public static UBL20JAXBMarshaller <FreightInvoiceType> freightInvoice ()
   {
     return new UBL20JAXBMarshaller <> (FreightInvoiceType.class,
                                        _getCPR ("UBL-FreightInvoice-2.0.xsd"),
@@ -188,7 +203,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <InvoiceType> invoice ()
+  public static UBL20JAXBMarshaller <InvoiceType> invoice ()
   {
     return new UBL20JAXBMarshaller <> (InvoiceType.class,
                                        _getCPR ("UBL-Invoice-2.0.xsd"),
@@ -196,7 +211,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <OrderType> order ()
+  public static UBL20JAXBMarshaller <OrderType> order ()
   {
     return new UBL20JAXBMarshaller <> (OrderType.class,
                                        _getCPR ("UBL-Order-2.0.xsd"),
@@ -204,7 +219,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <OrderCancellationType> orderCancellation ()
+  public static UBL20JAXBMarshaller <OrderCancellationType> orderCancellation ()
   {
     return new UBL20JAXBMarshaller <> (OrderCancellationType.class,
                                        _getCPR ("UBL-OrderCancellation-2.0.xsd"),
@@ -212,7 +227,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <OrderChangeType> orderChange ()
+  public static UBL20JAXBMarshaller <OrderChangeType> orderChange ()
   {
     return new UBL20JAXBMarshaller <> (OrderChangeType.class,
                                        _getCPR ("UBL-OrderChange-2.0.xsd"),
@@ -220,7 +235,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <OrderResponseType> orderResponse ()
+  public static UBL20JAXBMarshaller <OrderResponseType> orderResponse ()
   {
     return new UBL20JAXBMarshaller <> (OrderResponseType.class,
                                        _getCPR ("UBL-OrderResponse-2.0.xsd"),
@@ -228,7 +243,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <OrderResponseSimpleType> orderResponseSimple ()
+  public static UBL20JAXBMarshaller <OrderResponseSimpleType> orderResponseSimple ()
   {
     return new UBL20JAXBMarshaller <> (OrderResponseSimpleType.class,
                                        _getCPR ("UBL-OrderResponseSimple-2.0.xsd"),
@@ -236,7 +251,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <PackingListType> packingList ()
+  public static UBL20JAXBMarshaller <PackingListType> packingList ()
   {
     return new UBL20JAXBMarshaller <> (PackingListType.class,
                                        _getCPR ("UBL-PackingList-2.0.xsd"),
@@ -244,7 +259,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <QuotationType> quotation ()
+  public static UBL20JAXBMarshaller <QuotationType> quotation ()
   {
     return new UBL20JAXBMarshaller <> (QuotationType.class,
                                        _getCPR ("UBL-Quotation-2.0.xsd"),
@@ -252,7 +267,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <ReceiptAdviceType> receiptAdvice ()
+  public static UBL20JAXBMarshaller <ReceiptAdviceType> receiptAdvice ()
   {
     return new UBL20JAXBMarshaller <> (ReceiptAdviceType.class,
                                        _getCPR ("UBL-ReceiptAdvice-2.0.xsd"),
@@ -260,7 +275,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <ReminderType> reminder ()
+  public static UBL20JAXBMarshaller <ReminderType> reminder ()
   {
     return new UBL20JAXBMarshaller <> (ReminderType.class,
                                        _getCPR ("UBL-Reminder-2.0.xsd"),
@@ -268,7 +283,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <RemittanceAdviceType> remittanceAdvice ()
+  public static UBL20JAXBMarshaller <RemittanceAdviceType> remittanceAdvice ()
   {
     return new UBL20JAXBMarshaller <> (RemittanceAdviceType.class,
                                        _getCPR ("UBL-RemittanceAdvice-2.0.xsd"),
@@ -276,7 +291,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <RequestForQuotationType> requestForQuotation ()
+  public static UBL20JAXBMarshaller <RequestForQuotationType> requestForQuotation ()
   {
     return new UBL20JAXBMarshaller <> (RequestForQuotationType.class,
                                        _getCPR ("UBL-RequestForQuotation-2.0.xsd"),
@@ -284,7 +299,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <SelfBilledCreditNoteType> selfBilledCreditNote ()
+  public static UBL20JAXBMarshaller <SelfBilledCreditNoteType> selfBilledCreditNote ()
   {
     return new UBL20JAXBMarshaller <> (SelfBilledCreditNoteType.class,
                                        _getCPR ("UBL-SelfBilledCreditNote-2.0.xsd"),
@@ -292,7 +307,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <SelfBilledInvoiceType> selfBilledInvoice ()
+  public static UBL20JAXBMarshaller <SelfBilledInvoiceType> selfBilledInvoice ()
   {
     return new UBL20JAXBMarshaller <> (SelfBilledInvoiceType.class,
                                        _getCPR ("UBL-SelfBilledInvoice-2.0.xsd"),
@@ -300,7 +315,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <StatementType> statement ()
+  public static UBL20JAXBMarshaller <StatementType> statement ()
   {
     return new UBL20JAXBMarshaller <> (StatementType.class,
                                        _getCPR ("UBL-Statement-2.0.xsd"),
@@ -308,7 +323,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <TransportationStatusType> transportationStatus ()
+  public static UBL20JAXBMarshaller <TransportationStatusType> transportationStatus ()
   {
     return new UBL20JAXBMarshaller <> (TransportationStatusType.class,
                                        _getCPR ("UBL-TransportationStatus-2.0.xsd"),
@@ -316,7 +331,7 @@ public final class UBL20Marshaller
   }
 
   @Nonnull
-  public static GenericJAXBMarshaller <WaybillType> waybill ()
+  public static UBL20JAXBMarshaller <WaybillType> waybill ()
   {
     return new UBL20JAXBMarshaller <> (WaybillType.class,
                                        _getCPR ("UBL-Waybill-2.0.xsd"),

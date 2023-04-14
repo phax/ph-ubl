@@ -27,9 +27,12 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The DIAN UBL implementation class to be read
+ * @deprecated Use {@link DianUBLMarshaller} instead
  */
 @NotThreadSafe
-public class DianUBLValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, DianUBLValidatorBuilder <JAXBTYPE>>
+@Deprecated (forRemoval = true, since = "8.0.0")
+public class DianUBLValidatorBuilder <JAXBTYPE> extends
+                                     JAXBValidationBuilder <JAXBTYPE, DianUBLValidatorBuilder <JAXBTYPE>>
 {
   public DianUBLValidatorBuilder (@Nonnull final EDianUBLDocumentType eDocType)
   {

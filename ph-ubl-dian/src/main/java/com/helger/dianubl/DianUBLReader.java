@@ -32,8 +32,10 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
  * Read all DIAN UBL document types.
  *
  * @author Philip Helger
+ * @deprecated Use {@link DianUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class DianUBLReader
 {
   @PresentForCodeCoverage

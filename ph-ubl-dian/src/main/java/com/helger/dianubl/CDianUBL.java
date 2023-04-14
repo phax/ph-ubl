@@ -30,24 +30,27 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CDianUBL
 {
-  @Nonnull
-  private static ClassLoader _getCL ()
-  {
-    return CDianUBL.class.getClassLoader ();
-  }
+  private static final String PREFIX = "external/schemas/";
 
   /** The classpath relative directory where the main XSDs reside */
-  public static final String SCHEMA_DIRECTORY = "schemas/dian/";
+  public static final String SCHEMA_DIRECTORY = PREFIX + "dian/";
 
   /** The sts namespace URL */
   public static final String XML_SCHEMA_STS_NAMESPACE_URL = "dian:gov:co:facturaelectronica:Structures-2-1";
 
-  public static final ClassPathResource XSD_DIAN_UBL_STRUCTURE = new ClassPathResource ("/schemas/dian/maindoc/DIAN_UBL_Structures.xsd",
-                                                                                        _getCL ());
+  public static final ClassPathResource XSD_DIAN_UBL_STRUCTURE = new ClassPathResource (SCHEMA_DIRECTORY +
+                                                                                        "maindoc/DIAN_UBL_Structures.xsd",
+                                                                                        getCL ());
 
   @PresentForCodeCoverage
   private static final CDianUBL INSTANCE = new CDianUBL ();
 
   private CDianUBL ()
   {}
+
+  @Nonnull
+  public static ClassLoader getCL ()
+  {
+    return CDianUBL.class.getClassLoader ();
+  }
 }

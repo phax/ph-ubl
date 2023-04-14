@@ -27,6 +27,7 @@ import org.junit.Test;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class DianUBLDocumentTypesTest
 {
   @Test
@@ -54,8 +55,10 @@ public final class DianUBLDocumentTypesTest
     assertNull (DianUBLDocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EDianUBLDocumentType eDocType : EDianUBLDocumentType.values ())
     {
-      assertSame (eDocType, DianUBLDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (), DianUBLDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType,
+                  DianUBLDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType.getSchema (),
+                  DianUBLDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
     }
   }

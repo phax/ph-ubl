@@ -32,7 +32,7 @@ public final class MainCreateUBL20MarshallerCode extends AbstractCreateUBLAction
       final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
       final String sMethodName = lcFirst (sNoTypeName);
       aSB.append ("@Nonnull\n");
-      aSB.append ("public static GenericJAXBMarshaller <")
+      aSB.append ("public static UBL20JAXBMarshaller <")
          .append (sClassName)
          .append ("> ")
          .append (sMethodName)

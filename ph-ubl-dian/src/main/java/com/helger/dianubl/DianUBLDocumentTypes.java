@@ -35,6 +35,7 @@ import com.helger.commons.collection.impl.ICommonsSet;
  * @author Philip Helger
  */
 @Immutable
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class DianUBLDocumentTypes
 {
   /** Maps local names to document types */
@@ -117,7 +118,8 @@ public final class DianUBLDocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EDianUBLDocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EDianUBLDocumentType.values (),
+                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

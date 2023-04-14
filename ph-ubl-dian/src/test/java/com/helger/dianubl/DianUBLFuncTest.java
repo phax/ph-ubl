@@ -25,6 +25,8 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.Month;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,39 +67,42 @@ public final class DianUBLFuncTest
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
-    for (final String sFilename : MockDianUBLTestDocuments.getUBLPETestDocuments (EDianUBLDocumentType.INVOICE))
+    final Schema aSchema = DianUBLMarshaller.invoice ().getSchema ();
+    assertNotNull (aSchema);
+
+    for (final String sFilename : MockDianUBLTestDocuments.getUBLPETestDocuments (EDianUBLDocumentTypeSimple.INVOICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EDianUBLDocumentType.INVOICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
-      final InvoiceType aUBLObject = DianUBLReader.invoice ().read (aDoc);
+      final InvoiceType aUBLObject = DianUBLMarshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = DianUBLValidator.invoice ().validate (aUBLObject);
+      IErrorList aErrors = DianUBLMarshaller.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = DianUBLWriter.invoice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = DianUBLMarshaller.invoice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final InvoiceType aUBLObject2 = DianUBLReader.invoice ().read (aDoc2);
+      final InvoiceType aUBLObject2 = DianUBLMarshaller.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = DianUBLValidator.invoice ().validate (aUBLObject2);
+      aErrors = DianUBLMarshaller.invoice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = DianUBLValidator.invoice ().validate (new InvoiceType ());
+    final IErrorList aErrors = DianUBLMarshaller.invoice ().validate (new InvoiceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -106,8 +111,8 @@ public final class DianUBLFuncTest
   public void testReadInstanceAndAddExtension ()
   {
     // This is based on test-dian/Generica.xml
-    final InvoiceType aInvoice = DianUBLReader.invoice ()
-                                              .read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
+    final InvoiceType aInvoice = DianUBLMarshaller.invoice ()
+                                                  .read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
     assertNotNull (aInvoice);
 
     // The main extension, filled with values from test-dian/Generica.xml
@@ -188,7 +193,7 @@ public final class DianUBLFuncTest
     final UBLExtensionType aExtension = new UBLExtensionType ();
     final ExtensionContentType aExtCont = new ExtensionContentType ();
     {
-      final Document aDoc = DianUBLWriter.dianExtensions ().getAsDocument (aDian);
+      final Document aDoc = DianUBLMarshaller.dianExtensions ().getAsDocument (aDian);
       assertNotNull (aDoc);
       // Must set as "org.w3c.Element"
       aExtCont.setAny (aDoc.getDocumentElement ());
@@ -198,7 +203,7 @@ public final class DianUBLFuncTest
     aInvoice.setUBLExtensions (aExtensions);
 
     // Write XML to String
-    final String sResult = DianUBLWriter.invoice ().setFormattedOutput (true).getAsString (aInvoice);
+    final String sResult = DianUBLMarshaller.invoice ().setFormattedOutput (true).getAsString (aInvoice);
     LOGGER.info (sResult);
   }
 }

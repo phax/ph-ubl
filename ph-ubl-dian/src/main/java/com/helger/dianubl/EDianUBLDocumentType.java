@@ -39,6 +39,7 @@ import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public enum EDianUBLDocumentType implements IJAXBDocumentType
 {
   APPLICATION_RESPONSE (EUBL21DocumentType.APPLICATION_RESPONSE),

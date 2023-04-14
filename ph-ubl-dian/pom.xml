@@ -87,6 +87,11 @@
       <artifactId>jaxb-impl</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>phoss-smp-webapp-sql</artifactId>
+      <version>7.0.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   
   <build>
@@ -116,7 +121,7 @@
             <id>dian</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/dian</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/dian/maindoc</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/dian/maindoc</schemaDirectory>
               <bindingIncludes>
                 <bindingInclude>bindings-dian.xjb</bindingInclude>
               </bindingIncludes>

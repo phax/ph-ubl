@@ -28,8 +28,10 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The DIAN UBL implementation class to be read
+ * @deprecated Use {@link DianUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class DianUBLWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, DianUBLWriterBuilder <JAXBTYPE>>
 {
   public DianUBLWriterBuilder (@Nonnull final EDianUBLDocumentType eDocType)

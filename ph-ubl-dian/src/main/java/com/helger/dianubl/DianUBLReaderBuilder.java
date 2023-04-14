@@ -27,8 +27,10 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The DIAN UBL implementation class to be read
+ * @deprecated Use {@link DianUBLMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class DianUBLReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, DianUBLReaderBuilder <JAXBTYPE>>
 {
   public DianUBLReaderBuilder (@Nonnull final EDianUBLDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
