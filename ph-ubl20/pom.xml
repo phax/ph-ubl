@@ -122,7 +122,7 @@
             <id>ubl20</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ubl20</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ubl20</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/ubl20</schemaDirectory>
               <schemaIncludes>
                 <!-- includes must be in the correct order! -->
                 <schemaInclude>common/CodeList_LanguageCode_ISO_7_04.xsd</schemaInclude>

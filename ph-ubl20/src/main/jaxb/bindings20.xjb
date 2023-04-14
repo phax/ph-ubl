@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    Copyright (C) 2014-2023 Philip Helger (www.helger.com)
-    philip[at]helger[dot]com
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-            http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
 <!--This file is generated. Do NOT edit.
 -->
 <jaxb:bindings xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jaxb https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd" version="3.0">
@@ -25,12 +7,12 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </jaxb:globalBindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/CodeList_CurrencyCode_ISO_7_04.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.codelist.specification._54217._2001" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/CodeList_LanguageCode_ISO_7_04.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.codelist.specification._5639._1988" />
     </jaxb:schemaBindings>
@@ -315,12 +297,12 @@
       </jaxb:typesafeEnumClass>
     </jaxb:bindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.codelist.specification.ianamimemediatype._2003" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/CodeList_UnitCode_UNECE_7_04.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.codelist.specification._66411._2001" />
     </jaxb:schemaBindings>
@@ -1422,187 +1404,187 @@
       </jaxb:typesafeEnumClass>
     </jaxb:bindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UBL-CommonAggregateComponents-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UBL-CommonBasicComponents-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UBL-CommonExtensionComponents-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UBL-CoreComponentParameters-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.documentation._2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UBL-QualifiedDatatypes-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.qualifieddatatypes_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/common/UnqualifiedDataTypeSchemaModule-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="un.unece.uncefact.data.specification.unqualifieddatatypesschemamodule._2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-ApplicationResponse-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.applicationresponse_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-AttachedDocument-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-AttachedDocument-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.attacheddocument_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-BillOfLading-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-BillOfLading-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.billoflading_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Catalogue-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Catalogue-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.catalogue_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CatalogueDeletion-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CatalogueDeletion-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguedeletion_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CatalogueItemSpecificationUpdate-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CatalogueItemSpecificationUpdate-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CataloguePricingUpdate-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CataloguePricingUpdate-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CatalogueRequest-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CatalogueRequest-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguerequest_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CertificateOfOrigin-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CertificateOfOrigin-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.certificateoforigin_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-CreditNote-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-CreditNote-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.creditnote_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-DebitNote-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-DebitNote-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.debitnote_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-DespatchAdvice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-DespatchAdvice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.despatchadvice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-ForwardingInstructions-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-ForwardingInstructions-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.forwardinginstructions_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-FreightInvoice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-FreightInvoice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.freightinvoice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Invoice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Invoice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.invoice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Order-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Order-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.order_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-OrderCancellation-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-OrderCancellation-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.ordercancellation_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-OrderChange-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-OrderChange-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderchange_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-OrderResponse-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-OrderResponse-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderresponse_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-OrderResponseSimple-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-OrderResponseSimple-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderresponsesimple_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-PackingList-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-PackingList-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.packinglist_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Quotation-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Quotation-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.quotation_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-ReceiptAdvice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-ReceiptAdvice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.receiptadvice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Reminder-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Reminder-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.reminder_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-RemittanceAdvice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-RemittanceAdvice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.remittanceadvice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-RequestForQuotation-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-RequestForQuotation-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.requestforquotation_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-SelfBilledCreditNote-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-SelfBilledCreditNote-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-SelfBilledInvoice-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-SelfBilledInvoice-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Statement-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Statement-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.statement_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-TransportationStatus-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-TransportationStatus-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportationstatus_2" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
-  <jaxb:bindings schemaLocation="../resources/schemas/ubl20/maindoc/UBL-Waybill-2.0.xsd" node="/xsd:schema">
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl20/maindoc/UBL-Waybill-2.0.xsd" node="/xsd:schema">
     <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.waybill_2" />
     </jaxb:schemaBindings>

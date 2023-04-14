@@ -55,8 +55,8 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
  * Utility class that creates:
  * <ul>
  * <li>src/main/jaxb/bindings20.xjb - the JAXB binding file</li>
- * <li>src/main/resources/schemas/*.xsd.mapping - mapping files that contain the
- * generated explicit enum mappings</li>
+ * <li>src/main/resources/external/schemas/*.xsd.mapping - mapping files that
+ * contain the generated explicit enum mappings</li>
  * </ul>
  *
  * @author Philip Helger
@@ -225,7 +225,7 @@ public final class MainCreateJAXBBinding20
 
     // Write out the mapping file for easy later-on resolving
     XMLMapHandler.writeMap (aValueToConstants,
-                            new FileSystemResource ("src/main/resources/schemas/" + sFilename + ".mapping"));
+                            new FileSystemResource ("src/main/resources/external/schemas/" + sFilename + ".mapping"));
   }
 
   public static void main (final String [] args)
@@ -237,7 +237,7 @@ public final class MainCreateJAXBBinding20
       final ICommonsSet <String> aNamespaces = new CommonsHashSet <> ();
       for (final String sPart : new String [] { "common", "maindoc" })
       {
-        final String sBasePath = "/resources/schemas/ubl20/" + sPart;
+        final String sBasePath = "/resources/external/schemas/ubl20/" + sPart;
         for (final File aFile : _getFileList ("src/main" + sBasePath))
         {
           // Each namespace should handled only once

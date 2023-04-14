@@ -38,10 +38,10 @@ import com.helger.commons.collection.impl.ICommonsSet;
 public final class UBL20DocumentTypes
 {
   /** Maps namespaces to document types */
-  private static final ICommonsMap <String, EUBL20DocumentType> s_aNamespace2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, EUBL20DocumentType> NS2DOCTYPE = new CommonsHashMap <> ();
 
   /** Maps local names to document types */
-  private static final ICommonsMap <String, EUBL20DocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, EUBL20DocumentType> LOCALNAME2DOCTYPE = new CommonsHashMap <> ();
 
   static
   {
@@ -50,15 +50,15 @@ public final class UBL20DocumentTypes
     {
       // add to namespace map
       final String sNamespace = eDocType.getNamespaceURI ();
-      if (s_aNamespace2DocType.containsKey (sNamespace))
+      if (NS2DOCTYPE.containsKey (sNamespace))
         throw new IllegalArgumentException ("The namespace '" + sNamespace + "' is already mapped!");
-      s_aNamespace2DocType.put (sNamespace, eDocType);
+      NS2DOCTYPE.put (sNamespace, eDocType);
 
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
-      if (s_aLocalName2DocType.containsKey (sLocalName))
+      if (LOCALNAME2DOCTYPE.containsKey (sLocalName))
         throw new IllegalArgumentException ("The local name '" + sLocalName + "' is already mapped!");
-      s_aLocalName2DocType.put (sLocalName, eDocType);
+      LOCALNAME2DOCTYPE.put (sLocalName, eDocType);
     }
   }
 
@@ -75,7 +75,7 @@ public final class UBL20DocumentTypes
   @ReturnsMutableCopy
   public static ICommonsSet <String> getAllNamespaces ()
   {
-    return s_aNamespace2DocType.copyOfKeySet ();
+    return NS2DOCTYPE.copyOfKeySet ();
   }
 
   /**
@@ -90,7 +90,7 @@ public final class UBL20DocumentTypes
   @Nullable
   public static EUBL20DocumentType getDocumentTypeOfNamespace (@Nullable final String sNamespace)
   {
-    return s_aNamespace2DocType.get (sNamespace);
+    return NS2DOCTYPE.get (sNamespace);
   }
 
   /**
@@ -132,7 +132,7 @@ public final class UBL20DocumentTypes
   @ReturnsMutableCopy
   public static ICommonsSet <String> getAllLocalNames ()
   {
-    return s_aLocalName2DocType.copyOfKeySet ();
+    return LOCALNAME2DOCTYPE.copyOfKeySet ();
   }
 
   /**
@@ -147,7 +147,7 @@ public final class UBL20DocumentTypes
   @Nullable
   public static EUBL20DocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
   {
-    return s_aLocalName2DocType.get (sLocalName);
+    return LOCALNAME2DOCTYPE.get (sLocalName);
   }
 
   /**
