@@ -265,6 +265,7 @@ For further information on the Universal Business Language can be found on the f
 # News and noteworthy
 
 * v8.0.0 - work in progress
+    * Updated to ph-commons 11.0.3
     * New classes `UBL20Marshaller`
     * Deprecated classes `EUBL20DocumentType`, `UBL20DocumentType`, `UBL20(Reader|Validator|Writer)` and `UBL20(Reader|Validator|Writer)Builder`
     * Moved the XML Schemas to a new path that starts with `external/`
