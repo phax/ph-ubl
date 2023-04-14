@@ -26,7 +26,7 @@
   </parent>
   <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
-  <version>7.0.1-SNAPSHOT</version>
+  <version>8.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ph-ubl-parent-pom</name>
   <description>Base POM to build the ph-ubl projects</description>
@@ -79,7 +79,7 @@
       <dependency>
         <groupId>com.helger.commons</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
-        <version>11.0.2</version>
+        <version>11.0.3-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
