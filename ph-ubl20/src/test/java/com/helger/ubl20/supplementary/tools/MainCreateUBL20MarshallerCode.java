@@ -16,19 +16,12 @@
  */
 package com.helger.ubl20.supplementary.tools;
 
-import java.util.Locale;
-
 import com.helger.commons.string.StringHelper;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
 import com.helger.ubl20.EUBL20DocumentTypeSimple;
 
 public final class MainCreateUBL20MarshallerCode extends AbstractCreateUBLActionCode
 {
-  private static String _lcFirst (final String s)
-  {
-    return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
-  }
-
   public static void main (final String [] args)
   {
     final StringBuilder aSB = new StringBuilder ();
@@ -37,7 +30,7 @@ public final class MainCreateUBL20MarshallerCode extends AbstractCreateUBLAction
     {
       final String sClassName = e.getClazz ().getSimpleName ();
       final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
-      final String sMethodName = _lcFirst (sNoTypeName);
+      final String sMethodName = lcFirst (sNoTypeName);
       aSB.append ("@Nonnull\n");
       aSB.append ("public static GenericJAXBMarshaller <")
          .append (sClassName)

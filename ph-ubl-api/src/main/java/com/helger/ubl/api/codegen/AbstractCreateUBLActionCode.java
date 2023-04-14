@@ -16,6 +16,8 @@
  */
 package com.helger.ubl.api.codegen;
 
+import java.util.Locale;
+
 import javax.annotation.Nonnull;
 
 import com.helger.commons.lang.ClassHelper;
@@ -30,6 +32,12 @@ import com.helger.jaxb.builder.IJAXBDocumentType;
  */
 public abstract class AbstractCreateUBLActionCode
 {
+  @Nonnull
+  protected static String lcFirst (@Nonnull final String s)
+  {
+    return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
+  }
+
   public enum EPhase
   {
     READ,
