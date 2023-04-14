@@ -45,6 +45,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
  * validation.
  *
  * @author Philip Helger
+ * @since 8.0.0
  */
 public final class UBL20Marshaller
 {
