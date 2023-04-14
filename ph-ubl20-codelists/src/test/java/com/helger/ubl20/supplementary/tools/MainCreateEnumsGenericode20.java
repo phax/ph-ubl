@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.ubl20.main;
+package com.helger.ubl20.supplementary.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -92,14 +92,21 @@ public final class MainCreateEnumsGenericode20
     if (aAgency != null)
     {
       if (aAgency.hasIdentifierEntries ())
-        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_ID", JExpr.lit (aAgency.getIdentifierAtIndex (0).getValue ()));
+        jClass.field (JMod.PUBLIC_STATIC_FINAL,
+                      String.class,
+                      "AGENCY_ID",
+                      JExpr.lit (aAgency.getIdentifierAtIndex (0).getValue ()));
 
       if (aAgency.hasLongNameEntries ())
-        jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "AGENCY_LONG_NAME", JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
+        jClass.field (JMod.PUBLIC_STATIC_FINAL,
+                      String.class,
+                      "AGENCY_LONG_NAME",
+                      JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
     }
 
     final LongName aListID = CollectionHelper.findFirst (aIdentification.getLongName (),
-                                                         x -> x.getIdentifier () != null && x.getIdentifier ().equals ("listID"));
+                                                         x -> x.getIdentifier () != null &&
+                                                              x.getIdentifier ().equals ("listID"));
     if (aListID != null)
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_ID", JExpr.lit (aListID.getValue ()));
 
@@ -108,7 +115,8 @@ public final class MainCreateEnumsGenericode20
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
-  private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList) throws JCodeModelException
+  private static void _createGenericode04 (@Nonnull final File aFile,
+                                           @Nonnull final CodeListDocument aCodeList) throws JCodeModelException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
     {
@@ -163,7 +171,8 @@ public final class MainCreateEnumsGenericode20
                                             ._implements (s_aCodeModel.ref (IHasID.class).narrow (String.class))
                                             ._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
-    jEnum.javadoc ().add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
+    jEnum.javadoc ()
+         .add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
     jEnum.javadoc ().add ("It contains a total of " + aCodeList.getSimpleCodeList ().getRow ().size () + " entries!\n");
     jEnum.javadoc ().add ("@author " + MainCreateEnumsGenericode20.class.getName ());
 
@@ -214,7 +223,10 @@ public final class MainCreateEnumsGenericode20
 
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
-    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sDisplayName") : null;
+    final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
+                                                                 String.class,
+                                                                 "m_sDisplayName")
+                                                  : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.PRIVATE);
@@ -267,7 +279,11 @@ public final class MainCreateEnumsGenericode20
     m.annotate (Nullable.class);
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
-    m.body ()._return (s_aCodeModel.ref (EnumHelper.class).staticInvoke ("getFromIDOrNull").arg (JExpr.dotClass (jEnum)).arg (jID));
+    m.body ()
+     ._return (s_aCodeModel.ref (EnumHelper.class)
+                           .staticInvoke ("getFromIDOrNull")
+                           .arg (JExpr.dotClass (jEnum))
+                           .arg (jID));
 
     if (bHasNameColumn)
     {
@@ -276,7 +292,8 @@ public final class MainCreateEnumsGenericode20
       m.annotate (Nullable.class);
       jID = m.param (JMod.FINAL, String.class, "sID");
       jID.annotate (Nullable.class);
-      final JVar jValue = m.body ().decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
+      final JVar jValue = m.body ()
+                           .decl (JMod.FINAL, jEnum, "eValue", jEnum.staticInvoke ("getFromIDOrNull").arg (jID));
       m.body ()._return (JOp.cond (jValue.eq (JExpr._null ()), JExpr._null (), jValue.invoke ("getDisplayName")));
     }
 
@@ -287,7 +304,9 @@ public final class MainCreateEnumsGenericode20
       jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
       m.body ()
-       ._return (JOp.cond (jID.eq (JExpr._null ()), JExpr._null (), jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
+       ._return (JOp.cond (jID.eq (JExpr._null ()),
+                           JExpr._null (),
+                           jEnum.staticInvoke ("getFromIDOrNull").arg (jID.invoke ("value"))));
 
       m = jEnum.method (JMod.PUBLIC | JMod.STATIC, String.class, "getDisplayNameFromJAXBOrNull");
       m.annotate (Nullable.class);
@@ -302,7 +321,7 @@ public final class MainCreateEnumsGenericode20
 
   public static void main (final String [] args) throws JCodeModelException, IOException
   {
-    for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))
+    for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/external/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))
     {
       System.out.println (aFile.getName ());
       final CodeListDocument aCodeList04 = new Genericode04CodeListMarshaller ().read (aFile);
