@@ -264,7 +264,11 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-* v7.0.0 - 2022-01-09
+* v8.0.0 - work in progress
+    * New classes `UBL20Marshaller`
+    * Deprecated classes `EUBL20DocumentType`, `UBL20DocumentType`, `UBL20(Reader|Validator|Writer)` and `UBL20(Reader|Validator|Writer)Builder`
+    * Moved the XML Schemas to a new path that starts with `external/`
+* v7.0.0 - 2023-01-09
     * Using Java 11 as the baseline
     * Updated to ph-commons 11
     * Using JAXB 4.0 as the baseline
