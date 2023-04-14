@@ -27,8 +27,10 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBL 2.2 implementation class to be read
+ * @deprecated Use {@link UBL22Marshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBL22ReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBL22ReaderBuilder <JAXBTYPE>>
 {
   public UBL22ReaderBuilder (@Nonnull final EUBL22DocumentType eDocType, @Nonnull final Class <JAXBTYPE> aImplClass)

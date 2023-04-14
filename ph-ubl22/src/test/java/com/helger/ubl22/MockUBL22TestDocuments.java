@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
 
@@ -34,7 +34,7 @@ public final class MockUBL22TestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBL22TestDocuments (@Nonnull final EUBL22DocumentType eType)
+  public static ICommonsList <String> getUBL22TestDocuments (@Nonnull final EUBL22DocumentTypeSimple eType)
   {
     List <String> aFiles = null;
     switch (eType)
@@ -157,6 +157,6 @@ public final class MockUBL22TestDocuments
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    return CollectionHelper.newList (aFiles);
+    return new CommonsArrayList <> (aFiles);
   }
 }

@@ -137,7 +137,7 @@
             <id>ubl22</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ubl22</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ubl22</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/ubl22</schemaDirectory>
               <schemaIncludes>
                 <schemaInclude>common/*.xsd</schemaInclude>
                 <schemaInclude>maindoc/*.xsd</schemaInclude>

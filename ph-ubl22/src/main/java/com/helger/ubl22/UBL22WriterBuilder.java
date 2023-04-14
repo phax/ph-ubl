@@ -28,8 +28,10 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBL 2.2 implementation class to be read
+ * @deprecated Use {@link UBL22Marshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBL22WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBL22WriterBuilder <JAXBTYPE>>
 {
   public UBL22WriterBuilder (@Nonnull final EUBL22DocumentType eDocType)

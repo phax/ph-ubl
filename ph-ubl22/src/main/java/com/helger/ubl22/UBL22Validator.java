@@ -105,10 +105,12 @@ import oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStateme
 
 /**
  * Validate all UBL 2.2 document types.
- * 
+ *
  * @author Philip Helger
+ * @deprecated Use {@link UBL22Marshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBL22Validator
 {
   @PresentForCodeCoverage
@@ -119,7 +121,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -130,7 +132,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for AttachedDocument.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -141,7 +143,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for AwardedNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -152,7 +154,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for BillOfLading.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -163,7 +165,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for BusinessCard.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -174,7 +176,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CallForTenders.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -185,7 +187,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Catalogue.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -196,7 +198,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CatalogueDeletion.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -207,7 +209,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CatalogueItemSpecificationUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -218,7 +220,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CataloguePricingUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -229,7 +231,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CatalogueRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -240,7 +242,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CertificateOfOrigin.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -251,7 +253,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ContractAwardNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -262,7 +264,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ContractNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -273,7 +275,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for CreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -284,7 +286,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DebitNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -295,7 +297,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DespatchAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -306,7 +308,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DigitalAgreement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -317,7 +319,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DigitalCapability.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -328,7 +330,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DocumentStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -339,7 +341,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for DocumentStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -350,7 +352,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Enquiry.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -361,7 +363,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for EnquiryResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -372,7 +374,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ExceptionCriteria.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -383,7 +385,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ExceptionNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -394,7 +396,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ExpressionOfInterestRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -405,7 +407,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ExpressionOfInterestResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -416,7 +418,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Forecast.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -427,7 +429,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ForecastRevision.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -438,7 +440,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ForwardingInstructions.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -449,7 +451,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for FreightInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -460,7 +462,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for FulfilmentCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -471,7 +473,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for GoodsItemItinerary.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -482,7 +484,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for GuaranteeCertificate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -493,7 +495,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for InstructionForReturns.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -504,7 +506,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for InventoryReport.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -515,7 +517,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Invoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -526,7 +528,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ItemInformationRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -537,7 +539,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Order.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -548,7 +550,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for OrderCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -559,7 +561,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for OrderChange.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -570,7 +572,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for OrderResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -581,7 +583,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for OrderResponseSimple.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -592,7 +594,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for PackingList.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -603,7 +605,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for PriorInformationNotice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -614,7 +616,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ProductActivity.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -625,7 +627,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for QualificationApplicationRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -636,7 +638,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for QualificationApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -647,7 +649,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Quotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -658,7 +660,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for ReceiptAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -669,7 +671,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Reminder.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -680,7 +682,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for RemittanceAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -691,7 +693,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for RequestForQuotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -702,7 +704,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for RetailEvent.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -713,7 +715,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for SelfBilledCreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -724,7 +726,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for SelfBilledInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -735,7 +737,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Statement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -746,7 +748,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for StockAvailabilityReport.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -757,7 +759,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Tender.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -768,7 +770,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TenderContract.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -779,7 +781,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TendererQualification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -790,7 +792,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TendererQualificationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -801,7 +803,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TenderReceipt.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -812,7 +814,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TenderStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -823,7 +825,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TenderStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -834,7 +836,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TenderWithdrawal.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -845,7 +847,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TradeItemLocationProfile.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -856,7 +858,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportationStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -867,7 +869,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportationStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -878,7 +880,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportExecutionPlan.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -889,7 +891,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportExecutionPlanRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -900,7 +902,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportProgressStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -911,7 +913,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportProgressStatusRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -922,7 +924,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportServiceDescription.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -933,7 +935,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for TransportServiceDescriptionRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -944,7 +946,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for UnawardedNotification.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -955,7 +957,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for UnsubscribeFromProcedureRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -966,7 +968,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for UnsubscribeFromProcedureResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -977,7 +979,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for UtilityStatement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -988,7 +990,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for Waybill.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -999,7 +1001,7 @@ public final class UBL22Validator
 
   /**
    * Create a validation builder for WeightStatement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull

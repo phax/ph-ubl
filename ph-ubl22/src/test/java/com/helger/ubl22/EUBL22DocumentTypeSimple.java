@@ -19,15 +19,10 @@ package com.helger.ubl22;
 import javax.annotation.Nonnull;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.annotation.Since;
 import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.string.StringHelper;
-import com.helger.jaxb.builder.IJAXBDocumentType;
-import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.xml.schema.XMLSchemaCache;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
@@ -38,8 +33,7 @@ import com.helger.xsds.xmldsig.CXMLDSig;
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
-public enum EUBL22DocumentType implements IJAXBDocumentType
+public enum EUBL22DocumentTypeSimple
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_22.ApplicationResponseType.class,
                         "UBL-ApplicationResponse-2.2.xsd"),
@@ -208,57 +202,37 @@ public enum EUBL22DocumentType implements IJAXBDocumentType
   WEIGHT_STATEMENT(oasis.names.specification.ubl.schema.xsd.weightstatement_22.WeightStatementType.class,
                    "UBL-WeightStatement-2.2.xsd");
 
-  @Nonnull
-  private static ClassLoader _getCL ()
-  {
-    return EUBL22DocumentType.class.getClassLoader ();
-  }
+  private final Class <?> m_aClass;
+  private final String m_sXSDPath;
 
-  private final JAXBDocumentType m_aDocType;
-
-  EUBL22DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  EUBL22DocumentTypeSimple (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (CCCTS.getXSDResource (),
-                                                                CXMLDSig.getXSDResource (),
-                                                                CXAdES132.getXSDResource (),
-                                                                CXAdES141.getXSDResource (),
-                                                                new ClassPathResource (CUBL22.SCHEMA_DIRECTORY +
-                                                                                       sXSDPath,
-                                                                                       _getCL ())),
-                                       s -> StringHelper.trimEnd (s, "Type"));
+    m_aClass = aClass;
+    m_sXSDPath = sXSDPath;
   }
 
   @Nonnull
-  public Class <?> getImplementationClass ()
+  public Class <?> getClazz ()
   {
-    return m_aDocType.getImplementationClass ();
+    return m_aClass;
   }
 
   @Nonnull
-  @Nonempty
-  @ReturnsMutableCopy
-  public ICommonsList <ClassPathResource> getAllXSDResources ()
+  public String getXSDPath ()
   {
-    return m_aDocType.getAllXSDResources ();
-  }
-
-  @Nonnull
-  public String getNamespaceURI ()
-  {
-    return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getLocalName ()
-  {
-    return m_aDocType.getLocalName ();
+    return m_sXSDPath;
   }
 
   @Nonnull
   public Schema getSchema ()
   {
-    return m_aDocType.getSchema ();
+    return XMLSchemaCache.getInstance ()
+                         .getFromCache (new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                 CXMLDSig.getXSDResource (),
+                                                                 CXAdES132.getXSDResource (),
+                                                                 CXAdES141.getXSDResource (),
+                                                                 new ClassPathResource (CUBL22.SCHEMA_DIRECTORY +
+                                                                                        m_sXSDPath,
+                                                                                        CUBL22.getCL ())));
   }
 }
