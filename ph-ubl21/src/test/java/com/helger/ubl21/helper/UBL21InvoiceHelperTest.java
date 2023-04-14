@@ -26,10 +26,9 @@ import org.w3c.dom.Document;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.ubl21.EUBL21DocumentType;
+import com.helger.ubl21.EUBL21DocumentTypeSimple;
 import com.helger.ubl21.MockUBL21TestDocuments;
-import com.helger.ubl21.UBL21Reader;
-import com.helger.ubl21.UBL21Validator;
+import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -48,15 +47,15 @@ public final class UBL21InvoiceHelperTest
   @Test
   public void testComvertBackAndForth ()
   {
-    for (final String sFilename : MockUBL21TestDocuments.getUBL21TestDocuments (EUBL21DocumentType.INVOICE))
+    for (final String sFilename : MockUBL21TestDocuments.getUBL21TestDocuments (EUBL21DocumentTypeSimple.INVOICE))
     {
       LOGGER.info (sFilename);
 
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL21DocumentType.INVOICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL21DocumentTypeSimple.INVOICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final InvoiceType aUBLObject = UBL21Reader.invoice ().read (aDoc);
+      final InvoiceType aUBLObject = UBL21Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Convert Invoice to CreditNote
@@ -64,7 +63,7 @@ public final class UBL21InvoiceHelperTest
       UBL21InvoiceHelper.cloneInvoiceToCreditNote (aUBLObject, aCreditNote);
 
       // Validate CreditNote
-      IErrorList aErrors = UBL21Validator.creditNote ().validate (aCreditNote);
+      IErrorList aErrors = UBL21Marshaller.creditNote ().validate (aCreditNote);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
@@ -73,7 +72,7 @@ public final class UBL21InvoiceHelperTest
       UBL21CreditNoteHelper.cloneCreditNoteToInvoice (aCreditNote, aInvoice2);
 
       // Validate Invoice again
-      aErrors = UBL21Validator.invoice ().validate (aInvoice2);
+      aErrors = UBL21Marshaller.invoice ().validate (aInvoice2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }

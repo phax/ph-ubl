@@ -30,6 +30,7 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  *        The UBL 2.1 implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBL21WriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBL21WriterBuilder <JAXBTYPE>>
 {
   public UBL21WriterBuilder (@Nonnull final EUBL21DocumentType eDocType)

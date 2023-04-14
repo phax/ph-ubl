@@ -28,6 +28,7 @@ import org.w3c.dom.Node;
 
 import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.state.ESuccess;
+import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.XMLFactory;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
@@ -132,7 +133,7 @@ public final class CreateInvoiceFromScratchFuncTest
     }
 
     // Write to disk
-    final ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
+    final ESuccess eSuccess = UBL21Marshaller.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 
@@ -197,14 +198,15 @@ public final class CreateInvoiceFromScratchFuncTest
     aInvoice.setUBLExtensions (aExtensions);
 
     // Write to disk ("as is")
-    ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice-with-extension.xml"));
+    ESuccess eSuccess = UBL21Marshaller.invoice ()
+                                       .write (aInvoice, new File ("target/dummy-invoice-with-extension.xml"));
     assertTrue (eSuccess.isSuccess ());
 
     // doesn't work as expected yet
     if (false)
     {
       // Write to disk with a custom namespace prefix mapping
-      final UBL21WriterBuilder <InvoiceType> aBuilder = UBL21Writer.invoice ();
+      final GenericJAXBMarshaller <InvoiceType> aBuilder = UBL21Marshaller.invoice ();
       final MapBasedNamespaceContext aCtx = (MapBasedNamespaceContext) aBuilder.getNamespaceContext ();
       aCtx.addMapping ("aife", sNamespaceURI);
       eSuccess = aBuilder.write (aInvoice, new File ("target/dummy-invoice-with-extension-and-ns.xml"));
@@ -248,15 +250,17 @@ public final class CreateInvoiceFromScratchFuncTest
     final UBLExtensionsType aExtensions = new UBLExtensionsType ();
     final UBLExtensionType aExtension = new UBLExtensionType ();
     final ExtensionContentType aExtensionContent = new ExtensionContentType ();
+    // Extension is empty - not allowed according to XML Schema
     aExtension.setExtensionContent (aExtensionContent);
     aExtensions.addUBLExtension (aExtension);
     aInvoice.setUBLExtensions (aExtensions);
 
     // Write to disk ("as is")
-    final ESuccess eSuccess = UBL21Writer.invoice ()
-                                         .setUseSchema (false)
-                                         .setFormattedOutput (true)
-                                         .write (aInvoice, new File ("target/dummy-invoice-with-empty-extension.xml"));
+    final ESuccess eSuccess = UBL21Marshaller.invoice ()
+                                             .setFormattedOutput (true)
+                                             .setUseSchema (false)
+                                             .write (aInvoice,
+                                                     new File ("target/dummy-invoice-with-empty-extension.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 
@@ -325,7 +329,9 @@ public final class CreateInvoiceFromScratchFuncTest
     }
 
     // Write to disk
-    final ESuccess eSuccess = UBL21Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice-no-second-fraction.xml"));
+    final ESuccess eSuccess = UBL21Marshaller.invoice ()
+                                             .write (aInvoice,
+                                                     new File ("target/dummy-invoice-no-second-fraction.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 }

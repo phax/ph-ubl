@@ -28,10 +28,11 @@ import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
 /**
- * Test class for class {@link EUBL21DocumentType}.
+ * Test class for class {@link EUBL21DocumentTypeSimple}.
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EUBL21DocumentTypeTest
 {
   @Test

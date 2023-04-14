@@ -21,9 +21,9 @@ import java.math.BigDecimal;
 import org.junit.Test;
 
 import com.helger.commons.datetime.PDTFactory;
+import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl21.CUBL21;
-import com.helger.ubl21.UBL21Writer;
-import com.helger.ubl21.UBL21WriterBuilder;
+import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
@@ -105,7 +105,7 @@ public final class Issue53Test
       aInvoice.addTaxTotal (aTaxTotal);
     }
 
-    final UBL21WriterBuilder <InvoiceType> typeUBL21WriterBuilder = UBL21Writer.invoice ();
+    final GenericJAXBMarshaller <InvoiceType> aMarshaller = UBL21Marshaller.invoice ();
 
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
     aNSContext.addDefaultNamespaceURI ("urn:oasis:names:specification:ubl:schema:xsd:Invoice-2");
@@ -115,11 +115,11 @@ public final class Issue53Test
     aNSContext.addMapping ("ds", CXMLDSig.NAMESPACE_URI);
 
     // typeUBL21WriterBuilder.setMarshallerCustomizer( GenericJAXBMarshaller )
-    typeUBL21WriterBuilder.setNamespaceContext (aNSContext);
+    aMarshaller.setNamespaceContext (aNSContext);
     // typeUBL21WriterBuilder.getMarshallerCustomizer()
 
     // Write to disk
-    final String sInvoice = typeUBL21WriterBuilder.setUseSchema (true).setFormattedOutput (true).getAsString (aInvoice);
+    final String sInvoice = aMarshaller.setFormattedOutput (true).getAsString (aInvoice);
     System.out.println (sInvoice);
   }
 }
