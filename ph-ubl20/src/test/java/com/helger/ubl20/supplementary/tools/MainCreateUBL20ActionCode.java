@@ -23,7 +23,8 @@ import com.helger.commons.io.file.SimpleFileIO;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
 import com.helger.ubl20.EUBL20DocumentType;
 
-public class MainCreateUBL20ActionCode extends AbstractCreateUBLActionCode
+@Deprecated
+public final class MainCreateUBL20ActionCode extends AbstractCreateUBLActionCode
 {
   private static String _getPrefix (final String sWhat, final String sClassName)
   {

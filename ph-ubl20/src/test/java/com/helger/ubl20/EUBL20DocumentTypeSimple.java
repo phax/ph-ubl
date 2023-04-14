@@ -19,22 +19,16 @@ package com.helger.ubl20;
 import javax.annotation.Nonnull;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.string.StringHelper;
-import com.helger.jaxb.builder.IJAXBDocumentType;
-import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Enumeration with all available UBL 2.0 document types.
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
-public enum EUBL20DocumentType implements IJAXBDocumentType
+public enum EUBL20DocumentTypeSimple
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType.class,
                         "UBL-ApplicationResponse-2.0.xsd"),
@@ -90,55 +84,33 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
                          "UBL-TransportationStatus-2.0.xsd"),
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, "UBL-Waybill-2.0.xsd");
 
-  private final JAXBDocumentType m_aDocType;
+  private final Class <?> m_aClass;
   private final String m_sXSDPath;
 
-  EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  EUBL20DocumentTypeSimple (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (new ClassPathResource (CUBL20.SCHEMA_DIRECTORY +
-                                                                                       sXSDPath,
-                                                                                       CUBL20.getCL ())),
-                                       s -> StringHelper.trimEnd (s, "Type"));
+    m_aClass = aClass;
     m_sXSDPath = sXSDPath;
   }
 
   @Nonnull
-  public ClassPathResource getXSDResource ()
+  public Class <?> getClazz ()
   {
-    return new ClassPathResource (CUBL20.SCHEMA_DIRECTORY + m_sXSDPath, CUBL20.getCL ());
+    return m_aClass;
   }
 
   @Nonnull
-  public Class <?> getImplementationClass ()
+  public String getXSDPath ()
   {
-    return m_aDocType.getImplementationClass ();
-  }
-
-  @Nonnull
-  @Nonempty
-  @ReturnsMutableCopy
-  public ICommonsList <ClassPathResource> getAllXSDResources ()
-  {
-    return m_aDocType.getAllXSDResources ();
-  }
-
-  @Nonnull
-  public String getNamespaceURI ()
-  {
-    return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getLocalName ()
-  {
-    return m_aDocType.getLocalName ();
+    return m_sXSDPath;
   }
 
   @Nonnull
   public Schema getSchema ()
   {
-    return m_aDocType.getSchema ();
+    return XMLSchemaCache.getInstance ()
+                         .getFromCache (new CommonsArrayList <> (new ClassPathResource (CUBL20.SCHEMA_DIRECTORY +
+                                                                                        m_sXSDPath,
+                                                                                        CUBL20.getCL ())));
   }
 }

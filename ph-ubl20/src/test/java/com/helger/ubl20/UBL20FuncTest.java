@@ -55,40 +55,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteCatalogue ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.CATALOGUE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.CATALOGUE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.CATALOGUE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.CATALOGUE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final CatalogueType aUBLObject = UBL20Reader.catalogue ().read (aDoc);
+      final CatalogueType aUBLObject = UBL20Marshaller.catalogue ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.catalogue ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.catalogue ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.catalogue ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.catalogue ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final CatalogueType aUBLObject2 = UBL20Reader.catalogue ().read (aDoc2);
+      final CatalogueType aUBLObject2 = UBL20Marshaller.catalogue ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.catalogue ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.catalogue ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.catalogue ().validate (new CatalogueType ());
+    final IErrorList aErrors = UBL20Marshaller.catalogue ().validate (new CatalogueType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -96,40 +96,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteCreditNote ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.CREDIT_NOTE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.CREDIT_NOTE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.CREDIT_NOTE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.CREDIT_NOTE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final CreditNoteType aUBLObject = UBL20Reader.creditNote ().read (aDoc);
+      final CreditNoteType aUBLObject = UBL20Marshaller.creditNote ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.creditNote ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.creditNote ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.creditNote ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.creditNote ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final CreditNoteType aUBLObject2 = UBL20Reader.creditNote ().read (aDoc2);
+      final CreditNoteType aUBLObject2 = UBL20Marshaller.creditNote ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.creditNote ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.creditNote ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.creditNote ().validate (new CreditNoteType ());
+    final IErrorList aErrors = UBL20Marshaller.creditNote ().validate (new CreditNoteType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -137,40 +137,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteDespatchAdvice ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.DESPATCH_ADVICE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.DESPATCH_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.DESPATCH_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.DESPATCH_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final DespatchAdviceType aUBLObject = UBL20Reader.despatchAdvice ().read (aDoc);
+      final DespatchAdviceType aUBLObject = UBL20Marshaller.despatchAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.despatchAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.despatchAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.despatchAdvice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.despatchAdvice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final DespatchAdviceType aUBLObject2 = UBL20Reader.despatchAdvice ().read (aDoc2);
+      final DespatchAdviceType aUBLObject2 = UBL20Marshaller.despatchAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.despatchAdvice ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.despatchAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.despatchAdvice ().validate (new DespatchAdviceType ());
+    final IErrorList aErrors = UBL20Marshaller.despatchAdvice ().validate (new DespatchAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -178,40 +178,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteForwardingInstructions ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.FORWARDING_INSTRUCTIONS))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.FORWARDING_INSTRUCTIONS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.FORWARDING_INSTRUCTIONS.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.FORWARDING_INSTRUCTIONS.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final ForwardingInstructionsType aUBLObject = UBL20Reader.forwardingInstructions ().read (aDoc);
+      final ForwardingInstructionsType aUBLObject = UBL20Marshaller.forwardingInstructions ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.forwardingInstructions ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.forwardingInstructions ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.forwardingInstructions ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.forwardingInstructions ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ForwardingInstructionsType aUBLObject2 = UBL20Reader.forwardingInstructions ().read (aDoc2);
+      final ForwardingInstructionsType aUBLObject2 = UBL20Marshaller.forwardingInstructions ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.forwardingInstructions ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.forwardingInstructions ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.forwardingInstructions ().validate (new ForwardingInstructionsType ());
+    final IErrorList aErrors = UBL20Marshaller.forwardingInstructions ().validate (new ForwardingInstructionsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -219,40 +219,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteInvoice ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.INVOICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.INVOICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.INVOICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final InvoiceType aUBLObject = UBL20Reader.invoice ().read (aDoc);
+      final InvoiceType aUBLObject = UBL20Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.invoice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.invoice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.invoice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.invoice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final InvoiceType aUBLObject2 = UBL20Reader.invoice ().read (aDoc2);
+      final InvoiceType aUBLObject2 = UBL20Marshaller.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.invoice ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.invoice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.invoice ().validate (new InvoiceType ());
+    final IErrorList aErrors = UBL20Marshaller.invoice ().validate (new InvoiceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -260,41 +260,41 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteOrder ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.ORDER))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.ORDER))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.ORDER.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.ORDER.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final OrderType aUBLObject = UBL20Reader.order ().read (aDoc);
+      final OrderType aUBLObject = UBL20Marshaller.order ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
-      assertNull (UBL20Reader.applicationResponse ().read (aDoc));
+      assertNull (UBL20Marshaller.applicationResponse ().read (aDoc));
 
       // Validate
-      IErrorList aErrors = UBL20Validator.order ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.order ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.order ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.order ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final OrderType aUBLObject2 = UBL20Reader.order ().read (aDoc2);
+      final OrderType aUBLObject2 = UBL20Marshaller.order ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.order ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.order ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.order ().validate (new OrderType ());
+    final IErrorList aErrors = UBL20Marshaller.order ().validate (new OrderType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -302,40 +302,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteOrderResponseSimple ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.ORDER_RESPONSE_SIMPLE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.ORDER_RESPONSE_SIMPLE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.ORDER_RESPONSE_SIMPLE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.ORDER_RESPONSE_SIMPLE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final OrderResponseSimpleType aUBLObject = UBL20Reader.orderResponseSimple ().read (aDoc);
+      final OrderResponseSimpleType aUBLObject = UBL20Marshaller.orderResponseSimple ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.orderResponseSimple ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.orderResponseSimple ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.orderResponseSimple ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.orderResponseSimple ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final OrderResponseSimpleType aUBLObject2 = UBL20Reader.orderResponseSimple ().read (aDoc2);
+      final OrderResponseSimpleType aUBLObject2 = UBL20Marshaller.orderResponseSimple ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.orderResponseSimple ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.orderResponseSimple ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.orderResponseSimple ().validate (new OrderResponseSimpleType ());
+    final IErrorList aErrors = UBL20Marshaller.orderResponseSimple ().validate (new OrderResponseSimpleType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -343,40 +343,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteQuotation ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.QUOTATION))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.QUOTATION.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.QUOTATION.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final QuotationType aUBLObject = UBL20Reader.quotation ().read (aDoc);
+      final QuotationType aUBLObject = UBL20Marshaller.quotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.quotation ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.quotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.quotation ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.quotation ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final QuotationType aUBLObject2 = UBL20Reader.quotation ().read (aDoc2);
+      final QuotationType aUBLObject2 = UBL20Marshaller.quotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.quotation ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.quotation ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.quotation ().validate (new QuotationType ());
+    final IErrorList aErrors = UBL20Marshaller.quotation ().validate (new QuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -384,40 +384,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteReceiptAdvice ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.RECEIPT_ADVICE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.RECEIPT_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.RECEIPT_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.RECEIPT_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final ReceiptAdviceType aUBLObject = UBL20Reader.receiptAdvice ().read (aDoc);
+      final ReceiptAdviceType aUBLObject = UBL20Marshaller.receiptAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.receiptAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.receiptAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.receiptAdvice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.receiptAdvice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final ReceiptAdviceType aUBLObject2 = UBL20Reader.receiptAdvice ().read (aDoc2);
+      final ReceiptAdviceType aUBLObject2 = UBL20Marshaller.receiptAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.receiptAdvice ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.receiptAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.receiptAdvice ().validate (new ReceiptAdviceType ());
+    final IErrorList aErrors = UBL20Marshaller.receiptAdvice ().validate (new ReceiptAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -425,40 +425,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteRemittanceAdvice ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.REMITTANCE_ADVICE))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.REMITTANCE_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.REMITTANCE_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.REMITTANCE_ADVICE.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final RemittanceAdviceType aUBLObject = UBL20Reader.remittanceAdvice ().read (aDoc);
+      final RemittanceAdviceType aUBLObject = UBL20Marshaller.remittanceAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.remittanceAdvice ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.remittanceAdvice ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.remittanceAdvice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.remittanceAdvice ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final RemittanceAdviceType aUBLObject2 = UBL20Reader.remittanceAdvice ().read (aDoc2);
+      final RemittanceAdviceType aUBLObject2 = UBL20Marshaller.remittanceAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.remittanceAdvice ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.remittanceAdvice ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.remittanceAdvice ().validate (new RemittanceAdviceType ());
+    final IErrorList aErrors = UBL20Marshaller.remittanceAdvice ().validate (new RemittanceAdviceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -466,40 +466,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteRequestForQuotation ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.REQUEST_FOR_QUOTATION))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.REQUEST_FOR_QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.REQUEST_FOR_QUOTATION.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.REQUEST_FOR_QUOTATION.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final RequestForQuotationType aUBLObject = UBL20Reader.requestForQuotation ().read (aDoc);
+      final RequestForQuotationType aUBLObject = UBL20Marshaller.requestForQuotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.requestForQuotation ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.requestForQuotation ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.requestForQuotation ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.requestForQuotation ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final RequestForQuotationType aUBLObject2 = UBL20Reader.requestForQuotation ().read (aDoc2);
+      final RequestForQuotationType aUBLObject2 = UBL20Marshaller.requestForQuotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.requestForQuotation ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.requestForQuotation ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.requestForQuotation ().validate (new RequestForQuotationType ());
+    final IErrorList aErrors = UBL20Marshaller.requestForQuotation ().validate (new RequestForQuotationType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -507,40 +507,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteStatement ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.STATEMENT))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.STATEMENT))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.STATEMENT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.STATEMENT.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final StatementType aUBLObject = UBL20Reader.statement ().read (aDoc);
+      final StatementType aUBLObject = UBL20Marshaller.statement ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.statement ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.statement ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.statement ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.statement ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final StatementType aUBLObject2 = UBL20Reader.statement ().read (aDoc2);
+      final StatementType aUBLObject2 = UBL20Marshaller.statement ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.statement ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.statement ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.statement ().validate (new StatementType ());
+    final IErrorList aErrors = UBL20Marshaller.statement ().validate (new StatementType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -548,40 +548,40 @@ public final class UBL20FuncTest
   @Test
   public void testReadAndWriteWaybill ()
   {
-    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.WAYBILL))
+    for (final String sFilename : MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.WAYBILL))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentType.WAYBILL.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (EUBL20DocumentTypeSimple.WAYBILL.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final WaybillType aUBLObject = UBL20Reader.waybill ().read (aDoc);
+      final WaybillType aUBLObject = UBL20Marshaller.waybill ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBL20Validator.waybill ().validate (aUBLObject);
+      IErrorList aErrors = UBL20Marshaller.waybill ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBL20Writer.waybill ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBL20Marshaller.waybill ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final WaybillType aUBLObject2 = UBL20Reader.waybill ().read (aDoc2);
+      final WaybillType aUBLObject2 = UBL20Marshaller.waybill ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
-      aErrors = UBL20Validator.waybill ().validate (aUBLObject2);
+      aErrors = UBL20Marshaller.waybill ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBL20Validator.waybill ().validate (new WaybillType ());
+    final IErrorList aErrors = UBL20Marshaller.waybill ().validate (new WaybillType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }

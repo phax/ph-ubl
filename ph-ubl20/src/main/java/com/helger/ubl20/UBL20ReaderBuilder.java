@@ -29,6 +29,7 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBL20ReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBL20ReaderBuilder <JAXBTYPE>>
 {
   public UBL20ReaderBuilder (@Nonnull final EUBL20DocumentType eDocType, @Nonnull final Class <JAXBTYPE> aImplClass)

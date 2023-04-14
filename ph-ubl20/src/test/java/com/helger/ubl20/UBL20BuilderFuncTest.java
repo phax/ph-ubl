@@ -24,7 +24,7 @@ import org.junit.Test;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
-import com.helger.xml.namespace.MapBasedNamespaceContext;
+import com.helger.jaxb.GenericJAXBMarshaller;
 
 import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
 
@@ -39,29 +39,26 @@ public final class UBL20BuilderFuncTest
   @Test
   public void testReadAndWriteInvoice ()
   {
-    final UBL20ReaderBuilder <InvoiceType> aReader = new UBL20ReaderBuilder <> (InvoiceType.class);
-    final UBL20ValidatorBuilder <InvoiceType> aValidator = new UBL20ValidatorBuilder <> (InvoiceType.class);
-    final UBL20WriterBuilder <InvoiceType> aWriter = new UBL20WriterBuilder <> (InvoiceType.class).setFormattedOutput (true);
-    aWriter.setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("bla", EUBL20DocumentType.INVOICE.getNamespaceURI ()));
+    final GenericJAXBMarshaller <InvoiceType> aMarshaller = UBL20Marshaller.invoice ();
 
-    final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE).get (0);
+    final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.INVOICE).get (0);
 
     // Read from resource
-    final InvoiceType aRead1 = aReader.read (new ClassPathResource (sFilename));
+    final InvoiceType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));
     assertNotNull (aRead1);
 
     // Read from byte[]
-    final InvoiceType aRead2 = aReader.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
+    final InvoiceType aRead2 = aMarshaller.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
     assertNotNull (aRead2);
     assertEquals (aRead1, aRead2);
 
     // Validate
-    final IErrorList aREG1 = aValidator.validate (aRead1);
-    final IErrorList aREG2 = aValidator.validate (aRead2);
+    final IErrorList aREG1 = aMarshaller.validate (aRead1);
+    final IErrorList aREG2 = aMarshaller.validate (aRead2);
     assertEquals (aREG1, aREG2);
 
     // Write
-    final String s = aWriter.getAsString (aRead1);
+    final String s = aMarshaller.getAsString (aRead1);
     System.out.println (s);
   }
 }

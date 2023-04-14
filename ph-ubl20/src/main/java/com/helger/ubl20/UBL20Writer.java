@@ -59,6 +59,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
  * @author Philip Helger
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBL20Writer
 {
   @PresentForCodeCoverage
@@ -69,7 +70,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for ApplicationResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -80,7 +81,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for AttachedDocument.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -91,7 +92,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for BillOfLading.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -102,7 +103,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Catalogue.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -113,7 +114,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CatalogueDeletion.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -124,7 +125,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CatalogueItemSpecificationUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -135,7 +136,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CataloguePricingUpdate.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -146,7 +147,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CatalogueRequest.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -157,7 +158,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CertificateOfOrigin.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -168,7 +169,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for CreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -179,7 +180,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for DebitNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -190,7 +191,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for DespatchAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -201,7 +202,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for ForwardingInstructions.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -212,7 +213,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for FreightInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -223,7 +224,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Invoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -234,7 +235,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Order.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -245,7 +246,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for OrderCancellation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -256,7 +257,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for OrderChange.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -267,7 +268,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for OrderResponse.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -278,7 +279,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for OrderResponseSimple.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -289,7 +290,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for PackingList.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -300,7 +301,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Quotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -311,7 +312,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for ReceiptAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -322,7 +323,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Reminder.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -333,7 +334,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for RemittanceAdvice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -344,7 +345,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for RequestForQuotation.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -355,7 +356,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for SelfBilledCreditNote.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -366,7 +367,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for SelfBilledInvoice.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -377,7 +378,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Statement.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -388,7 +389,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for TransportationStatus.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
@@ -399,7 +400,7 @@ public final class UBL20Writer
 
   /**
    * Create a writer builder for Waybill.
-   * 
+   *
    * @return The builder and never <code>null</code>
    */
   @Nonnull

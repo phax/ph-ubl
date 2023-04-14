@@ -74,7 +74,7 @@ public final class CreateInvoiceFromScratchFuncTest
 
     aInvoice.addInvoiceLine (aLine);
 
-    final ESuccess eSuccess = UBL20Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
+    final ESuccess eSuccess = UBL20Marshaller.invoice ().write (aInvoice, new File ("target/dummy-invoice.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 
@@ -117,7 +117,8 @@ public final class CreateInvoiceFromScratchFuncTest
     aExtensions.addUBLExtension (aExtension);
     aInvoice.setUBLExtensions (aExtensions);
 
-    final ESuccess eSuccess = UBL20Writer.invoice ().write (aInvoice, new File ("target/dummy-invoice-with-ext.xml"));
+    final ESuccess eSuccess = UBL20Marshaller.invoice ()
+                                             .write (aInvoice, new File ("target/dummy-invoice-with-ext.xml"));
     assertTrue (eSuccess.isSuccess ());
   }
 }

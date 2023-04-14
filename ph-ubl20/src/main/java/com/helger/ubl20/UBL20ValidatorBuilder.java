@@ -29,6 +29,7 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  *        The UBL 2.0 implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBL20ValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBL20ValidatorBuilder <JAXBTYPE>>
 {
   public UBL20ValidatorBuilder (@Nonnull final EUBL20DocumentType eDocType)
