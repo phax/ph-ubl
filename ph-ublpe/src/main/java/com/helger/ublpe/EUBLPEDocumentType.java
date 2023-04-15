@@ -40,6 +40,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public enum EUBLPEDocumentType implements IJAXBDocumentType
 {
   APPLICATION_RESPONSE (EUBL20DocumentType.APPLICATION_RESPONSE),
@@ -59,7 +60,8 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                               new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                      "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                      _getCL ()),
-                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
+                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                     "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
                                                                      _getCL ()))),
   VOIDED_DOCUMENTS (VoidedDocumentsType.class,
                     new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
@@ -74,7 +76,8 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                     "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                     _getCL ()),
-                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
+                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                    "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
                                                                     _getCL ())));
 
   @Nonnull
@@ -85,14 +88,14 @@ public enum EUBLPEDocumentType implements IJAXBDocumentType
 
   private final JAXBDocumentType m_aDocType;
 
-  private EUBLPEDocumentType (@Nonnull final EUBL20DocumentType eOther)
+  EUBLPEDocumentType (@Nonnull final EUBL20DocumentType eOther)
   {
     m_aDocType = new JAXBDocumentType (eOther.getImplementationClass (),
                                        eOther.getAllXSDResources (),
                                        s -> StringHelper.trimEnd (s, "Type"));
   }
 
-  private EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
+  EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
   }

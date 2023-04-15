@@ -20,10 +20,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
+import com.helger.ublpe.UBLPEMarshaller.UBLPEJAXBMarshaller;
 
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 
@@ -35,32 +38,34 @@ import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryD
  */
 public final class UBLPEBuilderFuncTest
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (UBLPEBuilderFuncTest.class);
+
   @Test
   public void testReadAndWriteSummaryDocuments ()
   {
-    final UBLPEReaderBuilder <SummaryDocumentsType> aReader = new UBLPEReaderBuilder <> (SummaryDocumentsType.class);
-    final UBLPEValidatorBuilder <SummaryDocumentsType> aValidator = new UBLPEValidatorBuilder <> (SummaryDocumentsType.class);
-    final UBLPEWriterBuilder <SummaryDocumentsType> aWriter = new UBLPEWriterBuilder <> (SummaryDocumentsType.class).setFormattedOutput (true);
+    final UBLPEJAXBMarshaller <SummaryDocumentsType> aMarshaller = UBLPEMarshaller.summaryDocuments ();
 
-    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS).getFirst ();
+    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.SUMMARY_DOCUMENTS)
+                                                   .getFirst ();
     assertNotNull (sFilename);
 
     // Read from resource
-    final SummaryDocumentsType aRead1 = aReader.read (new ClassPathResource (sFilename));
+    final SummaryDocumentsType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));
     assertNotNull (aRead1);
 
     // Read from byte[]
-    final SummaryDocumentsType aRead2 = aReader.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
+    final SummaryDocumentsType aRead2 = aMarshaller.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
     assertNotNull (aRead2);
     assertEquals (aRead1, aRead2);
 
     // Validate
-    final IErrorList aREG1 = aValidator.validate (aRead1);
-    final IErrorList aREG2 = aValidator.validate (aRead2);
+    final IErrorList aREG1 = aMarshaller.validate (aRead1);
+    final IErrorList aREG2 = aMarshaller.validate (aRead2);
     assertEquals (aREG1, aREG2);
 
     // Write
-    final String s = aWriter.getAsString (aRead1);
-    System.out.println (s);
+    final String s = aMarshaller.setFormattedOutput (true).getAsString (aRead1);
+    assertNotNull (s);
+    LOGGER.info (s);
   }
 }

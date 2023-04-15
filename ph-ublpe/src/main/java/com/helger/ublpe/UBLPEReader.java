@@ -32,8 +32,10 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
  * Read all UBLPE document types.
  *
  * @author Philip Helger
+ * @deprecated Use {@link UBLPEMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBLPEReader
 {
   @PresentForCodeCoverage

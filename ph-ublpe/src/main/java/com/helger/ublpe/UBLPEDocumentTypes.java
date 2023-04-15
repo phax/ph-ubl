@@ -35,10 +35,11 @@ import com.helger.commons.collection.impl.ICommonsSet;
  * @author Philip Helger
  */
 @Immutable
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBLPEDocumentTypes
 {
   /** Maps local names to document types */
-  private static final ICommonsMap <String, EUBLPEDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, EUBLPEDocumentType> LOCALNAME2DOCTYPE = new CommonsHashMap <> ();
 
   static
   {
@@ -50,9 +51,9 @@ public final class UBLPEDocumentTypes
     {
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
-      if (s_aLocalName2DocType.containsKey (sLocalName))
+      if (LOCALNAME2DOCTYPE.containsKey (sLocalName))
         throw new IllegalArgumentException ("The local name '" + sLocalName + "' is already mapped!");
-      s_aLocalName2DocType.put (sLocalName, eDocType);
+      LOCALNAME2DOCTYPE.put (sLocalName, eDocType);
     }
   }
 
@@ -70,7 +71,7 @@ public final class UBLPEDocumentTypes
   @ReturnsMutableCopy
   public static ICommonsSet <String> getAllLocalNames ()
   {
-    return s_aLocalName2DocType.copyOfKeySet ();
+    return LOCALNAME2DOCTYPE.copyOfKeySet ();
   }
 
   /**
@@ -85,7 +86,7 @@ public final class UBLPEDocumentTypes
   @Nullable
   public static EUBLPEDocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
   {
-    return s_aLocalName2DocType.get (sLocalName);
+    return LOCALNAME2DOCTYPE.get (sLocalName);
   }
 
   /**
@@ -117,7 +118,8 @@ public final class UBLPEDocumentTypes
   {
     if (aImplClass == null)
       return null;
-    return ArrayHelper.findFirst (EUBLPEDocumentType.values (), eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
+    return ArrayHelper.findFirst (EUBLPEDocumentType.values (),
+                                  eDocType -> eDocType.getImplementationClass ().equals (aImplClass));
   }
 
   /**

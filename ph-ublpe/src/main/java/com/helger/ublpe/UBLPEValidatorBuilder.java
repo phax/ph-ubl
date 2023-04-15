@@ -27,8 +27,10 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBLPE implementation class to be read
+ * @deprecated Use {@link UBLPEMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLPEValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBLPEValidatorBuilder <JAXBTYPE>>
 {
   public UBLPEValidatorBuilder (@Nonnull final EUBLPEDocumentType eDocType)

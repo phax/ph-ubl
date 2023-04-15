@@ -27,6 +27,7 @@ import org.w3c.dom.Document;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.ublpe.UBLPEMarshaller.UBLPEJAXBMarshaller;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -43,39 +44,41 @@ public final class UBLPEFuncTest
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
-    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS))
+    final UBLPEJAXBMarshaller <SummaryDocumentsType> m = UBLPEMarshaller.summaryDocuments ();
+
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.SUMMARY_DOCUMENTS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.SUMMARY_DOCUMENTS.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final SummaryDocumentsType aUBLObject = UBLPEReader.summaryDocuments ().read (aDoc);
+      final SummaryDocumentsType aUBLObject = UBLPEMarshaller.summaryDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBLPEValidator.summaryDocuments ().validate (aUBLObject);
+      IErrorList aErrors = UBLPEMarshaller.summaryDocuments ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLPEWriter.summaryDocuments ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBLPEMarshaller.summaryDocuments ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final SummaryDocumentsType aUBLObject2 = UBLPEReader.summaryDocuments ().read (aDoc2);
+      final SummaryDocumentsType aUBLObject2 = UBLPEMarshaller.summaryDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBLPEValidator.summaryDocuments ().validate (aUBLObject2);
+      aErrors = UBLPEMarshaller.summaryDocuments ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBLPEValidator.summaryDocuments ().validate (new SummaryDocumentsType ());
+    final IErrorList aErrors = UBLPEMarshaller.summaryDocuments ().validate (new SummaryDocumentsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -83,39 +86,41 @@ public final class UBLPEFuncTest
   @Test
   public void testReadAndWriteVoidedDocuments ()
   {
-    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.VOIDED_DOCUMENTS))
+    final UBLPEJAXBMarshaller <VoidedDocumentsType> m = UBLPEMarshaller.voidedDocuments ();
+
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.VOIDED_DOCUMENTS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBLPEDocumentType.VOIDED_DOCUMENTS.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
-      final VoidedDocumentsType aUBLObject = UBLPEReader.voidedDocuments ().read (aDoc);
+      final VoidedDocumentsType aUBLObject = UBLPEMarshaller.voidedDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
       // Validate
-      IErrorList aErrors = UBLPEValidator.voidedDocuments ().validate (aUBLObject);
+      IErrorList aErrors = UBLPEMarshaller.voidedDocuments ().validate (aUBLObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
 
       // write again
-      final Document aDoc2 = UBLPEWriter.voidedDocuments ().getAsDocument (aUBLObject);
+      final Document aDoc2 = UBLPEMarshaller.voidedDocuments ().getAsDocument (aUBLObject);
       assertNotNull (aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final VoidedDocumentsType aUBLObject2 = UBLPEReader.voidedDocuments ().read (aDoc2);
+      final VoidedDocumentsType aUBLObject2 = UBLPEMarshaller.voidedDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
       CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
-      aErrors = UBLPEValidator.voidedDocuments ().validate (aUBLObject2);
+      aErrors = UBLPEMarshaller.voidedDocuments ().validate (aUBLObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // Validate
-    final IErrorList aErrors = UBLPEValidator.voidedDocuments ().validate (new VoidedDocumentsType ());
+    final IErrorList aErrors = UBLPEMarshaller.voidedDocuments ().validate (new VoidedDocumentsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }

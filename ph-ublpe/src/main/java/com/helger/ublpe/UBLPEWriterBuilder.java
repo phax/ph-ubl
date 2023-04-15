@@ -28,8 +28,10 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBLPE implementation class to be read
+ * @deprecated Use {@link UBLPEMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLPEWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLPEWriterBuilder <JAXBTYPE>>
 {
   public UBLPEWriterBuilder (@Nonnull final EUBLPEDocumentType eDocType)

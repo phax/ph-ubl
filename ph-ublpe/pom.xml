@@ -115,7 +115,7 @@
             <id>ublpe20</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ublpe</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ublpe20/maindoc</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/ublpe20/maindoc</schemaDirectory>
               <bindingIncludes>
                 <bindingInclude>bindings-ublpe20.xjb</bindingInclude>
               </bindingIncludes>

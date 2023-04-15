@@ -27,8 +27,10 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  * @author Philip Helger
  * @param <JAXBTYPE>
  *        The UBLPE implementation class to be read
+ * @deprecated Use {@link UBLPEMarshaller} instead
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLPEReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBLPEReaderBuilder <JAXBTYPE>>
 {
   public UBLPEReaderBuilder (@Nonnull final EUBLPEDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
