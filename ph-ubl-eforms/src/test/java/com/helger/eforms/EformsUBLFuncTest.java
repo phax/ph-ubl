@@ -30,14 +30,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
+import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
 import com.helger.eforms.jaxb.ext.EformsExtension;
 import com.helger.ubl23.UBL23Marshaller.UBL23JAXBMarshaller;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
+import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_23.PartyType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_23.IDType;
+import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_23.IssueDateType;
 import oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_23.TotalAmountType;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.ExtensionContentType;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.UBLExtensionType;
@@ -215,5 +220,27 @@ public final class EformsUBLFuncTest
                                               .getAsString (aTargetDoc);
     assertNotNull (sResult);
     LOGGER.info (sResult);
+  }
+
+  @Test
+  public void testBRIN ()
+  {
+    final BusinessRegistrationInformationNoticeType brin = new BusinessRegistrationInformationNoticeType ();
+    brin.setID (new IDType ("bla"));
+    brin.setIssueDate (new IssueDateType (PDTFactory.getCurrentLocalDate ()));
+    {
+      final PartyType aBP = new PartyType ();
+      brin.setBusinessParty (aBP);
+    }
+    final String sResult = EformsUBLMarshaller.businessRegistrationInformationNotice ()
+                                              .setFormattedOutput (true)
+                                              .getAsString (brin);
+    assertNotNull (sResult);
+    LOGGER.info (sResult);
+
+    final BusinessRegistrationInformationNoticeType brin2 = EformsUBLMarshaller.businessRegistrationInformationNotice ()
+                                                                               .read (sResult);
+    assertNotNull (brin2);
+    assertEquals (brin, brin2);
   }
 }
