@@ -6,7 +6,6 @@ import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
@@ -54,17 +53,11 @@ public final class UBL20Marshaller
 {
   public static class UBL20JAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
-    @Nonnull
-    public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ClassPathResource aXSD)
-    {
-      return new CommonsArrayList <> (aXSD);
-    }
-
     public UBL20JAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
                                 @Nonnull final ClassPathResource aXSD,
                                 @Nonnull final QName aRootElementQName)
     {
-      super (aType, getAllXSDs (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
+      super (aType, new CommonsArrayList <> (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = UBL20NamespaceContext.getInstance ().getClone ();

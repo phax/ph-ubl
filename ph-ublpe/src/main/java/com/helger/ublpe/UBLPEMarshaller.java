@@ -57,12 +57,6 @@ public final class UBLPEMarshaller
   {}
 
   @Nonnull
-  private static ClassPathResource _getCPR (@Nonnull final String sXSDPath)
-  {
-    return new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + sXSDPath, CUBLPE.getCL ());
-  }
-
-  @Nonnull
   public static UBL20JAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return UBL20Marshaller.applicationResponse ();
@@ -86,47 +80,51 @@ public final class UBLPEMarshaller
     return UBL20Marshaller.invoice ();
   }
 
+  private static final ICommonsList <ClassPathResource> XSDS_SD = new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
+                                                                                           CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
+                                                                                           CUBL20.XSD_CODELIST_CURRENCY_CODE,
+                                                                                           CUBL20.XSD_CODELIST_LANGUAGE_CODE,
+                                                                                           CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
+                                                                                           CUBL20.XSD_QUALIFIED_DATA_TYPES,
+                                                                                           CUBL20.XSD_COMMON_BASIC_COMPONENTS,
+                                                                                           CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                                           CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
+                                                                                           new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                                                                  CUBLPE.getCL ()),
+                                                                                           new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                                                                  "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
+                                                                                                                  CUBLPE.getCL ()));
+
   @Nonnull
   public static UBLPEJAXBMarshaller <SummaryDocumentsType> summaryDocuments ()
   {
     return new UBLPEJAXBMarshaller <> (SummaryDocumentsType.class,
-                                       new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
-                                                                CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
-                                                                CUBL20.XSD_CODELIST_CURRENCY_CODE,
-                                                                CUBL20.XSD_CODELIST_LANGUAGE_CODE,
-                                                                CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
-                                                                CUBL20.XSD_QUALIFIED_DATA_TYPES,
-                                                                CUBL20.XSD_COMMON_BASIC_COMPONENTS,
-                                                                CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
-                                                                CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
-                                                                new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                       "common/UBLPE-SunatAggregateComponents-1.0.xsd",
-                                                                                       CUBLPE.getCL ()),
-                                                                new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                       "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
-                                                                                       CUBLPE.getCL ())),
+                                       XSDS_SD,
                                        sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.ObjectFactory._SummaryDocuments_QNAME);
   }
+
+  private static final ICommonsList <ClassPathResource> XSDS_VD = new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
+                                                                                           CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
+                                                                                           CUBL20.XSD_CODELIST_CURRENCY_CODE,
+                                                                                           CUBL20.XSD_CODELIST_LANGUAGE_CODE,
+                                                                                           CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
+                                                                                           CUBL20.XSD_QUALIFIED_DATA_TYPES,
+                                                                                           CUBL20.XSD_COMMON_BASIC_COMPONENTS,
+                                                                                           CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                                           CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
+                                                                                           new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                                                                  CUBLPE.getCL ()),
+                                                                                           new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                                                                  "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
+                                                                                                                  CUBLPE.getCL ()));
 
   @Nonnull
   public static UBLPEJAXBMarshaller <VoidedDocumentsType> voidedDocuments ()
   {
     return new UBLPEJAXBMarshaller <> (VoidedDocumentsType.class,
-                                       new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
-                                                                CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
-                                                                CUBL20.XSD_CODELIST_CURRENCY_CODE,
-                                                                CUBL20.XSD_CODELIST_LANGUAGE_CODE,
-                                                                CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
-                                                                CUBL20.XSD_QUALIFIED_DATA_TYPES,
-                                                                CUBL20.XSD_COMMON_BASIC_COMPONENTS,
-                                                                CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
-                                                                CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
-                                                                new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                       "common/UBLPE-SunatAggregateComponents-1.0.xsd",
-                                                                                       CUBLPE.getCL ()),
-                                                                new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                       "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
-                                                                                       CUBLPE.getCL ())),
+                                       XSDS_VD,
                                        sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.ObjectFactory._VoidedDocuments_QNAME);
   }
 }

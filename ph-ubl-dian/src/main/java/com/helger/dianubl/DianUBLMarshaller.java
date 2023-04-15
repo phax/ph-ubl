@@ -79,12 +79,6 @@ public final class DianUBLMarshaller
   {}
 
   @Nonnull
-  private static ClassPathResource _getCPR (@Nonnull final String sXSDPath)
-  {
-    return new ClassPathResource (CDianUBL.SCHEMA_DIRECTORY + sXSDPath, CDianUBL.getCL ());
-  }
-
-  @Nonnull
   public static DianUBLJAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return new DianUBLJAXBMarshaller <> (ApplicationResponseType.class,

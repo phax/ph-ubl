@@ -83,34 +83,35 @@ public final class EformsUBLMarshaller
     return UBL23Marshaller.priorInformationNotice ();
   }
 
-  @Nonnull
-  public static EformsUBLJAXBMarshaller <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
-  {
-    return new EformsUBLJAXBMarshaller <> (BusinessRegistrationInformationNoticeType.class,
-                                           new CommonsArrayList <> (CCCTS.getXSDResource (),
-                                                                    CXMLDSig.getXSDResource (),
-                                                                    CXAdES132.getXSDResource (),
-                                                                    CXAdES141.getXSDResource (),
-                                                                    CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_APEX,
-                                                                    CEformsUBL.XSD_EFORMS_BRIN),
-                                           com.helger.eforms.jaxb.brin.ObjectFactory._BusinessRegistrationInformationNotice_QNAME);
-  }
+  private static final ICommonsList <ClassPathResource> XSDS_EXT = new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                                                 CXMLDSig.getXSDResource (),
+                                                                                                 CXAdES132.getXSDResource (),
+                                                                                                 CXAdES141.getXSDResource (),
+                                                                                                 CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
+                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
+                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_APEX);
 
   @Nonnull
   public static EformsUBLJAXBMarshaller <EformsExtension> eFormsExtension ()
   {
     return new EformsUBLJAXBMarshaller <> (EformsExtension.class,
-                                           new CommonsArrayList <> (CCCTS.getXSDResource (),
-                                                                    CXMLDSig.getXSDResource (),
-                                                                    CXAdES132.getXSDResource (),
-                                                                    CXAdES141.getXSDResource (),
-                                                                    CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
-                                                                    CEformsUBL.XSD_EFORMS_EXTENSION_APEX),
+                                           XSDS_EXT,
                                            new QName (CEformsUBL.XML_SCHEMA_EFEXT_NAMESPACE_URL, "EformsExtension"));
+  }
+
+  private static final ICommonsList <ClassPathResource> XSDS_BRIN;
+  static
+  {
+    XSDS_BRIN = XSDS_EXT.getClone ();
+    XSDS_BRIN.add (CEformsUBL.XSD_EFORMS_BRIN);
+  }
+
+  @Nonnull
+  public static EformsUBLJAXBMarshaller <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
+  {
+    return new EformsUBLJAXBMarshaller <> (BusinessRegistrationInformationNoticeType.class,
+                                           XSDS_BRIN,
+                                           com.helger.eforms.jaxb.brin.ObjectFactory._BusinessRegistrationInformationNotice_QNAME);
   }
 }

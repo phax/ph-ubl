@@ -118,14 +118,17 @@ public final class UBL23Marshaller
 {
   public static class UBL23JAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
+    private static final ICommonsList <ClassPathResource> BASE_XSDS = new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                                               CXMLDSig.getXSDResource (),
+                                                                                               CXAdES132.getXSDResource (),
+                                                                                               CXAdES141.getXSDResource ());
+
     @Nonnull
     public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ClassPathResource aXSD)
     {
-      return new CommonsArrayList <> (CCCTS.getXSDResource (),
-                                      CXMLDSig.getXSDResource (),
-                                      CXAdES132.getXSDResource (),
-                                      CXAdES141.getXSDResource (),
-                                      aXSD);
+      final ICommonsList <ClassPathResource> ret = BASE_XSDS.getClone ();
+      ret.add (aXSD);
+      return ret;
     }
 
     public UBL23JAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
