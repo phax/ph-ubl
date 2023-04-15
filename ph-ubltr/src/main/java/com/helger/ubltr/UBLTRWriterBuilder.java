@@ -30,6 +30,7 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLTRWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, UBLTRWriterBuilder <JAXBTYPE>>
 {
   public UBLTRWriterBuilder (@Nonnull final EUBLTRDocumentType eDocType)

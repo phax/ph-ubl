@@ -26,7 +26,7 @@ import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.ubl21.EUBL21DocumentType;
+import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
@@ -37,14 +37,8 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 @Immutable
 public final class CUBLTR
 {
-  @Nonnull
-  private static ClassLoader _getCL ()
-  {
-    return CUBLTR.class.getClassLoader ();
-  }
-
   /** The classpath relative directory where the main XSDs reside */
-  public static final String SCHEMA_DIRECTORY = "schemas/ubltr/";
+  public static final String SCHEMA_DIRECTORY = "external/schemas/ubltr/";
 
   public static final String XML_NS_EFATURA = "http://www.efatura.gov.tr/package-namespace";
   public static final String XML_NS_HRXML = "http://www.hr-xml.org/3";
@@ -52,21 +46,23 @@ public final class CUBLTR
 
   /** List of all XSDs required for using the HRXML UserAccount type */
   @CodingStyleguideUnaware
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public static final List <ClassPathResource> XSD_HRXML_USER_ACCOUNT = new CommonsArrayList <> (CXMLDSig.getXSDResource (),
                                                                                                  new ClassPathResource (SCHEMA_DIRECTORY +
                                                                                                                         "HRXML/UserAccount.xsd",
-                                                                                                                        _getCL ())).getAsUnmodifiable ();
+                                                                                                                        getCL ())).getAsUnmodifiable ();
 
   /** List of all XSDs required for using the ULBTR Package type */
   @CodingStyleguideUnaware
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public static final List <ClassPathResource> XSD_PACKAGE;
 
   static
   {
     final ICommonsList <ClassPathResource> aPackage = new CommonsArrayList <> ();
-    aPackage.addAll (EUBL21DocumentType.INVOICE.getAllXSDResources ());
-    aPackage.addAll (EUBL21DocumentType.APPLICATION_RESPONSE.getAllXSDResources ());
-    aPackage.add (new ClassPathResource (SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", _getCL ()));
+    aPackage.addAll (UBL21Marshaller.invoice ().getOriginalXSDs ());
+    aPackage.addAll (UBL21Marshaller.applicationResponse ().getOriginalXSDs ());
+    aPackage.add (new ClassPathResource (SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", getCL ()));
     XSD_PACKAGE = aPackage.getAsUnmodifiable ();
   }
 
@@ -75,4 +71,10 @@ public final class CUBLTR
 
   private CUBLTR ()
   {}
+
+  @Nonnull
+  public static ClassLoader getCL ()
+  {
+    return CUBLTR.class.getClassLoader ();
+  }
 }

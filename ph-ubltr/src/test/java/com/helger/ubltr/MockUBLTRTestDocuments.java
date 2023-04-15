@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 
 @Immutable
 public final class MockUBLTRTestDocuments
@@ -34,23 +34,23 @@ public final class MockUBLTRTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentType eType)
+  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentTypeSimple eType)
   {
     List <String> aFiles = null;
     switch (eType)
     {
       case CANCEL_USER_ACCOUNT:
-        aFiles = CollectionHelper.makeUnmodifiable (PREFIX + "tr_useraccount/5_KULLANICI_SILME.xml",
-                                                    PREFIX + "tr_useraccount/9_FATURA_SAKLAMA_KULLANICI_SILME.xml");
+        aFiles = new CommonsArrayList <> (PREFIX + "tr_useraccount/5_KULLANICI_SILME.xml",
+                                          PREFIX + "tr_useraccount/9_FATURA_SAKLAMA_KULLANICI_SILME.xml");
         break;
       case PROCESS_USER_ACCOUNT:
-        aFiles = CollectionHelper.makeUnmodifiable (PREFIX + "tr_useraccount/4_KULLANICI_ACMA.xml",
-                                                    PREFIX + "tr_useraccount/8_FATURA_SAKLAMA_KULLANICI_ACMA.xml");
+        aFiles = new CommonsArrayList <> (PREFIX + "tr_useraccount/4_KULLANICI_ACMA.xml",
+                                          PREFIX + "tr_useraccount/8_FATURA_SAKLAMA_KULLANICI_ACMA.xml");
         break;
       default:
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    return CollectionHelper.newList (aFiles);
+    return aFiles;
   }
 }

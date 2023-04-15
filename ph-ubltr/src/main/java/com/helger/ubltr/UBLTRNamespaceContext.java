@@ -16,6 +16,8 @@
  */
 package com.helger.ubltr;
 
+import javax.annotation.Nonnull;
+
 import com.helger.sbdh.CSBDH;
 import com.helger.ubl21.UBL21NamespaceContext;
 
@@ -26,11 +28,23 @@ import com.helger.ubl21.UBL21NamespaceContext;
  */
 public class UBLTRNamespaceContext extends UBL21NamespaceContext
 {
-  public UBLTRNamespaceContext ()
+  private static final class SingletonHolder
+  {
+    static final UBLTRNamespaceContext INSTANCE = new UBLTRNamespaceContext ();
+  }
+
+  protected UBLTRNamespaceContext ()
   {
     addMapping ("sh", CSBDH.SBDH_NS);
     addMapping ("ef", CUBLTR.XML_NS_EFATURA);
-    addMapping ("hr", CUBLTR.XML_NS_HRXML);
+    if (false)
+      addMapping ("hr", CUBLTR.XML_NS_HRXML);
     addMapping ("oa", CUBLTR.XML_NS_OAGIS);
+  }
+
+  @Nonnull
+  public static UBLTRNamespaceContext getInstance ()
+  {
+    return SingletonHolder.INSTANCE;
   }
 }

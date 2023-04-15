@@ -29,6 +29,7 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLTRReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, UBLTRReaderBuilder <JAXBTYPE>>
 {
   public UBLTRReaderBuilder (@Nonnull final EUBLTRDocumentType aDocType, @Nonnull final Class <JAXBTYPE> aImplClass)

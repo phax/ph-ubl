@@ -31,6 +31,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  * @author Philip Helger
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBLTRWriter
 {
   @PresentForCodeCoverage

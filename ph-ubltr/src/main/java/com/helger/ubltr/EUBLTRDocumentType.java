@@ -38,6 +38,7 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public enum EUBLTRDocumentType implements IJAXBDocumentType
 {
   CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
@@ -46,7 +47,8 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
 
   private final JAXBDocumentType m_aDocType;
 
-  private EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
+  EUBLTRDocumentType (@Nonnull final Class <?> aClass,
+                      @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDs, s -> StringHelper.trimEnd (s, "Type"));
   }

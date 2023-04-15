@@ -28,7 +28,7 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate"     xmlType="xsd:date"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime"     xmlType="xsd:time"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </globalBindings>
-  <bindings schemaLocation="../resources/schemas/ubltr/Envelope/Package_1_2.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/external/schemas/ubltr/Envelope/Package_1_2.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="tr.gov.efatura.package_12" />
       <!-- Required because "Package" is reserved class name -->
@@ -38,7 +38,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/ubltr/HRXML/UserAccount.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/external/schemas/ubltr/HRXML/UserAccount.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="tr.gov.efatura.useraccount" />
     </schemaBindings>

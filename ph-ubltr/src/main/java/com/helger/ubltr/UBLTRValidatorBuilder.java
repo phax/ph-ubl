@@ -29,6 +29,7 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  *        The UBLTR implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "8.0.0")
 public class UBLTRValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, UBLTRValidatorBuilder <JAXBTYPE>>
 {
   public UBLTRValidatorBuilder (@Nonnull final EUBLTRDocumentType eDocType)

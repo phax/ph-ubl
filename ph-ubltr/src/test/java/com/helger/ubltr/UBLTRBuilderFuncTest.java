@@ -26,6 +26,7 @@ import org.slf4j.LoggerFactory;
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.stream.StreamHelper;
+import com.helger.ubltr.UBLTRMarshaller.UBLTRJAXBMarshaller;
 
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 
@@ -42,29 +43,27 @@ public final class UBLTRBuilderFuncTest
   @Test
   public void testReadAndWriteCancelUserAccount ()
   {
-    final UBLTRReaderBuilder <CancelUserAccountType> aReader = new UBLTRReaderBuilder <> (CancelUserAccountType.class);
-    final UBLTRValidatorBuilder <CancelUserAccountType> aValidator = new UBLTRValidatorBuilder <> (CancelUserAccountType.class);
-    final UBLTRWriterBuilder <CancelUserAccountType> aWriter = new UBLTRWriterBuilder <> (CancelUserAccountType.class).setFormattedOutput (true);
+    final UBLTRJAXBMarshaller <CancelUserAccountType> aMarshaller = UBLTRMarshaller.cancelUserAccount ();
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentTypeSimple.CANCEL_USER_ACCOUNT)
                                                    .get (0);
 
     // Read from resource
-    final CancelUserAccountType aRead1 = aReader.read (new ClassPathResource (sFilename));
+    final CancelUserAccountType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));
     assertNotNull (aRead1);
 
     // Read from byte[]
-    final CancelUserAccountType aRead2 = aReader.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
+    final CancelUserAccountType aRead2 = aMarshaller.read (StreamHelper.getAllBytes (new ClassPathResource (sFilename)));
     assertNotNull (aRead2);
     assertEquals (aRead1, aRead2);
 
     // Validate
-    final IErrorList aREG1 = aValidator.validate (aRead1);
-    final IErrorList aREG2 = aValidator.validate (aRead2);
+    final IErrorList aREG1 = aMarshaller.validate (aRead1);
+    final IErrorList aREG2 = aMarshaller.validate (aRead2);
     assertEquals (aREG1, aREG2);
 
     // Write
-    final String sXML = aWriter.getAsString (aRead1);
+    final String sXML = aMarshaller.getAsString (aRead1);
     LOGGER.info ("Created XML:\n" + sXML);
   }
 }

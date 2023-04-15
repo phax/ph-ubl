@@ -27,6 +27,7 @@ import org.junit.Test;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "8.0.0")
 public final class UBLTRDocumentTypesTest
 {
   @Test
@@ -54,8 +55,10 @@ public final class UBLTRDocumentTypesTest
     assertNull (UBLTRDocumentTypes.getSchemaOfImplementationClass (String.class));
     for (final EUBLTRDocumentType eDocType : EUBLTRDocumentType.values ())
     {
-      assertSame (eDocType, UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
-      assertSame (eDocType.getSchema (), UBLTRDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType,
+                  UBLTRDocumentTypes.getDocumentTypeOfImplementationClass (eDocType.getImplementationClass ()));
+      assertSame (eDocType.getSchema (),
+                  UBLTRDocumentTypes.getSchemaOfImplementationClass (eDocType.getImplementationClass ()));
       assertNotNull (eDocType.getValidator (null));
     }
   }
