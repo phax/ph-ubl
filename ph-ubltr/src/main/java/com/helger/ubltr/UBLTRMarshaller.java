@@ -80,6 +80,8 @@ public final class UBLTRMarshaller
     XSD_PACKAGE.addAll (UBL21Marshaller.invoice ().getOriginalXSDs ());
     XSD_PACKAGE.addAll (UBL21Marshaller.applicationResponse ().getOriginalXSDs ());
     XSD_PACKAGE.add (new ClassPathResource (CUBLTR.SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", CUBLTR.getCL ()));
+    XSD_PACKAGE.addAll (UBL21Marshaller.despatchAdvice ().getOriginalXSDs ());
+    XSD_PACKAGE.addAll (UBL21Marshaller.receiptAdvice ().getOriginalXSDs ());
   }
 
   private static final QName QNAME_PACKAGE = new QName (CUBLTR.XML_NS_EFATURA, "Package");

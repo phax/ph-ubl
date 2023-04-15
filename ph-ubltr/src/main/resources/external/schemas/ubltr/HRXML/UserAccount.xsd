@@ -4,7 +4,6 @@
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:import namespace="http://www.openapplications.org/oagis/9"
 		schemaLocation="www.openapplications.org_oagis_9/Components.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" />
 	<xsd:annotation>
 		<xsd:documentation> Name: ProcessUserAccount.xsd Status: 3.0 Public Release Date this
 			version: 2009-Sep-23 Purpose: Used to request processing of the UserAccount noun by a

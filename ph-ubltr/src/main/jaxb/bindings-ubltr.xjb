@@ -43,4 +43,12 @@
       <package name="tr.gov.efatura.useraccount" />
     </schemaBindings>
   </bindings>
+  <bindings schemaLocation="../resources/external/schemas/ubltr/Userlist/NewUserList.xsd" node="/xsd:schema">
+    <schemaBindings>
+      <package name="tr.gov.efatura.userlist" />
+      <nameXmlTransform>
+        <typeName prefix="UL"/>
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
 </bindings>

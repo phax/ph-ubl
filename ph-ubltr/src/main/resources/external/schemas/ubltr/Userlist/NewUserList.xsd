@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="UserList" type="UserList"/>
+
+  <xs:complexType name="UserList">
+    <xs:sequence>
+      <xs:element name="User" type="User" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element name="Identifier" type="xs:string" minOccurs="0"/>
+      <xs:element name="Title" type="xs:string"/>
+      <xs:element name="Type" type="UsrType"/>
+      <xs:element name="FirstCreationTime" type="xs:string"/>
+      <xs:element name="AccountType" type="AccType" minOccurs="0"/>
+      <xs:element name="Documents" type="DocumentsType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentsType">
+    <xs:sequence>
+      <xs:element name="Document" type="DocumentType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentType">
+    <xs:sequence>
+      <xs:element name="Alias" type="AliasType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="DocType"/>    
+  </xs:complexType>
+
+  <xs:complexType name="AliasType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="CreationTime" type="xs:string"/>
+      <xs:element name="DeletionTime" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="DocType" final="restriction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invoice"></xs:enumeration>
+      <xs:enumeration value="DespatchAdvice"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="AccType" final="restriction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GIBPORTAL"></xs:enumeration>
+      <xs:enumeration value="ENTEGRASYON"></xs:enumeration>
+      <xs:enumeration value="OZELENTEGRASYON"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="UsrType" final="restriction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OZEL"></xs:enumeration>
+      <xs:enumeration value="KAMU"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

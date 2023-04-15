@@ -121,10 +121,11 @@
             <id>ubltr</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ubltr</generateDirectory>
-              <schemaDirectory>${basedir}/src/main/resources/schemas/ubltr</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas/ubltr</schemaDirectory>
               <schemaIncludes>
                 <schemaInclude>Envelope/Package_1_2.xsd</schemaInclude>
                 <schemaInclude>HRXML/UserAccount.xsd</schemaInclude>
+                <schemaInclude>Userlist/NewUserList.xsd</schemaInclude>
               </schemaIncludes>
               <bindingIncludes>
                 <bindingInclude>bindings-ubltr.xjb</bindingInclude>

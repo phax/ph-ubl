@@ -3,6 +3,8 @@
 	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" />
 	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" />
 	<xs:import namespace="http://www.hr-xml.org/3" schemaLocation="../HRXML/UserAccount.xsd"/>
+	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2" />
+	<xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2" />
 	<xs:element name="Package">
 		<xs:complexType>
 			<xs:sequence>
