@@ -30,8 +30,10 @@ import com.helger.jaxb.builder.IJAXBDocumentType;
  *
  * @author Philip Helger
  */
+@SuppressWarnings ("removal")
 public abstract class AbstractCreateUBLActionCode
 {
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public enum EPhase
   {
     READ,
@@ -39,7 +41,7 @@ public abstract class AbstractCreateUBLActionCode
     VALIDATE;
   }
 
-  @Deprecated
+  @Deprecated (forRemoval = true, since = "8.0.0")
   protected static void append (@Nonnull final IJAXBDocumentType e,
                                 @Nonnull final EPhase ePhase,
                                 @Nonnull final StringBuilder aSB,
