@@ -16,7 +16,6 @@
  */
 package com.helger.ubl22.supplementary.tools;
 
-import com.helger.commons.string.StringHelper;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
 import com.helger.ubl22.EUBL22DocumentTypeSimple;
 
@@ -27,28 +26,8 @@ public final class MainCreateUBL22MarshallerCode extends AbstractCreateUBLAction
     final StringBuilder aSB = new StringBuilder ();
 
     for (final EUBL22DocumentTypeSimple e : EUBL22DocumentTypeSimple.values ())
-    {
-      final String sClassName = e.getClazz ().getSimpleName ();
-      final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
-      final String sMethodName = lcFirst (sNoTypeName);
-      aSB.append ("@Nonnull\n");
-      aSB.append ("public static UBL22JAXBMarshaller <")
-         .append (sClassName)
-         .append ("> ")
-         .append (sMethodName)
-         .append (" ()\n");
-      aSB.append ("{\n");
-      aSB.append ("  return new UBL22JAXBMarshaller <> (")
-         .append (sClassName)
-         .append (".class, _getCPR (\"")
-         .append (e.getXSDPath ())
-         .append ("\"), ")
-         .append (e.getClazz ().getPackage ().getName ())
-         .append (".ObjectFactory._")
-         .append (sNoTypeName)
-         .append ("_QNAME);\n");
-      aSB.append ("}\n\n");
-    }
+      appendMarshaller ("UBL22JAXBMarshaller", e, aSB);
+
     System.out.println (aSB.toString ());
     // Insert into UBL22Marshaller
   }

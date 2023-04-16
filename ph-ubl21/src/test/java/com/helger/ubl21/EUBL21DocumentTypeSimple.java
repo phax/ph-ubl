@@ -21,6 +21,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.ubl.api.codegen.IUBLDocTypeEnumSimple;
 import com.helger.xml.schema.XMLSchemaCache;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
@@ -32,7 +33,7 @@ import com.helger.xsds.xmldsig.CXMLDSig;
  *
  * @author Philip Helger
  */
-public enum EUBL21DocumentTypeSimple
+public enum EUBL21DocumentTypeSimple implements IUBLDocTypeEnumSimple
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType.class,
                         "UBL-ApplicationResponse-2.1.xsd"),

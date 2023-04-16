@@ -32,12 +32,6 @@ import com.helger.jaxb.builder.IJAXBDocumentType;
  */
 public abstract class AbstractCreateUBLActionCode
 {
-  @Nonnull
-  protected static String lcFirst (@Nonnull final String s)
-  {
-    return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
-  }
-
   public enum EPhase
   {
     READ,
@@ -112,5 +106,41 @@ public abstract class AbstractCreateUBLActionCode
            .append (".class);}\n");
         break;
     }
+  }
+
+  @Nonnull
+  private static String lcFirst (@Nonnull final String s)
+  {
+    return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
+  }
+
+  public static void appendMarshaller (@Nonnull final String sMarshallerClassName,
+                                       @Nonnull final IUBLDocTypeEnumSimple e,
+                                       @Nonnull final StringBuilder aSB)
+  {
+    final String sClassName = e.getClazz ().getSimpleName ();
+    final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
+    final String sMethodName = lcFirst (sNoTypeName);
+    aSB.append ("@Nonnull\n");
+    aSB.append ("public static ")
+       .append (sMarshallerClassName)
+       .append (" <")
+       .append (sClassName)
+       .append ("> ")
+       .append (sMethodName)
+       .append (" ()\n");
+    aSB.append ("{\n");
+    aSB.append ("  return new ")
+       .append (sMarshallerClassName)
+       .append (" <> (")
+       .append (sClassName)
+       .append (".class, _getCPR (\"")
+       .append (e.getXSDPath ())
+       .append ("\"), ")
+       .append (e.getClazz ().getPackage ().getName ())
+       .append (".ObjectFactory._")
+       .append (sNoTypeName)
+       .append ("_QNAME);\n");
+    aSB.append ("}\n\n");
   }
 }
