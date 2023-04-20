@@ -130,7 +130,7 @@
             <goals>
               <goal>generate</goal>
             </goals>
-            <id>ubl21</id>
+            <id>ubl23</id>
             <configuration>
               <generateDirectory>${project.build.directory}/generated-sources/ubl23</generateDirectory>
               <schemaDirectory>${basedir}/src/main/resources/external/schemas/ubl23</schemaDirectory>
@@ -150,7 +150,6 @@
           <extension>true</extension>
           <!-- Important for building on Linux! -->
           <strict>false</strict>
-          <debug>true</debug>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>
