@@ -166,6 +166,30 @@ To also use the generated enums for the UBL 2.3 codelists add the following arti
 
 Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
+## Maven usage UBL 2.4
+
+To read and write UBL 2.4 documents add the following to your pom.xml to use this artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl24</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+To also use the generated enums for the UBL 2.4 codelists add the following artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl24-codelists</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+Supported since v8.0.0
+
 ## Maven usage UBL-tr
 
 To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
@@ -240,14 +264,12 @@ Binary versions of the artefacts can be downloaded from Maven Central:
 * https://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
 * https://repo1.maven.org/maven2/com/helger/ph-ubl23/
 * https://repo1.maven.org/maven2/com/helger/ph-ubl23-codelists/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl24/
+* https://repo1.maven.org/maven2/com/helger/ph-ubl24-codelists/
 * https://repo1.maven.org/maven2/com/helger/ph-ublpe/
 * https://repo1.maven.org/maven2/com/helger/ph-ubltr/
 * https://repo1.maven.org/maven2/com/helger/ph-ubl-dian/
 * https://repo1.maven.org/maven2/com/helger/ph-ubl-eforms/
-
-Old artefacts:
-
-* http://repo1.maven.org/maven2/com/helger/ph-ubl-jaxb-plugin/
 
 # Other UBL sites
 
@@ -258,17 +280,20 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
     * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
+    * UBL 2.4: https://docs.oasis-open.org/ubl/csd01-UBL-2.4/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
 
 # News and noteworthy
 
-* v8.0.0 - work in progress
+* v8.0.0 - 2023-04-21
+    * Added support for UBL 2.4-CSD01 - new submodules `ph-ubl24` and `ph-ubl24-codelists`
     * Updated to ph-commons 11.0.3
-    * New classes `UBL20Marshaller`
+    * New classes `UBL2(0|1|2|3|4)Marshaller` that can read, write and validate
     * Deprecated classes `EUBL20DocumentType`, `UBL20DocumentType`, `UBL20(Reader|Validator|Writer)` and `UBL20(Reader|Validator|Writer)Builder`
     * Moved the XML Schemas to a new path that starts with `external/`
+    * By updating to `ph-jaxb-plugin` v4.0.2 an integrity error could be resolved
 * v7.0.0 - 2023-01-09
     * Using Java 11 as the baseline
     * Updated to ph-commons 11
@@ -342,5 +367,4 @@ For further information on the Universal Business Language can be found on the f
 ---
 
 My personal [Coding Styleguide](https://github.com/phax/meta/blob/master/CodingStyleguide.md) |
-On Twitter: <a href="https://twitter.com/philiphelger">@philiphelger</a> |
 Kindly supported by [YourKit Java Profiler](https://www.yourkit.com)
