@@ -77,7 +77,7 @@ public final class MainCreateEnumsGenericode23
   private static final String PACKAGE = "com.helger.ubl23.codelist";
   private static final String COLID_NAME = "name";
   private static final String COLID_CODE = "code";
-  private static final JCodeModel s_aCodeModel = new JCodeModel ();
+  private static final JCodeModel CM = new JCodeModel ();
 
   @Nonnull
   private static String _getVarName (@Nonnull final String sOtherCol)
@@ -182,9 +182,9 @@ public final class MainCreateEnumsGenericode23
           if (aFile.getName ().contains ("-2.3"))
             sEnumName += "23";
 
-    final JDefinedClass jEnum = s_aCodeModel._package (PACKAGE)
-                                            ._enum (sEnumName)
-                                            ._implements (s_aCodeModel.ref (IHasID.class).narrow (String.class));
+    final JDefinedClass jEnum = CM._package (PACKAGE)
+                                  ._enum (sEnumName)
+                                  ._implements (CM.ref (IHasID.class).narrow (String.class));
     if (bHasNameColumn)
       jEnum._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
@@ -296,10 +296,7 @@ public final class MainCreateEnumsGenericode23
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
     m.body ()
-     ._return (s_aCodeModel.ref (EnumHelper.class)
-                           .staticInvoke ("getFromIDOrNull")
-                           .arg (JExpr.dotClass (jEnum))
-                           .arg (jID));
+     ._return (CM.ref (EnumHelper.class).staticInvoke ("getFromIDOrNull").arg (JExpr.dotClass (jEnum)).arg (jID));
 
     if (bHasNameColumn)
     {
@@ -333,7 +330,7 @@ public final class MainCreateEnumsGenericode23
             sClassName += "23";
     final int nEntries = aCodeList10.getSimpleCodeList ().getRow ().size ();
 
-    final JDefinedClass jClass = s_aCodeModel._package (PACKAGE)._class (JMod.FINAL | JMod.PUBLIC, sClassName);
+    final JDefinedClass jClass = CM._package (PACKAGE)._class (JMod.FINAL | JMod.PUBLIC, sClassName);
     jClass.annotate (Immutable.class);
     jClass.javadoc ()
           .add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
@@ -343,8 +340,8 @@ public final class MainCreateEnumsGenericode23
 
     _classConstants (aCodeList10, jClass);
 
-    final AbstractJClass aSetDecl = s_aCodeModel.ref (ICommonsSet.class).narrow (String.class);
-    final AbstractJClass aSetImpl = s_aCodeModel.ref (CommonsHashSet.class).narrowEmpty ();
+    final AbstractJClass aSetDecl = CM.ref (ICommonsSet.class).narrow (String.class);
+    final AbstractJClass aSetImpl = CM.ref (CommonsHashSet.class).narrowEmpty ();
     final JVar aCodeSet = jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                         aSetDecl,
                                         "s_aCodeSet",
@@ -404,7 +401,7 @@ public final class MainCreateEnumsGenericode23
     jClass.constructor (JMod.PRIVATE);
 
     // Access methods
-    JMethod aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, s_aCodeModel.BOOLEAN, "containsCode");
+    JMethod aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, CM.BOOLEAN, "containsCode");
     JVar aParam = aMethod.param (JMod.FINAL, String.class, "sCode");
     aParam.annotate (Nullable.class);
     aMethod.body ()._return (aCodeSet.invoke ("contains").arg (aParam));
@@ -416,7 +413,7 @@ public final class MainCreateEnumsGenericode23
 
     if (bHasNameColumn && aNameSet != null)
     {
-      aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, s_aCodeModel.BOOLEAN, "containsName");
+      aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, CM.BOOLEAN, "containsName");
       aParam = aMethod.param (JMod.FINAL, String.class, "sName");
       aParam.annotate (Nullable.class);
       aMethod.body ()._return (aNameSet.invoke ("contains").arg (aParam));
@@ -439,6 +436,6 @@ public final class MainCreateEnumsGenericode23
         if (aCodeList10 != null)
           _createGenericode10 (aFile, aCodeList10);
       }
-    new JCMWriter (s_aCodeModel).build (new File ("src/main/java"));
+    new JCMWriter (CM).build (new File ("src/main/java"));
   }
 }
