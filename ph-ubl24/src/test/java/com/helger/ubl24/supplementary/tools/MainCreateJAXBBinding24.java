@@ -159,7 +159,10 @@ public final class MainCreateJAXBBinding24
     for (int i = 0; i < aParts.length; ++i)
       aParts[i] = RegExHelper.getAsIdentifier (aParts[i]);
 
-    return StringHelper.getImploded (".", aParts);
+    String ret = StringHelper.getImploded (".", aParts);
+    if (ret.equals ("oasis.names.specification.bdndr.schema.xsd.unqualifieddatatypes_1"))
+      ret = "oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_1";
+    return ret;
   }
 
   public static void main (final String [] args)
