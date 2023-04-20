@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file ResolutionCode-2.1.gc. Do NOT edit!
  * It contains a total of 8 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EResolutionCode21
@@ -46,7 +46,7 @@ public enum EResolutionCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    private EResolutionCode21(@Nonnull @Nonempty final String sID) {
+    EResolutionCode21(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file CountryIdentificationCode-2.3.gc. Do NOT edit!
  * It contains a total of 498 entries!
- * @author com.helger.ubl23.main.MainCreateEnumsGenericode23
+ * @author com.helger.ubl23.supplementary.tools.MainCreateEnumsGenericode23
  */
 @CodingStyleguideUnaware
 public enum ECountryIdentificationCode23
@@ -542,7 +542,7 @@ public enum ECountryIdentificationCode23
     private final String m_sFrench;
     private final String m_sRef;
 
-    private ECountryIdentificationCode23(@Nonnull @Nonempty final String sID,
+    ECountryIdentificationCode23(@Nonnull @Nonempty final String sID,
         @Nonnull final String sDisplayName,
         @Nullable final String sNumericcode,
         @Nullable final String sFrench,

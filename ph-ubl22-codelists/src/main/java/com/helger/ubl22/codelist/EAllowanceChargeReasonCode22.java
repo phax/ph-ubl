@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file AllowanceChargeReasonCode-2.2.gc. Do NOT edit!
  * It contains a total of 105 entries!
- * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
+ * @author com.helger.ubl22.supplementary.tools.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
 public enum EAllowanceChargeReasonCode22
@@ -147,7 +147,7 @@ public enum EAllowanceChargeReasonCode22
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    private EAllowanceChargeReasonCode22(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    EAllowanceChargeReasonCode22(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;

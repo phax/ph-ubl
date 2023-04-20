@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file ChannelCode-2.1.gc. Do NOT edit!
  * It contains a total of 47 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EChannelCode21
@@ -88,7 +88,7 @@ public enum EChannelCode21
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    private EChannelCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    EChannelCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;

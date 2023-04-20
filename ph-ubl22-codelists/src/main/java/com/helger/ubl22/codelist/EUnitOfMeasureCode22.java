@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file UnitOfMeasureCode-2.2.gc. Do NOT edit!
  * It contains a total of 1728 entries!
- * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
+ * @author com.helger.ubl22.supplementary.tools.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
 public enum EUnitOfMeasureCode22
@@ -1769,7 +1769,7 @@ public enum EUnitOfMeasureCode22
     private final String m_sID;
     private final String m_sDisplayName;
 
-    private EUnitOfMeasureCode22(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    EUnitOfMeasureCode22(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }

@@ -28,7 +28,7 @@ import javax.annotation.concurrent.Immutable;
  * This file was automatically generated from Genericode file PortCode-2.1-port.gc. Do NOT edit!
  * It contains a total of 19746 entries!
  * The number of elements is too large to create an enum from it!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @Immutable
 public final class CPortCode_port21 {

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file LanguageCode-2.2.gc. Do NOT edit!
  * It contains a total of 711 entries!
- * @author com.helger.ubl22.main.MainCreateEnumsGenericode22
+ * @author com.helger.ubl22.supplementary.tools.MainCreateEnumsGenericode22
  */
 @CodingStyleguideUnaware
 public enum ELanguageCode22
@@ -755,7 +755,7 @@ public enum ELanguageCode22
     private final String m_sGerman;
     private final String m_sRef;
 
-    private ELanguageCode22(@Nonnull @Nonempty final String sID,
+    ELanguageCode22(@Nonnull @Nonempty final String sID,
         @Nonnull final String sDisplayName,
         @Nullable final String sFrench,
         @Nullable final String sGerman,

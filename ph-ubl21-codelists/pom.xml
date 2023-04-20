@@ -65,13 +65,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>ph-genericode</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.helger</groupId>
-      <artifactId>jcodemodel</artifactId>
+      <groupId>com.helger.ubl</groupId>
+      <artifactId>ph-ubl-api</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

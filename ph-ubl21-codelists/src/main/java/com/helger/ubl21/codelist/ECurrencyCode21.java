@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file CurrencyCode-2.1.gc. Do NOT edit!
  * It contains a total of 182 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum ECurrencyCode21
@@ -223,7 +223,7 @@ public enum ECurrencyCode21
     private final String m_sID;
     private final String m_sDisplayName;
 
-    private ECurrencyCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    ECurrencyCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }

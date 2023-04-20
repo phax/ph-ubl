@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file DocumentStatusCode-2.0.gc. Do NOT edit!
  * It contains a total of 4 entries!
- * @author com.helger.ubl20.main.MainCreateEnumsGenericode20
+ * @author com.helger.ubl20.supplementary.tools.MainCreateEnumsGenericode20
  */
 @CodingStyleguideUnaware
 public enum EDocumentStatusCode20
@@ -44,7 +44,7 @@ public enum EDocumentStatusCode20
     private final String m_sID;
     private final String m_sDisplayName;
 
-    private EDocumentStatusCode20(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    EDocumentStatusCode20(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }

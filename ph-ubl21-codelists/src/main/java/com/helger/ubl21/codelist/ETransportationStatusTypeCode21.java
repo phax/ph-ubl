@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file TransportationStatusTypeCode-2.1.gc. Do NOT edit!
  * It contains a total of 4 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum ETransportationStatusTypeCode21
@@ -44,7 +44,7 @@ public enum ETransportationStatusTypeCode21
     private final String m_sID;
     private final String m_sDisplayName;
 
-    private ETransportationStatusTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    ETransportationStatusTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }

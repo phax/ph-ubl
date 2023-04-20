@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file BinaryObjectMimeCode-2.3.gc. Do NOT edit!
  * It contains a total of 1844 entries!
- * @author com.helger.ubl23.main.MainCreateEnumsGenericode23
+ * @author com.helger.ubl23.supplementary.tools.MainCreateEnumsGenericode23
  */
 @CodingStyleguideUnaware
 public enum EBinaryObjectMimeCode23
@@ -1883,7 +1883,7 @@ public enum EBinaryObjectMimeCode23
     public static final String LIST_VERSION = "2020-04-14";
     private final String m_sID;
 
-    private EBinaryObjectMimeCode23(@Nonnull @Nonempty final String sID) {
+    EBinaryObjectMimeCode23(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file PackagingTypeCode-2.3.gc. Do NOT edit!
  * It contains a total of 377 entries!
- * @author com.helger.ubl23.main.MainCreateEnumsGenericode23
+ * @author com.helger.ubl23.supplementary.tools.MainCreateEnumsGenericode23
  */
 @CodingStyleguideUnaware
 public enum EPackagingTypeCode23
@@ -421,7 +421,7 @@ public enum EPackagingTypeCode23
     private final String m_sDescription;
     private final String m_sNumericcode;
 
-    private EPackagingTypeCode23(@Nonnull @Nonempty final String sID,
+    EPackagingTypeCode23(@Nonnull @Nonempty final String sID,
         @Nonnull final String sDisplayName,
         @Nullable final String sStatus,
         @Nullable final String sDescription,

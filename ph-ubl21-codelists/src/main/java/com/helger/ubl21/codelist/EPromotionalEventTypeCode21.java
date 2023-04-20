@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file PromotionalEventTypeCode-2.1.gc. Do NOT edit!
  * It contains a total of 11 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EPromotionalEventTypeCode21
@@ -49,7 +49,7 @@ public enum EPromotionalEventTypeCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    private EPromotionalEventTypeCode21(@Nonnull @Nonempty final String sID) {
+    EPromotionalEventTypeCode21(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file ItemClassificationCode-2.1.gc. Do NOT edit!
  * It contains a total of 165 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EItemClassificationCode21
@@ -207,7 +207,7 @@ public enum EItemClassificationCode21
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    private EItemClassificationCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    EItemClassificationCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;

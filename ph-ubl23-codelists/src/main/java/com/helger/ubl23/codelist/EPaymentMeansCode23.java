@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file PaymentMeansCode-2.3.gc. Do NOT edit!
  * It contains a total of 82 entries!
- * @author com.helger.ubl23.main.MainCreateEnumsGenericode23
+ * @author com.helger.ubl23.supplementary.tools.MainCreateEnumsGenericode23
  */
 @CodingStyleguideUnaware
 public enum EPaymentMeansCode23
@@ -124,7 +124,7 @@ public enum EPaymentMeansCode23
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    private EPaymentMeansCode23(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    EPaymentMeansCode23(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;

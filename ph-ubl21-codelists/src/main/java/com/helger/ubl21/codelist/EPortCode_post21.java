@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file PortCode-2.1-post.gc. Do NOT edit!
  * It contains a total of 757 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EPortCode_post21
@@ -818,7 +818,7 @@ public enum EPortCode_post21
     private final String m_sLatitude;
     private final String m_sLongitude;
 
-    private EPortCode_post21(@Nonnull @Nonempty final String sID,
+    EPortCode_post21(@Nonnull @Nonempty final String sID,
         @Nonnull final String sDisplayName,
         @Nullable final String sNamenodiacritics,
         @Nullable final String sCountry,

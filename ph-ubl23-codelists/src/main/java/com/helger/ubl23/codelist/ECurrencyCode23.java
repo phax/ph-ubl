@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file CurrencyCode-2.3.gc. Do NOT edit!
  * It contains a total of 276 entries!
- * @author com.helger.ubl23.main.MainCreateEnumsGenericode23
+ * @author com.helger.ubl23.supplementary.tools.MainCreateEnumsGenericode23
  */
 @CodingStyleguideUnaware
 public enum ECurrencyCode23
@@ -320,7 +320,7 @@ public enum ECurrencyCode23
     private final String m_sFractionaldigits;
     private final String m_sCountry;
 
-    private ECurrencyCode23(@Nonnull @Nonempty final String sID,
+    ECurrencyCode23(@Nonnull @Nonempty final String sID,
         @Nonnull final String sDisplayName,
         @Nullable final String sNumericcode,
         @Nullable final String sFractionaldigits,

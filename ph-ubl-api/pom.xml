@@ -66,6 +66,14 @@
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-jaxb</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-genericode</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>jcodemodel</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>org.slf4j</groupId>

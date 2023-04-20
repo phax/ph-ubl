@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file SupplyChainActivityTypeCode-2.1.gc. Do NOT edit!
  * It contains a total of 7 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum ESupplyChainActivityTypeCode21
@@ -45,7 +45,7 @@ public enum ESupplyChainActivityTypeCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    private ESupplyChainActivityTypeCode21(@Nonnull @Nonempty final String sID) {
+    ESupplyChainActivityTypeCode21(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 

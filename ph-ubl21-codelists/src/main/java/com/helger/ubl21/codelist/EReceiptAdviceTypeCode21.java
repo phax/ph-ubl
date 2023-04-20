@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file ReceiptAdviceTypeCode-2.1.gc. Do NOT edit!
  * It contains a total of 3 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EReceiptAdviceTypeCode21
@@ -43,7 +43,7 @@ public enum EReceiptAdviceTypeCode21
     private final String m_sID;
     private final String m_sDisplayName;
 
-    private EReceiptAdviceTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    EReceiptAdviceTypeCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }

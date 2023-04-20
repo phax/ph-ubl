@@ -18,7 +18,6 @@ package com.helger.ubl20.supplementary.tools;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Locale;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -58,6 +57,7 @@ import com.helger.jcodemodel.JMod;
 import com.helger.jcodemodel.JOp;
 import com.helger.jcodemodel.JVar;
 import com.helger.jcodemodel.writer.JCMWriter;
+import com.helger.ubl.api.codegen.AbstractCreateUBLCodeListCodeGen;
 
 import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
@@ -72,17 +72,11 @@ import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType
  *
  * @author Philip Helger
  */
-public final class MainCreateEnumsGenericode20
+public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeListCodeGen
 {
   private static final String COLID_NAME = "name";
   private static final String COLID_CODE = "code";
   private static final JCodeModel s_aCodeModel = new JCodeModel ();
-
-  @Nonnull
-  private static String _getVarName (@Nonnull final String sOtherCol)
-  {
-    return sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
-  }
 
   private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
   {
@@ -229,7 +223,7 @@ public final class MainCreateEnumsGenericode20
                                                   : null;
 
     // Constructor
-    final JMethod jCtor = jEnum.constructor (JMod.PRIVATE);
+    final JMethod jCtor = jEnum.constructor (JMod.NONE);
     JVar jID = jCtor.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nonnull.class);
     if (!bHasEmptyID)

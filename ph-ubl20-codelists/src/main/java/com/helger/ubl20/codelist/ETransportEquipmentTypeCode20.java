@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file TransportEquipmentTypeCode-2.0.gc. Do NOT edit!
  * It contains a total of 61 entries!
- * @author com.helger.ubl20.main.MainCreateEnumsGenericode20
+ * @author com.helger.ubl20.supplementary.tools.MainCreateEnumsGenericode20
  */
 @CodingStyleguideUnaware
 public enum ETransportEquipmentTypeCode20
@@ -103,7 +103,7 @@ public enum ETransportEquipmentTypeCode20
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    private ETransportEquipmentTypeCode20(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    ETransportEquipmentTypeCode20(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;

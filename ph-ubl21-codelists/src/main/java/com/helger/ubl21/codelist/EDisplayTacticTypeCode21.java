@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file DisplayTacticTypeCode-2.1.gc. Do NOT edit!
  * It contains a total of 12 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum EDisplayTacticTypeCode21
@@ -50,7 +50,7 @@ public enum EDisplayTacticTypeCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    private EDisplayTacticTypeCode21(@Nonnull @Nonempty final String sID) {
+    EDisplayTacticTypeCode21(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 

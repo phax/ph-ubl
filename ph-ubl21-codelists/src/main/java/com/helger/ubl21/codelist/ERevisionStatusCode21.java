@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * This file was automatically generated from Genericode file RevisionStatusCode-2.1.gc. Do NOT edit!
  * It contains a total of 5 entries!
- * @author com.helger.ubl21.main.MainCreateEnumsGenericode21
+ * @author com.helger.ubl21.supplementary.tools.MainCreateEnumsGenericode21
  */
 @CodingStyleguideUnaware
 public enum ERevisionStatusCode21
@@ -43,7 +43,7 @@ public enum ERevisionStatusCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    private ERevisionStatusCode21(@Nonnull @Nonempty final String sID) {
+    ERevisionStatusCode21(@Nonnull @Nonempty final String sID) {
         m_sID = sID;
     }
 
