@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2014-2023 Philip Helger (www.helger.com)
+    philip[at]helger[dot]com
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!--This file is generated. Do NOT edit.
+-->
+<jaxb:bindings xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jaxb https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd" version="3.0">
+  <jaxb:globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError">
+    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDateTime" />
+    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
+    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
+  </jaxb:globalBindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/BDNDR-UnqualifiedDataTypes-1.1.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.bdndr.schema.xsd.unqualifieddatatypes_1" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-CommonAggregateComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-CommonBasicComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonbasiccomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-CommonExtensionComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-CommonSignatureComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commonsignaturecomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-QualifiedDataTypes-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.qualifieddatatypes_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-SignatureAggregateComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.signatureaggregatecomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/common/UBL-SignatureBasicComponents-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.signaturebasiccomponents_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ApplicationResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.applicationresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-AttachedDocument-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.attacheddocument_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-AwardedNotification-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.awardednotification_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-BillOfLading-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.billoflading_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-BusinessCard-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:BusinessCard-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.businesscard_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-BusinessInformation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:BusinessInformation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.businessinformation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CallForTenders-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.callfortenders_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Catalogue-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.catalogue_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CatalogueDeletion-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CatalogueDeletion-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguedeletion_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CatalogueItemSpecificationUpdate-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpecificationUpdate-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CataloguePricingUpdate-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CatalogueRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CatalogueRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.cataloguerequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CertificateOfOrigin-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.certificateoforigin_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CommonTransportationReport-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CommonTransportationReport-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.commontransportationreport_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ContractAwardNotice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.contractawardnotice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ContractNotice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.contractnotice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-CreditNote-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.creditnote_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DebitNote-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.debitnote_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DespatchAdvice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.despatchadvice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DigitalAgreement-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DigitalAgreement-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.digitalagreement_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DigitalCapability-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DigitalCapability-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.digitalcapability_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DocumentStatus-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DocumentStatus-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.documentstatus_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-DocumentStatusRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DocumentStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.documentstatusrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Enquiry-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Enquiry-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.enquiry_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-EnquiryResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.enquiryresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ExceptionCriteria-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ExceptionCriteria-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.exceptioncriteria_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ExceptionNotification-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ExceptionNotification-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.exceptionnotification_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ExportCustomsDeclaration-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ExportCustomsDeclaration-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.exportcustomsdeclaration_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ExpressionOfInterestRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.expressionofinterestrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ExpressionOfInterestResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.expressionofinterestresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Forecast-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Forecast-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.forecast_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ForecastRevision-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.forecastrevision_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ForwardingInstructions-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.forwardinginstructions_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-FreightInvoice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.freightinvoice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-FulfilmentCancellation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:FulfilmentCancellation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.fulfilmentcancellation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-GoodsCertificate-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:GoodsCertificate-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.goodscertificate_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-GoodsItemItinerary-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.goodsitemitinerary_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-GoodsItemPassport-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:GoodsItemPassport-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.goodsitempassport_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-GuaranteeCertificate-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.guaranteecertificate_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ImportCustomsDeclaration-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ImportCustomsDeclaration-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.importcustomsdeclaration_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-InstructionForReturns-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.instructionforreturns_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-InventoryReport-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.inventoryreport_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Invoice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Invoice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.invoice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ItemInformationRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.iteminformationrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Manifest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Manifest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.manifest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Order-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Order-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.order_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-OrderCancellation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.ordercancellation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-OrderChange-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderchange_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-OrderResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-OrderResponseSimple-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.orderresponsesimple_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-PackingList-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:PackingList-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.packinglist_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-PriorInformationNotice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.priorinformationnotice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ProductActivity-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.productactivity_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ProofOfReexportation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.proofofreexportation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ProofOfReexportationReminder-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationReminder-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.proofofreexportationreminder_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ProofOfReexportationRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.proofofreexportationrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-PurchaseReceipt-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:PurchaseReceipt-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.purchasereceipt_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-QualificationApplicationRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.qualificationapplicationrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-QualificationApplicationResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Quotation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Quotation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.quotation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-ReceiptAdvice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.receiptadvice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Reminder-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Reminder-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.reminder_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-RemittanceAdvice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.remittanceadvice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-RequestForQuotation-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.requestforquotation_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-RetailEvent-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.retailevent_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-SelfBilledCreditNote-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-SelfBilledInvoice-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:SelfBilledInvoice-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Statement-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Statement-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.statement_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-StockAvailabilityReport-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Tender-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Tender-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tender_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TenderContract-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TenderContract-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tendercontract_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TenderReceipt-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tenderreceipt_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TenderStatus-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TenderStatus-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tenderstatus_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TenderStatusRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TenderStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tenderstatusrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TenderWithdrawal-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TenderWithdrawal-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tenderwithdrawal_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TendererQualification-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tendererqualification_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TendererQualificationResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TendererQualificationResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tendererqualificationresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TradeItemLocationProfile-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransitCustomsDeclaration-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransitCustomsDeclaration-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transitcustomsdeclaration_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportExecutionPlan-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportexecutionplan_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportExecutionPlanRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportexecutionplanrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportProgressStatus-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportprogressstatus_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportProgressStatusRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportprogressstatusrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportServiceDescription-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportservicedescription_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportServiceDescriptionRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportservicedescriptionrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportationStatus-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportationstatus_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-TransportationStatusRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-UnawardedNotification-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.unawardednotification_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-UnsubscribeFromProcedureRequest-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedurerequest_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-UnsubscribeFromProcedureResponse-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedureresponse_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-UtilityStatement-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.utilitystatement_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-Waybill-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Waybill-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.waybill_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl24/maindoc/UBL-WeightStatement-2.4.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.weightstatement_24" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+</jaxb:bindings>
