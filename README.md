@@ -18,6 +18,8 @@ The following projects are contained:
 * **ph-ubl22-codelists** contains the generated enums for the UBL 2.2 codelists (optional artefact)
 * **ph-ubl23** contains the generated JAXB files for UBL 2.3 as well as the helper classes.
 * **ph-ubl23-codelists** contains the generated enums for the UBL 2.3 codelists (optional artefact)
+* **ph-ubl24** contains the generated JAXB files for UBL 2.4 as well as the helper classes.
+* **ph-ubl24-codelists** contains the generated enums for the UBL 2.4 codelists (optional artefact)
 * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 * **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
@@ -41,6 +43,7 @@ The folders with the generated sources differ from subproject to subproject:
 * **ph-ubl21**: `target\generated-sources\ubl21` 
 * **ph-ubl22**: `target\generated-sources\ubl22` 
 * **ph-ubl23**: `target\generated-sources\ubl23` 
+* **ph-ubl24**: `target\generated-sources\ubl24` 
 * **ph-ublpe**: `target\generated-sources\ublpe` 
 * **ph-ubltr**: `target\generated-sources\ubltr` 
 * **ph-ubl-dian**: `target\generated-sources\dian` 
