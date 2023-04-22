@@ -99,7 +99,7 @@
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-genericode</artifactId>
-        <version>7.0.0</version>
+        <version>7.1.0</version>
       </dependency>
       
       <dependency>
