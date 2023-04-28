@@ -137,7 +137,15 @@ public final class UBL23Marshaller
     private static final ICommonsList <ClassPathResource> BASE_XSDS = new CommonsArrayList <> (CCCTS.getXSDResource (),
                                                                                                CXMLDSig.getXSDResource (),
                                                                                                CXAdES132.getXSDResource (),
-                                                                                               CXAdES141.getXSDResource ());
+                                                                                               CXAdES141.getXSDResource (),
+                                                                                               CUBL23.XSD_UNQUALIFIED_DATA_TYPES,
+                                                                                               CUBL23.XSD_QUALIFIED_DATA_TYPES,
+                                                                                               CUBL23.XSD_SIGNATURE_BASIC_COMPONENTS,
+                                                                                               CUBL23.XSD_COMMON_BASIC_COMPONENTS,
+                                                                                               CUBL23.XSD_SIGNATURE_AGGREGATE_COMPONENTS,
+                                                                                               CUBL23.XSD_COMMON_SIGNATURE_COMPONENTS,
+                                                                                               CUBL23.XSD_COMMON_EXTENSION_COMPONENTS,
+                                                                                               CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS);
 
     @Nonnull
     public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ClassPathResource aXSD)

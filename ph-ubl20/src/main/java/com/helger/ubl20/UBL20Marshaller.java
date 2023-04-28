@@ -22,6 +22,7 @@ import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
 import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
@@ -69,11 +70,29 @@ public final class UBL20Marshaller
 {
   public static class UBL20JAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
+    private static final ICommonsList <ClassPathResource> BASE_XSDS = new CommonsArrayList <> (CUBL20.XSD_CODELIST_CURRENCY_CODE,
+                                                                                               CUBL20.XSD_CODELIST_LANGUAGE_CODE,
+                                                                                               CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
+                                                                                               CUBL20.XSD_CODELIST_UNIT_CODE,
+                                                                                               CUBL20.XSD_UNQUALIFIED_DATA_TYPES,
+                                                                                               CUBL20.XSD_QUALIFIED_DATA_TYPES,
+                                                                                               CUBL20.XSD_COMMON_BASIC_COMPONENTS,
+                                                                                               CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
+                                                                                               CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS);
+
+    @Nonnull
+    public static ICommonsList <ClassPathResource> getAllXSDs (@Nonnull final ClassPathResource aXSD)
+    {
+      final ICommonsList <ClassPathResource> ret = BASE_XSDS.getClone ();
+      ret.add (aXSD);
+      return ret;
+    }
+
     public UBL20JAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
                                 @Nonnull final ClassPathResource aXSD,
                                 @Nonnull final QName aRootElementQName)
     {
-      super (aType, new CommonsArrayList <> (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
+      super (aType, getAllXSDs (aXSD), createSimpleJAXBElement (aRootElementQName, aType));
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = UBL20NamespaceContext.getInstance ().getClone ();
