@@ -27,7 +27,7 @@
   </jaxb:globalBindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl23/common/BDNDR-UnqualifiedDataTypes-1.1.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1-->    <jaxb:schemaBindings>
-      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_1" />
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_23" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl23/common/UBL-CommonAggregateComponents-2.3.xsd" node="/xsd:schema">

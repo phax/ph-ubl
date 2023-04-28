@@ -60,8 +60,9 @@ public final class MainCreateJAXBBinding23
   private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
-  private static final String BASE_XSD_PATH = "/resources/external/schemas/ubl23/";
-  private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings23.xjb";
+  private static final String VERSION = "23";
+  private static final String BASE_XSD_PATH = "/resources/external/schemas/ubl" + VERSION + "/";
+  private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings" + VERSION + ".xjb";
 
   @Nonnull
   private static IMicroDocument _createBaseDoc ()
@@ -161,7 +162,7 @@ public final class MainCreateJAXBBinding23
 
     String ret = StringHelper.getImploded (".", aParts);
     if (ret.equals ("oasis.names.specification.bdndr.schema.xsd.unqualifieddatatypes_1"))
-      ret = "oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_1";
+      ret = "oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_" + VERSION;
     return ret;
   }
 

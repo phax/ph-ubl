@@ -290,6 +290,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v8.0.1 - work in progress
+    * Avoided the same name for the JAXB generated package for the unqualified datatypes in UBL 2.3 and 2.4
 * v8.0.0 - 2023-04-21
     * Added support for UBL 2.4-CSD01 - new submodules `ph-ubl24` and `ph-ubl24-codelists`
     * Updated to ph-commons 11.0.3
