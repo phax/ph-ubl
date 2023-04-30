@@ -96,11 +96,13 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, UBL20Marshaller.getAllWaybillXSDs ());
 
   private final JAXBDocumentType m_aDocType;
+  private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
   EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <ClassPathResource> aXSDs)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDs, s -> StringHelper.trimEnd (s, "Type"));
+    m_aImplClass = aClass;
     m_aXSDs = aXSDs;
   }
 
@@ -114,7 +116,7 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   @Nonnull
   public Class <?> getImplementationClass ()
   {
-    return m_aDocType.getImplementationClass ();
+    return m_aImplClass;
   }
 
   @Nonnull
@@ -122,7 +124,7 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aXSDs;
+    return m_aXSDs.getClone ();
   }
 
   @Nonnull
