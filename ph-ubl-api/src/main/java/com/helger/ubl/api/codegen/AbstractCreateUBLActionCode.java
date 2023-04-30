@@ -162,4 +162,45 @@ public abstract class AbstractCreateUBLActionCode
        .append ("_QNAME);\n");
     aSB.append ("}\n\n");
   }
+
+  @Nonnull
+  private static String getDisplayNameFromType (@Nonnull final String s)
+  {
+    final StringBuilder ret = new StringBuilder ();
+    for (final char c : s.toCharArray ())
+    {
+      if (Character.isUpperCase (c) && ret.length () > 0)
+        ret.append (' ');
+      ret.append (c);
+    }
+    return ret.toString ();
+  }
+
+  protected static void appendVESIDCode (@Nonnull final IUBLDocTypeEnumSimple e,
+                                         @Nonnull final StringBuilder aSB1,
+                                         @Nonnull final StringBuilder aSB2,
+                                         @Nonnull final String sVersion)
+  {
+    final String s = StringHelper.trimEnd (e.getClazz ().getSimpleName (), "Type");
+    final String sVES = "VID_UBL_" + sVersion + "_" + s.toUpperCase (Locale.ROOT);
+    aSB1.append ("public static final VESID ")
+        .append (sVES)
+        .append (" = new VESID (GROUP_ID, \"")
+        .append (s.toLowerCase (Locale.ROOT))
+        .append ("\", VERSION_")
+        .append (sVersion)
+        .append (");\n");
+
+    aSB2.append ("aRegistry.registerValidationExecutorSet (ValidationExecutorSet.create (")
+        .append (sVES)
+        .append (", \"UBL ")
+        .append (getDisplayNameFromType (s))
+        .append (" \" + VERSION_")
+        .append (sVersion)
+        .append (", bNotDeprecated, ValidationExecutorXSD.create (UBL")
+        .append (sVersion)
+        .append ("Marshaller.getAll")
+        .append (s)
+        .append ("XSDs ())));\n");
+  }
 }

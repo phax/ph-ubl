@@ -32,7 +32,7 @@ import com.helger.jaxb.builder.JAXBDocumentType;
  *
  * @author Philip Helger
  */
-@SuppressWarnings ("removal")
+@Deprecated (forRemoval = true, since = "8.0.0")
 public enum EUBL20DocumentType implements IJAXBDocumentType
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType.class,
