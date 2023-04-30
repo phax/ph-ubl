@@ -21,7 +21,6 @@ import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
@@ -33,80 +32,83 @@ import com.helger.jaxb.builder.JAXBDocumentType;
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
+@SuppressWarnings ("removal")
 public enum EUBL20DocumentType implements IJAXBDocumentType
 {
   APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType.class,
-                        "UBL-ApplicationResponse-2.0.xsd"),
+                        UBL20Marshaller.getAllApplicationResponseXSDs ()),
   ATTACHED_DOCUMENT (oasis.names.specification.ubl.schema.xsd.attacheddocument_2.AttachedDocumentType.class,
-                     "UBL-AttachedDocument-2.0.xsd"),
+                     UBL20Marshaller.getAllAttachedDocumentXSDs ()),
   BILL_OF_LADING (oasis.names.specification.ubl.schema.xsd.billoflading_2.BillOfLadingType.class,
-                  "UBL-BillOfLading-2.0.xsd"),
-  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_2.CatalogueType.class, "UBL-Catalogue-2.0.xsd"),
+                  UBL20Marshaller.getAllBillOfLadingXSDs ()),
+  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_2.CatalogueType.class,
+             UBL20Marshaller.getAllCatalogueXSDs ()),
   CATALOGUE_DELETION (oasis.names.specification.ubl.schema.xsd.cataloguedeletion_2.CatalogueDeletionType.class,
-                      "UBL-CatalogueDeletion-2.0.xsd"),
+                      UBL20Marshaller.getAllCatalogueDeletionXSDs ()),
   CATALOGUE_ITEM_SPECIFICATION_UPDATE (oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_2.CatalogueItemSpecificationUpdateType.class,
-                                       "UBL-CatalogueItemSpecificationUpdate-2.0.xsd"),
+                                       UBL20Marshaller.getAllCatalogueItemSpecificationUpdateXSDs ()),
   CATALOGUE_PRICING_UPDATE (oasis.names.specification.ubl.schema.xsd.cataloguepricingupdate_2.CataloguePricingUpdateType.class,
-                            "UBL-CataloguePricingUpdate-2.0.xsd"),
+                            UBL20Marshaller.getAllCataloguePricingUpdateXSDs ()),
   CATALOGUE_REQUEST (oasis.names.specification.ubl.schema.xsd.cataloguerequest_2.CatalogueRequestType.class,
-                     "UBL-CatalogueRequest-2.0.xsd"),
+                     UBL20Marshaller.getAllCatalogueRequestXSDs ()),
   CERTIFICATE_OF_ORIGIN (oasis.names.specification.ubl.schema.xsd.certificateoforigin_2.CertificateOfOriginType.class,
-                         "UBL-CertificateOfOrigin-2.0.xsd"),
-  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType.class, "UBL-CreditNote-2.0.xsd"),
-  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType.class, "UBL-DebitNote-2.0.xsd"),
+                         UBL20Marshaller.getAllCertificateOfOriginXSDs ()),
+  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType.class,
+               UBL20Marshaller.getAllCreditNoteXSDs ()),
+  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType.class,
+              UBL20Marshaller.getAllDebitNoteXSDs ()),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_2.DespatchAdviceType.class,
-                   "UBL-DespatchAdvice-2.0.xsd"),
+                   UBL20Marshaller.getAllDespatchAdviceXSDs ()),
   FORWARDING_INSTRUCTIONS (oasis.names.specification.ubl.schema.xsd.forwardinginstructions_2.ForwardingInstructionsType.class,
-                           "UBL-ForwardingInstructions-2.0.xsd"),
+                           UBL20Marshaller.getAllForwardingInstructionsXSDs ()),
   FREIGHT_INVOICE (oasis.names.specification.ubl.schema.xsd.freightinvoice_2.FreightInvoiceType.class,
-                   "UBL-FreightInvoice-2.0.xsd"),
-  INVOICE (oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType.class, "UBL-Invoice-2.0.xsd"),
-  ORDER (oasis.names.specification.ubl.schema.xsd.order_2.OrderType.class, "UBL-Order-2.0.xsd"),
+                   UBL20Marshaller.getAllFreightInvoiceXSDs ()),
+  INVOICE (oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType.class, UBL20Marshaller.getAllInvoiceXSDs ()),
+  ORDER (oasis.names.specification.ubl.schema.xsd.order_2.OrderType.class, UBL20Marshaller.getAllOrderXSDs ()),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_2.OrderCancellationType.class,
-                      "UBL-OrderCancellation-2.0.xsd"),
+                      UBL20Marshaller.getAllOrderCancellationXSDs ()),
   ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_2.OrderChangeType.class,
-                "UBL-OrderChange-2.0.xsd"),
+                UBL20Marshaller.getAllOrderChangeXSDs ()),
   ORDER_RESPONSE (oasis.names.specification.ubl.schema.xsd.orderresponse_2.OrderResponseType.class,
-                  "UBL-OrderResponse-2.0.xsd"),
+                  UBL20Marshaller.getAllOrderResponseXSDs ()),
   ORDER_RESPONSE_SIMPLE (oasis.names.specification.ubl.schema.xsd.orderresponsesimple_2.OrderResponseSimpleType.class,
-                         "UBL-OrderResponseSimple-2.0.xsd"),
+                         UBL20Marshaller.getAllOrderResponseSimpleXSDs ()),
   PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_2.PackingListType.class,
-                "UBL-PackingList-2.0.xsd"),
-  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_2.QuotationType.class, "UBL-Quotation-2.0.xsd"),
+                UBL20Marshaller.getAllPackingListXSDs ()),
+  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_2.QuotationType.class,
+             UBL20Marshaller.getAllQuotationXSDs ()),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_2.ReceiptAdviceType.class,
-                  "UBL-ReceiptAdvice-2.0.xsd"),
-  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_2.ReminderType.class, "UBL-Reminder-2.0.xsd"),
+                  UBL20Marshaller.getAllReceiptAdviceXSDs ()),
+  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_2.ReminderType.class,
+            UBL20Marshaller.getAllReminderXSDs ()),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_2.RemittanceAdviceType.class,
-                     "UBL-RemittanceAdvice-2.0.xsd"),
+                     UBL20Marshaller.getAllRemittanceAdviceXSDs ()),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_2.RequestForQuotationType.class,
-                         "UBL-RequestForQuotation-2.0.xsd"),
+                         UBL20Marshaller.getAllRequestForQuotationXSDs ()),
   SELF_BILLED_CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_2.SelfBilledCreditNoteType.class,
-                           "UBL-SelfBilledCreditNote-2.0.xsd"),
+                           UBL20Marshaller.getAllSelfBilledCreditNoteXSDs ()),
   SELF_BILLED_INVOICE (oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_2.SelfBilledInvoiceType.class,
-                       "UBL-SelfBilledInvoice-2.0.xsd"),
-  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_2.StatementType.class, "UBL-Statement-2.0.xsd"),
+                       UBL20Marshaller.getAllSelfBilledInvoiceXSDs ()),
+  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_2.StatementType.class,
+             UBL20Marshaller.getAllStatementXSDs ()),
   TRANSPORTATION_STATUS (oasis.names.specification.ubl.schema.xsd.transportationstatus_2.TransportationStatusType.class,
-                         "UBL-TransportationStatus-2.0.xsd"),
-  WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, "UBL-Waybill-2.0.xsd");
+                         UBL20Marshaller.getAllTransportationStatusXSDs ()),
+  WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, UBL20Marshaller.getAllWaybillXSDs ());
 
   private final JAXBDocumentType m_aDocType;
-  private final String m_sXSDPath;
+  private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  EUBL20DocumentType (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <ClassPathResource> aXSDs)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (new ClassPathResource (CUBL20.SCHEMA_DIRECTORY +
-                                                                                       sXSDPath,
-                                                                                       CUBL20.getCL ())),
-                                       s -> StringHelper.trimEnd (s, "Type"));
-    m_sXSDPath = sXSDPath;
+    m_aDocType = new JAXBDocumentType (aClass, aXSDs, s -> StringHelper.trimEnd (s, "Type"));
+    m_aXSDs = aXSDs;
   }
 
   @Nonnull
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public ClassPathResource getXSDResource ()
   {
-    return new ClassPathResource (CUBL20.SCHEMA_DIRECTORY + m_sXSDPath, CUBL20.getCL ());
+    return m_aXSDs.getLast ();
   }
 
   @Nonnull
@@ -120,10 +122,11 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDResources ();
+    return m_aXSDs;
   }
 
   @Nonnull
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public String getNamespaceURI ()
   {
     return m_aDocType.getNamespaceURI ();
@@ -131,12 +134,14 @@ public enum EUBL20DocumentType implements IJAXBDocumentType
 
   @Nonnull
   @Nonempty
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public String getLocalName ()
   {
     return m_aDocType.getLocalName ();
   }
 
   @Nonnull
+  @Deprecated (forRemoval = true, since = "8.0.0")
   public Schema getSchema ()
   {
     return m_aDocType.getSchema ();

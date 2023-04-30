@@ -111,7 +111,7 @@ public abstract class AbstractCreateUBLActionCode
   }
 
   @Nonnull
-  private static String lcFirst (@Nonnull final String s)
+  private static String _lcFirst (@Nonnull final String s)
   {
     return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
   }
@@ -122,23 +122,40 @@ public abstract class AbstractCreateUBLActionCode
   {
     final String sClassName = e.getClazz ().getSimpleName ();
     final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
-    final String sMethodName = lcFirst (sNoTypeName);
+
+    // Local constant to avoid it is resolved over and over again
+    final String sCPRName = "CPR_" + sNoTypeName.toUpperCase (Locale.ROOT);
+    aSB.append ("private static final ClassPathResource ")
+       .append (sCPRName)
+       .append (" = _getCPR (\"")
+       .append (e.getXSDPath ())
+       .append ("\");\n\n");
+
+    final String sGetAllXSDsName = "getAll" + sNoTypeName + "XSDs";
+    aSB.append ("@Nonnull\n");
+    aSB.append ("@ReturnsMutableCopy\n");
+    aSB.append ("public static ICommonsList <ClassPathResource> ").append (sGetAllXSDsName).append (" ()\n");
+    aSB.append ("{\n");
+    aSB.append ("  return _getAllXSDs (").append (sCPRName).append (");\n");
+    aSB.append ("}\n\n");
+
+    final String sMarshallerMethodName = _lcFirst (sNoTypeName);
     aSB.append ("@Nonnull\n");
     aSB.append ("public static ")
        .append (sMarshallerClassName)
        .append (" <")
        .append (sClassName)
        .append ("> ")
-       .append (sMethodName)
+       .append (sMarshallerMethodName)
        .append (" ()\n");
     aSB.append ("{\n");
     aSB.append ("  return new ")
        .append (sMarshallerClassName)
        .append (" <> (")
        .append (sClassName)
-       .append (".class, _getCPR (\"")
-       .append (e.getXSDPath ())
-       .append ("\"), ")
+       .append (".class, ")
+       .append (sGetAllXSDsName)
+       .append (" (), ")
        .append (e.getClazz ().getPackage ().getName ())
        .append (".ObjectFactory._")
        .append (sNoTypeName)
