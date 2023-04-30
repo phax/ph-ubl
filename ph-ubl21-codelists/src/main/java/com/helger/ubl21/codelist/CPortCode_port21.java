@@ -36,61 +36,61 @@ public final class CPortCode_port21 {
     public static final String AGENCY_LONG_NAME = "United Nations Economic Commission for Europe";
     public static final String LIST_ID = "UN/ECE rec 16";
     public static final String LIST_VERSION = "2012-1";
-    private static final ICommonsSet<String> s_aCodeSet = new CommonsHashSet<>(19746);
-    private static final ICommonsSet<String> s_aNameSet = new CommonsHashSet<>(19746);
+    private static final ICommonsSet<String> CODE_SET = new CommonsHashSet<>(19746);
+    private static final ICommonsSet<String> NAME_SET = new CommonsHashSet<>(19746);
 
     static {
-        new CPortCode_port21 .CodePart1(s_aCodeSet);
-        new CPortCode_port21 .NamePart1(s_aNameSet);
-        new CPortCode_port21 .CodePart2(s_aCodeSet);
-        new CPortCode_port21 .NamePart2(s_aNameSet);
-        new CPortCode_port21 .CodePart3(s_aCodeSet);
-        new CPortCode_port21 .NamePart3(s_aNameSet);
-        new CPortCode_port21 .CodePart4(s_aCodeSet);
-        new CPortCode_port21 .NamePart4(s_aNameSet);
-        new CPortCode_port21 .CodePart5(s_aCodeSet);
-        new CPortCode_port21 .NamePart5(s_aNameSet);
-        new CPortCode_port21 .CodePart6(s_aCodeSet);
-        new CPortCode_port21 .NamePart6(s_aNameSet);
-        new CPortCode_port21 .CodePart7(s_aCodeSet);
-        new CPortCode_port21 .NamePart7(s_aNameSet);
-        new CPortCode_port21 .CodePart8(s_aCodeSet);
-        new CPortCode_port21 .NamePart8(s_aNameSet);
-        new CPortCode_port21 .CodePart9(s_aCodeSet);
-        new CPortCode_port21 .NamePart9(s_aNameSet);
-        new CPortCode_port21 .CodePart10(s_aCodeSet);
-        new CPortCode_port21 .NamePart10(s_aNameSet);
-        new CPortCode_port21 .CodePart11(s_aCodeSet);
-        new CPortCode_port21 .NamePart11(s_aNameSet);
-        new CPortCode_port21 .CodePart12(s_aCodeSet);
-        new CPortCode_port21 .NamePart12(s_aNameSet);
-        new CPortCode_port21 .CodePart13(s_aCodeSet);
-        new CPortCode_port21 .NamePart13(s_aNameSet);
-        new CPortCode_port21 .CodePart14(s_aCodeSet);
-        new CPortCode_port21 .NamePart14(s_aNameSet);
+        new CPortCode_port21 .CodePart1(CODE_SET);
+        new CPortCode_port21 .NamePart1(NAME_SET);
+        new CPortCode_port21 .CodePart2(CODE_SET);
+        new CPortCode_port21 .NamePart2(NAME_SET);
+        new CPortCode_port21 .CodePart3(CODE_SET);
+        new CPortCode_port21 .NamePart3(NAME_SET);
+        new CPortCode_port21 .CodePart4(CODE_SET);
+        new CPortCode_port21 .NamePart4(NAME_SET);
+        new CPortCode_port21 .CodePart5(CODE_SET);
+        new CPortCode_port21 .NamePart5(NAME_SET);
+        new CPortCode_port21 .CodePart6(CODE_SET);
+        new CPortCode_port21 .NamePart6(NAME_SET);
+        new CPortCode_port21 .CodePart7(CODE_SET);
+        new CPortCode_port21 .NamePart7(NAME_SET);
+        new CPortCode_port21 .CodePart8(CODE_SET);
+        new CPortCode_port21 .NamePart8(NAME_SET);
+        new CPortCode_port21 .CodePart9(CODE_SET);
+        new CPortCode_port21 .NamePart9(NAME_SET);
+        new CPortCode_port21 .CodePart10(CODE_SET);
+        new CPortCode_port21 .NamePart10(NAME_SET);
+        new CPortCode_port21 .CodePart11(CODE_SET);
+        new CPortCode_port21 .NamePart11(NAME_SET);
+        new CPortCode_port21 .CodePart12(CODE_SET);
+        new CPortCode_port21 .NamePart12(NAME_SET);
+        new CPortCode_port21 .CodePart13(CODE_SET);
+        new CPortCode_port21 .NamePart13(NAME_SET);
+        new CPortCode_port21 .CodePart14(CODE_SET);
+        new CPortCode_port21 .NamePart14(NAME_SET);
     }
 
     private CPortCode_port21() {
     }
 
     public static boolean containsCode(@Nullable final String sCode) {
-        return s_aCodeSet.contains(sCode);
+        return CODE_SET.contains(sCode);
     }
 
     @Nonnull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllCodes() {
-        return s_aCodeSet.getClone();
+        return CODE_SET.getClone();
     }
 
     public static boolean containsName(@Nullable final String sName) {
-        return s_aNameSet.contains(sName);
+        return NAME_SET.contains(sName);
     }
 
     @Nonnull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllNames() {
-        return s_aNameSet.getClone();
+        return NAME_SET.getClone();
     }
 
     private static final class CodePart1 {

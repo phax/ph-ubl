@@ -36,53 +36,53 @@ public final class CPortCode_multi21 {
     public static final String AGENCY_LONG_NAME = "United Nations Economic Commission for Europe";
     public static final String LIST_ID = "UN/ECE rec 16";
     public static final String LIST_VERSION = "2012-1";
-    private static final ICommonsSet<String> s_aCodeSet = new CommonsHashSet<>(14197);
-    private static final ICommonsSet<String> s_aNameSet = new CommonsHashSet<>(14197);
+    private static final ICommonsSet<String> CODE_SET = new CommonsHashSet<>(14197);
+    private static final ICommonsSet<String> NAME_SET = new CommonsHashSet<>(14197);
 
     static {
-        new CPortCode_multi21 .CodePart1(s_aCodeSet);
-        new CPortCode_multi21 .NamePart1(s_aNameSet);
-        new CPortCode_multi21 .CodePart2(s_aCodeSet);
-        new CPortCode_multi21 .NamePart2(s_aNameSet);
-        new CPortCode_multi21 .CodePart3(s_aCodeSet);
-        new CPortCode_multi21 .NamePart3(s_aNameSet);
-        new CPortCode_multi21 .CodePart4(s_aCodeSet);
-        new CPortCode_multi21 .NamePart4(s_aNameSet);
-        new CPortCode_multi21 .CodePart5(s_aCodeSet);
-        new CPortCode_multi21 .NamePart5(s_aNameSet);
-        new CPortCode_multi21 .CodePart6(s_aCodeSet);
-        new CPortCode_multi21 .NamePart6(s_aNameSet);
-        new CPortCode_multi21 .CodePart7(s_aCodeSet);
-        new CPortCode_multi21 .NamePart7(s_aNameSet);
-        new CPortCode_multi21 .CodePart8(s_aCodeSet);
-        new CPortCode_multi21 .NamePart8(s_aNameSet);
-        new CPortCode_multi21 .CodePart9(s_aCodeSet);
-        new CPortCode_multi21 .NamePart9(s_aNameSet);
-        new CPortCode_multi21 .CodePart10(s_aCodeSet);
-        new CPortCode_multi21 .NamePart10(s_aNameSet);
+        new CPortCode_multi21 .CodePart1(CODE_SET);
+        new CPortCode_multi21 .NamePart1(NAME_SET);
+        new CPortCode_multi21 .CodePart2(CODE_SET);
+        new CPortCode_multi21 .NamePart2(NAME_SET);
+        new CPortCode_multi21 .CodePart3(CODE_SET);
+        new CPortCode_multi21 .NamePart3(NAME_SET);
+        new CPortCode_multi21 .CodePart4(CODE_SET);
+        new CPortCode_multi21 .NamePart4(NAME_SET);
+        new CPortCode_multi21 .CodePart5(CODE_SET);
+        new CPortCode_multi21 .NamePart5(NAME_SET);
+        new CPortCode_multi21 .CodePart6(CODE_SET);
+        new CPortCode_multi21 .NamePart6(NAME_SET);
+        new CPortCode_multi21 .CodePart7(CODE_SET);
+        new CPortCode_multi21 .NamePart7(NAME_SET);
+        new CPortCode_multi21 .CodePart8(CODE_SET);
+        new CPortCode_multi21 .NamePart8(NAME_SET);
+        new CPortCode_multi21 .CodePart9(CODE_SET);
+        new CPortCode_multi21 .NamePart9(NAME_SET);
+        new CPortCode_multi21 .CodePart10(CODE_SET);
+        new CPortCode_multi21 .NamePart10(NAME_SET);
     }
 
     private CPortCode_multi21() {
     }
 
     public static boolean containsCode(@Nullable final String sCode) {
-        return s_aCodeSet.contains(sCode);
+        return CODE_SET.contains(sCode);
     }
 
     @Nonnull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllCodes() {
-        return s_aCodeSet.getClone();
+        return CODE_SET.getClone();
     }
 
     public static boolean containsName(@Nullable final String sName) {
-        return s_aNameSet.contains(sName);
+        return NAME_SET.contains(sName);
     }
 
     @Nonnull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllNames() {
-        return s_aNameSet.getClone();
+        return NAME_SET.getClone();
     }
 
     private static final class CodePart1 {

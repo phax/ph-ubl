@@ -76,7 +76,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
 {
   private static final String COLID_NAME = "name";
   private static final String COLID_CODE = "code";
-  private static final JCodeModel s_aCodeModel = new JCodeModel ();
+  private static final JCodeModel CM = new JCodeModel ();
 
   private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
   {
@@ -160,9 +160,9 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     if (aFile.getName ().endsWith ("-2.0.gc"))
       sEnumName += "20";
 
-    final JDefinedClass jEnum = s_aCodeModel._package ("com.helger.ubl20.codelist")
+    final JDefinedClass jEnum = CM._package ("com.helger.ubl20.codelist")
                                             ._enum (sEnumName)
-                                            ._implements (s_aCodeModel.ref (IHasID.class).narrow (String.class))
+                                            ._implements (CM.ref (IHasID.class).narrow (String.class))
                                             ._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
     jEnum.javadoc ()
@@ -274,7 +274,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
     m.body ()
-     ._return (s_aCodeModel.ref (EnumHelper.class)
+     ._return (CM.ref (EnumHelper.class)
                            .staticInvoke ("getFromIDOrNull")
                            .arg (JExpr.dotClass (jEnum))
                            .arg (jID));
@@ -295,7 +295,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     {
       m = jEnum.method (JMod.PUBLIC | JMod.STATIC, jEnum, "getFromJAXBOrNull");
       m.annotate (Nullable.class);
-      jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
+      jID = m.param (JMod.FINAL, CM.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
       m.body ()
        ._return (JOp.cond (jID.eq (JExpr._null ()),
@@ -304,7 +304,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
 
       m = jEnum.method (JMod.PUBLIC | JMod.STATIC, String.class, "getDisplayNameFromJAXBOrNull");
       m.annotate (Nullable.class);
-      jID = m.param (JMod.FINAL, s_aCodeModel.ref (aJAXBEnumClass), "aID");
+      jID = m.param (JMod.FINAL, CM.ref (aJAXBEnumClass), "aID");
       jID.annotate (Nullable.class);
       m.body ()
        ._return (JOp.cond (jID.eq (JExpr._null ()),
@@ -324,6 +324,6 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
       else
         throw new IllegalStateException ("Failed to read codelist file " + aFile);
     }
-    new JCMWriter (s_aCodeModel).build (new File ("src/main/java"));
+    new JCMWriter (CM).build (new File ("src/main/java"));
   }
 }

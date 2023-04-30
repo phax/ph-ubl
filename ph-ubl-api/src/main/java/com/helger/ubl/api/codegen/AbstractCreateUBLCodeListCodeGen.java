@@ -96,7 +96,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
                       "AGENCY_LONG_NAME",
                       JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
     }
-
     final LongName aListID = CollectionHelper.findFirst (aIdentification.getLongName (),
                                                          x -> x.getIdentifier () != null &&
                                                               x.getIdentifier ().equals ("listID"));
@@ -158,7 +157,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
         sIdentifier = "_";
         bHasEmptyID = true;
       }
-
       if (!aUsedIdentifier.add (sIdentifier))
       {
         int i = 1;
@@ -173,7 +171,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
           ++i;
         }
       }
-
       final JEnumConstant jEnumConst = jEnum.enumConstant (sIdentifier);
       jEnumConst.arg (JExpr.lit (sCode));
       if (bHasNameColumn)
@@ -187,13 +184,11 @@ public abstract class AbstractCreateUBLCodeListCodeGen
         jEnumConst.arg (sValue == null ? JExpr._null () : JExpr.lit (sValue));
       }
     }
-
     // fields
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
     final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
                                                                  String.class,
-                                                                 "m_sDisplayName")
-                                                  : null;
+                                                                 "m_sDisplayName") : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.NONE);
@@ -209,7 +204,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       jDisplayName.annotate (Nonnull.class);
       aCtorBody.assign (fDisplayName, jDisplayName);
     }
-
     for (final String sOtherCol : aOtherCols)
     {
       final JFieldVar fOther = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_s" + _getVarName (sOtherCol));
@@ -217,7 +211,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       jOther.annotate (Nullable.class);
       aCtorBody = aCtorBody.assign (fOther, jOther);
     }
-
     // public String getID ()
     JMethod m = jEnum.method (JMod.PUBLIC, String.class, "getID");
     m.annotate (Nonnull.class);
@@ -232,14 +225,12 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       m.annotate (Nonnull.class);
       m.body ()._return (fDisplayName);
     }
-
     for (final String sOtherCol : aOtherCols)
     {
       m = jEnum.method (JMod.PUBLIC, String.class, "get" + _getVarName (sOtherCol));
       m.annotate (Nullable.class);
       m.body ()._return (jEnum.fields ().get ("m_s" + _getVarName (sOtherCol)));
     }
-
     // public static E... getFromIDOrNull (@Nullable String sID)
     m = jEnum.method (JMod.PUBLIC | JMod.STATIC, jEnum, "getFromIDOrNull");
     m.annotate (Nullable.class);
@@ -299,13 +290,12 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     final AbstractJClass aSetImpl = cm.ref (CommonsHashSet.class).narrowEmpty ();
     final JVar aCodeSet = jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                         aSetDecl,
-                                        "s_aCodeSet",
+                                        "CODE_SET",
                                         JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)));
     final JVar aNameSet = bHasNameColumn ? jClass.field (JMod.PRIVATE | JMod.FINAL | JMod.STATIC,
                                                          aSetDecl,
-                                                         "s_aNameSet",
-                                                         JExpr._new (aSetImpl).arg (JExpr.lit (nEntries)))
-                                         : null;
+                                                         "NAME_SET",
+                                                         JExpr._new (aSetImpl).arg (JExpr.lit (nEntries))) : null;
 
     int nRowIndex = 0;
     int nClassIndex = 1;
@@ -339,7 +329,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
           jClass.init ().add (JExpr._new (aInnerNameClass).arg (aNameSet));
         }
       }
-
       final String sRowCode = Genericode10Helper.getRowValue (aRow, COLID_CODE).trim ();
       aCodeMethod.body ().add (JExpr.invoke (aCodeParam, "add").arg (sRowCode));
 
@@ -348,10 +337,8 @@ public abstract class AbstractCreateUBLCodeListCodeGen
         final String sRowName = Genericode10Helper.getRowValue (aRow, COLID_NAME).trim ();
         aNameMethod.body ().add (JExpr.invoke (aNameParam, "add").arg (sRowName));
       }
-
       ++nRowIndex;
     }
-
     // private ctor
     jClass.constructor (JMod.PRIVATE);
 
@@ -403,7 +390,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       System.out.println ("  Column '" + COLID_CODE + "' is not a key");
       return;
     }
-
     // Name column may be null
     final Column aColName = Genericode10Helper.getColumnOfID (aCodeList10.getColumnSet (), COLID_NAME);
     final boolean bHasNameColumn = aColName != null;
@@ -417,7 +403,6 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       // Otherwise we get a "code too large" in compilation
       aOtherCols.clear ();
     }
-
     // Maximum number of enum elements
     final int nEntries = aCodeList10.getSimpleCodeList ().getRow ().size ();
     final boolean bIsTooLargeForEnum = nEntries > 4000;
