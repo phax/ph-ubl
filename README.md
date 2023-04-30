@@ -290,6 +290,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v8.0.2 - 2023-04-30
+    * Extended the `UBL2(0|1|2|3|4)Marshaller` classes with additional APIs to access the XSDs
 * v8.0.1 - 2023-04-28
     * Avoided the same name for the JAXB generated package for the unqualified datatypes in UBL 2.3 and 2.4
 * v8.0.0 - 2023-04-21
