@@ -11,4 +11,4 @@ PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponent
 PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"     "maven:com.helger.ubl:ph-ubl23:jar::!/external/schemas/ubl23/common/UBL-SignatureBasicComponents-2.3.xsd"
 PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"           "maven:com.helger.ubl:ph-ubl23:jar::!/external/schemas/ubl23/common/UBL-QualifiedDataTypes-2.3.xsd"
 PUBLIC "urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"       "maven:com.helger.ubl:ph-ubl23:jar::!/external/schemas/ubl23/common/BDNDR-UnqualifiedDataTypes-1.1.xsd"
-SYSTEM "UBL-ExtensionContentDataType-2.3.xsd"                                        "maven:com.helger.ubl:ph-ubl23:jar::!/external/schemas/ubl23/common/UBL-ExtensionContentDataType-2.3.xsd"
+REWRITE_SYSTEM "UBL-ExtensionContentDataType-2.3.xsd"                                "maven:com.helger.ubl:ph-ubl23:jar::!/external/schemas/ubl23/common/UBL-ExtensionContentDataType-2.3.xsd"
