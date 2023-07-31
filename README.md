@@ -290,6 +290,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v8.0.3 - 2023-07-31
+    * Updated to ph-commons 11.1
 * v8.0.2 - 2023-04-30
     * Extended the `UBL2(0|1|2|3|4)Marshaller` classes with additional APIs to access the XSDs
 * v8.0.1 - 2023-04-28

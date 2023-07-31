@@ -80,7 +80,7 @@
       <dependency>
         <groupId>com.helger.commons</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
-        <version>11.0.6</version>
+        <version>11.1.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -99,7 +99,7 @@
       <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-genericode</artifactId>
-        <version>7.1.0</version>
+        <version>7.1.1</version>
       </dependency>
       
       <dependency>
