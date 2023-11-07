@@ -42,8 +42,8 @@
   </licenses>
   
   <scm>
-    <connection>scm:git:git@github.com:phax/ph-ubl.git</connection>
-    <developerConnection>scm:git:git@github.com:phax/ph-ubl.git</developerConnection>
+    <connection>scm:git:https://@github.com/phax/ph-ubl.git</connection>
+    <developerConnection>scm:git:https://@github.com/phax/ph-ubl.git</developerConnection>
     <url>http://github.com/phax/ph-ubl</url>
     <tag>HEAD</tag>
   </scm>
@@ -66,7 +66,7 @@
     <jaxb-plugin.group>com.helger.maven</jaxb-plugin.group>
     <jaxb-plugin.artifact>jaxb40-maven-plugin</jaxb-plugin.artifact>
     <jaxb-plugin.version>0.16.1</jaxb-plugin.version>
-    <ph-jaxb-plugin.version>4.0.2</ph-jaxb-plugin.version>
+    <ph-jaxb-plugin.version>4.0.3</ph-jaxb-plugin.version>
     <ph-xsds.version>3.0.0</ph-xsds.version>
   </properties>
   
