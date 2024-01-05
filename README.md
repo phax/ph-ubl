@@ -291,6 +291,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v8.0.4 - work in progress
+    * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin` 
 * v8.0.3 - 2023-07-31
     * Updated to ph-commons 11.1
 * v8.0.2 - 2023-04-30
