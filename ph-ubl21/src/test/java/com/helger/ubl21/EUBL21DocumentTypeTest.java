@@ -27,7 +27,7 @@ import com.helger.commons.collection.impl.ICommonsSet;
 import com.helger.commons.io.resource.IReadableResource;
 
 /**
- * Test class for class {@link EUBL21DocumentTypeSimple}.
+ * Test class for class {@link EUBL21DocumentType}.
  *
  * @author Philip Helger
  */

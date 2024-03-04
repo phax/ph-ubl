@@ -1030,6 +1030,23 @@ public final class UBL21Marshaller
                                        oasis.names.specification.ubl.schema.xsd.tender_21.ObjectFactory._Tender_QNAME);
   }
 
+  private static final ClassPathResource CPR_TENDERRECEIPT = _getCPR ("UBL-TenderReceipt-2.1.xsd");
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllTenderReceiptXSDs ()
+  {
+    return _getAllXSDs (CPR_TENDERRECEIPT);
+  }
+
+  @Nonnull
+  public static UBL21JAXBMarshaller <TenderReceiptType> tenderReceipt ()
+  {
+    return new UBL21JAXBMarshaller <> (TenderReceiptType.class,
+                                       getAllTenderReceiptXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.tenderreceipt_21.ObjectFactory._TenderReceipt_QNAME);
+  }
+
   private static final ClassPathResource CPR_TENDERERQUALIFICATION = _getCPR ("UBL-TendererQualification-2.1.xsd");
 
   @Nonnull
@@ -1064,23 +1081,6 @@ public final class UBL21Marshaller
                                        oasis.names.specification.ubl.schema.xsd.tendererqualificationresponse_21.ObjectFactory._TendererQualificationResponse_QNAME);
   }
 
-  private static final ClassPathResource CPR_TENDERRECEIPT = _getCPR ("UBL-TenderReceipt-2.1.xsd");
-
-  @Nonnull
-  @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllTenderReceiptXSDs ()
-  {
-    return _getAllXSDs (CPR_TENDERRECEIPT);
-  }
-
-  @Nonnull
-  public static UBL21JAXBMarshaller <TenderReceiptType> tenderReceipt ()
-  {
-    return new UBL21JAXBMarshaller <> (TenderReceiptType.class,
-                                       getAllTenderReceiptXSDs (),
-                                       oasis.names.specification.ubl.schema.xsd.tenderreceipt_21.ObjectFactory._TenderReceipt_QNAME);
-  }
-
   private static final ClassPathResource CPR_TRADEITEMLOCATIONPROFILE = _getCPR ("UBL-TradeItemLocationProfile-2.1.xsd");
 
   @Nonnull
@@ -1096,40 +1096,6 @@ public final class UBL21Marshaller
     return new UBL21JAXBMarshaller <> (TradeItemLocationProfileType.class,
                                        getAllTradeItemLocationProfileXSDs (),
                                        oasis.names.specification.ubl.schema.xsd.tradeitemlocationprofile_21.ObjectFactory._TradeItemLocationProfile_QNAME);
-  }
-
-  private static final ClassPathResource CPR_TRANSPORTATIONSTATUS = _getCPR ("UBL-TransportationStatus-2.1.xsd");
-
-  @Nonnull
-  @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllTransportationStatusXSDs ()
-  {
-    return _getAllXSDs (CPR_TRANSPORTATIONSTATUS);
-  }
-
-  @Nonnull
-  public static UBL21JAXBMarshaller <TransportationStatusType> transportationStatus ()
-  {
-    return new UBL21JAXBMarshaller <> (TransportationStatusType.class,
-                                       getAllTransportationStatusXSDs (),
-                                       oasis.names.specification.ubl.schema.xsd.transportationstatus_21.ObjectFactory._TransportationStatus_QNAME);
-  }
-
-  private static final ClassPathResource CPR_TRANSPORTATIONSTATUSREQUEST = _getCPR ("UBL-TransportationStatusRequest-2.1.xsd");
-
-  @Nonnull
-  @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllTransportationStatusRequestXSDs ()
-  {
-    return _getAllXSDs (CPR_TRANSPORTATIONSTATUSREQUEST);
-  }
-
-  @Nonnull
-  public static UBL21JAXBMarshaller <TransportationStatusRequestType> transportationStatusRequest ()
-  {
-    return new UBL21JAXBMarshaller <> (TransportationStatusRequestType.class,
-                                       getAllTransportationStatusRequestXSDs (),
-                                       oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_21.ObjectFactory._TransportationStatusRequest_QNAME);
   }
 
   private static final ClassPathResource CPR_TRANSPORTEXECUTIONPLAN = _getCPR ("UBL-TransportExecutionPlan-2.1.xsd");
@@ -1232,6 +1198,40 @@ public final class UBL21Marshaller
     return new UBL21JAXBMarshaller <> (TransportServiceDescriptionRequestType.class,
                                        getAllTransportServiceDescriptionRequestXSDs (),
                                        oasis.names.specification.ubl.schema.xsd.transportservicedescriptionrequest_21.ObjectFactory._TransportServiceDescriptionRequest_QNAME);
+  }
+
+  private static final ClassPathResource CPR_TRANSPORTATIONSTATUS = _getCPR ("UBL-TransportationStatus-2.1.xsd");
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllTransportationStatusXSDs ()
+  {
+    return _getAllXSDs (CPR_TRANSPORTATIONSTATUS);
+  }
+
+  @Nonnull
+  public static UBL21JAXBMarshaller <TransportationStatusType> transportationStatus ()
+  {
+    return new UBL21JAXBMarshaller <> (TransportationStatusType.class,
+                                       getAllTransportationStatusXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.transportationstatus_21.ObjectFactory._TransportationStatus_QNAME);
+  }
+
+  private static final ClassPathResource CPR_TRANSPORTATIONSTATUSREQUEST = _getCPR ("UBL-TransportationStatusRequest-2.1.xsd");
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllTransportationStatusRequestXSDs ()
+  {
+    return _getAllXSDs (CPR_TRANSPORTATIONSTATUSREQUEST);
+  }
+
+  @Nonnull
+  public static UBL21JAXBMarshaller <TransportationStatusRequestType> transportationStatusRequest ()
+  {
+    return new UBL21JAXBMarshaller <> (TransportationStatusRequestType.class,
+                                       getAllTransportationStatusRequestXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.transportationstatusrequest_21.ObjectFactory._TransportationStatusRequest_QNAME);
   }
 
   private static final ClassPathResource CPR_UNAWARDEDNOTIFICATION = _getCPR ("UBL-UnawardedNotification-2.1.xsd");
