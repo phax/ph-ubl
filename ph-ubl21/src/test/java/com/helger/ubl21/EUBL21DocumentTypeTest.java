@@ -25,14 +25,12 @@ import org.junit.Test;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.string.StringHelper;
 
 /**
  * Test class for class {@link EUBL21DocumentTypeSimple}.
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EUBL21DocumentTypeTest
 {
   @Test
@@ -43,13 +41,9 @@ public final class EUBL21DocumentTypeTest
     for (final EUBL21DocumentType e : EUBL21DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertTrue (StringHelper.hasText (e.getLocalName ()));
-      assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
       assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
-      assertNotNull (e.getSchema ());
-      assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL21DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
       assertTrue (aFilenames.add (e.getAllXSDResources ().getLast ().getPath ()));
