@@ -29,8 +29,7 @@ import com.helger.jaxb.GenericJAXBMarshaller;
 import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
 
 /**
- * Test class for classes {@link UBL20ReaderBuilder},
- * {@link UBL20ValidatorBuilder} and {@link UBL20WriterBuilder}.
+ * Test class for classes {@link UBL20Marshaller}.
  *
  * @author Philip Helger
  */

@@ -23,14 +23,12 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.string.StringHelper;
 
 /**
  * Test class for class {@link EUBL20DocumentType}.
  *
  * @author Philip Helger
  */
-@Deprecated
 public final class EUBL20DocumentTypeTest
 {
   @Test
@@ -39,13 +37,9 @@ public final class EUBL20DocumentTypeTest
     for (final EUBL20DocumentType e : EUBL20DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertTrue (StringHelper.hasText (e.getLocalName ()));
-      assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
       assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
-      assertNotNull (e.getSchema ());
-      assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBL20DocumentType.valueOf (e.name ()));
     }
   }
