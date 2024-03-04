@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+								  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+								  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+								  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+								  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+								  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+								  xmlns:urn="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<efac:LotResult>
+							<cbc:ID>RES-0001</cbc:ID>
+							<efac:SettledContract>
+								<cbc:ID>CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0001</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotResult>
+							<cbc:ID>RES-0002</cbc:ID>
+							<efac:SettledContract>
+								<cbc:ID>CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0002</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID>TEN-0001</cbc:ID>
+							<efac:TenderingParty>
+								<cbc:ID>TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0001</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<cbc:ID>BID 123</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID>CON-0001</cbc:ID>
+							<efac:ContractReference>
+								<cbc:ID>d1cc5b48-fefc-405f-b888-b0727cd632a0-01</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID>TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID>ORG-0002</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">27</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+							<efbc:AwardingCPBIndicator>false</efbc:AwardingCPBIndicator>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">ZenithNova Innovations Ltd.</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:StreetName>
+									<cbc:AdditionalStreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:AdditionalStreetName>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+									<cbc:CityName>New Horizons, CA</cbc:CityName>
+									<cbc:PostalZone>117 43</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+									<cac:AddressLine>
+										<cbc:Line>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:Line>
+									</cac:AddressLine>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>ABE</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Info</cbc:Name>
+									<cbc:Telephone>+1 (555) 123-4567</cbc:Telephone>
+									<cbc:Telefax>+1 (555) 123-4567</cbc:Telefax>
+									<cbc:ElectronicMail>info@zenithnovainnovations.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com/contact-us/katerina-lisa</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange/katerina-lisa</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Katerina Lisa</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+								</cac:PostalAddress>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>true</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">New Org </cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Patra </cbc:CityName>
+									<cbc:PostalZone>117 43</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>1444452222</cbc:Telephone>
+									<cbc:ElectronicMail>patra@pat.gr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">cbe9e7b7-6860-4bb1-a200-b3ada0ff6fbe</cbc:ID>
+	<cbc:ContractFolderID>75db4bef-aae6-41f1-a593-d5dc62abd907</cbc:ContractFolderID>
+	<cbc:IssueDate>2023-05-26Z</cbc:IssueDate>
+	<cbc:IssueTime>11:16:47Z</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32009L0081</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="dir-awa-pre">veat</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode listName="language">ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://example.com</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">spec-rights-entity</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">electricity</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID>ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingProcess>
+		<cbc:ProcedureCode listName="procurement-procedure-type">neg-wo-call</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:Name languageID="ENG">Ante nte vol2 </cbc:Name>
+		<cbc:Description languageID="ENG">The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+vol2 </cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">73111000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cbc:Description languageID="ENG">Anywhere</cbc:Description>
+			<cac:Address>
+				<cbc:Region>anyw</cbc:Region>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID>TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>ABE</cbc:ID>
+			<cbc:Name languageID="ENG">Ante nte vol2 LOT1 </cbc:Name>
+			<cbc:Description languageID="ENG">Sinopsis vol2 LOT1 
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+vol2 LOT1 </cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">73111000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID>TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>ABF</cbc:ID>
+			<cbc:Name languageID="ENG">Ante nte vol2 LOT2</cbc:Name>
+			<cbc:Description languageID="ENG">Sinopsis vol2 LOT2
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step. The 18-year-old freshman Mitsos. The 25-year-old, attached to her parents Sofia. And the 30-year-old just-fine-all-by-myself, Dimitra. A Saturday night when none of them knows if they are ready for the next step.
+vol2 LOT2</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:ProcurementAdditionalType>
+				<cbc:ProcurementTypeCode listName="environmental-impact">circ-econ</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<cbc:ProcurementTypeCode listName="social-objective">hum-right</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<cbc:ProcurementTypeCode listName="social-objective">opp</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">73111000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">Anywhere in the given country</cbc:Description>
+				<cac:Address>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">TON</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</urn:ContractAwardNotice>

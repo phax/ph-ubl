@@ -10,6 +10,7 @@ But with the minimal amount of information while still valid
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="EUR">390697.84</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<cbc:HigherTenderAmount currencyID="EUR">95414</cbc:HigherTenderAmount>
 							<cbc:LowerTenderAmount currencyID="EUR">59299.64</cbc:LowerTenderAmount>
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
@@ -30,6 +31,7 @@ But with the minimal amount of information while still valid
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="EUR">95414</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
@@ -39,16 +41,19 @@ But with the minimal amount of information while still valid
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>PROJ DEF/2022-01</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
 						<efac:SettledContract>
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
-							<cbc:AwardDate>2019-09-02+02:00</cbc:AwardDate>
+							<cbc:IssueDate>2019-09-03+02:00</cbc:IssueDate>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -66,7 +71,7 @@ But with the minimal amount of information while still valid
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -79,12 +84,14 @@ But with the minimal amount of information while still valid
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Rouen Cedex 1</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 235156161</cbc:Telephone>
@@ -102,12 +109,14 @@ But with the minimal amount of information while still valid
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Rouen</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 654 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 232081270</cbc:Telephone>
@@ -116,6 +125,10 @@ But with the minimal amount of information while still valid
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<efbc:CompanySizeCode listName="economic-operator-size">micro</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
@@ -126,12 +139,14 @@ But with the minimal amount of information while still valid
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Le Grand-Quevilly</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRD22</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="SIREN">326 912 557</cbc:CompanyID>
+									<cbc:CompanyID>326 912 557</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 2 35 67 82 82</cbc:Telephone>
@@ -139,16 +154,22 @@ But with the minimal amount of information while still valid
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<efac:Nationality>
+								<cbc:NationalityID>FRA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>65667997-031a-4198-bd25-7225449ef479</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">65667997-031a-4198-bd25-7225449ef479</cbc:ID>
 	<cbc:ContractFolderID>022d0ef9-6338-42d9-afa4-a87709128061</cbc:ContractFolderID>
-	<cbc:IssueDate>2020-01-23+01:00</cbc:IssueDate>
+	<cbc:IssueDate>2019-10-23+01:00</cbc:IssueDate>
 	<cbc:IssueTime>00:00:00+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
 	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
@@ -200,11 +221,6 @@ But with the minimal amount of information while still valid
 						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
-				<cac:MediationParty>
-					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
-					</cac:PartyIdentification>
-				</cac:MediationParty>
 			</cac:AppealTerms>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
@@ -220,6 +236,7 @@ But with the minimal amount of information while still valid
 			</cac:ContractingSystem>
 		</cac:TenderingProcess>
 		<cac:ProcurementProject>
+			<cbc:ID>1</cbc:ID>
 			<cbc:Name languageID="FRA">Agence centre</cbc:Name>
 			<cbc:Description languageID="FRA">Service d'entretien de remise en état et de nettoyage des espaces verts.</cbc:Description>
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>

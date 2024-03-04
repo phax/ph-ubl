@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>4</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">4</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -24,23 +24,25 @@
 									<cbc:Department>n/a</cbc:Department>
 									<cbc:CityName>Prescot</cbc:CityName>
 									<cbc:PostalZone>L34 1PJ</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI32</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<cbc:CompanyID>123456789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<cbc:Name>Jeff Edginton</cbc:Name>
-									<cbc:Telephone>+44 7593442891</cbc:Telephone>
-									<cbc:ElectronicMail>jeff.edginton@fusion21.co.uk</cbc:ElectronicMail>
+									<cbc:Name>Helpdesk</cbc:Name>
+									<cbc:Telephone>+44 7593440000</cbc:Telephone>
+									<cbc:Telefax>+44 75934400009</cbc:Telefax>
+									<cbc:ElectronicMail>contact@fusion21.co.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -49,15 +51,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -68,8 +73,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>199b243b-4daf-4d7d-ba7c-f37f88102480</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">199b243b-4daf-4d7d-ba7c-f37f88102480</cbc:ID>
 	<cbc:IssueDate>2020-04-02+01:00</cbc:IssueDate>
 	<cbc:IssueTime>12:30:00+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
@@ -112,9 +117,9 @@
 		</cac:MainCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
@@ -124,18 +129,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -163,9 +168,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -176,18 +181,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -215,9 +220,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -228,18 +233,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -267,9 +272,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -280,18 +285,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -319,9 +324,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -332,18 +337,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -371,9 +376,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -384,18 +389,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -423,9 +428,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -436,18 +441,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -475,9 +480,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -488,18 +493,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -527,9 +532,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -540,18 +545,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -579,9 +584,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
@@ -592,18 +597,18 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
@@ -631,9 +636,9 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>

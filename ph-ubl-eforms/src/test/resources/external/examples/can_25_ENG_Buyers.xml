@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:192534-2020:TEXT:EN:HTML
+	 But with a second buyer added as ORG-0005.
 -->
 <ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ext:UBLExtensions>
@@ -9,6 +10,7 @@
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="EUR">9.99</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<cbc:HigherTenderAmount currencyID="EUR">9999999</cbc:HigherTenderAmount>
 							<cbc:LowerTenderAmount currencyID="EUR">1</cbc:LowerTenderAmount>
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
@@ -28,7 +30,7 @@
 						</efac:LotResult>
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
-							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>false</efbc:TenderRankedIndicator>
 							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="EUR">1200000</cbc:PayableAmount>
@@ -42,13 +44,15 @@
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
-							<efac:TenderReference>
-							<cbc:ID>BID-ABC-2020/003-01</cbc:ID>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot><efac:TenderReference>
+								<cbc:ID>BID-ABC-2020/003-01</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
 						<efac:SettledContract>
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
-							<cbc:AwardDate>2020-02-12+01:00</cbc:AwardDate>
+							<cbc:IssueDate>2020-02-12+01:00</cbc:IssueDate>
 							<cbc:Title languageID="ENG">Making Tax Digital for VAT (MTDfV)</cbc:Title>
 							<efac:ContractReference>
 								<cbc:ID>SCR/ABC-2020/003-01</cbc:ID>
@@ -65,7 +69,7 @@
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>30</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">30</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -83,22 +87,24 @@
 									<cbc:StreetName>Westland House</cbc:StreetName>
 									<cbc:CityName>Belfast</cbc:CityName>
 									<cbc:PostalZone>BT14 6TE</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.niwater.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 								</cac:PartyIdentification>
 								<cac:PartyName>
 									<cbc:Name languageID="ENG">Sourcing Department</cbc:Name>
@@ -106,12 +112,14 @@
 								<cac:PostalAddress>
 									<cbc:CityName>Belfast</cbc:CityName>
 									<cbc:PostalZone>BT14 6TE</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567899</cbc:Telephone>
+									<cbc:Telefax>(+12)345678999</cbc:Telefax>
 									<cbc:ElectronicMail>sourcing@niwater.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
@@ -131,22 +139,24 @@
 									<cbc:StreetName>Flushstreet, 1A</cbc:StreetName>
 									<cbc:CityName>Belfast</cbc:CityName>
 									<cbc:PostalZone>BT14 6TE</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 987</cbc:CompanyID>
+									<cbc:CompanyID>321 654 987</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@clearwater.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -156,6 +166,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -165,35 +177,18 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
-								</cac:PartyIdentification>
-								<cac:PartyName>
-									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
-								</cac:PartyName>
-								<cac:PostalAddress>
-									<cbc:CityName>Luxembourg</cbc:CityName>
-									<cac:Country>
-										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
-									</cac:Country>
-								</cac:PostalAddress>
-								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
-								</cac:PartyLegalEntity>
-								<cac:Contact>
-									<cbc:Telephone>+352 123456789</cbc:Telephone>
-									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
-								</cac:Contact>
-							</efac:Company>
-						</efac:Organization>
-						<efac:Organization>
-							<efac:Company>
+								<cbc:WebsiteURI>https://deloitte.com</cbc:WebsiteURI>
 								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -205,30 +200,37 @@
 									<cbc:StreetName>Hill House</cbc:StreetName>
 									<cbc:CityName>London</cbc:CityName>
 									<cbc:PostalZone>EC4A 3JR</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="222">222 222 222</cbc:CompanyID>
+									<cbc:CompanyID>222 222 222</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<efac:Nationality>
+								<cbc:NationalityID>GBR</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>359f3b87-c2ec-4c6a-b279-58c843551e7c</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">2202aef9-375e-4d01-87e7-e634658d883a</cbc:ID>
 	<cbc:ContractFolderID>18d27a53-0109-4f93-9231-6659d931bce0</cbc:ContractFolderID>
-	<cbc:IssueDate>2020-04-23+01:00</cbc:IssueDate>
+	<cbc:IssueDate>2020-04-10+01:00</cbc:IssueDate>
 	<cbc:IssueTime>09:07:07+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
 	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
@@ -274,7 +276,10 @@
 		</cac:MainCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -298,6 +303,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Quality</cbc:Name>
+						<cbc:Description languageID="ENG">The quality is evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -314,6 +320,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Price</cbc:Name>
+						<cbc:Description languageID="ENG">The price is evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
@@ -328,7 +335,7 @@
 				</cac:PresentationPeriod>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
 				<cac:MediationParty>
@@ -361,7 +368,10 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 		</cac:ProcurementProject>

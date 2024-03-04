@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>16</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -20,12 +20,12 @@
 									<cbc:Name languageID="ENG">Renfrewshire Council</cbc:Name>
 								</cac:PartyName>
 								<cac:PostalAddress>
-									<cbc:StreetName> Renfrewshire House, Cotton Street</cbc:StreetName>
+									<cbc:StreetName>Renfrewshire House, Cotton Street</cbc:StreetName>
 									<cbc:CityName>Paisley</cbc:CityName>
 									<cbc:PostalZone>PA1 1JB</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -33,12 +33,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>douglas.mcewan@renfrewshire.gov.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://sheriff.gov.uk</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -47,21 +49,25 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Sheriff Street</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -71,6 +77,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -80,12 +88,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -94,15 +104,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -113,8 +126,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>c4c415ee-ac08-4465-8fa6-57568cf69462</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">c4c415ee-ac08-4465-8fa6-57568cf69462</cbc:ID>
 	<cbc:ContractFolderID>31f258b6-5eb2-4875-8997-affa3cdce27c</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-02-28+01:00</cbc:IssueDate>
 	<cbc:IssueTime>12:32:13+01:00</cbc:IssueTime>
@@ -147,51 +160,51 @@
 	<cac:TenderingTerms>
 		<cac:TendererQualificationRequest>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">crime-org</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">corruption</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.FRAUD</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">fraud</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">terr-offence</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">finan-laund</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">human-traffic</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">tax-pay</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">socsec-pay</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">envir-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">socsec-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">labour-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">insolvency</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ENG">Bidders will be required to state if any of the exclusion grounds as detailed within Regulation 58 (1) of The Public Contracts (Scotland) Regulations 2015 apply to them. — If required by the member state, bidders are required to be enrolled in the relevant professional or trade registers within the country in which they are established (in the United Kingdom, the bidder is a company registered with the Registrar of Companies and can provide a certificate stating that he is certified as incorporated or registered or, where he is not so certified, a certificate stating that the person concerned has declared on oath that he is engaged in the profession in a specific place under a given business name). — Bidders will be required to state if it is a requirement in the bidder’s country of establishment to hold a particular authorisation or membership of a particular organisation in order to be able to perform the service in question. Where it is required, within a bidder’s country of establishment they must confirm which authorisation or memberships of the relevant organisation(s) are required in order to perform this service and also must confirm if they hold the particular authorisation or memberships.</cbc:Description>
 			</cac:SpecificTendererRequirement>
 		</cac:TendererQualificationRequest>
@@ -225,13 +238,10 @@
 			<cac:Address>
 				<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
-		<cac:PlannedPeriod>
-			<cbc:DurationMeasure unitCode="MONTH">36</cbc:DurationMeasure>
-		</cac:PlannedPeriod>
 		<cac:ContractExtension>
 			<cac:Renewal>
 				<cac:Period>
@@ -308,6 +318,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Methodology and approach</cbc:Name>
+						<cbc:Description languageID="ENG">The methodology is evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -324,6 +335,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Fair working practices</cbc:Name>
+						<cbc:Description languageID="ENG">The working practices are evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -340,6 +352,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Community benefits offered</cbc:Name>
+						<cbc:Description languageID="ENG">The community benefits are evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -356,6 +369,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Community benefit methodology</cbc:Name>
+						<cbc:Description languageID="ENG">The community benefits methodology is evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -372,18 +386,19 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="ENG">Price</cbc:Name>
+						<cbc:Description languageID="ENG">The price is evaluated by...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cbc:EndpointID>https://www.publictendersscotland.publiccontractsscotland.gov.uk</cbc:EndpointID>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:TenderValidityPeriod>
@@ -393,6 +408,11 @@
 				<cac:PresentationPeriod>
 					<cbc:Description languageID="ENG">Precise information on deadline(s) for review procedures:   An economic operator that suffers or risks suffering, loss or damage attributable to a breach of duty under the Public Contracts (Scotland) Regulations 2015 (SSI 2015/446) may bring proceedings in the Sheriff Court or the Court of Session, provided that it has informed the contracting authority of the breach or apprehended breach of its duties and of its intention to bring proceedings relating to that breach. Proceedings must be brought within the timescales set out in the regulations.</cbc:Description>
 				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
 						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -438,6 +458,7 @@
 			</cac:ContractingSystem>
 		</cac:TenderingProcess>
 		<cac:ProcurementProject>
+			<cbc:ID>1</cbc:ID>
 			<cbc:Name languageID="ENG">Term Contract for a Planned Programme of In-service Inspection and Testing of Electrical Equipment</cbc:Name>
 			<cbc:Description languageID="ENG">The purpose of this contract is to formalise the Councils requirement to employ a contractor to carry out a planned programme of in-service inspection and testing of electrical equipment within the Councils public buildings.</cbc:Description>
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
@@ -458,11 +479,12 @@
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-09-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">36</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 		</cac:ProcurementProject>

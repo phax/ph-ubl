@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>23</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">23</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -26,16 +26,17 @@
 									<cbc:PostalZone>68290</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<cbc:CompanyID>24680067600016</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<cbc:Name>T. Ciavarella</cbc:Name>
-									<cbc:Telephone> +33 389388175</cbc:Telephone>
-									<cbc:ElectronicMail>t.ciavarella@cc-vallee-doller.fr</cbc:ElectronicMail>
+									<cbc:Name>Service Accueil</cbc:Name>
+									<cbc:Telephone>+33 389380000</cbc:Telephone>
+									<cbc:Telefax>+33 3893800009</cbc:Telefax>
+									<cbc:ElectronicMail>contact@cc-vallee-doller.fr</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
@@ -55,16 +56,17 @@
 									<cbc:PostalZone>68100</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<cbc:CompanyID>83044938500012</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<cbc:Name>Matthieu Fortin</cbc:Name>
-									<cbc:Telephone>+33 680800655</cbc:Telephone>
-									<cbc:ElectronicMail>matthieu@t1prog.com</cbc:ElectronicMail>
+									<cbc:Name>Contact</cbc:Name>
+									<cbc:Telephone>+33 680800000</cbc:Telephone>
+									<cbc:Telefax>+33 6808000009</cbc:Telefax>
+									<cbc:ElectronicMail>impulsion@t1prog.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
@@ -81,21 +83,24 @@
 									<cbc:StreetName>31 avenue de la Paix</cbc:StreetName>
 									<cbc:CityName>Strasbourg</cbc:CityName>
 									<cbc:PostalZone>67000</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRF11</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 388212323</cbc:Telephone>
+									<cbc:Telefax>+33 3882123239</cbc:Telefax>
 									<cbc:ElectronicMail>contact@strasbourg.tribunal-administratif.fr</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://www.economie.gouv.fr/daj/reglement-amiable-des-differends</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -106,21 +111,24 @@
 									<cbc:StreetName>1 rue du Préfet Claude Érignac</cbc:StreetName>
 									<cbc:CityName>Nancy</cbc:CityName>
 									<cbc:PostalZone>54038</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRF31</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 654 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 383342565</cbc:Telephone>
+									<cbc:Telefax>+33 3833425659</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
 								</cac:PartyIdentification>
@@ -129,15 +137,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -148,8 +159,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>f37b9a55-0684-4d4b-a98f-0ba819d6d6f2</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">f37b9a55-0684-4d4b-a98f-0ba819d6d6f2</cbc:ID>
 	<cbc:ContractFolderID>8655f8a5-b5e9-4d6e-9dee-a360f820ecbe</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-11+01:00</cbc:IssueDate>
 	<cbc:IssueTime>09:09:09+01:00</cbc:IssueTime>
@@ -179,7 +190,7 @@
 		</cac:Party>
 	</cac:ContractingParty>
 	<cac:TenderingProcess>
-		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
+		<cbc:ProcedureCode listName="procurement-procedure-type">restricted</cbc:ProcedureCode>
 	</cac:TenderingProcess>
 	<cac:ProcurementProject>
 		<cbc:ID>xyz</cbc:ID>
@@ -202,14 +213,20 @@
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
 							<efac:SelectionCriteria>
-								<cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">La participation est réservée à la profession d'architecte.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
 								<cbc:Description languageID="FRA">Cf. règlement de consultation.</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
 							</efac:SelectionCriteria>
 							<efac:SelectionCriteria>
-								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
-								<cbc:Description languageID="FRA">La participation est réservée à la profession d'architecte.</cbc:Description>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">Cf. règlement de consultation.</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
 							</efac:SelectionCriteria>
@@ -227,43 +244,45 @@
 					</cac:ExternalReference>
 				</cac:Attachment>
 			</cac:CallForTendersDocumentReference>
-			<cac:TendererQualificationRequest></cac:TendererQualificationRequest>
 			<cac:AwardingTerms>
 				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
 				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 				<cac:AwardingCriterion>
-					<cbc:Description languageID="FRA">Jugement des candidatures:
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="FRA">Jugement des candidatures:
 
-						— les candidatures seront jugées et sélectionnées au regard des critères suivants:
-						
-						1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus);
-						
-						2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles:
-						
-						— références du ou des architectes:
-						
-						—— une référence minimale de projet de construction d'un accueil périscolaire;
-						
-						—— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %;
-						
-						—— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT;
-						
-						— les références de moins de cinq ans seront appréciées;
-						
-						3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé.
-						
-						Jugement des prestations:
-						
-						— le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants:
-						
-						1) respect du programme de l'opération;
-						
-						2) qualité architecturale du projet et cohérence de son insertion dans le site;
-						
-						3) respect et crédibilité du coût estimé des travaux;
-						
-						4) respect des délais et crédibilité du planning prévisionnel.
-					</cbc:Description>
+							— les candidatures seront jugées et sélectionnées au regard des critères suivants:
+							
+							1) pertinence de la composition de l'équipe au regard des compétences demandées et de la nature du projet (la présentation de compétences complémentaires pertinentes pourront être considérées comme un plus);
+							
+							2) pertinence des références présentées, de dimension et de complexité équivalente à celles du projet envisagé, parmi lesquelles:
+							
+							— références du ou des architectes:
+							
+							—— une référence minimale de projet de construction d'un accueil périscolaire;
+							
+							—— une référence minimale de projet présentant des performances énergétiques et — environnementales élevées, a minima supérieures à la RT 2012 — 30 %;
+							
+							—— une référence d'un projet réalisé dans le cadre d'un marché public au budget travaux compris entre 1 et 3 000 000 EUR HT;
+							
+							— les références de moins de cinq ans seront appréciées;
+							
+							3) moyens présentés par l'équipe, permettant de mener à bien une réalisation de dimension et de complexité équivalente à celle du projet envisagé.
+							
+							Jugement des prestations:
+							
+							— le jugement des propositions sera effectué dans les conditions prévues à l'article R. 2152 du code de la commande publique au moyen des critères suivants:
+							
+							1) respect du programme de l'opération;
+							
+							2) qualité architecturale du projet et cohérence de son insertion dans le site;
+							
+							3) respect et crédibilité du coût estimé des travaux;
+							
+							4) respect des délais et crédibilité du planning prévisionnel.
+						</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 				<cac:TechnicalCommitteePerson>
 					<cbc:FirstName>Sa composition n'est pas arrêtée à ce jour. Il sera composé selon le code de la commande publique</cbc:FirstName>
@@ -274,7 +293,7 @@
 					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
 				</cac:Prize>
 				<cac:Prize>
-					<cbc:RankCode>>= 1</cbc:RankCode>
+					<cbc:RankCode>2</cbc:RankCode>
 					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
 					<cbc:Description languageID="FRA">Les trois concurrents (candidats admis à concourir) recevront une indemnisation forfaitaire maximale de 10 000 EUR HT. Pour les prestations fournies, sous réserve de la recevabilité de leurs prestations au regard du règlement du concours et du respect du programme. Les indemnisations sont forfaitaires, conformément aux dispositions de l'article R. 2172-4 du code de la commande publique, l'acheteur, sur proposition du jury, se réserve le droit, dans le cas d'un projet qu'il jugerait incomplet ou dont les prestations seraient non conformes par rapport au règlement de concours et ou au programme, de supprimer totalement ou partiellement l'indemnité.</cbc:Description>
 				</cac:Prize>
@@ -286,7 +305,7 @@
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
@@ -307,6 +326,7 @@
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
 			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+			<cbc:CandidateReductionConstraintIndicator>true</cbc:CandidateReductionConstraintIndicator>
 			<cac:ParticipationRequestReceptionPeriod>
 				<cbc:EndDate>2020-06-05+01:00</cbc:EndDate>
 				<cbc:EndTime>12:00:00+01:00</cbc:EndTime>
@@ -327,7 +347,7 @@
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">FRF12</cbc:CountrySubentityCode>
 					<cac:Country>
-						<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessRegistrationInformationNotice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="http://data.europa.eu/p27/eforms-business-registration-information-notice/1">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">X01</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">3b3b619b-f67b-48cb-982c-803a5ac6d519</cbc:ID>
+	<cbc:IssueDate>2020-11-26Z</cbc:IssueDate>
+	<cbc:IssueTime>15:12:24Z</cbc:IssueTime>
+	<!-- Additional information -->
+	<cbc:Note languageID="ENG">The registrant declares ...</cbc:Note>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>31985R2137</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="bri">brin-eeig</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:SenderParty>
+		<cac:Contact>
+			<cbc:ElectronicMail>sender.example@example.com</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:SenderParty>
+	<cac:BusinessParty>
+		<cac:PartyLegalEntity>
+			<!-- Name of the grouping-->
+			<cbc:RegistrationName>ABC Grouping</cbc:RegistrationName>
+			<!-- Registration number, identifier as European Company / European Cooperative Society -->
+			<cbc:CompanyID schemeName="EU">EU 123 456 7890</cbc:CompanyID>
+			<cbc:RegistrationDate>2020-11-14+01:00</cbc:RegistrationDate>
+			<cac:CorporateRegistrationScheme>
+				<!-- Place of registration -->
+				<cac:JurisdictionRegionAddress>
+					<!-- Town -->
+					<cbc:CityName>Hornfrestone</cbc:CityName>
+					<!-- Postal Code -->
+					<cbc:PostalZone>HRN765Z</cbc:PostalZone>
+					<!-- Country -->
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:JurisdictionRegionAddress>
+			</cac:CorporateRegistrationScheme>
+		</cac:PartyLegalEntity>
+	</cac:BusinessParty>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID>DUMMY</cbc:ID>
+		<!-- Date of publication of the announcement -->
+		<cbc:IssueDate>2020-11-16+01:00</cbc:IssueDate>
+		<!-- Title of the announcement -->
+		<cbc:ReferencedDocumentInternalAddress>Registration of the "ABC Grouping" European Economic Interest Grouping.</cbc:ReferencedDocumentInternalAddress>
+		<!-- Name of publication -->
+		<cbc:DocumentDescription>The Hornfrestone Gazette</cbc:DocumentDescription>
+		<!--  URL of the announcement -->
+		<cac:Attachment>
+			<cac:ExternalReference>
+				<cbc:URI>http://www.hornfrestone-gazette.co.uk/20201116/abc-grouping.pdf</cbc:URI>
+			</cac:ExternalReference>
+		</cac:Attachment>
+	</cac:AdditionalDocumentReference>
+	<efac:NoticePurpose>
+		<cbc:PurposeCode listName="notice-purpose">for</cbc:PurposeCode>
+	</efac:NoticePurpose>
+</BusinessRegistrationInformationNotice>

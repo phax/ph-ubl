@@ -24,9 +24,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.string.StringHelper;
 
-@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EformsUBLDocumentTypeTest
 {
   @Test
@@ -35,13 +33,9 @@ public final class EformsUBLDocumentTypeTest
     for (final EFormsUBLDocumentType e : EFormsUBLDocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertTrue (StringHelper.hasText (e.getLocalName ()));
-      assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
       assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
-      assertNotNull (e.getSchema ());
-      assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EFormsUBLDocumentType.valueOf (e.name ()));
     }
   }

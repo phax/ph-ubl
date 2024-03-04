@@ -7,418 +7,498 @@
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
+					<!-- "id" : "BT-803(d)-notice", "name" : "Notice Dispatch Date eSender (date)"-->
+					<efbc:TransmissionDate>2023-04-23+01:00</efbc:TransmissionDate>
+					<!-- "id" : "BT-803(t)-notice", "name" : "Notice Dispatch Date eSender (time)"-->
+					<efbc:TransmissionTime>21:00:00+01:00</efbc:TransmissionTime>
+					<!-- -->
+					<!-- RESULTS -->
+					<!-- -->
 					<efac:NoticeResult>
-						<!--BT-161-->
+						<!--"id" : "BT-161-NoticeResult", "name" : "Notice Value"-->
 						<cbc:TotalAmount currencyID="EUR">9999999.99</cbc:TotalAmount>
-						<!--BT-118-->
-						<cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallFrameworkContractsAmount>
-						<efac:GroupFramework>
-							<!--BT-156-->
-							<efbc:GroupFrameworkValueAmount currencyID="EUR">9999999.99</efbc:GroupFrameworkValueAmount>
-							<efac:TenderLot>
-								<!--BT-556-->
-								<cbc:ID schemeName="LotsGroup">GLO-0001</cbc:ID>
-							</efac:TenderLot>
-						</efac:GroupFramework>
+						<!--"id" : "BT-1118-NoticeResult",  "name" : "Notice Framework Approximate Value"-->
+						<efbc:OverallApproximateFrameworkContractsAmount currencyID="EUR">9000000</efbc:OverallApproximateFrameworkContractsAmount>
+						<!--"id" : "BT-118-NoticeResult",  "name" : "Notice Framework Value"-->
+						<efbc:OverallMaximumFrameworkContractsAmount currencyID="EUR">9999999.99</efbc:OverallMaximumFrameworkContractsAmount>
+						<!-- -->
+						<!-- RESULTS - LOT-0001-->
+						<!-- -->
 						<efac:LotResult>
-							<!--BT-711-->
-							<cbc:HigherTenderAmount currencyID="EUR">9999999.99</cbc:HigherTenderAmount>
-							<!--BT-710-->
-							<cbc:LowerTenderAmount currencyID="EUR">999999.99</cbc:LowerTenderAmount>
-							<!--BT-142-->
+							<!--"id" : "OPT-322-LotResult", "name" : "LotResult Technical Identifier"-->
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
+							<!--"id" : "BT-142-LotResult", "name" : "Winner Chosen"-->
+							<!--selec-w: At least one winner was chosen"-->
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
-							<!--BT-119-->
+							<!--"id" : "BT-119-LotResult", "name" : "Dynamic Purchasing System Termination"-->
 							<efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
 							<efac:AppealRequestsStatistics>
 								<efbc:StatisticsCode listName="review-type">complainants</efbc:StatisticsCode>
-								<!--BT-712-->
+								<!--"id" : "BT-712(b)-LotResult",  "name" : "Buyer Review Complainants (Number)"-->
 								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
 							</efac:AppealRequestsStatistics>
 							<efac:AppealRequestsStatistics>
-								<!--BT-636-->
+								<!--"id" : "BT-636-LotResult", "name" : "Buyer Review Requets Irregularity Type"-->
 								<efbc:StatisticsCode listName="irregularity-type">noex-timl</efbc:StatisticsCode>
-								<!--BT-635-->
+								<!--"id" : "BT-635-LotResult",  "name" : "Buyer Review Requets Count"-->
 								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
 							</efac:AppealRequestsStatistics>
 							<efac:LotTender>
-								<!--OPT-320-->
+								<!--"id" : "OPT-320-LotResult",  "name" : "Tender Identifier Reference"-->
 								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							</efac:LotTender>
+							<efac:LotTender>
+								<!--"id" : "OPT-320-LotResult",  "name" : "Tender Identifier Reference"-->
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
 							<efac:FrameworkAgreementValues>
-								<!--BT-660-->
-								<cbc:EstimatedMaximumValueAmount currencyID="EUR">9999999.99</cbc:EstimatedMaximumValueAmount>
-								<!--BT-709-->
+								<!--"id" : "BT-709-LotResult", "name" : "Framework Maximum Value"-->
 								<cbc:MaximumValueAmount currencyID="EUR">9999999.99</cbc:MaximumValueAmount>
+								<!--"id" : "BT-660-LotResult",  "name" : "Framework Estimated Value"-->
+								<efbc:ReestimatedValueAmount currencyID="EUR">9000000</efbc:ReestimatedValueAmount>
 							</efac:FrameworkAgreementValues>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",   "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
-								<!--BT-759-->
-								<efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
-							</efac:ReceivedSubmissionsStatistics>
-							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
-								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",   "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>9</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
+								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+								<!--"id" : "BT-759-LotResult",   "name" : "Received Submissions Count"-->
+								<efbc:StatisticsNumeric>9</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:ReceivedSubmissionsStatistics>
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",   "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:SettledContract>
-								<!--OPT-315-->
+								<!--"id" : "OPT-315-LotResult",   "name" : "Contract Identifier Reference"-->
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:SettledContract>
+								<!--"id" : "OPT-315-LotResult",   "name" : "Contract Identifier Reference"-->
 								<cbc:ID schemeName="contract">CON-0002</cbc:ID>
 							</efac:SettledContract>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles</efbc:StatisticsCode>
-								<!--BT-715 OPT-156-->
-								<efbc:StatisticsNumeric>45</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles-zero-emission</efbc:StatisticsCode>
-								<!--BT-725 OPT-156-->
-								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles-clean</efbc:StatisticsCode>
-								<!--BT-716 OPT-156-->
-								<efbc:StatisticsNumeric>10</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
+							<efac:StrategicProcurement>
+								<efac:StrategicProcurementInformation>
+									<!--"id" : "BT-735-LotResult",   "name" : "CVD Contract Type"-->
+									<efbc:ProcurementCategoryCode listName="cvd-contract-type">oth-serv-contr</efbc:ProcurementCategoryCode>
+									<efac:ProcurementDetails>
+										<!--"id" : "BT-723-LotResult",   "name" : "Vehicle Category"-->
+										<efbc:AssetCategoryCode listName="vehicle-category">n2-n3</efbc:AssetCategoryCode>
+										<efac:StrategicProcurementStatistics>
+											<!--"id" : "OPT-155-LotResult",  "name" : "Vehicule Type"-->
+											<efbc:StatisticsCode listName="vehicles">vehicles</efbc:StatisticsCode>
+											<!--"id" : "OPT-156-LotResult", "name" : "Vehicule Numeric"-->
+											<efbc:StatisticsNumeric>45</efbc:StatisticsNumeric>
+										</efac:StrategicProcurementStatistics>
+										<efac:StrategicProcurementStatistics>
+											<!--"id" : "OPT-155-LotResult",  "name" : "Vehicule Type"-->
+											<efbc:StatisticsCode listName="vehicles">vehicles-zero-emission</efbc:StatisticsCode>
+											<!--"id" : "OPT-156-LotResult", "name" : "Vehicule Numeric"-->
+											<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
+										</efac:StrategicProcurementStatistics>
+										<efac:StrategicProcurementStatistics>
+											<!--"id" : "OPT-155-LotResult",  "name" : "Vehicule Type"-->
+											<efbc:StatisticsCode listName="vehicles">vehicles-clean</efbc:StatisticsCode>
+											<!--"id" : "OPT-156-LotResult", "name" : "Vehicule Numeric"-->
+											<efbc:StatisticsNumeric>10</efbc:StatisticsNumeric>
+										</efac:StrategicProcurementStatistics>
+									</efac:ProcurementDetails>
+								</efac:StrategicProcurementInformation>
+							</efac:StrategicProcurement>
 							<efac:TenderLot>
+								<!-- "id" : "BT-13713-LotResult", "name" : "Result Lot Identifier" -->
 								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
 							</efac:TenderLot>
 						</efac:LotResult>
+						<!-- -->
+						<!-- RESULTS - LOT-0002-->
+						<!-- -->
 						<efac:LotResult>
-							<!--BT-711-->
+							<!--"id" : "OPT-322-LotResult", "name" : "LotResult Technical Identifier"-->
+							<cbc:ID schemeName="result">RES-0002</cbc:ID>
+							<!--"id" : "BT-711-LotResult", "name" : "Tender Value Highest"-->
 							<cbc:HigherTenderAmount currencyID="EUR">9999999.99</cbc:HigherTenderAmount>
-							<!--BT-710-->
+							<!--"id" : "BT-710-LotResult",  "name" : "Tender Value Lowest"-->
 							<cbc:LowerTenderAmount currencyID="EUR">999999.99</cbc:LowerTenderAmount>
-							<!--BT-142-->
+							<!--"id" : "BT-142-LotResult", "name" : "Winner Chosen"-->
+							<!-- clos-nw: No winner was chosen and the competition is closed. -->
 							<cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
-							<!--BT-119-->
-							<efbc:DPSTerminationIndicator>true</efbc:DPSTerminationIndicator>
 							<efac:AppealRequestsStatistics>
 								<efbc:StatisticsCode listName="review-type">complainants</efbc:StatisticsCode>
-								<!--BT-712-->
+								<!--"id" : "BT-712(b)-LotResult",  "name" : "Buyer Review Complainants (Number)"-->
 								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
 							</efac:AppealRequestsStatistics>
 							<efac:AppealRequestsStatistics>
-								<!--BT-636-->
+								<!--"id" : "BT-636-LotResult", "name" : "Buyer Review Requets Irregularity Type"-->
 								<efbc:StatisticsCode listName="irregularity-type">noex-timl</efbc:StatisticsCode>
-								<!--BT-635-->
+								<!--    "id" : "BT-635-LotResult",   "name" : "Buyer Review Requets Count-->
 								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
 							</efac:AppealRequestsStatistics>
 							<efac:DecisionReason>
-								<!--BT-144-->
+								<!--"id" : "BT-144-LotResult", "name" : "Not Awarded Reason"-->
 								<efbc:DecisionReasonCode listName="non-award-justification">all-rej</efbc:DecisionReasonCode>
 							</efac:DecisionReason>
 							<efac:LotTender>
-								<!--OPT-320-->
-								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+								<!--"id" : "OPT-320-LotResult", "name" : "Tender Identifier Reference"-->
+								<cbc:ID schemeName="tender">TEN-0003</cbc:ID>
 							</efac:LotTender>
-							<efac:FrameworkAgreementValues>
-								<!--BT-660-->
-								<cbc:EstimatedMaximumValueAmount currencyID="EUR">9999999.99</cbc:EstimatedMaximumValueAmount>
-								<!--BT-709-->
-								<cbc:MaximumValueAmount currencyID="EUR">9999999.99</cbc:MaximumValueAmount>
-							</efac:FrameworkAgreementValues>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">t-oth-eea</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",  "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",  "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",  "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
 							<efac:ReceivedSubmissionsStatistics>
-								<!--BT-760-->
+								<!--"id" : "BT-760-LotResult", "name" : "Received Submissions Type"-->
 								<efbc:StatisticsCode listName="received-submission-type">t-sme</efbc:StatisticsCode>
-								<!--BT-759-->
+								<!--"id" : "BT-759-LotResult",  "name" : "Received Submissions Count"-->
 								<efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
 							</efac:ReceivedSubmissionsStatistics>
-							<efac:SettledContract>
-								<!--OPT-315-->
-								<cbc:ID schemeName="contract">CON-0002</cbc:ID>
-							</efac:SettledContract>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles</efbc:StatisticsCode>
-								<!--BT-715 OPT-156-->
-								<efbc:StatisticsNumeric>45</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles-zero-emission</efbc:StatisticsCode>
-								<!--BT-725 OPT-156-->
-								<efbc:StatisticsNumeric>2</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
-							<efac:StrategicProcurementStatistics>
-								<!--OPT-155-->
-								<efbc:StatisticsCode listName="green-procurement">vehicles-clean</efbc:StatisticsCode>
-								<!--BT-716 OPT-156-->
-								<efbc:StatisticsNumeric>10</efbc:StatisticsNumeric>
-							</efac:StrategicProcurementStatistics>
 							<efac:TenderLot>
+								<!-- "id" : "BT-13713-LotResult", "name" : "Result Lot Identifier" -->
 								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
 							</efac:TenderLot>
 						</efac:LotResult>
+						<!-- -->
+						<!-- RESULTS - TENDER - TEN-0001-->
+						<!-- -->
 						<efac:LotTender>
+							<!-- OPT-321-Tender - Tender Technical Identifier -->
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
-							<!--BT-171-->
+							<!--"id": "BT-171-Tender",	"name": "Tender Rank"-->
 							<cbc:RankCode>3</cbc:RankCode>
-							<!--BT-193-->
+							<!--"id": "BT-1711-Tender",	"name": "Tender Ranked"-->
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
+							<!--"id": "BT-193-Tender","name": "Tender Variant",-->
 							<efbc:TenderVariantIndicator>true</efbc:TenderVariantIndicator>
 							<cac:LegalMonetaryTotal>
-								<!--BT-720-->
+								<!--"BT-720-Tender","name": "Tender Value"-->
 								<cbc:PayableAmount currencyID="EUR">9999999.99</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
 							<efac:SubcontractingTerm>
-								<!--BT-553-->
+								<!--"id": "BT-553-Tender",	"name": "Subcontracting Value"-->
 								<efbc:TermAmount currencyID="EUR">9999999.99</efbc:TermAmount>
-								<!--BT-554-->
+								<!--"id": "BT-554-Tender",	"name": "Subcontracting Description"-->
 								<efbc:TermDescription languageID="ENG">Subcontracting Description ---</efbc:TermDescription>
-								<!--BT-555-->
+								<!--id": "BT-555-Tender","name": "Subcontracting Percentage"-->
 								<efbc:TermPercent>30</efbc:TermPercent>
-								<!--BT-773-->
+								<!--"id": "BT-773-Tender",	"name": "Subcontracting"-->
 								<efbc:TermCode listName="applicability">yes</efbc:TermCode>
-								<!--BT-731-->
+								<!--"id": "BT-731-Tender", "name": "Subcontracting Percentage Known",-->
 								<efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
-								<!--BT-730-->
+								<!--"id": "BT-730-Tender", "name": "Subcontracting Value Known",-->
 								<efbc:ValueKnownIndicator>true</efbc:ValueKnownIndicator>
 							</efac:SubcontractingTerm>
 							<efac:TenderingParty>
+								<!-- OPT-310-Tender - Tendering Party ID Reference -->
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
 							<efac:TenderLot>
+								<!--"id": "BT-13714-Tender","name": "Tender Lot Identifier -->
 								<cbc:ID>GLO-0001</cbc:ID>
 							</efac:TenderLot>
 							<efac:TenderReference>
+								<!--"id": "BT-3201-Tender",	"name": "Tender Identifier", -->
 								<cbc:ID>REF DEF-001/02</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
+						<!-- -->
+						<!-- RESULTS - TENDER - TEN-0002-->
+						<!-- -->
 						<efac:LotTender>
+							<!-- OPT-321-Tender - Tender Technical Identifier -->
 							<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
-							<!--BT-171-->
-							<cbc:RankCode>3</cbc:RankCode>
-							<!--BT-193-->
+							<!--"id": "BT-171-Tender",	"name": "Tender Rank"-->
+							<cbc:RankCode>4</cbc:RankCode>
+							<!--"id": "BT-1711-Tender",	"name": "Tender Ranked"-->
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
+							<!--"id": "BT-193-Tender","name": "Tender Variant",-->
 							<efbc:TenderVariantIndicator>true</efbc:TenderVariantIndicator>
 							<cac:LegalMonetaryTotal>
-								<!--BT-720-->
+								<!--"BT-720-Tender","name": "Tender Value"-->
 								<cbc:PayableAmount currencyID="EUR">9999999.99</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
 							<efac:SubcontractingTerm>
-								<!--BT-553-->
+								<!--"id": "BT-553-Tender",	"name": "Subcontracting Value"-->
 								<efbc:TermAmount currencyID="EUR">9999999.99</efbc:TermAmount>
-								<!--BT-554-->
+								<!--"id": "BT-554-Tender",	"name": "Subcontracting Description"-->
 								<efbc:TermDescription languageID="ENG">Subcontracting Description ---</efbc:TermDescription>
-								<!--BT-555-->
+								<!--id": "BT-555-Tender","name": "Subcontracting Percentage"-->
 								<efbc:TermPercent>30</efbc:TermPercent>
-								<!--BT-773-->
+								<!--"id": "BT-773-Tender",	"name": "Subcontracting"-->
 								<efbc:TermCode listName="applicability">yes</efbc:TermCode>
-								<!--BT-731-->
+								<!--"id": "BT-731-Tender", "name": "Subcontracting Percentage Known",-->
 								<efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
-								<!--BT-730-->
+								<!--"id": "BT-730-Tender", "name": "Subcontracting Value Known",-->
 								<efbc:ValueKnownIndicator>true</efbc:ValueKnownIndicator>
 							</efac:SubcontractingTerm>
 							<efac:TenderingParty>
+								<!-- OPT-310-Tender - Tendering Party ID Reference -->
 								<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
 							</efac:TenderingParty>
 							<efac:TenderLot>
-								<cbc:ID>LOT-0001</cbc:ID>
+								<!--"id": "BT-13714-Tender","name": "Tender Lot Identifier -->
+								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
 							</efac:TenderLot>
 							<efac:TenderReference>
+								<!--"id": "BT-3201-Tender",	"name": "Tender Identifier", -->
 								<cbc:ID>REF GHI/0003-01</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
+						<!-- -->
+						<!-- RESULTS - TENDER - TEN-0003-->
+						<!-- -->
+						<efac:LotTender>
+							<!-- OPT-321-Tender - Tender Technical Identifier -->
+							<cbc:ID schemeName="tender">TEN-0003</cbc:ID>
+							<efac:SubcontractingTerm>
+								<!--"id": "BT-553-Tender",	"name": "Subcontracting Value"-->
+								<efbc:TermAmount currencyID="EUR">99999999.99</efbc:TermAmount>
+								<!--"id": "BT-554-Tender",	"name": "Subcontracting Description"-->
+								<efbc:TermDescription languageID="ENG">Subcontracting Description ---</efbc:TermDescription>
+								<!--id": "BT-555-Tender","name": "Subcontracting Percentage"-->
+								<efbc:TermPercent>30</efbc:TermPercent>
+								<!--"id": "BT-773-Tender",	"name": "Subcontracting"-->
+								<efbc:TermCode listName="applicability">yes</efbc:TermCode>
+								<!--"id": "BT-731-Tender", "name": "Subcontracting Percentage Known",-->
+								<efbc:PercentageKnownIndicator>true</efbc:PercentageKnownIndicator>
+								<!--"id": "BT-730-Tender", "name": "Subcontracting Value Known",-->
+								<efbc:ValueKnownIndicator>true</efbc:ValueKnownIndicator>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<!-- OPT-310-Tender - Tendering Party ID Reference -->
+								<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<!--"id": "BT-13714-Tender","name": "Tender Lot Identifier -->
+								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<!--"id": "BT-3201-Tender",	"name": "Tender Identifier", -->
+								<cbc:ID>REF JKL/0003-01</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<!-- -->
+						<!-- RESULTS - CONTRACT - CON-0001-->
+						<!-- -->
 						<efac:SettledContract>
-							<!--OPT-316-->
+							<!--"id": "OPT-316-Contract", "name": "Contract Technical Identifier"-->
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
-							<!--BT-1451-->
+							<!--"id": "BT-1451-Contract", "name": "Winner Decision Date"-->
 							<cbc:AwardDate>2023-03-23+02:00</cbc:AwardDate>
-							<!--BT-145-->
+							<!--"id": "BT-145-Contract", "name": "Contract Conclusion Date"-->
 							<cbc:IssueDate>2023-03-24+02:00</cbc:IssueDate>
-							<!--BT-721-->
+							<!--"id": "BT-721-Contract", "name": "Contract Title"-->
 							<cbc:Title languageID="ENG">This is the title of the contract ---</cbc:Title>
-							<!--BT-151-->
+							<!--"id": "BT-151-Contract", "name": "Contract URL"-->
 							<cbc:URI>https://wheretofindcontract.com/ctr123</cbc:URI>
 							<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
 							<cac:NoticeDocumentReference>
-								<!--OPT-100-->
+								<!--id": "OPT-100-Contract", "name": "Framework Notice Identifier"-->
 								<cbc:ID>12345678-2023</cbc:ID>
-								<!--OPT-101-->
-								<cbc:VersionID>02</cbc:VersionID>
 							</cac:NoticeDocumentReference>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<!--OPT-300-->
-									<cbc:ID schemeName="organization">ORG-0011</cbc:ID>
+									<!-- id": "OPT-300-Contract-Signatory","name": "Signatory Identifier Reference" -->
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
-								<!--BT-150-->
+								<!--"id": "BT-150-Contract", "name": "Contract Identifier",-->
 								<cbc:ID>REF RST-678</cbc:ID>
 							</efac:ContractReference>
 							<efac:LotTender>
-								<!--BT-3202-->
+								<!--id": "BT-3202-Contract","name": "Contract Tender ID (Reference) -->
 								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							</efac:LotTender>
 							<efac:Funding>
-								<!--BT-5011-->
+								<!--id": "BT-5011-Contract", "name": "Contract EU Funds Financing Identifier"-->
+								<efbc:FinancingIdentifier>2021/1234</efbc:FinancingIdentifier>
+								<!--"id": "BT-722-Contract", "name": "Contract EU Funds Programme"-->
 								<cbc:FundingProgramCode listName="eu-funded">LIFE_2021</cbc:FundingProgramCode>
-								<!--BT-722-->
-								<cbc:FundingProgram languageID="ENG">Recovery Fund</cbc:FundingProgram>
+								<!--"id": "BT-6110-Contract", "name": "Contract EU Funds Details"-->
+								<cbc:Description languageID="ENG">Recovery Fund</cbc:Description>
 							</efac:Funding>
 						</efac:SettledContract>
+						<!-- -->
+						<!-- RESULTS - CONTRACT - CON-0002-->
+						<!-- -->
 						<efac:SettledContract>
-							<!--OPT-316-->
+							<!--"id": "OPT-316-Contract", "name": "Contract Technical Identifier"-->
 							<cbc:ID schemeName="contract">CON-0002</cbc:ID>
-							<!--BT-1451-->
+							<!--"id": "BT-1451-Contract", "name": "Winner Decision Date"-->
 							<cbc:AwardDate>2023-03-23+02:00</cbc:AwardDate>
-							<!--BT-145-->
+							<!--"id": "BT-145-Contract", "name": "Contract Conclusion Date"-->
 							<cbc:IssueDate>2023-03-24+02:00</cbc:IssueDate>
-							<!--BT-721-->
+							<!--"id": "BT-721-Contract", "name": "Contract Title"-->
 							<cbc:Title languageID="ENG">Title of second contract ---</cbc:Title>
-							<!--BT-151-->
+							<!--"id": "BT-151-Contract", "name": "Contract URL"-->
 							<cbc:URI>https://wheretofindcontract.com/ctr222</cbc:URI>
 							<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
 							<cac:NoticeDocumentReference>
-								<!--OPT-100-->
+								<!--id": "OPT-100-Contract", "name": "Framework Notice Identifier"-->
 								<cbc:ID>12345678-2023</cbc:ID>
-								<!--OPT-101-->
-								<cbc:VersionID>02</cbc:VersionID>
 							</cac:NoticeDocumentReference>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<!--OPT-300-->
-									<cbc:ID schemeName="organization">ORG-0014</cbc:ID>
+									<!-- id": "OPT-300-Contract-Signatory","name": "Signatory Identifier Reference" -->
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
-								<!--BT-150-->
+								<!--"id": "BT-150-Contract", "name": "Contract Identifier",-->
 								<cbc:ID>KLM FGH/912</cbc:ID>
 							</efac:ContractReference>
 							<efac:LotTender>
-								<!--BT-3202-->
+								<!--id": "BT-3202-Contract","name": "Contract Tender ID (Reference) -->
 								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
 							</efac:LotTender>
 							<efac:Funding>
-								<!--BT-5011-->
+								<!--id": "BT-5011-Contract", "name": "Contract EU Funds Financing Identifier"-->
+								<efbc:FinancingIdentifier>2021/5678</efbc:FinancingIdentifier>
+								<!--"id": "BT-722-Contract", "name": "Contract EU Funds Programme"-->
 								<cbc:FundingProgramCode listName="eu-funded">LIFE_2021</cbc:FundingProgramCode>
-								<!--BT-722-->
-								<cbc:FundingProgram languageID="ENG">Recovery Fund</cbc:FundingProgram>
+								<!--"id": "BT-6110-Contract", "name": "Contract EU Funds Details"-->
+								<cbc:Description languageID="ENG">Recovery Fund</cbc:Description>
 							</efac:Funding>
 						</efac:SettledContract>
+						<!-- -->
+						<!-- RESULTS - TENDERING PARTY -->
+						<!-- -->
+						<!-- -->
+						<!-- RESULTS - TENDERING PARTY - TPA-0001-->
+						<!-- -->
 						<efac:TenderingParty>
-							<!--OPT-210-->
+							<!--"id" : "OPT-210-Tenderer", "name" : "Tendering Party ID -->
 							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<!--"id" : "OPT-211-Tenderer", "name" : "Tendering Party Name -->
+							<cbc:Name languageID="ENG">Gyro and Others Consortium</cbc:Name>
 							<efac:Tenderer>
-								<!--OPT-300-->
+								<!--"id" : "OPT-300-Tenderer", "name" : "Tenderer ID Reference "-->
 								<cbc:ID schemeName="organization">ORG-0008</cbc:ID>
-								<!--OPT-170-->
+								<!--"id" : "OPT-170-Tenderer", "name" : "Tendering Party Leader "-->
 								<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
 							</efac:Tenderer>
 							<efac:Tenderer>
-								<!--OPT-300-->
+								<!--"id" : "OPT-300-Tenderer", "name" : "Tenderer ID Reference "-->
 								<cbc:ID schemeName="organization">ORG-0009</cbc:ID>
-								<!--OPT-170-->
+								<!--"id" : "OPT-170-Tenderer", "name" : "Tendering Party Leader "-->
 								<efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
 							</efac:Tenderer>
 							<efac:SubContractor>
-								<!--OPT-301-->
+								<!--"id" : "OPT-301-Tenderer-SubCont", "name" : "Subcontractor ID Reference"-->
 								<cbc:ID schemeName="organization">ORG-0010</cbc:ID>
 								<efac:MainContractor>
-									<!--OPT-301-->
+									<!--"id" : "OPT-301-Tenderer-MainCont", "name" : "Main Contractor ID Reference"-->
 									<cbc:ID schemeName="organization">ORG-0008</cbc:ID>
 								</efac:MainContractor>
 								<efac:MainContractor>
-									<!--OPT-301-->
+									<!--"id" : "OPT-301-Tenderer-MainCont", "name" : "Main Contractor ID Reference"-->
 									<cbc:ID schemeName="organization">ORG-0009</cbc:ID>
 								</efac:MainContractor>
 							</efac:SubContractor>
 						</efac:TenderingParty>
+						<!-- -->
+						<!-- RESULTS - TENDERING PARTY - TPA-0002-->
+						<!-- -->
 						<efac:TenderingParty>
-							<!--OPT-210-->
+							<!--"id" : "OPT-210-Tenderer", "name" : "Tendering Party ID -->
 							<cbc:ID schemeName="tendering-party">TPA-0002</cbc:ID>
+							<!--"id" : "OPT-211-Tenderer", "name" : "Tendering Party Name -->
+							<cbc:Name languageID="ENG">Competitor</cbc:Name>
 							<efac:Tenderer>
-								<!--OPT-300-->
+								<!--"id" : "OPT-300-Tenderer", "name" : "Tenderer ID Reference "-->
 								<cbc:ID schemeName="organization">ORG-0011</cbc:ID>
-								<efbc:GroupLeadIndicator>false</efbc:GroupLeadIndicator>
 							</efac:Tenderer>
 						</efac:TenderingParty>
 					</efac:NoticeResult>
+					<!-- -->
+					<!-- notice subtype -->
+					<!-- -->
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+						<!-- "id" : "OPP-070-notice", "name" : "Notice Subtype" -->
+						<cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
 					</efac:NoticeSubType>
+					<!-- -->
+					<!-- ORGANISATIONS -->
+					<!-- -->
 					<efac:Organizations>
+						<!-- -->
+						<!-- ORG-0001 :  Buyer -->
+						<!-- -->
 						<efac:Organization>
 							<efac:Company>
-								<!--BT-505-->
+								<!--id": "BT-505-Organization-Company","name": "Organisation Internet Address"-->
 								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
-								<!--BT-509-->
+								<!--"id": "BT-509-Organization-Company",	"name": "Organisation eDelivery Gateway"-->
 								<cbc:EndpointID>https://endpoint-example.fin-adm.com</cbc:EndpointID>
 								<cac:PartyIdentification>
-									<!--OPT-200-->
+									<!--"id": "OPT-200-Organization-Company",	"name": "Company Technical Identifier"-->
 									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
-								<!--BT-500-->
+								<!--"id": "BT-500-Organization-Company", "name": "Organisation Name"-->
 								<cac:PartyName>
 									<cbc:Name languageID="ENG">Financial Adinistration for ...</cbc:Name>
 								</cac:PartyName>
 								<cac:PostalAddress>
-									<!--BT-510-->
+									<!--"id": "BT-510(a)-Organization-Company", "name": "Street"-->
 									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<!-- "id": "BT-510(b)-Organization-Company",	"name": "Streetline 1" -->
 									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-									<!--BT-16-->
+									<!--id": "BT-16-Organization-Company", "name": "Organisation Part Name"-->
 									<cbc:Department>Finance Division</cbc:Department>
-									<!--BT-513-->
+									<!--"id": "BT-513-Organization-Company", "name": "Organisation City"-->
 									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
+									<!--"id": "BT-512-Organization-Company", "name": "Organisation Post Code"-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
-									<!--BT-514-->
+									<!--"id": "BT-507-Organization-Company","name": "Organisation Country Subdivision"-->
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
+									<!--"id": "BT-514-Organization-Company","name": "Organisation Country Code"-->
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">998298</cbc:CompanyID>
+									<!--"id": "BT-501-Organization-Company", "name": "Organisation Identifier"-->
+									<cbc:CompanyID>998298</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<!--BT-502-->
+									<!--"id": "BT-502-Organization-Company",	"name": "Organisation Contact Point"-->
 									<cbc:Name>Info desk</cbc:Name>
-									<!--BT-503-->
+									<!--"id": "BT-503-Organization-Company", "name": "Organisation Contact Telephone Number"-->
 									<cbc:Telephone>+44 123456780</cbc:Telephone>
-									<!--BT-739-->
+									<!--"id": "BT-739-Organization-Company", "name": "Organisation Contact Fax"-->
 									<cbc:Telefax>+44 123456789</cbc:Telefax>
-									<!--BT-506-->
+									<!--"id": "BT-506-Organization-Company", "name": "Organisation Contact Email Address"-->
 									<cbc:ElectronicMail>info@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
 								<cbc:EndpointID>http://tender-submit.fin-adm.com</cbc:EndpointID>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
@@ -437,7 +517,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<!--BT-514-->
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -446,10 +526,12 @@
 								<cac:Contact>
 									<cbc:Name>Head of Procurement Department</cbc:Name>
 									<cbc:Telephone>+123 45678</cbc:Telephone>
+									<cbc:Telefax>+123 456789</cbc:Telefax>
 									<cbc:ElectronicMail>proc-info@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -467,7 +549,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<!--BT-514-->
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -478,44 +560,16 @@
 									<cbc:Name>Proc Archives Dpt Lead</cbc:Name>
 									<!--BT-503-->
 									<cbc:Telephone>+44 123456776</cbc:Telephone>
+									<!--BT-739-->
+									<cbc:Telefax>+44 1234567769</cbc:Telefax>
 									<!--BT-506-->
 									<cbc:ElectronicMail>proc-archi@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
-							<efac:TouchPoint>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="touchpoint">TPO-0003</cbc:ID>
-								</cac:PartyIdentification>
-								<cac:PartyName>
-									<cbc:Name languageID="ENG">Tenders Evaluation Committee</cbc:Name>
-								</cac:PartyName>
-								<cac:PostalAddress>
-									<!--BT-510-->
-									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
-									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-									<!--BT-16-->
-									<cbc:Department>Tenders Evaluation Committee</cbc:Department>
-									<!--BT-513-->
-									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
-									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
-									<!--BT-514-->
-									<cac:Country>
-										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
-									</cac:Country>
-								</cac:PostalAddress>
-								<cac:Contact>
-									<!--BT-502-->
-									<cbc:Name>Evaluation Dpt</cbc:Name>
-									<!--BT-503-->
-									<cbc:Telephone>+44 123456777</cbc:Telephone>
-									<!--BT-506-->
-									<cbc:ElectronicMail>proc-eval@fin-adm.com</cbc:ElectronicMail>
-								</cac:Contact>
-							</efac:TouchPoint>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0002 :  Tax legislation information provider -->
+						<!-- -->
 						<efac:Organization>
 							<efac:Company>
 								<!--BT-505-->
@@ -538,7 +592,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<cac:Country>
 										<!--BT-514-->
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -546,7 +600,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">12345</cbc:CompanyID>
+									<cbc:CompanyID>12345</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -560,6 +614,9 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0003 :  Environment legislation information provider -->
+						<!-- -->
 						<efac:Organization>
 							<efac:Company>
 								<!--BT-505-->
@@ -584,7 +641,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<cac:Country>
 										<!--BT-514-->
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -592,7 +649,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">7812345</cbc:CompanyID>
+									<cbc:CompanyID>7812345</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -606,6 +663,9 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0004 :  Employment legislation information provider -->
+						<!-- -->
 						<efac:Organization>
 							<!--BT-633-->
 							<efac:Company>
@@ -632,7 +692,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<cac:Country>
 										<!--BT-514-->
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -640,7 +700,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">99283</cbc:CompanyID>
+									<cbc:CompanyID>99283</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -654,6 +714,9 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0005 :  Review organization -->
+						<!-- -->
 						<efac:Organization>
 							<efac:Company>
 								<!--BT-505-->
@@ -678,7 +741,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<cac:Country>
 										<!--BT-514-->
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -686,7 +749,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">0986543</cbc:CompanyID>
+									<cbc:CompanyID>0986543</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -700,6 +763,9 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0006 :  Mediation organization -->
+						<!-- -->
 						<efac:Organization>
 							<!--BT-633-->
 							<efac:Company>
@@ -724,7 +790,7 @@
 									<!--BT-512-->
 									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
 									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 									<cac:Country>
 										<!--BT-514-->
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
@@ -732,7 +798,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">09812345</cbc:CompanyID>
+									<cbc:CompanyID>09812345</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -746,8 +812,12 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0007 :  eSender -->
+						<!-- -->
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0007</cbc:ID>
 								</cac:PartyIdentification>
@@ -756,22 +826,33 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@esendcorp.lu</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0008 :  Tenderer -->
+						<!-- -->
 						<efac:Organization>
+							<!--BT-746-->
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
 							<!--BT-633 Organization Natural Person-->
 							<efbc:NaturalPersonIndicator>false</efbc:NaturalPersonIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.gyro-soft.com</cbc:WebsiteURI>
@@ -805,15 +886,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">927384203</cbc:CompanyID>
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706-->
-												<cbc:NationalityID schemeName="country">BEL</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
+									<cbc:CompanyID>927384203</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -827,7 +900,12 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0009 :  Tenderer -->
+						<!-- -->
 						<efac:Organization>
+							<!--BT-746-->
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
 							<!--BT-633 Organization Natural Person-->
 							<efbc:NaturalPersonIndicator>true</efbc:NaturalPersonIndicator>
 							<efac:Company>
@@ -862,15 +940,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">928374653</cbc:CompanyID>
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706-->
-												<cbc:NationalityID schemeName="country">DEU</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
+									<cbc:CompanyID>928374653</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -884,9 +954,17 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0010 :  Subcontractor -->
+						<!-- -->
 						<efac:Organization>
+							<!--BT-746-->
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
 							<!--BT-633 Organization Natural Person-->
 							<efbc:NaturalPersonIndicator>false</efbc:NaturalPersonIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0003</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.ayuda.com</cbc:WebsiteURI>
@@ -919,15 +997,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">34578345</cbc:CompanyID>
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706-->
-												<cbc:NationalityID schemeName="country">SPA</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
+									<cbc:CompanyID>34578345</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -941,9 +1011,17 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- ORG-0011 :  Tenderer -->
+						<!-- -->
 						<efac:Organization>
+							<!--BT-746-->
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
 							<!--BT-633 Organization Natural Person-->
 							<efbc:NaturalPersonIndicator>false</efbc:NaturalPersonIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0004</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.competitor.com</cbc:WebsiteURI>
@@ -976,15 +1054,7 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501-->
-									<cbc:CompanyID schemeID="002">1223456789</cbc:CompanyID>
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706-->
-												<cbc:NationalityID schemeName="country">FRA</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
+									<cbc:CompanyID>1223456789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502-->
@@ -998,439 +1068,904 @@
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<!-- -->
+						<!-- UBO-0001 :  Ultimate Beneficial owner -->
+						<!-- -->
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<cbc:FirstName>Jean</cbc:FirstName>
+							<!--BT-500-->
+							<cbc:FamilyName>Dupont</cbc:FamilyName>
+							<cac:Contact>
+								<!--BT-503-->
+								<cbc:Telephone>+33 123456780</cbc:Telephone>
+								<!--BT-739-->
+								<cbc:Telefax>+33 123456789</cbc:Telefax>
+								<!--BT-506-->
+								<cbc:ElectronicMail>jean@dupont.be</cbc:ElectronicMail>
+							</cac:Contact>
+							<cac:ResidenceAddress>
+								<!--BT-510-->
+								<cbc:StreetName>7 rue de la loi</cbc:StreetName>
+								<!--BT-513-->
+								<cbc:CityName>Bruxelles</cbc:CityName>
+								<!--BT-512-->
+								<cbc:PostalZone>10123</cbc:PostalZone>
+								<!--BT-507-->
+								<cbc:CountrySubentityCode listName="nuts">BE100</cbc:CountrySubentityCode>
+								<cac:Country>
+									<!--BT-514-->
+									<cbc:IdentificationCode listName="country">BEL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:ResidenceAddress>
+							<!--BT-706-->
+							<efac:Nationality>
+								<cbc:NationalityID>BEL</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
+						<!-- -->
+						<!-- UBO-0003 :  Ultimate Beneficial owner -->
+						<!-- -->
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0003</cbc:ID>
+							<!--BT-706-->
+							<efac:Nationality>
+								<cbc:NationalityID>ESP</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
+						<!-- -->
+						<!-- UBO-0004 :  Ultimate Beneficial owner -->
+						<!-- -->
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0004</cbc:ID>
+							<!--BT-706-->
+							<efac:Nationality>
+								<cbc:NationalityID>FRA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<!--BT-701-->
-	<cbc:ID>f71da99f-763b-43bd-a1bb-f54bf9560fd6</cbc:ID>
-	<!--BT-04-->
+	<!--   "id" : "OPT-002-notice","name" : "Customization ID (UBL)" -->
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<!--     "id" : "BT-701-notice","name" : "Notice Identifier" -->
+	<cbc:ID schemeName="notice-id">15377ca1-6cf7-4060-90f0-9290128957a3</cbc:ID>
+	<!--"id" : "BT-04-notice", "name" : "Procedure Identifier"-->
 	<cbc:ContractFolderID>2d2d24a2-df84-449e-8695-fb66ef504a5a</cbc:ContractFolderID>
-	<!--BT-05-->
+	<!--  "id" : "BT-05(a)-notice","name" : "Notice Dispatch Date"-->
 	<cbc:IssueDate>2023-04-23+01:00</cbc:IssueDate>
+	<!--  "id" : "BT-05(b)-notice", "name" : "Notice Dispatch Time"-->
 	<cbc:IssueTime>20:59:32+01:00</cbc:IssueTime>
-	<!--BT-757-->
+	<!-- "id" : "BT-757-notice", "name" : "Notice Version"-->
 	<cbc:VersionID>03</cbc:VersionID>
-	<!--BT-01-->
+	<!-- "id" : "BT-01-notice", "name" : "Procedure Legal Basis"-->
 	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
-	<!--BT-03--> <!--BT-02-->
+	<!-- "id" : "BT-02-notice", "name" : "Notice Type" -->
+	<!--  "id" : "BT-03-notice","name" : "Form Type"-->
 	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
-	<!--BT-702-->
+	<!--  "id" : "BT-702(a)-notice", "name" : "Notice Official Language" -->
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<!-- -->
+	<!-- 1. BUYER -->
+	<!-- -->
 	<cac:ContractingParty>
-		<!--BT-508-->
+		<!--  "id" : "BT-508-Procedure-Buyer", "name" : "Buyer Profile URI" -->
 		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>
 		<cac:ContractingPartyType>
-			<!--BT-11-->
+			<!-- "id" : "BT-11-Procedure-Buyer", "name" : "Buyer Legal Type", -->
 			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
-			<!--BT-10-->
+			<!--  "id" : "BT-10-Procedure-Buyer", "name" : "Activity Authority" -->
 			<cbc:ActivityTypeCode listName="authority-activity">econ-aff</cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 		<cac:Party>
 			<cac:PartyIdentification>
+				<!-- "id" : "OPT-300-Procedure-Buyer", "name" : "Buyer Technical Identifier Reference" -->
 				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:ServiceProviderParty>
+				<!-- "id" : "OPT-030-Procedure-SProvider",  "name" : "Provided Service Type" -->
+				<!-- eSender -->
 				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
 				<cac:Party>
 					<cac:PartyIdentification>
+						<!-- "id" : "OPT-300-Procedure-SProvider", "name" : "Service Provider Technical Identifier Reference" -->
 						<cbc:ID schemeName="organization">ORG-0007</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:Party>
 			</cac:ServiceProviderParty>
 		</cac:Party>
 	</cac:ContractingParty>
+	<!-- -->
+	<!-- 2. PROCEDURE -->
+	<!-- -->
+	<!-- Procedure - Tendering terms -->
 	<cac:TenderingTerms>
-		<!--BT-09-->
+		<!--Cross Border Law -->
 		<cac:ProcurementLegislationDocumentReference>
+			<!-- "id" : "BT-09(a)-Procedure", name" : "Cross Border Law"-->
 			<cbc:ID>CrossBorderLaw</cbc:ID>
+			<!-- "id" : "BT-09(b)-Procedure","name" : "Cross Border Law-->
 			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>
 		</cac:ProcurementLegislationDocumentReference>
+		<!-- Lot Distribution-->
+		<cac:LotDistribution>
+			<cac:LotsGroup>
+				<!--  "id" : "BT-330-Procedure", "name" : "Group Identifier" -->
+				<cbc:LotsGroupID>GLO-0001</cbc:LotsGroupID>
+				<cac:ProcurementProjectLotReference>
+					<!--  "id" : "BT-1375-Procedure", "name" : "Group Lot Identifier" -->
+					<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+				</cac:ProcurementProjectLotReference>
+				<cac:ProcurementProjectLotReference>
+					<!--  "id" : "BT-1375-Procedure", "name" : "Group Lot Identifier" -->
+					<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+				</cac:ProcurementProjectLotReference>
+			</cac:LotsGroup>
+		</cac:LotDistribution>
 	</cac:TenderingTerms>
+	<!-- Procedure - Tendering Process -->
 	<cac:TenderingProcess>
-		<!--BT-88-->
+		<!-- "id" : "BT-88-Procedure", "name" : "Procedure Features"-->
 		<cbc:Description languageID="ENG">Description of the procedure  ---</cbc:Description>
-		<!--BT-105-->
+		<!--"id" : "BT-105-Procedure", "name" : "Procedure Type"-->
 		<cbc:ProcedureCode listName="procurement-procedure-type">neg-w-call</cbc:ProcedureCode>
 		<cac:ProcessJustification>
-			<!--BT-106-->
+			<!--"id" : "BT-106-Procedure", "name" : "Procedure Accelerated -->
 			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-			<!--BT-1351-->
+			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
 			<cbc:ProcessReason languageID="ENG">Procedure Accelerated Justification ---</cbc:ProcessReason>
 		</cac:ProcessJustification>
-		<cac:ProcessJustification>
-			<!--BT-136-->
-			<cbc:ProcessReasonCode listName="direct-award-justification">artistic</cbc:ProcessReasonCode>
-			<!--BT-135-->
-			<cbc:ProcessReason languageID="ENG">Direct Award Justification ---</cbc:ProcessReason>
-			<!--BT-1252-->
-			<cbc:Description>b52e9333-b57e-4be4-9c6f-be74b819fd8b</cbc:Description>
-		</cac:ProcessJustification>
 	</cac:TenderingProcess>
+	<!-- Procedure - Procurement Project -->
 	<cac:ProcurementProject>
-		<!--BT-22-->
+		<!--"id" : "BT-22-Procedure",  "name" : "Internal Identifier"-->
 		<cbc:ID schemeName="InternalID">2023-P-0001</cbc:ID>
-		<!--BT-21-->
+		<!--"id" : "BT-21-Procedure", "name" : "Title"-->
 		<cbc:Name languageID="ENG">Procurement Title ---</cbc:Name>
-		<!--BT-24-->
+		<!--"id" : "BT-24-Procedure", "name" : "Description" -->
 		<cbc:Description languageID="ENG">Description ---</cbc:Description>
-		<!--BT-23-->
+		<!--"id" : "BT-23-Procedure", "name" : "Main Nature"-->
 		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-		<!--BT-300-->
+		<!--"id" : "BT-300-Procedure", "name" : "Additional Information"-->
 		<cbc:Note languageID="ENG">Additional information ---</cbc:Note>
+		<!-- -->
 		<cac:ProcurementAdditionalType>
-			<!--BT-531-->
+			<!--id" : "BT-531-Procedure", "name" : "Additional Nature (different from Main)"-->
 			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
 		</cac:ProcurementAdditionalType>
+		<!-- -->
 		<cac:RequestedTenderTotal>
+			<!--"id" : "BT-27-Procedure", "name" : "Estimated Value"-->
 			<!--BT-27-->
-            <cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 		</cac:RequestedTenderTotal>
 		<cac:MainCommodityClassification>
-			<!--BT-26-->
-			<!--BT-262-->
+			<!-- "id" : "BT-262-Procedure", "name" : "Main Classification Code"-->
+			<!-- "id" : "BT-26(m)-Procedure", "name" : "Classification Type (e.g. CPV)" -->
 			<cbc:ItemClassificationCode listName="cpv">79710000</cbc:ItemClassificationCode>
 		</cac:MainCommodityClassification>
 		<cac:AdditionalCommodityClassification>
-			<!--BT-26-->
-			<!--BT-263-->
+			<!-- "id" : "BT-263-Procedure", "name" : "Additional Classification Code",-->
+			<!--"id" : "BT-26(a)-Procedure", "name" : "Classification Type (e.g. CPV)"-->
 			<cbc:ItemClassificationCode listName="cpv">79720000</cbc:ItemClassificationCode>
 		</cac:AdditionalCommodityClassification>
+		<!-- Procedure - Place of performance -->
 		<cac:RealizedLocation>
 			<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
 			<cac:Address>
-				<!--BT-5101-->
+				<!--"id" : "BT-5101(a)-Procedure", "name" : "Place Performance Street"-->
 				<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
 				<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-				<!--BT-5131-->
+				<!-- "id" : "BT-5131-Procedure", "name" : "Place Performance City"-->
 				<cbc:CityName>London</cbc:CityName>
-				<!--BT-5121-->
+				<!--"id" : "BT-5121-Procedure", "name" : "Place Performance Post Code"-->
 				<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-				<!--BT-5071-->
-				<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+				<!--"id" : "BT-5071-Procedure", "name" : "Place Performance Country Subdivision"-->
+				<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 				<cac:Country>
-					<!--BT-5141-->
+					<!--"id" : "BT-5141-Procedure", "name" : "Place Performance Country Code"-->
 					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
+		<!--  -->
 		<cac:RealizedLocation>
 			<!-- This location represents a large area without a specific address, in this case "Anywhere in the European Economic Area" -->
-			<!--BT-728-->
+			<!--"id" : "BT-728-Procedure", "name" : "Place of Performance Additional Information"-->
 			<cbc:Description languageID="ENG">Additional information ---</cbc:Description>
 			<cac:Address>
-				<!--BT-727-->
+				<!--"id" : "BT-727-Procedure", "name" : "Place Performance Services Other"-->
 				<cbc:Region>anyw-eea</cbc:Region>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
+	<!-- -->
+	<!-- 4. GROUP OF LOTS -->
+	<!-- -->
+	<!-- -->
+	<!-- GLO-0001 -->
+	<!-- -->
 	<cac:ProcurementProjectLot>
+		<!-- "id" : "BT-137-LotsGroup", "name" : "Purpose Lot Identifier" -->
 		<cbc:ID schemeName="LotsGroup">GLO-0001</cbc:ID>
+		<!-- GLO - Terndering terms -->
 		<cac:TenderingTerms>
+			<!-- GLO - Awarding Terms (Awaring Criteria) -->
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<!--BT-733-->
-					<cbc:Description languageID="ENG">AC order justification ---</cbc:Description>
-					<!--BT-543-->
-					<cbc:CalculationExpression languageID="ENG">Price-quality score calculation is based on …</cbc:CalculationExpression>
+					<!-- -->
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
 							<ext:UBLExtension>
 								<ext:ExtensionContent>
 									<efext:EformsExtension>
 										<efac:AwardCriterionParameter>
-											<!--BT-5421-->
+											<!--"id" : "BT-5421-LotsGroup", "name" : "Award Criterion Number Weight"-->
 											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-											<!--BT-541-->
+											<!--"id" : "BT-541-LotsGroup", "name" : "Award Criterion Number"-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
 							</ext:UBLExtension>
 						</ext:UBLExtensions>
-						<!--BT-539-->
+						<!--"id" : "BT-539-LotsGroup", "name" : "Award Criterion Type" -->
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
-						<!--BT-734-->
+						<!--"id" : "BT-734-LotsGroup", "name" : "Award Criterion Name"-->
 						<cbc:Name languageID="ENG">name of AC ---</cbc:Name>
-						<!--BT-540-->
+						<!--"id" : "BT-540-LotsGroup","name" : "Award Criterion Description"-->
+						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<!-- -->
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--"id" : "BT-5421-LotsGroup", "name" : "Award Criterion Number Weight"-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--"id" : "BT-541-LotsGroup", "name" : "Award Criterion Number"-->
+											<efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--"id" : "BT-539-LotsGroup", "name" : "Award Criterion Type" -->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--"id" : "BT-734-LotsGroup", "name" : "Award Criterion Name"-->
+						<cbc:Name languageID="ENG">name of AC ---</cbc:Name>
+						<!--"id" : "BT-540-LotsGroup","name" : "Award Criterion Description"-->
 						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 		</cac:TenderingTerms>
+		<!-- GLO - Tendering process -->
 		<cac:TenderingProcess>
 			<cac:FrameworkAgreement>
-				<!--BT-157-->
-				<cbc:EstimatedMaximumValueAmount  currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
-				<cac:SubsequentProcessTenderRequirement>
-					<!--OPT-090-->
-					<cbc:Name>buyer-categories</cbc:Name>
-					<!--BT-111-->
-					<cbc:Description languageID="ENG">Framework Buyer Categories ---</cbc:Description>
-				</cac:SubsequentProcessTenderRequirement>
+				<!--"id" : "BT-157-LotsGroup", "name" : "Group Framework Estimated Maximum Value"-->
+				<cbc:EstimatedMaximumValueAmount currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
 			</cac:FrameworkAgreement>
 		</cac:TenderingProcess>
+		<!-- GLO - Procurement project -->
 		<cac:ProcurementProject>
-			<!--BT-22-->
+			<!--"id" : "BT-22-LotsGroup",  "name" : "Internal Identifier"-->
 			<cbc:ID schemeName="InternalID">Object Reference Number---</cbc:ID>
-			<!--BT-21-->
+			<!--"id" : "BT-21-LotsGroup", "name" : "Title"-->
 			<cbc:Name languageID="ENG">Title ---</cbc:Name>
-			<!--BT-24-->
+			<!--"id" : "BT-24-LotsGroup",  "name" : "Description" -->
 			<cbc:Description languageID="ENG">Description ---</cbc:Description>
-			<!--BT-300-->
+			<!--"id" : "BT-300-LotsGroup", "name" : "Additional Information"-->
 			<cbc:Note languageID="ENG">Additional information for GLO-0001 ProcurementProject ---</cbc:Note>
+			<!-- -->
 			<cac:RequestedTenderTotal>
-				<!--BT-27-->
+				<!--"id" : "BT-27-LotsGroup", "name" : "Estimated Value" -->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
 		</cac:ProcurementProject>
 	</cac:ProcurementProjectLot>
+	<!-- -->
+	<!-- 5. LOTS -->
+	<!-- -->
+	<!-- -->
+	<!-- LOT-0001 -->
+	<!-- -->
 	<cac:ProcurementProjectLot>
+		<!-- "id": "BT-137-Lot", "name": "Purpose Lot Identifier" -->
 		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<!-- LOT-0001 - Tendering terms -->
 		<cac:TenderingTerms>
-			<!--BT-60-->
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:StrategicProcurement>
+								<!--"id" : "BT-717-Lot",   "name" : "Clean Vehicles Directive"-->
+								<efbc:ApplicableLegalBasis listName="cvd-scope">true</efbc:ApplicableLegalBasis>
+								<efac:StrategicProcurementInformation>
+									<!--"id" : "BT-735-Lot",   "name" : "CVD Contract Type"-->
+									<efbc:ProcurementCategoryCode listName="cvd-contract-type">oth-serv-contr</efbc:ProcurementCategoryCode>
+								</efac:StrategicProcurementInformation>
+							</efac:StrategicProcurement>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<!--"id" : "BT-60-Lot", "name" : "EU Funds"-->
 			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<!-- Organisation - Fiscal Legislation -->
 			<cac:FiscalLegislationDocumentReference>
+				<!-- id" : "OPT-111-Part-FiscalLegis", "name" : "Fiscal Legislation Document ID"-->
 				<cbc:ID>FiscalDocID1</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<!--OPT-301-->
+						<!--"id" : "OPT-301-Part-FiscalLegis", "name" : "Fiscal Legislation Organization Technical Identifier Reference -->
 						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
+			<!-- Organisation - Environment Legislation -->
 			<cac:EnvironmentalLegislationDocumentReference>
+				<!-- "id" : "OPT-112-Part-EnvironLegis", "name" : "Environmental Legislation Document ID" -->
 				<cbc:ID>EnvDocID1</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<!--OPT-301-->
+						<!--"id" : "OPT-301-Part-EnvironLegis", "name" : "Environmental Legislation Organization Technical Identifier Reference -->
 						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EnvironmentalLegislationDocumentReference>
+			<!-- Organisation - Employement Legislation -->
 			<cac:EmploymentLegislationDocumentReference>
+				<!-- "id" : "OPT-113-Part-EmployLegis", "name" : "Employment Legislation Document ID"-->
 				<cbc:ID>EmplDocID1</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
+						<!--"id" : "OPT-301-Part-EmployLegis", "name" : "Employment Legislation Organization Technical Identifier Reference" -->
 						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EmploymentLegislationDocumentReference>
+			<!-- LOT-0001 - Awarding criteria -->
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<!--BT-733-->
-					<cbc:Description languageID="ENG">AC order justification ---</cbc:Description>
-					<!--BT-543-->
-					<cbc:CalculationExpression languageID="ENG">Price-quality score calculation is based on …</cbc:CalculationExpression>
+					<!-- -->
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
 							<ext:UBLExtension>
 								<ext:ExtensionContent>
 									<efext:EformsExtension>
 										<efac:AwardCriterionParameter>
-											<!--BT-5421-->
+											<!--"id" : "BT-5421-Lot", "name" : "Award Criterion Number Weight"-->
 											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
-											<!--BT-541-->
+											<!--"id" : "BT-541-Lot", "name" : "Award Criterion Number"-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
 							</ext:UBLExtension>
 						</ext:UBLExtensions>
-						<!--BT-539-->
+						<!--"id" : "BT-539-Lot", "name" : "Award Criterion Type"-->
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
-						<!--BT-734-->
+						<!--"id" : "BT-734-Lot", "name" : "Award Criterion Name"-->
 						<cbc:Name languageID="ENG">Name of AC ---</cbc:Name>
-						<!--BT-540-->
+						<!--"id" : "BT-540-Lot", "name" : "Award Criterion Description"-->
+						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<!-- -->
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--"id" : "BT-5421-Lot", "name" : "Award Criterion Number Weight"-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--"id" : "BT-541-Lot", "name" : "Award Criterion Number"-->
+											<efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--"id" : "BT-539-Lot", "name" : "Award Criterion Type"-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--"id" : "BT-734-Lot", "name" : "Award Criterion Name"-->
+						<cbc:Name languageID="ENG">name of AC ---</cbc:Name>
+						<!--"id" : "BT-540-Lot", "name" : "Award Criterion Description"-->
 						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
+			<!-- Organisation - Additional Info Provider -->
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+					<!-- "id": "OPT-301-Lot-AddInfo", "name": "Additional Info Provider Technical Identifier Reference" -->
+					<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
+			<!-- Organisation - Document Provider -->
 			<cac:DocumentProviderParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organization">TPO-0002</cbc:ID>
+					<!-- ""id": "OPT-301-Lot-DocProvider","name": "Document Provider Technical Identifier Reference" -->
+					<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:DocumentProviderParty>
+			<!-- -->
 			<cac:AppealTerms>
 				<cac:PresentationPeriod>
-					<!--BT-99-->
+					<!--"id": "BT-99-Lot", "name": "Review Deadline Description"-->
 					<cbc:Description languageID="ENG">Review Deadline Description ---</cbc:Description>
 				</cac:PresentationPeriod>
+				<!-- Organisation - Review Info Provider -->
 				<cac:AppealInformationParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<!-- "id" : "OPT-301-Lot-ReviewInfo", "name" : "Review Info Provider Technical Identifier Reference" -->
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealInformationParty>
+				<!-- Organisation - Review Organisation -->
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
+						<!-- "id" : "OPT-301-Lot-ReviewOrg", "name" : "Review Organization Technical Identifier Reference" -->
 						<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
+				<!-- Organisation - Mediator -->
 				<cac:MediationParty>
 					<cac:PartyIdentification>
+						<!-- "id" : "OPT-301-Part-Mediator", "name" : "Mediator Technical Identifier Reference" -->
 						<cbc:ID schemeName="organization">ORG-0006</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:MediationParty>
 			</cac:AppealTerms>
 		</cac:TenderingTerms>
+		<!-- LOT-0001 - Tendering process -->
 		<cac:TenderingProcess>
+			<!-- -->
 			<ext:UBLExtensions>
+				<!-- -->
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
-							<!--BT-634-->
+							<!--"id": "BT-634-Lot",	"name": "Procurement Relaunch"-->
 							<efbc:ProcedureRelaunchIndicator>true</efbc:ProcedureRelaunchIndicator>
 						</efext:EformsExtension>
 					</ext:ExtensionContent>
 				</ext:UBLExtension>
 			</ext:UBLExtensions>
-			<!--BT-115-->
+			<!--"id": "BT-115-Lot",	"name": "GPA Coverage-->
 			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
 			<cac:NoticeDocumentReference>
-				<!--BT-125-->
+				<!--id": "BT-125(i)-Lot", "name": "Previous Planning Identifier"-->
 				<cbc:ID>9c0fd704-64d3-4294-a3b6-6df45911ab9f-01</cbc:ID>
-				<!--BT-1251-->
+				<!--id": "BT-1251-Lot",	"name": "Previous Planning Part Identifier"-->
 				<cbc:ReferencedDocumentInternalAddress>123</cbc:ReferencedDocumentInternalAddress>
-				<!--BT-125-->
-				<cbc:VersionID>03</cbc:VersionID>
 			</cac:NoticeDocumentReference>
+			<!-- -->
 			<cac:AuctionTerms>
-				<!--BT-767-->
+				<!--"id": "BT-767-Lot",	"name": "Electronic Auction",-->
 				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
 			</cac:AuctionTerms>
+			<!-- -->
 			<cac:FrameworkAgreement>
-				<!--BT-157-->
-				<cbc:EstimatedMaximumValueAmount  currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
+				<!--??? "id": "BT-157-LotsGroup","name": "Group Framework Estimated Maximum Value"-->
+				<cbc:EstimatedMaximumValueAmount currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
 				<cac:SubsequentProcessTenderRequirement>
-					<!--OPT-090-->
+					<!--"id": "OPT-090-Lot", "name": "Buyer Categories"-->
 					<cbc:Name>buyer-categories</cbc:Name>
-					<!--BT-111-->
+					<!--id": "BT-111-Lot",	"name": "Framework Buyer Categories"-->
+					<cbc:Description languageID="ENG">Framework Buyer Categories ---</cbc:Description>
+				</cac:SubsequentProcessTenderRequirement>
+			</cac:FrameworkAgreement>
+			<!-- -->
+			<cac:ContractingSystem>
+				<!--"id": "BT-765-Lot",	"name": "Framework Agreement"-->
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-w-rc</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<!--"id": "BT-766-Lot",	"name": "Dynamic Purchasing System"-->
+				<cbc:ContractingSystemTypeCode listName="dps-usage">dps-list</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<!-- LOT-0001 - Procurement project -->
+		<cac:ProcurementProject>
+			<!-- "id": "BT-22-Procedure","name": "Internal Identifier" -->
+			<cbc:ID schemeName="InternalID">Lot Reference A</cbc:ID>
+			<!-- "id": "BT-21-Procedure","name": "Title" -->
+			<cbc:Name languageID="ENG">Title ---</cbc:Name>
+			<!-- "id": "BT-24-Procedure","name": "Description" -->
+			<cbc:Description languageID="ENG">Description ---</cbc:Description>
+			<!-- "id": "BT-23-Procedure","name": "Main Nature" -->
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<!--"id": "BT-25-Lot", "name": "Quantity"-->
+			<cbc:EstimatedOverallContractQuantity unitCode="HUR">1000</cbc:EstimatedOverallContractQuantity>
+			<!-- id": "BT-300-Procedure","name": "Additional Information" -->
+			<cbc:Note languageID="ENG">Additional information for GLO-0001 ProcurementProject ---</cbc:Note>
+			<cac:ProcurementAdditionalType>
+				<!-- "id": "BT-531-Procedure", "name": "Additional Nature (different from Main) -->
+				<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<!--"id": "BT-774-Lot",	"name": "Green Procurement-->
+				<cbc:ProcurementTypeCode listName="environmental-impact">clim-mitig</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<!--"id": "BT-775-Lot",	"name": "Social Procurement"-->
+				<cbc:ProcurementTypeCode listName="social-objective">acc-all</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<!--"id": "BT-776-Lot","Innovative Procurement"-->
+				<cbc:ProcurementTypeCode listName="innovative-acquisition">proc-innov</cbc:ProcurementTypeCode>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<!--"id": "BT-06-Lot","name": "Strategic Procurement"-->
+				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
+				<!--id": "BT-777-Lot","Strategic Procurement Description"-->
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
+			</cac:ProcurementAdditionalType>
+			<cac:ProcurementAdditionalType>
+				<!--"id": "BT-754-Lot",	"name": "Accessibility"-->
+				<cbc:ProcurementTypeCode listName="accessibility">n-inc-just</cbc:ProcurementTypeCode>
+				<!--id": "BT-755-Lot", "name": "Accessibility Justification",-->
+				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
+			</cac:ProcurementAdditionalType>
+			<cac:RequestedTenderTotal>
+				<!--id": "BT-27-Lot", "name": "Estimated Value"-->
+				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
+			</cac:RequestedTenderTotal>
+			<cac:MainCommodityClassification>
+				<!-- "BT-26(m)-Procedure", "name": "Classification Type (e.g. CPV)" -->
+				<!-- "id": "BT-262-Procedure","name": "Main Classification Code" -->
+				<cbc:ItemClassificationCode listName="cpv">75121000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<!-- -->
+			<cac:RealizedLocation>
+				<!-- "id": "BT-728-Lot", "name": "Place Performance Additional Information" -->
+				<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
+				<cac:Address>
+					<!--"id" : "BT-5101(a)-Lot", "name" : "Place Performance Street"-->
+					<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+					<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
+					<!-- "id" : "BT-5131-Lot", "name" : "Place Performance City"-->
+					<cbc:CityName>London</cbc:CityName>
+					<!--"id" : "BT-5121-Lot", "name" : "Place Performance Post Code"-->
+					<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+					<!--"id" : "BT-5071-Lot", "name" : "Place Performance Country Subdivision"-->
+					<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
+					<cac:Country>
+						<!--"id" : "BT-5141-Lot", "name" : "Place Performance Country Code"-->
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<!-- -->
+			<cac:RealizedLocation>
+				<!-- This location represents a large area without a specific address, in this case "Anywhere in the given country" -->
+				<!--"id" : "BT-728-Lot", "name" : "Place of Performance Additional Information"-->
+				<cbc:Description languageID="ENG">Additional information ---</cbc:Description>
+				<cac:Address>
+					<!--"id" : "BT-727-Lot", "name" : "Place Performance Services Other"-->
+					<cbc:Region>anyw-cou</cbc:Region>
+					<!--"id" : "BT-5141-Lot", "name" : "Place Performance Country Code"-->
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+			<!-- -->
+			<cac:PlannedPeriod>
+				<!--"id": "BT-536-Lot",	"name": "Duration Start Date"-->
+				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
+				<!--"id": "BT-537-Lot",	"name": "Duration End Date"-->
+				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
+			</cac:PlannedPeriod>
+			<!-- -->
+			<cac:ContractExtension>
+				<!--"id": "BT-54-Lot","name": "Options Description",-->
+				<cbc:OptionsDescription languageID="ENG">Options description ---</cbc:OptionsDescription>
+				<!--"id": "BT-58-Lot",	"name": "Renewal Maximum"-->
+				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
+				<cac:Renewal>
+					<cac:Period>
+						<!--"id": "BT-57-Lot",	"name": "Renewal Description"-->
+						<cbc:Description languageID="ENG">Renewal description ---</cbc:Description>
+					</cac:Period>
+				</cac:Renewal>
+			</cac:ContractExtension>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<!-- -->
+	<!-- LOT-0002 -->
+	<!-- -->
+	<cac:ProcurementProjectLot>
+		<!-- "id": "BT-137-Lot", "name": "Purpose Lot Identifier" -->
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<!-- LOT-0002 - Tendering terms -->
+		<cac:TenderingTerms>
+			<!--"id" : "BT-60-Lot", "name" : "EU Funds"-->
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<!-- Organisation - Fiscal Legislation -->
+			<cac:FiscalLegislationDocumentReference>
+				<!-- id" : "OPT-111-Lot-FiscalLegis", "name" : "Fiscal Legislation Document ID"-->
+				<cbc:ID>FiscalDocID1</cbc:ID>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--"id" : "OPT-301-Part-FiscalLegis", "name" : "Fiscal Legislation Organization Technical Identifier Reference -->
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:FiscalLegislationDocumentReference>
+			<!-- Organisation - Environment Legislation -->
+			<cac:EnvironmentalLegislationDocumentReference>
+				<!-- "id" : "OPT-112-Lot-EnvironLegis", "name" : "Environmental Legislation Document ID" -->
+				<cbc:ID>EnvDocID1</cbc:ID>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--"id" : "OPT-301-Lot-EnvironLegis", "name" : "Environmental Legislation Organization Technical Identifier Reference -->
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:EnvironmentalLegislationDocumentReference>
+			<!-- Organisation - Employement Legislation -->
+			<cac:EmploymentLegislationDocumentReference>
+				<!-- "id" : "OPT-113-Lot-EmployLegis", "name" : "Employment Legislation Document ID"-->
+				<cbc:ID>EmplDocID1</cbc:ID>
+				<cac:IssuerParty>
+					<cac:PartyIdentification>
+						<!--"id" : "OPT-301-Lot-EmployLegis", "name" : "Employment Legislation Organization Technical Identifier Reference" -->
+						<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:IssuerParty>
+			</cac:EmploymentLegislationDocumentReference>
+			<!-- Awarding criteria -->
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--"id" : "BT-5421-Lot", "name" : "Award Criterion Number Weight"-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--"id" : "BT-541-Lot", "name" : "Award Criterion Number"-->
+											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--"id" : "BT-539-Lot", "name" : "Award Criterion Type"-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+						<!--"id" : "BT-734-Lot", "name" : "Award Criterion Name"-->
+						<cbc:Name languageID="ENG">Name of AC ---</cbc:Name>
+						<!--"id" : "BT-540-Lot", "name" : "Award Criterion Description"-->
+						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<!--"id" : "BT-5421-Lot", "name" : "Award Criterion Number Weight"-->
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<!--"id" : "BT-541-Lot", "name" : "Award Criterion Number"-->
+											<efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<!--"id" : "BT-539-Lot", "name" : "Award Criterion Type"-->
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<!--"id" : "BT-734-Lot", "name" : "Award Criterion Name"-->
+						<cbc:Name languageID="ENG">name of AC ---</cbc:Name>
+						<!--"id" : "BT-540-Lot", "name" : "Award Criterion Description"-->
+						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<!-- Organisation - Additional Info Provider -->
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<!-- "id": "OPT-301-Lot-AddInfo", "name": "Additional Info Provider Technical Identifier Reference" -->
+					<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<!-- Organisation - Document Provider -->
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<!-- ""id": "OPT-301-Lot-DocProvider","name": "Document Provider Technical Identifier Reference" -->
+					<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<!-- -->
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<!--"id": "BT-99-Lot", "name": "Review Deadline Description"-->
+					<cbc:Description languageID="ENG">Review Deadline Description ---</cbc:Description>
+				</cac:PresentationPeriod>
+				<!-- Organisation - Review Info Provider -->
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<!-- "id" : "OPT-301-Lot-ReviewInfo", "name" : "Review Info Provider Technical Identifier Reference" -->
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<!-- Organisation - Review Organisation -->
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<!-- "id" : "OPT-301-Lot-ReviewOrg", "name" : "Review Organization Technical Identifier Reference" -->
+						<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<!-- Organisation - Mediator -->
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<!-- "id" : "OPT-301-Part-Mediator", "name" : "Mediator Technical Identifier Reference" -->
+						<cbc:ID schemeName="organization">ORG-0006</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<!-- LOT-0002 - Tendering process -->
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<!--"id": "BT-634-Lot",	"name": "Procurement Relaunch"-->
+							<efbc:ProcedureRelaunchIndicator>true</efbc:ProcedureRelaunchIndicator>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<!--"id": "BT-115-Lot",	"name": "GPA Coverage-->
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:NoticeDocumentReference>
+				<!--id": "BT-125(i)-Lot", "name": "Previous Planning Identifier"-->
+				<cbc:ID>9c0fd704-64d3-4294-a3b6-6df45911ab9f-01</cbc:ID>
+				<!--id": "BT-1251-Lot",	"name": "Previous Planning Part Identifier"-->
+				<cbc:ReferencedDocumentInternalAddress>123</cbc:ReferencedDocumentInternalAddress>
+			</cac:NoticeDocumentReference>
+			<!-- -->
+			<cac:AuctionTerms>
+				<!--"id": "BT-767-Lot",	"name": "Electronic Auction",-->
+				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<!-- -->
+			<cac:FrameworkAgreement>
+				<!--??? "id": "BT-157-LotsGroup","name": "Group Framework Estimated Maximum Value"-->
+				<cbc:EstimatedMaximumValueAmount currencyID="EUR">10000</cbc:EstimatedMaximumValueAmount>
+				<cac:SubsequentProcessTenderRequirement>
+					<!--"id": "OPT-090-Lot", "name": "Buyer Categories"-->
+					<cbc:Name>buyer-categories</cbc:Name>
+					<!--id": "BT-111-Lot",	"name": "Framework Buyer Categories"-->
 					<cbc:Description languageID="ENG">Framework Buyer Categories ---</cbc:Description>
 				</cac:SubsequentProcessTenderRequirement>
 			</cac:FrameworkAgreement>
 			<cac:ContractingSystem>
-				<!--BT-765-->
+				<!--"id": "BT-765-Lot",	"name": "Framework Agreement"-->
 				<cbc:ContractingSystemTypeCode listName="framework-agreement">fa-w-rc</cbc:ContractingSystemTypeCode>
 			</cac:ContractingSystem>
 			<cac:ContractingSystem>
-				<!--BT-766-->
-				<cbc:ContractingSystemTypeCode listName="dps-usage">dps-list</cbc:ContractingSystemTypeCode>
+				<!--"id": "BT-766-Lot",	"name": "Dynamic Purchasing System"-->
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
 			</cac:ContractingSystem>
 		</cac:TenderingProcess>
+		<!-- LOT-0002 - Procurement project -->
 		<cac:ProcurementProject>
-			<!--BT-22-->
-			<cbc:ID schemeName="InternalID">Object Reference Number---</cbc:ID>
-			<!--BT-21-->
-			<cbc:Name languageID="ENG">Title ---</cbc:Name>
-			<!--BT-24-->
-			<cbc:Description languageID="ENG">Description ---</cbc:Description>
-			<!--BT-23-->
+			<!-- "id": "BT-22-Lot","name": "Internal Identifier" -->
+			<cbc:ID schemeName="InternalID">Lot Reference B</cbc:ID>
+			<!-- "id": "BT-21-Lot","name": "Title" -->
+			<cbc:Name languageID="ENG">Title lot 2---</cbc:Name>
+			<!-- "id": "BT-24-Lot","name": "Description" -->
+			<cbc:Description languageID="ENG">Description lot 2---</cbc:Description>
+			<!-- "id": "BT-23-Lot","name": "Main Nature" -->
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
-			<!--BT-25-->
+			<!--"id": "BT-25-Lot", "name": "Quantity"-->
 			<cbc:EstimatedOverallContractQuantity unitCode="HUR">1000</cbc:EstimatedOverallContractQuantity>
-			<!--BT-300-->
-			<cbc:Note languageID="ENG">Additional information for GLO-0001 ProcurementProject ---</cbc:Note>
+			<!-- id": "BT-300-Procedure","name": "Additional Information" -->
+			<cbc:Note languageID="ENG">Additional information for lot 2 ProcurementProject ---</cbc:Note>
 			<cac:ProcurementAdditionalType>
-				<!--BT-531-->
+				<!-- "id": "BT-531-Procedure", "name": "Additional Nature (different from Main) -->
 				<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
-				<!--BT-774-->
-				<cbc:ProcurementTypeCode listName="environmental-impact">emas-com</cbc:ProcurementTypeCode>
+				<!--"id": "BT-774-Lot",	"name": "Green Procurement-->
+				<cbc:ProcurementTypeCode listName="environmental-impact">clim-mitig</cbc:ProcurementTypeCode>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
-				<!--BT-775-->
-				<cbc:ProcurementTypeCode listName="social-procurement">acc-all</cbc:ProcurementTypeCode>
+				<!--"id": "BT-775-Lot",	"name": "Social Procurement"-->
+				<cbc:ProcurementTypeCode listName="social-objective">acc-all</cbc:ProcurementTypeCode>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
-				<!--BT-776-->
-				<cbc:ProcurementTypeCode listName="innovative-acquisition">buy-eff</cbc:ProcurementTypeCode>
+				<!--"id": "BT-776-Lot","Innovative Procurement"-->
+				<cbc:ProcurementTypeCode listName="innovative-acquisition">proc-innov</cbc:ProcurementTypeCode>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
-				<!--BT-06-->
+				<!--"id": "BT-06-Lot","name": "Strategic Procurement"-->
 				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
-				<!--BT-777-->
-				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
+				<!--id": "BT-777-Lot","Strategic Procurement Description"-->
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description lot 2 ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
-				<!--BT-754-->
-				<cbc:ProcurementTypeCode listName="accessibility">inc</cbc:ProcurementTypeCode>
-				<!--BT-755-->
-				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
+				<!--"id": "BT-754-Lot",	"name": "Accessibility"-->
+				<cbc:ProcurementTypeCode listName="accessibility">n-inc-just</cbc:ProcurementTypeCode>
+				<!--id": "BT-755-Lot", "name": "Accessibility Justification",-->
+				<cbc:ProcurementType languageID="ENG">Accessibility Justification lot 2 ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:RequestedTenderTotal>
-				<!--BT-27-->
+				<!--id": "BT-27-Lot", "name": "Estimated Value"-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
+			<!-- -->
 			<cac:MainCommodityClassification>
-				<!--BT-26-->
-				<!--BT-262-->
+				<!-- "BT-26(m)-Procedure", "name": "Classification Type (e.g. CPV)" -->
+				<!-- "id": "BT-262-Procedure","name": "Main Classification Code" -->
 				<cbc:ItemClassificationCode listName="cpv">75121000</cbc:ItemClassificationCode>
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
-				<cbc:Description languageID="ENG">The main location is ...</cbc:Description>
+				<cbc:Description languageID="ENG">The main location of lot 2 is ...</cbc:Description>
 				<cac:Address>
-					<!--BT-5101-->
+					<!--"id" : "BT-5101(a)-Procedure", "name" : "Place Performance Street"-->
 					<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
 					<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-					<!--BT-5131-->
+					<!-- "id" : "BT-5131-Procedure", "name" : "Place Performance City"-->
 					<cbc:CityName>London</cbc:CityName>
-					<!--BT-5121-->
+					<!--"id" : "BT-5121-Procedure", "name" : "Place Performance Post Code"-->
 					<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-					<!--BT-5071-->
-					<cbc:CountrySubentityCode listName="nuts">UKI6</cbc:CountrySubentityCode>
+					<!--"id" : "BT-5071-Procedure", "name" : "Place Performance Country Subdivision"-->
+					<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
 					<cac:Country>
-						<!--BT-5141-->
+						<!--"id" : "BT-5141-Lot", "name" : "Place Performance Country Code"-->
 						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:RealizedLocation>
 				<!-- This location represents a large area without a specific address, in this case "Anywhere in the given country" -->
-				<!--BT-728-->
+				<!--"id" : "BT-728-Lot", "name" : "Place of Performance Additional Information"-->
 				<cbc:Description languageID="ENG">Additional information ---</cbc:Description>
 				<cac:Address>
-					<!--BT-727-->
+					<!--"id" : "BT-727-Lot", "name" : "Place Performance Services Other"-->
 					<cbc:Region>anyw-cou</cbc:Region>
-					<!--BT-5141-->
+					<!--"id" : "BT-5141-Lot", "name" : "Place Performance Country Code"-->
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
-				<!--BT-536-->
+				<!--"id": "BT-536-Lot",	"name": "Duration Start Date"-->
 				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
-				<!--BT-537-->
+				<!--"id": "BT-537-Lot",	"name": "Duration End Date"-->
 				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
-				<!--BT-36-->
-				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
-				<!--BT-54-->
-				<cbc:OptionsDescription languageID="ENG">Options description ---</cbc:OptionsDescription>
-				<!--BT-58-->
+				<!--"id": "BT-54-Lot","name": "Options Description",-->
+				<cbc:OptionsDescription languageID="ENG">Options description lot 2 ---</cbc:OptionsDescription>
+				<!--"id": "BT-58-Lot",	"name": "Renewal Maximum"-->
 				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
 				<cac:Renewal>
 					<cac:Period>
-						<!--BT-57-->
-						<cbc:Description languageID="ENG">Renewal description ---</cbc:Description>
+						<!--"id": "BT-57-Lot",	"name": "Renewal Description"-->
+						<cbc:Description languageID="ENG">Renewal description lot 2 ---</cbc:Description>
 					</cac:Period>
 				</cac:Renewal>
 			</cac:ContractExtension>
 		</cac:ProcurementProject>
-    </cac:ProcurementProjectLot>
-    <cac:TenderResult>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
 		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
 	</cac:TenderResult>
 </ContractAwardNotice>

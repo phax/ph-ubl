@@ -11,6 +11,8 @@
 						<!--BT-161 Notice Value-->
 						<cbc:TotalAmount currencyID="EUR">390697.84</cbc:TotalAmount>
 						<efac:LotResult>
+							<!--OPT-322-->
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<!--BT-711 Tender Value Highest-->
 							<cbc:HigherTenderAmount currencyID="EUR">95414</cbc:HigherTenderAmount>
 							<!--BT-710 Tender Value Lowest-->
@@ -75,6 +77,8 @@
 							</efac:TenderLot>
 						</efac:LotResult>
 						<efac:LotResult>
+							<!---OPT-322-->
+							<cbc:ID schemeName="result">RES-0002</cbc:ID>
 							<!--BT-711 Tender Value Highest-->
 							<cbc:HigherTenderAmount currencyID="EUR">26500</cbc:HigherTenderAmount>
 							<!--BT-710 Tender Value Lowest-->
@@ -142,6 +146,8 @@
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							<!--BT-171 Tender Rank-->
 							<cbc:RankCode>1</cbc:RankCode>
+							<!--BT-1711	Tender Ranked-->
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<!--BT-193 Tender Variant-->
 							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
 							<!--BT-720 Tender Value for lots & group of lots all together-->
@@ -170,6 +176,8 @@
 							<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
 							<!--BT-171 Tender Rank-->
 							<cbc:RankCode>1</cbc:RankCode>
+							<!--BT-1711	Tender Ranked-->
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<!--BT-193 Tender Variant-->
 							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
 							<!--BT-720 Tender Value for lots & group of lots all together-->
@@ -203,12 +211,7 @@
 							<cbc:Title languageID="FRA">Agence Centre</cbc:Title>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -231,12 +234,7 @@
 							<cbc:Title languageID="FRA">Agence Hauts de Rouen</cbc:Title>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0005</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -266,7 +264,7 @@
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -297,8 +295,8 @@
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<!--BT-501 using ISO ICD list - Peppol codelist -->
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<!--BT-501 Organisation Identifier -->
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502 Organization Contact Point (Role or Department preferred, Individual name only when strictly necessary)-->
@@ -306,7 +304,7 @@
 									<!--BT-503 Organization Contact Telephone Number-->
 									<cbc:Telephone>+33 235156161</cbc:Telephone>
 									<!--BT-739 Organization Contact Fax-->
-									<!--<cbc:Telefax>?</cbc:Telefax>-->
+									<cbc:Telefax>+33 235156169</cbc:Telefax>
 									<!--BT-506 Organization Contact Email Address-->
 									<cbc:ElectronicMail>contact@rouenhabitat.fr</cbc:ElectronicMail>
 								</cac:Contact>
@@ -314,6 +312,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>http://rouen.tribunal-administratif.fr/</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -336,7 +335,7 @@
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 555 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<!--BT-502 Organization COntact Point (Role or Department preferred, Individual name only when strictly necessary)-->
@@ -344,7 +343,7 @@
 									<!--BT-503 Organization Contact Telephone Number-->
 									<cbc:Telephone>+33 232081270</cbc:Telephone>
 									<!--BT-739 Organization Contact Fax-->
-									<!--<cbc:Telefax>?</cbc:Telefax>-->
+									<cbc:Telefax>+33 232081279</cbc:Telefax>
 									<!--BT-506 Organization Contact Email Address-->
 									<cbc:ElectronicMail>greffe.ta-rouen@juradm.fr</cbc:ElectronicMail>
 								</cac:Contact>
@@ -352,6 +351,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -360,20 +360,27 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<cbc:WebsiteURI>https://www.espaces-verts-lemire.fr</cbc:WebsiteURI>
 								<efbc:CompanySizeCode listName="economic-operator-size">micro</efbc:CompanySizeCode>
@@ -394,24 +401,20 @@
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<!--BT-501 Organisation Identifier -->
-									<cbc:CompanyID schemeID="SIREN">326 912 557</cbc:CompanyID>
-									<!-- Beneficial owner of the winning organisation-->
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706 Winner Owner Nationality -->
-												<cbc:NationalityID schemeName="country">FRA</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
+									<cbc:CompanyID>326 912 557</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 2 35 67 82 82</cbc:Telephone>
+									<cbc:Telefax>+33 2 35 67 82 829</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0002</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<cbc:WebsiteURI>https://idverde.com/</cbc:WebsiteURI>
 								<efbc:CompanySizeCode listName="economic-operator-size">medium</efbc:CompanySizeCode>
@@ -431,34 +434,40 @@
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:RegistrationName>SIREN</cbc:RegistrationName>
 									<!--BT-501 using ISO ICD list - Peppol codelist -->
-									<cbc:CompanyID schemeID="002">339 609 661</cbc:CompanyID>
+									<cbc:CompanyID>339 609 661</cbc:CompanyID>
 									<!-- Beneficial owner of the winning organisation-->
-									<cac:ShareholderParty>
-										<cac:Party>
-											<cac:Person>
-												<!--BT-706 Winner Owner Nationality -->
-												<cbc:NationalityID schemeName="country">FRA</cbc:NationalityID>
-											</cac:Person>
-										</cac:Party>
-									</cac:ShareholderParty>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+33 1 82 97 04 80</cbc:Telephone>
+									<cbc:Telefax>+33 1 82 97 04 809</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<!--BT-706-->
+							<efac:Nationality>
+								<cbc:NationalityID>FRA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0002</cbc:ID>
+							<!--BT-706-->
+							<efac:Nationality>
+								<cbc:NationalityID>FRA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
 	<!--BT-701 Notice Identifier-->
-	<cbc:ID>df45f4d1-2208-47cb-bc7a-9c7edcf8d2b8</cbc:ID>
+	<cbc:ID schemeName="notice-id">df45f4d1-2208-47cb-bc7a-9c7edcf8d2b8</cbc:ID>
 	<!--BT-04 Procedure Identifier-->
 	<cbc:ContractFolderID>e3cdabf1-e057-47a5-9210-b1f6fc757228</cbc:ContractFolderID>
 	<!--BT-05 Notice Dispatch Date-->
@@ -467,7 +476,7 @@
 	<!-- Notive Version number, to distinguish versions of a same notice within a same procedure -->
 	<!--BT-757 Version Identifier-->
 	<cbc:VersionID>01</cbc:VersionID>
-	<cbc:RequestedPublicationDate>2020-01-28+01:00</cbc:RequestedPublicationDate>
+	<cbc:RequestedPublicationDate>2019-12-21+01:00</cbc:RequestedPublicationDate>
 	<!--BT-01 Procedure Legal Basis -->
 	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
 	<!--BT-03 Form Type / BT-02 Notice Type-->
@@ -480,8 +489,6 @@
 		<!--BT-11 Buyer Legal Type (see http://publications.europa.eu/resource/authority/buyer-legal-type)-->
 		<cac:ContractingPartyType>
 			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-la</cbc:PartyTypeCode>
-			<!--if other than Buyer Legal type codes -->
-			<cbc:PartyType languageID="FRA">OPH</cbc:PartyType>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
 			<!--BT-10 Activity Authority (see http://publications.europa.eu/resource/authority/main-activity) -->
@@ -536,7 +543,6 @@
 			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<cbc:CalculationExpression languageID="FRA">Le calcul du score prix-qualité est basé sur …</cbc:CalculationExpression>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
 							<ext:UBLExtension>
@@ -601,10 +607,6 @@
 		<cac:TenderingProcess>
 			<!--BT-115 GPA Coverage -->
 			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
-			<!--BT-125 Previous Planning Identifier-->
-			<cac:NoticeDocumentReference>
-				<cbc:ID>219497-2019</cbc:ID>
-			</cac:NoticeDocumentReference>
 			<!--BT-767 - Electronic Auction-->
 			<cac:AuctionTerms>
 				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
@@ -653,6 +655,10 @@
 				<cbc:EndDate>2020-12-31+02:00</cbc:EndDate>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
+				<!--BT-54-->
+				<cbc:OptionsDescription languageID="FRA">Options description ---</cbc:OptionsDescription>
+				<!--BT-58-Lot - Renewal Maximum -->
+				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
 				<!--BT-57 Lot - Renewal Description-->
 				<cac:Renewal>
 					<cac:Period>
@@ -668,7 +674,6 @@
 			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<cbc:CalculationExpression languageID="FRA">Le calcul du score prix-qualité est basé sur …</cbc:CalculationExpression>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
 							<ext:UBLExtension>
@@ -684,7 +689,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="FRA">Prix</cbc:Name>
-						<cbc:Description languageID="FRA">Le prix contribue for 60 % …</cbc:Description>
+						<cbc:Description languageID="FRA">Le prix contribue pour 60 % …</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 					<cac:SubordinateAwardingCriterion>
 						<ext:UBLExtensions>
@@ -701,7 +706,7 @@
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
 						<cbc:Name languageID="FRA">Qualité</cbc:Name>
-						<cbc:Description languageID="FRA">La valeur technique participle pour 40 % …</cbc:Description>
+						<cbc:Description languageID="FRA">La valeur technique est évaluée selon …</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
@@ -734,10 +739,6 @@
 			<!--BT-115 GPA Coverage -->
 			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
 			<!--BT-767 - Electronic Auction-->
-			<!--BT-125 Previous Planning Identifier-->
-			<cac:NoticeDocumentReference>
-				<cbc:ID>219497-2019</cbc:ID>
-			</cac:NoticeDocumentReference>
 			<cac:AuctionTerms>
 				<cbc:AuctionConstraintIndicator>true</cbc:AuctionConstraintIndicator>
 			</cac:AuctionTerms>
@@ -785,6 +786,8 @@
 				<cbc:EndDate>2020-12-31+01:00</cbc:EndDate>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
+				<!--BT-54-->
+				<cbc:OptionsDescription languageID="FRA">Options description ---</cbc:OptionsDescription>
 				<!--BT-58 - Renewal Maximum-->
 				<cbc:MaximumNumberNumeric>3</cbc:MaximumNumberNumeric>
 				<!--BT-57 Lot - Renewal Description-->

@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>6</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">6</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -23,18 +23,21 @@
 									<cbc:StreetName>Ministry of Defence, C&amp;C, Defence Medical Services (DMS), DMS Whittington</cbc:StreetName>
 									<cbc:CityName>Lichfield</cbc:CityName>
 									<cbc:PostalZone>WS14 9PY</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI32</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>+44 3067700301</cbc:Telephone>
+									<cbc:Telefax>+44 30677003019</cbc:Telefax>
 									<cbc:ElectronicMail>ashleigh.ely100@mod.gov.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -43,15 +46,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -62,8 +68,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>64bdfc22-2f35-4109-9817-a8f0bd9468b6</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">64bdfc22-2f35-4109-9817-a8f0bd9468b6</cbc:ID>
 	<cbc:IssueDate>2020-04-16+01:00</cbc:IssueDate>
 	<cbc:IssueTime>12:35:04+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
@@ -72,7 +78,6 @@
 	<cbc:NoticeTypeCode listName="planning">pin-only</cbc:NoticeTypeCode>
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
 	<cac:ContractingParty>
-		<cac:ContractingPartyType/>
 		<cac:Party>
 			<cac:PartyIdentification>
 				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
@@ -98,25 +103,21 @@
 		</cac:MainCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
-		<cac:PlannedPeriod>
-			<cbc:StartDate>2021-04-23+02:00</cbc:StartDate>
-			<cbc:DurationMeasure unitCode="YEAR">4</cbc:DurationMeasure>
-		</cac:PlannedPeriod>
 	</cac:ProcurementProject>
 	<cac:ProcurementProjectLot>
-		<cbc:ID schemeName="Part">PAR-0001</cbc:ID>
+		<cbc:ID schemeName="Part">PAR-0000</cbc:ID>
 		<cac:TenderingTerms>
 			<cac:FiscalLegislationDocumentReference>
 				<cbc:ID>ID1</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -124,7 +125,7 @@
 				<cbc:ID>ID2</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EnvironmentalLegislationDocumentReference>
@@ -132,7 +133,7 @@
 				<cbc:ID>ID3</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EmploymentLegislationDocumentReference>
@@ -146,12 +147,16 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
+			<cac:PlannedPeriod>
+				<cbc:StartDate>2021-04-23+02:00</cbc:StartDate>
+				<cbc:DurationMeasure unitCode="YEAR">4</cbc:DurationMeasure>
+			</cac:PlannedPeriod>
 		</cac:ProcurementProject>
 	</cac:ProcurementProjectLot>
 </PriorInformationNotice>

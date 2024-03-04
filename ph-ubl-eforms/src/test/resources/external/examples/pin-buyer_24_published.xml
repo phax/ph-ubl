@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:168752-2020:TEXT:EN:HTML
+	 So it's the same notice as pin-buyer_24 (same notice ID), but with added fake publication information.
+-->
+<PriorInformationNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">1</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.hsanmartino.it</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">IRCCS Policlinico ospedale San Martino</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>largo Rosanna Benzi 10</cbc:StreetName>
+									<cbc:CityName>Genova</cbc:CityName>
+									<cbc:PostalZone>16132</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITC33</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+39 0105552612</cbc:Telephone>
+									<cbc:Telefax>+39 0105556510</cbc:Telefax>
+									<cbc:ElectronicMail>settore.patrimoniale@hsanmartino.it</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ITA">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+					<efac:Publication>
+						<efbc:NoticePublicationID schemeName="ojs-notice-id">12345678-2025</efbc:NoticePublicationID>
+						<efbc:GazetteID schemeName="ojs-id">123/2025</efbc:GazetteID>
+						<efbc:PublicationDate>2025-05-22+01:00</efbc:PublicationDate>
+					</efac:Publication>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">e5dc3c2b-3df5-45e0-af7f-399ca201d7e0</cbc:ID>
+	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
+	<cbc:IssueTime>03:57:07+01:00</cbc:IssueTime>
+	<cbc:VersionID>02</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="planning">pin-buyer</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ITA</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://www.hsanmartino.it</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-la</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:ProcurementProject>
+		<cbc:ID>not available</cbc:ID>
+		<cbc:Name languageID="ITA">Avviso consultazione preliminare mat. dedicato a ventilatore polmonare mod. Monnal T75</cbc:Name>
+		<cbc:Description languageID="ITA">Oggetto: Consultazione preliminare di mercato volta all’eventuale acquisizione, mediante procedura negoziata senza previa pubblicazione di un bando di gara, ex art. 63, comma 2, lett. b), del decreto legislativo del 18.4.2016, n. 50, per la fornitura di materiale dedicato a ventilatore polmonare mod. Monnal T75. Motivazione della pubblicazione: con il presente avviso si intende avviare una consultazione preliminare di mercato al fine di conoscere se, diversamente dalle informazioni in possesso di questa stazione appaltante, altri operatori economici oltre a Medival srl, possano fornire i prodotti di seguito indicati: — valvola espiratoria per ventilatori Monnal T75 autoclavabile blu, n. 50 pezzi, — sensore di flusso per ventilatori Monnal T75 autoclavabile blu, n. 50 pezzi, — valvola espiratoria per ventilator Monnal T75, n. 350 pezzi, — sensore di flusso per ventilatori Monnal T75, n. 350 pezzi.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ITA">Si richiede ad eventuali operatori economici che dispongano di soluzioni che ottemperino in maniera equivalente ai requisiti tecnici e prestazionali sopra indicati di presentare adeguata documentazione tecnico-scientifica entro e non oltre le ore 12:00 del giorno 23.4.2020 al seguente indirizzo e-mail: protocollo@pec.hsanmartino.it. Indicando: — gli estremi del mittente (ragione/denominazione sociale), indirizzo, numero di telefono, fax ed indirizzo di posta elettronica ove inviare eventuali comunicazioni, — la dicitura: «fornitura di materiale dedicato a ventilatore polmonare mod. Monnal T75». Il termine per la presentazione della documentazione è tassativo. Qualora entro il termine stabilito un concorrente presenti più plichi, gli stessi sono numerati secondo l'ordine di presentazione e verrà considerato valido soltanto l'ultimo. Per eventuali chiarimenti rivolgersi al responsabile del procedimento: — sig.ra Paola Rovegno — tel. +39 0105552612; paola.rovegno@hsanmartino.it, — dott.ssa Michela Mattera — +39 0105553063; michela.mattera@hsanmartino.it.</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">33157000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<cbc:CountrySubentityCode listName="nuts">ITC33</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+</PriorInformationNotice>

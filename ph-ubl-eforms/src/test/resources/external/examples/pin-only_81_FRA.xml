@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>6</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">6</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -24,20 +24,23 @@
 									<cbc:StreetName>BCRM de Toulon — BP 25</cbc:StreetName>
 									<cbc:CityName>Toulon Cedex 9</cbc:CityName>
 									<cbc:PostalZone>83800</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<!--<cac:PartyLegalEntity/>-->
 								<cac:Contact>
 									<cbc:Name>mr le directeur du service de soutien de la flotte de Toulon</cbc:Name>
 									<cbc:Telephone>+33 422424830</cbc:Telephone>
+									<cbc:Telefax>+33 4224248309</cbc:Telefax>
 									<cbc:ElectronicMail>pascale.bresson@intradef.gouv.fr</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -46,32 +49,30 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 					</efac:Organizations>
-					<efac:Publication>
-						<efbc:NoticePublicationID schemeName="ojs-notice-id">599993-2020</efbc:NoticePublicationID>
-						<efbc:GazetteID schemeName="ojs-id">242/2020</efbc:GazetteID>
-						<efbc:PublicationDate>2020-12-07+01:00</efbc:PublicationDate>
-					</efac:Publication>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>64bdfc22-2f35-4109-9817-a8f0bd9468b6</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">3f60af90-c612-40bd-9943-866fe3ae21b4</cbc:ID>
 	<cbc:IssueDate>2020-12-07+01:00</cbc:IssueDate>
 	<cbc:IssueTime>12:35:04+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
@@ -119,21 +120,21 @@ Elle ne constitue pas une consultation liée à un marché public, ni un acte d'
 		<!--added data-->
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">FR</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
 				<cac:Country>
-					<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
 	<cac:ProcurementProjectLot>
-		<cbc:ID schemeName="Part">PAR-0001</cbc:ID>
+		<cbc:ID schemeName="Part">PAR-0000</cbc:ID>
 		<cac:TenderingTerms>
 			<cac:FiscalLegislationDocumentReference>
 				<cbc:ID>ID1</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -141,7 +142,7 @@ Elle ne constitue pas une consultation liée à un marché public, ni un acte d'
 				<cbc:ID>ID2</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EnvironmentalLegislationDocumentReference>
@@ -149,7 +150,7 @@ Elle ne constitue pas une consultation liée à un marché public, ni un acte d'
 				<cbc:ID>ID3</cbc:ID>
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:EmploymentLegislationDocumentReference>
@@ -189,9 +190,9 @@ Elle ne constitue pas une consultation liée à un marché public, ni un acte d'
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">FR</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>

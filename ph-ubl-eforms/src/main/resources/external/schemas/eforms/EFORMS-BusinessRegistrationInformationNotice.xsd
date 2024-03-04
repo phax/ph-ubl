@@ -25,14 +25,14 @@
 			<xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
 			<xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:PreviousVersionID" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:BriefDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:RequestedPublicationDate" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:RegulatoryDomain" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:NoticeTypeCode" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:NoticeLanguageCode" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:BriefDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cac:AdditionalNoticeLanguage" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cac:SenderParty" minOccurs="0" maxOccurs="1"/>

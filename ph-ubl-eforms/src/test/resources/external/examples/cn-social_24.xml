@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>20</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">20</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -26,7 +26,7 @@
 									<cbc:PostalZone>PA1 1AR</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -42,6 +42,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://sheriff.gov.uk</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -51,6 +52,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -60,12 +63,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-court.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -75,6 +80,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKM83</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -84,12 +91,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -98,15 +107,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -117,8 +129,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>76c82dad-10b1-4e6a-9326-9312b4bf9baf</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">76c82dad-10b1-4e6a-9326-9312b4bf9baf</cbc:ID>
 	<cbc:ContractFolderID>1adea6cf-8780-4298-a915-55f6796bf847</cbc:ContractFolderID>
 	<cbc:IssueDate>2019-11-25+01:00</cbc:IssueDate>
 	<cbc:IssueTime>11:11:11+01:00</cbc:IssueTime>
@@ -176,7 +188,10 @@
 		<cac:RealizedLocation>
 			<cbc:Description languageID="ENG">Various locations throughout SCOTLAND.</cbc:Description>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UKM</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -188,9 +203,19 @@
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
 							<efac:SelectionCriteria>
-								<cbc:CriterionTypeCode listName="selection-criterion">other</cbc:CriterionTypeCode>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
 								<cbc:Description languageID="ENG">Qualification Stage (Pass/Fail):
 									Assessment of suitability and selection of Bidder’s response via ESPD (Scotland).</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:Description languageID="ENG">As stated in the procurement documents.</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 							</efac:SelectionCriteria>
 						</efext:EformsExtension>
@@ -207,24 +232,25 @@
 				</cac:SpecificTendererRequirement>
 			</cac:TendererQualificationRequest>
 			<cac:TendererQualificationRequest>
-				<cbc:CompanyLegalFormCode>true</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
 				<cbc:CompanyLegalForm languageID="ENG">Scotland Excel will require the members of any tendering group of entities (including, but not limited to, consortium members, members of a group of economic operators and/or sub-contractors) to be jointly and severally liable for the performance of the contract (no matter the legal form taken by those entities in order to enter into the contract). Consortium information may be disclosed in accordance with the Regulations. The anticipated value is estimated and may be subject to change. Bidders should note there is no guarantee of any business, use, level of use or continuity of business through the contract.</cbc:CompanyLegalForm>
 			</cac:TendererQualificationRequest>
 			<cac:ContractExecutionRequirement>
 				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:ContractExecutionRequirement>
-				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+				<cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
-				<cbc:NoFurtherNegotiationIndicator>true</cbc:NoFurtherNegotiationIndicator>
 				<cac:AwardingCriterion>
-					<cbc:Description languageID="ENG">Evaluation of bidders responses in quality stage.</cbc:Description>
-					<cbc:CalculationExpression languageID="ENG">Quality Stage (60 %):</cbc:CalculationExpression>
-				</cac:AwardingCriterion>
-				<cac:AwardingCriterion>
-					<cbc:Description languageID="ENG">Evaluation of bidders responses in commercial stage. Scotland Excel reserves the right to negotiate on any element following submission, or to accept submissions without any further negotiation, to award in part or in whole, or not to make any award.</cbc:Description>
-					<cbc:CalculationExpression languageID="ENG">Commercial STAGE (40 %):</cbc:CalculationExpression>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="ENG">Quality Stage (60 %): Evaluation of bidders responses in quality stage.</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="ENG">Commercial STAGE (40 %): Evaluation of bidders responses in commercial stage. Scotland Excel reserves the right to negotiate on any element following submission, or to accept submissions without any further negotiation, to award in part or in whole, or not to make any award.</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AppealTerms>
@@ -275,7 +301,10 @@
 			<cac:RealizedLocation>
 				<cbc:Description languageID="ENG">Various locations throughout SCOTLAND.</cbc:Description>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UKM</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>	
 				</cac:Address>
 			</cac:RealizedLocation>
 		</cac:ProcurementProject>

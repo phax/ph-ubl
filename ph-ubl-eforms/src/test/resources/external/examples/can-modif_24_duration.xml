@@ -9,12 +9,13 @@
 					<efac:ContractModification>
 						<efbc:ChangedNoticeIdentifier>268231-2010</efbc:ChangedNoticeIdentifier>
 						<efac:Change>
-							<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
-							<efbc:ChangeDescription languageID="ENG">Extension of six (6) months</efbc:ChangeDescription>
-						</efac:Change>
-						<efac:Change>
-							<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
-							<efbc:ChangeDescription languageID="ENG">Updated total contract value before the modifications (taking into account possible earlier contract modifications and price adaptions and, in the case of Directive 2014/23/EU, average inflation in the Member State concerned) Value excluding VAT: 95 000 000.00 GBP Total contract value after the modifications Value excluding VAT: 105 000 000.00 GBP</efbc:ChangeDescription>
+							<efbc:ChangeDescription languageID="ENG">Extension of six (6) months and increased contract value from GBP 95 000 000 to GBP 105 000 000.</efbc:ChangeDescription>
+							<efac:ChangedSection>
+								<efbc:ChangedSectionIdentifier>CON-0001</efbc:ChangedSectionIdentifier>
+							</efac:ChangedSection>
+							<efac:ChangedSection>
+								<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
+							</efac:ChangedSection>
 						</efac:Change>
 						<efac:ChangeReason>
 							<cbc:ReasonCode listName="modification-justification">mod-cir</cbc:ReasonCode>
@@ -24,6 +25,7 @@
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="GBP">105000000</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<efac:LotTender>
 								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							</efac:LotTender>
@@ -37,12 +39,16 @@
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="GBP">105000000</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>BID/BSO/2000-03</cbc:ID>
 							</efac:TenderReference>
@@ -54,12 +60,7 @@
 							<cbc:Title languageID="ENG">Automated Laboratory Medicine Systems.</cbc:Title>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0005</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -77,7 +78,7 @@
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>38</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">38</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -94,22 +95,24 @@
 									<cbc:Department>Supplies Centre</cbc:Department>
 									<cbc:CityName>Londonderry</cbc:CityName>
 									<cbc:PostalZone>BT47 6YZ</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKN0A</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>palsgransha.sourcing@hscni.net</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -118,21 +121,25 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -143,21 +150,24 @@
 									<cbc:StreetName>77 Boucher Crescent</cbc:StreetName>
 									<cbc:CityName>Belfast</cbc:CityName>
 									<cbc:PostalZone>BT12 6HU</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 654 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -167,6 +177,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -176,12 +188,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
 								</cac:PartyIdentification>
@@ -192,8 +206,9 @@
 									<cbc:StreetName>Charles Avenue</cbc:StreetName>
 									<cbc:CityName>Burgess Hill</cbc:CityName>
 									<cbc:PostalZone>RH15 9RY</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKH35</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -201,6 +216,7 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -211,8 +227,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>1f8687c9-8cca-493a-b0ee-553ed23d8402</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">1f8687c9-8cca-493a-b0ee-553ed23d8402</cbc:ID>
 	<cbc:ContractFolderID>b492c659-4893-4796-b7db-4e511d85e0c8</cbc:ContractFolderID>
 	<cbc:IssueDate>2010-10-07+01:00</cbc:IssueDate>
 	<cbc:IssueTime>06:06:06+01:00</cbc:IssueTime>
@@ -251,7 +267,10 @@
 		</cac:AdditionalCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+				<cbc:CountrySubentityCode listName="nuts">UKN0A</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -287,10 +306,14 @@
 			</cac:AdditionalCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UKN</cbc:CountrySubentityCode>
+					<cbc:CountrySubentityCode listName="nuts">UKN0A</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2016-06-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 		</cac:ProcurementProject>

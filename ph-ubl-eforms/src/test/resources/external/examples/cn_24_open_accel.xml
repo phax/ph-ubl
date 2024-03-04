@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>16</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -25,20 +25,22 @@
 									<cbc:PostalZone>00197</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+39 0680982269</cbc:Telephone>
+									<cbc:Telefax>+39 06809822699</cbc:Telefax>
 									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>http://www.carabinieri.it/Internet/</cbc:WebsiteURI>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 								</cac:PartyIdentification>
 								<cac:PartyName>
 									<cbc:Name languageID="ITA">Ufficio Approvvigionamenti</cbc:Name>
@@ -49,17 +51,19 @@
 									<cbc:PostalZone>00197</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>+39 0680982269</cbc:Telephone>
+									<cbc:Telefax>+39 06809822699</cbc:Telefax>
 									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>http://www.carabinieri.it/Internet/</cbc:WebsiteURI>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">TPO-0002</cbc:ID>
+									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
 								</cac:PartyIdentification>
 								<cac:PartyName>
 									<cbc:Name languageID="ITA">Direzione di Commissariato</cbc:Name>
@@ -70,17 +74,19 @@
 									<cbc:PostalZone>00197</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>+39 0680982710</cbc:Telephone>
+									<cbc:Telefax>+39 06809827109</cbc:Telefax>
 									<cbc:ElectronicMail>crm42527@pec.carabinieri.it</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://www.giustizia-amministrativa.it/tribunale-amministrativo-regionale-per-il-lazio-roma</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -93,7 +99,7 @@
 									<cbc:PostalZone>00197</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -108,6 +114,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -117,6 +124,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -126,12 +135,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -140,15 +151,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -159,8 +173,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>c77a5424-249b-499b-a45b-2265edb941bb</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">c77a5424-249b-499b-a45b-2265edb941bb</cbc:ID>
 	<cbc:ContractFolderID>2b81ba62-3167-4618-bbfc-98db716e2f38</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-23+01:00</cbc:IssueDate>
 	<cbc:IssueTime>07:06:04+01:00</cbc:IssueTime>
@@ -193,51 +207,51 @@
 	<cac:TenderingTerms>
 		<cac:TendererQualificationRequest>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">crime-org</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">corruption</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.FRAUD</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">fraud</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">terr-offence</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">finan-laund</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">human-traffic</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">tax-pay</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">socsec-pay</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">envir-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">socsec-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">labour-law</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 			<cac:SpecificTendererRequirement>
-				<cbc:TendererRequirementTypeCode listName="exclusion-ground">CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</cbc:TendererRequirementTypeCode>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">insolvency</cbc:TendererRequirementTypeCode>
 				<cbc:Description languageID="ITA">NOT AVAILABLE</cbc:Description>
 			</cac:SpecificTendererRequirement>
 		</cac:TendererQualificationRequest>
@@ -288,9 +302,10 @@
 					</ext:ExtensionContent>
 				</ext:UBLExtension>
 			</ext:UBLExtensions>
+			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
 			<cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
 			<cac:CallForTendersDocumentReference>
-				<cbc:ID></cbc:ID>
+				<cbc:ID>1234</cbc:ID>
 				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
 				<cac:Attachment>
 					<cac:ExternalReference>
@@ -307,7 +322,7 @@
 				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:ContractExecutionRequirement>
-				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+				<cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:ContractExecutionRequirement>
 				<cbc:ExecutionRequirementCode listName="ecatalog-submission">allowed</cbc:ExecutionRequirementCode>
@@ -328,18 +343,19 @@
 							</ext:UBLExtension>
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="ITA">Il prezzo è valutato da...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">TPO-0002</cbc:ID>
+					<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cbc:EndpointID>https://www.acquistinretepa.it/negoziazioni/prv?pagina=iniziativaIns_stepMain&amp;idT=2554061&amp;submit=elenco&amp;backPage=get:3338017180&amp;hmac=ed61bcf821de9dcbc24205e2c515b0ca</cbc:EndpointID>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:TenderValidityPeriod>
@@ -356,7 +372,7 @@
 				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
 				<cac:MediationParty>
@@ -409,9 +425,13 @@
 				<cbc:Description languageID="ITA">Firenze</cbc:Description>
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">ITI14</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-06-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="DAY">55</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 		</cac:ProcurementProject>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PriorInformationNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+									  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+									  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+									  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+									  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+									  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+									  xmlns:urn="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">13</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+							<efbc:AwardingCPBIndicator>false</efbc:AwardingCPBIndicator>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">ZenithNova Innovations Ltd.</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:StreetName>
+									<cbc:AdditionalStreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:AdditionalStreetName>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+									<cbc:CityName>New Horizons, CA</cbc:CityName>
+									<cbc:PostalZone>117 43</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+									<cac:AddressLine>
+										<cbc:Line>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:Line>
+									</cac:AddressLine>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>ABE</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Info</cbc:Name>
+									<cbc:Telephone>+1 (555) 123-4567</cbc:Telephone>
+									<cbc:Telefax>+1 (555) 123-4567</cbc:Telefax>
+									<cbc:ElectronicMail>info@zenithnovainnovations.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com/contact-us/katerina-lisa</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange/katerina-lisa</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Katerina Lisa</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+								</cac:PostalAddress>
+							</efac:TouchPoint>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">57f7cfe8-eb93-4351-b7ef-e1f1aa586cd9</cbc:ID>
+	<cbc:ContractFolderID>f4da6354-67d7-4322-90b8-7666fd32b918</cbc:ContractFolderID>
+	<cbc:IssueDate>2023-05-26Z</cbc:IssueDate>
+	<cbc:IssueTime>10:08:14Z</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="competition">pin-cfc-social</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode listName="language">ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://example.com</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-la</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">rail</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID>ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cac:TendererQualificationRequest>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">crime-org</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ENG">Participation in a criminal organisation</cbc:Description>
+			</cac:SpecificTendererRequirement>
+			<cac:SpecificTendererRequirement>
+				<cbc:TendererRequirementTypeCode listName="exclusion-ground">sanction</cbc:TendererRequirementTypeCode>
+				<cbc:Description languageID="ENG">Early termination, damages or other comparable sanctions</cbc:Description>
+			</cac:SpecificTendererRequirement>
+		</cac:TendererQualificationRequest>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<cbc:Description languageID="ENG">Main features of the procedure (BT-88-Procedure)</cbc:Description>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:Name languageID="ENG">Trixes vol3</cbc:Name>
+		<cbc:Description languageID="ENG">A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+vol3</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">92111000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">not-known</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID>TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ELL</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2023-07-12+03:00</cbc:EndDate>
+								<cbc:EndTime>15:00:00+03:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>ABE</cbc:ID>
+			<cbc:Name languageID="ENG">Title vol 3</cbc:Name>
+			<cbc:Description languageID="ENG">Sinopsis vol 3 LOT1 
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">92111000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">not-known</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<cac:AppealTerms>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ELL</cbc:ID>
+			</cac:Language>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2023-07-12+03:00</cbc:EndDate>
+								<cbc:EndTime>15:00:00+03:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>ABD</cbc:ID>
+			<cbc:Name languageID="ENG">Title vol3 </cbc:Name>
+			<cbc:Description languageID="ENG">Sinopsis vol3 LOT2
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">45111000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">Additional information (BT-728-Lot)</cbc:Description>
+				<cac:Address>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">IOT</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+		<cac:TenderingTerms>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+							</efac:SelectionCriteria>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+			<cac:TendererQualificationRequest>
+				<cac:SpecificTendererRequirement>
+					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+				</cac:SpecificTendererRequirement>
+			</cac:TendererQualificationRequest>
+			<cac:ContractExecutionRequirement>
+				<cbc:ExecutionRequirementCode listName="reserved-execution">not-known</cbc:ExecutionRequirementCode>
+			</cac:ContractExecutionRequirement>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:DocumentProviderParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:DocumentProviderParty>
+			<cac:AppealTerms>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
+			</cac:AppealTerms>
+			<cac:Language>
+				<cbc:ID>ELL</cbc:ID>
+			</cac:Language>
+			<cac:PostAwardProcess>
+				<cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+				<cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+			</cac:PostAwardProcess>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:InterestExpressionReceptionPeriod>
+								<cbc:EndDate>2023-07-12+03:00</cbc:EndDate>
+								<cbc:EndTime>15:00:00+03:00</cbc:EndTime>
+							</efac:InterestExpressionReceptionPeriod>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>ABF</cbc:ID>
+			<cbc:Name languageID="ENG">Title vol3 </cbc:Name>
+			<cbc:Description languageID="ENG">Sinopsis vol3 *LOT3*
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.
+A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.A rainy day finds you in a hair salon. Now you have to decide whether to cut your hair or not.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">18113000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cbc:Description languageID="ENG">Additional information (BT-728-Lot)</cbc:Description>
+				<cac:Address>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">IOT</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+</urn:PriorInformationNotice>

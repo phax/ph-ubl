@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>1</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">1</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -25,11 +25,11 @@
 									<cbc:PostalZone>16132</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITC33</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+39 0105552612</cbc:Telephone>
@@ -40,6 +40,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -48,15 +49,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -67,8 +71,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>e5dc3c2b-3df5-45e0-af7f-399ca201d7e0</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">e5dc3c2b-3df5-45e0-af7f-399ca201d7e0</cbc:ID>
 	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>03:57:07+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
@@ -79,9 +83,6 @@
 		<cbc:BuyerProfileURI>https://www.hsanmartino.it</cbc:BuyerProfileURI>
 		<cac:ContractingPartyType>
 			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-la</cbc:PartyTypeCode>
-		</cac:ContractingPartyType>
-		<cac:ContractingPartyType>
-			<cbc:PartyType>IRCSS</cbc:PartyType>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
 			<cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
@@ -111,10 +112,9 @@
 		</cac:MainCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:PostalZone>not available</cbc:PostalZone>
 				<cbc:CountrySubentityCode listName="nuts">ITC33</cbc:CountrySubentityCode>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>

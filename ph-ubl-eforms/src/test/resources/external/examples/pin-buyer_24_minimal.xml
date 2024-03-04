@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>1</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">1</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -20,12 +20,14 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Genova</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITF14</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+39 0105552612</cbc:Telephone>
@@ -39,8 +41,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>e45d1409-9944-4fb0-84c5-f41ce774d37f</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">e45d1409-9944-4fb0-84c5-f41ce774d37f</cbc:ID>
 	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>03:57:07+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>

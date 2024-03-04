@@ -7,15 +7,18 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeResult>
-						<cbc:TotalAmount currencyID="EUR">4000000</cbc:TotalAmount>
-						<cbc:EstimatedOverallFrameworkContractsAmount currencyID="EUR">4000000</cbc:EstimatedOverallFrameworkContractsAmount>
+						<efbc:OverallApproximateFrameworkContractsAmount currencyID="EUR">4000000</efbc:OverallApproximateFrameworkContractsAmount>
+						<efbc:OverallMaximumFrameworkContractsAmount currencyID="EUR">4000000</efbc:OverallMaximumFrameworkContractsAmount>
 						<efac:LotResult>
-							<cbc:HigherTenderAmount currencyID="EUR">5000000</cbc:HigherTenderAmount>
-							<cbc:LowerTenderAmount currencyID="EUR">4000000</cbc:LowerTenderAmount>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
 							<efac:LotTender>
 								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							</efac:LotTender>
+							<efac:FrameworkAgreementValues>
+								<cbc:MaximumValueAmount currencyID="EUR">4000000</cbc:MaximumValueAmount>
+								<efbc:ReestimatedValueAmount currencyID="EUR">4000000</efbc:ReestimatedValueAmount>
+							</efac:FrameworkAgreementValues>
 							<efac:ReceivedSubmissionsStatistics>
 								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
 								<efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
@@ -37,7 +40,7 @@
 						</efac:LotResult>
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
-							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>false</efbc:TenderRankedIndicator>
 							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="EUR">4000000</cbc:PayableAmount>
@@ -51,6 +54,9 @@
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>BID ABC:2021-02</cbc:ID>
 							</efac:TenderReference>
@@ -59,15 +65,10 @@
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
 							<cbc:AwardDate>2020-04-02+02:00</cbc:AwardDate>
 							<cbc:Title languageID="ITA">Servizio di prove funzionali finalizzate all’attivazione / riconfigurazione di tratte su linee AV/AC e/o tradizionali oggetto di upgrade tecnologico tramite l’utilizzo di treni idonei</cbc:Title>
-							<efbc:ContractFrameworkIndicator>true</efbc:ContractFrameworkIndicator>
+							<efbc:ContractFrameworkIndicator>false</efbc:ContractFrameworkIndicator>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0005</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -85,7 +86,7 @@
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>30</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">30</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -101,13 +102,13 @@
 									<cbc:StreetName>via dello Scalo Prenestino 25</cbc:StreetName>
 									<cbc:CityName>Roma</cbc:CityName>
 									<cbc:PostalZone>00159</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">ITZZ</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Name>E Paolucci</cbc:Name>
@@ -119,6 +120,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://www.giustizia-amministrativa.it/tribunale-amministrativo-regionale-per-il-lazio-roma</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -130,21 +132,24 @@
 									<cbc:Department>Sede di Roma o altro competente individuato secondo le disposizioni di cui all’art. 13 del D.Lgs. n. 104/2010 s.m.i.</cbc:Department>
 									<cbc:CityName>Roma</cbc:CityName>
 									<cbc:PostalZone>00196</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 654 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -154,6 +159,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -163,12 +170,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -177,21 +186,29 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
+								<cbc:WebsiteURI>https://trenitalia.it</cbc:WebsiteURI>
 								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
@@ -205,26 +222,33 @@
 									<cbc:PostalZone>00161</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">ITI43</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ITA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="222">222 222 222</cbc:CompanyID>
+									<cbc:CompanyID>222 222 222</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<efac:Nationality>
+								<cbc:NationalityID>ITA</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>904890c7-9743-410c-b75c-8c60d9930633</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">904890c7-9743-410c-b75c-8c60d9930633</cbc:ID>
 	<cbc:ContractFolderID>5a695dd9-076c-419f-98f0-dc42d31ae277</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-15+01:00</cbc:IssueDate>
 	<cbc:IssueTime>07:07:07+01:00</cbc:IssueTime>
@@ -273,6 +297,9 @@
 		<cac:RealizedLocation>
 			<cac:Address>
 				<cbc:CountrySubentityCode listName="nuts">ITZZZ</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -299,7 +326,7 @@
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:AppealTerms>
@@ -347,6 +374,9 @@
 			<cac:RealizedLocation>
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">ITZZZ</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">ITA</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 		</cac:ProcurementProject>

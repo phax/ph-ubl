@@ -9,6 +9,7 @@
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="GBP">60000000</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<cbc:HigherTenderAmount currencyID="GBP">80000000</cbc:HigherTenderAmount>
 							<cbc:LowerTenderAmount currencyID="GBP">60000000</cbc:LowerTenderAmount>
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
@@ -29,6 +30,7 @@
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="GBP">60000000</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
@@ -38,21 +40,19 @@
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>TEN 123/ABC-2020:01</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
 						<efac:SettledContract>
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
-							<cbc:AwardDate>2020-04-09+02:00</cbc:AwardDate>
+							<cbc:IssueDate>2020-04-09+02:00</cbc:IssueDate>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
@@ -70,7 +70,7 @@
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>29</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -88,21 +88,23 @@
 									<cbc:PostalZone>SN2 1FF</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">UKK14</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID>n/a</cbc:CompanyID>
+									<cbc:CompanyID>ID11111</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Name>Nicola Turner</cbc:Name>
 									<cbc:Telephone>+44 1793867005</cbc:Telephone>
+									<cbc:Telefax>+44 17938670059</cbc:Telefax>
 									<cbc:ElectronicMail>fmprocurement@uksbs.co.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.uksbs.co.uk</cbc:WebsiteURI>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 								</cac:PartyIdentification>
 								<cac:PartyName>
 									<cbc:Name languageID="ENG">Policy Department</cbc:Name>
@@ -110,18 +112,21 @@
 								<cac:PostalAddress>
 									<cbc:CityName>Swindon</cbc:CityName>
 									<cbc:PostalZone>SN2 1FF</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKK14</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>policy@uksbs.co.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -131,6 +136,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKK14</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -140,12 +147,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -154,21 +163,29 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
 							<efac:Company>
+								<cbc:WebsiteURI>https://ramboll.com</cbc:WebsiteURI>
 								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
@@ -180,28 +197,35 @@
 									<cbc:StreetName>240 Blackfriars Road</cbc:StreetName>
 									<cbc:CityName>London</cbc:CityName>
 									<cbc:PostalZone>SE1 8NW</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UKI</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI44</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID>n/a</cbc:CompanyID>
+									<cbc:CompanyID>ID222222</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<efac:Nationality>
+								<cbc:NationalityID>GBR</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>75b70657-c146-4b5c-8d66-1ded90cdcd1d</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">75b70657-c146-4b5c-8d66-1ded90cdcd1d</cbc:ID>
 	<cbc:ContractFolderID>7b400e9a-0469-440b-8d64-9a68d4677806</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-14+01:00</cbc:IssueDate>
 	<cbc:IssueTime>01:01:01+01:00</cbc:IssueTime>
@@ -288,7 +312,7 @@
 				<cbc:PostalZone>CB3 0ET</cbc:PostalZone>
 				<cbc:CountrySubentityCode listName="nuts">UKH12</cbc:CountrySubentityCode>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
@@ -358,7 +382,7 @@
 				</cac:PresentationPeriod>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
 				<cac:MediationParty>
@@ -381,6 +405,7 @@
 			</cac:ContractingSystem>
 		</cac:TenderingProcess>
 		<cac:ProcurementProject>
+			<cbc:ID>1</cbc:ID>
 			<cbc:Name languageID="ENG">Antarctic Infrastructure Modernisation Programme (AIMP) technical Advisor</cbc:Name>
 			<cbc:Description languageID="ENG">Procurement overview UK Shared Business Services Ltd (UK SBS) on behalf of UK Research and Innovation (UKRI), wishes to establish a framework agreement for the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor. UK SBS is managing this procurement process in accordance with the Public Contracts Regulations 2015 (as may be amended from time to time) (the ‘Regulations’). This is a services framework agreement being procured under the Open OJEU Procedure regulations. This RFP sets out details of the framework agreement and expectations of any successful supplier. This framework agreement is for a duration of 10 years and will be awarded to a sole supplier. It is intended that the Antarctic Infrastructure Modernisation Programme (AIMP) Technical Advisor call off services will be managed using NEC4 term service contracts and task orders. Introduction The purpose of this framework agreement is to appoint a contractor to provide polar technical advisor services to the Antarctic Infrastructure Modernisation Programme (AIMP) Future Phases. Background to BAS BAS is an institute of the Natural Environment Research Council (NERC) which is an executive non-departmental public body funded by the Department for Business, Energy and Industrial Strategy (BEIS). BAS also provides the UK presence in the British Antarctic Territory, a role BAS undertakes on behalf of the Foreign and Commonwealth Office (FCO). Both NERC and BAS form a part of the UK Research and Innovation (UKRI). UKRI is the Contracting Authority and will delegate contract and project management responsibilities for this contract to BAS. BAS delivers and enables world-leading interdisciplinary research in the polar regions. Its skilled science and support staff based in Cambridge, Antarctica, the Falkland Islands and the Arctic, work together to deliver research that uses the Polar Regions to advance our understanding of Earth and our impact on it. Through its extensive logistic capability and know-how, BAS facilitates access for British and international science communities to UK polar research. Numerous national and international collaborations, combined with an excellent infrastructure, help sustain a world-leading position for the UK in Antarctic affairs. The UK is one of over thirty countries operating scientific research facilities in Antarctica. Overview The tender is for the procurement of a TA to support BAS (referred to as the Client) in the delivery of a wide range of projects overseas. The framework agreement is for a period of 10 years. The Contracting Authority shall be UKRI. The full scope of projects that shall be undertaken during the framework agreement period is not known, and therefore no guarantee can be given as to the actual amount or type of work that may be ordered during the framework agreement period. However, a series of potential projects have been identified and, subject to confirmation of funding, may require technical support from the TA. These include; • Rothera Research Station: — new accommodation block(s) — energy efficiency, renewables and sustainability projects — site services upgrade — rothera point operational improvements — new boat shed — replacement bonner laboratory • Rothera Air Capability: — runway refurbishment and possible extension — hangar upgrade (or replacement) • KEP Research Station Master Planning; • Bird Island Master Planning; • Signy Master Planning; • Falkland Islands logistics and biosecurity hub; • Halley VI decommissioning and future replacement; • new build fuel storage (various locations); • energy efficiency and sustainability (all stations), and • various demolition works. A brief summary of the requirements has been provided above, please ensure you review all additional appendices for full details of this requirement. All additional appendices can be found within the RFx attachments tab on the eSourcing Portal.</cbc:Description>
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
@@ -429,7 +454,7 @@
 					<cbc:PostalZone>CB3 0ET</cbc:PostalZone>
 					<cbc:CountrySubentityCode listName="nuts">UKH12</cbc:CountrySubentityCode>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>

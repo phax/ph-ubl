@@ -17,20 +17,14 @@
  */
 package com.helger.eforms;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
-import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.string.StringHelper;
 import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
-import com.helger.jaxb.builder.IJAXBDocumentType;
-import com.helger.jaxb.builder.JAXBDocumentType;
 import com.helger.ubl23.CUBL23;
 import com.helger.ubl23.EUBL23DocumentType;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
@@ -49,13 +43,11 @@ import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorI
  * @author Philip Helger
  * @since 6.7.0
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
-public enum EFormsUBLDocumentType implements IJAXBDocumentType
+public enum EFormsUBLDocumentType
 {
   CONTRACT_AWARD_NOTICE (ContractAwardNoticeType.class, EUBL23DocumentType.CONTRACT_AWARD_NOTICE.getAllXSDResources ()),
   CONTRACT_NOTICE (ContractNoticeType.class, EUBL23DocumentType.CONTRACT_NOTICE.getAllXSDResources ()),
-  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class,
-                            EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
+  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class, EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
   BUSINESS_REGISTRATION_INFORMATION_NOTICE (BusinessRegistrationInformationNoticeType.class,
                                             new CommonsArrayList <> (CCCTS.getXSDResource (),
                                                                      CXMLDSig.getXSDResource (),
@@ -67,17 +59,19 @@ public enum EFormsUBLDocumentType implements IJAXBDocumentType
                                                                      CEformsUBL.XSD_EFORMS_EXTENSION_APEX,
                                                                      CEformsUBL.XSD_EFORMS_BRIN));
 
-  private final JAXBDocumentType m_aDocType;
+  private final Class <?> m_aImplClass;
+  private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EFormsUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
+  EFormsUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
+    m_aImplClass = aClass;
+    m_aXSDs = aXSDPaths;
   }
 
   @Nonnull
   public Class <?> getImplementationClass ()
   {
-    return m_aDocType.getImplementationClass ();
+    return m_aImplClass;
   }
 
   @Nonnull
@@ -85,25 +79,6 @@ public enum EFormsUBLDocumentType implements IJAXBDocumentType
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDResources ();
-  }
-
-  @Nonnull
-  public String getNamespaceURI ()
-  {
-    return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getLocalName ()
-  {
-    return m_aDocType.getLocalName ();
-  }
-
-  @Nonnull
-  public Schema getSchema ()
-  {
-    return m_aDocType.getSchema ();
+    return m_aXSDs.getClone ();
   }
 }

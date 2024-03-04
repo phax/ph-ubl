@@ -34,7 +34,7 @@ public final class MockEformsUBLTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getTestDocuments (@Nonnull final EFormsUBLDocumentTypeSimple eType)
+  public static ICommonsList <String> getTestDocuments (@Nonnull final EFormsUBLDocumentType eType)
   {
     switch (eType)
     {
@@ -70,9 +70,10 @@ public final class MockEformsUBLTestDocuments
                                         PREFIX + "cn_24_open_accel.xml",
                                         PREFIX + "cn_25.xml",
                                         PREFIX + "cn_81.xml",
-                                        PREFIX + "cn_81_FRA.xml");
+                                        PREFIX + "cn_81_FRA.xml",
+                                        PREFIX + "qu-sy_25.xml");
       case PRIOR_INFORMATION_NOTICE:
-        return new CommonsArrayList <> (PREFIX + "pin-buyer_24.xml",
+        return new CommonsArrayList <> (PREFIX + "pin-buyer_24_published.xml",
                                         PREFIX + "pin-buyer_24_minimal.xml",
                                         PREFIX + "pin-cfc_25.xml",
                                         PREFIX + "pin-only_24.xml",
@@ -80,7 +81,6 @@ public final class MockEformsUBLTestDocuments
                                         PREFIX + "pin-only_24_maximal.xml",
                                         PREFIX + "pin-only_81.xml",
                                         PREFIX + "pin-only_81_FRA.xml",
-                                        PREFIX + "qu-sy_25.xml",
                                         PREFIX + "t01_PRT.xml");
       default:
         throw new IllegalArgumentException ("No test files available for type " + eType);

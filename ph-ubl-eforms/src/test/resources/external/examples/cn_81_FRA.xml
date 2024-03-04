@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>18</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">18</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -23,21 +23,22 @@
 									<cbc:StreetName>CEA/DAM Île-de-France DCG/SAPI/BGI bâtiment U Bruyères-le-Châtel</cbc:StreetName>
 									<cbc:CityName>Arpajon Cedex</cbc:CityName>
 									<cbc:PostalZone>91297</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">FR</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">FR102</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
-									<cbc:Name>M Vincent Gourdin</cbc:Name>
-									<cbc:Telephone>+44 3067988090</cbc:Telephone>
-									<cbc:Telefax>+33 169267009</cbc:Telefax>
+									<cbc:Name>Service Achats</cbc:Name>
+									<cbc:Telephone>+44 3067900000</cbc:Telephone>
+									<cbc:Telefax>+33 169200009</cbc:Telefax>
 									<cbc:ElectronicMail>sapi.bgi@cea.fr</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -46,32 +47,30 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 					</efac:Organizations>
-					<efac:Publication>
-						<efbc:NoticePublicationID schemeName="ojs-notice-id">362098-2020</efbc:NoticePublicationID>
-						<efbc:GazetteID schemeName="ojs-id">147/2020</efbc:GazetteID>
-						<efbc:PublicationDate>2020-07-31+02:00</efbc:PublicationDate>
-					</efac:Publication>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>fc9cfb17-81d0-4f26-9a00-0c4bd25cf0a2</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">866bf88e-f381-45c8-a085-43a6148d0ab7</cbc:ID>
 	<cbc:ContractFolderID>82c626cc-83e1-4644-9cf1-6ed82b3e3dbc</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>03:23:02+01:00</cbc:IssueTime>
@@ -82,7 +81,7 @@
 	<cac:ContractingParty>
 		<cbc:BuyerProfileURI>https://www.marches-publics.gouv.fr</cbc:BuyerProfileURI>
 		<cac:ContractingPartyType>
-			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert</cbc:PartyTypeCode>
+			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingPartyType>
 			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
@@ -128,6 +127,9 @@
 			<cbc:Description languageID="FRA">CEA Cadarache — 13115 Saint-Paul-lez-Durance.</cbc:Description>
 			<cac:Address>
 				<cbc:CountrySubentityCode listName="nuts">FRL04</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -153,7 +155,6 @@
 									La sous-traitance totale est interdite.
 								</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
-								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
 							</efac:SelectionCriteria>
 							<efac:SelectionCriteria>
 								<!--technical-->
@@ -187,7 +188,6 @@
 									Si le candidat recourt à la sous-traitance, il doit produire les mêmes renseignements et documents concernant ce sous-traitant. En outre, pour justifier qu’il dispose des capacités de ce(s) sous-traitant(s) pour l’exécution du marché, il apporte la preuve par tout moyen approprié.
 								</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
-								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
 							</efac:SelectionCriteria>
 							<efac:SelectionCriteria>
 								<!--Professional-->
@@ -213,7 +213,6 @@
 									Le formulaire DC4 est à compléter pour chaque demande d’acceptation de sous-traitant.
 								</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
-								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
 							</efac:SelectionCriteria>
 							<efac:TenderSubcontractingRequirements>
 								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">shar-subc</efbc:TenderSubcontractingRequirementsCode>
@@ -234,12 +233,10 @@
 			<cac:TendererQualificationRequest>
 				<cac:SpecificTendererRequirement>
 					<cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
-					<cbc:Description languageID="FRA">
-					</cbc:Description>
 				</cac:SpecificTendererRequirement>
 			</cac:TendererQualificationRequest>
 			<cac:TendererQualificationRequest>
-				<cbc:CompanyLegalFormCode>true</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
 				<cbc:CompanyLegalForm languageID="FRA">En cas de groupement, ce dernier doit revêtir la forme d’un Groupement momentané d’entreprises (GME) solidaire ou à défaut d’un GME conjoint. 
 En tout état de cause, le mandataire doit être solidaire de tous les membres du groupement.</cbc:CompanyLegalForm>
 			</cac:TendererQualificationRequest>
@@ -247,7 +244,7 @@ En tout état de cause, le mandataire doit être solidaire de tous les membres d
 				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">subc-chng</cbc:SubcontractingConditionsCode>
 			</cac:AllowedSubcontractTerms>
 			<cac:ContractExecutionRequirement>
-				<cbc:ExecutionRequirementCode listName="conditions">yes</cbc:ExecutionRequirementCode>
+				<cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
 				<cbc:Description languageID="FRA">
 					Ce marché est un marché « Confidentiel défense — CD » au sens de l’arrêté du 30.11.2011 portant approbation de l’instruction générale interministérielle no 1300 sur la protection du secret de la défense nationale. Ce marché donne accès à des informations classifiées intéressant la défense nationale. Il ne nécessite pas la détention d’informations et/ou de supports classifiés « Confidentiel défense — CD » par le titulaire dans ses locaux.
 					En conséquence, le dossier de candidature doit contenir sous enveloppe séparée:
@@ -261,7 +258,10 @@ En tout état de cause, le mandataire doit être solidaire de tous les membres d
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<cbc:Description languageID="FRA">Offre économiquement la plus avantageuse, appréciée en fonction des critères suivants des critères énoncés dans le cahier des charges, dans l’invitation à soumissionner ou à négocier, ou dans le document descriptif</cbc:Description>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="FRA">Offre économiquement la plus avantageuse, appréciée en fonction des critères suivants des critères énoncés dans le cahier des charges, dans l’invitation à soumissionner ou à négocier, ou dans le document descriptif</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
@@ -314,10 +314,6 @@ En tout état de cause, le mandataire doit être solidaire de tous les membres d
 				<cbc:EndDate>2020-09-14+01:00</cbc:EndDate>
 				<cbc:EndTime>16:00:00+01:00</cbc:EndTime>
 			</cac:TenderSubmissionDeadlinePeriod>
-			<cac:ParticipationRequestReceptionPeriod>
-				<cbc:EndDate>2020-09-14+01:00</cbc:EndDate>
-				<cbc:EndTime>16:00:00+01:00</cbc:EndTime>
-			</cac:ParticipationRequestReceptionPeriod>
 			<cac:AuctionTerms>
 				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
 			</cac:AuctionTerms>
@@ -366,10 +362,14 @@ Les métiers concernés pour ces missions sont les VRD, le génie civil (gros œ
 			<cac:RealizedLocation>
 				<cbc:Description languageID="FRA">United Kingdom</cbc:Description>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-12-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">27</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
@@ -380,11 +380,6 @@ Les métiers concernés pour ces missions sont les VRD, le génie civil (gros œ
 — option 6: PSE1: mission de synthèse pour une durée de 20 mois.
 				</cbc:OptionsDescription>
 				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
-				<cac:Renewal>
-					<cac:Period>
-						<cbc:Description languageID="FRA">Aucun</cbc:Description>
-					</cac:Period>
-				</cac:Renewal>
 			</cac:ContractExtension>
 		</cac:ProcurementProject>
 	</cac:ProcurementProjectLot>

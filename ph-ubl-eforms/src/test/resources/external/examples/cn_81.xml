@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>18</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">18</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -23,20 +23,22 @@
 									<cbc:StreetName>Land Equipment, Special Projects SCM (SPSCM)</cbc:StreetName>
 									<cbc:CityName>Bristol</cbc:CityName>
 									<cbc:PostalZone>G33 6FB</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKM82</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Name>not available</cbc:Name>
 									<cbc:Telephone>+44 3067988090</cbc:Telephone>
+									<cbc:Telefax>+44 30679880909</cbc:Telefax>
 									<cbc:ElectronicMail>DESLESTSP-SPCME-TENDERS@mod.gov.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -45,15 +47,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -64,8 +69,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>fc9cfb17-81d0-4f26-9a00-0c4bd25cf0a2</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">fc9cfb17-81d0-4f26-9a00-0c4bd25cf0a2</cbc:ID>
 	<cbc:ContractFolderID>82c626cc-83e1-4644-9cf1-6ed82b3e3dbc</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>03:23:02+01:00</cbc:IssueTime>
@@ -75,7 +80,7 @@
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
 	<cac:ContractingParty>
 		<cac:ContractingPartyType>
-			<cbc:PartyType>Ministry of Defence</cbc:PartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
 			<cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
@@ -111,7 +116,7 @@
 		This requirement is subject to approval.</cbc:Description>
 		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
 		<cac:RequestedTenderTotal>
-			<cbc:EstimatedOverallContractAmount currencyID="EUR">0000000000</cbc:EstimatedOverallContractAmount>
+			<cbc:EstimatedOverallContractAmount currencyID="EUR">123456</cbc:EstimatedOverallContractAmount>
 		</cac:RequestedTenderTotal>
 		<cac:MainCommodityClassification>
 			<cbc:ItemClassificationCode listName="cpv">80512000</cbc:ItemClassificationCode>
@@ -119,7 +124,10 @@
 		<cac:RealizedLocation>
 			<cbc:Description languageID="ENG">United Kingdom</cbc:Description>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				<cbc:Region>anyw-cou</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -131,9 +139,16 @@
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
 							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
 								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
 								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
-								<efbc:SecondStageIndicator>false</efbc:SecondStageIndicator>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
+								<cbc:CalculationExpressionCode listName="usage">n-used</cbc:CalculationExpressionCode>
 							</efac:SelectionCriteria>
 							<efac:TenderSubcontractingRequirements>
 								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">none</efbc:TenderSubcontractingRequirementsCode>
@@ -155,7 +170,7 @@
 				</cac:SpecificTendererRequirement>
 			</cac:TendererQualificationRequest>
 			<cac:TendererQualificationRequest>
-				<cbc:CompanyLegalFormCode>false</cbc:CompanyLegalFormCode>
+				<cbc:CompanyLegalFormCode listName="required">false</cbc:CompanyLegalFormCode>
 			</cac:TendererQualificationRequest>
 			<cac:AllowedSubcontractTerms>
 				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
@@ -168,11 +183,14 @@
 				<cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:ContractExecutionRequirement>
-				<cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+				<cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<cbc:Description languageID="ENG">The most economically advantageous tender in terms of the criteria stated in the specifications, in the invitation to tender or to negotiate or in the descriptive document</cbc:Description>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">cost</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="ENG">The most economically advantageous tender in terms of the criteria stated in the specifications, in the invitation to tender or to negotiate or in the descriptive document</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AppealTerms>
@@ -204,10 +222,6 @@
 			</cac:PostAwardProcess>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
-			<cac:TenderSubmissionDeadlinePeriod>
-				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
-				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
-			</cac:TenderSubmissionDeadlinePeriod>
 			<cac:ParticipationRequestReceptionPeriod>
 				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
 				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
@@ -244,20 +258,19 @@
 			<cac:RealizedLocation>
 				<cbc:Description languageID="ENG">United Kingdom</cbc:Description>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-12-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">18</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
 				<cbc:OptionsDescription languageID="ENG">The authority is considering placing an 18 month enabling contract (with options for a further 3 years).</cbc:OptionsDescription>
 				<cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
-				<cac:Renewal>
-					<cac:Period>
-						<cbc:Description languageID="ENG">None</cbc:Description>
-					</cac:Period>
-				</cac:Renewal>
 			</cac:ContractExtension>
 		</cac:ProcurementProject>
 	</cac:ProcurementProjectLot>

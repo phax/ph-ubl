@@ -1,0 +1,667 @@
+<?xml version="1.0" ?>
+<!-- Based on https://ted.europa.eu/udl?uri=TED:NOTICE:192534-2020:TEXT:EN:HTML (like "can_25_ENG")
+	 But with 2 lots and all possible fields indicated as "unpublished" (withheld publication), except for one lot.
+-->
+<ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<efac:FieldsPrivacy>
+							<efbc:FieldIdentifierCode listName="non-publication-identifier">not-val</efbc:FieldIdentifierCode>
+							<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+							<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+							<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+						</efac:FieldsPrivacy>
+						<cbc:TotalAmount currencyID="GBP">9.99</cbc:TotalAmount>
+						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
+							<cbc:HigherTenderAmount currencyID="GBP">111111</cbc:HigherTenderAmount>
+							<cbc:LowerTenderAmount currencyID="GBP">11</cbc:LowerTenderAmount>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:ReceivedSubmissionsStatistics>
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>1</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotResult>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">win-cho</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+							<cbc:ID schemeName="result">RES-0002</cbc:ID>
+							<cbc:HigherTenderAmount currencyID="GBP">9999999</cbc:HigherTenderAmount>
+							<cbc:LowerTenderAmount currencyID="GBP">1</cbc:LowerTenderAmount>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							</efac:LotTender>
+							<efac:ReceivedSubmissionsStatistics>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">rec-sub-typ</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">rec-sub-cou</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efbc:StatisticsCode listName="received-submission-type">tenders</efbc:StatisticsCode>
+								<efbc:StatisticsNumeric>3</efbc:StatisticsNumeric>
+							</efac:ReceivedSubmissionsStatistics>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">ten-ran</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">win-ten-var</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
+							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">9.99</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:Origin>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">cou-ori</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efbc:AreaCode listName="country">GBR</efbc:AreaCode>
+							</efac:Origin>
+							<efac:SubcontractingTerm>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">sub-con</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efbc:TermCode listName="applicability">not-known</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<cbc:ID>TENDER-01 2021/ABC</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:LotTender>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">ten-ran</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">win-ten-var</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+							<cbc:ID schemeName="tender">TEN-0002</cbc:ID>
+							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
+							<efbc:TenderVariantIndicator>false</efbc:TenderVariantIndicator>
+							<cac:LegalMonetaryTotal>
+								<cbc:PayableAmount currencyID="GBP">9.99</cbc:PayableAmount>
+							</cac:LegalMonetaryTotal>
+							<efac:Origin>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">cou-ori</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efbc:AreaCode listName="country">GBR</efbc:AreaCode>
+							</efac:Origin>
+							<efac:SubcontractingTerm>
+								<efac:FieldsPrivacy>
+									<efbc:FieldIdentifierCode listName="non-publication-identifier">sub-con</efbc:FieldIdentifierCode>
+									<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+									<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+									<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+								</efac:FieldsPrivacy>
+								<efbc:TermCode listName="applicability">not-known</efbc:TermCode>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<cbc:ID>TENDER-01 2021/ABC</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							<cbc:IssueDate>2020-02-12Z</cbc:IssueDate>
+							<cbc:Title languageID="ENG">Making Tax Digital for VAT (MTDfV)</cbc:Title>
+							<cac:SignatoryParty>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:SignatoryParty>
+							<efac:ContractReference>
+								<cbc:ID>CRN 2021/02/ABC</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">30</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.niwater.com</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">NI Water and its subsidiaries</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Westland House</cbc:StreetName>
+									<cbc:CityName>Belfast</cbc:CityName>
+									<cbc:PostalZone>BT14 6TE</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.niwater.com</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Sourcing Department</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Belfast</cbc:CityName>
+									<cbc:PostalZone>BT14 6TE</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567899</cbc:Telephone>
+									<cbc:Telefax>(+12)345678999</cbc:Telefax>
+									<cbc:ElectronicMail>sourcing@niwater.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Example Mediator</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Some Street</cbc:StreetName>
+									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKN06</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID schemeName="abc">111 111 111</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
+									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">eSendCorp</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
+									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>true</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:Company>
+								<cbc:WebsiteURI>https://deloitte.com</cbc:WebsiteURI>
+								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Deloitte — Main Account LLP</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>Hill House</cbc:StreetName>
+									<cbc:CityName>London</cbc:CityName>
+									<cbc:PostalZone>EC4A 3JR</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>222 222 222</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">14093edf-648c-4264-895d-64dfa100e582</cbc:ID>
+	<cbc:ContractFolderID>18d27a53-0109-4f93-9231-6659d931bce0</cbc:ContractFolderID>
+	<cbc:IssueDate>2020-04-10+01:00</cbc:IssueDate>
+	<cbc:IssueTime>09:07:07+01:00</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-cga</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">water</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:ServiceProviderParty>
+				<cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:ServiceProviderParty>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:TenderingTerms>
+		<cac:ProcurementLegislationDocumentReference>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efac:FieldsPrivacy>
+								<efbc:FieldIdentifierCode listName="non-publication-identifier">cro-bor-law</efbc:FieldIdentifierCode>
+								<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+								<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+								<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+							</efac:FieldsPrivacy>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
+			<cbc:ID>CrossBorderLaw</cbc:ID>
+			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>
+		</cac:ProcurementLegislationDocumentReference>
+	</cac:TenderingTerms>
+	<cac:TenderingProcess>
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+						<efac:FieldsPrivacy>
+							<efbc:FieldIdentifierCode listName="non-publication-identifier">pro-typ</efbc:FieldIdentifierCode>
+							<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+							<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+							<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+						</efac:FieldsPrivacy>
+						<efac:FieldsPrivacy>
+							<efbc:FieldIdentifierCode listName="non-publication-identifier">pro-fea</efbc:FieldIdentifierCode>
+							<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+							<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+							<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+						</efac:FieldsPrivacy>
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
+		<cbc:Description languageID="ENG">This procedure has a lot of not public information...</cbc:Description>
+		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+	</cac:TenderingProcess>
+	<cac:ProcurementProject>
+		<cbc:ID>C1032</cbc:ID>
+		<cbc:Name languageID="ENG">Making Tax Digital for VAT (MTDfV)</cbc:Name>
+		<cbc:Description languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cbc:Note languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Note>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">72260000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<cbc:Region>anyw-cou</cbc:Region>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+    <cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>75</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Quality</cbc:Name>
+						<cbc:Description languageID="ENG">The quality is evaluated by...</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>25</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Price</cbc:Name>
+						<cbc:Description languageID="ENG">The price is evaluated by...</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ENG">not available.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>C1032A</cbc:ID>
+			<cbc:Name languageID="ENG">Making Tax Digital for VAT (MTDfV)</cbc:Name>
+			<cbc:Description languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">72260000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+    <cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AwardingTerms>
+				<cac:AwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efac:FieldsPrivacy>
+												<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-wei</efbc:FieldIdentifierCode>
+												<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+												<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+												<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+											</efac:FieldsPrivacy>
+											<efac:FieldsPrivacy>
+												<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-num</efbc:FieldIdentifierCode>
+												<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+												<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+												<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+											</efac:FieldsPrivacy>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>75</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+										<efac:FieldsPrivacy>
+											<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-typ</efbc:FieldIdentifierCode>
+											<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+											<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+											<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+										</efac:FieldsPrivacy>
+										<efac:FieldsPrivacy>
+											<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-nam</efbc:FieldIdentifierCode>
+											<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+											<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+											<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+										</efac:FieldsPrivacy>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Quality</cbc:Name>
+						<cbc:Description languageID="ENG">The quality is evaluated by...</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<ext:UBLExtensions>
+							<ext:UBLExtension>
+								<ext:ExtensionContent>
+									<efext:EformsExtension>
+										<efac:AwardCriterionParameter>
+											<efac:FieldsPrivacy>
+												<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-wei</efbc:FieldIdentifierCode>
+												<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+												<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+												<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+											</efac:FieldsPrivacy>
+											<efac:FieldsPrivacy>
+												<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-num</efbc:FieldIdentifierCode>
+												<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+												<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+												<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+											</efac:FieldsPrivacy>
+											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+											<efbc:ParameterNumeric>25</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
+										<efac:FieldsPrivacy>
+											<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-typ</efbc:FieldIdentifierCode>
+											<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+											<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+											<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+										</efac:FieldsPrivacy>
+										<efac:FieldsPrivacy>
+											<efbc:FieldIdentifierCode listName="non-publication-identifier">awa-cri-nam</efbc:FieldIdentifierCode>
+											<cbc:ReasonCode listName="non-publication-justification">oth-int</cbc:ReasonCode>
+											<efbc:ReasonDescription languageID="ENG">Publication delayed because of ...</efbc:ReasonDescription>
+											<efbc:PublicationDate>2024-12-31Z</efbc:PublicationDate>
+										</efac:FieldsPrivacy>
+									</efext:EformsExtension>
+								</ext:ExtensionContent>
+							</ext:UBLExtension>
+						</ext:UBLExtensions>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Name languageID="ENG">Price</cbc:Name>
+						<cbc:Description languageID="ENG">The price is evaluated by...</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+				</cac:AwardingCriterion>
+			</cac:AwardingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:PresentationPeriod>
+					<cbc:Description languageID="ENG">not available.</cbc:Description>
+				</cac:PresentationPeriod>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+				<cac:MediationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:MediationParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:TenderingProcess>
+			<cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+			<cac:AuctionTerms>
+				<cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+			</cac:AuctionTerms>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+			<cac:ContractingSystem>
+				<cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+			</cac:ContractingSystem>
+		</cac:TenderingProcess>
+		<cac:ProcurementProject>
+			<cbc:ID>C1032B</cbc:ID>
+			<cbc:Name languageID="ENG">Making Tax Digital for VAT (MTDfV)</cbc:Name>
+			<cbc:Description languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cbc:Note languageID="ENG">NI Water is required to comply with UK tax legislation and views tax compliance as an integral part of the Finance function. NI Water's key tax objectives are published within our Group Tax Strategy. Making Tax Digital is a key part of the government's plans to make it easier for businesses to get their tax right and keep on top of their tax affairs.</cbc:Note>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">72260000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+			<cac:RealizedLocation>
+				<cac:Address>
+					<cbc:Region>anyw-cou</cbc:Region>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:RealizedLocation>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2020-02-12Z</cbc:AwardDate>
+	</cac:TenderResult>
+</ContractAwardNotice>

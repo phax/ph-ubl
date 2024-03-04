@@ -7,7 +7,7 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>19</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">19</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -26,21 +26,23 @@
 									<cbc:PostalZone>37600</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">FRB04</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
 									<cbc:CompanyID> 20007158700014</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
-									<cbc:Name>Florence Magnol</cbc:Name>
-									<cbc:Telephone>+33 247919391</cbc:Telephone>
-									<cbc:ElectronicMail>florence.magnol@lochessudtouraine.com</cbc:ElectronicMail>
+									<cbc:Name>Service Achats</cbc:Name>
+									<cbc:Telephone>+33 247911111</cbc:Telephone>
+									<cbc:Telefax>+33 2479111119</cbc:Telefax>
+									<cbc:ElectronicMail>service-achats@lochessudtouraine.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>http://orleans.tribunal-administratif.fr/</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -51,12 +53,13 @@
 									<cbc:StreetName>28 rue de la Bretonnerie</cbc:StreetName>
 									<cbc:CityName>Orleans</cbc:CityName>
 									<cbc:PostalZone>45057</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FRB04</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>FRA</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Name>Greffe</cbc:Name>
@@ -68,6 +71,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -77,6 +81,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>1 rue du Médiateur</cbc:StreetName>
 									<cbc:CityName>Médiateurville</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">FR102</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
 									</cac:Country>
@@ -86,12 +92,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -100,15 +108,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -119,8 +130,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>4039abd1-af19-42cf-bce0-7c55806601e8</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">4039abd1-af19-42cf-bce0-7c55806601e8</cbc:ID>
 	<cbc:ContractFolderID>fe181e9c-327f-4a7c-8669-ef0774c9a749</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-14+01:00</cbc:IssueDate>
 	<cbc:IssueTime>04:44:04+01:00</cbc:IssueTime>
@@ -153,15 +164,6 @@
 			</cac:ServiceProviderParty>
 		</cac:Party>
 	</cac:ContractingParty>
-	<cac:TenderingTerms>
-		<cac:LotDistribution>
-			<cbc:MaximumLotsAwardedNumeric>1</cbc:MaximumLotsAwardedNumeric>
-			<cbc:MaximumLotsSubmittedNumeric>1</cbc:MaximumLotsSubmittedNumeric>
-		</cac:LotDistribution>
-	</cac:TenderingTerms>
-	<cac:TenderingProcess>
-		<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
-	</cac:TenderingProcess>
 	<cac:ProcurementProject>
 		<cbc:ID>Dsp crèches</cbc:ID>
 		<cbc:Name languageID="FRA">Concession de service public pour la gestion des équipements d'accueil collectif de la petite enfance — secteur nord-est Loches et Tauxigny-Saint-Bauld</cbc:Name>
@@ -177,6 +179,9 @@
 		<cac:RealizedLocation>
 			<cac:Address>
 				<cbc:CountrySubentityCode listName="nuts">FRB04</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -188,7 +193,17 @@
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
 							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">NOT AVAILABLE</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
 								<cbc:CriterionTypeCode listName="selection-criterion">ef-stand</cbc:CriterionTypeCode>
+								<cbc:Description languageID="FRA">NOT AVAILABLE</cbc:Description>
+								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
+							</efac:SelectionCriteria>
+							<efac:SelectionCriteria>
+								<cbc:CriterionTypeCode listName="selection-criterion">tp-abil</cbc:CriterionTypeCode>
 								<cbc:Description languageID="FRA">NOT AVAILABLE</cbc:Description>
 								<cbc:CalculationExpressionCode listName="usage">used</cbc:CalculationExpressionCode>
 							</efac:SelectionCriteria>
@@ -200,6 +215,11 @@
 			<cac:CallForTendersDocumentReference>
 				<cbc:ID>Identifier1</cbc:ID>
 				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+				<cac:Attachment>
+					<cac:ExternalReference>
+						<cbc:URI>http://www.pro-marchespublics.com</cbc:URI>
+					</cac:ExternalReference>
+				</cac:Attachment>
 			</cac:CallForTendersDocumentReference>
 			<cac:TendererQualificationRequest>
 				<cac:SpecificTendererRequirement>
@@ -211,29 +231,36 @@
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
 				<cac:AwardingCriterion>
-					<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
-					<cbc:Description languageID="FRA">Qualité de service jugée au regard du mémoire technique</cbc:Description>
-				</cac:AwardingCriterion>
-				<cac:AwardingCriterion>
-					<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
-					<cbc:Description languageID="FRA">Montant de la compensation financière, et part variable de la redevance d'occupation du domaine public</cbc:Description>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="FRA">Qualité de service jugée au regard du mémoire technique</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
+					<cac:SubordinateAwardingCriterion>
+						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="FRA">Montant de la compensation financière, et part variable de la redevance d'occupation du domaine public</cbc:Description>
+					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:TenderRecipientParty>
 				<cbc:EndpointID>http://www.pro-marchespublics.com</cbc:EndpointID>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:PresentationPeriod>
 					<cbc:Description languageID="FRA">Un appel...</cbc:Description>
 				</cac:PresentationPeriod>
+				<cac:AppealInformationParty>
+					<cac:PartyIdentification>
+						<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealInformationParty>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
 						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
@@ -250,6 +277,7 @@
 			</cac:Language>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
+			<cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
 			<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
 			<cac:TenderSubmissionDeadlinePeriod>
 				<cbc:EndDate>2020-07-01+01:00</cbc:EndDate>
@@ -267,9 +295,13 @@
 			<cac:RealizedLocation>
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">FRB04</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">FRA</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-10-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 		</cac:ProcurementProject>

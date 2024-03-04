@@ -9,8 +9,10 @@
 					<efac:ContractModification>
 						<efbc:ChangedNoticeIdentifier>342558-2018</efbc:ChangedNoticeIdentifier>
 						<efac:Change>
-							<efbc:ChangedSectionIdentifier>RESULT</efbc:ChangedSectionIdentifier>
 							<efbc:ChangeDescription languageID="ENG">Increase in framework value</efbc:ChangeDescription>
+							<efac:ChangedSection>
+								<efbc:ChangedSectionIdentifier>CON-0001</efbc:ChangedSectionIdentifier>
+							</efac:ChangedSection>
 						</efac:Change>
 						<efac:ChangeReason>
 							<cbc:ReasonCode listName="modification-justification">add-wss</cbc:ReasonCode>
@@ -20,6 +22,10 @@
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="EUR">4500000</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
 							<efac:SettledContract>
 								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
 							</efac:SettledContract>
@@ -30,12 +36,16 @@
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
 							<cbc:RankCode>1</cbc:RankCode>
+							<efbc:TenderRankedIndicator>true</efbc:TenderRankedIndicator>
 							<cac:LegalMonetaryTotal>
 								<cbc:PayableAmount currencyID="GBP">6430000</cbc:PayableAmount>
 							</cac:LegalMonetaryTotal>
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>CHG/2021/PWC</cbc:ID>
 							</efac:TenderReference>
@@ -46,27 +56,25 @@
 							<cbc:IssueDate>2018-08-02+02:00</cbc:IssueDate>
 							<cac:SignatoryParty>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
-								</cac:PartyIdentification>
-							</cac:SignatoryParty>
-							<cac:SignatoryParty>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="organisation">ORG-0004</cbc:ID>
+									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
 							</cac:SignatoryParty>
 							<efac:ContractReference>
 								<cbc:ID>MOD/CON/02-CHG/2021/PWC</cbc:ID>
 							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
 						</efac:SettledContract>
 						<efac:TenderingParty>
 							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							<efac:Tenderer>
-								<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 							</efac:Tenderer>
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>38</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">38</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -82,22 +90,24 @@
 									<cbc:StreetName>103 Borough Road</cbc:StreetName>
 									<cbc:CityName> London</cbc:CityName>
 									<cbc:PostalZone>SE1 0AA</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>procurement@lsbu.ac.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.lsbu.ac.uk</cbc:WebsiteURI>
 								<cac:PartyIdentification>
-									<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+									<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 								</cac:PartyIdentification>
 								<cac:PartyName>
 									<cbc:Name languageID="ENG">Head of Procurement</cbc:Name>
@@ -106,19 +116,21 @@
 									<cbc:StreetName>103 Borough Road</cbc:StreetName>
 									<cbc:CityName> London</cbc:CityName>
 									<cbc:PostalZone>SE1 0AA</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567110</cbc:Telephone>
+									<cbc:Telefax>(+12)345671109</cbc:Telefax>
 									<cbc:ElectronicMail>procurement-review@lsbu.ac.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -127,21 +139,25 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -151,6 +167,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -160,12 +178,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://pwc.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -174,9 +194,10 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>London</cbc:CityName>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -184,6 +205,7 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 888 888</cbc:Telephone>
+									<cbc:Telefax>+123 888 8889</cbc:Telefax>
 									<cbc:ElectronicMail>contact@pwc.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -194,8 +216,8 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>3572a106-eb30-4c7a-8ac5-b3502f71742a</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">3572a106-eb30-4c7a-8ac5-b3502f71742a</cbc:ID>
 	<cbc:ContractFolderID>8e8b5cf4-595b-4562-85b0-7c79922cb330</cbc:ContractFolderID>
 	<cbc:IssueDate>2018-08-02+01:00</cbc:IssueDate>
 	<cbc:IssueTime>08:08:08+01:00</cbc:IssueTime>
@@ -228,9 +250,8 @@
 		</cac:MainCommodityClassification>
 		<cac:RealizedLocation>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
 				<cac:Country>
-					<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
@@ -241,7 +262,7 @@
 			<cac:AppealTerms>
 				<cac:AppealReceiverParty>
 					<cac:PartyIdentification>
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:AppealReceiverParty>
 				<cac:MediationParty>
@@ -252,6 +273,7 @@
 			</cac:AppealTerms>
 		</cac:TenderingTerms>
 		<cac:ProcurementProject>
+			<cbc:ID>1</cbc:ID>
 			<cbc:Name languageID="ENG">Change Partner</cbc:Name>
 			<cbc:Description languageID="ENG">LSBU is seeking the services of a strategic change partner to support it in delivering the objectives of LEAP, an ambitions change programme that will transform the way the University is organised and delivers its services to support its students through their learning journey and respond more flexibly and effectively to emerging opportunities and challenges, including evolving student and employer (customer) needs and expectations, new digital solutions, regulatory, information and market changes, remaining true to its identity and stated aims. The LEAP programme has been designed around 9 workstreams.</cbc:Description>
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
@@ -260,9 +282,8 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
 					<cac:Country>
-						<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>

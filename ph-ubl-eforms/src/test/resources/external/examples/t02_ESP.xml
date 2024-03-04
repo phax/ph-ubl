@@ -8,6 +8,7 @@
 				<efext:EformsExtension>
 					<efac:NoticeResult>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
 							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
 							<efac:LotTender>
 								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
@@ -28,54 +29,43 @@
 							<efac:ContractTerm>
 								<efbc:TermCode listName="contract-detail">cost-comp</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Description of the costs parameters blablabla ...</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
 							<efac:ContractTerm>
 								<efbc:TermCode listName="contract-detail">exc-right</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Explotar en exclusiva los servicios objeto del contrato durante la vigencia del mismo sin perjuicio de lo establecido en la cláusula 3.ª bis.</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
 							<efac:ContractTerm>
 								<efbc:TermCode listName="contract-detail">soc-stand</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Description of the social-standards blablabla ...</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
 							<efac:ContractTerm>
 								<efbc:TermCode listName="contract-detail">publ-ser-obl</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Sí.</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
 							<efac:ContractTerm>
 								<efbc:TermCode listName="contract-detail">other</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Las fijadas en el contrato.</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
 							<efac:ContractTerm>
-								<efbc:TermCode listName="customer-service">rew-pen</efbc:TermCode>
+								<efbc:TermCode listName="rewards-penalties">rew-pen</efbc:TermCode>
 								<efbc:TermDescription languageID="SPA">Information on Rewards and Penalties ....</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 							</efac:ContractTerm>
-							<!--<efac:ContractTerm>
-								<efbc:TermCode listName="contract-detail">all-rev-tic</efbc:TermCode>
-								<efbc:TermDescription languageID="SPA">100.0</efbc:TermDescription>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
-							</efac:ContractTerm>-->
 							<efac:ContractTerm>
 								<efbc:TermCode>all-rev-ic</efbc:TermCode>
-								<efbc:TermIndicator>true</efbc:TermIndicator>
 								<efbc:TermPercent>100</efbc:TermPercent>
 							</efac:ContractTerm>
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>TDR ABC:2020-01</cbc:ID>
 							</efac:TenderReference>
 						</efac:LotTender>
 						<efac:SettledContract>
-							<!--<cbc:ID>CONTRACT 627836</cbc:ID>-->
 							<cbc:ID schemeName="contract">CON-0001</cbc:ID>
-							<cbc:AwardDate>2020-02-12+01:00</cbc:AwardDate>
 							<cbc:IssueDate>2020-04-09+02:00</cbc:IssueDate>
 							<efac:ContractReference>
 								<cbc:ID>RN CON:2020-02/SC</cbc:ID>
@@ -123,9 +113,9 @@
 									<cbc:StreetName>Paseo Castellana, 67</cbc:StreetName>
 									<cbc:CityName>Madrid</cbc:CityName>
 									<cbc:PostalZone>28071</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">ES300</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -134,12 +124,14 @@
 								<cac:Contact>
 									<cbc:Name>Dirección General de Transporte Terrestre</cbc:Name>
 									<cbc:Telephone>+34 915977000</cbc:Telephone>
+									<cbc:Telefax>+34 9159770009</cbc:Telefax>
 									<cbc:ElectronicMail>sgatt@fomento.es</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -148,15 +140,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -172,7 +167,6 @@
 							</efac:UltimateBeneficialOwner>
 							<efac:Company>
 								<cbc:WebsiteURI>https://www.renfe.com/</cbc:WebsiteURI>
-								<efbc:CompanySizeCode listName="economic-operator-size">large</efbc:CompanySizeCode>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -183,9 +177,9 @@
 									<cbc:StreetName>Avenida Pío XII, 110</cbc:StreetName>
 									<cbc:CityName>Madrid</cbc:CityName>
 									<cbc:PostalZone>2836</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">ES300</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -193,6 +187,7 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+234) 98765</cbc:Telephone>
+									<cbc:Telefax>(+234) 987659</cbc:Telefax>
 									<cbc:ElectronicMail>contact@hulk-comp.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -209,9 +204,9 @@
 								<cbc:StreetName>Calle hancha, 78</cbc:StreetName>
 								<cbc:CityName>Madrid</cbc:CityName>
 								<cbc:PostalZone>2836</cbc:PostalZone>
-								<cbc:CountrySubentityCode listName="nuts">ES3</cbc:CountrySubentityCode>
+								<cbc:CountrySubentityCode listName="nuts">ES300</cbc:CountrySubentityCode>
 								<cac:Country>
-									<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+									<cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
 								</cac:Country>
 							</cac:ResidenceAddress>
 							<!-- Winner Owner Nationality (BT-706) -->
@@ -223,20 +218,14 @@
 							</efac:Nationality>
 						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
-					<efac:Publication>
-						<efbc:NoticePublicationID schemeName="ojs-notice-id">483706-2020</efbc:NoticePublicationID>
-						<efbc:GazetteID schemeName="ojs-id">199/2020</efbc:GazetteID>
-						<efbc:PublicationDate>2020-10-13+01:00</efbc:PublicationDate>
-					</efac:Publication>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>17f00f55-7178-4597-822a-545d2f55a150</cbc:ID>
-	<!-- element required for this doctype -->
-	<cbc:ContractFolderID>00000000-0000-0000-0000-000000000000</cbc:ContractFolderID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">17f00f55-7178-4597-822a-545d2f55a150</cbc:ID>
+	<cbc:ContractFolderID>b11f65a8-81df-4936-838e-01cb93d59111</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-05-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>01:01:01+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
@@ -268,15 +257,8 @@
 			</cac:ServiceProviderParty>
 		</cac:Party>
 	</cac:ContractingParty>
-	<cac:TenderingTerms>
-		<cac:TendererQualificationRequest>
-			<cac:SpecificTendererRequirement>
-				<cbc:Description languageID="SPA">description on Exclusion Grounds</cbc:Description>
-			</cac:SpecificTendererRequirement>
-		</cac:TendererQualificationRequest>
-	</cac:TenderingTerms>
 	<cac:TenderingProcess>
-		<cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+		<cbc:ProcedureCode listName="procurement-procedure-type">comp-tend</cbc:ProcedureCode>
 	</cac:TenderingProcess>
 	<cac:ProcurementProject>
 		<cbc:ID>77635</cbc:ID>
@@ -341,13 +323,14 @@
 			</cac:MainCommodityClassification>
 			<cac:RealizedLocation>
 				<cac:Address>
-					<cbc:CountrySubentityCode listName="nuts">ES</cbc:CountrySubentityCode>
+					<cbc:Region>anyw-cou</cbc:Region>
 					<cac:Country>
-						<cbc:IdentificationCode>ESP</cbc:IdentificationCode>
+						<cbc:IdentificationCode listName="country">ESP</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-09-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">120</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 		</cac:ProcurementProject>

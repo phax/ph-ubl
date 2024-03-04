@@ -20,7 +20,9 @@
 	<xsd:element name="AppealProcessingPartyTypeCode" type="AppealProcessingPartyTypeCodeType"/>
 	<xsd:element name="AppealingPartyTypeDescription" type="AppealingPartyTypeDescriptionType"/>
 	<xsd:element name="AppealingPartyTypeCode" type="AppealingPartyTypeCodeType"/>
+	<xsd:element name="ApplicableLegalBasis" type="ApplicableLegalBasisType"/>
 	<xsd:element name="AreaCode" type="AreaCodeType"/>
+	<xsd:element name="AssetCategoryCode" type="AssetCategoryCodeType"/>
 	<xsd:element name="AssetDescription" type="AssetDescriptionType"/>
 	<xsd:element name="AssetPredominance" type="AssetPredominanceType"/>
 	<xsd:element name="AssetSignificance" type="AssetSignificanceType"/>
@@ -35,10 +37,13 @@
 	<xsd:element name="DPSTerminationIndicator" type="DPSTerminationIndicatorType"/>
 	<xsd:element name="ExtendedDurationIndicator" type="ExtendedDurationIndicatorType"/>
 	<xsd:element name="FieldIdentifierCode" type="FieldIdentifierCodeType"/>
+	<xsd:element name="FinancingIdentifier" type="FinancingIdentifierType"/>
+	<xsd:element name="FrameworkMaximumAmount" type="FrameworkMaximumAmountType"/>
 	<xsd:element name="GazetteID" type="GazetteIDType"/>
 	<xsd:element name="GroupType" type="GroupTypeType"/>
 	<xsd:element name="GroupTypeCode" type="GroupTypeCodeType"/>
-	<xsd:element name="GroupFrameworkValueAmount" type="GroupFrameworkValueAmountType"/>
+	<xsd:element name="GroupFrameworkMaximumValueAmount" type="GroupFrameworkMaximumValueAmountType"/>
+	<xsd:element name="GroupFrameworkReestimatedValueAmount" type="GroupFrameworkReestimatedValueAmountType"/>
 	<xsd:element name="GroupLeadIndicator" type="GroupLeadIndicatorType"/>
 	<xsd:element name="IrregularityTypeCode" type="IrregularityTypeCodeType"/>
 	<xsd:element name="ItemClassificationDescription" type="ItemClassificationDescriptionType"/>
@@ -46,6 +51,8 @@
 	<xsd:element name="NaturalPersonIndicator" type="NaturalPersonIndicatorType"/>
 	<xsd:element name="NonAwardJustificationCode" type="NonAwardJustificationCodeType"/>
 	<xsd:element name="NoticePublicationID" type="NoticePublicationIDType"/>
+	<xsd:element name="OverallApproximateFrameworkContractsAmount" type="OverallApproximateFrameworkContractsAmountType"/>
+	<xsd:element name="OverallMaximumFrameworkContractsAmount" type="OverallMaximumFrameworkContractsAmountType"/>
 	<xsd:element name="PaidAmountDescription" type="PaidAmountDescriptionType"/>
 	<xsd:element name="ParameterNumeric" type="ParameterNumericType"/>
 	<xsd:element name="ParameterCode" type="ParameterCodeType"/>
@@ -54,9 +61,11 @@
 	<xsd:element name="PublicationDate" type="PublicationDateType"/>
 	<xsd:element name="PublicTransportationCumulatedDistance" type="PublicTransportationCumulatedDistanceType"/>
 	<xsd:element name="ProcedureRelaunchIndicator" type="ProcedureRelaunchIndicatorType"/>
+	<xsd:element name="ProcurementCategoryCode" type="ProcurementCategoryCodeType"/>
 	<xsd:element name="ProcurementDocumentsChangeDate" type="ProcurementDocumentsChangeDateType"/>
 	<xsd:element name="ProcurementDocumentsChangeIndicator" type="ProcurementDocumentsChangeIndicatorType"/>
 	<xsd:element name="ReasonDescription" type="ReasonDescriptionType"/>
+	<xsd:element name="ReestimatedValueAmount" type="ReestimatedValueAmountType"/>
 	<xsd:element name="RemedyAmount" type="RemedyAmountType"/>
 	<xsd:element name="RemedyTypeCode" type="RemedyTypeCodeType"/>
 	<xsd:element name="RevenueBuyerAmount" type="RevenueBuyerAmountType"/>
@@ -65,14 +74,16 @@
 	<xsd:element name="StatisticsNumeric" type="StatisticsNumericType"/>
 	<xsd:element name="StatisticsCode" type="StatisticsCodeType"/>
 	<xsd:element name="SubTypeDescription" type="SubTypeDescriptionType"/>
+	<xsd:element name="TenderRankedIndicator" type="TenderRankedIndicatorType"/>
 	<xsd:element name="TenderSubcontractingRequirementsCode" type="TenderSubcontractingRequirementsCodeType"/>
 	<xsd:element name="TenderSubcontractingRequirementsDescription" type="TenderSubcontractingRequirementsDescriptionType"/>
 	<xsd:element name="TenderVariantIndicator" type="TenderVariantIndicatorType"/>
 	<xsd:element name="TermAmount" type="TermAmountType"/>
 	<xsd:element name="TermCode" type="TermCodeType"/>
 	<xsd:element name="TermDescription" type="TermDescriptionType"/>
-	<xsd:element name="TermIndicator" type="TermIndicatorType"/>
 	<xsd:element name="TermPercent" type="TermPercentType"/>
+	<xsd:element name="TransmissionDate" type="TransmissionDateType"/>
+	<xsd:element name="TransmissionTime" type="TransmissionTimeType"/>
 	<xsd:element name="ValueDescription" type="ValueDescriptionType"/>
 	<xsd:element name="ValueKnownIndicator" type="ValueKnownIndicatorType"/>
 	<xsd:element name="WithdrawnAppealDate" type="WithdrawnAppealDateType"/>
@@ -125,7 +136,17 @@
 			<xsd:restriction base="udt:IdentifierType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="ApplicableLegalBasisType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="AreaCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AssetCategoryCodeType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
@@ -200,6 +221,16 @@
 			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="FinancingIdentifierType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:IdentifierType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="FrameworkMaximumAmountType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="GazetteIDType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IdentifierType"/>
@@ -215,7 +246,12 @@
 			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:complexType name="GroupFrameworkValueAmountType">
+	<xsd:complexType name="GroupFrameworkMaximumValueAmountType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="GroupFrameworkReestimatedValueAmountType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:AmountType"/>
 		</xsd:simpleContent>
@@ -260,6 +296,16 @@
 			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="OverallApproximateFrameworkContractsAmountType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="OverallMaximumFrameworkContractsAmountType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="PaidAmountDescriptionType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:TextType"/>
@@ -290,6 +336,11 @@
 			<xsd:restriction base="udt:IndicatorType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="ProcurementCategoryCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="ProcurementDocumentsChangeDateType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:DateType"/>
@@ -313,6 +364,11 @@
 	<xsd:complexType name="ReasonDescriptionType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:TextType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ReestimatedValueAmountType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="RemedyAmountType">
@@ -355,6 +411,11 @@
 			<xsd:restriction base="udt:TextType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="TenderRankedIndicatorType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:IndicatorType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="TenderSubcontractingRequirementsCodeType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:CodeType"/>
@@ -385,14 +446,19 @@
 			<xsd:restriction base="udt:TextType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:complexType name="TermIndicatorType">
-		<xsd:simpleContent>
-			<xsd:restriction base="udt:IndicatorType"/>
-		</xsd:simpleContent>
-	</xsd:complexType>
 	<xsd:complexType name="TermPercentType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:PercentType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransmissionDateType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:DateType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransmissionTimeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:TimeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="ValueDescriptionType">

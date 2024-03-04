@@ -9,19 +9,31 @@
 					<efac:NoticeResult>
 						<cbc:TotalAmount currencyID="EUR">5640000</cbc:TotalAmount>
 						<efac:LotResult>
+							<cbc:ID schemeName="result">RES-0001</cbc:ID>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:SettledContract>
+								<cbc:ID schemeName="contract">CON-0001</cbc:ID>
+							</efac:SettledContract>
 							<efac:TenderLot>
 								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
 							</efac:TenderLot>
 						</efac:LotResult>
 						<efac:LotTender>
 							<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
-							<cbc:RankCode>1</cbc:RankCode>
 							<efac:SubcontractingTerm>
-								<efbc:TermCode listName="applicability">no</efbc:TermCode>
+								<efbc:TermDescription languageID="ENG">The contract/lot/concession is likely to be subcontracted</efbc:TermDescription>
+								<efbc:TermCode listName="applicability">yes</efbc:TermCode>
+								<efbc:PercentageKnownIndicator>false</efbc:PercentageKnownIndicator>
+								<efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
 							</efac:SubcontractingTerm>
 							<efac:TenderingParty>
 								<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
+							</efac:TenderLot>
 							<efac:TenderReference>
 								<cbc:ID>BID ABC/2020-01</cbc:ID>
 							</efac:TenderReference>
@@ -39,12 +51,12 @@
 						<efac:TenderingParty>
 							<cbc:ID schemeName="tendering-party">TPA-0001</cbc:ID>
 							<efac:Tenderer>
-								<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
+								<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
 							</efac:Tenderer>
 						</efac:TenderingParty>
 					</efac:NoticeResult>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>26</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">26</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
@@ -60,9 +72,9 @@
 									<cbc:StreetName>1 Eversholt Street</cbc:StreetName>
 									<cbc:CityName>London</cbc:CityName>
 									<cbc:PostalZone>NW1 2DN</cbc:PostalZone>
-									<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -70,12 +82,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+44 1908781000</cbc:Telephone>
+									<cbc:Telefax>+44 19087810009</cbc:Telefax>
 									<cbc:ElectronicMail>emma.daniels@networkrail.co.uk</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://court.gov.uk</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 								</cac:PartyIdentification>
@@ -84,8 +98,10 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>London</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>GBR</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
@@ -93,12 +109,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>(+12)34567890</cbc:Telephone>
+									<cbc:Telefax>(+12)345678909</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -108,6 +126,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -117,12 +137,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -131,40 +153,80 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>222 333 444</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
+						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>false</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:UltimateBeneficialOwner>
+								<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							</efac:UltimateBeneficialOwner>
+							<efac:Company>
+								<cbc:WebsiteURI>https://example.com</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="organization">ORG-0005</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Dreicher and Sohne</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
+									<cbc:ElectronicMail>contact@example.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+						<efac:UltimateBeneficialOwner>
+							<cbc:ID schemeName="ubo">UBO-0001</cbc:ID>
+							<efac:Nationality>
+								<cbc:NationalityID>LUX</cbc:NationalityID>
+							</efac:Nationality>
+						</efac:UltimateBeneficialOwner>
 					</efac:Organizations>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>b9762d53-76dc-427b-9eb8-68e330f854f1</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">b9762d53-76dc-427b-9eb8-68e330f854f1</cbc:ID>
 	<cbc:ContractFolderID>7fd26aef-6e07-44a4-9935-1c123fafb47f</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-03-30+01:00</cbc:IssueDate>
 	<cbc:IssueTime>05:55:55+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
 	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
-	<cbc:NoticeTypeCode listName="result">veat</cbc:NoticeTypeCode>
+	<cbc:NoticeTypeCode listName="dir-awa-pre">veat</cbc:NoticeTypeCode>
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
 	<cac:ContractingParty>
 		<cac:ContractingPartyType>
-			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-cga</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
-			<cbc:ActivityType>railway services</cbc:ActivityType>
+			<cbc:ActivityTypeCode listName="entity-activity">rail</cbc:ActivityTypeCode>
 		</cac:ContractingActivity>
 		<cac:Party>
 			<cac:PartyIdentification>
@@ -199,7 +261,9 @@
 		<cac:RealizedLocation>
 			<cbc:Description languageID="ENG">UK Railway infrastructure as maintained by Network Rail.</cbc:Description>
 			<cac:Address>
-				<cbc:CountrySubentityCode listName="nuts">UK</cbc:CountrySubentityCode>
+				<cac:Country>
+					<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+				</cac:Country>
 			</cac:Address>
 		</cac:RealizedLocation>
 	</cac:ProcurementProject>
@@ -208,7 +272,7 @@
 		<cac:TenderingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
 			<cac:AppealTerms>
@@ -228,6 +292,7 @@
 			<cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
 		</cac:TenderingProcess>
 		<cac:ProcurementProject>
+			<cbc:ID>1</cbc:ID>
 			<cbc:Name languageID="ENG">5,640,000</cbc:Name>
 			<cbc:Description languageID="ENG">This is a voluntary ex ante transparency (VEAT) notice. This notice is to indicate that Network Rail intends to contract with Elektrotechnische werke fritz Driescher and söhne gmbh, Morris Line Engineering and SDCEM, for the purchase of 25 kV AC disconnector motor mechanisms and remote securing modules to be retrofitted onto existing devices on the UK railway network.</cbc:Description>	
 			<cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
@@ -238,18 +303,5 @@
 	</cac:ProcurementProjectLot>
 	<cac:TenderResult>
 		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
-		<cac:Contract>
-			<cbc:ID>SomeID2</cbc:ID>
-		</cac:Contract>
-		<cac:AwardedTenderedProject>
-			<cbc:TenderEnvelopeID>SomeTenderID</cbc:TenderEnvelopeID>
-			<cac:ProcurementProjectLot>
-				<cbc:ID schemeName="Lot">LOT-0000</cbc:ID>
-				
-			</cac:ProcurementProjectLot>
-		</cac:AwardedTenderedProject>
-		<cac:SubcontractTerms>
-			<cbc:Description languageID="ENG">The contract/lot/concession is likely to be subcontracted</cbc:Description>
-		</cac:SubcontractTerms>
 	</cac:TenderResult>
 </ContractAwardNotice>

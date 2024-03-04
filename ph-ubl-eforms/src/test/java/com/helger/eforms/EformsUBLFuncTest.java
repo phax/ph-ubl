@@ -60,11 +60,10 @@ public final class EformsUBLFuncTest
   {
     final UBL23JAXBMarshaller <ContractAwardNoticeType> m = EformsUBLMarshaller.contractAwardNotice ();
 
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.CONTRACT_AWARD_NOTICE))
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_AWARD_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
       final ContractAwardNoticeType aUBLObject = EformsUBLMarshaller.contractAwardNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -101,11 +100,10 @@ public final class EformsUBLFuncTest
   {
     final UBL23JAXBMarshaller <ContractNoticeType> m = EformsUBLMarshaller.contractNotice ();
 
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.CONTRACT_NOTICE))
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
       final ContractNoticeType aUBLObject = EformsUBLMarshaller.contractNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -142,11 +140,10 @@ public final class EformsUBLFuncTest
   {
     final UBL23JAXBMarshaller <PriorInformationNoticeType> m = EformsUBLMarshaller.priorInformationNotice ();
 
-    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentTypeSimple.PRIOR_INFORMATION_NOTICE))
+    for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.PRIOR_INFORMATION_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
       final PriorInformationNoticeType aUBLObject = EformsUBLMarshaller.priorInformationNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -173,8 +170,7 @@ public final class EformsUBLFuncTest
     }
 
     // Validate
-    final IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ()
-                                                  .validate (new PriorInformationNoticeType ());
+    final IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ().validate (new PriorInformationNoticeType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -215,9 +211,7 @@ public final class EformsUBLFuncTest
     }
 
     // Write XML to String
-    final String sResult = EformsUBLMarshaller.contractAwardNotice ()
-                                              .setFormattedOutput (true)
-                                              .getAsString (aTargetDoc);
+    final String sResult = EformsUBLMarshaller.contractAwardNotice ().setFormattedOutput (true).getAsString (aTargetDoc);
     assertNotNull (sResult);
     LOGGER.info (sResult);
   }
@@ -232,14 +226,11 @@ public final class EformsUBLFuncTest
       final PartyType aBP = new PartyType ();
       brin.setBusinessParty (aBP);
     }
-    final String sResult = EformsUBLMarshaller.businessRegistrationInformationNotice ()
-                                              .setFormattedOutput (true)
-                                              .getAsString (brin);
+    final String sResult = EformsUBLMarshaller.businessRegistrationInformationNotice ().setFormattedOutput (true).getAsString (brin);
     assertNotNull (sResult);
     LOGGER.info (sResult);
 
-    final BusinessRegistrationInformationNoticeType brin2 = EformsUBLMarshaller.businessRegistrationInformationNotice ()
-                                                                               .read (sResult);
+    final BusinessRegistrationInformationNoticeType brin2 = EformsUBLMarshaller.businessRegistrationInformationNotice ().read (sResult);
     assertNotNull (brin2);
     assertEquals (brin, brin2);
   }

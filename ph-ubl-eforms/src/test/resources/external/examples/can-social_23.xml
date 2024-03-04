@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+								  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+								  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+								  xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+								  xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+								  xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+								  xmlns:urn="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<efext:EformsExtension>
+					<efac:NoticeResult>
+						<cbc:TotalAmount currencyID="EUR">123456.78</cbc:TotalAmount>
+						<efac:LotResult>
+							<cbc:ID>RES-0001</cbc:ID>
+							<cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
+							<efac:DecisionReason>
+								<efbc:DecisionReasonCode listName="non-award-justification">no-rece</efbc:DecisionReasonCode>
+							</efac:DecisionReason>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0001</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotResult>
+							<cbc:ID>RES-0002</cbc:ID>
+							<cbc:TenderResultCode listName="winner-selection-status">selec-w</cbc:TenderResultCode>
+							<efac:LotTender>
+								<cbc:ID>TEN-0001</cbc:ID>
+							</efac:LotTender>
+							<efac:SettledContract>
+								<cbc:ID>CON-0001</cbc:ID>
+							</efac:SettledContract>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0002</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotResult>
+							<cbc:ID>RES-0003</cbc:ID>
+							<cbc:TenderResultCode listName="winner-selection-status">open-nw</cbc:TenderResultCode>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0003</cbc:ID>
+							</efac:TenderLot>
+						</efac:LotResult>
+						<efac:LotTender>
+							<cbc:ID>TEN-0001</cbc:ID>
+							<efac:SubcontractingTerm>
+								<efbc:TermCode>_DEFAULT_VALUE_CHANGE_ME_</efbc:TermCode>
+								<efbc:ValueKnownIndicator>false</efbc:ValueKnownIndicator>
+							</efac:SubcontractingTerm>
+							<efac:TenderingParty>
+								<cbc:ID>TPA-0001</cbc:ID>
+							</efac:TenderingParty>
+							<efac:TenderLot>
+								<cbc:ID>LOT-0002</cbc:ID>
+							</efac:TenderLot>
+							<efac:TenderReference>
+								<cbc:ID>TENDERID</cbc:ID>
+							</efac:TenderReference>
+						</efac:LotTender>
+						<efac:SettledContract>
+							<cbc:ID>CON-0001</cbc:ID>
+							<efac:ContractReference>
+								<cbc:ID>125b</cbc:ID>
+							</efac:ContractReference>
+							<efac:LotTender>
+								<cbc:ID schemeName="tender">TEN-0001</cbc:ID>
+							</efac:LotTender>
+						</efac:SettledContract>
+						<efac:TenderingParty>
+							<cbc:ID>TPA-0001</cbc:ID>
+							<efac:Tenderer>
+								<cbc:ID>ORG-0002</cbc:ID>
+							</efac:Tenderer>
+						</efac:TenderingParty>
+					</efac:NoticeResult>
+					<efac:NoticeSubType>
+						<cbc:SubTypeCode listName="notice-subtype">35</cbc:SubTypeCode>
+					</efac:NoticeSubType>
+					<efac:Organizations>
+						<efac:Organization>
+							<efac:Company>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">ZenithNova Innovations Ltd.</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:StreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:StreetName>
+									<cbc:AdditionalStreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:AdditionalStreetName>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+									<cbc:CityName>New Horizons, CA</cbc:CityName>
+									<cbc:PostalZone>117 43</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+									<cac:AddressLine>
+										<cbc:Line>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:Line>
+									</cac:AddressLine>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>ABE</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Name>Info</cbc:Name>
+									<cbc:Telephone>+1 (555) 123-4567</cbc:Telephone>
+									<cbc:Telefax>+1 (555) 123-4567</cbc:Telefax>
+									<cbc:ElectronicMail>info@zenithnovainnovations.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>https://www.zenithnovainnovations.com/contact-us/katerina-lisa</cbc:WebsiteURI>
+								<cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange/katerina-lisa</cbc:EndpointID>
+								<cac:PartyIdentification>
+									<cbc:ID>TPO-0001</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Katerina Lisa</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:Department>Future Solutions Division</cbc:Department>
+								</cac:PostalAddress>
+							</efac:TouchPoint>
+						</efac:Organization>
+						<efac:Organization>
+							<efbc:ListedOnRegulatedMarketIndicator>true</efbc:ListedOnRegulatedMarketIndicator>
+							<efac:Company>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">New Org </cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<cbc:CityName>Patra </cbc:CityName>
+									<cbc:PostalZone>117 43</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:PartyLegalEntity>
+									<cbc:CompanyID>irg</cbc:CompanyID>
+								</cac:PartyLegalEntity>
+								<cac:Contact>
+									<cbc:Telephone>1444455222</cbc:Telephone>
+									<cbc:ElectronicMail>gfre@kap.gr</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:Company>
+						</efac:Organization>
+					</efac:Organizations>
+				</efext:EformsExtension>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">6d727564-cf4c-49e3-9b9f-0ee3a0392d86</cbc:ID>
+	<cbc:ContractFolderID>e8477a57-f72b-4880-99c3-bf1a51b628c1</cbc:ContractFolderID>
+	<cbc:IssueDate>2023-05-26Z</cbc:IssueDate>
+	<cbc:IssueTime>13:08:15Z</cbc:IssueTime>
+	<cbc:VersionID>01</cbc:VersionID>
+	<cbc:RegulatoryDomain>32014L0023</cbc:RegulatoryDomain>
+	<cbc:NoticeTypeCode listName="result">can-social</cbc:NoticeTypeCode>
+	<cbc:NoticeLanguageCode listName="language">ENG</cbc:NoticeLanguageCode>
+	<cac:ContractingParty>
+		<cbc:BuyerProfileURI>https://example.com</cbc:BuyerProfileURI>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">spec-rights-entity</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingPartyType>
+			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
+		</cac:ContractingPartyType>
+		<cac:ContractingActivity>
+			<cbc:ActivityTypeCode listName="entity-activity">post</cbc:ActivityTypeCode>
+		</cac:ContractingActivity>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID>ORG-0001</cbc:ID>
+			</cac:PartyIdentification>
+		</cac:Party>
+	</cac:ContractingParty>
+	<cac:ProcurementProject>
+		<cbc:Name languageID="ENG">Goodnight Mara vol3</cbc:Name>
+		<cbc:Description languageID="ENG">New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+vol3 </cbc:Description>
+		<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+		<cac:MainCommodityClassification>
+			<cbc:ItemClassificationCode listName="cpv">90000000</cbc:ItemClassificationCode>
+		</cac:MainCommodityClassification>
+		<cac:RealizedLocation>
+			<cac:Address>
+				<cbc:Region>anyw</cbc:Region>
+			</cac:Address>
+		</cac:RealizedLocation>
+	</cac:ProcurementProject>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>ABE1</cbc:ID>
+			<cbc:Name languageID="ENG">Goodnight Mara vol3 LOT1 </cbc:Name>
+			<cbc:Description languageID="ENG">LOT1 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+vol3</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">75000000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>ABE2</cbc:ID>
+			<cbc:Name languageID="ENG">Goodnight Mara vol3 LOT2 </cbc:Name>
+			<cbc:Description languageID="ENG">New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+vol3 LOT2 </cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">77000000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:ProcurementProjectLot>
+		<cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+		<cac:TenderingTerms>
+			<cac:AdditionalInformationParty>
+				<cac:PartyIdentification>
+					<cbc:ID>TPO-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:AdditionalInformationParty>
+			<cac:AppealTerms>
+				<cac:AppealReceiverParty>
+					<cac:PartyIdentification>
+						<cbc:ID>ORG-0001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:AppealReceiverParty>
+			</cac:AppealTerms>
+		</cac:TenderingTerms>
+		<cac:ProcurementProject>
+			<cbc:ID>ABE3</cbc:ID>
+			<cbc:Name languageID="ENG">Goodnight Mara vol3 LOT3</cbc:Name>
+			<cbc:Description languageID="ENG">New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+New Year's Eve of the year 2000. In a suburb of Athens, Mara is forced to spend her night at the New Year's table organized by her mother with special guests. As the night goes on, the tension escalates. Someone voyeuristically invades Mara's life. Everything seems confusing as the world ends. A film about the gaze. 
+vol3 LOT3</cbc:Description>
+			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+			<cac:MainCommodityClassification>
+				<cbc:ItemClassificationCode listName="cpv">85000000</cbc:ItemClassificationCode>
+			</cac:MainCommodityClassification>
+		</cac:ProcurementProject>
+	</cac:ProcurementProjectLot>
+	<cac:TenderResult>
+		<cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+	</cac:TenderResult>
+</urn:ContractAwardNotice>

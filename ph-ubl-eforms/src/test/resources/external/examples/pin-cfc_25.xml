@@ -7,13 +7,12 @@
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
 					<efac:NoticeSubType>
-						<cbc:SubTypeCode>11</cbc:SubTypeCode>
+						<cbc:SubTypeCode listName="notice-subtype">11</cbc:SubTypeCode>
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
 							<efac:Company>
 								<cbc:WebsiteURI>http://www.stuttgart-airport.com/</cbc:WebsiteURI>
-								<cbc:EndpointID>http://www.subreport.de/E49898235</cbc:EndpointID>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 								</cac:PartyIdentification>
@@ -27,11 +26,11 @@
 									<cbc:PostalZone>70629</cbc:PostalZone>
 									<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>DEU</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>123 456 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Name>Herr Klemm</cbc:Name>
@@ -54,12 +53,13 @@
 									<cbc:StreetName>Duracher Allee 100</cbc:StreetName>
 									<cbc:CityName>Karlsruhe</cbc:CityName>
 									<cbc:PostalZone>76131</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">DE112</cbc:CountrySubentityCode>
 									<cac:Country>
-										<cbc:IdentificationCode>DEU</cbc:IdentificationCode>
+										<cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="002">123 456 789</cbc:CompanyID>
+									<cbc:CompanyID>321 654 789</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+49 7219264049</cbc:Telephone>
@@ -70,6 +70,7 @@
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://example-mediator.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0003</cbc:ID>
 								</cac:PartyIdentification>
@@ -79,6 +80,8 @@
 								<cac:PostalAddress>
 									<cbc:StreetName>Some Street</cbc:StreetName>
 									<cbc:CityName>Example City</cbc:CityName>
+									<cbc:PostalZone>ABC123</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">UKI42</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
 									</cac:Country>
@@ -88,12 +91,14 @@
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+123 456 789</cbc:Telephone>
+									<cbc:Telefax>+123 456 7899</cbc:Telefax>
 									<cbc:ElectronicMail>contact@example-mediator.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
 							<efac:Company>
+								<cbc:WebsiteURI>https://esendercorp.eu</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="organization">ORG-0004</cbc:ID>
 								</cac:PartyIdentification>
@@ -102,15 +107,18 @@
 								</cac:PartyName>
 								<cac:PostalAddress>
 									<cbc:CityName>Luxembourg</cbc:CityName>
+									<cbc:PostalZone>2985</cbc:PostalZone>
+									<cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
 									<cac:Country>
 										<cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
 									</cac:Country>
 								</cac:PostalAddress>
 								<cac:PartyLegalEntity>
-									<cbc:CompanyID schemeID="123">111 222 333</cbc:CompanyID>
+									<cbc:CompanyID>111 222 333</cbc:CompanyID>
 								</cac:PartyLegalEntity>
 								<cac:Contact>
 									<cbc:Telephone>+352 123456789</cbc:Telephone>
+									<cbc:Telefax>+352 1234567899</cbc:Telefax>
 									<cbc:ElectronicMail>esender@example.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
@@ -121,19 +129,18 @@
 		</ext:UBLExtension>
 	</ext:UBLExtensions>
 	<cbc:UBLVersionID>2.3</cbc:UBLVersionID>
-	<cbc:CustomizationID>eforms-sdk-0.4</cbc:CustomizationID>
-	<cbc:ID>c48d000f-2598-47b3-856e-de93bf654518</cbc:ID>
+	<cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+	<cbc:ID schemeName="notice-id">c48d000f-2598-47b3-856e-de93bf654518</cbc:ID>
 	<cbc:ContractFolderID>c2a0dcd1-4d17-4072-9252-38de16ead921</cbc:ContractFolderID>
 	<cbc:IssueDate>2020-04-08+01:00</cbc:IssueDate>
 	<cbc:IssueTime>12:00:00+01:00</cbc:IssueTime>
 	<cbc:VersionID>01</cbc:VersionID>
 	<cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
-	<cbc:NoticeTypeCode listName="planning">pin-cfc-standard</cbc:NoticeTypeCode>
+	<cbc:NoticeTypeCode listName="competition">pin-cfc-standard</cbc:NoticeTypeCode>
 	<cbc:NoticeLanguageCode>DEU</cbc:NoticeLanguageCode>
 	<cac:ContractingParty>
 		<cac:ContractingPartyType>
-			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
-			<cbc:PartyType>airport</cbc:PartyType>
+			<cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-ra</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
 			<cbc:ActivityTypeCode listName="entity-activity">airport</cbc:ActivityTypeCode>
@@ -221,14 +228,21 @@
 							</ext:UBLExtension>
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="DEU">Der Preis wird bewertet...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
+			<cac:TenderRecipientParty>
+				<cbc:EndpointID>http://www.subreport.de/E49898235</cbc:EndpointID>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:PresentationPeriod>
 					<cbc:Description languageID="DEU">Auf die Rügeobliegenheiten nach § 160 Abs. 3 GWB wird verwiesen. Ein Nachprüfungsantrag ist nach § 160 Abs. 3 S.1 Nr. 4 GWB insbesondere unzulässig, soweit mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, vergangen sind.</cbc:Description>
@@ -285,9 +299,13 @@
 				<cbc:Description languageID="DEU">Flughafen Stuttgart</cbc:Description>
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-09-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
@@ -350,14 +368,21 @@
 							</ext:UBLExtension>
 						</ext:UBLExtensions>
 						<cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+						<cbc:Description languageID="DEU">Der Preis wird bewertet...</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
 				<cac:PartyIdentification>
-					<cbc:ID schemeName="organisation">ORG-0001</cbc:ID>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
 				</cac:PartyIdentification>
 			</cac:AdditionalInformationParty>
+			<cac:TenderRecipientParty>
+				<cbc:EndpointID>http://www.subreport.de/E49898235</cbc:EndpointID>
+				<cac:PartyIdentification>
+					<cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:TenderRecipientParty>
 			<cac:AppealTerms>
 				<cac:PresentationPeriod>
 					<cbc:Description languageID="DEU">Auf die Rügeobliegenheiten nach § 160 Abs. 3 GWB wird verwiesen. Ein Nachprüfungsantrag ist nach § 160 Abs. 3 S.1 Nr. 4 GWB insbesondere unzulässig, soweit mehr als 15 Kalendertage nach Eingang der Mitteilung des Auftraggebers, der Rüge nicht abhelfen zu wollen, vergangen sind.</cbc:Description>
@@ -411,9 +436,13 @@
 				<cbc:Description languageID="DEU">Flughafen Stuttgart</cbc:Description>
 				<cac:Address>
 					<cbc:CountrySubentityCode listName="nuts">DE113</cbc:CountrySubentityCode>
+					<cac:Country>
+						<cbc:IdentificationCode listName="country">DEU</cbc:IdentificationCode>
+					</cac:Country>
 				</cac:Address>
 			</cac:RealizedLocation>
 			<cac:PlannedPeriod>
+				<cbc:StartDate>2020-09-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">24</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>

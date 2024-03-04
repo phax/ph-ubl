@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                          xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                          xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1"
+                          xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1"
+                          xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1"
+                          xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                          xmlns:urn="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:ContractModification>
+                  <efbc:ChangedNoticeIdentifier>cb988d3a-79e9-4792-8739-da87831a20ef-01</efbc:ChangedNoticeIdentifier>
+                  <efac:Change>
+                     <efbc:ChangeDescription languageID="ENG">Description of modifications (BT-202-Contract)</efbc:ChangeDescription>
+                     <efac:ChangedSection>
+                        <efbc:ChangedSectionIdentifier>CON-0001</efbc:ChangedSectionIdentifier>
+                     </efac:ChangedSection>
+                  </efac:Change>
+                  <efac:ChangeReason>
+                     <cbc:ReasonCode listName="modification-justification">add-wss</cbc:ReasonCode>
+                     <efbc:ReasonDescription languageID="ENG">Need for additional works, services or supplies by the original contractor.</efbc:ReasonDescription>
+                  </efac:ChangeReason>
+               </efac:ContractModification>
+               <efac:NoticeResult>
+                  <efac:LotTender>
+                     <cbc:ID>TEN-0001</cbc:ID>
+                     <cac:LegalMonetaryTotal>
+                        <cbc:PayableAmount currencyID="IDR">1000000</cbc:PayableAmount>
+                     </cac:LegalMonetaryTotal>
+                     <efac:TenderingParty>
+                        <cbc:ID>TPA-0001</cbc:ID>
+                     </efac:TenderingParty>
+                     <efac:TenderLot>
+                        <cbc:ID>LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                     <efac:TenderReference>
+                        <cbc:ID>a4325009-121f-46a5-977e-7118a9631ad3</cbc:ID>
+                     </efac:TenderReference>
+                  </efac:LotTender>
+                  <efac:SettledContract>
+                     <cbc:ID>CON-0001</cbc:ID>
+                     <cbc:IssueDate>2023-08-07+03:00</cbc:IssueDate>
+                     <efac:ContractReference>
+                        <cbc:ID>CON-0001</cbc:ID>
+                     </efac:ContractReference>
+                     <efac:LotTender>
+                        <cbc:ID>TEN-0001</cbc:ID>
+                     </efac:LotTender>
+                  </efac:SettledContract>
+                  <efac:TenderingParty>
+                     <cbc:ID>TPA-0001</cbc:ID>
+                     <efac:Tenderer>
+                        <cbc:ID>ORG-0002</cbc:ID>
+                     </efac:Tenderer>
+                  </efac:TenderingParty>
+               </efac:NoticeResult>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">40</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.zenithnovainnovations.com</cbc:WebsiteURI>
+                        <cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange</cbc:EndpointID>
+                        <cac:PartyIdentification>
+                           <cbc:ID>ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ENG">ZenithNova Innovations </cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:StreetName>
+                           <cbc:AdditionalStreetName>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:AdditionalStreetName>
+                           <cbc:Department>Future Solutions Division</cbc:Department>
+                           <cbc:CityName>New Horizons, CA</cbc:CityName>
+                           <cbc:PostalZone>117 43</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:AddressLine>
+                              <cbc:Line>ZenithNova Innovations 45 Future Boulevard New Horizons, CA 90210 United States of America</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>ABE</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>Info</cbc:Name>
+                           <cbc:Telephone>+1 (555) 123-4567</cbc:Telephone>
+                           <cbc:Telefax>+1 (555) 123-4567</cbc:Telefax>
+                           <cbc:ElectronicMail>info@zenithnovainnovations.com</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                     <efac:TouchPoint>
+                        <cbc:WebsiteURI>https://www.zenithnovainnovations.com/contact-us/katerina-lisa</cbc:WebsiteURI>
+                        <cbc:EndpointID>https://www.zenithnovainnovations.com/info-exchange/katerina-lisa</cbc:EndpointID>
+                        <cac:PartyIdentification>
+                           <cbc:ID>TPO-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ENG">Katerina Lisa</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:Department>Future Solutions Division</cbc:Department>
+                        </cac:PostalAddress>
+                     </efac:TouchPoint>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID>ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ENG">jka mmmm </cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Patras</cbc:CityName>
+                           <cbc:PostalZone>117 43</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>KLA</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>120001452</cbc:Telephone>
+                           <cbc:ElectronicMail>greddgf@fsd.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            </efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.10</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">2561905d-aad1-4ece-90c2-376fb382c3ed</cbc:ID>
+   <cbc:ContractFolderID>df399854-f604-4f31-8283-087b2b5d2e91</cbc:ContractFolderID>
+   <cbc:IssueDate>2023-08-09Z</cbc:IssueDate>
+   <cbc:IssueTime>14:06:05Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0023</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="cont-modif">can-modif</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ENG</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID>ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ENG">Title</cbc:Name>
+      <cbc:Description languageID="ENG">Description</cbc:Description>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">24000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>TPO-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:AppealTerms>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+      </cac:TenderingTerms>
+      <cac:ProcurementProject>
+         <cbc:ID>817af783-14aa-461b-bf96-650ab394f881</cbc:ID>
+         <cbc:Description languageID="ENG">817af783-14aa-461b-bf96-650ab394f881817af783-14aa-461b-bf96-650ab394f881817af783-14aa-461b-bf96-650ab394f881817af783-14aa-461b-bf96-650ab394f881</cbc:Description>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</urn:ContractAwardNotice>
