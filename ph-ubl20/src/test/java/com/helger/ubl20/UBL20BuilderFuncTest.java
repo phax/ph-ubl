@@ -40,7 +40,7 @@ public final class UBL20BuilderFuncTest
   {
     final GenericJAXBMarshaller <InvoiceType> aMarshaller = UBL20Marshaller.invoice ();
 
-    final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentTypeSimple.INVOICE).get (0);
+    final String sFilename = MockUBL20TestDocuments.getUBL20TestDocuments (EUBL20DocumentType.INVOICE).get (0);
 
     // Read from resource
     final InvoiceType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));

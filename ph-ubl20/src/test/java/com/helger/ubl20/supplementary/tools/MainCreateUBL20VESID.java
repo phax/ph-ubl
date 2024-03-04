@@ -17,7 +17,7 @@
 package com.helger.ubl20.supplementary.tools;
 
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
-import com.helger.ubl20.EUBL20DocumentTypeSimple;
+import com.helger.ubl20.EUBL20DocumentType;
 
 public final class MainCreateUBL20VESID extends AbstractCreateUBLActionCode
 {
@@ -26,9 +26,9 @@ public final class MainCreateUBL20VESID extends AbstractCreateUBLActionCode
     final StringBuilder aSB1 = new StringBuilder ();
     final StringBuilder aSB2 = new StringBuilder ();
 
-    for (final EUBL20DocumentTypeSimple e : EUBL20DocumentTypeSimple.values ())
+    for (final EUBL20DocumentType e : EUBL20DocumentType.values ())
     {
-      appendVESIDCode (e, aSB1, aSB2, "20");
+      appendVESIDCode (e.getImplementationClass (), aSB1, aSB2, "20");
     }
     aSB1.append ('\n').append (aSB2);
     System.out.println (aSB1.toString ());
