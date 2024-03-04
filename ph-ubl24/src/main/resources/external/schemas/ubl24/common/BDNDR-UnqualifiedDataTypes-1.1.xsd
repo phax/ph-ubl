@@ -48,7 +48,7 @@ xmlns:ccts-cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchema
             attributeFormDefault="unqualified"
             version="1.1">
 <!-- ===== Imports ===== -->
-  <xsd:import 
+  <xsd:import
 namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"/>
 <!-- ===== Type Definitions ===== -->
   <xsd:complexType name="AmountType">

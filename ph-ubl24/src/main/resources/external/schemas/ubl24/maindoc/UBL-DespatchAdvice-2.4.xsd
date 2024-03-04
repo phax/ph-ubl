@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.4/
+  Release Date:      17 October 2023
   Module:            xsdrt/maindoc/UBL-DespatchAdvice-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-10-24 19:56z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
@@ -38,8 +38,11 @@
          <xsd:element ref="cbc:DocumentStatusCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:DespatchAdviceTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:AccountingCostCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:AccountingCost" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:LineCountNumeric" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OrderReference" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ProjectReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:AdditionalDocumentReference"
                       minOccurs="0"
                       maxOccurs="unbounded"/>

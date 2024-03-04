@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.4/
+  Release Date:      17 October 2023
   Module:            xsdrt/common/UBL-CommonBasicComponents-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-10-24 19:56z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -279,6 +279,7 @@
    <xsd:element name="DeclaredStatisticsValueAmount"
                 type="DeclaredStatisticsValueAmountType"/>
    <xsd:element name="DeliveredQuantity" type="DeliveredQuantityType"/>
+   <xsd:element name="DeliveryAcceptanceCode" type="DeliveryAcceptanceCodeType"/>
    <xsd:element name="DeliveryInstructions" type="DeliveryInstructionsType"/>
    <xsd:element name="DemurrageInstructions" type="DemurrageInstructionsType"/>
    <xsd:element name="Department" type="DepartmentType"/>
@@ -432,6 +433,7 @@
    <xsd:element name="FullyPaidSharesIndicator" type="FullyPaidSharesIndicatorType"/>
    <xsd:element name="FumigatedCargoTransportIndicator"
                 type="FumigatedCargoTransportIndicatorType"/>
+   <xsd:element name="FunctionCode" type="FunctionCodeType"/>
    <xsd:element name="FundingProgram" type="FundingProgramType"/>
    <xsd:element name="FundingProgramCode" type="FundingProgramCodeType"/>
    <xsd:element name="GasPressureQuantity" type="GasPressureQuantityType"/>
@@ -875,6 +877,7 @@
                 type="ReceivedForeignTenderQuantityType"/>
    <xsd:element name="ReceivedQuantity" type="ReceivedQuantityType"/>
    <xsd:element name="ReceivedTenderQuantity" type="ReceivedTenderQuantityType"/>
+   <xsd:element name="ReceivedTime" type="ReceivedTimeType"/>
    <xsd:element name="RecurringProcurementDescription"
                 type="RecurringProcurementDescriptionType"/>
    <xsd:element name="RecurringProcurementIndicator"
@@ -2459,6 +2462,11 @@
          <xsd:restriction base="udt:QuantityType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="DeliveryAcceptanceCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="DeliveryInstructionsType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
@@ -3112,6 +3120,11 @@
    <xsd:complexType name="FumigatedCargoTransportIndicatorType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="FunctionCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="FundingProgramCodeType">
@@ -5117,6 +5130,11 @@
    <xsd:complexType name="ReceivedTenderQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ReceivedTimeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:TimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="RecurringProcurementDescriptionType">

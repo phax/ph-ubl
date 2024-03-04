@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.4/
+  Release Date:      17 October 2023
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-10-24 19:56z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -208,6 +208,7 @@
    <xsd:element name="CustomsExitOfficeLocation" type="LocationType"/>
    <xsd:element name="CustomsOfficeLocation" type="LocationType"/>
    <xsd:element name="CustomsParty" type="PartyType"/>
+   <xsd:element name="DamageDocumentationAttachment" type="AttachmentType"/>
    <xsd:element name="DebitNoteDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="DebitNoteLine" type="DebitNoteLineType"/>
    <xsd:element name="Declaration" type="DeclarationType"/>
@@ -357,6 +358,7 @@
    <xsd:element name="FuelConsumption" type="FuelConsumptionType"/>
    <xsd:element name="FuelMetering" type="FuelMeteringType"/>
    <xsd:element name="FuelProperty" type="FuelPropertyType"/>
+   <xsd:element name="FuelProviderParty" type="PartyType"/>
    <xsd:element name="GoodsItem" type="GoodsItemType"/>
    <xsd:element name="GoodsItemContainer" type="GoodsItemContainerType"/>
    <xsd:element name="GoodsItemPassportAttachment" type="AttachmentType"/>
@@ -1942,6 +1944,7 @@
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:FunctionCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ApplicableTerritoryAddress" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Shipment" minOccurs="0" maxOccurs="1"/>
@@ -2102,6 +2105,8 @@
          <xsd:element ref="cbc:OutstandingQuantity" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:OutstandingReason" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:OversupplyQuantity" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:AccountingCostCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:AccountingCost" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OrderLineReference" minOccurs="1" maxOccurs="unbounded"/>
          <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Item" minOccurs="1" maxOccurs="1"/>
@@ -2618,6 +2623,7 @@
                       maxOccurs="unbounded"/>
          <xsd:element ref="cac:FuelMetering" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:FuelProviderParty" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="FuelMeteringType">
@@ -3462,6 +3468,7 @@
          <xsd:element ref="cac:Delivery" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Pickup" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Despatch" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:Status" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="ParticipantPartyType">
@@ -4094,6 +4101,7 @@
          <xsd:element ref="cbc:QuantityDiscrepancyCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:OversupplyQuantity" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ReceivedDate" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ReceivedTime" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TimingComplaintCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TimingComplaint" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OrderLineReference" minOccurs="0" maxOccurs="1"/>
@@ -4556,7 +4564,7 @@
          <xsd:element ref="cac:BallastWaterSummary" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ISPSRequirements" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:MaritimeHealthDeclaration" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:FuelConsumption" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="SignatureType">
@@ -4732,7 +4740,7 @@
          <xsd:element ref="cbc:TaxExemptionReason" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:TierRange" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TierRatePercent" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:TaxScheme" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:TaxScheme" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TaxSchemeType">
@@ -5448,6 +5456,9 @@
          <xsd:element ref="cac:CustomsDeclaration" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:ReferencedShipment" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Package" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:DamageDocumentationAttachment"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TransportMeansType">
