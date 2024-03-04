@@ -54,13 +54,12 @@ public final class UBLTRFuncTest
   {
     final Schema aSchema = UBLTRMarshaller.cancelUserAccount ().getSchema ();
 
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentTypeSimple.CANCEL_USER_ACCOUNT))
+    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT))
     {
       LOGGER.info ("Reading '" + sFilename + "'");
 
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final CancelUserAccountType aUBLObject = UBLTRMarshaller.cancelUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -98,13 +97,12 @@ public final class UBLTRFuncTest
   {
     final Schema aSchema = UBLTRMarshaller.processUserAccount ().getSchema ();
 
-    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentTypeSimple.PROCESS_USER_ACCOUNT))
+    for (final String sFilename : MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.PROCESS_USER_ACCOUNT))
     {
       LOGGER.info ("Reading '" + sFilename + "'");
 
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final ProcessUserAccountType aUBLObject = UBLTRMarshaller.processUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -121,8 +119,7 @@ public final class UBLTRFuncTest
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       if (false)
-        LOGGER.info (XMLWriter.getNodeAsString (aDoc2,
-                                                new XMLWriterSettings ().setIndent (EXMLSerializeIndent.INDENT_AND_ALIGN)));
+        LOGGER.info (XMLWriter.getNodeAsString (aDoc2, new XMLWriterSettings ().setIndent (EXMLSerializeIndent.INDENT_AND_ALIGN)));
 
       // read again
       final ProcessUserAccountType aUBLObject2 = UBLTRMarshaller.processUserAccount ().read (aDoc2);

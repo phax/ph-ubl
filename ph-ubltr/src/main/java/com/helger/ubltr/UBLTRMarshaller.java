@@ -44,11 +44,15 @@ public final class UBLTRMarshaller
 {
   public static class UBLTRJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
+    private final QName m_aRootElementQName;
+
     public UBLTRJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
                                 @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
                                 @Nonnull final QName aRootElementQName)
     {
       super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
+
+      m_aRootElementQName = aRootElementQName;
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = UBLTRNamespaceContext.getInstance ().getClone ();
@@ -56,6 +60,18 @@ public final class UBLTRMarshaller
       if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
         aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
       setNamespaceContext (aNSContext);
+    }
+
+    @Nonnull
+    public final QName getRootElementQName ()
+    {
+      return m_aRootElementQName;
+    }
+
+    @Nonnull
+    public final String getRootElementNamespaceURI ()
+    {
+      return m_aRootElementQName.getNamespaceURI ();
     }
 
     @Nullable
@@ -68,10 +84,16 @@ public final class UBLTRMarshaller
   private UBLTRMarshaller ()
   {}
 
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return UBLTRMarshaller.class.getClassLoader ();
+  }
+
   private static final ICommonsList <ClassPathResource> XSD_HRXML_USER_ACCOUNT = new CommonsArrayList <> (CXMLDSig.getXSDResource (),
                                                                                                           new ClassPathResource (CUBLTR.SCHEMA_DIRECTORY +
                                                                                                                                  "HRXML/UserAccount.xsd",
-                                                                                                                                 CUBLTR.getCL ()));
+                                                                                                                                 _getCL ()));
 
   @Nonnull
   public static UBLTRJAXBMarshaller <CancelUserAccountType> cancelUserAccount ()
@@ -95,7 +117,7 @@ public final class UBLTRMarshaller
   {
     XSD_PACKAGE.addAll (UBL21Marshaller.invoice ().getOriginalXSDs ());
     XSD_PACKAGE.addAll (UBL21Marshaller.applicationResponse ().getOriginalXSDs ());
-    XSD_PACKAGE.add (new ClassPathResource (CUBLTR.SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", CUBLTR.getCL ()));
+    XSD_PACKAGE.add (new ClassPathResource (CUBLTR.SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", _getCL ()));
     XSD_PACKAGE.addAll (UBL21Marshaller.despatchAdvice ().getOriginalXSDs ());
     XSD_PACKAGE.addAll (UBL21Marshaller.receiptAdvice ().getOriginalXSDs ());
   }

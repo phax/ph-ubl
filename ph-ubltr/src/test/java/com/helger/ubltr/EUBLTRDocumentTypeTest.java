@@ -23,14 +23,12 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.string.StringHelper;
 
 /**
  * Test class for class {@link EUBLTRDocumentType}.
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
 public final class EUBLTRDocumentTypeTest
 {
   @Test
@@ -39,13 +37,9 @@ public final class EUBLTRDocumentTypeTest
     for (final EUBLTRDocumentType e : EUBLTRDocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertTrue (StringHelper.hasText (e.getLocalName ()));
-      assertTrue (StringHelper.hasText (e.getNamespaceURI ()));
       assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
-      assertNotNull (e.getSchema ());
-      assertSame (e.getSchema (), e.getSchema ());
       assertSame (e, EUBLTRDocumentType.valueOf (e.name ()));
     }
   }

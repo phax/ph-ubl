@@ -31,8 +31,7 @@ import com.helger.ubltr.UBLTRMarshaller.UBLTRJAXBMarshaller;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 
 /**
- * Test class for classes {@link UBLTRReaderBuilder},
- * {@link UBLTRValidatorBuilder} and {@link UBLTRWriterBuilder}.
+ * Test class for classes {@link UBLTRMarshaller}.
  *
  * @author Philip Helger
  */
@@ -45,8 +44,7 @@ public final class UBLTRBuilderFuncTest
   {
     final UBLTRJAXBMarshaller <CancelUserAccountType> aMarshaller = UBLTRMarshaller.cancelUserAccount ();
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentTypeSimple.CANCEL_USER_ACCOUNT)
-                                                   .get (0);
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT).get (0);
 
     // Read from resource
     final CancelUserAccountType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));

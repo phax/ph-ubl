@@ -16,18 +16,12 @@
  */
 package com.helger.ubltr;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
-import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.string.StringHelper;
-import com.helger.jaxb.builder.IJAXBDocumentType;
-import com.helger.jaxb.builder.JAXBDocumentType;
 
 import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
@@ -38,25 +32,25 @@ import tr.gov.efatura.useraccount.ProcessUserAccountType;
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
-public enum EUBLTRDocumentType implements IJAXBDocumentType
+public enum EUBLTRDocumentType
 {
-  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
-  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, CUBLTR.XSD_HRXML_USER_ACCOUNT),
-  PACKAGE (TRPackage.class, CUBLTR.XSD_PACKAGE);
+  CANCEL_USER_ACCOUNT (CancelUserAccountType.class, UBLTRMarshaller.cancelUserAccount ().getOriginalXSDs ()),
+  PROCESS_USER_ACCOUNT (ProcessUserAccountType.class, UBLTRMarshaller.processUserAccount ().getOriginalXSDs ()),
+  PACKAGE (TRPackage.class, UBLTRMarshaller.trPackage ().getOriginalXSDs ());
 
-  private final JAXBDocumentType m_aDocType;
+  private final Class <?> m_aImplClass;
+  private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EUBLTRDocumentType (@Nonnull final Class <?> aClass,
-                      @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
+  EUBLTRDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass, aXSDs, s -> StringHelper.trimEnd (s, "Type"));
+    m_aImplClass = aClass;
+    m_aXSDs = aXSDPaths;
   }
 
   @Nonnull
   public Class <?> getImplementationClass ()
   {
-    return m_aDocType.getImplementationClass ();
+    return m_aImplClass;
   }
 
   @Nonnull
@@ -64,25 +58,6 @@ public enum EUBLTRDocumentType implements IJAXBDocumentType
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDResources ();
-  }
-
-  @Nonnull
-  public String getNamespaceURI ()
-  {
-    return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getLocalName ()
-  {
-    return m_aDocType.getLocalName ();
-  }
-
-  @Nonnull
-  public Schema getSchema ()
-  {
-    return m_aDocType.getSchema ();
+    return m_aXSDs.getClone ();
   }
 }

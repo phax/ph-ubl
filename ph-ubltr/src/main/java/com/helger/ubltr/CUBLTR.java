@@ -16,18 +16,9 @@
  */
 package com.helger.ubltr;
 
-import java.util.List;
-
-import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
-import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.PresentForCodeCoverage;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.ubl21.UBL21Marshaller;
-import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * Constants for UBLTR handling.
@@ -44,37 +35,9 @@ public final class CUBLTR
   public static final String XML_NS_HRXML = "http://www.hr-xml.org/3";
   public static final String XML_NS_OAGIS = "http://www.openapplications.org/oagis/9";
 
-  /** List of all XSDs required for using the HRXML UserAccount type */
-  @CodingStyleguideUnaware
-  @Deprecated (forRemoval = true, since = "8.0.0")
-  public static final List <ClassPathResource> XSD_HRXML_USER_ACCOUNT = new CommonsArrayList <> (CXMLDSig.getXSDResource (),
-                                                                                                 new ClassPathResource (SCHEMA_DIRECTORY +
-                                                                                                                        "HRXML/UserAccount.xsd",
-                                                                                                                        getCL ())).getAsUnmodifiable ();
-
-  /** List of all XSDs required for using the ULBTR Package type */
-  @CodingStyleguideUnaware
-  @Deprecated (forRemoval = true, since = "8.0.0")
-  public static final List <ClassPathResource> XSD_PACKAGE;
-
-  static
-  {
-    final ICommonsList <ClassPathResource> aPackage = new CommonsArrayList <> ();
-    aPackage.addAll (UBL21Marshaller.invoice ().getOriginalXSDs ());
-    aPackage.addAll (UBL21Marshaller.applicationResponse ().getOriginalXSDs ());
-    aPackage.add (new ClassPathResource (SCHEMA_DIRECTORY + "Envelope/Package_1_2.xsd", getCL ()));
-    XSD_PACKAGE = aPackage.getAsUnmodifiable ();
-  }
-
   @PresentForCodeCoverage
   private static final CUBLTR INSTANCE = new CUBLTR ();
 
   private CUBLTR ()
   {}
-
-  @Nonnull
-  public static ClassLoader getCL ()
-  {
-    return CUBLTR.class.getClassLoader ();
-  }
 }

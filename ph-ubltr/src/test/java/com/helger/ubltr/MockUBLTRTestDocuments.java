@@ -34,7 +34,7 @@ public final class MockUBLTRTestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentTypeSimple eType)
+  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)
