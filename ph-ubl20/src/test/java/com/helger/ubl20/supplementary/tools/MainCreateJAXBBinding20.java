@@ -17,29 +17,23 @@
 package com.helger.ubl20.supplementary.tools;
 
 import java.io.File;
-import java.net.URL;
 import java.util.Comparator;
 import java.util.Locale;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.XMLConstants;
 
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.CommonsTreeMap;
-import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.collection.impl.ICommonsNavigableMap;
 import com.helger.commons.collection.impl.ICommonsSet;
 import com.helger.commons.io.file.FileSystemIterator;
 import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.commons.regex.RegExHelper;
-import com.helger.commons.string.StringHelper;
-import com.helger.commons.url.URLHelper;
-import com.helger.xml.CXML;
+import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
 import com.helger.xml.microdom.IMicroElement;
 import com.helger.xml.microdom.MicroDocument;
@@ -61,7 +55,7 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
  *
  * @author Philip Helger
  */
-public final class MainCreateJAXBBinding20
+public final class MainCreateJAXBBinding20 extends AbstractUBLCodeGen
 {
   private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
@@ -107,63 +101,6 @@ public final class MainCreateJAXBBinding20
                                        Comparator.comparing (File::getName));
   }
 
-  @Nullable
-  private static String _getTargetNamespace (@Nonnull final IMicroDocument aDoc)
-  {
-    return aDoc.getDocumentElement ().getAttributeValue (CXML.XML_ATTR_XSD_TARGETNAMESPACE);
-  }
-
-  @Nonnull
-  private static String _convertToPackage (@Nonnull final String sNamespaceURI)
-  {
-    // Lowercase everything
-    String s = sNamespaceURI.toLowerCase (Locale.US);
-
-    String [] aParts;
-    final URL aURL = URLHelper.getAsURL (sNamespaceURI, false);
-    if (aURL != null)
-    {
-      // Host
-      String sHost = aURL.getHost ();
-
-      // Kick static prefix: www.helger.com -> helger.com
-      sHost = StringHelper.trimStart (sHost, "www.");
-
-      // Reverse domain: helger.com -> com.helger
-      final ICommonsList <String> x = StringHelper.getExploded ('.', sHost);
-      x.reverse ();
-
-      // Path in regular order:
-      final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
-      x.addAll (StringHelper.getExploded ('/', sPath));
-
-      // Convert to array
-      aParts = ArrayHelper.newArray (x, String.class);
-    }
-    else
-    {
-      // Kick known prefixes
-      for (final String sPrefix : new String [] { "urn:", "http://" })
-        if (s.startsWith (sPrefix))
-        {
-          s = s.substring (sPrefix.length ());
-          break;
-        }
-
-      // Replace all illegal characters
-      s = StringHelper.replaceAll (s, ':', '.');
-      s = StringHelper.replaceAll (s, '-', '_');
-      aParts = StringHelper.getExplodedArray ('.', s);
-    }
-
-    // Split into pieces and replace all illegal package parts (e.g. only
-    // numeric) with valid ones
-    for (int i = 0; i < aParts.length; ++i)
-      aParts[i] = RegExHelper.getAsIdentifier (aParts[i]);
-
-    return StringHelper.getImploded (".", aParts);
-  }
-
   private static void _generateExplicitEnumMapping (@Nonnull final IMicroDocument aDoc,
                                                     @Nonnull @Nonempty final String sFilename,
                                                     @Nonnull final IMicroElement eBindings)
@@ -174,32 +111,25 @@ public final class MainCreateJAXBBinding20
 
     final IMicroElement eInnerBindings = eBindings.appendElement (JAXB_NS_URI, "bindings")
                                                   .setAttribute ("node",
-                                                                 "xsd:simpleType[@name='" +
-                                                                         eSimpleType.getAttributeValue ("name") +
-                                                                         "']");
+                                                                 "xsd:simpleType[@name='" + eSimpleType.getAttributeValue ("name") + "']");
     final IMicroElement eTypesafeEnumClass = eInnerBindings.appendElement (JAXB_NS_URI, "typesafeEnumClass");
 
     final IMicroElement eRestriction = eSimpleType.getFirstChildElement ();
-    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                              "enumeration"))
+    for (final IMicroElement eEnumeration : eRestriction.getAllChildElements (XMLConstants.W3C_XML_SCHEMA_NS_URI, "enumeration"))
     {
-      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                           "annotation");
+      final IMicroElement eAnnotation = eEnumeration.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI, "annotation");
       if (eAnnotation == null)
         throw new IllegalStateException ("annotation is missing");
-      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI,
-                                                                             "documentation");
+      final IMicroElement eDocumentation = eAnnotation.getFirstChildElement (XMLConstants.W3C_XML_SCHEMA_NS_URI, "documentation");
       if (eDocumentation == null)
         throw new IllegalStateException ("documentation is missing");
-      final IMicroElement eCodeName = eDocumentation.getFirstChildElement ("urn:un:unece:uncefact:documentation:2",
-                                                                           "CodeName");
+      final IMicroElement eCodeName = eDocumentation.getFirstChildElement ("urn:un:unece:uncefact:documentation:2", "CodeName");
       if (eCodeName == null)
         throw new IllegalStateException ("CodeName is missing");
 
       final String sValue = eEnumeration.getAttributeValue ("value");
       // Create an upper case Java identifier, without duplicate "_"
-      String sCodeName = RegExHelper.getAsIdentifier (eCodeName.getTextContent ().trim ().toUpperCase (Locale.US))
-                                    .replaceAll ("_+", "_");
+      String sCodeName = RegExHelper.getAsIdentifier (eCodeName.getTextContent ().trim ().toUpperCase (Locale.US)).replaceAll ("_+", "_");
 
       if (!aUsedNames.add (sCodeName))
       {
@@ -217,15 +147,12 @@ public final class MainCreateJAXBBinding20
         }
       }
 
-      eTypesafeEnumClass.appendElement (JAXB_NS_URI, "typesafeEnumMember")
-                        .setAttribute ("value", sValue)
-                        .setAttribute ("name", sCodeName);
+      eTypesafeEnumClass.appendElement (JAXB_NS_URI, "typesafeEnumMember").setAttribute ("value", sValue).setAttribute ("name", sCodeName);
       aValueToConstants.put (sValue, sCodeName);
     }
 
     // Write out the mapping file for easy later-on resolving
-    XMLMapHandler.writeMap (aValueToConstants,
-                            new FileSystemResource ("src/main/resources/external/schemas/" + sFilename + ".mapping"));
+    XMLMapHandler.writeMap (aValueToConstants, new FileSystemResource ("src/main/resources/external/schemas/" + sFilename + ".mapping"));
   }
 
   public static void main (final String [] args)
@@ -252,8 +179,7 @@ public final class MainCreateJAXBBinding20
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation",
-                                                             ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
 
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
@@ -272,8 +198,7 @@ public final class MainCreateJAXBBinding20
                                new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
                                                                                                                          JAXB_NS_URI)
-                                                                                                            .addMapping ("xjc",
-                                                                                                                         XJC_NS_URI)
+                                                                                                            .addMapping ("xjc", XJC_NS_URI)
                                                                                                             .addMapping ("xsd",
                                                                                                                          XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",
