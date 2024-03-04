@@ -293,6 +293,7 @@ For further information on the Universal Business Language can be found on the f
 
 * v9.0.0 - work in progress
     * Updated to UBL 2.4-CS01
+    * Updated to eForms SDK 1.10.1
     * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin`
     * Removed deprecated classes and elements
     * Added new enum `EUBL24DocumentType`
