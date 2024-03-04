@@ -70,11 +70,10 @@ public final class DianUBLFuncTest
     final Schema aSchema = DianUBLMarshaller.invoice ().getSchema ();
     assertNotNull (aSchema);
 
-    for (final String sFilename : MockDianUBLTestDocuments.getUBLPETestDocuments (EDianUBLDocumentTypeSimple.INVOICE))
+    for (final String sFilename : MockDianUBLTestDocuments.getUBLPETestDocuments (EDianUBLDocumentType.INVOICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = DianUBLMarshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -111,8 +110,7 @@ public final class DianUBLFuncTest
   public void testReadInstanceAndAddExtension ()
   {
     // This is based on test-dian/Generica.xml
-    final InvoiceType aInvoice = DianUBLMarshaller.invoice ()
-                                                  .read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
+    final InvoiceType aInvoice = DianUBLMarshaller.invoice ().read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
     assertNotNull (aInvoice);
 
     // The main extension, filled with values from test-dian/Generica.xml

@@ -16,19 +16,13 @@
  */
 package com.helger.dianubl;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
-import javax.xml.validation.Schema;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.string.StringHelper;
-import com.helger.jaxb.builder.IJAXBDocumentType;
-import com.helger.jaxb.builder.JAXBDocumentType;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
@@ -39,8 +33,7 @@ import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
  *
  * @author Philip Helger
  */
-@Deprecated (forRemoval = true, since = "8.0.0")
-public enum EDianUBLDocumentType implements IJAXBDocumentType
+public enum EDianUBLDocumentType
 {
   APPLICATION_RESPONSE (EUBL21DocumentType.APPLICATION_RESPONSE),
   ATTACHED_DOCUMENT (EUBL21DocumentType.ATTACHED_DOCUMENT),
@@ -58,8 +51,6 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
     return EDianUBLDocumentType.class.getClassLoader ();
   }
 
-  private final JAXBDocumentType m_aDocType;
-
   @Nonnull
   private static ICommonsList <ClassPathResource> _injectSTS (@Nonnull final ICommonsList <ClassPathResource> aList)
   {
@@ -76,22 +67,25 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
     return ret;
   }
 
+  private final Class <?> m_aImplClass;
+  private final ICommonsList <ClassPathResource> m_aXSDs;
+
   EDianUBLDocumentType (@Nonnull final EUBL21DocumentType eOther)
   {
-    m_aDocType = new JAXBDocumentType (eOther.getImplementationClass (),
-                                       _injectSTS (eOther.getAllXSDResources ()),
-                                       s -> StringHelper.trimEnd (s, "Type"));
+    m_aImplClass = eOther.getImplementationClass ();
+    m_aXSDs = eOther.getAllXSDResources ();
   }
 
-  EDianUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <ClassPathResource> aXSDPaths)
+  EDianUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
-    m_aDocType = new JAXBDocumentType (aClass, aXSDPaths, s -> StringHelper.trimEnd (s, "Type"));
+    m_aImplClass = aClass;
+    m_aXSDs = aXSDPaths;
   }
 
   @Nonnull
   public Class <?> getImplementationClass ()
   {
-    return m_aDocType.getImplementationClass ();
+    return m_aImplClass;
   }
 
   @Nonnull
@@ -99,25 +93,6 @@ public enum EDianUBLDocumentType implements IJAXBDocumentType
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDResources ();
-  }
-
-  @Nonnull
-  public String getNamespaceURI ()
-  {
-    return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getLocalName ()
-  {
-    return m_aDocType.getLocalName ();
-  }
-
-  @Nonnull
-  public Schema getSchema ()
-  {
-    return m_aDocType.getSchema ();
+    return m_aXSDs.getClone ();
   }
 }

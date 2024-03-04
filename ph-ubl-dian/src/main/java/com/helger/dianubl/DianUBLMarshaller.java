@@ -53,6 +53,8 @@ public final class DianUBLMarshaller
                                                                                                CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS,
                                                                                                CDianUBL.XSD_DIAN_UBL_STRUCTURE);
 
+    private final QName m_aRootElementQName;
+
     @Nonnull
     public static ICommonsList <ClassPathResource> getAllXSDs (@Nullable final ICommonsList <ClassPathResource> aList)
     {
@@ -76,12 +78,26 @@ public final class DianUBLMarshaller
     {
       super (aType, getAllXSDs (aSourceXSDs), createSimpleJAXBElement (aRootElementQName, aType));
 
+      m_aRootElementQName = aRootElementQName;
+
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = DianUBLNamespaceContext.getInstance ().getClone ();
       // Avoid overwriting an already mapped context
       if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
         aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
       setNamespaceContext (aNSContext);
+    }
+
+    @Nonnull
+    public final QName getRootElementQName ()
+    {
+      return m_aRootElementQName;
+    }
+
+    @Nonnull
+    public final String getRootElementNamespaceURI ()
+    {
+      return m_aRootElementQName.getNamespaceURI ();
     }
 
     @Nullable
