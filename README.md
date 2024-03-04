@@ -10,7 +10,7 @@ Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3 and 2
 The following projects are contained:
 
 * **ph-ubl-testfiles** contains all UBL test files (used only in Maven test scope)
-* **ph-ubl-api** base library containing common stuff for UBL 2.0 and 2.1.
+* **ph-ubl-api** base library containing common stuff for UBL testing only.
 * **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
 * **ph-ubl20-codelists** contains the generated enums for the UBL 2.0 codelists (optional artefact)
 * **ph-ubl21** contains the generated JAXB files for UBL 2.1 as well as the helper classes.
@@ -25,13 +25,6 @@ The following projects are contained:
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 * **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
 * **ph-ubl-eforms** contains the generated JAXB files for the EU eForms objects (optional artefact) - see https://ec.europa.eu/growth/single-market/public-procurement/digital-procurement/eforms_en
-
-Old projects:
-
-* **ph-ubl-jaxb-plugin** a special JAXB 2.2 plugin that creates additional methods for easier usage
-    (used only in Maven generate-sources phase) - this plugin was only available until v6.1.0.
-    It was moved to [ph-jaxb22-plugin]() v2.3.1.3. The option `ph-ubl-value` was
-    renamed to `ph-value-extender` in the new project so that it can be used in other projects.
 
 # Building
 
@@ -291,7 +284,7 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-* v9.0.0 - work in progress
+* v9.0.0 - 2024-03-04
     * Updated to UBL 2.4-CS01
     * Updated to eForms SDK 1.10.1
     * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin`
