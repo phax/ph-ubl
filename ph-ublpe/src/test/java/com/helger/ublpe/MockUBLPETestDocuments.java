@@ -34,7 +34,7 @@ public final class MockUBLPETestDocuments
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EUBLPEDocumentTypeSimple eType)
+  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EUBLPEDocumentType eType)
   {
     ICommonsList <String> aFiles;
     switch (eType)

@@ -31,8 +31,7 @@ import com.helger.ublpe.UBLPEMarshaller.UBLPEJAXBMarshaller;
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 
 /**
- * Test class for classes {@link UBLPEReaderBuilder},
- * {@link UBLPEValidatorBuilder} and {@link UBLPEWriterBuilder}.
+ * Test class for class {@link UBLPEMarshaller}.
  *
  * @author Philip Helger
  */
@@ -45,8 +44,7 @@ public final class UBLPEBuilderFuncTest
   {
     final UBLPEJAXBMarshaller <SummaryDocumentsType> aMarshaller = UBLPEMarshaller.summaryDocuments ();
 
-    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.SUMMARY_DOCUMENTS)
-                                                   .getFirst ();
+    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS).getFirst ();
     assertNotNull (sFilename);
 
     // Read from resource

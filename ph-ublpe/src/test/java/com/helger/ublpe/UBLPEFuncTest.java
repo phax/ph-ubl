@@ -46,11 +46,10 @@ public final class UBLPEFuncTest
   {
     final UBLPEJAXBMarshaller <SummaryDocumentsType> m = UBLPEMarshaller.summaryDocuments ();
 
-    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.SUMMARY_DOCUMENTS))
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final SummaryDocumentsType aUBLObject = UBLPEMarshaller.summaryDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -88,11 +87,10 @@ public final class UBLPEFuncTest
   {
     final UBLPEJAXBMarshaller <VoidedDocumentsType> m = UBLPEMarshaller.voidedDocuments ();
 
-    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentTypeSimple.VOIDED_DOCUMENTS))
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.VOIDED_DOCUMENTS))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final VoidedDocumentsType aUBLObject = UBLPEMarshaller.voidedDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
