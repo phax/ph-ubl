@@ -17,26 +17,14 @@
 package com.helger.ubl24.supplementary.tools;
 
 import java.io.File;
-import java.net.URL;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.XMLConstants;
 
-import com.helger.commons.collection.ArrayHelper;
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
-import com.helger.commons.regex.RegExHelper;
-import com.helger.commons.string.StringHelper;
-import com.helger.commons.url.URLHelper;
-import com.helger.xml.CXML;
+import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
 import com.helger.xml.microdom.IMicroElement;
 import com.helger.xml.microdom.MicroDocument;
@@ -55,7 +43,7 @@ import com.helger.xml.serialize.write.XMLWriterSettings;
  *
  * @author Philip Helger
  */
-public final class MainCreateJAXBBinding24
+public final class MainCreateJAXBBinding24 extends AbstractUBLCodeGen
 {
   private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
@@ -97,75 +85,6 @@ public final class MainCreateJAXBBinding24
     return eDoc;
   }
 
-  @Nonnull
-  private static Iterable <File> _getFileList (final String sPath)
-  {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx (".*CCTS.*",
-                                                                                                                    ".*xmldsig.*",
-                                                                                                                    ".*XAdES.*")),
-                                       Comparator.comparing (File::getName));
-  }
-
-  @Nullable
-  private static String _getTargetNamespace (@Nonnull final IMicroDocument aDoc)
-  {
-    return aDoc.getDocumentElement ().getAttributeValue (CXML.XML_ATTR_XSD_TARGETNAMESPACE);
-  }
-
-  @Nonnull
-  private static String _convertToPackage (@Nonnull final String sNamespaceURI)
-  {
-    // Lowercase everything
-    String s = sNamespaceURI.toLowerCase (Locale.US);
-
-    String [] aParts;
-    final URL aURL = URLHelper.getAsURL (sNamespaceURI, false);
-    if (aURL != null)
-    {
-      // Host
-      String sHost = aURL.getHost ();
-
-      // Kick static prefix: www.helger.com -> helger.com
-      sHost = StringHelper.trimStart (sHost, "www.");
-
-      // Reverse domain: helger.com -> com.helger
-      final List <String> x = CollectionHelper.getReverseList (StringHelper.getExploded ('.', sHost));
-
-      // Path in regular order:
-      final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
-      x.addAll (StringHelper.getExploded ('/', sPath));
-
-      // Convert to array
-      aParts = ArrayHelper.newArray (x, String.class);
-    }
-    else
-    {
-      // Kick known prefixes
-      for (final String sPrefix : new String [] { "urn:", "http://" })
-        if (s.startsWith (sPrefix))
-        {
-          s = s.substring (sPrefix.length ());
-          break;
-        }
-
-      // Replace all illegal characters
-      s = StringHelper.replaceAll (s, ':', '.');
-      s = StringHelper.replaceAll (s, '-', '_');
-      aParts = StringHelper.getExplodedArray ('.', s);
-    }
-
-    // Split into pieces and replace all illegal package parts (e.g. only
-    // numeric) with valid ones
-    for (int i = 0; i < aParts.length; ++i)
-      aParts[i] = RegExHelper.getAsIdentifier (aParts[i]);
-
-    String ret = StringHelper.getImploded (".", aParts);
-    if (ret.equals ("oasis.names.specification.bdndr.schema.xsd.unqualifieddatatypes_1"))
-      ret = "oasis.names.specification.ubl.schema.xsd.unqualifieddatatypes_" + VERSION;
-    return ret;
-  }
-
   public static void main (final String [] args)
   {
     // UBL 2.4
@@ -176,17 +95,17 @@ public final class MainCreateJAXBBinding24
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = BASE_XSD_PATH + sPart;
-        for (final File aFile : _getFileList ("src/main" + sBasePath))
+        for (final File aFile : getXSDFileList ("src/main" + sBasePath))
         {
           // Each namespace should handled only once
           final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
-          final String sTargetNamespace = _getTargetNamespace (aDoc);
+          final String sTargetNamespace = getTargetNamespace (aDoc);
           if (!aNamespaces.add (sTargetNamespace))
           {
             System.out.println ("Ignored namespace URI '" + sTargetNamespace + "' in '" + aFile.getName () + "'");
             continue;
           }
-          String sPackageName = _convertToPackage (sTargetNamespace);
+          String sPackageName = getAsPackageName (sTargetNamespace);
           if (sPackageName.endsWith ("_2"))
           {
             // Change "_2" to "_24"
@@ -195,8 +114,7 @@ public final class MainCreateJAXBBinding24
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation",
-                                                             ".." + sBasePath + "/" + aFile.getName ())
+                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
           eBindings.appendComment ("Target namespace: " + sTargetNamespace);
           eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
@@ -209,8 +127,7 @@ public final class MainCreateJAXBBinding24
                                new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
                                                        .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
                                                                                                                          JAXB_NS_URI)
-                                                                                                            .addMapping ("xjc",
-                                                                                                                         XJC_NS_URI)
+                                                                                                            .addMapping ("xjc", XJC_NS_URI)
                                                                                                             .addMapping ("xsd",
                                                                                                                          XMLConstants.W3C_XML_SCHEMA_NS_URI)
                                                                                                             .addMapping ("xsi",

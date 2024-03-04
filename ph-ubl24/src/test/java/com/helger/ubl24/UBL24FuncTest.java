@@ -55,11 +55,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteCatalogue ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.CATALOGUE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.CATALOGUE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.CATALOGUE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.catalogue ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final CatalogueType aUBLObject = UBL24Marshaller.catalogue ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -96,11 +96,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteCreditNote ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.CREDIT_NOTE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.CREDIT_NOTE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.CREDIT_NOTE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.creditNote ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final CreditNoteType aUBLObject = UBL24Marshaller.creditNote ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -137,11 +137,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteDespatchAdvice ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.DESPATCH_ADVICE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.DESPATCH_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.DESPATCH_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.despatchAdvice ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final DespatchAdviceType aUBLObject = UBL24Marshaller.despatchAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -178,11 +178,12 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteForwardingInstructions ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.FORWARDING_INSTRUCTIONS))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.FORWARDING_INSTRUCTIONS))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.FORWARDING_INSTRUCTIONS.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.forwardingInstructions ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final ForwardingInstructionsType aUBLObject = UBL24Marshaller.forwardingInstructions ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -219,14 +220,14 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteInvoices ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.INVOICE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.INVOICE))
     {
       if (false)
         System.out.println (sFilename);
 
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.INVOICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.invoice ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = UBL24Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -263,11 +264,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteOrders ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.ORDER))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.ORDER))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.ORDER.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.order ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final OrderType aUBLObject = UBL24Marshaller.order ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -305,11 +306,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteOrderResponseSimple ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.ORDER_RESPONSE_SIMPLE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.ORDER_RESPONSE_SIMPLE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.ORDER_RESPONSE_SIMPLE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.orderResponseSimple ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final OrderResponseSimpleType aUBLObject = UBL24Marshaller.orderResponseSimple ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -346,11 +347,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteQuotation ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.QUOTATION))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.QUOTATION.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.quotation ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final QuotationType aUBLObject = UBL24Marshaller.quotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -387,11 +388,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteReceiptAdvice ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.RECEIPT_ADVICE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.RECEIPT_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.RECEIPT_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.receiptAdvice ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final ReceiptAdviceType aUBLObject = UBL24Marshaller.receiptAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -428,11 +429,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteRemittanceAdvice ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.REMITTANCE_ADVICE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.REMITTANCE_ADVICE))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.REMITTANCE_ADVICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.remittanceAdvice ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final RemittanceAdviceType aUBLObject = UBL24Marshaller.remittanceAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -469,11 +470,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteRequestForQuotation ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.REQUEST_FOR_QUOTATION))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.REQUEST_FOR_QUOTATION))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.REQUEST_FOR_QUOTATION.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.requestForQuotation ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final RequestForQuotationType aUBLObject = UBL24Marshaller.requestForQuotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -510,11 +511,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteStatement ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.STATEMENT))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.STATEMENT))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.STATEMENT.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.statement ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final StatementType aUBLObject = UBL24Marshaller.statement ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -551,11 +552,11 @@ public final class UBL24FuncTest
   @Test
   public void testReadAndWriteWaybill ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.WAYBILL))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.WAYBILL))
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.WAYBILL.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.waybill ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final WaybillType aUBLObject = UBL24Marshaller.waybill ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);

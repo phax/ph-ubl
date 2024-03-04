@@ -17,16 +17,12 @@
 package com.helger.ubl21.supplementary.tools;
 
 import java.io.File;
-import java.util.Comparator;
 
 import javax.annotation.Nonnull;
 import javax.xml.XMLConstants;
 
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
@@ -88,16 +84,6 @@ public final class MainCreateJAXBBinding21 extends AbstractUBLCodeGen
     return eDoc;
   }
 
-  @Nonnull
-  private static Iterable <File> _getFileList (final String sPath)
-  {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx ("^CCTS.*",
-                                                                                                                    ".*xmldsig.*",
-                                                                                                                    ".*XAdES.*")),
-                                       Comparator.comparing (File::getName));
-  }
-
   public static void main (final String [] args)
   {
     // UBL 2.1
@@ -108,17 +94,17 @@ public final class MainCreateJAXBBinding21 extends AbstractUBLCodeGen
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = BASE_XSD_PATH + sPart;
-        for (final File aFile : _getFileList ("src/main" + sBasePath))
+        for (final File aFile : getXSDFileList ("src/main" + sBasePath))
         {
           // Each namespace should handled only once
           final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
-          final String sTargetNamespace = _getTargetNamespace (aDoc);
+          final String sTargetNamespace = getTargetNamespace (aDoc);
           if (!aNamespaces.add (sTargetNamespace))
           {
             System.out.println ("Ignored " + sTargetNamespace + " in " + aFile.getName ());
             continue;
           }
-          String sPackageName = _convertToPackage (sTargetNamespace);
+          String sPackageName = getAsPackageName (sTargetNamespace);
           if (sPackageName.endsWith ("_2"))
           {
             // Change "_2" to "_21"

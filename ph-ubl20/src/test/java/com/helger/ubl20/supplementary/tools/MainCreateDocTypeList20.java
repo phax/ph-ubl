@@ -17,15 +17,9 @@
 package com.helger.ubl20.supplementary.tools;
 
 import java.io.File;
-import java.util.Comparator;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
@@ -38,16 +32,6 @@ import com.helger.xml.microdom.serialize.MicroReader;
  */
 public final class MainCreateDocTypeList20 extends AbstractUBLCodeGen
 {
-  @Nonnull
-  private static Iterable <File> _getFileList (final String sPath)
-  {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx ("^CCTS.*",
-                                                                                                                    ".*xmldsig.*",
-                                                                                                                    ".*XAdES.*")),
-                                       Comparator.comparing (File::getName));
-  }
-
   public static void main (final String [] args)
   {
     final StringBuilder aSB = new StringBuilder ();
@@ -56,7 +40,7 @@ public final class MainCreateDocTypeList20 extends AbstractUBLCodeGen
     for (final String sPart : new String [] { "maindoc" })
     {
       final String sBasePath = "src/main/resources/external/schemas/ubl20/" + sPart;
-      for (final File aFile : _getFileList (sBasePath))
+      for (final File aFile : getXSDFileList (sBasePath))
       {
         // UBL-CallForTenders-2.0.xsd
         final String sFilename = aFile.getName ();
@@ -65,17 +49,17 @@ public final class MainCreateDocTypeList20 extends AbstractUBLCodeGen
         final String sDocTypeCC = sFilename.substring (4, sFilename.length () - 8);
 
         // CALL_FOR_TENDERS
-        final String sDocTypeUC = _toUC (sDocTypeCC);
+        final String sDocTypeUC = toUpperCase (sDocTypeCC);
 
         // Each namespace should handled only once
         final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
-        final String sTargetNamespace = _getTargetNamespace (aDoc);
+        final String sTargetNamespace = getTargetNamespace (aDoc);
         if (!aNamespaces.add (sTargetNamespace))
         {
           System.out.println ("Ignored " + sTargetNamespace + " in " + aFile.getName ());
           continue;
         }
-        final String sPackageName = _convertToPackage (sTargetNamespace);
+        final String sPackageName = getAsPackageName (sTargetNamespace);
 
         // APPLICATION_RESPONSE
         // (oasis.names.specification.ubl.schema.xsd.applicationresponse_20.ApplicationResponseType.class,

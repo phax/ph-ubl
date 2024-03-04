@@ -16,8 +16,9 @@
  */
 package com.helger.ubl24.supplementary.tools;
 
+import com.helger.commons.io.file.FilenameHelper;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
-import com.helger.ubl24.EUBL24DocumentTypeSimple;
+import com.helger.ubl24.EUBL24DocumentType;
 
 public final class MainCreateUBL24MarshallerCode extends AbstractCreateUBLActionCode
 {
@@ -25,8 +26,11 @@ public final class MainCreateUBL24MarshallerCode extends AbstractCreateUBLAction
   {
     final StringBuilder aSB = new StringBuilder ();
 
-    for (final EUBL24DocumentTypeSimple e : EUBL24DocumentTypeSimple.values ())
-      appendMarshaller ("UBL24JAXBMarshaller", e, aSB);
+    for (final EUBL24DocumentType e : EUBL24DocumentType.values ())
+      appendMarshaller ("UBL24JAXBMarshaller",
+                        FilenameHelper.getWithoutPath (e.getAllXSDResources ().getLast ().getPath ()),
+                        e.getImplementationClass (),
+                        aSB);
 
     System.out.println (aSB.toString ());
     // Insert into UBL24Marshaller

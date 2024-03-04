@@ -17,20 +17,16 @@
 package com.helger.ubl20.supplementary.tools;
 
 import java.io.File;
-import java.util.Comparator;
 import java.util.Locale;
 
 import javax.annotation.Nonnull;
 import javax.xml.XMLConstants;
 
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.CommonsTreeMap;
 import com.helger.commons.collection.impl.ICommonsNavigableMap;
 import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.io.file.IFileFilter;
 import com.helger.commons.io.resource.FileSystemResource;
 import com.helger.commons.regex.RegExHelper;
 import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
@@ -91,14 +87,6 @@ public final class MainCreateJAXBBinding20 extends AbstractUBLCodeGen
            .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetTime");
 
     return eDoc;
-  }
-
-  @Nonnull
-  private static Iterable <File> _getFileList (final String sPath)
-  {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx ("^CCTS.*")),
-                                       Comparator.comparing (File::getName));
   }
 
   private static void _generateExplicitEnumMapping (@Nonnull final IMicroDocument aDoc,
@@ -165,17 +153,17 @@ public final class MainCreateJAXBBinding20 extends AbstractUBLCodeGen
       for (final String sPart : new String [] { "common", "maindoc" })
       {
         final String sBasePath = "/resources/external/schemas/ubl20/" + sPart;
-        for (final File aFile : _getFileList ("src/main" + sBasePath))
+        for (final File aFile : getXSDFileList ("src/main" + sBasePath))
         {
           // Each namespace should handled only once
           final IMicroDocument aDoc = MicroReader.readMicroXML (new FileSystemResource (aFile));
-          final String sTargetNamespace = _getTargetNamespace (aDoc);
+          final String sTargetNamespace = getTargetNamespace (aDoc);
           if (!aNamespaces.add (sTargetNamespace))
           {
             System.out.println ("Ignored " + sTargetNamespace + " in " + aFile.getName ());
             continue;
           }
-          final String sPackageName = _convertToPackage (sTargetNamespace);
+          final String sPackageName = getAsPackageName (sTargetNamespace);
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
                                               .appendElement (JAXB_NS_URI, "bindings")

@@ -284,15 +284,18 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
     * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
-    * UBL 2.4: https://docs.oasis-open.org/ubl/csd01-UBL-2.4/
+    * UBL 2.4: https://docs.oasis-open.org/ubl/cs01-UBL-2.4/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
 
 # News and noteworthy
 
-* v8.0.4 - work in progress
-    * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin` 
+* v9.0.0 - work in progress
+    * Updated to UBL 2.4-CS01
+    * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin`
+    * Removed deprecated classes and elements
+    * Added new enum `EUBL24DocumentType`
 * v8.0.3 - 2023-07-31
     * Updated to ph-commons 11.1
 * v8.0.2 - 2023-04-30

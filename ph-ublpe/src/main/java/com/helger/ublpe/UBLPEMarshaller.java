@@ -48,11 +48,15 @@ public final class UBLPEMarshaller
 {
   public static class UBLPEJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
+    private final QName m_aRootElementQName;
+
     public UBLPEJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
                                 @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
                                 @Nonnull final QName aRootElementQName)
     {
       super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
+
+      m_aRootElementQName = aRootElementQName;
 
       // Create a special namespace context for the passed document type
       final MapBasedNamespaceContext aNSContext = UBLPENamespaceContext.getInstance ().getClone ();
@@ -60,6 +64,18 @@ public final class UBLPEMarshaller
       if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
         aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
       setNamespaceContext (aNSContext);
+    }
+
+    @Nonnull
+    public final QName getRootElementQName ()
+    {
+      return m_aRootElementQName;
+    }
+
+    @Nonnull
+    public final String getRootElementNamespaceURI ()
+    {
+      return m_aRootElementQName.getNamespaceURI ();
     }
 
     @Nullable

@@ -20,9 +20,7 @@ import java.util.Locale;
 
 import javax.annotation.Nonnull;
 
-import com.helger.commons.lang.ClassHelper;
 import com.helger.commons.string.StringHelper;
-import com.helger.jaxb.builder.IJAXBDocumentType;
 
 /**
  * Base class for internal code generation. You should not care too much about
@@ -30,97 +28,14 @@ import com.helger.jaxb.builder.IJAXBDocumentType;
  *
  * @author Philip Helger
  */
-@SuppressWarnings ("removal")
-public abstract class AbstractCreateUBLActionCode
+public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
 {
-  @Deprecated (forRemoval = true, since = "8.0.0")
-  public enum EPhase
-  {
-    READ,
-    WRITE,
-    VALIDATE;
-  }
-
-  @Deprecated (forRemoval = true, since = "8.0.0")
-  protected static void append (@Nonnull final IJAXBDocumentType e,
-                                @Nonnull final EPhase ePhase,
-                                @Nonnull final StringBuilder aSB,
-                                @Nonnull final String sBuilderClass)
-  {
-    final String sType = ClassHelper.getClassLocalName (e.getImplementationClass ());
-    final String sName = StringHelper.trimEnd (sType, "Type");
-    final String sBuilderMethodName = Character.toLowerCase (sName.charAt (0)) + sName.substring (1);
-
-    switch (ePhase)
-    {
-      case READ:
-        // Builder<T> read ()
-        aSB.append ("/** Create a reader builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
-        aSB.append ("@Nonnull public static ")
-           .append (sBuilderClass)
-           .append ('<')
-           .append (sType)
-           .append ("> ")
-           .append (sBuilderMethodName)
-           .append ("(){return ")
-           .append (sBuilderClass)
-           .append (".create(")
-           .append (sType)
-           .append (".class);}\n");
-        break;
-      case WRITE:
-        // Builder<T> write ()
-        aSB.append ("/** Create a writer builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
-        aSB.append ("@Nonnull public static ")
-           .append (sBuilderClass)
-           .append ('<')
-           .append (sType)
-           .append ("> ")
-           .append (sBuilderMethodName)
-           .append ("(){return ")
-           .append (sBuilderClass)
-           .append (".create(")
-           .append (sType)
-           .append (".class);}\n");
-        break;
-      case VALIDATE:
-        // Builder<T> validate ()
-        aSB.append ("/** Create a validation builder for " +
-                    sName +
-                    ".\n" +
-                    "@return The builder and never <code>null</code> */\n");
-        aSB.append ("@Nonnull public static ")
-           .append (sBuilderClass)
-           .append ('<')
-           .append (sType)
-           .append ("> ")
-           .append (sBuilderMethodName)
-           .append ("(){return ")
-           .append (sBuilderClass)
-           .append (".create(")
-           .append (sType)
-           .append (".class);}\n");
-        break;
-    }
-  }
-
-  @Nonnull
-  private static String _lcFirst (@Nonnull final String s)
-  {
-    return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
-  }
-
   public static void appendMarshaller (@Nonnull final String sMarshallerClassName,
-                                       @Nonnull final IUBLDocTypeEnumSimple e,
+                                       @Nonnull final String sXSDPath,
+                                       @Nonnull final Class <?> aImplClass,
                                        @Nonnull final StringBuilder aSB)
   {
-    final String sClassName = e.getClazz ().getSimpleName ();
+    final String sClassName = aImplClass.getSimpleName ();
     final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
 
     // Local constant to avoid it is resolved over and over again
@@ -128,7 +43,7 @@ public abstract class AbstractCreateUBLActionCode
     aSB.append ("private static final ClassPathResource ")
        .append (sCPRName)
        .append (" = _getCPR (\"")
-       .append (e.getXSDPath ())
+       .append (sXSDPath)
        .append ("\");\n\n");
 
     final String sGetAllXSDsName = "getAll" + sNoTypeName + "XSDs";
@@ -139,7 +54,7 @@ public abstract class AbstractCreateUBLActionCode
     aSB.append ("  return _getAllXSDs (").append (sCPRName).append (");\n");
     aSB.append ("}\n\n");
 
-    final String sMarshallerMethodName = _lcFirst (sNoTypeName);
+    final String sMarshallerMethodName = lcFirst (sNoTypeName);
     aSB.append ("@Nonnull\n");
     aSB.append ("public static ")
        .append (sMarshallerClassName)
@@ -156,32 +71,19 @@ public abstract class AbstractCreateUBLActionCode
        .append (".class, ")
        .append (sGetAllXSDsName)
        .append (" (), ")
-       .append (e.getClazz ().getPackage ().getName ())
+       .append (aImplClass.getPackage ().getName ())
        .append (".ObjectFactory._")
        .append (sNoTypeName)
        .append ("_QNAME);\n");
     aSB.append ("}\n\n");
   }
 
-  @Nonnull
-  private static String getDisplayNameFromType (@Nonnull final String s)
-  {
-    final StringBuilder ret = new StringBuilder ();
-    for (final char c : s.toCharArray ())
-    {
-      if (Character.isUpperCase (c) && ret.length () > 0)
-        ret.append (' ');
-      ret.append (c);
-    }
-    return ret.toString ();
-  }
-
-  protected static void appendVESIDCode (@Nonnull final IUBLDocTypeEnumSimple e,
+  protected static void appendVESIDCode (@Nonnull final Class <?> aImplClass,
                                          @Nonnull final StringBuilder aSB1,
                                          @Nonnull final StringBuilder aSB2,
                                          @Nonnull final String sVersion)
   {
-    final String s = StringHelper.trimEnd (e.getClazz ().getSimpleName (), "Type");
+    final String s = StringHelper.trimEnd (aImplClass.getSimpleName (), "Type");
     final String sVES = "VID_UBL_" + sVersion + "_" + s.toUpperCase (Locale.ROOT);
     aSB1.append ("public static final VESID ")
         .append (sVES)

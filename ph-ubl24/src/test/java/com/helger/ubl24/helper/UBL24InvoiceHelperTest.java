@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 
 import com.helger.commons.error.list.IErrorList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.ubl24.EUBL24DocumentTypeSimple;
+import com.helger.ubl24.EUBL24DocumentType;
 import com.helger.ubl24.MockUBL24TestDocuments;
 import com.helger.ubl24.UBL24Marshaller;
 import com.helger.xml.serialize.read.DOMReader;
@@ -47,13 +47,13 @@ public final class UBL24InvoiceHelperTest
   @Test
   public void testComvertBackAndForth ()
   {
-    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentTypeSimple.INVOICE))
+    for (final String sFilename : MockUBL24TestDocuments.getUBL24TestDocuments (EUBL24DocumentType.INVOICE))
     {
       LOGGER.info (sFilename);
 
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (EUBL24DocumentTypeSimple.INVOICE.getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL24Marshaller.invoice ().getSchema ()));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = UBL24Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
