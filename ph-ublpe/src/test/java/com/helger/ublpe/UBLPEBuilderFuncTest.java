@@ -44,7 +44,8 @@ public final class UBLPEBuilderFuncTest
   {
     final UBLPEJAXBMarshaller <SummaryDocumentsType> aMarshaller = UBLPEMarshaller.summaryDocuments ();
 
-    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS).getFirst ();
+    final String sFilename = MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS)
+                                                   .getFirstOrNull ();
     assertNotNull (sFilename);
 
     // Read from resource

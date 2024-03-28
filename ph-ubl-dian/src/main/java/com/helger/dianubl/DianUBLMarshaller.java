@@ -68,7 +68,7 @@ public final class DianUBLMarshaller
       // Inject DIAN stuff in the middle
       ret.addAll (DIAN_XSDS);
       // Add the root element last
-      ret.add (aList.getLast ());
+      ret.add (aList.getLastOrNull ());
       return ret;
     }
 

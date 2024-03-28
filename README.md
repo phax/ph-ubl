@@ -284,6 +284,9 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v9.0.1 - 2024-03-28
+    * Updated to ph-commons 11.1.5
+    * Ensured Java 21 compatibility
 * v9.0.0 - 2024-03-04
     * Updated to UBL 2.4-CS01
     * Updated to eForms SDK 1.10.1

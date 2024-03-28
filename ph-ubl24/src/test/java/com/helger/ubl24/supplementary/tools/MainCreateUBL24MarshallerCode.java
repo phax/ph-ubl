@@ -28,7 +28,7 @@ public final class MainCreateUBL24MarshallerCode extends AbstractCreateUBLAction
 
     for (final EUBL24DocumentType e : EUBL24DocumentType.values ())
       appendMarshaller ("UBL24JAXBMarshaller",
-                        FilenameHelper.getWithoutPath (e.getAllXSDResources ().getLast ().getPath ()),
+                        FilenameHelper.getWithoutPath (e.getAllXSDResources ().getLastOrNull ().getPath ()),
                         e.getImplementationClass (),
                         aSB);
 

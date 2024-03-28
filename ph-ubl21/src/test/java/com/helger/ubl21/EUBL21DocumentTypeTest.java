@@ -46,7 +46,7 @@ public final class EUBL21DocumentTypeTest
         assertTrue (e.name (), aRes.exists ());
       assertSame (e, EUBL21DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
-      assertTrue (aFilenames.add (e.getAllXSDResources ().getLast ().getPath ()));
+      assertTrue (aFilenames.add (e.getAllXSDResources ().getLastOrNull ().getPath ()));
     }
   }
 }

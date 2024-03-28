@@ -63,7 +63,7 @@ public enum EDianUBLDocumentType
     ret.add (CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS);
     ret.add (CDianUBL.XSD_DIAN_UBL_STRUCTURE);
     // Add the root element last
-    ret.add (aList.getLast ());
+    ret.add (aList.getLastOrNull ());
     return ret;
   }
 
@@ -76,7 +76,8 @@ public enum EDianUBLDocumentType
     m_aXSDs = eOther.getAllXSDResources ();
   }
 
-  EDianUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EDianUBLDocumentType (@Nonnull final Class <?> aClass,
+                        @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;
