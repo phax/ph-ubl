@@ -16,6 +16,8 @@
  */
 package com.helger.ubl21.supplementary.issues;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.math.BigDecimal;
 
 import org.junit.Test;
@@ -124,6 +126,8 @@ public final class Issue53Test
 
     // Write to String
     final String sInvoice = aMarshaller.setFormattedOutput (true).getAsString (aInvoice);
-    LOGGER.info (sInvoice);
+    assertNotNull (sInvoice);
+    if (false)
+      LOGGER.info (sInvoice);
   }
 }
