@@ -284,6 +284,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v9.0.2 - work in progress
+    * Extended all `UBL..Marshaller` classes with a `getAllBaseXSDs ()` API
 * v9.0.1 - 2024-03-28
     * Updated to ph-commons 11.1.5
     * Ensured Java 21 compatibility
