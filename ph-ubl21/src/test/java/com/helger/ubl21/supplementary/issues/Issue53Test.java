@@ -19,11 +19,13 @@ package com.helger.ubl21.supplementary.issues;
 import java.math.BigDecimal;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.helger.commons.datetime.PDTFactory;
-import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.UBL21Marshaller;
+import com.helger.ubl21.UBL21Marshaller.UBL21JAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
@@ -41,6 +43,8 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 
 public final class Issue53Test
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (Issue53Test.class);
+
   @Test
   public void testBasic ()
   {
@@ -105,7 +109,7 @@ public final class Issue53Test
       aInvoice.addTaxTotal (aTaxTotal);
     }
 
-    final GenericJAXBMarshaller <InvoiceType> aMarshaller = UBL21Marshaller.invoice ();
+    final UBL21JAXBMarshaller <InvoiceType> aMarshaller = UBL21Marshaller.invoice ();
 
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
     aNSContext.addDefaultNamespaceURI ("urn:oasis:names:specification:ubl:schema:xsd:Invoice-2");
@@ -118,8 +122,8 @@ public final class Issue53Test
     aMarshaller.setNamespaceContext (aNSContext);
     // typeUBL21WriterBuilder.getMarshallerCustomizer()
 
-    // Write to disk
+    // Write to String
     final String sInvoice = aMarshaller.setFormattedOutput (true).getAsString (aInvoice);
-    System.out.println (sInvoice);
+    LOGGER.info (sInvoice);
   }
 }
