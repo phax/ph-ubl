@@ -178,6 +178,13 @@ public final class UBL22Marshaller
 
   @Nonnull
   @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllBaseXSDs ()
+  {
+    return BASE_XSDS.getClone ();
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
   private static ICommonsList <ClassPathResource> _getAllXSDs (@Nonnull final ClassPathResource aXSD)
   {
     final ICommonsList <ClassPathResource> ret = BASE_XSDS.getClone ();
