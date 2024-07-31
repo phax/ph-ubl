@@ -277,7 +277,7 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.1: https://docs.oasis-open.org/ubl/os-UBL-2.1/ 
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
     * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
-    * UBL 2.4: https://docs.oasis-open.org/ubl/cs01-UBL-2.4/
+    * UBL 2.4: https://docs.oasis-open.org/ubl/os-UBL-2.4/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
@@ -285,6 +285,7 @@ For further information on the Universal Business Language can be found on the f
 # News and noteworthy
 
 * v9.0.2 - work in progress
+    * Updated to UBL 2.4 final
     * Extended all `UBL..Marshaller` classes with a `getAllBaseXSDs ()` API
 * v9.0.1 - 2024-03-28
     * Updated to ph-commons 11.1.5
