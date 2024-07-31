@@ -3,7 +3,7 @@
   Library:           eForms project
                      http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
   Release Date:     DD MMM 2021
-  Module:           xsd/common/EFORMS-ExtensionBasicComponents-2.3.xsd
+  Module:           xsd/common/EFORMS-ExtensionAggregateComponents-2.3.xsd
   Created on:      	2021-03-01
   Copyright (c) 	Publications Office of the European Union.
 -->
@@ -126,6 +126,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="AppealStatusType">
 		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Date" minOccurs="1" maxOccurs="1"/>
 			<xsd:element ref="cbc:Title" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="1" maxOccurs="unbounded"/>
@@ -200,6 +201,7 @@
 	<xsd:complexType name="ChangesType">
 		<xsd:sequence>
 			<xsd:element ref="efbc:ChangedNoticeIdentifier" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:ModifiedContractIdentifier" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efac:Change" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efac:ChangeReason" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
@@ -253,6 +255,7 @@
 		<xsd:sequence>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:CriterionTypeCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:TendererRequirementTypeCode" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:WeightNumeric" minOccurs="0" maxOccurs="1"/>
@@ -336,6 +339,8 @@
 			<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
 			<xsd:element ref="cbc:RankCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:ForeignSubsidiesMeasuresCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:ForeignSubsidiesMeasuresDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efbc:PublicTransportationCumulatedDistance" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:TenderRankedIndicator" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:TenderVariantIndicator" minOccurs="0" maxOccurs="1"/>

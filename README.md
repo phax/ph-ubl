@@ -284,8 +284,9 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-* v9.0.2 - work in progress
-    * Updated to UBL 2.4 final
+* v9.0.2 - 2024-07-31
+    * Updated to UBL 2.4 final (no XSD changes compared to CS01)
+    * Updated to eForms SDK 1.12.0
     * Extended all `UBL..Marshaller` classes with a `getAllBaseXSDs ()` API
 * v9.0.1 - 2024-03-28
     * Updated to ph-commons 11.1.5

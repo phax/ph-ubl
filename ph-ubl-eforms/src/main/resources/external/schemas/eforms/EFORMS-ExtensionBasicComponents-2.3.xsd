@@ -38,6 +38,8 @@
 	<xsd:element name="ExtendedDurationIndicator" type="ExtendedDurationIndicatorType"/>
 	<xsd:element name="FieldIdentifierCode" type="FieldIdentifierCodeType"/>
 	<xsd:element name="FinancingIdentifier" type="FinancingIdentifierType"/>
+	<xsd:element name="ForeignSubsidiesMeasuresCode" type="ForeignSubsidiesMeasuresCodeType"/>
+	<xsd:element name="ForeignSubsidiesMeasuresDescription" type="ForeignSubsidiesMeasuresDescriptionType"/>
 	<xsd:element name="FrameworkMaximumAmount" type="FrameworkMaximumAmountType"/>
 	<xsd:element name="GazetteID" type="GazetteIDType"/>
 	<xsd:element name="GroupType" type="GroupTypeType"/>
@@ -48,6 +50,7 @@
 	<xsd:element name="IrregularityTypeCode" type="IrregularityTypeCodeType"/>
 	<xsd:element name="ItemClassificationDescription" type="ItemClassificationDescriptionType"/>
 	<xsd:element name="ListedOnRegulatedMarketIndicator" type="ListedOnRegulatedMarketIndicatorType"/>
+	<xsd:element name="ModifiedContractIdentifier" type="ModifiedContractIdentifierType"/>
 	<xsd:element name="NaturalPersonIndicator" type="NaturalPersonIndicatorType"/>
 	<xsd:element name="NonAwardJustificationCode" type="NonAwardJustificationCodeType"/>
 	<xsd:element name="NoticePublicationID" type="NoticePublicationIDType"/>
@@ -226,6 +229,16 @@
 			<xsd:restriction base="udt:IdentifierType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="ForeignSubsidiesMeasuresCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ForeignSubsidiesMeasuresDescriptionType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:TextType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="FrameworkMaximumAmountType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:AmountType"/>
@@ -274,6 +287,11 @@
 	<xsd:complexType name="ListedOnRegulatedMarketIndicatorType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IndicatorType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ModifiedContractIdentifierType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:IdentifierType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="NaturalPersonIndicatorType">
