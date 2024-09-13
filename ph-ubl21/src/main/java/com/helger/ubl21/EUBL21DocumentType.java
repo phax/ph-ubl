@@ -186,11 +186,15 @@ public enum EUBL21DocumentType
 
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
+  private final String m_sRootElementLocalName;
+  private final String m_sRootElementNSURI;
 
   EUBL21DocumentType (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <ClassPathResource> aXSDs)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDs;
+    m_sRootElementLocalName = StringHelper.trimEnd (ClassHelper.getClassLocalName (aClass), "Type");
+    m_sRootElementNSURI = aClass.getPackage ().getAnnotation (jakarta.xml.bind.annotation.XmlSchema.class).namespace ();
   }
 
   @Nonnull
@@ -207,17 +211,27 @@ public enum EUBL21DocumentType
     return m_aXSDs.getClone ();
   }
 
+  /**
+   * @return The local element name of the root element of this document type.
+   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   */
   @Nonnull
   @Nonempty
   public String getRootElementLocalName ()
   {
-    return StringHelper.trimEnd (ClassHelper.getClassLocalName (m_aImplClass), "Type");
+    return m_sRootElementLocalName;
   }
 
+  /**
+   * @return The XML namespace URI of the root element of this document type.
+   *         E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
+   *         for "Order Cancellation".
+   */
   @Nonnull
   @Nonempty
   public String getRootElementNamespaceURI ()
   {
-    return m_aImplClass.getPackage ().getAnnotation (jakarta.xml.bind.annotation.XmlSchema.class).namespace ();
+    return m_sRootElementNSURI;
   }
 }
