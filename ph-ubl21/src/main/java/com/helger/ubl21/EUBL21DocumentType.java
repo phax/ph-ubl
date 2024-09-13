@@ -23,6 +23,8 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.annotation.Since;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.commons.lang.ClassHelper;
+import com.helger.commons.string.StringHelper;
 
 /**
  * Enumeration with all available UBL 2.1 document types.
@@ -203,5 +205,19 @@ public enum EUBL21DocumentType
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
     return m_aXSDs.getClone ();
+  }
+
+  @Nonnull
+  @Nonempty
+  public String getRootElementLocalName ()
+  {
+    return StringHelper.trimEnd (ClassHelper.getClassLocalName (m_aImplClass), "Type");
+  }
+
+  @Nonnull
+  @Nonempty
+  public String getRootElementNamespaceURI ()
+  {
+    return m_aImplClass.getPackage ().getAnnotation (jakarta.xml.bind.annotation.XmlSchema.class).namespace ();
   }
 }
