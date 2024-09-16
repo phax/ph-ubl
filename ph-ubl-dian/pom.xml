@@ -169,7 +169,7 @@
             </goals>
             <configuration>
               <target>
-                <delete dir="${basedir}/target/generated-sources/dian/oasis/names/specification/" />
+                <delete dir="${basedir}/target/generated-sources/dian/oasis" />
               </target>
             </configuration>
           </execution>
