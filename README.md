@@ -284,6 +284,8 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+* v9.0.3 - 2024-09-17
+    * Extended the API in `EUBL2*DocumentType` to retrieve the root namespace URL and local element name. See [#65](https://github.com/phax/ph-ubl/issues/65) - thx @GediminasVaistai
 * v9.0.2 - 2024-07-31
     * Updated to UBL 2.4 final (no XSD changes compared to CS01)
     * Updated to eForms SDK 1.12.0
