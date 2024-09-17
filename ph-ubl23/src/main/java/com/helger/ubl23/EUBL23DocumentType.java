@@ -23,6 +23,8 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.annotation.Since;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.commons.lang.ClassHelper;
+import com.helger.commons.string.StringHelper;
 
 /**
  * Enumeration with all available UBL 2.3 document types.
@@ -210,11 +212,15 @@ public enum EUBL23DocumentType
 
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
+  private final String m_sRootElementLocalName;
+  private final String m_sRootElementNSURI;
 
   EUBL23DocumentType (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <ClassPathResource> aXSDs)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDs;
+    m_sRootElementLocalName = StringHelper.trimEnd (ClassHelper.getClassLocalName (aClass), "Type");
+    m_sRootElementNSURI = aClass.getPackage ().getAnnotation (jakarta.xml.bind.annotation.XmlSchema.class).namespace ();
   }
 
   @Nonnull
@@ -229,5 +235,29 @@ public enum EUBL23DocumentType
   public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
     return m_aXSDs.getClone ();
+  }
+
+  /**
+   * @return The local element name of the root element of this document type.
+   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   */
+  @Nonnull
+  @Nonempty
+  public String getRootElementLocalName ()
+  {
+    return m_sRootElementLocalName;
+  }
+
+  /**
+   * @return The XML namespace URI of the root element of this document type.
+   *         E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
+   *         for "Order Cancellation".
+   */
+  @Nonnull
+  @Nonempty
+  public String getRootElementNamespaceURI ()
+  {
+    return m_sRootElementNSURI;
   }
 }

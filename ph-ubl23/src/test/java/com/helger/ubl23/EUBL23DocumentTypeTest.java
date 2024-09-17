@@ -16,6 +16,7 @@
  */
 package com.helger.ubl23;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -25,6 +26,7 @@ import org.junit.Test;
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
 import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.string.StringHelper;
 
 /**
  * Test class for class {@link EUBL23DocumentType}.
@@ -41,12 +43,21 @@ public final class EUBL23DocumentTypeTest
     for (final EUBL23DocumentType e : EUBL23DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
+
       assertTrue (e.getAllXSDResources ().size () >= 1);
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
+
+      assertTrue (StringHelper.hasText (e.getRootElementLocalName ()));
+      assertTrue (StringHelper.hasText (e.getRootElementNamespaceURI ()));
+
       assertSame (e, EUBL23DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
       assertTrue (aFilenames.add (e.getAllXSDResources ().getLastOrNull ().getPath ()));
     }
+
+    assertEquals ("OrderCancellation", EUBL23DocumentType.ORDER_CANCELLATION.getRootElementLocalName ());
+    assertEquals ("urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2",
+                  EUBL23DocumentType.ORDER_CANCELLATION.getRootElementNamespaceURI ());
   }
 }

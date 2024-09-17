@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.ubl20;
+package com.helger.ubl24;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -29,18 +29,18 @@ import com.helger.commons.io.resource.IReadableResource;
 import com.helger.commons.string.StringHelper;
 
 /**
- * Test class for class {@link EUBL20DocumentType}.
+ * Test class for class {@link EUBL23DocumentType}.
  *
  * @author Philip Helger
  */
-public final class EUBL20DocumentTypeTest
+public final class EUBL24DocumentTypeTest
 {
   @Test
   public void testAll ()
   {
     final ICommonsSet <Class <?>> aClasses = new CommonsHashSet <> ();
     final ICommonsSet <String> aFilenames = new CommonsHashSet <> ();
-    for (final EUBL20DocumentType e : EUBL20DocumentType.values ())
+    for (final EUBL24DocumentType e : EUBL24DocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
 
@@ -51,13 +51,13 @@ public final class EUBL20DocumentTypeTest
       assertTrue (StringHelper.hasText (e.getRootElementLocalName ()));
       assertTrue (StringHelper.hasText (e.getRootElementNamespaceURI ()));
 
-      assertSame (e, EUBL20DocumentType.valueOf (e.name ()));
+      assertSame (e, EUBL24DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));
       assertTrue (aFilenames.add (e.getAllXSDResources ().getLastOrNull ().getPath ()));
     }
 
-    assertEquals ("OrderCancellation", EUBL20DocumentType.ORDER_CANCELLATION.getRootElementLocalName ());
+    assertEquals ("OrderCancellation", EUBL24DocumentType.ORDER_CANCELLATION.getRootElementLocalName ());
     assertEquals ("urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2",
-                  EUBL20DocumentType.ORDER_CANCELLATION.getRootElementNamespaceURI ());
+                  EUBL24DocumentType.ORDER_CANCELLATION.getRootElementNamespaceURI ());
   }
 }
