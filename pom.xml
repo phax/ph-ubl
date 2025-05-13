@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>2.1.2</version>
+    <version>2.1.4</version>
   </parent>
   <groupId>com.helger.ubl</groupId>
   <artifactId>ph-ubl-parent-pom</artifactId>
@@ -80,7 +80,7 @@
       <dependency>
         <groupId>com.helger.commons</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
-        <version>11.2.1</version>
+        <version>11.2.3</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
