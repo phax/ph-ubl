@@ -1,7 +1,8 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-.classpath 
+.classpath
+.DS_Store 
 .pmd
 .project 
 *.iml
@@ -9,4 +10,5 @@ zz
 
 .settings/ 
 target/
+generated/
 UBL-2.1/
