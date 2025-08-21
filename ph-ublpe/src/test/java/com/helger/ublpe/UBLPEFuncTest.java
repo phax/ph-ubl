@@ -24,10 +24,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.ublpe.UBLPEMarshaller.UBLPEJAXBMarshaller;
+import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -49,7 +49,8 @@ public final class UBLPEFuncTest
     for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.SUMMARY_DOCUMENTS))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final SummaryDocumentsType aUBLObject = UBLPEMarshaller.summaryDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -68,7 +69,7 @@ public final class UBLPEFuncTest
       // read again
       final SummaryDocumentsType aUBLObject2 = UBLPEMarshaller.summaryDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBLPEMarshaller.summaryDocuments ().validate (aUBLObject2);
@@ -90,7 +91,8 @@ public final class UBLPEFuncTest
     for (final String sFilename : MockUBLPETestDocuments.getUBLPETestDocuments (EUBLPEDocumentType.VOIDED_DOCUMENTS))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       assertNotNull (sFilename, aDoc);
       final VoidedDocumentsType aUBLObject = UBLPEMarshaller.voidedDocuments ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -109,7 +111,7 @@ public final class UBLPEFuncTest
       // read again
       final VoidedDocumentsType aUBLObject2 = UBLPEMarshaller.voidedDocuments ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBLPEMarshaller.voidedDocuments ().validate (aUBLObject2);

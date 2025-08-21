@@ -20,7 +20,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import com.helger.commons.datetime.XMLOffsetDate;
+import com.helger.datetime.xml.XMLOffsetDate;
 
 /**
  * Test class for class {@link ActualDeliveryDateType}.

@@ -16,15 +16,15 @@
  */
 package com.helger.ubl23;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.misc.Since;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.base.lang.clazz.ClassHelper;
+import com.helger.base.string.StringHelper;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.annotation.Since;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.lang.ClassHelper;
-import com.helger.commons.string.StringHelper;
+import jakarta.annotation.Nonnull;
 
 /**
  * Enumeration with all available UBL 2.3 document types.

@@ -30,13 +30,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import com.helger.commons.datetime.PDTFactory;
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.datetime.helper.PDTFactory;
+import com.helger.diagnostics.error.list.IErrorList;
 import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
 import com.helger.eforms.jaxb.ext.EformsExtension;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl23.UBL23Marshaller.UBL23JAXBMarshaller;
+import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -63,7 +63,8 @@ public final class EformsUBLFuncTest
     for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_AWARD_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       final ContractAwardNoticeType aUBLObject = EformsUBLMarshaller.contractAwardNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -81,7 +82,7 @@ public final class EformsUBLFuncTest
       // read again
       final ContractAwardNoticeType aUBLObject2 = EformsUBLMarshaller.contractAwardNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = EformsUBLMarshaller.contractAwardNotice ().validate (aUBLObject2);
@@ -103,7 +104,8 @@ public final class EformsUBLFuncTest
     for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.CONTRACT_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       final ContractNoticeType aUBLObject = EformsUBLMarshaller.contractNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -121,7 +123,7 @@ public final class EformsUBLFuncTest
       // read again
       final ContractNoticeType aUBLObject2 = EformsUBLMarshaller.contractNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = EformsUBLMarshaller.contractNotice ().validate (aUBLObject2);
@@ -143,7 +145,8 @@ public final class EformsUBLFuncTest
     for (final String sFilename : MockEformsUBLTestDocuments.getTestDocuments (EFormsUBLDocumentType.PRIOR_INFORMATION_NOTICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (m.getSchema ()));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
       final PriorInformationNoticeType aUBLObject = EformsUBLMarshaller.priorInformationNotice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
 
@@ -161,7 +164,7 @@ public final class EformsUBLFuncTest
       // read again
       final PriorInformationNoticeType aUBLObject2 = EformsUBLMarshaller.priorInformationNotice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = EformsUBLMarshaller.priorInformationNotice ().validate (aUBLObject2);
@@ -170,7 +173,8 @@ public final class EformsUBLFuncTest
     }
 
     // Validate
-    final IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ().validate (new PriorInformationNoticeType ());
+    final IErrorList aErrors = EformsUBLMarshaller.priorInformationNotice ()
+                                                  .validate (new PriorInformationNoticeType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -211,7 +215,9 @@ public final class EformsUBLFuncTest
     }
 
     // Write XML to String
-    final String sResult = EformsUBLMarshaller.contractAwardNotice ().setFormattedOutput (true).getAsString (aTargetDoc);
+    final String sResult = EformsUBLMarshaller.contractAwardNotice ()
+                                              .setFormattedOutput (true)
+                                              .getAsString (aTargetDoc);
     assertNotNull (sResult);
     LOGGER.info (sResult);
   }
@@ -226,11 +232,14 @@ public final class EformsUBLFuncTest
       final PartyType aBP = new PartyType ();
       brin.setBusinessParty (aBP);
     }
-    final String sResult = EformsUBLMarshaller.businessRegistrationInformationNotice ().setFormattedOutput (true).getAsString (brin);
+    final String sResult = EformsUBLMarshaller.businessRegistrationInformationNotice ()
+                                              .setFormattedOutput (true)
+                                              .getAsString (brin);
     assertNotNull (sResult);
     LOGGER.info (sResult);
 
-    final BusinessRegistrationInformationNoticeType brin2 = EformsUBLMarshaller.businessRegistrationInformationNotice ().read (sResult);
+    final BusinessRegistrationInformationNoticeType brin2 = EformsUBLMarshaller.businessRegistrationInformationNotice ()
+                                                                               .read (sResult);
     assertNotNull (brin2);
     assertEquals (brin, brin2);
   }

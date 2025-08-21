@@ -21,9 +21,9 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.io.stream.StreamHelper;
+import com.helger.base.io.stream.StreamHelper;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 
 import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;

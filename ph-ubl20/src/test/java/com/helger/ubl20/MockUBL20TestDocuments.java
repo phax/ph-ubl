@@ -18,13 +18,13 @@ package com.helger.ubl20;
 
 import java.util.List;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.Immutable;
-
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
+
+import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockUBL20TestDocuments
@@ -79,7 +79,7 @@ public final class MockUBL20TestDocuments
         aFiles = UBLTestFiles.RECEIPT_ADVICE_FILES;
         break;
       case REQUEST_FOR_QUOTATION:
-        aFiles = CollectionHelper.newList (UBLTestFiles.REQUEST_FOR_QUOTATION_FILES);
+        aFiles = new CommonsArrayList <> (UBLTestFiles.REQUEST_FOR_QUOTATION_FILES);
         aFiles.remove ("external/test-ubl/requestforquotation/UBL-RequestForQuotation-2.1-Example.xml");
         break;
       case REMITTANCE_ADVICE:
@@ -95,6 +95,6 @@ public final class MockUBL20TestDocuments
         throw new IllegalArgumentException ("No test files available for type " + eType);
     }
 
-    return CollectionHelper.newList (aFiles);
+    return new CommonsArrayList <> (aFiles);
   }
 }

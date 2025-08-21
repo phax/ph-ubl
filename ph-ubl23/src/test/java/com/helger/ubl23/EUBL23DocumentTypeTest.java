@@ -23,10 +23,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.collection.impl.CommonsHashSet;
-import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.string.StringHelper;
+import com.helger.base.string.StringHelper;
+import com.helger.collection.commons.CommonsHashSet;
+import com.helger.collection.commons.ICommonsSet;
+import com.helger.io.resource.IReadableResource;
 
 /**
  * Test class for class {@link EUBL23DocumentType}.
@@ -48,8 +48,8 @@ public final class EUBL23DocumentTypeTest
       for (final IReadableResource aRes : e.getAllXSDResources ())
         assertTrue (e.name (), aRes.exists ());
 
-      assertTrue (StringHelper.hasText (e.getRootElementLocalName ()));
-      assertTrue (StringHelper.hasText (e.getRootElementNamespaceURI ()));
+      assertTrue (StringHelper.isNotEmpty (e.getRootElementLocalName ()));
+      assertTrue (StringHelper.isNotEmpty (e.getRootElementNamespaceURI ()));
 
       assertSame (e, EUBL23DocumentType.valueOf (e.name ()));
       assertTrue (aClasses.add (e.getImplementationClass ()));

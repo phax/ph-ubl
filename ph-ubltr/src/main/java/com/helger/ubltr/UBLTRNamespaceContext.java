@@ -16,10 +16,10 @@
  */
 package com.helger.ubltr;
 
-import javax.annotation.Nonnull;
-
 import com.helger.sbdh.CSBDH;
 import com.helger.ubl21.UBL21NamespaceContext;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.

@@ -21,9 +21,9 @@
 -->
 <jaxb:bindings xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jaxb https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd" version="3.0">
   <jaxb:globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError">
-    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDateTime" />
-    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
-    <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
+    <xjc:javaType name="com.helger.datetime.xml.XMLOffsetDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDateTime" />
+    <xjc:javaType name="com.helger.datetime.xml.XMLOffsetDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
+    <xjc:javaType name="com.helger.datetime.xml.XMLOffsetTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </jaxb:globalBindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl23/common/BDNDR-UnqualifiedDataTypes-1.1.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1-->    <jaxb:schemaBindings>

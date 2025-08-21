@@ -16,10 +16,10 @@
  */
 package com.helger.ublpe;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.Immutable;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.annotation.style.PresentForCodeCoverage;
 
-import com.helger.commons.annotation.PresentForCodeCoverage;
+import jakarta.annotation.Nonnull;
 
 /**
  * Constants for UBLPE handling.

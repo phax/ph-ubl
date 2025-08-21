@@ -18,12 +18,17 @@ package com.helger.ubl21.supplementary.tools;
 
 import java.io.File;
 
-import javax.annotation.Nonnull;
 import javax.xml.XMLConstants;
 
-import com.helger.commons.collection.impl.CommonsHashSet;
-import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.resource.FileSystemResource;
+import com.helger.collection.commons.CommonsHashSet;
+import com.helger.collection.commons.ICommonsSet;
+import com.helger.datetime.xml.XMLOffsetDate;
+import com.helger.datetime.xml.XMLOffsetDateTime;
+import com.helger.datetime.xml.XMLOffsetTime;
+import com.helger.io.resource.FileSystemResource;
+import com.helger.jaxb.adapter.AdapterXMLOffsetDate;
+import com.helger.jaxb.adapter.AdapterXMLOffsetDateTime;
+import com.helger.jaxb.adapter.AdapterXMLOffsetTime;
 import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
 import com.helger.xml.microdom.IMicroElement;
@@ -34,6 +39,8 @@ import com.helger.xml.microdom.serialize.MicroWriter;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xml.serialize.write.EXMLIncorrectCharacterHandling;
 import com.helger.xml.serialize.write.XMLWriterSettings;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * Utility class that creates:
@@ -55,31 +62,31 @@ public final class MainCreateJAXBBinding21 extends AbstractUBLCodeGen
   private static IMicroDocument _createBaseDoc ()
   {
     final IMicroDocument eDoc = new MicroDocument ();
-    eDoc.appendComment ("This file is generated. Do NOT edit.\n");
-    final IMicroElement eRoot = eDoc.appendElement (JAXB_NS_URI, "bindings");
+    eDoc.addComment ("This file is generated. Do NOT edit.\n");
+    final IMicroElement eRoot = eDoc.addElementNS (JAXB_NS_URI, "bindings");
     eRoot.setAttribute (new MicroQName (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI, "schemaLocation"),
                         JAXB_NS_URI + " https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd");
     // This is the JAXB version, not the UBL version :)
     eRoot.setAttribute ("version", "3.0");
 
-    final IMicroElement eGlobal = eRoot.appendElement (JAXB_NS_URI, "globalBindings");
+    final IMicroElement eGlobal = eRoot.addElementNS (JAXB_NS_URI, "globalBindings");
     eGlobal.setAttribute ("typesafeEnumMaxMembers", "2000");
     eGlobal.setAttribute ("typesafeEnumMemberName", "generateError");
 
     // When in "xjc" namespace "adapter" can be used, when in "jaxb"
     // namespace, parse and print must be used
-    eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetDateTime")
+    eGlobal.addElementNS (XJC_NS_URI, "javaType")
+           .setAttribute ("name", XMLOffsetDateTime.class.getName ())
            .setAttribute ("xmlType", "xsd:dateTime")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetDateTime");
-    eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetDate")
+           .setAttribute ("adapter", AdapterXMLOffsetDateTime.class.getName ());
+    eGlobal.addElementNS (XJC_NS_URI, "javaType")
+           .setAttribute ("name", XMLOffsetDate.class.getName ())
            .setAttribute ("xmlType", "xsd:date")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetDate");
-    eGlobal.appendElement (XJC_NS_URI, "javaType")
-           .setAttribute ("name", "com.helger.commons.datetime.XMLOffsetTime")
+           .setAttribute ("adapter", AdapterXMLOffsetDate.class.getName ());
+    eGlobal.addElementNS (XJC_NS_URI, "javaType")
+           .setAttribute ("name", XMLOffsetTime.class.getName ())
            .setAttribute ("xmlType", "xsd:time")
-           .setAttribute ("adapter", "com.helger.jaxb.adapter.AdapterXMLOffsetTime");
+           .setAttribute ("adapter", AdapterXMLOffsetTime.class.getName ());
 
     return eDoc;
   }
@@ -112,25 +119,29 @@ public final class MainCreateJAXBBinding21 extends AbstractUBLCodeGen
           }
           // schemaLocation must be relative to bindings file!
           final IMicroElement eBindings = eDoc.getDocumentElement ()
-                                              .appendElement (JAXB_NS_URI, "bindings")
-                                              .setAttribute ("schemaLocation", ".." + sBasePath + "/" + aFile.getName ())
+                                              .addElementNS (JAXB_NS_URI, "bindings")
+                                              .setAttribute ("schemaLocation",
+                                                             ".." + sBasePath + "/" + aFile.getName ())
                                               .setAttribute ("node", "/xsd:schema");
-          eBindings.appendElement (JAXB_NS_URI, "schemaBindings")
-                   .appendElement (JAXB_NS_URI, "package")
+          eBindings.addComment ("Target namespace: " + sTargetNamespace);
+          eBindings.addElementNS (JAXB_NS_URI, "schemaBindings")
+                   .addElementNS (JAXB_NS_URI, "package")
                    .setAttribute ("name", sPackageName);
         }
       }
-      MicroWriter.writeToFile (eDoc,
-                               new File (DEFAULT_BINDING_FILE),
-                               new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
-                                                       .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
-                                                                                                                         JAXB_NS_URI)
-                                                                                                            .addMapping ("xjc", XJC_NS_URI)
-                                                                                                            .addMapping ("xsd",
-                                                                                                                         XMLConstants.W3C_XML_SCHEMA_NS_URI)
-                                                                                                            .addMapping ("xsi",
-                                                                                                                         XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
-                                                       .setPutNamespaceContextPrefixesInRoot (true));
+      if (MicroWriter.writeToFile (eDoc,
+                                   new File (DEFAULT_BINDING_FILE),
+                                   new XMLWriterSettings ().setIncorrectCharacterHandling (EXMLIncorrectCharacterHandling.DO_NOT_WRITE_LOG_WARNING)
+                                                           .setNamespaceContext (new MapBasedNamespaceContext ().addMapping ("jaxb",
+                                                                                                                             JAXB_NS_URI)
+                                                                                                                .addMapping ("xjc",
+                                                                                                                             XJC_NS_URI)
+                                                                                                                .addMapping ("xsd",
+                                                                                                                             XMLConstants.W3C_XML_SCHEMA_NS_URI)
+                                                                                                                .addMapping ("xsi",
+                                                                                                                             XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI))
+                                                           .setPutNamespaceContextPrefixesInRoot (true)).isFailure ())
+        throw new IllegalStateException ("Failed to write file");
     }
 
     System.out.println ("Done");

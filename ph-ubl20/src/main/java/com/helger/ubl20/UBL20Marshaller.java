@@ -16,19 +16,19 @@
  */
 package com.helger.ubl20;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_2.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.billoflading_2.BillOfLadingType;
@@ -62,8 +62,7 @@ import oasis.names.specification.ubl.schema.xsd.transportationstatus_2.Transport
 import oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType;
 
 /**
- * The class provides all the UBL 2.0 marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL 2.0 marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

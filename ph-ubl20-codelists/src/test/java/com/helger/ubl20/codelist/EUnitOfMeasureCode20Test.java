@@ -22,13 +22,13 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.string.StringHelper;
+import com.helger.base.string.StringHelper;
 
 import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
 
 /**
  * Test class for class {@link EUnitOfMeasureCode20}.
- * 
+ *
  * @author Philip Helger
  */
 public final class EUnitOfMeasureCode20Test
@@ -38,7 +38,7 @@ public final class EUnitOfMeasureCode20Test
   {
     for (final EUnitOfMeasureCode20 e : EUnitOfMeasureCode20.values ())
     {
-      assertTrue (StringHelper.hasText (e.getID ()));
+      assertTrue (StringHelper.isNotEmpty (e.getID ()));
       assertNotNull (e.getDisplayName ());
       assertSame (e, EUnitOfMeasureCode20.getFromIDOrNull (e.getID ()));
       assertNotNull (EUnitOfMeasureCode20.getDisplayNameFromIDOrNull (e.getID ()));

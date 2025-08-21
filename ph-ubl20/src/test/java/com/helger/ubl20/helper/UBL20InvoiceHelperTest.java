@@ -24,8 +24,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl20.EUBL20DocumentType;
 import com.helger.ubl20.MockUBL20TestDocuments;
 import com.helger.ubl20.UBL20Marshaller;

@@ -16,9 +16,9 @@
  */
 package com.helger.ublpe;
 
-import javax.annotation.Nonnull;
-
 import com.helger.ubl20.UBL20NamespaceContext;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.

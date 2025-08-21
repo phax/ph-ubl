@@ -18,9 +18,9 @@ package com.helger.ubl.api.codegen;
 
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
+import com.helger.base.string.StringHelper;
 
-import com.helger.commons.string.StringHelper;
+import jakarta.annotation.Nonnull;
 
 /**
  * Base class for internal code generation. You should not care too much about

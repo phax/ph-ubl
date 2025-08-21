@@ -18,10 +18,9 @@ package com.helger.ubl.testfiles;
 
 import java.util.List;
 
-import javax.annotation.concurrent.Immutable;
-
-import com.helger.commons.annotation.CodingStyleguideUnaware;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.annotation.style.CodingStyleguideUnaware;
+import com.helger.collection.CollectionHelper;
 
 /**
  * List of all UBL test files categorized by document type.

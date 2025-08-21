@@ -23,8 +23,8 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
-import com.helger.commons.datetime.PDTFactory;
-import com.helger.commons.state.ESuccess;
+import com.helger.base.state.ESuccess;
+import com.helger.datetime.helper.PDTFactory;
 
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_23.CustomerPartyType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_23.InvoiceLineType;

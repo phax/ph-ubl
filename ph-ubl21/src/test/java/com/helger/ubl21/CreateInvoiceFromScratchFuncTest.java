@@ -26,8 +26,8 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.helger.commons.datetime.PDTFactory;
-import com.helger.commons.state.ESuccess;
+import com.helger.base.state.ESuccess;
+import com.helger.datetime.helper.PDTFactory;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.XMLFactory;
 import com.helger.xml.namespace.MapBasedNamespaceContext;

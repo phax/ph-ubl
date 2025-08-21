@@ -24,7 +24,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.helger.commons.datetime.PDTFactory;
+import com.helger.datetime.helper.PDTFactory;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.UBL21Marshaller;
 import com.helger.ubl21.UBL21Marshaller.UBL21JAXBMarshaller;

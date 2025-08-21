@@ -16,17 +16,16 @@
  */
 package com.helger.dianubl;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
 import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
+import jakarta.annotation.Nonnull;
 
 /**
  * Enumeration with all available DIAN UBL document types.

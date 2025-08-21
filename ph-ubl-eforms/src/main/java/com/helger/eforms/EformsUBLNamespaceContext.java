@@ -17,9 +17,9 @@
  */
 package com.helger.eforms;
 
-import javax.annotation.Nonnull;
-
 import com.helger.ubl23.UBL23NamespaceContext;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * EForms XML Namespace context

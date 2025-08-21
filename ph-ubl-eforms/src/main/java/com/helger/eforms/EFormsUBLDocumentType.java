@@ -17,14 +17,12 @@
  */
 package com.helger.eforms;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
 import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl23.CUBL23;
 import com.helger.ubl23.EUBL23DocumentType;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
@@ -32,6 +30,7 @@ import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
+import jakarta.annotation.Nonnull;
 import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;

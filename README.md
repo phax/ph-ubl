@@ -284,103 +284,142 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-* v9.0.3 - 2024-09-17
-    * Extended the API in `EUBL2*DocumentType` to retrieve the root namespace URL and local element name. See [#65](https://github.com/phax/ph-ubl/issues/65) - thx @GediminasVaistai
-* v9.0.2 - 2024-07-31
-    * Updated to UBL 2.4 final (no XSD changes compared to CS01)
-    * Updated to eForms SDK 1.12.0
-    * Extended all `UBL..Marshaller` classes with a `getAllBaseXSDs ()` API
-* v9.0.1 - 2024-03-28
-    * Updated to ph-commons 11.1.5
-    * Ensured Java 21 compatibility
-* v9.0.0 - 2024-03-04
-    * Updated to UBL 2.4-CS01
-    * Updated to eForms SDK 1.10.1
-    * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin`
-    * Removed deprecated classes and elements
-    * Added new enum `EUBL24DocumentType`
-* v8.0.3 - 2023-07-31
-    * Updated to ph-commons 11.1
-* v8.0.2 - 2023-04-30
-    * Extended the `UBL2(0|1|2|3|4)Marshaller` classes with additional APIs to access the XSDs
-* v8.0.1 - 2023-04-28
-    * Avoided the same name for the JAXB generated package for the unqualified datatypes in UBL 2.3 and 2.4
-* v8.0.0 - 2023-04-21
-    * Added support for UBL 2.4-CSD01 - new submodules `ph-ubl24` and `ph-ubl24-codelists`
-    * Updated to ph-commons 11.0.3
-    * New classes `UBL2(0|1|2|3|4)Marshaller` that can read, write and validate
-    * Deprecated classes `EUBL20DocumentType`, `UBL20DocumentType`, `UBL20(Reader|Validator|Writer)` and `UBL20(Reader|Validator|Writer)Builder`
-    * Moved the XML Schemas to a new path that starts with `external/`
-    * By updating to `ph-jaxb-plugin` v4.0.2 an integrity error could be resolved
-* v7.0.0 - 2023-01-09
-    * Using Java 11 as the baseline
-    * Updated to ph-commons 11
-    * Using JAXB 4.0 as the baseline
-* v6.7.0 - 2021-12-29
-    * Added support for "eForms" from https://github.com/OP-TED/eForms-SDK - see [see #42](https://github.com/phax/ph-ubl/issues/42) - Thx to @jonatanprins and @DKamerbeek
-* v6.6.3 - 2021-09-21
-    * Updated to the final UBL 2.3 XML Schemas - no changes compared to CS01 except for comments
-    * Updated dependencies, so that the date/time objects now implement `Serializable` and that date/time objects are allowed to have no second fractions. The same effect can be reached by explicitly using v6.6.2 with ph-commons 10.1.3
-* v6.6.2 - 2021-05-16
-    * Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts. This might be an incompatible change, if you reference the files in a JAXB ctaalog file.
-* v6.6.1 - 2021-05-13
-    * Improved the handling for the Dian Extension and ensuring the "sts" namespace prefix is used.
-* v6.6.0 - 2021-05-02
-    * Updated to ph-commons 10.1.0
-    * Changed the JAXB binding for date time types `XMLOffset(Date|Time|DateTime)` - last change - sorry
-* v6.5.0 - 2021-03-21
-    * Updated to ph-commons 10.0.0
-    * Changed the JAXB binding for date time types `Offset(Date|Time|DateTime)`
-* v6.4.3 - 2021-02-11
-    * Updated to UBL 2.3 CS01 - https://docs.oasis-open.org/ubl/cs01-UBL-2.3/UBL-2.3.html
-* v6.4.2 - 2020-12-18
-    * Updated to UBL 2.3 CSD04 - https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html
-* v6.4.1 - 2020-09-17
-    * Updated to Jakarta JAXB 2.3.3
-* v6.4.0 - 2020-08-30
-    * Binds to ph-commons 9.4.7
-    * Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
-    * Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
-    * Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` - [see #27](https://github.com/phax/ph-ubl/issues/27)
-* v6.3.0 - 2020-05-26
-    * Changed Maven groupId to `com.helger.ubl`
-* v6.2.1 - 2020-02-06
-    * Added predefined constants for shared XSDs in the `CUBL..` classes
-    * Fixed a classloader issue in ph-ublpe in OSGI environments
-    * Started new subproject `ph-ubl-dian` for the Colombian eInvoice
-        * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
-    * Updated to UBL 2.3 CSPRD02
-* v6.2.0 - 2019-11-05
-    * Added support for UBL 2.3 CSPRD01
-* v6.1.3 - 2019-10-17
-    * Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
-* v6.1.2 - 2019-05-07
-    * Added Java 12 support
-* v6.1.1 - 2019-01-26
-    * The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
-* v6.1.0 - 2018-11-22
-    * Requires at least ph-commons 9.2.0
-* v6.0.2 - 2018-07-17
-    * Added ph-ublpe suppport
-    * Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
-* v6.0.1 - 2018-04-03
-    * Updated to UBL 2.2 CS 01
-* v6.0.0 - 2018-01-09
-    * Binds to ph-commons 9.0.0
-    * Added initial UBL 2.2 CSPRD02 support
-    * Fixes issues #11
-* v5.1.0 - 2016-09-09
-    * Binds to ph-commons 8.5.x
-* v5.0.3 - 2016-07-26
-* v5.0.1 - 2016-07-22 
-* v5.0.0 - 2016-06-11
-    * Binds to ph-commons 8.x 
-* v4.5.0 - 2015-11-30
-    * New API that this more flexible and contains less overloads - see the examples
-    * Added the possibility to easily customize the namespace prefix mapping and other things
-* v4.0.0 - 2015-07-28
-    * Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
-    * Improved OSGI support
+v10.0.0 - work in progress
+* Requires Java 17 as the minimum version
+* Updated to ph-commons 12.0.0
+* Removed all deprecated methods marked for removal
+
+v9.0.3 - 2024-09-17
+* Extended the API in `EUBL2*DocumentType` to retrieve the root namespace URL and local element name. See [#65](https://github.com/phax/ph-ubl/issues/65) - thx @GediminasVaistai
+
+v9.0.2 - 2024-07-31
+* Updated to UBL 2.4 final (no XSD changes compared to CS01)
+* Updated to eForms SDK 1.12.0
+* Extended all `UBL..Marshaller` classes with a `getAllBaseXSDs ()` API
+
+v9.0.1 - 2024-03-28
+* Updated to ph-commons 11.1.5
+* Ensured Java 21 compatibility
+
+v9.0.0 - 2024-03-04
+* Updated to UBL 2.4-CS01
+* Updated to eForms SDK 1.10.1
+* Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin`
+* Removed deprecated classes and elements
+* Added new enum `EUBL24DocumentType`
+
+v8.0.3 - 2023-07-31
+* Updated to ph-commons 11.1
+
+v8.0.2 - 2023-04-30
+* Extended the `UBL2(0|1|2|3|4)Marshaller` classes with additional APIs to access the XSDs
+
+v8.0.1 - 2023-04-28
+* Avoided the same name for the JAXB generated package for the unqualified datatypes in UBL 2.3 and 2.4
+
+v8.0.0 - 2023-04-21
+* Added support for UBL 2.4-CSD01 - new submodules `ph-ubl24` and `ph-ubl24-codelists`
+* Updated to ph-commons 11.0.3
+* New classes `UBL2(0|1|2|3|4)Marshaller` that can read, write and validate
+* Deprecated classes `EUBL20DocumentType`, `UBL20DocumentType`, `UBL20(Reader|Validator|Writer)` and `UBL20(Reader|Validator|Writer)Builder`
+* Moved the XML Schemas to a new path that starts with `external/`
+* By updating to `ph-jaxb-plugin` v4.0.2 an integrity error could be resolved
+
+v7.0.0 - 2023-01-09
+* Using Java 11 as the baseline
+* Updated to ph-commons 11
+* Using JAXB 4.0 as the baseline
+
+v6.7.0 - 2021-12-29
+* Added support for "eForms" from https://github.com/OP-TED/eForms-SDK - see [see #42](https://github.com/phax/ph-ubl/issues/42) - Thx to @jonatanprins and @DKamerbeek
+
+v6.6.3 - 2021-09-21
+* Updated to the final UBL 2.3 XML Schemas - no changes compared to CS01 except for comments
+* Updated dependencies, so that the date/time objects now implement `Serializable` and that date/time objects are allowed to have no second fractions. The same effect can be reached by explicitly using v6.6.2 with ph-commons 10.1.3
+
+v6.6.2 - 2021-05-16
+* Removed all the default UBL XSDs for Xades, XMLDsig and CCTS to avoid confusion with the generic ones from the `ph-xsds-*` artefacts. This might be an incompatible change, if you reference the files in a JAXB ctaalog file.
+
+v6.6.1 - 2021-05-13
+* Improved the handling for the Dian Extension and ensuring the "sts" namespace prefix is used.
+
+v6.6.0 - 2021-05-02
+* Updated to ph-commons 10.1.0
+* Changed the JAXB binding for date time types `XMLOffset(Date|Time|DateTime)` - last change - sorry
+
+v6.5.0 - 2021-03-21
+* Updated to ph-commons 10.0.0
+* Changed the JAXB binding for date time types `Offset(Date|Time|DateTime)`
+
+v6.4.3 - 2021-02-11
+* Updated to UBL 2.3 CS01 - https://docs.oasis-open.org/ubl/cs01-UBL-2.3/UBL-2.3.html
+
+v6.4.2 - 2020-12-18
+* Updated to UBL 2.3 CSD04 - https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html
+
+v6.4.1 - 2020-09-17
+* Updated to Jakarta JAXB 2.3.3
+
+v6.4.0 - 2020-08-30
+* Binds to ph-commons 9.4.7
+* Updated to UBL 2.3 CSD03 - https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html
+* Added constants on metadata of the codelists ([see #29](https://github.com/phax/ph-ubl/pull/29))
+* Changed the XML adapters for date and time values to use `LocalDate`, `LocalTime` and `LocalDateTime` - [see #27](https://github.com/phax/ph-ubl/issues/27)
+
+v6.3.0 - 2020-05-26
+* Changed Maven groupId to `com.helger.ubl`
+
+v6.2.1 - 2020-02-06
+* Added predefined constants for shared XSDs in the `CUBL..` classes
+* Fixed a classloader issue in ph-ublpe in OSGI environments
+* Started new subproject `ph-ubl-dian` for the Colombian eInvoice
+    * Based on https://www.dian.gov.co/fizcalizacioncontrol/herramienconsulta/FacturaElectronica/Documents/Caja_de_herramientas_Factura_Electronica_Validacion_Previa.zip
+* Updated to UBL 2.3 CSPRD02
+
+v6.2.0 - 2019-11-05
+* Added support for UBL 2.3 CSPRD01
+
+v6.1.3 - 2019-10-17
+* Added classes `UBL20InvoiceHelper`, `UBL20CreditNoteHelper`, `UBL21InvoiceHelper`, `UBL21CreditNoteHelper`, `UBL22InvoiceHelper` and `UBL22CreditNoteHelper` to allow for easy "type conversion"
+
+v6.1.2 - 2019-05-07
+* Added Java 12 support
+
+v6.1.1 - 2019-01-26
+* The `ph-ubl-jaxb-plugin` was moved to `ph-jaxb22-plugin` and is discontinued in here
+
+v6.1.0 - 2018-11-22
+* Requires at least ph-commons 9.2.0
+
+v6.0.2 - 2018-07-17
+* Added ph-ublpe suppport
+* Updated to UBL 2.2 final (from http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip)
+
+v6.0.1 - 2018-04-03
+* Updated to UBL 2.2 CS 01
+
+v6.0.0 - 2018-01-09
+* Binds to ph-commons 9.0.0
+* Added initial UBL 2.2 CSPRD02 support
+* Fixes issues #11
+
+v5.1.0 - 2016-09-09
+* Binds to ph-commons 8.5.x
+
+v5.0.3 - 2016-07-26
+
+v5.0.1 - 2016-07-22 
+
+v5.0.0 - 2016-06-11
+* Binds to ph-commons 8.x 
+
+v4.5.0 - 2015-11-30
+* New API that this more flexible and contains less overloads - see the examples
+* Added the possibility to easily customize the namespace prefix mapping and other things
+
+v4.0.0 - 2015-07-28
+* Restructured artefacts to use an "include on demand" instead of an "exclude on demand" pattern
+* Improved OSGI support
 
 ---
 

@@ -16,19 +16,19 @@
  */
 package com.helger.ubltr;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;

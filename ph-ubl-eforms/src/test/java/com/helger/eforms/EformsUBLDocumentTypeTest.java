@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.io.resource.IReadableResource;
+import com.helger.io.resource.IReadableResource;
 
 public final class EformsUBLDocumentTypeTest
 {

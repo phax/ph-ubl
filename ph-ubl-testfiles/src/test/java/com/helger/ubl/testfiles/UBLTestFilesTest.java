@@ -20,11 +20,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import javax.annotation.Nonnull;
-
 import org.junit.Test;
 
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.io.resource.ClassPathResource;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * Test class for class {@link UBLTestFiles}.

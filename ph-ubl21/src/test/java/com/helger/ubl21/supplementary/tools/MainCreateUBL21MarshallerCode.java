@@ -16,7 +16,7 @@
  */
 package com.helger.ubl21.supplementary.tools;
 
-import com.helger.commons.io.file.FilenameHelper;
+import com.helger.io.file.FilenameHelper;
 import com.helger.ubl.api.codegen.AbstractCreateUBLActionCode;
 import com.helger.ubl21.EUBL21DocumentType;
 

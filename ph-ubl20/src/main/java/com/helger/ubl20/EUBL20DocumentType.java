@@ -16,14 +16,14 @@
  */
 package com.helger.ubl20;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.base.lang.clazz.ClassHelper;
+import com.helger.base.string.StringHelper;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.lang.ClassHelper;
-import com.helger.commons.string.StringHelper;
+import jakarta.annotation.Nonnull;
 
 /**
  * Enumeration with all available UBL 2.0 document types.
@@ -38,7 +38,8 @@ public enum EUBL20DocumentType
                      UBL20Marshaller.getAllAttachedDocumentXSDs ()),
   BILL_OF_LADING (oasis.names.specification.ubl.schema.xsd.billoflading_2.BillOfLadingType.class,
                   UBL20Marshaller.getAllBillOfLadingXSDs ()),
-  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_2.CatalogueType.class, UBL20Marshaller.getAllCatalogueXSDs ()),
+  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_2.CatalogueType.class,
+             UBL20Marshaller.getAllCatalogueXSDs ()),
   CATALOGUE_DELETION (oasis.names.specification.ubl.schema.xsd.cataloguedeletion_2.CatalogueDeletionType.class,
                       UBL20Marshaller.getAllCatalogueDeletionXSDs ()),
   CATALOGUE_ITEM_SPECIFICATION_UPDATE (oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_2.CatalogueItemSpecificationUpdateType.class,
@@ -49,8 +50,10 @@ public enum EUBL20DocumentType
                      UBL20Marshaller.getAllCatalogueRequestXSDs ()),
   CERTIFICATE_OF_ORIGIN (oasis.names.specification.ubl.schema.xsd.certificateoforigin_2.CertificateOfOriginType.class,
                          UBL20Marshaller.getAllCertificateOfOriginXSDs ()),
-  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType.class, UBL20Marshaller.getAllCreditNoteXSDs ()),
-  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType.class, UBL20Marshaller.getAllDebitNoteXSDs ()),
+  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType.class,
+               UBL20Marshaller.getAllCreditNoteXSDs ()),
+  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType.class,
+              UBL20Marshaller.getAllDebitNoteXSDs ()),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_2.DespatchAdviceType.class,
                    UBL20Marshaller.getAllDespatchAdviceXSDs ()),
   FORWARDING_INSTRUCTIONS (oasis.names.specification.ubl.schema.xsd.forwardinginstructions_2.ForwardingInstructionsType.class,
@@ -61,16 +64,20 @@ public enum EUBL20DocumentType
   ORDER (oasis.names.specification.ubl.schema.xsd.order_2.OrderType.class, UBL20Marshaller.getAllOrderXSDs ()),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_2.OrderCancellationType.class,
                       UBL20Marshaller.getAllOrderCancellationXSDs ()),
-  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_2.OrderChangeType.class, UBL20Marshaller.getAllOrderChangeXSDs ()),
+  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_2.OrderChangeType.class,
+                UBL20Marshaller.getAllOrderChangeXSDs ()),
   ORDER_RESPONSE (oasis.names.specification.ubl.schema.xsd.orderresponse_2.OrderResponseType.class,
                   UBL20Marshaller.getAllOrderResponseXSDs ()),
   ORDER_RESPONSE_SIMPLE (oasis.names.specification.ubl.schema.xsd.orderresponsesimple_2.OrderResponseSimpleType.class,
                          UBL20Marshaller.getAllOrderResponseSimpleXSDs ()),
-  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_2.PackingListType.class, UBL20Marshaller.getAllPackingListXSDs ()),
-  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_2.QuotationType.class, UBL20Marshaller.getAllQuotationXSDs ()),
+  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_2.PackingListType.class,
+                UBL20Marshaller.getAllPackingListXSDs ()),
+  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_2.QuotationType.class,
+             UBL20Marshaller.getAllQuotationXSDs ()),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_2.ReceiptAdviceType.class,
                   UBL20Marshaller.getAllReceiptAdviceXSDs ()),
-  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_2.ReminderType.class, UBL20Marshaller.getAllReminderXSDs ()),
+  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_2.ReminderType.class,
+            UBL20Marshaller.getAllReminderXSDs ()),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_2.RemittanceAdviceType.class,
                      UBL20Marshaller.getAllRemittanceAdviceXSDs ()),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_2.RequestForQuotationType.class,
@@ -79,7 +86,8 @@ public enum EUBL20DocumentType
                            UBL20Marshaller.getAllSelfBilledCreditNoteXSDs ()),
   SELF_BILLED_INVOICE (oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_2.SelfBilledInvoiceType.class,
                        UBL20Marshaller.getAllSelfBilledInvoiceXSDs ()),
-  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_2.StatementType.class, UBL20Marshaller.getAllStatementXSDs ()),
+  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_2.StatementType.class,
+             UBL20Marshaller.getAllStatementXSDs ()),
   TRANSPORTATION_STATUS (oasis.names.specification.ubl.schema.xsd.transportationstatus_2.TransportationStatusType.class,
                          UBL20Marshaller.getAllTransportationStatusXSDs ()),
   WAYBILL (oasis.names.specification.ubl.schema.xsd.waybill_2.WaybillType.class, UBL20Marshaller.getAllWaybillXSDs ());
@@ -112,8 +120,8 @@ public enum EUBL20DocumentType
   }
 
   /**
-   * @return The local element name of the root element of this document type.
-   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   * @return The local element name of the root element of this document type. E.g.
+   *         <code>OrderCancellation</code> for "Order Cancellation".
    */
   @Nonnull
   @Nonempty
@@ -123,10 +131,9 @@ public enum EUBL20DocumentType
   }
 
   /**
-   * @return The XML namespace URI of the root element of this document type.
-   *         E.g.
-   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
-   *         for "Order Cancellation".
+   * @return The XML namespace URI of the root element of this document type. E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code> for
+   *         "Order Cancellation".
    */
   @Nonnull
   @Nonempty

@@ -16,13 +16,14 @@
  */
 package com.helger.ubl21.codelist;
 
-import com.helger.commons.annotation.CodingStyleguideUnaware;
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.id.IHasID;
-import com.helger.commons.lang.EnumHelper;
-import com.helger.commons.name.IHasDisplayName;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.CodingStyleguideUnaware;
+import com.helger.base.id.IHasID;
+import com.helger.base.lang.EnumHelper;
+import com.helger.base.name.IHasDisplayName;
+
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 
 /**

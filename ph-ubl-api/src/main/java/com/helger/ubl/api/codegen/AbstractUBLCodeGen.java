@@ -18,22 +18,25 @@ package com.helger.ubl.api.codegen;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import com.helger.commons.collection.ArrayHelper;
-import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.io.file.IFileFilter;
-import com.helger.commons.regex.RegExHelper;
-import com.helger.commons.string.StringHelper;
-import com.helger.commons.url.URLHelper;
+import com.helger.base.array.ArrayHelper;
+import com.helger.base.string.StringHelper;
+import com.helger.base.string.StringImplode;
+import com.helger.base.string.StringReplace;
+import com.helger.cache.regex.RegExHelper;
+import com.helger.collection.helper.CollectionSort;
+import com.helger.io.file.FileSystemIterator;
+import com.helger.io.file.IFileFilter;
+import com.helger.io.url.URLHelper;
 import com.helger.xml.CXML;
 import com.helger.xml.microdom.IMicroDocument;
+
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 /**
  * Base class for internal code generation.
@@ -79,11 +82,11 @@ public abstract class AbstractUBLCodeGen
   @Nonnull
   protected static Iterable <File> getXSDFileList (final String sPath)
   {
-    return CollectionHelper.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
-                                                                     .withFilter (IFileFilter.filenameMatchNoRegEx (".*CCTS.*",
-                                                                                                                    ".*xmldsig.*",
-                                                                                                                    ".*XAdES.*")),
-                                       Comparator.comparing (File::getName));
+    return CollectionSort.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
+                                                                   .withFilter (IFileFilter.filenameMatchNoRegEx (".*CCTS.*",
+                                                                                                                  ".*xmldsig.*",
+                                                                                                                  ".*XAdES.*")),
+                                     Comparator.comparing (File::getName));
   }
 
   @Nullable
@@ -109,14 +112,15 @@ public abstract class AbstractUBLCodeGen
       sHost = StringHelper.trimStart (sHost, "www.");
 
       // Reverse domain: helger.com -> com.helger
-      final List <String> x = CollectionHelper.getReverseList (StringHelper.getExploded ('.', sHost));
+      final List <String> x = StringHelper.getExploded ('.', sHost);
+      Collections.reverse (x);
 
       // Path in regular order:
       final String sPath = StringHelper.trimStart (aURL.getPath (), '/');
       x.addAll (StringHelper.getExploded ('/', sPath));
 
       // Convert to array
-      aParts = ArrayHelper.newArray (x, String.class);
+      aParts = ArrayHelper.createArray (x, String.class);
     }
     else
     {
@@ -129,8 +133,8 @@ public abstract class AbstractUBLCodeGen
         }
 
       // Replace all illegal characters
-      s = StringHelper.replaceAll (s, ':', '.');
-      s = StringHelper.replaceAll (s, '-', '_');
+      s = StringReplace.replaceAll (s, ':', '.');
+      s = StringReplace.replaceAll (s, '-', '_');
       aParts = StringHelper.getExplodedArray ('.', s);
     }
 
@@ -139,6 +143,6 @@ public abstract class AbstractUBLCodeGen
     for (int i = 0; i < aParts.length; ++i)
       aParts[i] = RegExHelper.getAsIdentifier (aParts[i]);
 
-    return StringHelper.imploder ().source (aParts).separator ('.').build ();
+    return StringImplode.imploder ().source (aParts).separator ('.').build ();
   }
 }

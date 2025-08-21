@@ -22,13 +22,13 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.string.StringHelper;
+import com.helger.base.string.StringHelper;
 
 import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 
 /**
  * Test class for class {@link ECurrencyCode20}.
- * 
+ *
  * @author Philip Helger
  */
 public final class ECurrencyCode20Test
@@ -38,7 +38,7 @@ public final class ECurrencyCode20Test
   {
     for (final ECurrencyCode20 e : ECurrencyCode20.values ())
     {
-      assertTrue (StringHelper.hasText (e.getID ()));
+      assertTrue (StringHelper.isNotEmpty (e.getID ()));
       assertNotNull (e.getDisplayName ());
       assertSame (e, ECurrencyCode20.getFromIDOrNull (e.getID ()));
       assertNotNull (ECurrencyCode20.getDisplayNameFromIDOrNull (e.getID ()));

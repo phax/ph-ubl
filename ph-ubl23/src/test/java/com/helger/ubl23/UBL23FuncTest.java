@@ -25,9 +25,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
+import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -59,7 +59,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.catalogue ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.catalogue ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final CatalogueType aUBLObject = UBL23Marshaller.catalogue ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -78,8 +79,8 @@ public final class UBL23FuncTest
       // read again
       final CatalogueType aUBLObject2 = UBL23Marshaller.catalogue ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.catalogue ().validate (aUBLObject2);
@@ -100,7 +101,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.creditNote ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.creditNote ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final CreditNoteType aUBLObject = UBL23Marshaller.creditNote ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -119,8 +121,8 @@ public final class UBL23FuncTest
       // read again
       final CreditNoteType aUBLObject2 = UBL23Marshaller.creditNote ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.creditNote ().validate (aUBLObject2);
@@ -141,7 +143,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.despatchAdvice ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.despatchAdvice ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final DespatchAdviceType aUBLObject = UBL23Marshaller.despatchAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -160,8 +163,8 @@ public final class UBL23FuncTest
       // read again
       final DespatchAdviceType aUBLObject2 = UBL23Marshaller.despatchAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.despatchAdvice ().validate (aUBLObject2);
@@ -202,8 +205,8 @@ public final class UBL23FuncTest
       // read again
       final ForwardingInstructionsType aUBLObject2 = UBL23Marshaller.forwardingInstructions ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.forwardingInstructions ().validate (aUBLObject2);
@@ -227,7 +230,8 @@ public final class UBL23FuncTest
 
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.invoice ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.invoice ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = UBL23Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -246,8 +250,8 @@ public final class UBL23FuncTest
       // read again
       final InvoiceType aUBLObject2 = UBL23Marshaller.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.invoice ().validate (aUBLObject2);
@@ -268,7 +272,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.order ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.order ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final OrderType aUBLObject = UBL23Marshaller.order ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -288,8 +293,8 @@ public final class UBL23FuncTest
       // read again
       final OrderType aUBLObject2 = UBL23Marshaller.order ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.order ().validate (aUBLObject2);
@@ -310,7 +315,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.orderResponseSimple ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.orderResponseSimple ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final OrderResponseSimpleType aUBLObject = UBL23Marshaller.orderResponseSimple ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -329,8 +335,8 @@ public final class UBL23FuncTest
       // read again
       final OrderResponseSimpleType aUBLObject2 = UBL23Marshaller.orderResponseSimple ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.orderResponseSimple ().validate (aUBLObject2);
@@ -351,7 +357,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.quotation ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.quotation ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final QuotationType aUBLObject = UBL23Marshaller.quotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -370,8 +377,8 @@ public final class UBL23FuncTest
       // read again
       final QuotationType aUBLObject2 = UBL23Marshaller.quotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.quotation ().validate (aUBLObject2);
@@ -392,7 +399,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.receiptAdvice ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.receiptAdvice ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final ReceiptAdviceType aUBLObject = UBL23Marshaller.receiptAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -411,8 +419,8 @@ public final class UBL23FuncTest
       // read again
       final ReceiptAdviceType aUBLObject2 = UBL23Marshaller.receiptAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.receiptAdvice ().validate (aUBLObject2);
@@ -433,7 +441,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.remittanceAdvice ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.remittanceAdvice ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final RemittanceAdviceType aUBLObject = UBL23Marshaller.remittanceAdvice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -452,8 +461,8 @@ public final class UBL23FuncTest
       // read again
       final RemittanceAdviceType aUBLObject2 = UBL23Marshaller.remittanceAdvice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.remittanceAdvice ().validate (aUBLObject2);
@@ -474,7 +483,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.requestForQuotation ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.requestForQuotation ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final RequestForQuotationType aUBLObject = UBL23Marshaller.requestForQuotation ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -493,8 +503,8 @@ public final class UBL23FuncTest
       // read again
       final RequestForQuotationType aUBLObject2 = UBL23Marshaller.requestForQuotation ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.requestForQuotation ().validate (aUBLObject2);
@@ -515,7 +525,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.statement ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.statement ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final StatementType aUBLObject = UBL23Marshaller.statement ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -534,8 +545,8 @@ public final class UBL23FuncTest
       // read again
       final StatementType aUBLObject2 = UBL23Marshaller.statement ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.statement ().validate (aUBLObject2);
@@ -556,7 +567,8 @@ public final class UBL23FuncTest
     {
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.waybill ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL23Marshaller.waybill ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final WaybillType aUBLObject = UBL23Marshaller.waybill ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -575,8 +587,8 @@ public final class UBL23FuncTest
       // read again
       final WaybillType aUBLObject2 = UBL23Marshaller.waybill ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject.clone ());
 
       // Validate
       aErrors = UBL23Marshaller.waybill ().validate (aUBLObject2);

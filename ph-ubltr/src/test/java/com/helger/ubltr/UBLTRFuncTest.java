@@ -28,9 +28,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
+import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 import com.helger.xml.serialize.write.EXMLSerializeIndent;
@@ -59,7 +59,8 @@ public final class UBLTRFuncTest
       LOGGER.info ("Reading '" + sFilename + "'");
 
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final CancelUserAccountType aUBLObject = UBLTRMarshaller.cancelUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -78,7 +79,7 @@ public final class UBLTRFuncTest
       // read again
       final CancelUserAccountType aUBLObject2 = UBLTRMarshaller.cancelUserAccount ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBLTRMarshaller.cancelUserAccount ().validate (aUBLObject2);
@@ -102,7 +103,8 @@ public final class UBLTRFuncTest
       LOGGER.info ("Reading '" + sFilename + "'");
 
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final ProcessUserAccountType aUBLObject = UBLTRMarshaller.processUserAccount ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -119,12 +121,13 @@ public final class UBLTRFuncTest
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       if (false)
-        LOGGER.info (XMLWriter.getNodeAsString (aDoc2, new XMLWriterSettings ().setIndent (EXMLSerializeIndent.INDENT_AND_ALIGN)));
+        LOGGER.info (XMLWriter.getNodeAsString (aDoc2,
+                                                new XMLWriterSettings ().setIndent (EXMLSerializeIndent.INDENT_AND_ALIGN)));
 
       // read again
       final ProcessUserAccountType aUBLObject2 = UBLTRMarshaller.processUserAccount ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = UBLTRMarshaller.processUserAccount ().validate (aUBLObject2);

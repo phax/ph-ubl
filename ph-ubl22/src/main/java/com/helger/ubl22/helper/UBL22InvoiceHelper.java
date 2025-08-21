@@ -19,12 +19,11 @@ package com.helger.ubl22.helper;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.concurrent.Immutable;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.collection.commons.CommonsArrayList;
 
-import com.helger.commons.collection.impl.CommonsArrayList;
-
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.AllowanceChargeType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.BillingReferenceType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_22.CreditNoteLineType;

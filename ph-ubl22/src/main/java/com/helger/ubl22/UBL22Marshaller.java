@@ -16,16 +16,14 @@
  */
 package com.helger.ubl22;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
@@ -33,6 +31,8 @@ import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_22.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_22.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.awardednotification_22.AwardedNotificationType;

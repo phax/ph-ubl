@@ -18,9 +18,9 @@ package com.helger.ubl24.supplementary.tools;
 
 import java.io.File;
 
-import com.helger.commons.collection.impl.CommonsHashSet;
-import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.io.resource.FileSystemResource;
+import com.helger.collection.commons.CommonsHashSet;
+import com.helger.collection.commons.ICommonsSet;
+import com.helger.io.resource.FileSystemResource;
 import com.helger.ubl.api.codegen.AbstractUBLCodeGen;
 import com.helger.xml.microdom.IMicroDocument;
 import com.helger.xml.microdom.serialize.MicroReader;

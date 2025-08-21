@@ -19,23 +19,18 @@ package com.helger.ubl20.supplementary.tools;
 import java.io.File;
 import java.io.IOException;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import com.helger.commons.annotation.CodingStyleguideUnaware;
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.collection.impl.CommonsHashSet;
-import com.helger.commons.collection.impl.CommonsLinkedHashSet;
-import com.helger.commons.collection.impl.ICommonsOrderedSet;
-import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.commons.id.IHasID;
-import com.helger.commons.io.file.FileSystemRecursiveIterator;
-import com.helger.commons.io.file.IFileFilter;
-import com.helger.commons.lang.EnumHelper;
-import com.helger.commons.name.IHasDisplayName;
-import com.helger.commons.regex.RegExHelper;
-import com.helger.commons.string.StringHelper;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.CodingStyleguideUnaware;
+import com.helger.base.id.IHasID;
+import com.helger.base.lang.EnumHelper;
+import com.helger.base.name.IHasDisplayName;
+import com.helger.base.string.StringHelper;
+import com.helger.cache.regex.RegExHelper;
+import com.helger.collection.CollectionFind;
+import com.helger.collection.commons.CommonsHashSet;
+import com.helger.collection.commons.CommonsLinkedHashSet;
+import com.helger.collection.commons.ICommonsOrderedSet;
+import com.helger.collection.commons.ICommonsSet;
 import com.helger.genericode.Genericode04CodeListMarshaller;
 import com.helger.genericode.Genericode04Helper;
 import com.helger.genericode.v04.Agency;
@@ -45,9 +40,10 @@ import com.helger.genericode.v04.Identification;
 import com.helger.genericode.v04.LongName;
 import com.helger.genericode.v04.Row;
 import com.helger.genericode.v04.SimpleCodeList;
+import com.helger.io.file.FileSystemRecursiveIterator;
+import com.helger.io.file.IFileFilter;
 import com.helger.jcodemodel.JBlock;
 import com.helger.jcodemodel.JCodeModel;
-import com.helger.jcodemodel.JCodeModelException;
 import com.helger.jcodemodel.JDefinedClass;
 import com.helger.jcodemodel.JEnumConstant;
 import com.helger.jcodemodel.JExpr;
@@ -56,9 +52,12 @@ import com.helger.jcodemodel.JMethod;
 import com.helger.jcodemodel.JMod;
 import com.helger.jcodemodel.JOp;
 import com.helger.jcodemodel.JVar;
+import com.helger.jcodemodel.exceptions.JCodeModelException;
 import com.helger.jcodemodel.writer.JCMWriter;
 import com.helger.ubl.api.codegen.AbstractCreateUBLCodeListCodeGen;
 
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
 import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
@@ -66,8 +65,7 @@ import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType
 /**
  * Utility class to create:
  * <ul>
- * <li>src/main/java/com/helger/ubl/codelist - generated Java Code for the
- * codelists</li>
+ * <li>src/main/java/com/helger/ubl/codelist - generated Java Code for the codelists</li>
  * </ul>
  *
  * @author Philip Helger
@@ -98,19 +96,19 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
                       JExpr.lit (aAgency.getLongNameAtIndex (0).getValue ()));
     }
 
-    final LongName aListID = CollectionHelper.findFirst (aIdentification.getLongName (),
-                                                         x -> x.getIdentifier () != null &&
-                                                              x.getIdentifier ().equals ("listID"));
+    final LongName aListID = CollectionFind.findFirst (aIdentification.getLongName (),
+                                                       x -> x.getIdentifier () != null &&
+                                                            x.getIdentifier ().equals ("listID"));
     if (aListID != null)
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_ID", JExpr.lit (aListID.getValue ()));
 
     final String sVersion = aIdentification.getVersion ();
-    if (StringHelper.hasText (sVersion))
+    if (StringHelper.isNotEmpty (sVersion))
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
-  private static void _createGenericode04 (@Nonnull final File aFile,
-                                           @Nonnull final CodeListDocument aCodeList) throws JCodeModelException
+  private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList)
+                                                                                                                 throws JCodeModelException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
     {
@@ -156,14 +154,16 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     aOtherCols.remove (COLID_CODE);
     aOtherCols.remove (COLID_NAME);
 
-    String sEnumName = "E" + aCodeList.getIdentification ().getShortName ().getValue ();
+    final StringBuilder sEnumName = new StringBuilder ("E").append (aCodeList.getIdentification ()
+                                                                             .getShortName ()
+                                                                             .getValue ());
     if (aFile.getName ().endsWith ("-2.0.gc"))
-      sEnumName += "20";
+      sEnumName.append ("20");
 
     final JDefinedClass jEnum = CM._package ("com.helger.ubl20.codelist")
-                                            ._enum (sEnumName)
-                                            ._implements (CM.ref (IHasID.class).narrow (String.class))
-                                            ._implements (IHasDisplayName.class);
+                                  ._enum (sEnumName.toString ())
+                                  ._implements (CM.ref (IHasID.class).narrow (String.class))
+                                  ._implements (IHasDisplayName.class);
     jEnum.annotate (CodingStyleguideUnaware.class);
     jEnum.javadoc ()
          .add ("This file was automatically generated from Genericode file " + aFile.getName () + ". Do NOT edit!\n");
@@ -178,7 +178,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     {
       final String sCode = Genericode04Helper.getRowValue (aRow, COLID_CODE).trim ();
       String sIdentifier = RegExHelper.getAsIdentifier (sCode);
-      if (StringHelper.hasNoText (sIdentifier))
+      if (StringHelper.isEmpty (sIdentifier))
       {
         System.out.println ("  Code '" + sCode + "' ends up in empty identifier!");
         sIdentifier = "_";
@@ -219,8 +219,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     final JFieldVar fID = jEnum.field (JMod.PRIVATE | JMod.FINAL, String.class, "m_sID");
     final JFieldVar fDisplayName = bHasNameColumn ? jEnum.field (JMod.PRIVATE | JMod.FINAL,
                                                                  String.class,
-                                                                 "m_sDisplayName")
-                                                  : null;
+                                                                 "m_sDisplayName") : null;
 
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.NONE);
@@ -274,10 +273,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     jID = m.param (JMod.FINAL, String.class, "sID");
     jID.annotate (Nullable.class);
     m.body ()
-     ._return (CM.ref (EnumHelper.class)
-                           .staticInvoke ("getFromIDOrNull")
-                           .arg (JExpr.dotClass (jEnum))
-                           .arg (jID));
+     ._return (CM.ref (EnumHelper.class).staticInvoke ("getFromIDOrNull").arg (JExpr.dotClass (jEnum)).arg (jID));
 
     if (bHasNameColumn)
     {

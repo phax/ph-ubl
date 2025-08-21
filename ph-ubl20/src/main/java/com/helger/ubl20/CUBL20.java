@@ -16,11 +16,11 @@
  */
 package com.helger.ubl20;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.Immutable;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.annotation.style.PresentForCodeCoverage;
+import com.helger.io.resource.ClassPathResource;
 
-import com.helger.commons.annotation.PresentForCodeCoverage;
-import com.helger.commons.io.resource.ClassPathResource;
+import jakarta.annotation.Nonnull;
 
 /**
  * Constants for UBL 2.0 handling.

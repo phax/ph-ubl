@@ -16,13 +16,12 @@
  */
 package com.helger.ubltr;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
-
+import jakarta.annotation.Nonnull;
 import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;

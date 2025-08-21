@@ -22,18 +22,18 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
+import com.helger.base.enforce.ValueEnforcer;
+import com.helger.base.string.StringHelper;
+import com.helger.base.string.StringImplode;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.CommonsHashMap;
+import com.helger.collection.commons.CommonsHashSet;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.collection.commons.ICommonsMap;
+import com.helger.collection.stack.NonBlockingStack;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.collection.NonBlockingStack;
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.CommonsHashMap;
-import com.helger.commons.collection.impl.CommonsHashSet;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.collection.impl.ICommonsMap;
-import com.helger.commons.string.StringHelper;
-
+import jakarta.annotation.Nonnull;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlValue;
@@ -75,8 +75,8 @@ public class MainFindOccurrances
   }
 
   /**
-   * Get all fields of the specified class and all its super classes. This
-   * method uses a cache to avoid retrieving the data over and over again.
+   * Get all fields of the specified class and all its super classes. This method uses a cache to
+   * avoid retrieving the data over and over again.
    *
    * @param aClass
    *        The class to get all fields from
@@ -96,8 +96,8 @@ public class MainFindOccurrances
   }
 
   /**
-   * Create an XML name from the passed field. It uses the {@link XmlElement},
-   * {@link XmlAttribute} and {@link XmlValue} annotations to differentiate.
+   * Create an XML name from the passed field. It uses the {@link XmlElement}, {@link XmlAttribute}
+   * and {@link XmlValue} annotations to differentiate.
    *
    * @param aField
    *        Source field
@@ -204,7 +204,7 @@ public class MainFindOccurrances
       if (aPerClassData.m_aMatches.isNotEmpty ())
       {
         // Found matching members
-        final String sPrefix = StringHelper.getImplodedMapped (aStack, x -> x.m_sXMLName);
+        final String sPrefix = StringImplode.getImplodedMapped (aStack, x -> x.m_sXMLName);
         if (false)
           for (final Field aField : aPerClassData.m_aMatches)
             System.out.println (++i + sPrefix + _getXMLName (aField));

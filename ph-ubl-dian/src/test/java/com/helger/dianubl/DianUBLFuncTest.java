@@ -32,10 +32,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import com.helger.commons.datetime.PDTFactory;
-import com.helger.commons.error.list.IErrorList;
-import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.mock.CommonsTestHelper;
+import com.helger.datetime.helper.PDTFactory;
+import com.helger.diagnostics.error.list.IErrorList;
+import com.helger.io.resource.ClassPathResource;
+import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
@@ -73,7 +73,8 @@ public final class DianUBLFuncTest
     for (final String sFilename : MockDianUBLTestDocuments.getUBLPETestDocuments (EDianUBLDocumentType.INVOICE))
     {
       // Read
-      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename), new DOMReaderSettings ().setSchema (aSchema));
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (aSchema));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = DianUBLMarshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);
@@ -92,7 +93,7 @@ public final class DianUBLFuncTest
       // read again
       final InvoiceType aUBLObject2 = DianUBLMarshaller.invoice ().read (aDoc2);
       assertNotNull (sFilename, aUBLObject2);
-      CommonsTestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
 
       // Validate
       aErrors = DianUBLMarshaller.invoice ().validate (aUBLObject2);
@@ -110,7 +111,8 @@ public final class DianUBLFuncTest
   public void testReadInstanceAndAddExtension ()
   {
     // This is based on test-dian/Generica.xml
-    final InvoiceType aInvoice = DianUBLMarshaller.invoice ().read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
+    final InvoiceType aInvoice = DianUBLMarshaller.invoice ()
+                                                  .read (new File ("src/test/resources/external/test-ubl/invoice1.xml"));
     assertNotNull (aInvoice);
 
     // The main extension, filled with values from test-dian/Generica.xml

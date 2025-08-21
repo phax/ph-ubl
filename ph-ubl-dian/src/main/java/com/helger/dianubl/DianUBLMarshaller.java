@@ -16,14 +16,12 @@
  */
 package com.helger.dianubl;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
-import com.helger.commons.collection.impl.CommonsArrayList;
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.UBL21Marshaller;
@@ -31,6 +29,8 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 
 import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;

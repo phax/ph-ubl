@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger.ubl</groupId>
     <artifactId>ph-ubl-parent-pom</artifactId>
-    <version>9.0.4-SNAPSHOT</version>
+    <version>10.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl-api</artifactId>
   <packaging>bundle</packaging>
@@ -54,10 +54,6 @@
   </developers>
   
   <dependencies>
-    <dependency>
-      <groupId>com.helger.commons</groupId>
-      <artifactId>ph-commons</artifactId>
-    </dependency>
     <dependency>
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-xml</artifactId>

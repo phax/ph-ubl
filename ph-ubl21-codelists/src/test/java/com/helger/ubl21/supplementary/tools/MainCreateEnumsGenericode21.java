@@ -18,7 +18,7 @@ package com.helger.ubl21.supplementary.tools;
 
 import java.io.IOException;
 
-import com.helger.jcodemodel.JCodeModelException;
+import com.helger.jcodemodel.exceptions.JCodeModelException;
 import com.helger.ubl.api.codegen.AbstractCreateUBLCodeListCodeGen;
 
 /**

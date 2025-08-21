@@ -22,13 +22,13 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.string.StringHelper;
+import com.helger.base.string.StringHelper;
 
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
 
 /**
  * Test class for class {@link ELanguageCode20}.
- * 
+ *
  * @author Philip Helger
  */
 public final class ELanguageCode20Test
@@ -38,7 +38,7 @@ public final class ELanguageCode20Test
   {
     for (final ELanguageCode20 e : ELanguageCode20.values ())
     {
-      assertTrue (StringHelper.hasText (e.getID ()));
+      assertTrue (StringHelper.isNotEmpty (e.getID ()));
       assertNotNull (e.getDisplayName ());
       assertSame (e, ELanguageCode20.getFromIDOrNull (e.getID ()));
       assertNotNull (ELanguageCode20.getDisplayNameFromIDOrNull (e.getID ()));

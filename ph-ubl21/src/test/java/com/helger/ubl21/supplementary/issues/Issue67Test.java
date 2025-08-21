@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Element;
 
-import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.collection.commons.CommonsArrayList;
 import com.helger.jaxb.JAXBContextCache;
 import com.helger.jaxb.JAXBContextCacheKey;
 import com.helger.ubl21.UBL21Marshaller;

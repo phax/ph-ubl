@@ -17,16 +17,15 @@
  */
 package com.helger.eforms;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.concurrent.Immutable;
-
 import org.w3c.dom.Element;
 
-import com.helger.commons.ValueEnforcer;
-import com.helger.commons.state.ESuccess;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.base.enforce.ValueEnforcer;
+import com.helger.base.state.ESuccess;
 import com.helger.eforms.jaxb.ext.EformsExtension;
 
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.ExtensionContentType;
 
 /**
