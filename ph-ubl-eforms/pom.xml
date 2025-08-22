@@ -96,7 +96,7 @@
           <instructions>
             <Automatic-Module-Name>com.helger.eforms</Automatic-Module-Name>
             <Export-Package>com.helger.eforms.*</Export-Package>
-            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Import-Package>!jakarta.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>

@@ -97,7 +97,7 @@
             <Export-Package>com.helger.ubl20.*,
               oasis.names.specification.ubl.*,
               un.unece.uncefact.*</Export-Package>
-            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Import-Package>!jakarta.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>

@@ -108,7 +108,7 @@
             <Automatic-Module-Name>com.helger.ubl21</Automatic-Module-Name>
             <Export-Package>com.helger.ubl21.*,
               oasis.names.specification.ubl.schema.xsd.*</Export-Package>
-            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Import-Package>!jakarta.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>

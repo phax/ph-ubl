@@ -86,7 +86,7 @@
           <instructions>
             <Automatic-Module-Name>com.helger.ubl20.codelist</Automatic-Module-Name>
             <Export-Package>com.helger.ubl20.codelist.*</Export-Package>
-            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Import-Package>!jakarta.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>
