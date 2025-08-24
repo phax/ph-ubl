@@ -27,11 +27,11 @@ import com.helger.base.array.ArrayHelper;
 import com.helger.base.string.StringHelper;
 import com.helger.base.string.StringImplode;
 import com.helger.base.string.StringReplace;
+import com.helger.base.url.URLHelper;
 import com.helger.cache.regex.RegExHelper;
 import com.helger.collection.helper.CollectionSort;
 import com.helger.io.file.FileSystemIterator;
 import com.helger.io.file.IFileFilter;
-import com.helger.io.url.URLHelper;
 import com.helger.xml.CXML;
 import com.helger.xml.microdom.IMicroDocument;
 
