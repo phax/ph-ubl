@@ -4,8 +4,6 @@
 [![javadoc](https://javadoc.io/badge2/com.helger.ubl/ph-ubl-parent-pom/javadoc.svg)](https://javadoc.io/doc/com.helger.ubl/ph-ubl-parent-pom)
 [![CodeCov](https://codecov.io/gh/phax/ph-ubl/branch/master/graph/badge.svg)](https://codecov.io/gh/phax/ph-ubl)
 
-This is the readme file for version 5.x or later.
-
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3 and 2.4 documents.
 The following projects are contained:
 
@@ -28,7 +26,9 @@ The following projects are contained:
 
 # Building
 
-This project requires Java 1.8 or higher to be build and used.
+This project requires Java 17 or higher to be build and used.
+
+Note: the last version that requires Java 11 was 9.0.3.
     
 The JAXB generated sources are created dynamically via `mvn process-sources` and are not part of the committed source files.
 This is also automatically called when you call `mvn clean install`.
