@@ -170,6 +170,16 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <source>17</source>
+          <sourcepath>
+            ${project.build.sourceDirectory}:${project.build.directory}/generated-sources/ublpe
+          </sourcepath>
+        </configuration>
+      </plugin> 
     </plugins>
   </build>
 </project>

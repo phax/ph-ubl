@@ -181,9 +181,12 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
-          <doclint>none</doclint>
+          <source>17</source>
+          <sourcepath>
+            ${project.build.sourceDirectory}:${project.build.directory}/generated-sources/eforms
+          </sourcepath>
         </configuration>
-      </plugin>
+      </plugin> 
     </plugins>
   </build>
 </project>
