@@ -34,7 +34,7 @@
 				<xsd:element ref="efbc:TransmissionTime" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="efac:AnswerReceptionPeriod" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="efac:AppealRequestsStatistics" minOccurs="0" maxOccurs="unbounded"/>
-				<xsd:element ref="efac:AppealsInformation" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="efac:Appeals" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element ref="efac:AwardCriterionParameter" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element ref="efac:BuyingPartyReference" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element ref="efac:Changes" minOccurs="0" maxOccurs="1"/>

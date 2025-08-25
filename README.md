@@ -284,10 +284,11 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-v10.0.0 - work in progress
+v10.0.0 - 2025-08-25
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0
 * Removed all deprecated methods marked for removal
+* Updated to eForms SDK 1.13.2
 
 v9.0.3 - 2024-09-17
 * Extended the API in `EUBL2*DocumentType` to retrieve the root namespace URL and local element name. See [#65](https://github.com/phax/ph-ubl/issues/65) - thx @GediminasVaistai

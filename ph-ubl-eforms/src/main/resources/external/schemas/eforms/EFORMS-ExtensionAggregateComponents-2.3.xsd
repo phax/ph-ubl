@@ -20,12 +20,15 @@
 	<xsd:element name="AppealIrregularity" type="AppealIrregularityType"/>
 	<xsd:element name="AppealRequestsStatistics" type="AppealRequestsStatisticsType"/>
 	<xsd:element name="AppealRemedy" type="AppealRemedyType"/>
-	<xsd:element name="AppealStatus" type="AppealStatusType"/>
+	<xsd:element name="AppealInformation" type="AppealInformationType"/>
 	<xsd:element name="AppealedItem" type="AppealedItemType"/>
 	<xsd:element name="AppealProcessingParty" type="AppealProcessingPartyType"/>
-	<xsd:element name="AppealsInformation" type="AppealsInformationType"/>
+	<xsd:element name="Appeals" type="AppealsType"/>
 	<xsd:element name="AppealingParty" type="AppealingPartyType"/>
+	<xsd:element name="AppliedMeasure" type="AppliedMeasureType"/>
 	<xsd:element name="Asset" type="AssetType"/>
+	<xsd:element name="AssetLabel" type="AssetLabelType"/>
+	<xsd:element name="AssetMetric" type="AssetMetricType"/>
 	<xsd:element name="AssetsList" type="AssetsListType"/>
 	<xsd:element name="AwardCriterionParameter" type="AwardCriterionParameterType"/>
 	<xsd:element name="BusinessPartyGroup" type="BusinessPartyGroupType"/>
@@ -51,6 +54,8 @@
 	<xsd:element name="LotResult" type="LotResultType"/>
 	<xsd:element name="LotTender" type="LotTenderType"/>
 	<xsd:element name="MainContractor" type="MainContractorType"/>
+	<xsd:element name="MeasureException" type="MeasureExceptionType"/>
+	<xsd:element name="MeasureStatistics" type="StatisticsType"/>
 	<xsd:element name="Nationality" type="NationalityType"/>
 	<xsd:element name="NonOfficialLanguages" type="NonOfficialLanguagesType"/>
 	<xsd:element name="NoticePurpose" type="NoticePurposeType"/>
@@ -109,7 +114,7 @@
 		<xsd:sequence>
 			<xsd:element ref="efbc:AppealProcessingPartyTypeCode" minOccurs="1" maxOccurs="1"/>
 			<xsd:element ref="efbc:AppealProcessingPartyTypeDescription" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:Party" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="cac:Party" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="AppealRemedyType">
@@ -124,58 +129,78 @@
 			<xsd:element ref="efbc:StatisticsNumeric" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="AppealStatusType">
+	<xsd:complexType name="AppealInformationType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Date" minOccurs="1" maxOccurs="1"/>
-			<xsd:element ref="cbc:Title" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Description" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Date" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Title" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:FeeAmount" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="efbc:AppealStageCode" minOccurs="1" maxOccurs="1"/>
-			<xsd:element ref="efbc:AppealStageID" minOccurs="1" maxOccurs="1"/>
-			<xsd:element ref="efbc:AppealPreviousStageID" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="efbc:RemedyAmount" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AppealID" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AppealRemedyValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AppealStageCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:PreviousAppealID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:WithdrawnAppealIndicator" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:WithdrawnAppealDate" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:WithdrawnAppealReasons" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="efac:AppealDecision" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efac:AppealIrregularity" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="efac:AppealProcessingParty" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="efac:AppealedItem" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:AppealingParty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:AppealProcessingParty" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efac:AppealDecision" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efac:AppealRemedy" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="efac:AppealedItem" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="efac:AppealingParty" minOccurs="1" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="AppealsInformationType">
+	<xsd:complexType name="AppealsType">
 		<xsd:sequence>
-			<xsd:element ref="efac:AppealStatus" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:AppealInformation" minOccurs="1" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="AppealingPartyType">
 		<xsd:sequence>
-			<xsd:element ref="efbc:AppealingPartyTypeCode" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="efbc:AppealingPartyTypeCode" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="efbc:AppealingPartyTypeDescription" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cac:Party" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="cac:Party" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AppliedMeasureType">
+		<xsd:sequence>
+			<xsd:element ref="efbc:MeasureCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efac:MeasureException" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:MeasureStatistics" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="AssetType">
 		<xsd:sequence>
-			<xsd:element ref="efbc:AssetDescription" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="efbc:AssetSignificance" minOccurs="1" maxOccurs="1"/>
-			<xsd:element ref="efbc:AssetPredominance" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="efbc:AssetDescription" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efbc:AssetSignificance" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AssetPredominance" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AssetLabelType">
+		<xsd:sequence>
+			<xsd:element ref="efbc:LabelCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:LabelDescription" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="AssetsListType">
 		<xsd:sequence>
-			<xsd:element ref="efac:Asset" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:Asset" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AssetMetricType">
+		<xsd:sequence>
+			<xsd:element ref="efbc:AssetMetricCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AssetMetricMeasurementUnit" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:AssetMetricNumeric" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="AwardCriterionParameterType">
 		<xsd:sequence>
 			<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efbc:ParameterCode" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="efbc:ParameterNumeric" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="efbc:ParameterNumeric" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="BusinessPartyGroupType">
@@ -275,7 +300,7 @@
 	<xsd:complexType name="DecisionReasonType">
 		<xsd:sequence>
 			<xsd:element ref="efac:FieldsPrivacy" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="efbc:DecisionReasonCode" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="efbc:DecisionReasonCode" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="DurationJustificationType">
@@ -360,6 +385,12 @@
 			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:complexType name="MeasureExceptionType">
+		<xsd:sequence>
+			<xsd:element ref="efbc:ExceptionCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:ExceptionDescription" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
 	<xsd:complexType name="NationalityType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:NationalityID" minOccurs="1" maxOccurs="1"/>
@@ -433,6 +464,9 @@
 	<xsd:complexType name="ProcurementDetailsType">
 		<xsd:sequence>
 			<xsd:element ref="efbc:AssetCategoryCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efbc:LegalFrameworkCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efac:AssetLabel" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="efac:AssetMetric" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efac:StrategicProcurementStatistics" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -492,6 +526,7 @@
 	<xsd:complexType name="StrategicProcurementInformationType">
 		<xsd:sequence>
 			<xsd:element ref="efbc:ProcurementCategoryCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="efac:AppliedMeasure" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="efac:ProcurementDetails" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>

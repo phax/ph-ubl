@@ -13,17 +13,20 @@
 	<!-- ===== Element Declarations ===== -->
 	<xsd:element name="AccessToolName" type="AccessToolNameType"/>
 	<xsd:element name="AcquiringCPBIndicator" type="AcquiringCPBIndicatorType"/>
-	<xsd:element name="AppealStageCode" type="AppealStageCodeType"/>
-	<xsd:element name="AppealStageID" type="AppealStageIDType"/>
-	<xsd:element name="AppealPreviousStageID" type="AppealPreviousStageIDType"/>
+	<xsd:element name="AppealID" type="AppealIDType"/>
 	<xsd:element name="AppealProcessingPartyTypeDescription" type="AppealProcessingPartyTypeDescriptionType"/>
 	<xsd:element name="AppealProcessingPartyTypeCode" type="AppealProcessingPartyTypeCodeType"/>
+	<xsd:element name="AppealStageCode" type="AppealStageCodeType"/>
 	<xsd:element name="AppealingPartyTypeDescription" type="AppealingPartyTypeDescriptionType"/>
 	<xsd:element name="AppealingPartyTypeCode" type="AppealingPartyTypeCodeType"/>
+	<xsd:element name="AppealRemedyValue" type="AppealRemedyValueType"/>
 	<xsd:element name="ApplicableLegalBasis" type="ApplicableLegalBasisType"/>
 	<xsd:element name="AreaCode" type="AreaCodeType"/>
 	<xsd:element name="AssetCategoryCode" type="AssetCategoryCodeType"/>
 	<xsd:element name="AssetDescription" type="AssetDescriptionType"/>
+	<xsd:element name="AssetMetricCode" type="AssetMetricCodeType"/>
+	<xsd:element name="AssetMetricMeasurementUnit" type="AssetMetricMeasurementUnitType"/>
+	<xsd:element name="AssetMetricNumeric" type="AssetMetricNumericType"/>
 	<xsd:element name="AssetPredominance" type="AssetPredominanceType"/>
 	<xsd:element name="AssetSignificance" type="AssetSignificanceType"/>
 	<xsd:element name="AwardingCPBIndicator" type="AwardingCPBIndicatorType"/>
@@ -35,6 +38,8 @@
 	<xsd:element name="DecisionReasonCode" type="DecisionReasonCodeType"/>
 	<xsd:element name="DecisionTypeCode" type="DecisionTypeCodeType"/>
 	<xsd:element name="DPSTerminationIndicator" type="DPSTerminationIndicatorType"/>
+	<xsd:element name="ExceptionCode" type="ExceptionCodeType"/>
+	<xsd:element name="ExceptionDescription" type="ExceptionDescriptionType"/>
 	<xsd:element name="ExtendedDurationIndicator" type="ExtendedDurationIndicatorType"/>
 	<xsd:element name="FieldIdentifierCode" type="FieldIdentifierCodeType"/>
 	<xsd:element name="FinancingIdentifier" type="FinancingIdentifierType"/>
@@ -49,8 +54,12 @@
 	<xsd:element name="GroupLeadIndicator" type="GroupLeadIndicatorType"/>
 	<xsd:element name="IrregularityTypeCode" type="IrregularityTypeCodeType"/>
 	<xsd:element name="ItemClassificationDescription" type="ItemClassificationDescriptionType"/>
+	<xsd:element name="LabelDescription" type="LabelDescriptionType"/>
+	<xsd:element name="LabelCode" type="LabelCodeType"/>
+	<xsd:element name="LegalFrameworkCode" type="LegalFrameworkCodeType"/>
 	<xsd:element name="ListedOnRegulatedMarketIndicator" type="ListedOnRegulatedMarketIndicatorType"/>
 	<xsd:element name="ModifiedContractIdentifier" type="ModifiedContractIdentifierType"/>
+	<xsd:element name="MeasureCode" type="MeasureCodeType"/>
 	<xsd:element name="NaturalPersonIndicator" type="NaturalPersonIndicatorType"/>
 	<xsd:element name="NonAwardJustificationCode" type="NonAwardJustificationCodeType"/>
 	<xsd:element name="NoticePublicationID" type="NoticePublicationIDType"/>
@@ -61,6 +70,7 @@
 	<xsd:element name="ParameterCode" type="ParameterCodeType"/>
 	<xsd:element name="PenaltiesAmount" type="PenaltiesAmountType"/>
 	<xsd:element name="PercentageKnownIndicator" type="PercentageKnownIndicatorType"/>
+	<xsd:element name="PreviousAppealID" type="PreviousAppealIDType"/>
 	<xsd:element name="PublicationDate" type="PublicationDateType"/>
 	<xsd:element name="PublicTransportationCumulatedDistance" type="PublicTransportationCumulatedDistanceType"/>
 	<xsd:element name="ProcedureRelaunchIndicator" type="ProcedureRelaunchIndicatorType"/>
@@ -104,12 +114,7 @@
 			<xsd:restriction base="udt:IndicatorType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:complexType name="AppealStageCodeType">
-		<xsd:simpleContent>
-			<xsd:restriction base="udt:CodeType"/>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="AppealStageIDType">
+	<xsd:complexType name="AppealIDType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IdentifierType"/>
 		</xsd:simpleContent>
@@ -134,9 +139,19 @@
 			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:complexType name="AppealPreviousStageIDType">
+	<xsd:complexType name="PreviousAppealIDType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IdentifierType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppealRemedyValueType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:AmountType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppealStageCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="ApplicableLegalBasisType">
@@ -157,6 +172,21 @@
 	<xsd:complexType name="AssetDescriptionType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:TextType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AssetMetricCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AssetMetricMeasurementUnitType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AssetMetricNumericType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:NumericType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="AssetPredominanceType">
@@ -212,6 +242,16 @@
 	<xsd:complexType name="DPSTerminationIndicatorType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IndicatorType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ExceptionCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ExceptionDescriptionType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:TextType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="ExtendedDurationIndicatorType">
@@ -284,9 +324,29 @@
 			<xsd:restriction base="udt:TextType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<xsd:complexType name="LabelDescriptionType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:TextType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="LabelCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="LegalFrameworkCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<xsd:complexType name="ListedOnRegulatedMarketIndicatorType">
 		<xsd:simpleContent>
 			<xsd:restriction base="udt:IndicatorType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="MeasureCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="ModifiedContractIdentifierType">
