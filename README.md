@@ -243,30 +243,25 @@ To read and write eForms UBL 2.3 documents add the following to your pom.xml to 
 
 Supported since v6.7.0
 
-# Gradle considerations
-
-Old versions of this project rely on JDK version based Maven profile activation.
-See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
-
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
-* https://repo1.maven.org/maven2/com/helger/ph-ubl-testfiles/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl-api/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl20/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl20-codelists/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl21/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl21-codelists/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl22/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl22-codelists/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl23/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl23-codelists/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl24/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl24-codelists/
-* https://repo1.maven.org/maven2/com/helger/ph-ublpe/
-* https://repo1.maven.org/maven2/com/helger/ph-ubltr/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl-dian/
-* https://repo1.maven.org/maven2/com/helger/ph-ubl-eforms/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-testfiles/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-api/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl20/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl20-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl21/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl21-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl22/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl22-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl23/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl23-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl24/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl24-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ublpe/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubltr/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-dian/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-eforms/
 
 # Other UBL sites
 
