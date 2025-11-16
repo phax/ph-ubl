@@ -19,6 +19,9 @@ package com.helger.ublpe;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
@@ -28,8 +31,6 @@ import com.helger.ubl20.UBL20Marshaller;
 import com.helger.ubl20.UBL20Marshaller.UBL20JAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType;
 import oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType;
@@ -50,9 +51,9 @@ public final class UBLPEMarshaller
   {
     private final QName m_aRootElementQName;
 
-    public UBLPEJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
+    public UBLPEJAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
                                 @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
-                                @Nonnull final QName aRootElementQName)
+                                @NonNull final QName aRootElementQName)
     {
       super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
 
@@ -66,13 +67,13 @@ public final class UBLPEMarshaller
       setNamespaceContext (aNSContext);
     }
 
-    @Nonnull
+    @NonNull
     public final QName getRootElementQName ()
     {
       return m_aRootElementQName;
     }
 
-    @Nonnull
+    @NonNull
     public final String getRootElementNamespaceURI ()
     {
       return m_aRootElementQName.getNamespaceURI ();
@@ -88,25 +89,25 @@ public final class UBLPEMarshaller
   private UBLPEMarshaller ()
   {}
 
-  @Nonnull
+  @NonNull
   public static UBL20JAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return UBL20Marshaller.applicationResponse ();
   }
 
-  @Nonnull
+  @NonNull
   public static UBL20JAXBMarshaller <CreditNoteType> creditNote ()
   {
     return UBL20Marshaller.creditNote ();
   }
 
-  @Nonnull
+  @NonNull
   public static UBL20JAXBMarshaller <DebitNoteType> debitNote ()
   {
     return UBL20Marshaller.debitNote ();
   }
 
-  @Nonnull
+  @NonNull
   public static UBL20JAXBMarshaller <InvoiceType> invoice ()
   {
     return UBL20Marshaller.invoice ();
@@ -128,7 +129,7 @@ public final class UBLPEMarshaller
                                                                                                                   "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
                                                                                                                   CUBLPE.getCL ()));
 
-  @Nonnull
+  @NonNull
   public static UBLPEJAXBMarshaller <SummaryDocumentsType> summaryDocuments ()
   {
     return new UBLPEJAXBMarshaller <> (SummaryDocumentsType.class,
@@ -152,7 +153,7 @@ public final class UBLPEMarshaller
                                                                                                                   "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
                                                                                                                   CUBLPE.getCL ()));
 
-  @Nonnull
+  @NonNull
   public static UBLPEJAXBMarshaller <VoidedDocumentsType> voidedDocuments ()
   {
     return new UBLPEJAXBMarshaller <> (VoidedDocumentsType.class,

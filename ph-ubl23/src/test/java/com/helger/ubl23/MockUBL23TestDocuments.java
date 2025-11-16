@@ -18,13 +18,13 @@ package com.helger.ubl23;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
-
-import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockUBL23TestDocuments
@@ -32,9 +32,9 @@ public final class MockUBL23TestDocuments
   private MockUBL23TestDocuments ()
   {}
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBL23TestDocuments (@Nonnull final EUBL23DocumentType eType)
+  public static ICommonsList <String> getUBL23TestDocuments (@NonNull final EUBL23DocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)

@@ -16,14 +16,14 @@
  */
 package com.helger.ubl24.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -1774,18 +1774,18 @@ public enum EUnitOfMeasureCode24
     private final String m_sID;
     private final String m_sDisplayName;
 
-    EUnitOfMeasureCode24(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName) {
+    EUnitOfMeasureCode24(@NonNull @Nonempty final String sID, @NonNull final String sDisplayName) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;
     }
 
-    @Nonnull
+    @NonNull
     public String getDisplayName() {
         return m_sDisplayName;
     }

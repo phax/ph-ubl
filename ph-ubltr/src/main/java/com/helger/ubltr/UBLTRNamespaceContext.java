@@ -16,10 +16,10 @@
  */
 package com.helger.ubltr;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.sbdh.CSBDH;
 import com.helger.ubl21.UBL21NamespaceContext;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -42,7 +42,7 @@ public class UBLTRNamespaceContext extends UBL21NamespaceContext
     addMapping ("oa", CUBLTR.XML_NS_OAGIS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBLTRNamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

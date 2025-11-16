@@ -19,6 +19,9 @@ package com.helger.ubltr;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
@@ -27,8 +30,6 @@ import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import tr.gov.efatura.package_12.TRPackage;
 import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
@@ -46,9 +47,9 @@ public final class UBLTRMarshaller
   {
     private final QName m_aRootElementQName;
 
-    public UBLTRJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
+    public UBLTRJAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
                                 @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
-                                @Nonnull final QName aRootElementQName)
+                                @NonNull final QName aRootElementQName)
     {
       super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
 
@@ -62,13 +63,13 @@ public final class UBLTRMarshaller
       setNamespaceContext (aNSContext);
     }
 
-    @Nonnull
+    @NonNull
     public final QName getRootElementQName ()
     {
       return m_aRootElementQName;
     }
 
-    @Nonnull
+    @NonNull
     public final String getRootElementNamespaceURI ()
     {
       return m_aRootElementQName.getNamespaceURI ();
@@ -84,7 +85,7 @@ public final class UBLTRMarshaller
   private UBLTRMarshaller ()
   {}
 
-  @Nonnull
+  @NonNull
   private static ClassLoader _getCL ()
   {
     return UBLTRMarshaller.class.getClassLoader ();
@@ -95,7 +96,7 @@ public final class UBLTRMarshaller
                                                                                                                                  "HRXML/UserAccount.xsd",
                                                                                                                                  _getCL ()));
 
-  @Nonnull
+  @NonNull
   public static UBLTRJAXBMarshaller <CancelUserAccountType> cancelUserAccount ()
   {
     return new UBLTRJAXBMarshaller <> (CancelUserAccountType.class,
@@ -103,7 +104,7 @@ public final class UBLTRMarshaller
                                        tr.gov.efatura.useraccount.ObjectFactory._CancelUserAccount_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static UBLTRJAXBMarshaller <ProcessUserAccountType> processUserAccount ()
   {
     return new UBLTRJAXBMarshaller <> (ProcessUserAccountType.class,
@@ -124,7 +125,7 @@ public final class UBLTRMarshaller
 
   private static final QName QNAME_PACKAGE = new QName (CUBLTR.XML_NS_EFATURA, "Package");
 
-  @Nonnull
+  @NonNull
   public static UBLTRJAXBMarshaller <TRPackage> trPackage ()
   {
     return new UBLTRJAXBMarshaller <> (TRPackage.class, XSD_PACKAGE, QNAME_PACKAGE);

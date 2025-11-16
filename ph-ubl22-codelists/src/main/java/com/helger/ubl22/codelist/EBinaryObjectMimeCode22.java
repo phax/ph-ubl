@@ -16,13 +16,13 @@
  */
 package com.helger.ubl22.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -1720,11 +1720,11 @@ public enum EBinaryObjectMimeCode22
     public static final String LIST_VERSION = "$VERSION";
     private final String m_sID;
 
-    EBinaryObjectMimeCode22(@Nonnull @Nonempty final String sID) {
+    EBinaryObjectMimeCode22(@NonNull @Nonempty final String sID) {
         m_sID = sID;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;

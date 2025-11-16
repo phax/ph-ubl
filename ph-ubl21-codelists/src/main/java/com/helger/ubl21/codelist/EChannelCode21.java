@@ -16,14 +16,14 @@
  */
 package com.helger.ubl21.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -89,19 +89,19 @@ public enum EChannelCode21
     private final String m_sDisplayName;
     private final String m_sDescription;
 
-    EChannelCode21(@Nonnull @Nonempty final String sID, @Nonnull final String sDisplayName, @Nullable final String sDescription) {
+    EChannelCode21(@NonNull @Nonempty final String sID, @NonNull final String sDisplayName, @Nullable final String sDescription) {
         m_sID = sID;
         m_sDisplayName = sDisplayName;
         m_sDescription = sDescription;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;
     }
 
-    @Nonnull
+    @NonNull
     public String getDisplayName() {
         return m_sDisplayName;
     }

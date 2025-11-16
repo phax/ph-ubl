@@ -16,13 +16,13 @@
  */
 package com.helger.ubl21.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -41,11 +41,11 @@ public enum EThresholdValueComparisonCode21
     public static final String LIST_VERSION = "2.1";
     private final String m_sID;
 
-    EThresholdValueComparisonCode21(@Nonnull @Nonempty final String sID) {
+    EThresholdValueComparisonCode21(@NonNull @Nonempty final String sID) {
         m_sID = sID;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;

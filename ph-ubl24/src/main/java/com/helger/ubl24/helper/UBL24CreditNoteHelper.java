@@ -19,10 +19,11 @@ package com.helger.ubl24.helper;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.concurrent.Immutable;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_24.AllowanceChargeType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_24.BillingReferenceType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_24.CreditNoteLineType;
@@ -61,8 +62,8 @@ public final class UBL24CreditNoteHelper
    *        Source {@link CreditedQuantityType}
    * @return The created {@link InvoicedQuantityType}
    */
-  @Nonnull
-  public static InvoicedQuantityType cloneToInvoicedQuantity (@Nonnull final CreditedQuantityType aSrc)
+  @NonNull
+  public static InvoicedQuantityType cloneToInvoicedQuantity (@NonNull final CreditedQuantityType aSrc)
   {
     final InvoicedQuantityType ret = new InvoicedQuantityType ();
     aSrc.cloneTo (ret);
@@ -93,7 +94,7 @@ public final class UBL24CreditNoteHelper
    * @param aDst
    *        Destination invoice line. May not be <code>null</code>.
    */
-  public static void cloneToInvoiceLine (@Nonnull final CreditNoteLineType aSrc, @Nonnull final InvoiceLineType aDst)
+  public static void cloneToInvoiceLine (@NonNull final CreditNoteLineType aSrc, @NonNull final InvoiceLineType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());
@@ -214,7 +215,7 @@ public final class UBL24CreditNoteHelper
    * @param aDst
    *        Destination invoice. May not be <code>null</code>.
    */
-  public static void cloneCreditNoteToInvoice (@Nonnull final CreditNoteType aSrc, @Nonnull final InvoiceType aDst)
+  public static void cloneCreditNoteToInvoice (@NonNull final CreditNoteType aSrc, @NonNull final InvoiceType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());

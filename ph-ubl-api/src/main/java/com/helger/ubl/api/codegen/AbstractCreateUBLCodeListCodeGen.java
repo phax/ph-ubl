@@ -21,6 +21,9 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.Set;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.CodingStyleguideUnaware;
@@ -61,16 +64,13 @@ import com.helger.jcodemodel.JVar;
 import com.helger.jcodemodel.exceptions.JCodeModelException;
 import com.helger.jcodemodel.writer.JCMWriter;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
-
 public abstract class AbstractCreateUBLCodeListCodeGen
 {
   private static final String COLID_NAME = "name";
   private static final String COLID_CODE = "code";
 
-  @Nonnull
-  protected static String _getVarName (@Nonnull final String sOtherCol)
+  @NonNull
+  protected static String _getVarName (@NonNull final String sOtherCol)
   {
     String sVar = sOtherCol.substring (0, 1).toUpperCase (Locale.US) + sOtherCol.substring (1);
     sVar = StringReplace.replaceAll (sVar, '-', '_');
@@ -78,7 +78,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     return sVar;
   }
 
-  private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
+  private static void _classConstants (@NonNull final CodeListDocument aCodeList10, @NonNull final JDefinedClass jClass)
   {
     final Identification aIdentification = aCodeList10.getIdentification ();
 
@@ -108,8 +108,8 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
-  private void _createEnum10 (@Nonnull final JCodeModel cm,
-                              @Nonnull final String sTargetPackage,
+  private void _createEnum10 (@NonNull final JCodeModel cm,
+                              @NonNull final String sTargetPackage,
                               final File aFile,
                               final CodeListDocument aCodeList10,
                               final Set <String> aOtherCols,
@@ -194,7 +194,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.NONE);
     JVar jID = jCtor.param (JMod.FINAL, String.class, "sID");
-    jID.annotate (Nonnull.class);
+    jID.annotate (NonNull.class);
     if (!bHasEmptyID)
       jID.annotate (Nonempty.class);
     JBlock aCtorBody = jCtor.body ().assign (fID, jID);
@@ -202,7 +202,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     if (bHasNameColumn)
     {
       final JVar jDisplayName = jCtor.param (JMod.FINAL, String.class, "sDisplayName");
-      jDisplayName.annotate (Nonnull.class);
+      jDisplayName.annotate (NonNull.class);
       aCtorBody.assign (fDisplayName, jDisplayName);
     }
     for (final String sOtherCol : aOtherCols)
@@ -214,7 +214,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     }
     // public String getID ()
     JMethod m = jEnum.method (JMod.PUBLIC, String.class, "getID");
-    m.annotate (Nonnull.class);
+    m.annotate (NonNull.class);
     if (!bHasEmptyID)
       m.annotate (Nonempty.class);
     m.body ()._return (fID);
@@ -223,7 +223,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     {
       // public String getDisplayName ()
       m = jEnum.method (JMod.PUBLIC, String.class, "getDisplayName");
-      m.annotate (Nonnull.class);
+      m.annotate (NonNull.class);
       m.body ()._return (fDisplayName);
     }
     for (final String sOtherCol : aOtherCols)
@@ -253,10 +253,10 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     }
   }
 
-  private void _createHelperClasses10 (@Nonnull final JCodeModel cm,
-                                       @Nonnull final String sTargetPackage,
-                                       @Nonnull final File aFile,
-                                       @Nonnull final CodeListDocument aCodeList10,
+  private void _createHelperClasses10 (@NonNull final JCodeModel cm,
+                                       @NonNull final String sTargetPackage,
+                                       @NonNull final File aFile,
+                                       @NonNull final CodeListDocument aCodeList10,
                                        final boolean bHasNameColumn) throws JCodeModelException
   {
     String sClassName = "C" + aCodeList10.getIdentification ().getShortName ().getValue ();
@@ -316,7 +316,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
 
         aCodeMethod = aInnerCodeClass.constructor (JMod.NONE);
         aCodeParam = aCodeMethod.param (JMod.FINAL, aSetDecl, "aCodeSet");
-        aCodeParam.annotate (Nonnull.class);
+        aCodeParam.annotate (NonNull.class);
         // Add init call
         jClass.init ().add (JExpr._new (aInnerCodeClass).arg (aCodeSet));
 
@@ -324,7 +324,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
         {
           aNameMethod = aInnerNameClass.constructor (JMod.NONE);
           aNameParam = aNameMethod.param (JMod.FINAL, aSetDecl, "aNameSet");
-          aNameParam.annotate (Nonnull.class);
+          aNameParam.annotate (NonNull.class);
 
           // Add init call
           jClass.init ().add (JExpr._new (aInnerNameClass).arg (aNameSet));
@@ -350,7 +350,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
     aMethod.body ()._return (aCodeSet.invoke ("contains").arg (aParam));
 
     aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, aSetDecl, "getAllCodes");
-    aMethod.annotate (Nonnull.class);
+    aMethod.annotate (NonNull.class);
     aMethod.annotate (ReturnsMutableCopy.class);
     aMethod.body ()._return (aCodeSet.invoke ("getClone"));
 
@@ -362,16 +362,16 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       aMethod.body ()._return (aNameSet.invoke ("contains").arg (aParam));
 
       aMethod = jClass.method (JMod.PUBLIC | JMod.STATIC, aSetDecl, "getAllNames");
-      aMethod.annotate (Nonnull.class);
+      aMethod.annotate (NonNull.class);
       aMethod.annotate (ReturnsMutableCopy.class);
       aMethod.body ()._return (aNameSet.invoke ("getClone"));
     }
   }
 
-  private void _createGenericode10 (@Nonnull final JCodeModel cm,
-                                    @Nonnull final String sTargetPackage,
-                                    @Nonnull final File aFile,
-                                    @Nonnull final CodeListDocument aCodeList10) throws JCodeModelException
+  private void _createGenericode10 (@NonNull final JCodeModel cm,
+                                    @NonNull final String sTargetPackage,
+                                    @NonNull final File aFile,
+                                    @NonNull final CodeListDocument aCodeList10) throws JCodeModelException
   {
     System.out.println (aFile.getAbsolutePath ());
     final SimpleCodeList aSimpleCodeList = aCodeList10.getSimpleCodeList ();
@@ -413,7 +413,7 @@ public abstract class AbstractCreateUBLCodeListCodeGen
       _createEnum10 (cm, sTargetPackage, aFile, aCodeList10, aOtherCols, bHasNameColumn);
   }
 
-  public void run (@Nonnull final String sTargetPackage) throws JCodeModelException, IOException
+  public void run (@NonNull final String sTargetPackage) throws JCodeModelException, IOException
   {
     final JCodeModel cm = new JCodeModel ();
     for (final File aFile : new FileSystemRecursiveIterator (new File ("src/main/resources/external/codelists")).withFilter (IFileFilter.filenameEndsWith (".gc")))

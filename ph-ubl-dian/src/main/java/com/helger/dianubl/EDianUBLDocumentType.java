@@ -16,6 +16,8 @@
  */
 package com.helger.dianubl;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -25,7 +27,6 @@ import com.helger.ubl21.CUBL21;
 import com.helger.ubl21.EUBL21DocumentType;
 
 import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
-import jakarta.annotation.Nonnull;
 
 /**
  * Enumeration with all available DIAN UBL document types.
@@ -44,14 +45,14 @@ public enum EDianUBLDocumentType
                                             CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS,
                                             CDianUBL.XSD_DIAN_UBL_STRUCTURE));
 
-  @Nonnull
+  @NonNull
   private static ClassLoader _getCL ()
   {
     return EDianUBLDocumentType.class.getClassLoader ();
   }
 
-  @Nonnull
-  private static ICommonsList <ClassPathResource> _injectSTS (@Nonnull final ICommonsList <ClassPathResource> aList)
+  @NonNull
+  private static ICommonsList <ClassPathResource> _injectSTS (@NonNull final ICommonsList <ClassPathResource> aList)
   {
     final ICommonsList <ClassPathResource> ret = new CommonsArrayList <> ();
     // Copy everything EXCEPT the last item
@@ -69,26 +70,26 @@ public enum EDianUBLDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EDianUBLDocumentType (@Nonnull final EUBL21DocumentType eOther)
+  EDianUBLDocumentType (@NonNull final EUBL21DocumentType eOther)
   {
     m_aImplClass = eOther.getImplementationClass ();
     m_aXSDs = eOther.getAllXSDResources ();
   }
 
-  EDianUBLDocumentType (@Nonnull final Class <?> aClass,
-                        @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EDianUBLDocumentType (@NonNull final Class <?> aClass,
+                        @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;
   }
 
-  @Nonnull
+  @NonNull
   public Class <?> getImplementationClass ()
   {
     return m_aImplClass;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()

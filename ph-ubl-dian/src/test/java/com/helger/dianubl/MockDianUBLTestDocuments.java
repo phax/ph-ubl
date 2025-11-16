@@ -16,12 +16,12 @@
  */
 package com.helger.dianubl;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
-
-import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockDianUBLTestDocuments
@@ -31,9 +31,9 @@ public final class MockDianUBLTestDocuments
   private MockDianUBLTestDocuments ()
   {}
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EDianUBLDocumentType eType)
+  public static ICommonsList <String> getUBLPETestDocuments (@NonNull final EDianUBLDocumentType eType)
   {
     ICommonsList <String> aFiles;
     switch (eType)

@@ -18,10 +18,10 @@ package com.helger.ubl20;
 
 import javax.xml.XMLConstants;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.misc.Singleton;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -45,7 +45,7 @@ public class UBL20NamespaceContext extends MapBasedNamespaceContext
     addMapping ("cec", CUBL20.XML_SCHEMA_CEC_NAMESPACE_URL);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL20NamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

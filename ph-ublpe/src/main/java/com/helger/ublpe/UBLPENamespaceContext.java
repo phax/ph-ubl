@@ -16,9 +16,9 @@
  */
 package com.helger.ublpe;
 
-import com.helger.ubl20.UBL20NamespaceContext;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.ubl20.UBL20NamespaceContext;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -37,7 +37,7 @@ public class UBLPENamespaceContext extends UBL20NamespaceContext
     addMapping ("sac", CUBLPE.XML_SCHEMA_SAC_NAMESPACE_URL);
   }
 
-  @Nonnull
+  @NonNull
   public static UBLPENamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

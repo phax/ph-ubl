@@ -17,6 +17,8 @@
  */
 package com.helger.eforms;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -30,7 +32,6 @@ import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
-import jakarta.annotation.Nonnull;
 import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
@@ -61,19 +62,19 @@ public enum EFormsUBLDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EFormsUBLDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EFormsUBLDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;
   }
 
-  @Nonnull
+  @NonNull
   public Class <?> getImplementationClass ()
   {
     return m_aImplClass;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()

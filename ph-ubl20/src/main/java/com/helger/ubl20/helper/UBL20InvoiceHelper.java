@@ -19,9 +19,10 @@ package com.helger.ubl20.helper;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 
-import jakarta.annotation.Nonnull;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.AllowanceChargeType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.BillingReferenceType;
 import oasis.names.specification.ubl.schema.xsd.commonaggregatecomponents_2.CreditNoteLineType;
@@ -55,8 +56,8 @@ public final class UBL20InvoiceHelper
    *        Source {@link InvoicedQuantityType}
    * @return The created {@link CreditedQuantityType}
    */
-  @Nonnull
-  public static CreditedQuantityType cloneToCreditedQuantity (@Nonnull final InvoicedQuantityType aSrc)
+  @NonNull
+  public static CreditedQuantityType cloneToCreditedQuantity (@NonNull final InvoicedQuantityType aSrc)
   {
     final CreditedQuantityType ret = new CreditedQuantityType ();
     aSrc.cloneTo (ret);
@@ -72,7 +73,7 @@ public final class UBL20InvoiceHelper
    * @param aDst
    *        Destination credit note line. May not be <code>null</code>.
    */
-  public static void cloneToCreditNoteLine (@Nonnull final InvoiceLineType aSrc, @Nonnull final CreditNoteLineType aDst)
+  public static void cloneToCreditNoteLine (@NonNull final InvoiceLineType aSrc, @NonNull final CreditNoteLineType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());
@@ -168,7 +169,7 @@ public final class UBL20InvoiceHelper
    * @param aDst
    *        Destination credit note. May not be <code>null</code>.
    */
-  public static void cloneInvoiceToCreditNote (@Nonnull final InvoiceType aSrc, @Nonnull final CreditNoteType aDst)
+  public static void cloneInvoiceToCreditNote (@NonNull final InvoiceType aSrc, @NonNull final CreditNoteType aDst)
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());

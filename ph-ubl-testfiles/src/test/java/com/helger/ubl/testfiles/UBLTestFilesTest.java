@@ -20,11 +20,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
 import org.junit.Test;
 
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Test class for class {@link UBLTestFiles}.
@@ -33,7 +32,7 @@ import jakarta.annotation.Nonnull;
  */
 public final class UBLTestFilesTest
 {
-  private static void _test (@Nonnull final List <String> aFiles)
+  private static void _test (@NonNull final List <String> aFiles)
   {
     for (final String sFile : aFiles)
       assertTrue (sFile + " does not exist", new ClassPathResource (sFile).exists ());

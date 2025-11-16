@@ -16,14 +16,14 @@
  */
 package com.helger.ubl24.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -321,8 +321,8 @@ public enum ECurrencyCode24
     private final String m_sFractionaldigits;
     private final String m_sCountry;
 
-    ECurrencyCode24(@Nonnull @Nonempty final String sID,
-        @Nonnull final String sDisplayName,
+    ECurrencyCode24(@NonNull @Nonempty final String sID,
+        @NonNull final String sDisplayName,
         @Nullable final String sNumericcode,
         @Nullable final String sFractionaldigits,
         @Nullable final String sCountry) {
@@ -333,13 +333,13 @@ public enum ECurrencyCode24
         m_sCountry = sCountry;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;
     }
 
-    @Nonnull
+    @NonNull
     public String getDisplayName() {
         return m_sDisplayName;
     }

@@ -20,6 +20,9 @@ package com.helger.eforms;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.eforms.jaxb.brin.BusinessRegistrationInformationNoticeType;
@@ -35,8 +38,6 @@ import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.contractawardnotice_23.ContractAwardNoticeType;
 import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
@@ -52,9 +53,9 @@ public final class EformsUBLMarshaller
 {
   public static class EformsUBLJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
-    public EformsUBLJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
+    public EformsUBLJAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
                                     @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
-                                    @Nonnull final QName aRootElementQName)
+                                    @NonNull final QName aRootElementQName)
     {
       super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
 
@@ -76,25 +77,25 @@ public final class EformsUBLMarshaller
   private EformsUBLMarshaller ()
   {}
 
-  @Nonnull
-  private static ClassPathResource _getCPR (@Nonnull final String sXSDPath)
+  @NonNull
+  private static ClassPathResource _getCPR (@NonNull final String sXSDPath)
   {
     return new ClassPathResource (CEformsUBL.SCHEMA_DIRECTORY + sXSDPath, CEformsUBL.getCL ());
   }
 
-  @Nonnull
+  @NonNull
   public static UBL23JAXBMarshaller <ContractAwardNoticeType> contractAwardNotice ()
   {
     return UBL23Marshaller.contractAwardNotice ();
   }
 
-  @Nonnull
+  @NonNull
   public static UBL23JAXBMarshaller <ContractNoticeType> contractNotice ()
   {
     return UBL23Marshaller.contractNotice ();
   }
 
-  @Nonnull
+  @NonNull
   public static UBL23JAXBMarshaller <PriorInformationNoticeType> priorInformationNotice ()
   {
     return UBL23Marshaller.priorInformationNotice ();
@@ -109,7 +110,7 @@ public final class EformsUBLMarshaller
                                                                                                  CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
                                                                                                  CEformsUBL.XSD_EFORMS_EXTENSION_APEX);
 
-  @Nonnull
+  @NonNull
   public static EformsUBLJAXBMarshaller <EformsExtension> eFormsExtension ()
   {
     return new EformsUBLJAXBMarshaller <> (EformsExtension.class,
@@ -124,7 +125,7 @@ public final class EformsUBLMarshaller
     XSDS_BRIN.add (CEformsUBL.XSD_EFORMS_BRIN);
   }
 
-  @Nonnull
+  @NonNull
   public static EformsUBLJAXBMarshaller <BusinessRegistrationInformationNoticeType> businessRegistrationInformationNotice ()
   {
     return new EformsUBLJAXBMarshaller <> (BusinessRegistrationInformationNoticeType.class,

@@ -17,6 +17,8 @@
  */
 package com.helger.eforms;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.w3c.dom.Element;
 
 import com.helger.annotation.concurrent.Immutable;
@@ -24,8 +26,6 @@ import com.helger.base.enforce.ValueEnforcer;
 import com.helger.base.state.ESuccess;
 import com.helger.eforms.jaxb.ext.EformsExtension;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_23.ExtensionContentType;
 
 /**
@@ -49,7 +49,7 @@ public final class EformsUBLHelper
    * @return <code>null</code> if the content is no {@link EformsExtension}.
    */
   @Nullable
-  public static EformsExtension getFormsExtension (@Nonnull final ExtensionContentType aExt)
+  public static EformsExtension getFormsExtension (@NonNull final ExtensionContentType aExt)
   {
     ValueEnforcer.notNull (aExt, "Ext");
 
@@ -69,9 +69,9 @@ public final class EformsUBLHelper
    *        The EForms Extension content itself.
    * @return Never <code>null</code>.
    */
-  @Nonnull
-  public static ESuccess setFormsExtension (@Nonnull final ExtensionContentType aExt,
-                                            @Nonnull final EformsExtension aEformsExtension)
+  @NonNull
+  public static ESuccess setFormsExtension (@NonNull final ExtensionContentType aExt,
+                                            @NonNull final EformsExtension aEformsExtension)
   {
     ValueEnforcer.notNull (aExt, "Ext");
     ValueEnforcer.notNull (aEformsExtension, "EformsExtension");

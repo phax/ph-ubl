@@ -18,11 +18,11 @@ package com.helger.ubl21;
 
 import javax.xml.XMLConstants;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.misc.Singleton;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -47,7 +47,7 @@ public class UBL21NamespaceContext extends MapBasedNamespaceContext
     addMapping ("ds", CXMLDSig.NAMESPACE_URI);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21NamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

@@ -21,6 +21,8 @@ import java.util.Locale;
 
 import javax.xml.XMLConstants;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.cache.regex.RegExHelper;
 import com.helger.collection.commons.CommonsHashSet;
@@ -46,8 +48,6 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xml.serialize.write.EXMLIncorrectCharacterHandling;
 import com.helger.xml.serialize.write.XMLWriterSettings;
 
-import jakarta.annotation.Nonnull;
-
 /**
  * Utility class that creates:
  * <ul>
@@ -63,7 +63,7 @@ public final class MainCreateJAXBBinding20 extends AbstractUBLCodeGen
   private static final String JAXB_NS_URI = "https://jakarta.ee/xml/ns/jaxb";
   private static final String XJC_NS_URI = "http://java.sun.com/xml/ns/jaxb/xjc";
 
-  @Nonnull
+  @NonNull
   private static IMicroDocument _createBaseDoc ()
   {
     final IMicroDocument eDoc = new MicroDocument ();
@@ -96,9 +96,9 @@ public final class MainCreateJAXBBinding20 extends AbstractUBLCodeGen
     return eDoc;
   }
 
-  private static void _generateExplicitEnumMapping (@Nonnull final IMicroDocument aDoc,
-                                                    @Nonnull @Nonempty final String sFilename,
-                                                    @Nonnull final IMicroElement eBindings)
+  private static void _generateExplicitEnumMapping (@NonNull final IMicroDocument aDoc,
+                                                    @NonNull @Nonempty final String sFilename,
+                                                    @NonNull final IMicroElement eBindings)
   {
     final ICommonsSet <String> aUsedNames = new CommonsHashSet <> ();
     final ICommonsNavigableMap <String, String> aValueToConstants = new CommonsTreeMap <> ();

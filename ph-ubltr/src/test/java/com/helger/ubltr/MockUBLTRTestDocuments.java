@@ -18,11 +18,11 @@ package com.helger.ubltr;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
-
-import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockUBLTRTestDocuments
@@ -32,9 +32,9 @@ public final class MockUBLTRTestDocuments
   private MockUBLTRTestDocuments ()
   {}
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  public static List <String> getUBLTRTestDocuments (@Nonnull final EUBLTRDocumentType eType)
+  public static List <String> getUBLTRTestDocuments (@NonNull final EUBLTRDocumentType eType)
   {
     List <String> aFiles = null;
     switch (eType)

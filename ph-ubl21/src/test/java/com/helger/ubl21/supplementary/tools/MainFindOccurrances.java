@@ -22,6 +22,8 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Set;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.base.enforce.ValueEnforcer;
 import com.helger.base.string.StringHelper;
@@ -33,7 +35,6 @@ import com.helger.collection.commons.ICommonsList;
 import com.helger.collection.commons.ICommonsMap;
 import com.helger.collection.stack.NonBlockingStack;
 
-import jakarta.annotation.Nonnull;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlValue;
@@ -42,7 +43,7 @@ import oasis.names.specification.ubl.schema.xsd.order_21.OrderType;
 
 public class MainFindOccurrances
 {
-  private static boolean _isSystemClass (@Nonnull final Class <?> aMemberClass)
+  private static boolean _isSystemClass (@NonNull final Class <?> aMemberClass)
   {
     final Package aPackage = aMemberClass.getPackage ();
     if (aPackage == null)
@@ -65,7 +66,7 @@ public class MainFindOccurrances
    * @param aList
    *        List to be filled
    */
-  private static void _getAllFields (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <Field> aList)
+  private static void _getAllFields (@NonNull final Class <?> aClass, @NonNull final ICommonsList <Field> aList)
   {
     aList.addAll (aClass.getDeclaredFields ());
 
@@ -82,8 +83,8 @@ public class MainFindOccurrances
    *        The class to get all fields from
    * @return Never <code>null</code> but maybe empty.
    */
-  @Nonnull
-  private static ICommonsList <Field> getAllFields (@Nonnull final Class <?> aClass)
+  @NonNull
+  private static ICommonsList <Field> getAllFields (@NonNull final Class <?> aClass)
   {
     ICommonsList <Field> ret = s_aAllFields.get (aClass);
     if (ret == null)
@@ -103,8 +104,8 @@ public class MainFindOccurrances
    *        Source field
    * @return Never <code>null</code>.
    */
-  @Nonnull
-  public static String _getXMLName (@Nonnull final Field aField)
+  @NonNull
+  public static String _getXMLName (@NonNull final Field aField)
   {
     final XmlElement aElement = aField.getAnnotation (XmlElement.class);
     if (aElement != null)
@@ -124,7 +125,7 @@ public class MainFindOccurrances
       private final Class <?> m_aClass;
       private final String m_sXMLName;
 
-      public MemberData (@Nonnull final Field aField, @Nonnull final Class <?> aClass)
+      public MemberData (@NonNull final Field aField, @NonNull final Class <?> aClass)
       {
         m_aClass = aClass;
         m_sXMLName = _getXMLName (aField);
@@ -143,16 +144,16 @@ public class MainFindOccurrances
     final Class <?> m_aClass;
     final String m_sXMLName;
 
-    public StackElement (@Nonnull final Class <?> aClass, @Nonnull final String sXMLName)
+    public StackElement (@NonNull final Class <?> aClass, @NonNull final String sXMLName)
     {
       m_aClass = ValueEnforcer.notNull (aClass, "Class");
       m_sXMLName = ValueEnforcer.notEmpty (sXMLName, "XMLName");
     }
   }
 
-  @Nonnull
-  public static PerClassData _createPerClassData (@Nonnull final Class <?> aStartClass,
-                                                  @Nonnull final Class <?> aFindClass)
+  @NonNull
+  public static PerClassData _createPerClassData (@NonNull final Class <?> aStartClass,
+                                                  @NonNull final Class <?> aFindClass)
   {
     final PerClassData aPerClassData = new PerClassData ();
     for (final Field aField : getAllFields (aStartClass))
@@ -178,11 +179,11 @@ public class MainFindOccurrances
 
   private static int i = 0;
 
-  private static void _findAllRecursive (@Nonnull final Class <?> aStartClass,
-                                         @Nonnull final Class <?> aFindClass,
-                                         @Nonnull @Nonempty final String sXMLName,
-                                         @Nonnull final NonBlockingStack <StackElement> aStack,
-                                         @Nonnull final Set <Class <?>> aUniqueClasses)
+  private static void _findAllRecursive (@NonNull final Class <?> aStartClass,
+                                         @NonNull final Class <?> aFindClass,
+                                         @NonNull @Nonempty final String sXMLName,
+                                         @NonNull final NonBlockingStack <StackElement> aStack,
+                                         @NonNull final Set <Class <?>> aUniqueClasses)
   {
     // Avoid endless loop, if the same type is already part of the stack
     if (aUniqueClasses.add (aStartClass))

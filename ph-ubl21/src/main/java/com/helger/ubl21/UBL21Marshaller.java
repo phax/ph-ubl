@@ -19,6 +19,9 @@ package com.helger.ubl21;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -31,8 +34,6 @@ import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.awardednotification_21.AwardedNotificationType;
@@ -112,9 +113,9 @@ public final class UBL21Marshaller
   {
     private final QName m_aRootElementQName;
 
-    public UBL21JAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
-                                @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDs,
-                                @Nonnull final QName aRootElementQName)
+    public UBL21JAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
+                                @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDs,
+                                @NonNull final QName aRootElementQName)
     {
       super (aType, aXSDs, createSimpleJAXBElement (aRootElementQName, aType));
 
@@ -128,13 +129,13 @@ public final class UBL21Marshaller
       setNamespaceContext (aNSContext);
     }
 
-    @Nonnull
+    @NonNull
     public final QName getRootElementQName ()
     {
       return m_aRootElementQName;
     }
 
-    @Nonnull
+    @NonNull
     public final String getRootElementNamespaceURI ()
     {
       return m_aRootElementQName.getNamespaceURI ();
@@ -160,16 +161,16 @@ public final class UBL21Marshaller
                                                                                              CUBL21.XSD_COMMON_EXTENSION_COMPONENTS,
                                                                                              CUBL21.XSD_COMMON_AGGREGATE_COMPONENTS);
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllBaseXSDs ()
   {
     return BASE_XSDS.getClone ();
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  private static ICommonsList <ClassPathResource> _getAllXSDs (@Nonnull final ClassPathResource aXSD)
+  private static ICommonsList <ClassPathResource> _getAllXSDs (@NonNull final ClassPathResource aXSD)
   {
     final ICommonsList <ClassPathResource> ret = BASE_XSDS.getClone ();
     ret.add (aXSD);
@@ -179,8 +180,8 @@ public final class UBL21Marshaller
   private UBL21Marshaller ()
   {}
 
-  @Nonnull
-  private static ClassPathResource _getCPR (@Nonnull final String sXSDPath)
+  @NonNull
+  private static ClassPathResource _getCPR (@NonNull final String sXSDPath)
   {
     return new ClassPathResource (CUBL21.SCHEMA_DIRECTORY + sXSDPath, CUBL21.getCL ());
   }
@@ -189,14 +190,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_APPLICATIONRESPONSE = _getCPR ("UBL-ApplicationResponse-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllApplicationResponseXSDs ()
   {
     return _getAllXSDs (CPR_APPLICATIONRESPONSE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return new UBL21JAXBMarshaller <> (ApplicationResponseType.class,
@@ -206,14 +207,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ATTACHEDDOCUMENT = _getCPR ("UBL-AttachedDocument-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllAttachedDocumentXSDs ()
   {
     return _getAllXSDs (CPR_ATTACHEDDOCUMENT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <AttachedDocumentType> attachedDocument ()
   {
     return new UBL21JAXBMarshaller <> (AttachedDocumentType.class,
@@ -223,14 +224,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_AWARDEDNOTIFICATION = _getCPR ("UBL-AwardedNotification-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllAwardedNotificationXSDs ()
   {
     return _getAllXSDs (CPR_AWARDEDNOTIFICATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <AwardedNotificationType> awardedNotification ()
   {
     return new UBL21JAXBMarshaller <> (AwardedNotificationType.class,
@@ -240,14 +241,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_BILLOFLADING = _getCPR ("UBL-BillOfLading-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllBillOfLadingXSDs ()
   {
     return _getAllXSDs (CPR_BILLOFLADING);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <BillOfLadingType> billOfLading ()
   {
     return new UBL21JAXBMarshaller <> (BillOfLadingType.class,
@@ -257,14 +258,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CALLFORTENDERS = _getCPR ("UBL-CallForTenders-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCallForTendersXSDs ()
   {
     return _getAllXSDs (CPR_CALLFORTENDERS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CallForTendersType> callForTenders ()
   {
     return new UBL21JAXBMarshaller <> (CallForTendersType.class,
@@ -274,14 +275,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CATALOGUE = _getCPR ("UBL-Catalogue-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCatalogueXSDs ()
   {
     return _getAllXSDs (CPR_CATALOGUE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CatalogueType> catalogue ()
   {
     return new UBL21JAXBMarshaller <> (CatalogueType.class,
@@ -291,14 +292,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CATALOGUEDELETION = _getCPR ("UBL-CatalogueDeletion-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCatalogueDeletionXSDs ()
   {
     return _getAllXSDs (CPR_CATALOGUEDELETION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CatalogueDeletionType> catalogueDeletion ()
   {
     return new UBL21JAXBMarshaller <> (CatalogueDeletionType.class,
@@ -308,14 +309,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CATALOGUEITEMSPECIFICATIONUPDATE = _getCPR ("UBL-CatalogueItemSpecificationUpdate-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCatalogueItemSpecificationUpdateXSDs ()
   {
     return _getAllXSDs (CPR_CATALOGUEITEMSPECIFICATIONUPDATE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CatalogueItemSpecificationUpdateType> catalogueItemSpecificationUpdate ()
   {
     return new UBL21JAXBMarshaller <> (CatalogueItemSpecificationUpdateType.class,
@@ -325,14 +326,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CATALOGUEPRICINGUPDATE = _getCPR ("UBL-CataloguePricingUpdate-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCataloguePricingUpdateXSDs ()
   {
     return _getAllXSDs (CPR_CATALOGUEPRICINGUPDATE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CataloguePricingUpdateType> cataloguePricingUpdate ()
   {
     return new UBL21JAXBMarshaller <> (CataloguePricingUpdateType.class,
@@ -342,14 +343,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CATALOGUEREQUEST = _getCPR ("UBL-CatalogueRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCatalogueRequestXSDs ()
   {
     return _getAllXSDs (CPR_CATALOGUEREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CatalogueRequestType> catalogueRequest ()
   {
     return new UBL21JAXBMarshaller <> (CatalogueRequestType.class,
@@ -359,14 +360,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CERTIFICATEOFORIGIN = _getCPR ("UBL-CertificateOfOrigin-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCertificateOfOriginXSDs ()
   {
     return _getAllXSDs (CPR_CERTIFICATEOFORIGIN);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CertificateOfOriginType> certificateOfOrigin ()
   {
     return new UBL21JAXBMarshaller <> (CertificateOfOriginType.class,
@@ -376,14 +377,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CONTRACTAWARDNOTICE = _getCPR ("UBL-ContractAwardNotice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllContractAwardNoticeXSDs ()
   {
     return _getAllXSDs (CPR_CONTRACTAWARDNOTICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ContractAwardNoticeType> contractAwardNotice ()
   {
     return new UBL21JAXBMarshaller <> (ContractAwardNoticeType.class,
@@ -393,14 +394,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CONTRACTNOTICE = _getCPR ("UBL-ContractNotice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllContractNoticeXSDs ()
   {
     return _getAllXSDs (CPR_CONTRACTNOTICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ContractNoticeType> contractNotice ()
   {
     return new UBL21JAXBMarshaller <> (ContractNoticeType.class,
@@ -410,14 +411,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_CREDITNOTE = _getCPR ("UBL-CreditNote-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllCreditNoteXSDs ()
   {
     return _getAllXSDs (CPR_CREDITNOTE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <CreditNoteType> creditNote ()
   {
     return new UBL21JAXBMarshaller <> (CreditNoteType.class,
@@ -427,14 +428,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_DEBITNOTE = _getCPR ("UBL-DebitNote-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllDebitNoteXSDs ()
   {
     return _getAllXSDs (CPR_DEBITNOTE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <DebitNoteType> debitNote ()
   {
     return new UBL21JAXBMarshaller <> (DebitNoteType.class,
@@ -444,14 +445,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_DESPATCHADVICE = _getCPR ("UBL-DespatchAdvice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllDespatchAdviceXSDs ()
   {
     return _getAllXSDs (CPR_DESPATCHADVICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <DespatchAdviceType> despatchAdvice ()
   {
     return new UBL21JAXBMarshaller <> (DespatchAdviceType.class,
@@ -461,14 +462,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_DOCUMENTSTATUS = _getCPR ("UBL-DocumentStatus-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllDocumentStatusXSDs ()
   {
     return _getAllXSDs (CPR_DOCUMENTSTATUS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <DocumentStatusType> documentStatus ()
   {
     return new UBL21JAXBMarshaller <> (DocumentStatusType.class,
@@ -478,14 +479,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_DOCUMENTSTATUSREQUEST = _getCPR ("UBL-DocumentStatusRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllDocumentStatusRequestXSDs ()
   {
     return _getAllXSDs (CPR_DOCUMENTSTATUSREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <DocumentStatusRequestType> documentStatusRequest ()
   {
     return new UBL21JAXBMarshaller <> (DocumentStatusRequestType.class,
@@ -495,14 +496,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_EXCEPTIONCRITERIA = _getCPR ("UBL-ExceptionCriteria-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllExceptionCriteriaXSDs ()
   {
     return _getAllXSDs (CPR_EXCEPTIONCRITERIA);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ExceptionCriteriaType> exceptionCriteria ()
   {
     return new UBL21JAXBMarshaller <> (ExceptionCriteriaType.class,
@@ -512,14 +513,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_EXCEPTIONNOTIFICATION = _getCPR ("UBL-ExceptionNotification-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllExceptionNotificationXSDs ()
   {
     return _getAllXSDs (CPR_EXCEPTIONNOTIFICATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ExceptionNotificationType> exceptionNotification ()
   {
     return new UBL21JAXBMarshaller <> (ExceptionNotificationType.class,
@@ -529,14 +530,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_FORECAST = _getCPR ("UBL-Forecast-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllForecastXSDs ()
   {
     return _getAllXSDs (CPR_FORECAST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ForecastType> forecast ()
   {
     return new UBL21JAXBMarshaller <> (ForecastType.class,
@@ -546,14 +547,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_FORECASTREVISION = _getCPR ("UBL-ForecastRevision-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllForecastRevisionXSDs ()
   {
     return _getAllXSDs (CPR_FORECASTREVISION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ForecastRevisionType> forecastRevision ()
   {
     return new UBL21JAXBMarshaller <> (ForecastRevisionType.class,
@@ -563,14 +564,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_FORWARDINGINSTRUCTIONS = _getCPR ("UBL-ForwardingInstructions-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllForwardingInstructionsXSDs ()
   {
     return _getAllXSDs (CPR_FORWARDINGINSTRUCTIONS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ForwardingInstructionsType> forwardingInstructions ()
   {
     return new UBL21JAXBMarshaller <> (ForwardingInstructionsType.class,
@@ -580,14 +581,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_FREIGHTINVOICE = _getCPR ("UBL-FreightInvoice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllFreightInvoiceXSDs ()
   {
     return _getAllXSDs (CPR_FREIGHTINVOICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <FreightInvoiceType> freightInvoice ()
   {
     return new UBL21JAXBMarshaller <> (FreightInvoiceType.class,
@@ -597,14 +598,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_FULFILMENTCANCELLATION = _getCPR ("UBL-FulfilmentCancellation-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllFulfilmentCancellationXSDs ()
   {
     return _getAllXSDs (CPR_FULFILMENTCANCELLATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <FulfilmentCancellationType> fulfilmentCancellation ()
   {
     return new UBL21JAXBMarshaller <> (FulfilmentCancellationType.class,
@@ -614,14 +615,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_GOODSITEMITINERARY = _getCPR ("UBL-GoodsItemItinerary-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllGoodsItemItineraryXSDs ()
   {
     return _getAllXSDs (CPR_GOODSITEMITINERARY);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <GoodsItemItineraryType> goodsItemItinerary ()
   {
     return new UBL21JAXBMarshaller <> (GoodsItemItineraryType.class,
@@ -631,14 +632,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_GUARANTEECERTIFICATE = _getCPR ("UBL-GuaranteeCertificate-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllGuaranteeCertificateXSDs ()
   {
     return _getAllXSDs (CPR_GUARANTEECERTIFICATE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <GuaranteeCertificateType> guaranteeCertificate ()
   {
     return new UBL21JAXBMarshaller <> (GuaranteeCertificateType.class,
@@ -648,14 +649,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_INSTRUCTIONFORRETURNS = _getCPR ("UBL-InstructionForReturns-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllInstructionForReturnsXSDs ()
   {
     return _getAllXSDs (CPR_INSTRUCTIONFORRETURNS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <InstructionForReturnsType> instructionForReturns ()
   {
     return new UBL21JAXBMarshaller <> (InstructionForReturnsType.class,
@@ -665,14 +666,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_INVENTORYREPORT = _getCPR ("UBL-InventoryReport-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllInventoryReportXSDs ()
   {
     return _getAllXSDs (CPR_INVENTORYREPORT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <InventoryReportType> inventoryReport ()
   {
     return new UBL21JAXBMarshaller <> (InventoryReportType.class,
@@ -682,14 +683,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_INVOICE = _getCPR ("UBL-Invoice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllInvoiceXSDs ()
   {
     return _getAllXSDs (CPR_INVOICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <InvoiceType> invoice ()
   {
     return new UBL21JAXBMarshaller <> (InvoiceType.class,
@@ -699,14 +700,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ITEMINFORMATIONREQUEST = _getCPR ("UBL-ItemInformationRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllItemInformationRequestXSDs ()
   {
     return _getAllXSDs (CPR_ITEMINFORMATIONREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ItemInformationRequestType> itemInformationRequest ()
   {
     return new UBL21JAXBMarshaller <> (ItemInformationRequestType.class,
@@ -716,14 +717,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ORDER = _getCPR ("UBL-Order-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllOrderXSDs ()
   {
     return _getAllXSDs (CPR_ORDER);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <OrderType> order ()
   {
     return new UBL21JAXBMarshaller <> (OrderType.class,
@@ -733,14 +734,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ORDERCANCELLATION = _getCPR ("UBL-OrderCancellation-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllOrderCancellationXSDs ()
   {
     return _getAllXSDs (CPR_ORDERCANCELLATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <OrderCancellationType> orderCancellation ()
   {
     return new UBL21JAXBMarshaller <> (OrderCancellationType.class,
@@ -750,14 +751,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ORDERCHANGE = _getCPR ("UBL-OrderChange-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllOrderChangeXSDs ()
   {
     return _getAllXSDs (CPR_ORDERCHANGE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <OrderChangeType> orderChange ()
   {
     return new UBL21JAXBMarshaller <> (OrderChangeType.class,
@@ -767,14 +768,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ORDERRESPONSE = _getCPR ("UBL-OrderResponse-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllOrderResponseXSDs ()
   {
     return _getAllXSDs (CPR_ORDERRESPONSE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <OrderResponseType> orderResponse ()
   {
     return new UBL21JAXBMarshaller <> (OrderResponseType.class,
@@ -784,14 +785,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_ORDERRESPONSESIMPLE = _getCPR ("UBL-OrderResponseSimple-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllOrderResponseSimpleXSDs ()
   {
     return _getAllXSDs (CPR_ORDERRESPONSESIMPLE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <OrderResponseSimpleType> orderResponseSimple ()
   {
     return new UBL21JAXBMarshaller <> (OrderResponseSimpleType.class,
@@ -801,14 +802,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_PACKINGLIST = _getCPR ("UBL-PackingList-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllPackingListXSDs ()
   {
     return _getAllXSDs (CPR_PACKINGLIST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <PackingListType> packingList ()
   {
     return new UBL21JAXBMarshaller <> (PackingListType.class,
@@ -818,14 +819,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_PRIORINFORMATIONNOTICE = _getCPR ("UBL-PriorInformationNotice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllPriorInformationNoticeXSDs ()
   {
     return _getAllXSDs (CPR_PRIORINFORMATIONNOTICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <PriorInformationNoticeType> priorInformationNotice ()
   {
     return new UBL21JAXBMarshaller <> (PriorInformationNoticeType.class,
@@ -835,14 +836,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_PRODUCTACTIVITY = _getCPR ("UBL-ProductActivity-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllProductActivityXSDs ()
   {
     return _getAllXSDs (CPR_PRODUCTACTIVITY);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ProductActivityType> productActivity ()
   {
     return new UBL21JAXBMarshaller <> (ProductActivityType.class,
@@ -852,14 +853,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_QUOTATION = _getCPR ("UBL-Quotation-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllQuotationXSDs ()
   {
     return _getAllXSDs (CPR_QUOTATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <QuotationType> quotation ()
   {
     return new UBL21JAXBMarshaller <> (QuotationType.class,
@@ -869,14 +870,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_RECEIPTADVICE = _getCPR ("UBL-ReceiptAdvice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllReceiptAdviceXSDs ()
   {
     return _getAllXSDs (CPR_RECEIPTADVICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ReceiptAdviceType> receiptAdvice ()
   {
     return new UBL21JAXBMarshaller <> (ReceiptAdviceType.class,
@@ -886,14 +887,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_REMINDER = _getCPR ("UBL-Reminder-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllReminderXSDs ()
   {
     return _getAllXSDs (CPR_REMINDER);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <ReminderType> reminder ()
   {
     return new UBL21JAXBMarshaller <> (ReminderType.class,
@@ -903,14 +904,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_REMITTANCEADVICE = _getCPR ("UBL-RemittanceAdvice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllRemittanceAdviceXSDs ()
   {
     return _getAllXSDs (CPR_REMITTANCEADVICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <RemittanceAdviceType> remittanceAdvice ()
   {
     return new UBL21JAXBMarshaller <> (RemittanceAdviceType.class,
@@ -920,14 +921,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_REQUESTFORQUOTATION = _getCPR ("UBL-RequestForQuotation-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllRequestForQuotationXSDs ()
   {
     return _getAllXSDs (CPR_REQUESTFORQUOTATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <RequestForQuotationType> requestForQuotation ()
   {
     return new UBL21JAXBMarshaller <> (RequestForQuotationType.class,
@@ -937,14 +938,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_RETAILEVENT = _getCPR ("UBL-RetailEvent-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllRetailEventXSDs ()
   {
     return _getAllXSDs (CPR_RETAILEVENT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <RetailEventType> retailEvent ()
   {
     return new UBL21JAXBMarshaller <> (RetailEventType.class,
@@ -954,14 +955,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_SELFBILLEDCREDITNOTE = _getCPR ("UBL-SelfBilledCreditNote-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllSelfBilledCreditNoteXSDs ()
   {
     return _getAllXSDs (CPR_SELFBILLEDCREDITNOTE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <SelfBilledCreditNoteType> selfBilledCreditNote ()
   {
     return new UBL21JAXBMarshaller <> (SelfBilledCreditNoteType.class,
@@ -971,14 +972,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_SELFBILLEDINVOICE = _getCPR ("UBL-SelfBilledInvoice-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllSelfBilledInvoiceXSDs ()
   {
     return _getAllXSDs (CPR_SELFBILLEDINVOICE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <SelfBilledInvoiceType> selfBilledInvoice ()
   {
     return new UBL21JAXBMarshaller <> (SelfBilledInvoiceType.class,
@@ -988,14 +989,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_STATEMENT = _getCPR ("UBL-Statement-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllStatementXSDs ()
   {
     return _getAllXSDs (CPR_STATEMENT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <StatementType> statement ()
   {
     return new UBL21JAXBMarshaller <> (StatementType.class,
@@ -1005,14 +1006,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_STOCKAVAILABILITYREPORT = _getCPR ("UBL-StockAvailabilityReport-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllStockAvailabilityReportXSDs ()
   {
     return _getAllXSDs (CPR_STOCKAVAILABILITYREPORT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <StockAvailabilityReportType> stockAvailabilityReport ()
   {
     return new UBL21JAXBMarshaller <> (StockAvailabilityReportType.class,
@@ -1022,14 +1023,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TENDER = _getCPR ("UBL-Tender-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTenderXSDs ()
   {
     return _getAllXSDs (CPR_TENDER);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TenderType> tender ()
   {
     return new UBL21JAXBMarshaller <> (TenderType.class,
@@ -1039,14 +1040,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TENDERRECEIPT = _getCPR ("UBL-TenderReceipt-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTenderReceiptXSDs ()
   {
     return _getAllXSDs (CPR_TENDERRECEIPT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TenderReceiptType> tenderReceipt ()
   {
     return new UBL21JAXBMarshaller <> (TenderReceiptType.class,
@@ -1056,14 +1057,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TENDERERQUALIFICATION = _getCPR ("UBL-TendererQualification-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTendererQualificationXSDs ()
   {
     return _getAllXSDs (CPR_TENDERERQUALIFICATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TendererQualificationType> tendererQualification ()
   {
     return new UBL21JAXBMarshaller <> (TendererQualificationType.class,
@@ -1073,14 +1074,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TENDERERQUALIFICATIONRESPONSE = _getCPR ("UBL-TendererQualificationResponse-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTendererQualificationResponseXSDs ()
   {
     return _getAllXSDs (CPR_TENDERERQUALIFICATIONRESPONSE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TendererQualificationResponseType> tendererQualificationResponse ()
   {
     return new UBL21JAXBMarshaller <> (TendererQualificationResponseType.class,
@@ -1090,14 +1091,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRADEITEMLOCATIONPROFILE = _getCPR ("UBL-TradeItemLocationProfile-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTradeItemLocationProfileXSDs ()
   {
     return _getAllXSDs (CPR_TRADEITEMLOCATIONPROFILE);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TradeItemLocationProfileType> tradeItemLocationProfile ()
   {
     return new UBL21JAXBMarshaller <> (TradeItemLocationProfileType.class,
@@ -1107,14 +1108,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTEXECUTIONPLAN = _getCPR ("UBL-TransportExecutionPlan-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportExecutionPlanXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTEXECUTIONPLAN);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportExecutionPlanType> transportExecutionPlan ()
   {
     return new UBL21JAXBMarshaller <> (TransportExecutionPlanType.class,
@@ -1124,14 +1125,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTEXECUTIONPLANREQUEST = _getCPR ("UBL-TransportExecutionPlanRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportExecutionPlanRequestXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTEXECUTIONPLANREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportExecutionPlanRequestType> transportExecutionPlanRequest ()
   {
     return new UBL21JAXBMarshaller <> (TransportExecutionPlanRequestType.class,
@@ -1141,14 +1142,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTPROGRESSSTATUS = _getCPR ("UBL-TransportProgressStatus-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportProgressStatusXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTPROGRESSSTATUS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportProgressStatusType> transportProgressStatus ()
   {
     return new UBL21JAXBMarshaller <> (TransportProgressStatusType.class,
@@ -1158,14 +1159,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTPROGRESSSTATUSREQUEST = _getCPR ("UBL-TransportProgressStatusRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportProgressStatusRequestXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTPROGRESSSTATUSREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportProgressStatusRequestType> transportProgressStatusRequest ()
   {
     return new UBL21JAXBMarshaller <> (TransportProgressStatusRequestType.class,
@@ -1175,14 +1176,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTSERVICEDESCRIPTION = _getCPR ("UBL-TransportServiceDescription-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportServiceDescriptionXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTSERVICEDESCRIPTION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportServiceDescriptionType> transportServiceDescription ()
   {
     return new UBL21JAXBMarshaller <> (TransportServiceDescriptionType.class,
@@ -1192,14 +1193,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTSERVICEDESCRIPTIONREQUEST = _getCPR ("UBL-TransportServiceDescriptionRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportServiceDescriptionRequestXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTSERVICEDESCRIPTIONREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportServiceDescriptionRequestType> transportServiceDescriptionRequest ()
   {
     return new UBL21JAXBMarshaller <> (TransportServiceDescriptionRequestType.class,
@@ -1209,14 +1210,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTATIONSTATUS = _getCPR ("UBL-TransportationStatus-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportationStatusXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTATIONSTATUS);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportationStatusType> transportationStatus ()
   {
     return new UBL21JAXBMarshaller <> (TransportationStatusType.class,
@@ -1226,14 +1227,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_TRANSPORTATIONSTATUSREQUEST = _getCPR ("UBL-TransportationStatusRequest-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllTransportationStatusRequestXSDs ()
   {
     return _getAllXSDs (CPR_TRANSPORTATIONSTATUSREQUEST);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <TransportationStatusRequestType> transportationStatusRequest ()
   {
     return new UBL21JAXBMarshaller <> (TransportationStatusRequestType.class,
@@ -1243,14 +1244,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_UNAWARDEDNOTIFICATION = _getCPR ("UBL-UnawardedNotification-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllUnawardedNotificationXSDs ()
   {
     return _getAllXSDs (CPR_UNAWARDEDNOTIFICATION);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <UnawardedNotificationType> unawardedNotification ()
   {
     return new UBL21JAXBMarshaller <> (UnawardedNotificationType.class,
@@ -1260,14 +1261,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_UTILITYSTATEMENT = _getCPR ("UBL-UtilityStatement-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllUtilityStatementXSDs ()
   {
     return _getAllXSDs (CPR_UTILITYSTATEMENT);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <UtilityStatementType> utilityStatement ()
   {
     return new UBL21JAXBMarshaller <> (UtilityStatementType.class,
@@ -1277,14 +1278,14 @@ public final class UBL21Marshaller
 
   private static final ClassPathResource CPR_WAYBILL = _getCPR ("UBL-Waybill-2.1.xsd");
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllWaybillXSDs ()
   {
     return _getAllXSDs (CPR_WAYBILL);
   }
 
-  @Nonnull
+  @NonNull
   public static UBL21JAXBMarshaller <WaybillType> waybill ()
   {
     return new UBL21JAXBMarshaller <> (WaybillType.class,

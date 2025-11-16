@@ -16,10 +16,10 @@
  */
 package com.helger.ublpe;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.PresentForCodeCoverage;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Constants for UBLPE handling.
@@ -41,7 +41,7 @@ public final class CUBLPE
   private CUBLPE ()
   {}
 
-  @Nonnull
+  @NonNull
   public static ClassLoader getCL ()
   {
     return CUBLPE.class.getClassLoader ();

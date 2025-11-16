@@ -19,6 +19,9 @@ package com.helger.ubl20.supplementary.tools;
 import java.io.File;
 import java.io.IOException;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
@@ -56,8 +59,6 @@ import com.helger.jcodemodel.exceptions.JCodeModelException;
 import com.helger.jcodemodel.writer.JCMWriter;
 import com.helger.ubl.api.codegen.AbstractCreateUBLCodeListCodeGen;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import un.unece.uncefact.codelist.specification._54217._2001.CurrencyCodeContentType;
 import un.unece.uncefact.codelist.specification._5639._1988.LanguageCodeContentType;
 import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
@@ -76,7 +77,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
   private static final String COLID_CODE = "code";
   private static final JCodeModel CM = new JCodeModel ();
 
-  private static void _classConstants (@Nonnull final CodeListDocument aCodeList10, @Nonnull final JDefinedClass jClass)
+  private static void _classConstants (@NonNull final CodeListDocument aCodeList10, @NonNull final JDefinedClass jClass)
   {
     final Identification aIdentification = aCodeList10.getIdentification ();
 
@@ -107,7 +108,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
-  private static void _createGenericode04 (@Nonnull final File aFile, @Nonnull final CodeListDocument aCodeList)
+  private static void _createGenericode04 (@NonNull final File aFile, @NonNull final CodeListDocument aCodeList)
                                                                                                                  throws JCodeModelException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
@@ -224,7 +225,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     // Constructor
     final JMethod jCtor = jEnum.constructor (JMod.NONE);
     JVar jID = jCtor.param (JMod.FINAL, String.class, "sID");
-    jID.annotate (Nonnull.class);
+    jID.annotate (NonNull.class);
     if (!bHasEmptyID)
       jID.annotate (Nonempty.class);
     JBlock aCtorBody = jCtor.body ().assign (fID, jID);
@@ -232,7 +233,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     if (bHasNameColumn)
     {
       final JVar jDisplayName = jCtor.param (JMod.FINAL, String.class, "sDisplayName");
-      jDisplayName.annotate (Nonnull.class);
+      jDisplayName.annotate (NonNull.class);
       aCtorBody.assign (fDisplayName, jDisplayName);
     }
 
@@ -246,7 +247,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
 
     // public String getID ()
     JMethod m = jEnum.method (JMod.PUBLIC, String.class, "getID");
-    m.annotate (Nonnull.class);
+    m.annotate (NonNull.class);
     if (!bHasEmptyID)
       m.annotate (Nonempty.class);
     m.body ()._return (fID);
@@ -255,7 +256,7 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     {
       // public String getDisplayName ()
       m = jEnum.method (JMod.PUBLIC, String.class, "getDisplayName");
-      m.annotate (Nonnull.class);
+      m.annotate (NonNull.class);
       m.body ()._return (fDisplayName);
     }
 
@@ -315,10 +316,9 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
     {
       System.out.println (aFile.getName ());
       final CodeListDocument aCodeList04 = new Genericode04CodeListMarshaller ().read (aFile);
-      if (aCodeList04 != null)
-        _createGenericode04 (aFile, aCodeList04);
-      else
+      if (aCodeList04 == null)
         throw new IllegalStateException ("Failed to read codelist file " + aFile);
+      _createGenericode04 (aFile, aCodeList04);
     }
     new JCMWriter (CM).build (new File ("src/main/java"));
   }

@@ -16,6 +16,8 @@
  */
 package com.helger.ubl21;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.misc.Since;
 import com.helger.annotation.style.ReturnsMutableCopy;
@@ -23,8 +25,6 @@ import com.helger.base.lang.clazz.ClassHelper;
 import com.helger.base.string.StringHelper;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Enumeration with all available UBL 2.1 document types.
@@ -189,7 +189,7 @@ public enum EUBL21DocumentType
   private final String m_sRootElementLocalName;
   private final String m_sRootElementNSURI;
 
-  EUBL21DocumentType (@Nonnull final Class <?> aClass, @Nonnull final ICommonsList <ClassPathResource> aXSDs)
+  EUBL21DocumentType (@NonNull final Class <?> aClass, @NonNull final ICommonsList <ClassPathResource> aXSDs)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDs;
@@ -197,13 +197,13 @@ public enum EUBL21DocumentType
     m_sRootElementNSURI = aClass.getPackage ().getAnnotation (jakarta.xml.bind.annotation.XmlSchema.class).namespace ();
   }
 
-  @Nonnull
+  @NonNull
   public Class <?> getImplementationClass ()
   {
     return m_aImplClass;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()
@@ -215,7 +215,7 @@ public enum EUBL21DocumentType
    * @return The local element name of the root element of this document type.
    *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
    */
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getRootElementLocalName ()
   {
@@ -228,7 +228,7 @@ public enum EUBL21DocumentType
    *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
    *         for "Order Cancellation".
    */
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getRootElementNamespaceURI ()
   {

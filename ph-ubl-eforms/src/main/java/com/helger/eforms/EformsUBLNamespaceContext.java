@@ -17,9 +17,9 @@
  */
 package com.helger.eforms;
 
-import com.helger.ubl23.UBL23NamespaceContext;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.ubl23.UBL23NamespaceContext;
 
 /**
  * EForms XML Namespace context
@@ -41,7 +41,7 @@ public class EformsUBLNamespaceContext extends UBL23NamespaceContext
     addMapping ("efac", CEformsUBL.XML_SCHEMA_EFAC_NAMESPACE_URL);
   }
 
-  @Nonnull
+  @NonNull
   public static EformsUBLNamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

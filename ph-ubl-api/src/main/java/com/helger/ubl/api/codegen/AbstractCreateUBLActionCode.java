@@ -18,9 +18,9 @@ package com.helger.ubl.api.codegen;
 
 import java.util.Locale;
 
-import com.helger.base.string.StringHelper;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.base.string.StringHelper;
 
 /**
  * Base class for internal code generation. You should not care too much about
@@ -30,10 +30,10 @@ import jakarta.annotation.Nonnull;
  */
 public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
 {
-  public static void appendMarshaller (@Nonnull final String sMarshallerClassName,
-                                       @Nonnull final String sXSDPath,
-                                       @Nonnull final Class <?> aImplClass,
-                                       @Nonnull final StringBuilder aSB)
+  public static void appendMarshaller (@NonNull final String sMarshallerClassName,
+                                       @NonNull final String sXSDPath,
+                                       @NonNull final Class <?> aImplClass,
+                                       @NonNull final StringBuilder aSB)
   {
     final String sClassName = aImplClass.getSimpleName ();
     final String sNoTypeName = StringHelper.trimEnd (sClassName, "Type");
@@ -47,7 +47,7 @@ public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
        .append ("\");\n\n");
 
     final String sGetAllXSDsName = "getAll" + sNoTypeName + "XSDs";
-    aSB.append ("@Nonnull\n");
+    aSB.append ("@NonNull\n");
     aSB.append ("@ReturnsMutableCopy\n");
     aSB.append ("public static ICommonsList <ClassPathResource> ").append (sGetAllXSDsName).append (" ()\n");
     aSB.append ("{\n");
@@ -55,7 +55,7 @@ public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
     aSB.append ("}\n\n");
 
     final String sMarshallerMethodName = lcFirst (sNoTypeName);
-    aSB.append ("@Nonnull\n");
+    aSB.append ("@NonNull\n");
     aSB.append ("public static ")
        .append (sMarshallerClassName)
        .append (" <")
@@ -78,10 +78,10 @@ public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
     aSB.append ("}\n\n");
   }
 
-  protected static void appendVESIDCode (@Nonnull final Class <?> aImplClass,
-                                         @Nonnull final StringBuilder aSB1,
-                                         @Nonnull final StringBuilder aSB2,
-                                         @Nonnull final String sVersion)
+  protected static void appendVESIDCode (@NonNull final Class <?> aImplClass,
+                                         @NonNull final StringBuilder aSB1,
+                                         @NonNull final StringBuilder aSB2,
+                                         @NonNull final String sVersion)
   {
     final String s = StringHelper.trimEnd (aImplClass.getSimpleName (), "Type");
     final String sVES = "VID_UBL_" + sVersion + "_" + s.toUpperCase (Locale.ROOT);

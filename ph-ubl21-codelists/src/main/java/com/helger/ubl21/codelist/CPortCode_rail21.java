@@ -16,13 +16,13 @@
  */
 package com.helger.ubl21.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsHashSet;
 import com.helger.collection.commons.ICommonsSet;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -68,7 +68,7 @@ public final class CPortCode_rail21 {
         return CODE_SET.contains(sCode);
     }
 
-    @Nonnull
+    @NonNull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllCodes() {
         return CODE_SET.getClone();
@@ -78,7 +78,7 @@ public final class CPortCode_rail21 {
         return NAME_SET.contains(sName);
     }
 
-    @Nonnull
+    @NonNull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllNames() {
         return NAME_SET.getClone();
@@ -86,7 +86,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart1 {
 
-        CodePart1(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart1(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ALNPP");
             aCodeSet.add("ALFIE");
             aCodeSet.add("AMABO");
@@ -1592,7 +1592,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart2 {
 
-        CodePart2(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart2(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("CHOLO");
             aCodeSet.add("CHPHZ");
             aCodeSet.add("CHPEN");
@@ -3098,7 +3098,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart3 {
 
-        CodePart3(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart3(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("DEHSH");
             aCodeSet.add("DEHSN");
             aCodeSet.add("DEHEC");
@@ -4604,7 +4604,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart4 {
 
-        CodePart4(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart4(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ESBOJ");
             aCodeSet.add("ESBUR");
             aCodeSet.add("ESCYC");
@@ -6110,7 +6110,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart5 {
 
-        CodePart5(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart5(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("GBBKB");
             aCodeSet.add("GBBHI");
             aCodeSet.add("GBBKG");
@@ -7616,7 +7616,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart6 {
 
-        CodePart6(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart6(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("KRGRE");
             aCodeSet.add("KRGCN");
             aCodeSet.add("KRKWJ");
@@ -9122,7 +9122,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart7 {
 
-        CodePart7(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart7(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("RUNYY");
             aCodeSet.add("RUNDK");
             aCodeSet.add("RUNMK");
@@ -10628,7 +10628,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart8 {
 
-        CodePart8(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart8(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USGU2");
             aCodeSet.add("USGSP");
             aCodeSet.add("USGKO");
@@ -12134,7 +12134,7 @@ public final class CPortCode_rail21 {
 
     private static final class CodePart9 {
 
-        CodePart9(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart9(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USS2G");
             aCodeSet.add("USSGR");
             aCodeSet.add("USUGL");
@@ -12597,7 +12597,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart1 {
 
-        NamePart1(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart1(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Elbasan");
             aNameSet.add("Fier");
             aNameSet.add("Abovyan");
@@ -14103,7 +14103,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart2 {
 
-        NamePart2(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart2(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Ollon");
             aNameSet.add("Penthalaz");
             aNameSet.add("Penthaz");
@@ -15609,7 +15609,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart3 {
 
-        NamePart3(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart3(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Hausach");
             aNameSet.add("H\u00e4uslingen");
             aNameSet.add("Hechingen");
@@ -17115,7 +17115,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart4 {
 
-        NamePart4(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart4(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Borja");
             aNameSet.add("Burgos");
             aNameSet.add("Calera y Chozas");
@@ -18621,7 +18621,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart5 {
 
-        NamePart5(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart5(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Bannockburn");
             aNameSet.add("Bardon Hill");
             aNameSet.add("Barking/London");
@@ -20127,7 +20127,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart6 {
 
-        NamePart6(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart6(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Gurye-gun");
             aNameSet.add("Gwacheon");
             aNameSet.add("Gwangju");
@@ -21633,7 +21633,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart7 {
 
-        NamePart7(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart7(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Novaya Yelovka");
             aNameSet.add("Novodvinsk");
             aNameSet.add("Novomoskovsk");
@@ -23139,7 +23139,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart8 {
 
-        NamePart8(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart8(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Greenup");
             aNameSet.add("Greenville-Greer Apt");
             aNameSet.add("Greenwood");
@@ -24645,7 +24645,7 @@ public final class CPortCode_rail21 {
 
     private static final class NamePart9 {
 
-        NamePart9(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart9(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Sugar Grove");
             aNameSet.add("Sugar Land");
             aNameSet.add("Sugar Loaf");

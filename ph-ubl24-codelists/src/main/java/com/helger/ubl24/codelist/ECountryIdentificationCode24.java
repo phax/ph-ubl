@@ -16,14 +16,14 @@
  */
 package com.helger.ubl24.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -543,8 +543,8 @@ public enum ECountryIdentificationCode24
     private final String m_sFrench;
     private final String m_sRef;
 
-    ECountryIdentificationCode24(@Nonnull @Nonempty final String sID,
-        @Nonnull final String sDisplayName,
+    ECountryIdentificationCode24(@NonNull @Nonempty final String sID,
+        @NonNull final String sDisplayName,
         @Nullable final String sNumericcode,
         @Nullable final String sFrench,
         @Nullable final String sRef) {
@@ -555,13 +555,13 @@ public enum ECountryIdentificationCode24
         m_sRef = sRef;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;
     }
 
-    @Nonnull
+    @NonNull
     public String getDisplayName() {
         return m_sDisplayName;
     }

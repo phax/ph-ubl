@@ -284,6 +284,10 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+v10.1.0 - 2025-11-16
+* Updated to ph-commons 12.1.0
+* Using JSpecify annotations
+
 v10.0.0 - 2025-08-25
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0

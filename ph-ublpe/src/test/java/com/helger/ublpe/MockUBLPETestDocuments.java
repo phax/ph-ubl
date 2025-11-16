@@ -16,13 +16,13 @@
  */
 package com.helger.ublpe;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.ubl.testfiles.UBLTestFiles;
-
-import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockUBLPETestDocuments
@@ -32,9 +32,9 @@ public final class MockUBLPETestDocuments
   private MockUBLPETestDocuments ()
   {}
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getUBLPETestDocuments (@Nonnull final EUBLPEDocumentType eType)
+  public static ICommonsList <String> getUBLPETestDocuments (@NonNull final EUBLPEDocumentType eType)
   {
     ICommonsList <String> aFiles;
     switch (eType)

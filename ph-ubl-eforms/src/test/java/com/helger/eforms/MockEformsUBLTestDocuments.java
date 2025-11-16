@@ -17,12 +17,12 @@
  */
 package com.helger.eforms;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
-
-import jakarta.annotation.Nonnull;
 
 @Immutable
 public final class MockEformsUBLTestDocuments
@@ -32,9 +32,9 @@ public final class MockEformsUBLTestDocuments
   private MockEformsUBLTestDocuments ()
   {}
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getTestDocuments (@Nonnull final EFormsUBLDocumentType eType)
+  public static ICommonsList <String> getTestDocuments (@NonNull final EFormsUBLDocumentType eType)
   {
     switch (eType)
     {

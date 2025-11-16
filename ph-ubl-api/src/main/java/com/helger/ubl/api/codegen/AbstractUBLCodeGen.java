@@ -23,6 +23,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.base.array.ArrayHelper;
 import com.helger.base.string.StringHelper;
 import com.helger.base.string.StringImplode;
@@ -35,9 +38,6 @@ import com.helger.io.file.IFileFilter;
 import com.helger.xml.CXML;
 import com.helger.xml.microdom.IMicroDocument;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
-
 /**
  * Base class for internal code generation.
  *
@@ -45,14 +45,14 @@ import jakarta.annotation.Nullable;
  */
 public abstract class AbstractUBLCodeGen
 {
-  @Nonnull
-  protected static String lcFirst (@Nonnull final String s)
+  @NonNull
+  protected static String lcFirst (@NonNull final String s)
   {
     return s.substring (0, 1).toLowerCase (Locale.ROOT) + s.substring (1);
   }
 
-  @Nonnull
-  protected static String toUpperCase (@Nonnull final String sCC)
+  @NonNull
+  protected static String toUpperCase (@NonNull final String sCC)
   {
     final StringBuilder ret = new StringBuilder (sCC.length () * 2);
     for (int i = 0; i < sCC.length (); ++i)
@@ -66,8 +66,8 @@ public abstract class AbstractUBLCodeGen
     return ret.toString ();
   }
 
-  @Nonnull
-  protected static String getDisplayNameFromType (@Nonnull final String s)
+  @NonNull
+  protected static String getDisplayNameFromType (@NonNull final String s)
   {
     final StringBuilder ret = new StringBuilder ();
     for (final char c : s.toCharArray ())
@@ -79,7 +79,7 @@ public abstract class AbstractUBLCodeGen
     return ret.toString ();
   }
 
-  @Nonnull
+  @NonNull
   protected static Iterable <File> getXSDFileList (final String sPath)
   {
     return CollectionSort.getSorted (new FileSystemIterator (sPath).withFilter (IFileFilter.filenameEndsWith (".xsd"))
@@ -90,13 +90,13 @@ public abstract class AbstractUBLCodeGen
   }
 
   @Nullable
-  protected static String getTargetNamespace (@Nonnull final IMicroDocument aDoc)
+  protected static String getTargetNamespace (@NonNull final IMicroDocument aDoc)
   {
     return aDoc.getDocumentElement ().getAttributeValue (CXML.XML_ATTR_XSD_TARGETNAMESPACE);
   }
 
-  @Nonnull
-  protected static String getAsPackageName (@Nonnull final String sNamespaceURI)
+  @NonNull
+  protected static String getAsPackageName (@NonNull final String sNamespaceURI)
   {
     // Lowercase everything
     String s = sNamespaceURI.toLowerCase (Locale.ROOT);

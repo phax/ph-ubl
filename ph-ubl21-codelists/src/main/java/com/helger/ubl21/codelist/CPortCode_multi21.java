@@ -16,13 +16,13 @@
  */
 package com.helger.ubl21.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsHashSet;
 import com.helger.collection.commons.ICommonsSet;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -70,7 +70,7 @@ public final class CPortCode_multi21 {
         return CODE_SET.contains(sCode);
     }
 
-    @Nonnull
+    @NonNull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllCodes() {
         return CODE_SET.getClone();
@@ -80,7 +80,7 @@ public final class CPortCode_multi21 {
         return NAME_SET.contains(sName);
     }
 
-    @Nonnull
+    @NonNull
     @ReturnsMutableCopy
     public static ICommonsSet<String> getAllNames() {
         return NAME_SET.getClone();
@@ -88,7 +88,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart1 {
 
-        CodePart1(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart1(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ADALV");
             aCodeSet.add("AERFA");
             aCodeSet.add("AERAK");
@@ -1594,7 +1594,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart10 {
 
-        CodePart10(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart10(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USZJF");
             aCodeSet.add("USYL9");
             aCodeSet.add("USYMO");
@@ -2297,7 +2297,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart2 {
 
-        CodePart2(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart2(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("CZCKR");
             aCodeSet.add("CZCPC");
             aCodeSet.add("CZCDC");
@@ -3803,7 +3803,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart3 {
 
-        CodePart3(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart3(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("DKBOY");
             aCodeSet.add("DKBRS");
             aCodeSet.add("DKDYS");
@@ -5309,7 +5309,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart4 {
 
-        CodePart4(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart4(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("FROBR");
             aCodeSet.add("FRUGE");
             aCodeSet.add("FRZT7");
@@ -6815,7 +6815,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart5 {
 
-        CodePart5(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart5(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("FRRJA");
             aCodeSet.add("FRQEL");
             aCodeSet.add("FRQPG");
@@ -8321,7 +8321,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart6 {
 
-        CodePart6(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart6(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("HRKJV");
             aCodeSet.add("HRPGK");
             aCodeSet.add("HRLEP");
@@ -9827,7 +9827,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart7 {
 
-        CodePart7(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart7(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("ITZKX");
             aCodeSet.add("ITVCI");
             aCodeSet.add("ITZWW");
@@ -11333,7 +11333,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart8 {
 
-        CodePart8(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart8(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("TRARM");
             aCodeSet.add("TRATA");
             aCodeSet.add("TRUZA");
@@ -12839,7 +12839,7 @@ public final class CPortCode_multi21 {
 
     private static final class CodePart9 {
 
-        CodePart9(@Nonnull final ICommonsSet<String> aCodeSet) {
+        CodePart9(@NonNull final ICommonsSet<String> aCodeSet) {
             aCodeSet.add("USIEG");
             aCodeSet.add("USYIG");
             aCodeSet.add("USZFW");
@@ -14345,7 +14345,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart1 {
 
-        NamePart1(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart1(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Andorra la Vella");
             aNameSet.add("Mirfa");
             aNameSet.add("Ras Al Khor");
@@ -15851,7 +15851,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart10 {
 
-        NamePart10(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart10(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Sykesville");
             aNameSet.add("Sylvania");
             aNameSet.add("Symsonia");
@@ -16554,7 +16554,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart2 {
 
-        NamePart2(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart2(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Cesky Krumlov");
             aNameSet.add("Chlumcany u Prestic");
             aNameSet.add("Chlumec nad Cidlinou");
@@ -18060,7 +18060,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart3 {
 
-        NamePart3(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart3(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Broby Overdrev");
             aNameSet.add("Burso");
             aNameSet.add("Dyssegard");
@@ -19566,7 +19566,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart4 {
 
-        NamePart4(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart4(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Collobrieres");
             aNameSet.add("Collonges-la-Rouge");
             aNameSet.add("Collorgues");
@@ -21072,7 +21072,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart5 {
 
-        NamePart5(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart5(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Puyvert");
             aNameSet.add("Quelmes");
             aNameSet.add("Quemper-Gu\u00e9zennec");
@@ -22578,7 +22578,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart6 {
 
-        NamePart6(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart6(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Kijevo");
             aNameSet.add("Krasica");
             aNameSet.add("Lepajci");
@@ -24084,7 +24084,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart7 {
 
-        NamePart7(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart7(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Vinchiaturo");
             aNameSet.add("Vinci");
             aNameSet.add("Visna");
@@ -25590,7 +25590,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart8 {
 
-        NamePart8(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart8(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Armutlu");
             aNameSet.add("Atakoy");
             aNameSet.add("Aydinlik Koy");
@@ -27096,7 +27096,7 @@ public final class CPortCode_multi21 {
 
     private static final class NamePart9 {
 
-        NamePart9(@Nonnull final ICommonsSet<String> aNameSet) {
+        NamePart9(@NonNull final ICommonsSet<String> aNameSet) {
             aNameSet.add("Ingleside");
             aNameSet.add("Ingleside");
             aNameSet.add("Ingram");

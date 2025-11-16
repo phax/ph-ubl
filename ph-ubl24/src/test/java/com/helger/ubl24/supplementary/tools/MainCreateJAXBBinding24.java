@@ -20,6 +20,8 @@ import java.io.File;
 
 import javax.xml.XMLConstants;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.collection.commons.CommonsHashSet;
 import com.helger.collection.commons.ICommonsSet;
 import com.helger.datetime.xml.XMLOffsetDate;
@@ -40,8 +42,6 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xml.serialize.write.EXMLIncorrectCharacterHandling;
 import com.helger.xml.serialize.write.XMLWriterSettings;
 
-import jakarta.annotation.Nonnull;
-
 /**
  * Utility class that creates:
  * <ul>
@@ -59,7 +59,7 @@ public final class MainCreateJAXBBinding24 extends AbstractUBLCodeGen
   private static final String BASE_XSD_PATH = "/resources/external/schemas/ubl" + VERSION + "/";
   private static final String DEFAULT_BINDING_FILE = "src/main/jaxb/bindings" + VERSION + ".xjb";
 
-  @Nonnull
+  @NonNull
   private static IMicroDocument _createBaseDoc ()
   {
     final IMicroDocument eDoc = new MicroDocument ();

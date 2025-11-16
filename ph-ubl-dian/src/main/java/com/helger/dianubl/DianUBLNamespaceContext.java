@@ -16,9 +16,9 @@
  */
 package com.helger.dianubl;
 
-import com.helger.ubl21.UBL21NamespaceContext;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.ubl21.UBL21NamespaceContext;
 
 /**
  * The namespace context to be used as the namespace prefix mapper.
@@ -42,7 +42,7 @@ public class DianUBLNamespaceContext extends UBL21NamespaceContext
     addMapping ("sts", CDianUBL.XML_SCHEMA_STS_NAMESPACE_URL);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLNamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;

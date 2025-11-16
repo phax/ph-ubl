@@ -16,11 +16,11 @@
  */
 package com.helger.ubl20;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.PresentForCodeCoverage;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Constants for UBL 2.0 handling.
@@ -84,7 +84,7 @@ public final class CUBL20
   private CUBL20 ()
   {}
 
-  @Nonnull
+  @NonNull
   public static ClassLoader getCL ()
   {
     return CUBL20.class.getClassLoader ();

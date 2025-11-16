@@ -16,6 +16,8 @@
  */
 package com.helger.ublpe;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -24,7 +26,6 @@ import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl20.CUBL20;
 import com.helger.ubl20.EUBL20DocumentType;
 
-import jakarta.annotation.Nonnull;
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
@@ -70,7 +71,7 @@ public enum EUBLPEDocumentType
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
                                                                     _getCL ())));
 
-  @Nonnull
+  @NonNull
   private static ClassLoader _getCL ()
   {
     return EUBLPEDocumentType.class.getClassLoader ();
@@ -79,25 +80,25 @@ public enum EUBLPEDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EUBLPEDocumentType (@Nonnull final EUBL20DocumentType eOther)
+  EUBLPEDocumentType (@NonNull final EUBL20DocumentType eOther)
   {
     m_aImplClass = eOther.getImplementationClass ();
     m_aXSDs = eOther.getAllXSDResources ();
   }
 
-  EUBLPEDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EUBLPEDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;
   }
 
-  @Nonnull
+  @NonNull
   public Class <?> getImplementationClass ()
   {
     return m_aImplClass;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   @ReturnsMutableCopy
   public ICommonsList <ClassPathResource> getAllXSDResources ()

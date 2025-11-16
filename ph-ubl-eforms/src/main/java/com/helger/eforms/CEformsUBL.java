@@ -17,11 +17,11 @@
  */
 package com.helger.eforms;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.PresentForCodeCoverage;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Constants for Eforms UBL handling.
@@ -67,7 +67,7 @@ public final class CEformsUBL
   private CEformsUBL ()
   {}
 
-  @Nonnull
+  @NonNull
   public static ClassLoader getCL ()
   {
     return CEformsUBL.class.getClassLoader ();

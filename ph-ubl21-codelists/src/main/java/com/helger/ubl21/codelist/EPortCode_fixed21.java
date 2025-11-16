@@ -16,14 +16,14 @@
  */
 package com.helger.ubl21.codelist;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 
 /**
@@ -238,8 +238,8 @@ public enum EPortCode_fixed21
     private final String m_sLatitude;
     private final String m_sLongitude;
 
-    EPortCode_fixed21(@Nonnull @Nonempty final String sID,
-        @Nonnull final String sDisplayName,
+    EPortCode_fixed21(@NonNull @Nonempty final String sID,
+        @NonNull final String sDisplayName,
         @Nullable final String sNamenodiacritics,
         @Nullable final String sCountry,
         @Nullable final String sSubdivision,
@@ -284,13 +284,13 @@ public enum EPortCode_fixed21
         m_sLongitude = sLongitude;
     }
 
-    @Nonnull
+    @NonNull
     @Nonempty
     public String getID() {
         return m_sID;
     }
 
-    @Nonnull
+    @NonNull
     public String getDisplayName() {
         return m_sDisplayName;
     }

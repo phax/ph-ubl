@@ -19,6 +19,9 @@ package com.helger.dianubl;
 import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
@@ -29,8 +32,6 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 
 import dian.gov.co.facturaelectronica.structures_2_1.DianExtensionsType;
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
 import oasis.names.specification.ubl.schema.xsd.attacheddocument_21.AttachedDocumentType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
@@ -55,7 +56,7 @@ public final class DianUBLMarshaller
 
     private final QName m_aRootElementQName;
 
-    @Nonnull
+    @NonNull
     public static ICommonsList <ClassPathResource> getAllXSDs (@Nullable final ICommonsList <ClassPathResource> aList)
     {
       if (aList == null)
@@ -72,9 +73,9 @@ public final class DianUBLMarshaller
       return ret;
     }
 
-    public DianUBLJAXBMarshaller (@Nonnull final Class <JAXBTYPE> aType,
+    public DianUBLJAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
                                   @Nullable final ICommonsList <ClassPathResource> aSourceXSDs,
-                                  @Nonnull final QName aRootElementQName)
+                                  @NonNull final QName aRootElementQName)
     {
       super (aType, getAllXSDs (aSourceXSDs), createSimpleJAXBElement (aRootElementQName, aType));
 
@@ -88,13 +89,13 @@ public final class DianUBLMarshaller
       setNamespaceContext (aNSContext);
     }
 
-    @Nonnull
+    @NonNull
     public final QName getRootElementQName ()
     {
       return m_aRootElementQName;
     }
 
-    @Nonnull
+    @NonNull
     public final String getRootElementNamespaceURI ()
     {
       return m_aRootElementQName.getNamespaceURI ();
@@ -110,7 +111,7 @@ public final class DianUBLMarshaller
   private DianUBLMarshaller ()
   {}
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
     return new DianUBLJAXBMarshaller <> (ApplicationResponseType.class,
@@ -118,7 +119,7 @@ public final class DianUBLMarshaller
                                          oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ObjectFactory._ApplicationResponse_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <AttachedDocumentType> attachedDocument ()
   {
     return new DianUBLJAXBMarshaller <> (AttachedDocumentType.class,
@@ -126,7 +127,7 @@ public final class DianUBLMarshaller
                                          oasis.names.specification.ubl.schema.xsd.attacheddocument_21.ObjectFactory._AttachedDocument_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <CreditNoteType> creditNote ()
   {
     return new DianUBLJAXBMarshaller <> (CreditNoteType.class,
@@ -134,7 +135,7 @@ public final class DianUBLMarshaller
                                          oasis.names.specification.ubl.schema.xsd.creditnote_21.ObjectFactory._CreditNote_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <DebitNoteType> debitNote ()
   {
     return new DianUBLJAXBMarshaller <> (DebitNoteType.class,
@@ -142,7 +143,7 @@ public final class DianUBLMarshaller
                                          oasis.names.specification.ubl.schema.xsd.debitnote_21.ObjectFactory._DebitNote_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <DianExtensionsType> dianExtensions ()
   {
     return new DianUBLJAXBMarshaller <> (DianExtensionsType.class,
@@ -150,7 +151,7 @@ public final class DianUBLMarshaller
                                          dian.gov.co.facturaelectronica.structures_2_1.ObjectFactory._DianExtensions_QNAME);
   }
 
-  @Nonnull
+  @NonNull
   public static DianUBLJAXBMarshaller <InvoiceType> invoice ()
   {
     return new DianUBLJAXBMarshaller <> (InvoiceType.class,
