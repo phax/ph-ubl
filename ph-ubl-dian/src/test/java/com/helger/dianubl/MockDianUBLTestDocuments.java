@@ -35,36 +35,22 @@ public final class MockDianUBLTestDocuments
   @ReturnsMutableCopy
   public static ICommonsList <String> getUBLPETestDocuments (@NonNull final EDianUBLDocumentType eType)
   {
-    ICommonsList <String> aFiles;
-    switch (eType)
+    return switch (eType)
     {
-      case APPLICATION_RESPONSE:
-        aFiles = new CommonsArrayList <> ();
-        break;
-      case ATTACHED_DOCUMENT:
-        aFiles = new CommonsArrayList <> ();
-        break;
-      case CREDIT_NOTE:
-        aFiles = new CommonsArrayList <> (PREFIX + "CreditNote.xml");
-        break;
-      case DEBIT_NOTE:
-        aFiles = new CommonsArrayList <> (PREFIX + "DebitNote.xml");
-        break;
-      case INVOICE:
-        aFiles = new CommonsArrayList <> (PREFIX + "Combustible.xml",
-                                          PREFIX + "Consumidor Final.xml",
-                                          PREFIX + "EmisorAutoretenedor.xml",
-                                          PREFIX + "ExcluidosExentos.xml",
-                                          PREFIX + "Exportacion.xml",
-                                          PREFIX + "Generica.xml",
-                                          PREFIX + "GenericaPagoAnticipado.xml",
-                                          PREFIX + "Mandatos.xml",
-                                          PREFIX + "Servicios.xml");
-        break;
-      default:
-        throw new IllegalArgumentException ("No test files available for type " + eType);
-    }
-
-    return aFiles;
+      case APPLICATION_RESPONSE -> new CommonsArrayList <> ();
+      case ATTACHED_DOCUMENT -> new CommonsArrayList <> ();
+      case CREDIT_NOTE -> new CommonsArrayList <> (PREFIX + "CreditNote.xml");
+      case DEBIT_NOTE -> new CommonsArrayList <> (PREFIX + "DebitNote.xml");
+      case INVOICE -> new CommonsArrayList <> (PREFIX + "Combustible.xml",
+                                               PREFIX + "Consumidor Final.xml",
+                                               PREFIX + "EmisorAutoretenedor.xml",
+                                               PREFIX + "ExcluidosExentos.xml",
+                                               PREFIX + "Exportacion.xml",
+                                               PREFIX + "Generica.xml",
+                                               PREFIX + "GenericaPagoAnticipado.xml",
+                                               PREFIX + "Mandatos.xml",
+                                               PREFIX + "Servicios.xml");
+      default -> throw new IllegalArgumentException ("No test files available for type " + eType);
+    };
   }
 }
