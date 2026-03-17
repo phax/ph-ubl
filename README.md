@@ -1,8 +1,9 @@
 # ph-ubl
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger.ubl/ph-ubl-parent-pom) 
-[![javadoc](https://javadoc.io/badge2/com.helger.ubl/ph-ubl-parent-pom/javadoc.svg)](https://javadoc.io/doc/com.helger.ubl/ph-ubl-parent-pom)
-[![CodeCov](https://codecov.io/gh/phax/ph-ubl/branch/master/graph/badge.svg)](https://codecov.io/gh/phax/ph-ubl)
+<!-- ph-badge-start -->
+[![Sonatype Central](https://maven-badges.sml.io/sonatype-central/com.helger.ubl/ph-ubl-parent-pom/badge.svg)](https://maven-badges.sml.io/sonatype-central/com.helger.ubl/ph-ubl-parent-pom/)
+[![javadoc](https://javadoc.io/badge2/com.helger.ubl/ph-ubl-testfiles/javadoc.svg)](https://javadoc.io/doc/com.helger.ubl/ph-ubl-testfiles)
+<!-- ph-badge-end -->
 
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3 and 2.4 documents.
 The following projects are contained:
