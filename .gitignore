@@ -1,15 +1,15 @@
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
 .classpath
 .DS_Store 
 .pmd
 .project 
-*.iml
 zz
-UBL-2.5*.zip
 
+.claude/
 .settings/ 
-target/
 generated/
+target/
 UBL-2.1/
+
+*.iml
+# Too large for git
+UBL-2.5*.zip
