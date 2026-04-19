@@ -52,6 +52,7 @@ import oasis.names.specification.ubl.schema.xsd.contractawardnotice_25.ContractA
 import oasis.names.specification.ubl.schema.xsd.contractnotice_25.ContractNoticeType;
 import oasis.names.specification.ubl.schema.xsd.creditnote_25.CreditNoteType;
 import oasis.names.specification.ubl.schema.xsd.debitnote_25.DebitNoteType;
+import oasis.names.specification.ubl.schema.xsd.deliverynote_25.DeliveryNoteType;
 import oasis.names.specification.ubl.schema.xsd.despatchadvice_25.DespatchAdviceType;
 import oasis.names.specification.ubl.schema.xsd.digitalagreement_25.DigitalAgreementType;
 import oasis.names.specification.ubl.schema.xsd.digitalcapability_25.DigitalCapabilityType;
@@ -77,6 +78,8 @@ import oasis.names.specification.ubl.schema.xsd.importcustomsdeclaration_25.Impo
 import oasis.names.specification.ubl.schema.xsd.instructionforreturns_25.InstructionForReturnsType;
 import oasis.names.specification.ubl.schema.xsd.inventoryreport_25.InventoryReportType;
 import oasis.names.specification.ubl.schema.xsd.invoice_25.InvoiceType;
+import oasis.names.specification.ubl.schema.xsd.invoicestatusrequest_25.InvoiceStatusRequestType;
+import oasis.names.specification.ubl.schema.xsd.invoicestatusresponse_25.InvoiceStatusResponseType;
 import oasis.names.specification.ubl.schema.xsd.iteminformationrequest_25.ItemInformationRequestType;
 import oasis.names.specification.ubl.schema.xsd.manifest_25.ManifestType;
 import oasis.names.specification.ubl.schema.xsd.order_25.OrderType;
@@ -86,6 +89,8 @@ import oasis.names.specification.ubl.schema.xsd.orderresponse_25.OrderResponseTy
 import oasis.names.specification.ubl.schema.xsd.orderresponsesimple_25.OrderResponseSimpleType;
 import oasis.names.specification.ubl.schema.xsd.packinglist_25.PackingListType;
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_25.PriorInformationNoticeType;
+import oasis.names.specification.ubl.schema.xsd.procurementstatus_25.ProcurementStatusType;
+import oasis.names.specification.ubl.schema.xsd.procurementstatusrequest_25.ProcurementStatusRequestType;
 import oasis.names.specification.ubl.schema.xsd.productactivity_25.ProductActivityType;
 import oasis.names.specification.ubl.schema.xsd.proofofreexportation_25.ProofOfReexportationType;
 import oasis.names.specification.ubl.schema.xsd.proofofreexportationreminder_25.ProofOfReexportationReminderType;
@@ -125,12 +130,14 @@ import oasis.names.specification.ubl.schema.xsd.unawardednotification_25.Unaward
 import oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedurerequest_25.UnsubscribeFromProcedureRequestType;
 import oasis.names.specification.ubl.schema.xsd.unsubscribefromprocedureresponse_25.UnsubscribeFromProcedureResponseType;
 import oasis.names.specification.ubl.schema.xsd.utilitystatement_25.UtilityStatementType;
+import oasis.names.specification.ubl.schema.xsd.wastemovement_25.WasteMovementType;
+import oasis.names.specification.ubl.schema.xsd.wastenotification_25.WasteNotificationType;
 import oasis.names.specification.ubl.schema.xsd.waybill_25.WaybillType;
 import oasis.names.specification.ubl.schema.xsd.weightstatement_25.WeightStatementType;
+import oasis.names.specification.ubl.schema.xsd.workreport_25.WorkReportType;
 
 /**
- * The class provides all the UBL 2.5 marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL 2.5 marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0
@@ -520,6 +527,23 @@ public final class UBL25Marshaller
     return new UBL25JAXBMarshaller <> (DebitNoteType.class,
                                        getAllDebitNoteXSDs (),
                                        oasis.names.specification.ubl.schema.xsd.debitnote_25.ObjectFactory._DebitNote_QNAME);
+  }
+
+  private static final ClassPathResource CPR_DELIVERYNOTE = _getCPR ("UBL-DeliveryNote-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllDeliveryNoteXSDs ()
+  {
+    return _getAllXSDs (CPR_DELIVERYNOTE);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <DeliveryNoteType> deliveryNote ()
+  {
+    return new UBL25JAXBMarshaller <> (DeliveryNoteType.class,
+                                       getAllDeliveryNoteXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.deliverynote_25.ObjectFactory._DeliveryNote_QNAME);
   }
 
   private static final ClassPathResource CPR_DESPATCHADVICE = _getCPR ("UBL-DespatchAdvice-2.5.xsd");
@@ -947,6 +971,40 @@ public final class UBL25Marshaller
                                        oasis.names.specification.ubl.schema.xsd.invoice_25.ObjectFactory._Invoice_QNAME);
   }
 
+  private static final ClassPathResource CPR_INVOICESTATUSREQUEST = _getCPR ("UBL-InvoiceStatusRequest-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllInvoiceStatusRequestXSDs ()
+  {
+    return _getAllXSDs (CPR_INVOICESTATUSREQUEST);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <InvoiceStatusRequestType> invoiceStatusRequest ()
+  {
+    return new UBL25JAXBMarshaller <> (InvoiceStatusRequestType.class,
+                                       getAllInvoiceStatusRequestXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.invoicestatusrequest_25.ObjectFactory._InvoiceStatusRequest_QNAME);
+  }
+
+  private static final ClassPathResource CPR_INVOICESTATUSRESPONSE = _getCPR ("UBL-InvoiceStatusResponse-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllInvoiceStatusResponseXSDs ()
+  {
+    return _getAllXSDs (CPR_INVOICESTATUSRESPONSE);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <InvoiceStatusResponseType> invoiceStatusResponse ()
+  {
+    return new UBL25JAXBMarshaller <> (InvoiceStatusResponseType.class,
+                                       getAllInvoiceStatusResponseXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.invoicestatusresponse_25.ObjectFactory._InvoiceStatusResponse_QNAME);
+  }
+
   private static final ClassPathResource CPR_ITEMINFORMATIONREQUEST = _getCPR ("UBL-ItemInformationRequest-2.5.xsd");
 
   @NonNull
@@ -1115,6 +1173,40 @@ public final class UBL25Marshaller
     return new UBL25JAXBMarshaller <> (ProductActivityType.class,
                                        getAllProductActivityXSDs (),
                                        oasis.names.specification.ubl.schema.xsd.productactivity_25.ObjectFactory._ProductActivity_QNAME);
+  }
+
+  private static final ClassPathResource CPR_PROCUREMENTSTATUS = _getCPR ("UBL-ProcurementStatus-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllProcurementStatusXSDs ()
+  {
+    return _getAllXSDs (CPR_PROCUREMENTSTATUS);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <ProcurementStatusType> procurementStatus ()
+  {
+    return new UBL25JAXBMarshaller <> (ProcurementStatusType.class,
+                                       getAllProcurementStatusXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.procurementstatus_25.ObjectFactory._ProcurementStatus_QNAME);
+  }
+
+  private static final ClassPathResource CPR_PROCUREMENTSTATUSREQUEST = _getCPR ("UBL-ProcurementStatusRequest-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllProcurementStatusRequestXSDs ()
+  {
+    return _getAllXSDs (CPR_PROCUREMENTSTATUSREQUEST);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <ProcurementStatusRequestType> procurementStatusRequest ()
+  {
+    return new UBL25JAXBMarshaller <> (ProcurementStatusRequestType.class,
+                                       getAllProcurementStatusRequestXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.procurementstatusrequest_25.ObjectFactory._ProcurementStatusRequest_QNAME);
   }
 
   private static final ClassPathResource CPR_PROOFOFREEXPORTATION = _getCPR ("UBL-ProofOfReexportation-2.5.xsd");
@@ -1763,6 +1855,40 @@ public final class UBL25Marshaller
                                        oasis.names.specification.ubl.schema.xsd.utilitystatement_25.ObjectFactory._UtilityStatement_QNAME);
   }
 
+  private static final ClassPathResource CPR_WASTEMOVEMENT = _getCPR ("UBL-WasteMovement-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllWasteMovementXSDs ()
+  {
+    return _getAllXSDs (CPR_WASTEMOVEMENT);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <WasteMovementType> wasteMovement ()
+  {
+    return new UBL25JAXBMarshaller <> (WasteMovementType.class,
+                                       getAllWasteMovementXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.wastemovement_25.ObjectFactory._WasteMovement_QNAME);
+  }
+
+  private static final ClassPathResource CPR_WASTENOTIFICATION = _getCPR ("UBL-WasteNotification-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllWasteNotificationXSDs ()
+  {
+    return _getAllXSDs (CPR_WASTENOTIFICATION);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <WasteNotificationType> wasteNotification ()
+  {
+    return new UBL25JAXBMarshaller <> (WasteNotificationType.class,
+                                       getAllWasteNotificationXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.wastenotification_25.ObjectFactory._WasteNotification_QNAME);
+  }
+
   private static final ClassPathResource CPR_WAYBILL = _getCPR ("UBL-Waybill-2.5.xsd");
 
   @NonNull
@@ -1795,5 +1921,22 @@ public final class UBL25Marshaller
     return new UBL25JAXBMarshaller <> (WeightStatementType.class,
                                        getAllWeightStatementXSDs (),
                                        oasis.names.specification.ubl.schema.xsd.weightstatement_25.ObjectFactory._WeightStatement_QNAME);
+  }
+
+  private static final ClassPathResource CPR_WORKREPORT = _getCPR ("UBL-WorkReport-2.5.xsd");
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllWorkReportXSDs ()
+  {
+    return _getAllXSDs (CPR_WORKREPORT);
+  }
+
+  @NonNull
+  public static UBL25JAXBMarshaller <WorkReportType> workReport ()
+  {
+    return new UBL25JAXBMarshaller <> (WorkReportType.class,
+                                       getAllWorkReportXSDs (),
+                                       oasis.names.specification.ubl.schema.xsd.workreport_25.ObjectFactory._WorkReport_QNAME);
   }
 }

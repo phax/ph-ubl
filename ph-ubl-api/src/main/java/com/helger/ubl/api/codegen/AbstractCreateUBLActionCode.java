@@ -23,8 +23,7 @@ import org.jspecify.annotations.NonNull;
 import com.helger.base.string.StringHelper;
 
 /**
- * Base class for internal code generation. You should not care too much about
- * this one...
+ * Base class for internal code generation. You should not care too much about this one...
  *
  * @author Philip Helger
  */
@@ -93,16 +92,16 @@ public abstract class AbstractCreateUBLActionCode extends AbstractUBLCodeGen
         .append (sVersion)
         .append (");\n");
 
-    aSB2.append ("aRegistry.registerValidationExecutorSet (ValidationExecutorSet.create (")
+    aSB2.append ("VesXmlBuilder.builder ().vesID (")
         .append (sVES)
-        .append (", \"UBL ")
+        .append (").displayName(\"UBL ")
         .append (getDisplayNameFromType (s))
         .append (" \" + VERSION_")
         .append (sVersion)
-        .append (", bNotDeprecated, ValidationExecutorXSD.create (UBL")
+        .append (").notDeprecated().addXSD (UBL")
         .append (sVersion)
         .append ("Marshaller.getAll")
         .append (s)
-        .append ("XSDs ())));\n");
+        .append ("XSDs ()).registerInto (aRegistry);");
   }
 }

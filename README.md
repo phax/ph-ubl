@@ -280,6 +280,11 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
+v10.2.0 - work in progress
+* Added support for UBL 2.5 CSD03
+* New submodules `ph-ubl25` and `ph-ubl25-codelists`
+* Added 8 new document types in UBL 2.5: DeliveryNote, InvoiceStatusRequest, InvoiceStatusResponse, ProcurementStatus, ProcurementStatusRequest, WasteMovement, WasteNotification, WorkReport
+
 v10.1.0 - 2025-11-16
 * Updated to ph-commons 12.1.0
 * Using JSpecify annotations

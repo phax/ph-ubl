@@ -155,6 +155,11 @@
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.debitnote_25" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-DeliveryNote-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DeliveryNote-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.deliverynote_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-DespatchAdvice-2.5.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2-->    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.despatchadvice_25" />
@@ -280,6 +285,16 @@
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.invoice_25" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-InvoiceStatusRequest-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:InvoiceStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.invoicestatusrequest_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-InvoiceStatusResponse-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:InvoiceStatusResponse-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.invoicestatusresponse_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-ItemInformationRequest-2.5.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2-->    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.iteminformationrequest_25" />
@@ -328,6 +343,16 @@
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-ProductActivity-2.5.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2-->    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.productactivity_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-ProcurementStatus-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatus-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.procurementstatus_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-ProcurementStatusRequest-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatusRequest-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.procurementstatusrequest_25" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-ProofOfReexportation-2.5.xsd" node="/xsd:schema">
@@ -520,6 +545,16 @@
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.utilitystatement_25" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-WasteMovement-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:WasteMovement-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.wastemovement_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-WasteNotification-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:WasteNotification-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.wastenotification_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-Waybill-2.5.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:Waybill-2-->    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.waybill_25" />
@@ -528,6 +563,11 @@
   <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-WeightStatement-2.5.xsd" node="/xsd:schema">
     <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2-->    <jaxb:schemaBindings>
       <jaxb:package name="oasis.names.specification.ubl.schema.xsd.weightstatement_25" />
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="../resources/external/schemas/ubl25/maindoc/UBL-WorkReport-2.5.xsd" node="/xsd:schema">
+    <!--Target namespace: urn:oasis:names:specification:ubl:schema:xsd:WorkReport-2-->    <jaxb:schemaBindings>
+      <jaxb:package name="oasis.names.specification.ubl.schema.xsd.workreport_25" />
     </jaxb:schemaBindings>
   </jaxb:bindings>
 </jaxb:bindings>
