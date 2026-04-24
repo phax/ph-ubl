@@ -25,12 +25,11 @@
     <version>10.1.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl20</artifactId>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-ubl20</name>
   <description>Library for reading and writing UBL 2.0 documents</description>
   <url>https://github.com/phax/ph-ubl/ph-ubl20</url>
   <inceptionYear>2014</inceptionYear>
-
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -38,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <organization>
     <name>Philip Helger</name>
     <url>https://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>philip</id>
@@ -52,7 +49,6 @@
       <url>https://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencies>
     <dependency>
       <groupId>com.helger.commons</groupId>
@@ -62,7 +58,6 @@
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-jaxb-adapter</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -84,23 +79,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.ubl20</Automatic-Module-Name>
-            <Export-Package>com.helger.ubl20.*,
-              oasis.names.specification.ubl.*,
-              un.unece.uncefact.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>${jaxb-plugin.group}</groupId>
         <artifactId>${jaxb-plugin.artifact}</artifactId>
@@ -196,7 +176,7 @@
             ${project.build.sourceDirectory}:${project.build.directory}/generated-sources/ubl20
           </sourcepath>
         </configuration>
-      </plugin> 
+      </plugin>
     </plugins>
   </build>
 </project>
