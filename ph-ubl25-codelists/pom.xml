@@ -25,7 +25,7 @@
     <version>10.2.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-ubl25-codelists</artifactId>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-ubl25-codelists</name>
   <description>Library with codelists for reading and writing UBL 2.5 documents</description>
   <url>https://github.com/phax/ph-ubl/ph-ubl25-codelists</url>
@@ -75,21 +75,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.ubl25.codelist</Automatic-Module-Name>
-            <Export-Package>com.helger.ubl25.codelist.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
