@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD03
-                     http://docs.oasis-open.org/ubl/csd03-UBL-2.5/
-  Release Date:      11 February 2026
+  Library:           OASIS Universal Business Language (UBL) 2.5 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.5/
+  Release Date:      15 April 2026
   Module:            xsdrt/maindoc/UBL-ContractAwardNotice-2.5.xsd
-  Generated on:      2026-02-09 15:15z
+  Generated on:      2026-04-13 18:35z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"

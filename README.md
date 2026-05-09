@@ -5,7 +5,7 @@
 [![javadoc](https://javadoc.io/badge2/com.helger.ubl/ph-ubl-testfiles/javadoc.svg)](https://javadoc.io/doc/com.helger.ubl/ph-ubl-testfiles)
 <!-- ph-badge-end -->
 
-Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3 and 2.4 documents.
+Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3, 2.4 and 2.5 documents.
 The following projects are contained:
 
 * **ph-ubl-testfiles** contains all UBL test files (used only in Maven test scope)
@@ -20,6 +20,8 @@ The following projects are contained:
 * **ph-ubl23-codelists** contains the generated enums for the UBL 2.3 codelists (optional artefact)
 * **ph-ubl24** contains the generated JAXB files for UBL 2.4 as well as the helper classes.
 * **ph-ubl24-codelists** contains the generated enums for the UBL 2.4 codelists (optional artefact)
+* **ph-ubl25** contains the generated JAXB files for UBL 2.5 as well as the helper classes.
+* **ph-ubl25-codelists** contains the generated enums for the UBL 2.5 codelists (optional artefact)
 * **ph-ubltr** contains the generated JAXB files UBL-tr - the Turkish e-Invoice (optional artefact)
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 * **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
@@ -39,6 +41,7 @@ The folders with the generated sources differ from subproject to subproject:
 * **ph-ubl22**: `target\generated-sources\ubl22` 
 * **ph-ubl23**: `target\generated-sources\ubl23` 
 * **ph-ubl24**: `target\generated-sources\ubl24` 
+* **ph-ubl25**: `target\generated-sources\ubl25` 
 * **ph-ublpe**: `target\generated-sources\ublpe` 
 * **ph-ubltr**: `target\generated-sources\ubltr` 
 * **ph-ubl-dian**: `target\generated-sources\dian` 
@@ -188,6 +191,32 @@ To also use the generated enums for the UBL 2.4 codelists add the following arti
 
 Supported since v8.0.0
 
+## Maven usage UBL 2.5
+
+Note: UBL 2.5 is not yet an OASIS Standard (OS). The bundled schemas are taken from the OASIS [Committee Specification 01 (CS01)](https://docs.oasis-open.org/ubl/cs01-UBL-2.5/) working draft and may still change before approval as an OS.
+
+To read and write UBL 2.5 documents add the following to your pom.xml to use this artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl25</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+To also use the generated enums for the UBL 2.5 codelists add the following artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl25-codelists</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+Supported since v10.2.0
+
 ## Maven usage UBL-tr
 
 To read and write UBL-tr (http://www.ubltr.com/) documents add the following to your pom.xml to use this artifact:
@@ -259,6 +288,8 @@ Binary versions of the artefacts can be downloaded from Maven Central:
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl23-codelists/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl24/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl24-codelists/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl25/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl25-codelists/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ublpe/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubltr/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-dian/
@@ -274,15 +305,16 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
     * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
     * UBL 2.4: https://docs.oasis-open.org/ubl/os-UBL-2.4/
+    * UBL 2.5: https://docs.oasis-open.org/ubl/cs01-UBL-2.5/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
 
 # News and noteworthy
 
-v10.2.0 - work in progress
+v10.2.0 - 2026-05-09
 * Removed OSGI bundling
-* Added support for UBL 2.5 CSD03
+* Added support for UBL 2.5 CS01
 * New submodules `ph-ubl25` and `ph-ubl25-codelists`
 * Added 8 new document types in UBL 2.5: DeliveryNote, InvoiceStatusRequest, InvoiceStatusResponse, ProcurementStatus, ProcurementStatusRequest, WasteMovement, WasteNotification, WorkReport
 
