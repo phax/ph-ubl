@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CS01
-                     http://docs.oasis-open.org/ubl/cs01-UBL-2.5/
-  Release Date:      15 April 2026
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsdrt/maindoc/UBL-Reminder-2.5.xsd
-  Generated on:      2026-04-13 18:35z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

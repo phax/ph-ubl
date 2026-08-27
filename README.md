@@ -195,8 +195,6 @@ Supported since v8.0.0
 
 ## Maven usage UBL 2.5
 
-Note: UBL 2.5 is not yet an OASIS Standard (OS). The bundled schemas are taken from the OASIS [Committee Specification 01 (CS01)](https://docs.oasis-open.org/ubl/cs01-UBL-2.5/) working draft and may still change before approval as an OS.
-
 To read and write UBL 2.5 documents add the following to your pom.xml to use this artifact:
 
 ```xml
@@ -307,12 +305,15 @@ For further information on the Universal Business Language can be found on the f
     * UBL 2.2: https://docs.oasis-open.org/ubl/os-UBL-2.2/ 
     * UBL 2.3: https://docs.oasis-open.org/ubl/os-UBL-2.3/
     * UBL 2.4: https://docs.oasis-open.org/ubl/os-UBL-2.4/
-    * UBL 2.5: https://docs.oasis-open.org/ubl/cs01-UBL-2.5/
+    * UBL 2.5: https://docs.oasis-open.org/ubl/os-UBL-2.5/
 * http://ubl.xml.org
 * http://goubl.com
 * http://www.ubltr.com/
 
 # News and noteworthy
+
+v10.2.1 - work in progress
+* Updated to UBL 2.5 OS - https://docs.oasis-open.org/ubl/os-UBL-2.5/ (no XSD changes compared to CS01)
 
 v10.2.0 - 2026-05-09
 * Removed OSGI bundling
