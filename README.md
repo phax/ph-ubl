@@ -312,7 +312,7 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-v10.2.1 - work in progress
+v10.2.1 - 2026-08-27
 * Updated to UBL 2.5 OS - https://docs.oasis-open.org/ubl/os-UBL-2.5/ (no XSD changes compared to CS01)
 
 v10.2.0 - 2026-05-09
