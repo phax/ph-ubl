@@ -24,8 +24,7 @@ import com.helger.ubl.api.codegen.AbstractCreateUBLCodeListCodeGen;
 /**
  * Utility class to create:
  * <ul>
- * <li>src/main/java/com/helger/ubl/codelists - generated Java Code for the
- * codelists</li>
+ * <li>src/main/java/com/helger/ubl/codelists - generated Java Code for the codelists</li>
  * </ul>
  *
  * @author Philip Helger

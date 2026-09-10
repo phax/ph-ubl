@@ -39,8 +39,7 @@ import oasis.names.specification.ubl.schema.xsd.debitnote_21.DebitNoteType;
 import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 
 /**
- * The class provides all the Dian UBL marshallers for reading, writing and
- * validation.
+ * The class provides all the Dian UBL marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

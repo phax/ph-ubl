@@ -41,7 +41,8 @@ public enum EUBLTRDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EUBLTRDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EUBLTRDocumentType (@NonNull final Class <?> aClass,
+                      @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;

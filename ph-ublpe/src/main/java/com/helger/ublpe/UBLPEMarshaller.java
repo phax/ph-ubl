@@ -39,8 +39,7 @@ import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryD
 import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
 /**
- * The class provides all the UBL PE marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL PE marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

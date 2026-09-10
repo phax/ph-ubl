@@ -43,8 +43,7 @@ import oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNotice
 import oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType;
 
 /**
- * The class provides all the eForms UBL marshallers for reading, writing and
- * validation.
+ * The class provides all the eForms UBL marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0
@@ -102,13 +101,13 @@ public final class EformsUBLMarshaller
   }
 
   private static final ICommonsList <ClassPathResource> XSDS_EXT = new CommonsArrayList <> (CCCTS.getXSDResource (),
-                                                                                                 CXMLDSig.getXSDResource (),
-                                                                                                 CXAdES132.getXSDResource (),
-                                                                                                 CXAdES141.getXSDResource (),
-                                                                                                 CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
-                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
-                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
-                                                                                                 CEformsUBL.XSD_EFORMS_EXTENSION_APEX);
+                                                                                            CXMLDSig.getXSDResource (),
+                                                                                            CXAdES132.getXSDResource (),
+                                                                                            CXAdES141.getXSDResource (),
+                                                                                            CUBL23.XSD_COMMON_AGGREGATE_COMPONENTS,
+                                                                                            CEformsUBL.XSD_EFORMS_EXTENSION_BASIC_COMPONENTS,
+                                                                                            CEformsUBL.XSD_EFORMS_EXTENSION_AGGREGATE_COMPONENTS,
+                                                                                            CEformsUBL.XSD_EFORMS_EXTENSION_APEX);
 
   @NonNull
   public static EformsUBLJAXBMarshaller <EformsExtension> eFormsExtension ()

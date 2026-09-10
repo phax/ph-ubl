@@ -42,10 +42,12 @@ public enum EUBL22DocumentType
   BILL_OF_LADING (oasis.names.specification.ubl.schema.xsd.billoflading_22.BillOfLadingType.class,
                   UBL22Marshaller.getAllBillOfLadingXSDs ()),
   @Since ("2.2")
-  BUSINESS_CARD(oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType.class, UBL22Marshaller.getAllBusinessCardXSDs ()),
+  BUSINESS_CARD(oasis.names.specification.ubl.schema.xsd.businesscard_22.BusinessCardType.class,
+                UBL22Marshaller.getAllBusinessCardXSDs ()),
   CALL_FOR_TENDERS (oasis.names.specification.ubl.schema.xsd.callfortenders_22.CallForTendersType.class,
                     UBL22Marshaller.getAllCallForTendersXSDs ()),
-  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType.class, UBL22Marshaller.getAllCatalogueXSDs ()),
+  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_22.CatalogueType.class,
+             UBL22Marshaller.getAllCatalogueXSDs ()),
   CATALOGUE_DELETION (oasis.names.specification.ubl.schema.xsd.cataloguedeletion_22.CatalogueDeletionType.class,
                       UBL22Marshaller.getAllCatalogueDeletionXSDs ()),
   CATALOGUE_ITEM_SPECIFICATION_UPDATE (oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_22.CatalogueItemSpecificationUpdateType.class,
@@ -60,8 +62,10 @@ public enum EUBL22DocumentType
                          UBL22Marshaller.getAllContractAwardNoticeXSDs ()),
   CONTRACT_NOTICE (oasis.names.specification.ubl.schema.xsd.contractnotice_22.ContractNoticeType.class,
                    UBL22Marshaller.getAllContractNoticeXSDs ()),
-  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_22.CreditNoteType.class, UBL22Marshaller.getAllCreditNoteXSDs ()),
-  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_22.DebitNoteType.class, UBL22Marshaller.getAllDebitNoteXSDs ()),
+  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_22.CreditNoteType.class,
+               UBL22Marshaller.getAllCreditNoteXSDs ()),
+  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_22.DebitNoteType.class,
+              UBL22Marshaller.getAllDebitNoteXSDs ()),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_22.DespatchAdviceType.class,
                    UBL22Marshaller.getAllDespatchAdviceXSDs ()),
   @Since ("2.2")
@@ -89,7 +93,8 @@ public enum EUBL22DocumentType
   @Since ("2.2")
   EXPRESSION_OF_INTEREST_RESPONSE(oasis.names.specification.ubl.schema.xsd.expressionofinterestresponse_22.ExpressionOfInterestResponseType.class,
                                   UBL22Marshaller.getAllExpressionOfInterestResponseXSDs ()),
-  FORECAST (oasis.names.specification.ubl.schema.xsd.forecast_22.ForecastType.class, UBL22Marshaller.getAllForecastXSDs ()),
+  FORECAST (oasis.names.specification.ubl.schema.xsd.forecast_22.ForecastType.class,
+            UBL22Marshaller.getAllForecastXSDs ()),
   FORECAST_REVISION (oasis.names.specification.ubl.schema.xsd.forecastrevision_22.ForecastRevisionType.class,
                      UBL22Marshaller.getAllForecastRevisionXSDs ()),
   FORWARDING_INSTRUCTIONS (oasis.names.specification.ubl.schema.xsd.forwardinginstructions_22.ForwardingInstructionsType.class,
@@ -112,12 +117,14 @@ public enum EUBL22DocumentType
   ORDER (oasis.names.specification.ubl.schema.xsd.order_22.OrderType.class, UBL22Marshaller.getAllOrderXSDs ()),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_22.OrderCancellationType.class,
                       UBL22Marshaller.getAllOrderCancellationXSDs ()),
-  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_22.OrderChangeType.class, UBL22Marshaller.getAllOrderChangeXSDs ()),
+  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_22.OrderChangeType.class,
+                UBL22Marshaller.getAllOrderChangeXSDs ()),
   ORDER_RESPONSE (oasis.names.specification.ubl.schema.xsd.orderresponse_22.OrderResponseType.class,
                   UBL22Marshaller.getAllOrderResponseXSDs ()),
   ORDER_RESPONSE_SIMPLE (oasis.names.specification.ubl.schema.xsd.orderresponsesimple_22.OrderResponseSimpleType.class,
                          UBL22Marshaller.getAllOrderResponseSimpleXSDs ()),
-  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_22.PackingListType.class, UBL22Marshaller.getAllPackingListXSDs ()),
+  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_22.PackingListType.class,
+                UBL22Marshaller.getAllPackingListXSDs ()),
   PRIOR_INFORMATION_NOTICE (oasis.names.specification.ubl.schema.xsd.priorinformationnotice_22.PriorInformationNoticeType.class,
                             UBL22Marshaller.getAllPriorInformationNoticeXSDs ()),
   PRODUCT_ACTIVITY (oasis.names.specification.ubl.schema.xsd.productactivity_22.ProductActivityType.class,
@@ -128,20 +135,24 @@ public enum EUBL22DocumentType
   @Since ("2.2")
   QUALIFICATION_APPLICATION_RESPONSE(oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_22.QualificationApplicationResponseType.class,
                                      UBL22Marshaller.getAllQualificationApplicationResponseXSDs ()),
-  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_22.QuotationType.class, UBL22Marshaller.getAllQuotationXSDs ()),
+  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_22.QuotationType.class,
+             UBL22Marshaller.getAllQuotationXSDs ()),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_22.ReceiptAdviceType.class,
                   UBL22Marshaller.getAllReceiptAdviceXSDs ()),
-  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_22.ReminderType.class, UBL22Marshaller.getAllReminderXSDs ()),
+  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_22.ReminderType.class,
+            UBL22Marshaller.getAllReminderXSDs ()),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_22.RemittanceAdviceType.class,
                      UBL22Marshaller.getAllRemittanceAdviceXSDs ()),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_22.RequestForQuotationType.class,
                          UBL22Marshaller.getAllRequestForQuotationXSDs ()),
-  RETAIL_EVENT (oasis.names.specification.ubl.schema.xsd.retailevent_22.RetailEventType.class, UBL22Marshaller.getAllRetailEventXSDs ()),
+  RETAIL_EVENT (oasis.names.specification.ubl.schema.xsd.retailevent_22.RetailEventType.class,
+                UBL22Marshaller.getAllRetailEventXSDs ()),
   SELF_BILLED_CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_22.SelfBilledCreditNoteType.class,
                            UBL22Marshaller.getAllSelfBilledCreditNoteXSDs ()),
   SELF_BILLED_INVOICE (oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_22.SelfBilledInvoiceType.class,
                        UBL22Marshaller.getAllSelfBilledInvoiceXSDs ()),
-  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_22.StatementType.class, UBL22Marshaller.getAllStatementXSDs ()),
+  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_22.StatementType.class,
+             UBL22Marshaller.getAllStatementXSDs ()),
   STOCK_AVAILABILITY_REPORT (oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_22.StockAvailabilityReportType.class,
                              UBL22Marshaller.getAllStockAvailabilityReportXSDs ()),
   TENDER (oasis.names.specification.ubl.schema.xsd.tender_22.TenderType.class, UBL22Marshaller.getAllTenderXSDs ()),
@@ -151,7 +162,8 @@ public enum EUBL22DocumentType
   TENDER_RECEIPT (oasis.names.specification.ubl.schema.xsd.tenderreceipt_22.TenderReceiptType.class,
                   UBL22Marshaller.getAllTenderReceiptXSDs ()),
   @Since ("2.2")
-  TENDER_STATUS(oasis.names.specification.ubl.schema.xsd.tenderstatus_22.TenderStatusType.class, UBL22Marshaller.getAllTenderStatusXSDs ()),
+  TENDER_STATUS(oasis.names.specification.ubl.schema.xsd.tenderstatus_22.TenderStatusType.class,
+                UBL22Marshaller.getAllTenderStatusXSDs ()),
   @Since ("2.2")
   TENDER_STATUS_REQUEST(oasis.names.specification.ubl.schema.xsd.tenderstatusrequest_22.TenderStatusRequestType.class,
                         UBL22Marshaller.getAllTenderStatusRequestXSDs ()),
@@ -223,8 +235,8 @@ public enum EUBL22DocumentType
   }
 
   /**
-   * @return The local element name of the root element of this document type.
-   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   * @return The local element name of the root element of this document type. E.g.
+   *         <code>OrderCancellation</code> for "Order Cancellation".
    */
   @NonNull
   @Nonempty
@@ -234,10 +246,9 @@ public enum EUBL22DocumentType
   }
 
   /**
-   * @return The XML namespace URI of the root element of this document type.
-   *         E.g.
-   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
-   *         for "Order Cancellation".
+   * @return The XML namespace URI of the root element of this document type. E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code> for
+   *         "Order Cancellation".
    */
   @NonNull
   @Nonempty

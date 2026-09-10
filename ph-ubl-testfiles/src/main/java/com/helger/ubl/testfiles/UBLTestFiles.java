@@ -117,11 +117,9 @@ public final class UBLTestFiles
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  "invoice/UBL-Invoice-2.0-Detached.xml",
                                                                                        /*
                                                                                         * Fails
-                                                                                        * because
-                                                                                        * of
+                                                                                        * because of
                                                                                         * extensions:
-                                                                                        * PREFIX
-                                                                                        * +
+                                                                                        * PREFIX +
                                                                                         * "invoice/UBL-Invoice-2.0-Enveloped.xml"
                                                                                         */
                                                                                        PREFIX +

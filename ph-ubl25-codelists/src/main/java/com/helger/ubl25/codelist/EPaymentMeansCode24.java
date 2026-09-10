@@ -154,6 +154,6 @@ public enum EPaymentMeansCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final EPaymentMeansCode24 eValue = EPaymentMeansCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

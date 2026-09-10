@@ -16,64 +16,58 @@
  */
 package com.helger.ubl20.codelist;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file DocumentStatusCode-2.0.gc. Do NOT
- * edit! It contains a total of 4 entries!
- *
+ * This file was automatically generated from Genericode file DocumentStatusCode-2.0.gc. Do NOT edit!
+ * It contains a total of 4 entries!
  * @author com.helger.ubl20.supplementary.tools.MainCreateEnumsGenericode20
  */
 @CodingStyleguideUnaware
-public enum EDocumentStatusCode20 implements IHasID <String>, IHasDisplayName
+public enum EDocumentStatusCode20
+    implements IHasID<String> , IHasDisplayName
 {
-  Cancelled ("Cancelled", "Document has been cancelled"),
-  Disputed ("Disputed", "Document is disputed"),
-  NoStatus ("NoStatus", "No status on document"),
-  Revised ("Revised", "Document has been revised");
+    Cancelled("Cancelled", "Document has been cancelled"),
+    Disputed("Disputed", "Document is disputed"),
+    NoStatus("NoStatus", "No status on document"),
+    Revised("Revised", "Document has been revised");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.0";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  public static final String AGENCY_ID = "UBL";
-  public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
-  public static final String LIST_VERSION = "2.0";
-  private final String m_sID;
-  private final String m_sDisplayName;
+    EDocumentStatusCode20(@NonNull @Nonempty final String sID, @NonNull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  EDocumentStatusCode20 (@NonNull @Nonempty final String sID, @NonNull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @NonNull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @NonNull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @NonNull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @NonNull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static EDocumentStatusCode20 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(EDocumentStatusCode20 .class, sID);
+    }
 
-  @Nullable
-  public static EDocumentStatusCode20 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EDocumentStatusCode20.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final EDocumentStatusCode20 eValue = EDocumentStatusCode20.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final EDocumentStatusCode20 eValue = EDocumentStatusCode20 .getFromIDOrNull(sID);
+        return eValue == null?null:eValue.getDisplayName();
+    }
 }

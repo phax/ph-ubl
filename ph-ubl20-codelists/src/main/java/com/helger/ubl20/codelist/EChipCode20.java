@@ -16,62 +16,56 @@
  */
 package com.helger.ubl20.codelist;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 
 /**
- * This file was automatically generated from Genericode file ChipCode-2.0.gc. Do NOT edit! It
- * contains a total of 2 entries!
- *
+ * This file was automatically generated from Genericode file ChipCode-2.0.gc. Do NOT edit!
+ * It contains a total of 2 entries!
  * @author com.helger.ubl20.supplementary.tools.MainCreateEnumsGenericode20
  */
 @CodingStyleguideUnaware
-public enum EChipCode20 implements IHasID <String>, IHasDisplayName
+public enum EChipCode20
+    implements IHasID<String> , IHasDisplayName
 {
-  Chip ("Chip", "Chip"),
-  MagneticStripe ("MagneticStripe", "Magnetic Stripe");
+    Chip("Chip", "Chip"),
+    MagneticStripe("MagneticStripe", "Magnetic Stripe");
+    public static final String AGENCY_ID = "UBL";
+    public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
+    public static final String LIST_VERSION = "2.0";
+    private final String m_sID;
+    private final String m_sDisplayName;
 
-  public static final String AGENCY_ID = "UBL";
-  public static final String AGENCY_LONG_NAME = "OASIS Universal Business Language";
-  public static final String LIST_VERSION = "2.0";
-  private final String m_sID;
-  private final String m_sDisplayName;
+    EChipCode20(@NonNull @Nonempty final String sID, @NonNull final String sDisplayName) {
+        m_sID = sID;
+        m_sDisplayName = sDisplayName;
+    }
 
-  EChipCode20 (@NonNull @Nonempty final String sID, @NonNull final String sDisplayName)
-  {
-    m_sID = sID;
-    m_sDisplayName = sDisplayName;
-  }
+    @NonNull
+    @Nonempty
+    public String getID() {
+        return m_sID;
+    }
 
-  @NonNull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+    @NonNull
+    public String getDisplayName() {
+        return m_sDisplayName;
+    }
 
-  @NonNull
-  public String getDisplayName ()
-  {
-    return m_sDisplayName;
-  }
+    @Nullable
+    public static EChipCode20 getFromIDOrNull(@Nullable final String sID) {
+        return EnumHelper.getFromIDOrNull(EChipCode20 .class, sID);
+    }
 
-  @Nullable
-  public static EChipCode20 getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EChipCode20.class, sID);
-  }
-
-  @Nullable
-  public static String getDisplayNameFromIDOrNull (@Nullable final String sID)
-  {
-    final EChipCode20 eValue = EChipCode20.getFromIDOrNull (sID);
-    return ((eValue == null) ? null : eValue.getDisplayName ());
-  }
+    @Nullable
+    public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
+        final EChipCode20 eValue = EChipCode20 .getFromIDOrNull(sID);
+        return eValue == null?null:eValue.getDisplayName();
+    }
 }

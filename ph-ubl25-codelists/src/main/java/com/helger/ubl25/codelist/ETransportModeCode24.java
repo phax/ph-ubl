@@ -82,6 +82,6 @@ public enum ETransportModeCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final ETransportModeCode24 eValue = ETransportModeCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

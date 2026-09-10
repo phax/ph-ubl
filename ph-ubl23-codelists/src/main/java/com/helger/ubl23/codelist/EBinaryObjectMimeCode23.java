@@ -16,13 +16,12 @@
  */
 package com.helger.ubl23.codelist;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 
 /**

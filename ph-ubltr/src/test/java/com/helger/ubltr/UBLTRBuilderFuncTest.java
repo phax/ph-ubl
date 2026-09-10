@@ -44,7 +44,8 @@ public final class UBLTRBuilderFuncTest
   {
     final UBLTRJAXBMarshaller <CancelUserAccountType> aMarshaller = UBLTRMarshaller.cancelUserAccount ();
 
-    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT).get (0);
+    final String sFilename = MockUBLTRTestDocuments.getUBLTRTestDocuments (EUBLTRDocumentType.CANCEL_USER_ACCOUNT)
+                                                   .get (0);
 
     // Read from resource
     final CancelUserAccountType aRead1 = aMarshaller.read (new ClassPathResource (sFilename));

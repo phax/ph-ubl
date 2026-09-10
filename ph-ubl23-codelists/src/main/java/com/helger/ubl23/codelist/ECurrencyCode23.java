@@ -16,14 +16,13 @@
  */
 package com.helger.ubl23.codelist;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 
 /**
@@ -367,6 +366,6 @@ public enum ECurrencyCode23
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final ECurrencyCode23 eValue = ECurrencyCode23 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

@@ -801,6 +801,6 @@ public enum ELanguageCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final ELanguageCode24 eValue = ELanguageCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

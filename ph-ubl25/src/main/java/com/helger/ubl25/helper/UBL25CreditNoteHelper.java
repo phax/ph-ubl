@@ -86,8 +86,8 @@ public final class UBL25CreditNoteHelper
   }
 
   /**
-   * Clone an {@link CreditNoteLineType} to a {@link InvoiceLineType}. No values
-   * or signs or anything is changed.
+   * Clone an {@link CreditNoteLineType} to a {@link InvoiceLineType}. No values or signs or
+   * anything is changed.
    *
    * @param aSrc
    *        Source credit note line. May not be <code>null</code>.
@@ -126,10 +126,9 @@ public final class UBL25CreditNoteHelper
     }
     // Not in Invoice
     /*
-     * { final List <ResponseType> retDiscrepancyResponse = new ArrayList <> ();
-     * for (final ResponseType aItem : aSrc.getDiscrepancyResponse ())
-     * retDiscrepancyResponse.add (aItem == null ? null : aItem.clone ());
-     * aDst.setDiscrepancyResponse (retDiscrepancyResponse); }
+     * { final List <ResponseType> retDiscrepancyResponse = new ArrayList <> (); for (final
+     * ResponseType aItem : aSrc.getDiscrepancyResponse ()) retDiscrepancyResponse.add (aItem ==
+     * null ? null : aItem.clone ()); aDst.setDiscrepancyResponse (retDiscrepancyResponse); }
      */
     {
       final List <DocumentReferenceType> retDocumentReference = new ArrayList <> ();
@@ -137,7 +136,9 @@ public final class UBL25CreditNoteHelper
         retDocumentReference.add (aItem == null ? null : aItem.clone ());
       aDst.setDocumentReference (retDocumentReference);
     }
-    aDst.setFreeOfChargeIndicator (aSrc.getFreeOfChargeIndicator () == null ? null : aSrc.getFreeOfChargeIndicator ().clone ());
+    aDst.setFreeOfChargeIndicator (aSrc.getFreeOfChargeIndicator () == null ? null
+                                                                            : aSrc.getFreeOfChargeIndicator ()
+                                                                                  .clone ());
     aDst.setID (aSrc.getID () == null ? null : aSrc.getID ().clone ());
     {
       final List <PeriodType> retInvoicePeriod = new ArrayList <> ();
@@ -146,10 +147,12 @@ public final class UBL25CreditNoteHelper
       aDst.setInvoicePeriod (retInvoicePeriod);
     }
     // Name change
-    aDst.setInvoicedQuantity (aSrc.getCreditedQuantity () == null ? null : cloneToInvoicedQuantity (aSrc.getCreditedQuantity ()));
+    aDst.setInvoicedQuantity (aSrc.getCreditedQuantity () == null ? null
+                                                                  : cloneToInvoicedQuantity (aSrc.getCreditedQuantity ()));
     aDst.setItem (aSrc.getItem () == null ? null : aSrc.getItem ().clone ());
     aDst.setItemPriceExtension (aSrc.getItemPriceExtension () == null ? null : aSrc.getItemPriceExtension ().clone ());
-    aDst.setLineExtensionAmount (aSrc.getLineExtensionAmount () == null ? null : aSrc.getLineExtensionAmount ().clone ());
+    aDst.setLineExtensionAmount (aSrc.getLineExtensionAmount () == null ? null
+                                                                        : aSrc.getLineExtensionAmount ().clone ());
     {
       final List <NoteType> retNote = new ArrayList <> ();
       for (final NoteType aItem : aSrc.getNote ())
@@ -207,8 +210,8 @@ public final class UBL25CreditNoteHelper
   }
 
   /**
-   * Clone a {@link CreditNoteType} to an {@link InvoiceType}. No values or
-   * signs or anything is changed.
+   * Clone a {@link CreditNoteType} to an {@link InvoiceType}. No values or signs or anything is
+   * changed.
    *
    * @param aSrc
    *        Source credit note. May not be <code>null</code>.
@@ -219,8 +222,12 @@ public final class UBL25CreditNoteHelper
   {
     aDst.setAccountingCost (aSrc.getAccountingCost () == null ? null : aSrc.getAccountingCost ().clone ());
     aDst.setAccountingCostCode (aSrc.getAccountingCostCode () == null ? null : aSrc.getAccountingCostCode ().clone ());
-    aDst.setAccountingCustomerParty (aSrc.getAccountingCustomerParty () == null ? null : aSrc.getAccountingCustomerParty ().clone ());
-    aDst.setAccountingSupplierParty (aSrc.getAccountingSupplierParty () == null ? null : aSrc.getAccountingSupplierParty ().clone ());
+    aDst.setAccountingCustomerParty (aSrc.getAccountingCustomerParty () == null ? null
+                                                                                : aSrc.getAccountingCustomerParty ()
+                                                                                      .clone ());
+    aDst.setAccountingSupplierParty (aSrc.getAccountingSupplierParty () == null ? null
+                                                                                : aSrc.getAccountingSupplierParty ()
+                                                                                      .clone ());
     {
       final List <DocumentReferenceType> retAdditionalDocumentReference = new ArrayList <> ();
       for (final DocumentReferenceType aItem : aSrc.getAdditionalDocumentReference ())
@@ -264,12 +271,12 @@ public final class UBL25CreditNoteHelper
     }
     // DiscrepancyResponse is not present in Invoice
     /*
-     * { final List <ResponseType> retDiscrepancyResponse = new ArrayList <> ();
-     * for (final ResponseType aItem : src.getDiscrepancyResponse ())
-     * retDiscrepancyResponse.add (aItem == null ? null : aItem.clone ());
-     * ret.setDiscrepancyResponse (retDiscrepancyResponse); }
+     * { final List <ResponseType> retDiscrepancyResponse = new ArrayList <> (); for (final
+     * ResponseType aItem : src.getDiscrepancyResponse ()) retDiscrepancyResponse.add (aItem == null
+     * ? null : aItem.clone ()); ret.setDiscrepancyResponse (retDiscrepancyResponse); }
      */
-    aDst.setDocumentCurrencyCode (aSrc.getDocumentCurrencyCode () == null ? null : aSrc.getDocumentCurrencyCode ().clone ());
+    aDst.setDocumentCurrencyCode (aSrc.getDocumentCurrencyCode () == null ? null
+                                                                          : aSrc.getDocumentCurrencyCode ().clone ());
     aDst.setDueDate (aSrc.getDueDate () == null ? null : aSrc.getDueDate ().clone ());
     aDst.setID (aSrc.getID () == null ? null : aSrc.getID ().clone ());
     // Name change
@@ -318,8 +325,10 @@ public final class UBL25CreditNoteHelper
     aDst.setPaymentAlternativeExchangeRate (aSrc.getPaymentAlternativeExchangeRate () == null ? null
                                                                                               : aSrc.getPaymentAlternativeExchangeRate ()
                                                                                                     .clone ());
-    aDst.setPaymentCurrencyCode (aSrc.getPaymentCurrencyCode () == null ? null : aSrc.getPaymentCurrencyCode ().clone ());
-    aDst.setPaymentExchangeRate (aSrc.getPaymentExchangeRate () == null ? null : aSrc.getPaymentExchangeRate ().clone ());
+    aDst.setPaymentCurrencyCode (aSrc.getPaymentCurrencyCode () == null ? null
+                                                                        : aSrc.getPaymentCurrencyCode ().clone ());
+    aDst.setPaymentExchangeRate (aSrc.getPaymentExchangeRate () == null ? null
+                                                                        : aSrc.getPaymentExchangeRate ().clone ());
     {
       final List <PaymentMeansType> retPaymentMeans = new ArrayList <> ();
       for (final PaymentMeansType aItem : aSrc.getPaymentMeans ())
@@ -334,13 +343,14 @@ public final class UBL25CreditNoteHelper
     }
     // Not in CreditNote
     /*
-     * { final List <PaymentType> retPrepaidPayment = new ArrayList <> (); for
-     * (final PaymentType aItem : src.getPrepaidPayment ())
-     * retPrepaidPayment.add (aItem == null ? null : aItem.clone ());
-     * ret.setPrepaidPayment (retPrepaidPayment); }
+     * { final List <PaymentType> retPrepaidPayment = new ArrayList <> (); for (final PaymentType
+     * aItem : src.getPrepaidPayment ()) retPrepaidPayment.add (aItem == null ? null : aItem.clone
+     * ()); ret.setPrepaidPayment (retPrepaidPayment); }
      */
-    aDst.setPricingCurrencyCode (aSrc.getPricingCurrencyCode () == null ? null : aSrc.getPricingCurrencyCode ().clone ());
-    aDst.setPricingExchangeRate (aSrc.getPricingExchangeRate () == null ? null : aSrc.getPricingExchangeRate ().clone ());
+    aDst.setPricingCurrencyCode (aSrc.getPricingCurrencyCode () == null ? null
+                                                                        : aSrc.getPricingCurrencyCode ().clone ());
+    aDst.setPricingExchangeRate (aSrc.getPricingExchangeRate () == null ? null
+                                                                        : aSrc.getPricingExchangeRate ().clone ());
     aDst.setProfileExecutionID (aSrc.getProfileExecutionID () == null ? null : aSrc.getProfileExecutionID ().clone ());
     aDst.setProfileID (aSrc.getProfileID () == null ? null : aSrc.getProfileID ().clone ());
     {
@@ -355,7 +365,8 @@ public final class UBL25CreditNoteHelper
         retReceiptDocumentReference.add (aItem == null ? null : aItem.clone ());
       aDst.setReceiptDocumentReference (retReceiptDocumentReference);
     }
-    aDst.setSellerSupplierParty (aSrc.getSellerSupplierParty () == null ? null : aSrc.getSellerSupplierParty ().clone ());
+    aDst.setSellerSupplierParty (aSrc.getSellerSupplierParty () == null ? null
+                                                                        : aSrc.getSellerSupplierParty ().clone ());
     {
       final List <SignatureType> retSignature = new ArrayList <> ();
       for (final SignatureType aItem : aSrc.getSignature ())
@@ -371,7 +382,9 @@ public final class UBL25CreditNoteHelper
     aDst.setTaxCurrencyCode (aSrc.getTaxCurrencyCode () == null ? null : aSrc.getTaxCurrencyCode ().clone ());
     aDst.setTaxExchangeRate (aSrc.getTaxExchangeRate () == null ? null : aSrc.getTaxExchangeRate ().clone ());
     aDst.setTaxPointDate (aSrc.getTaxPointDate () == null ? null : aSrc.getTaxPointDate ().clone ());
-    aDst.setTaxRepresentativeParty (aSrc.getTaxRepresentativeParty () == null ? null : aSrc.getTaxRepresentativeParty ().clone ());
+    aDst.setTaxRepresentativeParty (aSrc.getTaxRepresentativeParty () == null ? null
+                                                                              : aSrc.getTaxRepresentativeParty ()
+                                                                                    .clone ());
     {
       final List <TaxTotalType> retTaxTotal = new ArrayList <> ();
       for (final TaxTotalType aItem : aSrc.getTaxTotal ())

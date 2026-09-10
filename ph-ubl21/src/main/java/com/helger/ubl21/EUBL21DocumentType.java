@@ -45,7 +45,8 @@ public enum EUBL21DocumentType
   @Since ("2.1")
   CALL_FOR_TENDERS(oasis.names.specification.ubl.schema.xsd.callfortenders_21.CallForTendersType.class,
                    UBL21Marshaller.getAllCallForTendersXSDs ()),
-  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_21.CatalogueType.class, UBL21Marshaller.getAllCatalogueXSDs ()),
+  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_21.CatalogueType.class,
+             UBL21Marshaller.getAllCatalogueXSDs ()),
   CATALOGUE_DELETION (oasis.names.specification.ubl.schema.xsd.cataloguedeletion_21.CatalogueDeletionType.class,
                       UBL21Marshaller.getAllCatalogueDeletionXSDs ()),
   CATALOGUE_ITEM_SPECIFICATION_UPDATE (oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_21.CatalogueItemSpecificationUpdateType.class,
@@ -62,8 +63,10 @@ public enum EUBL21DocumentType
   @Since ("2.1")
   CONTRACT_NOTICE(oasis.names.specification.ubl.schema.xsd.contractnotice_21.ContractNoticeType.class,
                   UBL21Marshaller.getAllContractNoticeXSDs ()),
-  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType.class, UBL21Marshaller.getAllCreditNoteXSDs ()),
-  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_21.DebitNoteType.class, UBL21Marshaller.getAllDebitNoteXSDs ()),
+  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType.class,
+               UBL21Marshaller.getAllCreditNoteXSDs ()),
+  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_21.DebitNoteType.class,
+              UBL21Marshaller.getAllDebitNoteXSDs ()),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_21.DespatchAdviceType.class,
                    UBL21Marshaller.getAllDespatchAdviceXSDs ()),
   @Since ("2.1")
@@ -79,7 +82,8 @@ public enum EUBL21DocumentType
   EXCEPTION_NOTIFICATION(oasis.names.specification.ubl.schema.xsd.exceptionnotification_21.ExceptionNotificationType.class,
                          UBL21Marshaller.getAllExceptionNotificationXSDs ()),
   @Since ("2.1")
-  FORECAST(oasis.names.specification.ubl.schema.xsd.forecast_21.ForecastType.class, UBL21Marshaller.getAllForecastXSDs ()),
+  FORECAST(oasis.names.specification.ubl.schema.xsd.forecast_21.ForecastType.class,
+           UBL21Marshaller.getAllForecastXSDs ()),
   @Since ("2.1")
   FORECAST_REVISION(oasis.names.specification.ubl.schema.xsd.forecastrevision_21.ForecastRevisionType.class,
                     UBL21Marshaller.getAllForecastRevisionXSDs ()),
@@ -109,33 +113,39 @@ public enum EUBL21DocumentType
   ORDER (oasis.names.specification.ubl.schema.xsd.order_21.OrderType.class, UBL21Marshaller.getAllOrderXSDs ()),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_21.OrderCancellationType.class,
                       UBL21Marshaller.getAllOrderCancellationXSDs ()),
-  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_21.OrderChangeType.class, UBL21Marshaller.getAllOrderChangeXSDs ()),
+  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_21.OrderChangeType.class,
+                UBL21Marshaller.getAllOrderChangeXSDs ()),
   ORDER_RESPONSE (oasis.names.specification.ubl.schema.xsd.orderresponse_21.OrderResponseType.class,
                   UBL21Marshaller.getAllOrderResponseXSDs ()),
   ORDER_RESPONSE_SIMPLE (oasis.names.specification.ubl.schema.xsd.orderresponsesimple_21.OrderResponseSimpleType.class,
                          UBL21Marshaller.getAllOrderResponseSimpleXSDs ()),
-  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_21.PackingListType.class, UBL21Marshaller.getAllPackingListXSDs ()),
+  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_21.PackingListType.class,
+                UBL21Marshaller.getAllPackingListXSDs ()),
   @Since ("2.1")
   PRIOR_INFORMATION_NOTICE(oasis.names.specification.ubl.schema.xsd.priorinformationnotice_21.PriorInformationNoticeType.class,
                            UBL21Marshaller.getAllPriorInformationNoticeXSDs ()),
   @Since ("2.1")
   PRODUCT_ACTIVITY(oasis.names.specification.ubl.schema.xsd.productactivity_21.ProductActivityType.class,
                    UBL21Marshaller.getAllProductActivityXSDs ()),
-  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_21.QuotationType.class, UBL21Marshaller.getAllQuotationXSDs ()),
+  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_21.QuotationType.class,
+             UBL21Marshaller.getAllQuotationXSDs ()),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_21.ReceiptAdviceType.class,
                   UBL21Marshaller.getAllReceiptAdviceXSDs ()),
-  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_21.ReminderType.class, UBL21Marshaller.getAllReminderXSDs ()),
+  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_21.ReminderType.class,
+            UBL21Marshaller.getAllReminderXSDs ()),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_21.RemittanceAdviceType.class,
                      UBL21Marshaller.getAllRemittanceAdviceXSDs ()),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_21.RequestForQuotationType.class,
                          UBL21Marshaller.getAllRequestForQuotationXSDs ()),
   @Since ("2.1")
-  RETAIL_EVENT(oasis.names.specification.ubl.schema.xsd.retailevent_21.RetailEventType.class, UBL21Marshaller.getAllRetailEventXSDs ()),
+  RETAIL_EVENT(oasis.names.specification.ubl.schema.xsd.retailevent_21.RetailEventType.class,
+               UBL21Marshaller.getAllRetailEventXSDs ()),
   SELF_BILLED_CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_21.SelfBilledCreditNoteType.class,
                            UBL21Marshaller.getAllSelfBilledCreditNoteXSDs ()),
   SELF_BILLED_INVOICE (oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_21.SelfBilledInvoiceType.class,
                        UBL21Marshaller.getAllSelfBilledInvoiceXSDs ()),
-  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_21.StatementType.class, UBL21Marshaller.getAllStatementXSDs ()),
+  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_21.StatementType.class,
+             UBL21Marshaller.getAllStatementXSDs ()),
   @Since ("2.1")
   STOCK_AVAILABILITY_REPORT(oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_21.StockAvailabilityReportType.class,
                             UBL21Marshaller.getAllStockAvailabilityReportXSDs ()),
@@ -212,8 +222,8 @@ public enum EUBL21DocumentType
   }
 
   /**
-   * @return The local element name of the root element of this document type.
-   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   * @return The local element name of the root element of this document type. E.g.
+   *         <code>OrderCancellation</code> for "Order Cancellation".
    */
   @NonNull
   @Nonempty
@@ -223,10 +233,9 @@ public enum EUBL21DocumentType
   }
 
   /**
-   * @return The XML namespace URI of the root element of this document type.
-   *         E.g.
-   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
-   *         for "Order Cancellation".
+   * @return The XML namespace URI of the root element of this document type. E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code> for
+   *         "Order Cancellation".
    */
   @NonNull
   @Nonempty

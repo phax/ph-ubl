@@ -138,8 +138,8 @@ public final class CreateInvoiceFromScratchFuncTest
   }
 
   /**
-   * This is an example that creates an XML schema compliant invoice <b>AND</b>
-   * adds an extension as requested in issue #10
+   * This is an example that creates an XML schema compliant invoice <b>AND</b> adds an extension as
+   * requested in issue #10
    */
   @Test
   public void testCreateInvoiceFromScratchWithExtension ()

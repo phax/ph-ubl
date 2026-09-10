@@ -177,6 +177,6 @@ public enum EAllowanceChargeReasonCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final EAllowanceChargeReasonCode24 eValue = EAllowanceChargeReasonCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

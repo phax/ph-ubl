@@ -35,8 +35,7 @@ import tr.gov.efatura.useraccount.CancelUserAccountType;
 import tr.gov.efatura.useraccount.ProcessUserAccountType;
 
 /**
- * The class provides all the UBL TR marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL TR marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

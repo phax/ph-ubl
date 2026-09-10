@@ -108,8 +108,8 @@ public final class MainCreateEnumsGenericode20 extends AbstractCreateUBLCodeList
       jClass.field (JMod.PUBLIC_STATIC_FINAL, String.class, "LIST_VERSION", JExpr.lit (sVersion));
   }
 
-  private static void _createGenericode04 (@NonNull final File aFile, @NonNull final CodeListDocument aCodeList)
-                                                                                                                 throws JCodeModelException
+  private static void _createGenericode04 (@NonNull final File aFile,
+                                           @NonNull final CodeListDocument aCodeList) throws JCodeModelException
   {
     if (aFile.getName ().equals ("ContainerSizeTypeCode-2.0.gc") || aFile.getName ().equals ("PortCode-2.0.gc"))
     {

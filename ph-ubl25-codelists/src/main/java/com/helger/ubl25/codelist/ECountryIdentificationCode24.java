@@ -588,6 +588,6 @@ public enum ECountryIdentificationCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final ECountryIdentificationCode24 eValue = ECountryIdentificationCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

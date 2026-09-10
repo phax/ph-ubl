@@ -467,6 +467,6 @@ public enum EPackagingTypeCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final EPackagingTypeCode24 eValue = EPackagingTypeCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

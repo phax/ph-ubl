@@ -41,8 +41,7 @@ public final class EformsUBLHelper
   {}
 
   /**
-   * Get the {@link EformsExtension} from the provided
-   * {@link ExtensionContentType}.
+   * Get the {@link EformsExtension} from the provided {@link ExtensionContentType}.
    *
    * @param aExt
    *        The extension content. May not be <code>null</code>.
@@ -60,8 +59,7 @@ public final class EformsUBLHelper
   }
 
   /**
-   * Set the {@link EformsExtension} to the provided
-   * {@link ExtensionContentType}.
+   * Set the {@link EformsExtension} to the provided {@link ExtensionContentType}.
    *
    * @param aExt
    *        The extension content. May not be <code>null</code>.

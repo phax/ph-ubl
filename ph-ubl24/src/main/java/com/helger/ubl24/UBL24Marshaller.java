@@ -129,8 +129,7 @@ import oasis.names.specification.ubl.schema.xsd.waybill_24.WaybillType;
 import oasis.names.specification.ubl.schema.xsd.weightstatement_24.WeightStatementType;
 
 /**
- * The class provides all the UBL 2.4 marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL 2.4 marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

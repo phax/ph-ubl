@@ -53,7 +53,8 @@ public final class UBL20InvoiceHelperTest
 
       // Read
       final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
-                                                  new DOMReaderSettings ().setSchema (UBL20Marshaller.invoice ().getSchema ()));
+                                                  new DOMReaderSettings ().setSchema (UBL20Marshaller.invoice ()
+                                                                                                     .getSchema ()));
       assertNotNull (sFilename, aDoc);
       final InvoiceType aUBLObject = UBL20Marshaller.invoice ().read (aDoc);
       assertNotNull (sFilename, aUBLObject);

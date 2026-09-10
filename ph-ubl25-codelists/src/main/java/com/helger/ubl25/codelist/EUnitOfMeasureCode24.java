@@ -1797,6 +1797,6 @@ public enum EUnitOfMeasureCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final EUnitOfMeasureCode24 eValue = EUnitOfMeasureCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

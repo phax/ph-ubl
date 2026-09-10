@@ -53,7 +53,8 @@ public enum EUBLPEDocumentType
                                               new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                      "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                      _getCL ()),
-                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
+                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                     "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
                                                                      _getCL ()))),
   VOIDED_DOCUMENTS (VoidedDocumentsType.class,
                     new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
@@ -68,7 +69,8 @@ public enum EUBLPEDocumentType
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                     "common/UBLPE-SunatAggregateComponents-1.0.xsd",
                                                                     _getCL ()),
-                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY + "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
+                                             new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
+                                                                    "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
                                                                     _getCL ())));
 
   @NonNull
@@ -86,7 +88,8 @@ public enum EUBLPEDocumentType
     m_aXSDs = eOther.getAllXSDResources ();
   }
 
-  EUBLPEDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EUBLPEDocumentType (@NonNull final Class <?> aClass,
+                      @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;

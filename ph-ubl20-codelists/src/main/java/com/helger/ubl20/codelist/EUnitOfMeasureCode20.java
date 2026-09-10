@@ -16,15 +16,13 @@
  */
 package com.helger.ubl20.codelist;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import com.helger.annotation.Nonempty;
 import com.helger.annotation.style.CodingStyleguideUnaware;
 import com.helger.base.id.IHasID;
 import com.helger.base.lang.EnumHelper;
 import com.helger.base.name.IHasDisplayName;
-
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import un.unece.uncefact.codelist.specification._66411._2001.UnitCodeContentType;
 
 
@@ -1161,16 +1159,16 @@ public enum EUnitOfMeasureCode20
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final EUnitOfMeasureCode20 eValue = EUnitOfMeasureCode20 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 
     @Nullable
     public static EUnitOfMeasureCode20 getFromJAXBOrNull(@Nullable final UnitCodeContentType aID) {
-        return ((aID == null)?null:EUnitOfMeasureCode20 .getFromIDOrNull(aID.value()));
+        return aID == null?null:EUnitOfMeasureCode20 .getFromIDOrNull(aID.value());
     }
 
     @Nullable
     public static String getDisplayNameFromJAXBOrNull(@Nullable final UnitCodeContentType aID) {
-        return ((aID == null)?null:EUnitOfMeasureCode20 .getDisplayNameFromIDOrNull(aID.value()));
+        return aID == null?null:EUnitOfMeasureCode20 .getDisplayNameFromIDOrNull(aID.value());
     }
 }

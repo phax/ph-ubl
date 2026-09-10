@@ -101,8 +101,7 @@ import oasis.names.specification.ubl.schema.xsd.utilitystatement_21.UtilityState
 import oasis.names.specification.ubl.schema.xsd.waybill_21.WaybillType;
 
 /**
- * The class provides all the UBL 2.0 marshallers for reading, writing and
- * validation.
+ * The class provides all the UBL 2.0 marshallers for reading, writing and validation.
  *
  * @author Philip Helger
  * @since 8.0.0

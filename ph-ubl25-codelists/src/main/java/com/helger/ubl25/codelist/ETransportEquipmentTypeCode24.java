@@ -168,6 +168,6 @@ public enum ETransportEquipmentTypeCode24
     @Nullable
     public static String getDisplayNameFromIDOrNull(@Nullable final String sID) {
         final ETransportEquipmentTypeCode24 eValue = ETransportEquipmentTypeCode24 .getFromIDOrNull(sID);
-        return ((eValue == null)?null:eValue.getDisplayName());
+        return eValue == null?null:eValue.getDisplayName();
     }
 }

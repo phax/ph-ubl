@@ -47,7 +47,8 @@ public enum EFormsUBLDocumentType
 {
   CONTRACT_AWARD_NOTICE (ContractAwardNoticeType.class, EUBL23DocumentType.CONTRACT_AWARD_NOTICE.getAllXSDResources ()),
   CONTRACT_NOTICE (ContractNoticeType.class, EUBL23DocumentType.CONTRACT_NOTICE.getAllXSDResources ()),
-  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class, EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
+  PRIOR_INFORMATION_NOTICE (PriorInformationNoticeType.class,
+                            EUBL23DocumentType.PRIOR_INFORMATION_NOTICE.getAllXSDResources ()),
   BUSINESS_REGISTRATION_INFORMATION_NOTICE (BusinessRegistrationInformationNoticeType.class,
                                             new CommonsArrayList <> (CCCTS.getXSDResource (),
                                                                      CXMLDSig.getXSDResource (),
@@ -62,7 +63,8 @@ public enum EFormsUBLDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EFormsUBLDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EFormsUBLDocumentType (@NonNull final Class <?> aClass,
+                         @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
   {
     m_aImplClass = aClass;
     m_aXSDs = aXSDPaths;

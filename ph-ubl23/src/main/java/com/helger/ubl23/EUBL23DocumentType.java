@@ -45,7 +45,8 @@ public enum EUBL23DocumentType
                  UBL23Marshaller.getAllBusinessCardXSDs ()),
   CALL_FOR_TENDERS (oasis.names.specification.ubl.schema.xsd.callfortenders_23.CallForTendersType.class,
                     UBL23Marshaller.getAllCallForTendersXSDs ()),
-  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_23.CatalogueType.class, UBL23Marshaller.getAllCatalogueXSDs ()),
+  CATALOGUE (oasis.names.specification.ubl.schema.xsd.catalogue_23.CatalogueType.class,
+             UBL23Marshaller.getAllCatalogueXSDs ()),
   CATALOGUE_DELETION (oasis.names.specification.ubl.schema.xsd.cataloguedeletion_23.CatalogueDeletionType.class,
                       UBL23Marshaller.getAllCatalogueDeletionXSDs ()),
   CATALOGUE_ITEM_SPECIFICATION_UPDATE (oasis.names.specification.ubl.schema.xsd.catalogueitemspecificationupdate_23.CatalogueItemSpecificationUpdateType.class,
@@ -63,8 +64,10 @@ public enum EUBL23DocumentType
                          UBL23Marshaller.getAllContractAwardNoticeXSDs ()),
   CONTRACT_NOTICE (oasis.names.specification.ubl.schema.xsd.contractnotice_23.ContractNoticeType.class,
                    UBL23Marshaller.getAllContractNoticeXSDs ()),
-  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_23.CreditNoteType.class, UBL23Marshaller.getAllCreditNoteXSDs ()),
-  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_23.DebitNoteType.class, UBL23Marshaller.getAllDebitNoteXSDs ()),
+  CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.creditnote_23.CreditNoteType.class,
+               UBL23Marshaller.getAllCreditNoteXSDs ()),
+  DEBIT_NOTE (oasis.names.specification.ubl.schema.xsd.debitnote_23.DebitNoteType.class,
+              UBL23Marshaller.getAllDebitNoteXSDs ()),
   DESPATCH_ADVICE (oasis.names.specification.ubl.schema.xsd.despatchadvice_23.DespatchAdviceType.class,
                    UBL23Marshaller.getAllDespatchAdviceXSDs ()),
   DIGITAL_AGREEMENT (oasis.names.specification.ubl.schema.xsd.digitalagreement_23.DigitalAgreementType.class,
@@ -89,7 +92,8 @@ public enum EUBL23DocumentType
                                   UBL23Marshaller.getAllExpressionOfInterestRequestXSDs ()),
   EXPRESSION_OF_INTEREST_RESPONSE (oasis.names.specification.ubl.schema.xsd.expressionofinterestresponse_23.ExpressionOfInterestResponseType.class,
                                    UBL23Marshaller.getAllExpressionOfInterestResponseXSDs ()),
-  FORECAST (oasis.names.specification.ubl.schema.xsd.forecast_23.ForecastType.class, UBL23Marshaller.getAllForecastXSDs ()),
+  FORECAST (oasis.names.specification.ubl.schema.xsd.forecast_23.ForecastType.class,
+            UBL23Marshaller.getAllForecastXSDs ()),
   FORECAST_REVISION (oasis.names.specification.ubl.schema.xsd.forecastrevision_23.ForecastRevisionType.class,
                      UBL23Marshaller.getAllForecastRevisionXSDs ()),
   FORWARDING_INSTRUCTIONS (oasis.names.specification.ubl.schema.xsd.forwardinginstructions_23.ForwardingInstructionsType.class,
@@ -119,16 +123,19 @@ public enum EUBL23DocumentType
   ITEM_INFORMATION_REQUEST (oasis.names.specification.ubl.schema.xsd.iteminformationrequest_23.ItemInformationRequestType.class,
                             UBL23Marshaller.getAllItemInformationRequestXSDs ()),
   @Since ("2.3")
-  MANIFEST(oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType.class, UBL23Marshaller.getAllManifestXSDs ()),
+  MANIFEST(oasis.names.specification.ubl.schema.xsd.manifest_23.ManifestType.class,
+           UBL23Marshaller.getAllManifestXSDs ()),
   ORDER (oasis.names.specification.ubl.schema.xsd.order_23.OrderType.class, UBL23Marshaller.getAllOrderXSDs ()),
   ORDER_CANCELLATION (oasis.names.specification.ubl.schema.xsd.ordercancellation_23.OrderCancellationType.class,
                       UBL23Marshaller.getAllOrderCancellationXSDs ()),
-  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_23.OrderChangeType.class, UBL23Marshaller.getAllOrderChangeXSDs ()),
+  ORDER_CHANGE (oasis.names.specification.ubl.schema.xsd.orderchange_23.OrderChangeType.class,
+                UBL23Marshaller.getAllOrderChangeXSDs ()),
   ORDER_RESPONSE (oasis.names.specification.ubl.schema.xsd.orderresponse_23.OrderResponseType.class,
                   UBL23Marshaller.getAllOrderResponseXSDs ()),
   ORDER_RESPONSE_SIMPLE (oasis.names.specification.ubl.schema.xsd.orderresponsesimple_23.OrderResponseSimpleType.class,
                          UBL23Marshaller.getAllOrderResponseSimpleXSDs ()),
-  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_23.PackingListType.class, UBL23Marshaller.getAllPackingListXSDs ()),
+  PACKING_LIST (oasis.names.specification.ubl.schema.xsd.packinglist_23.PackingListType.class,
+                UBL23Marshaller.getAllPackingListXSDs ()),
   PRIOR_INFORMATION_NOTICE (oasis.names.specification.ubl.schema.xsd.priorinformationnotice_23.PriorInformationNoticeType.class,
                             UBL23Marshaller.getAllPriorInformationNoticeXSDs ()),
   PRODUCT_ACTIVITY (oasis.names.specification.ubl.schema.xsd.productactivity_23.ProductActivityType.class,
@@ -146,20 +153,24 @@ public enum EUBL23DocumentType
                                      UBL23Marshaller.getAllQualificationApplicationRequestXSDs ()),
   QUALIFICATION_APPLICATION_RESPONSE (oasis.names.specification.ubl.schema.xsd.qualificationapplicationresponse_23.QualificationApplicationResponseType.class,
                                       UBL23Marshaller.getAllQualificationApplicationResponseXSDs ()),
-  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_23.QuotationType.class, UBL23Marshaller.getAllQuotationXSDs ()),
+  QUOTATION (oasis.names.specification.ubl.schema.xsd.quotation_23.QuotationType.class,
+             UBL23Marshaller.getAllQuotationXSDs ()),
   RECEIPT_ADVICE (oasis.names.specification.ubl.schema.xsd.receiptadvice_23.ReceiptAdviceType.class,
                   UBL23Marshaller.getAllReceiptAdviceXSDs ()),
-  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_23.ReminderType.class, UBL23Marshaller.getAllReminderXSDs ()),
+  REMINDER (oasis.names.specification.ubl.schema.xsd.reminder_23.ReminderType.class,
+            UBL23Marshaller.getAllReminderXSDs ()),
   REMITTANCE_ADVICE (oasis.names.specification.ubl.schema.xsd.remittanceadvice_23.RemittanceAdviceType.class,
                      UBL23Marshaller.getAllRemittanceAdviceXSDs ()),
   REQUEST_FOR_QUOTATION (oasis.names.specification.ubl.schema.xsd.requestforquotation_23.RequestForQuotationType.class,
                          UBL23Marshaller.getAllRequestForQuotationXSDs ()),
-  RETAIL_EVENT (oasis.names.specification.ubl.schema.xsd.retailevent_23.RetailEventType.class, UBL23Marshaller.getAllRetailEventXSDs ()),
+  RETAIL_EVENT (oasis.names.specification.ubl.schema.xsd.retailevent_23.RetailEventType.class,
+                UBL23Marshaller.getAllRetailEventXSDs ()),
   SELF_BILLED_CREDIT_NOTE (oasis.names.specification.ubl.schema.xsd.selfbilledcreditnote_23.SelfBilledCreditNoteType.class,
                            UBL23Marshaller.getAllSelfBilledCreditNoteXSDs ()),
   SELF_BILLED_INVOICE (oasis.names.specification.ubl.schema.xsd.selfbilledinvoice_23.SelfBilledInvoiceType.class,
                        UBL23Marshaller.getAllSelfBilledInvoiceXSDs ()),
-  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_23.StatementType.class, UBL23Marshaller.getAllStatementXSDs ()),
+  STATEMENT (oasis.names.specification.ubl.schema.xsd.statement_23.StatementType.class,
+             UBL23Marshaller.getAllStatementXSDs ()),
   STOCK_AVAILABILITY_REPORT (oasis.names.specification.ubl.schema.xsd.stockavailabilityreport_23.StockAvailabilityReportType.class,
                              UBL23Marshaller.getAllStockAvailabilityReportXSDs ()),
   TENDER (oasis.names.specification.ubl.schema.xsd.tender_23.TenderType.class, UBL23Marshaller.getAllTenderXSDs ()),
@@ -238,8 +249,8 @@ public enum EUBL23DocumentType
   }
 
   /**
-   * @return The local element name of the root element of this document type.
-   *         E.g. <code>OrderCancellation</code> for "Order Cancellation".
+   * @return The local element name of the root element of this document type. E.g.
+   *         <code>OrderCancellation</code> for "Order Cancellation".
    */
   @NonNull
   @Nonempty
@@ -249,10 +260,9 @@ public enum EUBL23DocumentType
   }
 
   /**
-   * @return The XML namespace URI of the root element of this document type.
-   *         E.g.
-   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code>
-   *         for "Order Cancellation".
+   * @return The XML namespace URI of the root element of this document type. E.g.
+   *         <code>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</code> for
+   *         "Order Cancellation".
    */
   @NonNull
   @Nonempty
