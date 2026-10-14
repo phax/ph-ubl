@@ -222,5 +222,6 @@
     <module>ph-ublpe</module>
     <module>ph-ubl-dian</module>
     <module>ph-ubl-eforms</module>
+    <module>ph-ubl-hr</module>
   </modules>
 </project>

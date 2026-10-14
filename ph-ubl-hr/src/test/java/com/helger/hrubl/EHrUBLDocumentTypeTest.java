@@ -1,0 +1,58 @@
+/*
+ * Copyright (C) 2026 Philip Helger (www.helger.com)
+ * philip[at]helger[dot]com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.helger.hrubl;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+import com.helger.io.resource.IReadableResource;
+
+/**
+ * Test class for class {@link EHrUBLDocumentType}.
+ */
+public final class EHrUBLDocumentTypeTest
+{
+  @Test
+  public void testAll ()
+  {
+    for (final EHrUBLDocumentType e : EHrUBLDocumentType.values ())
+    {
+      assertNotNull (e.getImplementationClass ());
+      assertTrue (e.getAllXSDResources ().size () >= 1);
+      for (final IReadableResource aRes : e.getAllXSDResources ())
+        assertTrue (e.name () + " - " + aRes.getPath (), aRes.exists ());
+      assertSame (e, EHrUBLDocumentType.valueOf (e.name ()));
+    }
+  }
+
+  @Test
+  public void testExtensionXSDIsInjectedBeforeTheRootXSD ()
+  {
+    for (final EHrUBLDocumentType e : new EHrUBLDocumentType [] { EHrUBLDocumentType.INVOICE,
+                                                                  EHrUBLDocumentType.CREDIT_NOTE })
+    {
+      final int nSize = e.getAllXSDResources ().size ();
+      assertEquals (e.name (),
+                    CHrUBL.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS.getPath (),
+                    e.getAllXSDResources ().get (nSize - 2).getPath ());
+    }
+  }
+}

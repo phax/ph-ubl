@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2" xmlns:sig="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2" xmlns:hrextac="urn:mfin.gov.hr:schema:xsd:HRExtensionAggregateComponents-1">
+  <ext:UBLExtensions>
+  	<ext:UBLExtension>
+  		<ext:ExtensionContent>
+  			<hrextac:HRFISK20Data>
+  				<hrextac:HRTaxTotal>
+  					<cbc:TaxAmount currencyID="EUR">25.00</cbc:TaxAmount>
+  					<hrextac:HRTaxSubtotal>
+  						<cbc:TaxableAmount currencyID="EUR">100.00</cbc:TaxableAmount>
+  						<cbc:TaxAmount currencyID="EUR">25.00</cbc:TaxAmount>
+  						<hrextac:HRTaxCategory>
+  							<cbc:ID>S</cbc:ID>
+  							<cbc:Name>HR:PDV25</cbc:Name>
+  							<cbc:Percent>25</cbc:Percent>
+  							<hrextac:HRTaxScheme>
+  								<cbc:ID>VAT</cbc:ID>
+  							</hrextac:HRTaxScheme>
+  						</hrextac:HRTaxCategory>
+  					</hrextac:HRTaxSubtotal>
+  					<hrextac:HRTaxSubtotal>
+  						<cbc:TaxableAmount currencyID="EUR">5.00</cbc:TaxableAmount>
+  						<cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+  						<hrextac:HRTaxCategory>
+  							<cbc:ID>O</cbc:ID>
+  							<cbc:Name>HR:POVNAK</cbc:Name>
+  							<cbc:Percent>0</cbc:Percent>
+  							<hrextac:HRTaxScheme>
+  								<cbc:ID>OTH</cbc:ID>
+  							</hrextac:HRTaxScheme>
+  						</hrextac:HRTaxCategory>
+  					</hrextac:HRTaxSubtotal>
+  				</hrextac:HRTaxTotal>
+  				<hrextac:HRLegalMonetaryTotal>
+  					<cbc:TaxExclusiveAmount currencyID="EUR">100.00</cbc:TaxExclusiveAmount>
+  					<hrextac:OutOfScopeOfVATAmount currencyID="EUR">5.00</hrextac:OutOfScopeOfVATAmount>
+  				</hrextac:HRLegalMonetaryTotal>
+  			</hrextac:HRFISK20Data>
+  		</ext:ExtensionContent>
+  	</ext:UBLExtension>
+	<ext:UBLExtension>
+		<ext:ExtensionContent>
+			<sig:UBLDocumentSignatures>
+				<sac:SignatureInformation></sac:SignatureInformation>
+			</sig:UBLDocumentSignatures>
+		</ext:ExtensionContent>
+	</ext:UBLExtension>
+  </ext:UBLExtensions>
+	<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:mfin.gov.hr:cius-2025:1.0#conformant#urn:mfin.gov.hr:ext-2025:1.0</cbc:CustomizationID>
+	<cbc:ProfileID>P1</cbc:ProfileID>
+	<cbc:ID>1-P1-1</cbc:ID>
+	<cbc:IssueDate>2025-12-01</cbc:IssueDate>
+	<cbc:IssueTime>12:00:00</cbc:IssueTime>
+	<cbc:DueDate>2025-12-31</cbc:DueDate>
+	<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="9934">12345678901</cbc:EndpointID>
+			<cac:PostalAddress>
+				<cbc:StreetName>Ulica 1</cbc:StreetName>
+				<cbc:CityName>ZAGREB</cbc:CityName>
+				<cbc:PostalZone>10000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>HR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>HR12345678901</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>TVRTKA A d.o.o.</cbc:RegistrationName>
+				<cbc:CompanyLegalForm>Osnovano na trgovačkom sudu, temeljni kapital</cbc:CompanyLegalForm>
+			</cac:PartyLegalEntity>
+		</cac:Party>
+		<cac:SellerContact>
+			<cbc:ID>12345678901</cbc:ID>
+			<cbc:Name>Operater1</cbc:Name>
+		</cac:SellerContact>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="9934">11111111119</cbc:EndpointID>
+			<cac:PostalAddress>
+				<cbc:StreetName>Ulica 2</cbc:StreetName>
+				<cbc:CityName>RIJEKA</cbc:CityName>
+				<cbc:PostalZone>51000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>HR</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>HR11111111119</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>Tvrtka B d.o.o.</cbc:RegistrationName>
+			</cac:PartyLegalEntity>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2025-09-25</cbc:ActualDeliveryDate>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+		<cbc:InstructionNote>Opis plaćanja</cbc:InstructionNote>
+		<cbc:PaymentID>HR00 123456</cbc:PaymentID>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>HRXXXXXXXXXXXXXXXX</cbc:ID>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="EUR">25.00</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="EUR">100.00</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="EUR">25.00</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="EUR">5.00</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Percent>0.00</cbc:Percent>
+				<cbc:TaxExemptionReason>#HR:POVNAK#Povratna naknada</cbc:TaxExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="EUR">105.00</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="EUR">105.00</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="EUR">130.00</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="EUR">130.00</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="H87">1.000</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">100.00</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Name>Proizvod</cbc:Name>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="CG">62.20.20</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Name>HR:PDV25</cbc:Name>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">100.000000</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="H87">1.000</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="H87">1.000000</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">5.00</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Name>Povratna naknada</cbc:Name>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="CG">22.22.19</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>E</cbc:ID>
+				<cbc:Name>HR:POVNAK</cbc:Name>
+				<cbc:Percent>0</cbc:Percent>
+				<cbc:TaxExemptionReason>#HR:POVNAK#Povratna naknada</cbc:TaxExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">5.000000</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="H87">1.000000</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>
