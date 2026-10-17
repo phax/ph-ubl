@@ -27,14 +27,14 @@ import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.ubl20.CUBL20;
-import com.helger.ubl20.UBL20Marshaller;
-import com.helger.ubl20.UBL20Marshaller.UBL20JAXBMarshaller;
+import com.helger.ubl21.UBL21Marshaller;
+import com.helger.ubl21.UBL21Marshaller.UBL21JAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
-import oasis.names.specification.ubl.schema.xsd.applicationresponse_2.ApplicationResponseType;
-import oasis.names.specification.ubl.schema.xsd.creditnote_2.CreditNoteType;
-import oasis.names.specification.ubl.schema.xsd.debitnote_2.DebitNoteType;
-import oasis.names.specification.ubl.schema.xsd.invoice_2.InvoiceType;
+import oasis.names.specification.ubl.schema.xsd.applicationresponse_21.ApplicationResponseType;
+import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
+import oasis.names.specification.ubl.schema.xsd.debitnote_21.DebitNoteType;
+import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
@@ -89,27 +89,27 @@ public final class UBLPEMarshaller
   {}
 
   @NonNull
-  public static UBL20JAXBMarshaller <ApplicationResponseType> applicationResponse ()
+  public static UBL21JAXBMarshaller <ApplicationResponseType> applicationResponse ()
   {
-    return UBL20Marshaller.applicationResponse ();
+    return UBL21Marshaller.applicationResponse ();
   }
 
   @NonNull
-  public static UBL20JAXBMarshaller <CreditNoteType> creditNote ()
+  public static UBL21JAXBMarshaller <CreditNoteType> creditNote ()
   {
-    return UBL20Marshaller.creditNote ();
+    return UBL21Marshaller.creditNote ();
   }
 
   @NonNull
-  public static UBL20JAXBMarshaller <DebitNoteType> debitNote ()
+  public static UBL21JAXBMarshaller <DebitNoteType> debitNote ()
   {
-    return UBL20Marshaller.debitNote ();
+    return UBL21Marshaller.debitNote ();
   }
 
   @NonNull
-  public static UBL20JAXBMarshaller <InvoiceType> invoice ()
+  public static UBL21JAXBMarshaller <InvoiceType> invoice ()
   {
-    return UBL20Marshaller.invoice ();
+    return UBL21Marshaller.invoice ();
   }
 
   private static final ICommonsList <ClassPathResource> XSDS_SD = new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
@@ -122,7 +122,7 @@ public final class UBLPEMarshaller
                                                                                            CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
                                                                                            CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
                                                                                            new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.1.xsd",
                                                                                                                   CUBLPE.getCL ()),
                                                                                            new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                                                                   "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
@@ -146,7 +146,7 @@ public final class UBLPEMarshaller
                                                                                            CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
                                                                                            CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
                                                                                            new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                                                                  "common/UBLPE-SunatAggregateComponents-1.1.xsd",
                                                                                                                   CUBLPE.getCL ()),
                                                                                            new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                                                                   "maindoc/UBLPE-VoidedDocuments-1.0.xsd",

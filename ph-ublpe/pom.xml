@@ -59,6 +59,10 @@
       <artifactId>ph-ubl20</artifactId>
     </dependency>
     <dependency>
+      <groupId>com.helger.ubl</groupId>
+      <artifactId>ph-ubl21</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <scope>test</scope>
@@ -105,7 +109,13 @@
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <extension>true</extension>
           <strict>false</strict>
-          <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+          <!-- Only UBL 2.0 is an episode: the SUNAT XSDs are based on UBL 2.0 and the UBL 2.1 episode would conflict -->
+          <episodes>
+            <episode>
+              <groupId>com.helger.ubl</groupId>
+              <artifactId>ph-ubl20</artifactId>
+            </episode>
+          </episodes>
           <args>
             <arg>-no-header</arg>
             <arg>-quiet</arg>

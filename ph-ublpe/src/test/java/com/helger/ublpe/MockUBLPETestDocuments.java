@@ -28,9 +28,18 @@ import com.helger.ubl.testfiles.UBLTestFiles;
 public final class MockUBLPETestDocuments
 {
   private static final String PREFIX = "external/test-ublpe20/";
+  private static final String PREFIX_21 = "external/test-ublpe21/";
 
   private MockUBLPETestDocuments ()
   {}
+
+  @NonNull
+  @ReturnsMutableCopy
+  public static ICommonsList <String> getUBLPE21InvoiceTestDocuments ()
+  {
+    // EjemploFacturaISC.xml is not valid UBL 2.1
+    return new CommonsArrayList <> (PREFIX_21 + "20100454523-01-F001-4355.xml");
+  }
 
   @NonNull
   @ReturnsMutableCopy

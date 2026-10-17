@@ -331,6 +331,11 @@ For further information on the Universal Business Language can be found on the f
 
 v10.3.0 - work in progress
 * New submodule `ph-ubl-hr` for the extension of the Croatian e-Invoice (CIUS-HR / EXT-HR) - see [#70](https://github.com/phax/ph-ubl/issues/70)
+* `ph-ublpe`: `ApplicationResponse`, `CreditNote`, `DebitNote` and `Invoice` in `UBLPEMarshaller` and `EUBLPEDocumentType` are now based on UBL 2.1 (`ph-ubl21`) instead of UBL 2.0.
+  This is an incompatible change.
+* `ph-ublpe`: updated to the SUNAT extension schema `UBLPE-SunatAggregateComponents-1.1.xsd` of the "Facturador SUNAT" v1.3.2.
+  The JAXB class for its `DocumentReferenceType` is called `SunatDocumentReferenceType`.
+  `SummaryDocuments` and `VoidedDocuments` remain based on UBL 2.0, because the SUNAT extension schema uses UBL 2.0 only components.
 
 v10.2.1 - 2026-08-27
 * Updated to UBL 2.5 OS - https://docs.oasis-open.org/ubl/os-UBL-2.5/ (no XSD changes compared to CS01)

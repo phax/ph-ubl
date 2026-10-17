@@ -26,11 +26,13 @@ import org.w3c.dom.Document;
 
 import com.helger.diagnostics.error.list.IErrorList;
 import com.helger.io.resource.ClassPathResource;
+import com.helger.ubl21.UBL21Marshaller.UBL21JAXBMarshaller;
 import com.helger.ublpe.UBLPEMarshaller.UBLPEJAXBMarshaller;
 import com.helger.unittest.support.TestHelper;
 import com.helger.xml.serialize.read.DOMReader;
 import com.helger.xml.serialize.read.DOMReaderSettings;
 
+import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
 
@@ -81,6 +83,44 @@ public final class UBLPEFuncTest
     final IErrorList aErrors = UBLPEMarshaller.summaryDocuments ().validate (new SummaryDocumentsType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
+  }
+
+  @Test
+  public void testReadAndWriteInvoice21 ()
+  {
+    final UBL21JAXBMarshaller <InvoiceType> m = UBLPEMarshaller.invoice ();
+
+    for (final String sFilename : MockUBLPETestDocuments.getUBLPE21InvoiceTestDocuments ())
+    {
+      // Read
+      final Document aDoc = DOMReader.readXMLDOM (new ClassPathResource (sFilename),
+                                                  new DOMReaderSettings ().setSchema (m.getSchema ()));
+      assertNotNull (sFilename, aDoc);
+      final InvoiceType aUBLObject = m.read (aDoc);
+      assertNotNull (sFilename, aUBLObject);
+
+      // Validate
+      IErrorList aErrors = m.validate (aUBLObject);
+      assertNotNull (sFilename, aErrors);
+      assertFalse (sFilename, aErrors.containsAtLeastOneError ());
+
+      // write again
+      final Document aDoc2 = m.getAsDocument (aUBLObject);
+      assertNotNull (aDoc2);
+      assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
+      assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
+
+      // read again
+      final InvoiceType aUBLObject2 = m.read (aDoc2);
+      assertNotNull (sFilename, aUBLObject2);
+      // The extension content is a DOM element, which cannot be compared on object level
+      assertEquals (sFilename, m.getAsString (aUBLObject), m.getAsString (aUBLObject2));
+
+      // Validate
+      aErrors = m.validate (aUBLObject2);
+      assertNotNull (sFilename, aErrors);
+      assertFalse (sFilename, aErrors.containsAtLeastOneError ());
+    }
   }
 
   @Test

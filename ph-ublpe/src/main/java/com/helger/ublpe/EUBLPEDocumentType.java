@@ -24,7 +24,7 @@ import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
 import com.helger.ubl20.CUBL20;
-import com.helger.ubl20.EUBL20DocumentType;
+import com.helger.ubl21.EUBL21DocumentType;
 
 import sunat.names.specification.ubl.peru.schema.xsd.summarydocuments_1.SummaryDocumentsType;
 import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDocumentsType;
@@ -36,10 +36,10 @@ import sunat.names.specification.ubl.peru.schema.xsd.voideddocuments_1.VoidedDoc
  */
 public enum EUBLPEDocumentType
 {
-  APPLICATION_RESPONSE (EUBL20DocumentType.APPLICATION_RESPONSE),
-  CREDIT_NOTE (EUBL20DocumentType.CREDIT_NOTE),
-  DEBIT_NOTE (EUBL20DocumentType.DEBIT_NOTE),
-  INVOICE (EUBL20DocumentType.INVOICE),
+  APPLICATION_RESPONSE (EUBL21DocumentType.APPLICATION_RESPONSE),
+  CREDIT_NOTE (EUBL21DocumentType.CREDIT_NOTE),
+  DEBIT_NOTE (EUBL21DocumentType.DEBIT_NOTE),
+  INVOICE (EUBL21DocumentType.INVOICE),
   SUMMARY_DOCUMENTS (SummaryDocumentsType.class,
                      new CommonsArrayList <> (CUBL20.XSD_CODELIST_UNIT_CODE,
                                               CUBL20.XSD_CODELIST_MIME_MEDIA_TYPE_CODE,
@@ -51,7 +51,7 @@ public enum EUBLPEDocumentType
                                               CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
                                               CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
                                               new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                     "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                     "common/UBLPE-SunatAggregateComponents-1.1.xsd",
                                                                      _getCL ()),
                                               new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                      "maindoc/UBLPE-SummaryDocuments-1.0.xsd",
@@ -67,7 +67,7 @@ public enum EUBLPEDocumentType
                                              CUBL20.XSD_COMMON_AGGREGATE_COMPONENTS,
                                              CUBL20.XSD_COMMON_EXTENSION_COMPONENTS,
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
-                                                                    "common/UBLPE-SunatAggregateComponents-1.0.xsd",
+                                                                    "common/UBLPE-SunatAggregateComponents-1.1.xsd",
                                                                     _getCL ()),
                                              new ClassPathResource (CUBLPE.SCHEMA_DIRECTORY +
                                                                     "maindoc/UBLPE-VoidedDocuments-1.0.xsd",
@@ -82,7 +82,7 @@ public enum EUBLPEDocumentType
   private final Class <?> m_aImplClass;
   private final ICommonsList <ClassPathResource> m_aXSDs;
 
-  EUBLPEDocumentType (@NonNull final EUBL20DocumentType eOther)
+  EUBLPEDocumentType (@NonNull final EUBL21DocumentType eOther)
   {
     m_aImplClass = eOther.getImplementationClass ();
     m_aXSDs = eOther.getAllXSDResources ();
