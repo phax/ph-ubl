@@ -26,33 +26,33 @@ import org.junit.Test;
 import com.helger.io.resource.IReadableResource;
 
 /**
- * Test class for class {@link EHrUBLDocumentType}.
+ * Test class for class {@link EHrUblDocumentType}.
  */
-public final class EHrUBLDocumentTypeTest
+public final class EHrUblDocumentTypeTest
 {
   @Test
   public void testAll ()
   {
-    for (final EHrUBLDocumentType e : EHrUBLDocumentType.values ())
+    for (final EHrUblDocumentType e : EHrUblDocumentType.values ())
     {
       assertNotNull (e.getImplementationClass ());
-      assertTrue (e.getAllXSDResources ().size () >= 1);
-      for (final IReadableResource aRes : e.getAllXSDResources ())
+      assertTrue (e.getAllXsdResources ().size () >= 1);
+      for (final IReadableResource aRes : e.getAllXsdResources ())
         assertTrue (e.name () + " - " + aRes.getPath (), aRes.exists ());
-      assertSame (e, EHrUBLDocumentType.valueOf (e.name ()));
+      assertSame (e, EHrUblDocumentType.valueOf (e.name ()));
     }
   }
 
   @Test
-  public void testExtensionXSDIsInjectedBeforeTheRootXSD ()
+  public void testExtensionXsdIsInjectedBeforeTheRootXsd ()
   {
-    for (final EHrUBLDocumentType e : new EHrUBLDocumentType [] { EHrUBLDocumentType.INVOICE,
-                                                                  EHrUBLDocumentType.CREDIT_NOTE })
+    for (final EHrUblDocumentType e : new EHrUblDocumentType [] { EHrUblDocumentType.INVOICE,
+                                                                  EHrUblDocumentType.CREDIT_NOTE })
     {
-      final int nSize = e.getAllXSDResources ().size ();
+      final int nSize = e.getAllXsdResources ().size ();
       assertEquals (e.name (),
-                    CHrUBL.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS.getPath (),
-                    e.getAllXSDResources ().get (nSize - 2).getPath ());
+                    CHrUbl.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS.getPath (),
+                    e.getAllXsdResources ().get (nSize - 2).getPath ());
     }
   }
 }

@@ -3,3 +3,9 @@
 =============================================================================
 This product includes Open Source Software developed by
 Philip Helger - https://www.helger.com/
+
+This product includes the XML Schema "HRExtensionAggregateComponents-1.xsd" published by the
+Croatian Tax Administration (Ministarstvo financija, Porezna uprava) as part of the package
+"UBL2.1 eRacun" - https://porezna.gov.hr/fiskalizacija/bezgotovinski-racuni/eracun
+The schema is not covered by the Apache License Version 2.0. It was modified only by removing the
+"schemaLocation" attributes of its two xsd:import elements.

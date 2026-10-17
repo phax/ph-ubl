@@ -29,19 +29,19 @@ import com.helger.collection.commons.ICommonsList;
  * extension.
  */
 @Immutable
-public final class MockHrUBLTestDocuments
+public final class MockHrUblTestDocuments
 {
   private static final String PREFIX = "external/test-hr/";
 
   /** The file with cash basis VAT - the extension contains only the cash basis statement */
   public static final String INVOICE_CASH_BASIS = PREFIX + "eRacun-PDV25-Obracun PDV po naplati.xml";
 
-  private MockHrUBLTestDocuments ()
+  private MockHrUblTestDocuments ()
   {}
 
   @NonNull
   @ReturnsMutableCopy
-  public static ICommonsList <String> getHrUBLTestDocuments (@NonNull final EHrUBLDocumentType eType)
+  public static ICommonsList <String> getHrUblTestDocuments (@NonNull final EHrUblDocumentType eType)
   {
     return switch (eType)
     {

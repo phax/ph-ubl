@@ -32,9 +32,9 @@ import oasis.names.specification.ubl.schema.xsd.commonextensioncomponents_21.Ext
  * extension.
  */
 @Immutable
-public final class HrUBLHelper
+public final class HrUblHelper
 {
-  private HrUBLHelper ()
+  private HrUblHelper ()
   {}
 
   /**
@@ -53,8 +53,8 @@ public final class HrUBLHelper
     if (aAny instanceof final Element aElement)
     {
       // Don't try to read foreign extensions like the document signature
-      if (CHrUBL.XML_SCHEMA_HREXTAC_NAMESPACE_URL.equals (aElement.getNamespaceURI ()))
-        return HrUBLMarshaller.hrExtension ().read (aElement);
+      if (CHrUbl.XML_SCHEMA_HREXTAC_NAMESPACE_URL.equals (aElement.getNamespaceURI ()))
+        return HrUblMarshaller.hrExtension ().read (aElement);
     }
     return null;
   }
@@ -75,7 +75,7 @@ public final class HrUBLHelper
     ValueEnforcer.notNull (aExt, "Ext");
     ValueEnforcer.notNull (aHrExtension, "HrExtension");
 
-    final Element aElement = HrUBLMarshaller.hrExtension ().getAsElement (aHrExtension);
+    final Element aElement = HrUblMarshaller.hrExtension ().getAsElement (aHrExtension);
     if (aElement == null)
       return ESuccess.FAILURE;
     aExt.setAny (aElement);

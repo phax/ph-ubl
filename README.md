@@ -287,7 +287,7 @@ To read and write Croatian UBL 2.1 documents (CIUS-HR with the extension EXT-HR)
 </dependency>
 ```
 
-Supported since v10.2.2
+Supported since v10.3.0
 
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
@@ -329,7 +329,7 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-v10.2.2 - work in progress
+v10.3.0 - work in progress
 * New submodule `ph-ubl-hr` for the extension of the Croatian e-Invoice (CIUS-HR / EXT-HR) - see [#70](https://github.com/phax/ph-ubl/issues/70)
 
 v10.2.1 - 2026-08-27

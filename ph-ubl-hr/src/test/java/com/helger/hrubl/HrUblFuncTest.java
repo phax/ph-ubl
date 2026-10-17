@@ -53,7 +53,7 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 /**
  * Test class for reading and writing Croatian UBL documents.
  */
-public final class HrUBLFuncTest
+public final class HrUblFuncTest
 {
   private static final String CASH_BASIS_TEXT = "Obračun po naplaćenoj naknadi";
 
@@ -67,7 +67,7 @@ public final class HrUBLFuncTest
       for (final UBLExtensionType aExtension : aExtensions.getUBLExtension ())
         if (aExtension.getExtensionContent () != null)
         {
-          final HRFISK20DataType ret = HrUBLHelper.getHrExtension (aExtension.getExtensionContent ());
+          final HRFISK20DataType ret = HrUblHelper.getHrExtension (aExtension.getExtensionContent ());
           if (ret != null)
             return ret;
         }
@@ -86,45 +86,45 @@ public final class HrUBLFuncTest
   @Test
   public void testReadAndWriteInvoices ()
   {
-    final Schema aSchema = HrUBLMarshaller.invoice ().getSchema ();
+    final Schema aSchema = HrUblMarshaller.invoice ().getSchema ();
     assertNotNull (aSchema);
 
-    for (final String sFilename : MockHrUBLTestDocuments.getHrUBLTestDocuments (EHrUBLDocumentType.INVOICE))
+    for (final String sFilename : MockHrUblTestDocuments.getHrUblTestDocuments (EHrUblDocumentType.INVOICE))
     {
       // Read
       final Document aDoc = _readDocument (sFilename, aSchema);
-      final InvoiceType aUBLObject = HrUBLMarshaller.invoice ().read (aDoc);
-      assertNotNull (sFilename, aUBLObject);
+      final InvoiceType aUblObject = HrUblMarshaller.invoice ().read (aDoc);
+      assertNotNull (sFilename, aUblObject);
 
       // Validate
-      IErrorList aErrors = HrUBLMarshaller.invoice ().validate (aUBLObject);
+      IErrorList aErrors = HrUblMarshaller.invoice ().validate (aUblObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // All of them have the Croatian extension
-      final HRFISK20DataType aHr = _getHrExtension (aUBLObject.getUBLExtensions ());
+      final HRFISK20DataType aHr = _getHrExtension (aUblObject.getUBLExtensions ());
       assertNotNull (sFilename, aHr);
 
       // write again
-      final Document aDoc2 = HrUBLMarshaller.invoice ().getAsDocument (aUBLObject);
+      final Document aDoc2 = HrUblMarshaller.invoice ().getAsDocument (aUblObject);
       assertNotNull (sFilename, aDoc2);
       assertEquals (aDoc.getDocumentElement ().getNamespaceURI (), aDoc2.getDocumentElement ().getNamespaceURI ());
       assertEquals (aDoc.getDocumentElement ().getLocalName (), aDoc2.getDocumentElement ().getLocalName ());
 
       // read again
-      final InvoiceType aUBLObject2 = HrUBLMarshaller.invoice ().read (aDoc2);
-      assertNotNull (sFilename, aUBLObject2);
-      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
-      assertEquals (sFilename, aHr, _getHrExtension (aUBLObject2.getUBLExtensions ()));
+      final InvoiceType aUblObject2 = HrUblMarshaller.invoice ().read (aDoc2);
+      assertNotNull (sFilename, aUblObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUblObject, aUblObject2);
+      assertEquals (sFilename, aHr, _getHrExtension (aUblObject2.getUBLExtensions ()));
 
       // Validate
-      aErrors = HrUBLMarshaller.invoice ().validate (aUBLObject2);
+      aErrors = HrUblMarshaller.invoice ().validate (aUblObject2);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename, aErrors.containsAtLeastOneError ());
     }
 
     // An empty invoice is invalid
-    final IErrorList aErrors = HrUBLMarshaller.invoice ().validate (new InvoiceType ());
+    final IErrorList aErrors = HrUblMarshaller.invoice ().validate (new InvoiceType ());
     assertNotNull (aErrors);
     assertTrue (aErrors.containsAtLeastOneError ());
   }
@@ -132,30 +132,30 @@ public final class HrUBLFuncTest
   @Test
   public void testReadAndWriteCreditNotes ()
   {
-    final Schema aSchema = HrUBLMarshaller.creditNote ().getSchema ();
+    final Schema aSchema = HrUblMarshaller.creditNote ().getSchema ();
     assertNotNull (aSchema);
 
-    for (final String sFilename : MockHrUBLTestDocuments.getHrUBLTestDocuments (EHrUBLDocumentType.CREDIT_NOTE))
+    for (final String sFilename : MockHrUblTestDocuments.getHrUblTestDocuments (EHrUblDocumentType.CREDIT_NOTE))
     {
       // Read
       final Document aDoc = _readDocument (sFilename, aSchema);
-      final CreditNoteType aUBLObject = HrUBLMarshaller.creditNote ().read (aDoc);
-      assertNotNull (sFilename, aUBLObject);
+      final CreditNoteType aUblObject = HrUblMarshaller.creditNote ().read (aDoc);
+      assertNotNull (sFilename, aUblObject);
 
       // Validate
-      final IErrorList aErrors = HrUBLMarshaller.creditNote ().validate (aUBLObject);
+      final IErrorList aErrors = HrUblMarshaller.creditNote ().validate (aUblObject);
       assertNotNull (sFilename, aErrors);
       assertFalse (sFilename + ": " + aErrors.toString (), aErrors.containsAtLeastOneError ());
 
       // This credit note has only the document signature extension
-      assertNull (sFilename, _getHrExtension (aUBLObject.getUBLExtensions ()));
+      assertNull (sFilename, _getHrExtension (aUblObject.getUBLExtensions ()));
 
       // write and read again
-      final Document aDoc2 = HrUBLMarshaller.creditNote ().getAsDocument (aUBLObject);
+      final Document aDoc2 = HrUblMarshaller.creditNote ().getAsDocument (aUblObject);
       assertNotNull (sFilename, aDoc2);
-      final CreditNoteType aUBLObject2 = HrUBLMarshaller.creditNote ().read (aDoc2);
-      assertNotNull (sFilename, aUBLObject2);
-      TestHelper.testDefaultImplementationWithEqualContentObject (aUBLObject, aUBLObject2);
+      final CreditNoteType aUblObject2 = HrUblMarshaller.creditNote ().read (aDoc2);
+      assertNotNull (sFilename, aUblObject2);
+      TestHelper.testDefaultImplementationWithEqualContentObject (aUblObject, aUblObject2);
     }
   }
 
@@ -164,8 +164,8 @@ public final class HrUBLFuncTest
   {
     {
       // Only the cash basis statement
-      final InvoiceType aInvoice = HrUBLMarshaller.invoice ()
-                                                  .read (new ClassPathResource (MockHrUBLTestDocuments.INVOICE_CASH_BASIS));
+      final InvoiceType aInvoice = HrUblMarshaller.invoice ()
+                                                  .read (new ClassPathResource (MockHrUblTestDocuments.INVOICE_CASH_BASIS));
       assertNotNull (aInvoice);
       final HRFISK20DataType aHr = _getHrExtension (aInvoice.getUBLExtensions ());
       assertNotNull (aHr);
@@ -175,7 +175,7 @@ public final class HrUBLFuncTest
     }
     {
       // Tax total and out of scope of VAT amount
-      final InvoiceType aInvoice = HrUBLMarshaller.invoice ()
+      final InvoiceType aInvoice = HrUblMarshaller.invoice ()
                                                   .read (new ClassPathResource ("external/test-hr/eRacun-PDV25 i Neoporeziva naknada-trosak.xml"));
       assertNotNull (aInvoice);
       final HRFISK20DataType aHr = _getHrExtension (aInvoice.getUBLExtensions ());
@@ -205,8 +205,8 @@ public final class HrUBLFuncTest
   @Test
   public void testReadInstanceAndAddExtension ()
   {
-    final InvoiceType aInvoice = HrUBLMarshaller.invoice ()
-                                                .read (new ClassPathResource (MockHrUBLTestDocuments.INVOICE_CASH_BASIS));
+    final InvoiceType aInvoice = HrUblMarshaller.invoice ()
+                                                .read (new ClassPathResource (MockHrUblTestDocuments.INVOICE_CASH_BASIS));
     assertNotNull (aInvoice);
 
     // Replace the existing extensions
@@ -216,8 +216,8 @@ public final class HrUBLFuncTest
     aHr.setHRObracunPDVPoNaplati (aCashBasis);
 
     final ExtensionContentType aExtContent = new ExtensionContentType ();
-    assertNull (HrUBLHelper.getHrExtension (aExtContent));
-    assertSame (ESuccess.SUCCESS, HrUBLHelper.setHrExtension (aExtContent, aHr));
+    assertNull (HrUblHelper.getHrExtension (aExtContent));
+    assertSame (ESuccess.SUCCESS, HrUblHelper.setHrExtension (aExtContent, aHr));
     final UBLExtensionType aExtension = new UBLExtensionType ();
     aExtension.setExtensionContent (aExtContent);
     final UBLExtensionsType aExtensions = new UBLExtensionsType ();
@@ -225,10 +225,10 @@ public final class HrUBLFuncTest
     aInvoice.setUBLExtensions (aExtensions);
 
     // Write and read again
-    final String sXML = HrUBLMarshaller.invoice ().setFormattedOutput (true).getAsString (aInvoice);
-    assertNotNull (sXML);
-    assertTrue (sXML, sXML.contains ("<hrextac:HRFISK20Data"));
-    final InvoiceType aInvoice2 = HrUBLMarshaller.invoice ().read (sXML);
+    final String sXml = HrUblMarshaller.invoice ().setFormattedOutput (true).getAsString (aInvoice);
+    assertNotNull (sXml);
+    assertTrue (sXml, sXml.contains ("<hrextac:HRFISK20Data"));
+    final InvoiceType aInvoice2 = HrUblMarshaller.invoice ().read (sXml);
     assertNotNull (aInvoice2);
     assertEquals (aHr, _getHrExtension (aInvoice2.getUBLExtensions ()));
   }
@@ -236,13 +236,13 @@ public final class HrUBLFuncTest
   @Test
   public void testInvalidExtensionIsRejected ()
   {
-    final String sOriginal = new String (StreamHelper.getAllBytes (new ClassPathResource (MockHrUBLTestDocuments.INVOICE_CASH_BASIS)),
+    final String sOriginal = new String (StreamHelper.getAllBytes (new ClassPathResource (MockHrUblTestDocuments.INVOICE_CASH_BASIS)),
                                          StandardCharsets.UTF_8);
     ValueEnforcer.isTrue (sOriginal.contains ("HRObracunPDVPoNaplati"), "Test file changed");
-    assertNotNull (HrUBLMarshaller.invoice ().read (sOriginal));
+    assertNotNull (HrUblMarshaller.invoice ().read (sOriginal));
 
     // An unknown element in the Croatian extension must be detected
     final String sBroken = sOriginal.replace ("HRObracunPDVPoNaplati", "HRUnknownElement");
-    assertNull (HrUBLMarshaller.invoice ().read (sBroken));
+    assertNull (HrUblMarshaller.invoice ().read (sBroken));
   }
 }

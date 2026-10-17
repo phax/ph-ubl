@@ -30,6 +30,7 @@ import com.helger.ubl21.UBL21Marshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 import hr.gov.mfin.schema.xsd.hrextensionaggregatecomponents_1.HRFISK20DataType;
+import hr.gov.mfin.schema.xsd.hrextensionaggregatecomponents_1.ObjectFactory;
 import oasis.names.specification.ubl.schema.xsd.creditnote_21.CreditNoteType;
 import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
 
@@ -39,9 +40,9 @@ import oasis.names.specification.ubl.schema.xsd.invoice_21.InvoiceType;
  * <code>ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent</code>. The schema of the Croatian extension is added
  * to the UBL 2.1 schemas, so that the extension is validated as well.
  */
-public final class HrUBLMarshaller
+public final class HrUblMarshaller
 {
-  public static class HrUBLJAXBMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
+  public static class HrUblJaxbMarshaller <JAXBTYPE> extends GenericJAXBMarshaller <JAXBTYPE>
   {
     private final QName m_aRootElementQName;
 
@@ -54,32 +55,32 @@ public final class HrUBLMarshaller
      * @return A new list. Never <code>null</code>.
      */
     @NonNull
-    public static ICommonsList <ClassPathResource> getAllXSDs (@NonNull final ICommonsList <ClassPathResource> aList)
+    public static ICommonsList <ClassPathResource> getAllXsds (@NonNull final ICommonsList <ClassPathResource> aList)
     {
       final ICommonsList <ClassPathResource> ret = new CommonsArrayList <> ();
       // Copy everything EXCEPT the last item
       ret.addAll (aList.subList (0, aList.size () - 1));
       // Inject the Croatian extension in the middle
-      ret.add (CHrUBL.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS);
+      ret.add (CHrUbl.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS);
       // Add the root element last
       ret.add (aList.getLastOrNull ());
       return ret;
     }
 
-    public HrUBLJAXBMarshaller (@NonNull final Class <JAXBTYPE> aType,
-                                @NonNull final ICommonsList <ClassPathResource> aSourceXSDs,
+    public HrUblJaxbMarshaller (@NonNull final Class <JAXBTYPE> aType,
+                                @NonNull final ICommonsList <ClassPathResource> aSourceXsds,
                                 @NonNull final QName aRootElementQName)
     {
-      super (aType, aSourceXSDs, createSimpleJAXBElement (aRootElementQName, aType));
+      super (aType, aSourceXsds, createSimpleJAXBElement (aRootElementQName, aType));
 
       m_aRootElementQName = aRootElementQName;
 
       // Create a special namespace context for the passed document type
-      final MapBasedNamespaceContext aNSContext = HrUBLNamespaceContext.getInstance ().getClone ();
+      final MapBasedNamespaceContext aNsContext = HrUblNamespaceContext.getInstance ().getClone ();
       // Avoid overwriting an already mapped context
-      if (!aNSContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
-        aNSContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
-      setNamespaceContext (aNSContext);
+      if (!aNsContext.isNamespaceURIMapped (aRootElementQName.getNamespaceURI ()))
+        aNsContext.addDefaultNamespaceURI (aRootElementQName.getNamespaceURI ());
+      setNamespaceContext (aNsContext);
     }
 
     @NonNull
@@ -101,22 +102,24 @@ public final class HrUBLMarshaller
     }
   }
 
-  private HrUBLMarshaller ()
+  private HrUblMarshaller ()
   {}
 
+  // The ObjectFactory of the UBL packages is fully qualified, because all ObjectFactory classes share the same simple
+  // name
   @NonNull
-  public static HrUBLJAXBMarshaller <CreditNoteType> creditNote ()
+  public static HrUblJaxbMarshaller <CreditNoteType> creditNote ()
   {
-    return new HrUBLJAXBMarshaller <> (CreditNoteType.class,
-                                       HrUBLJAXBMarshaller.getAllXSDs (UBL21Marshaller.getAllCreditNoteXSDs ()),
+    return new HrUblJaxbMarshaller <> (CreditNoteType.class,
+                                       HrUblJaxbMarshaller.getAllXsds (UBL21Marshaller.getAllCreditNoteXSDs ()),
                                        oasis.names.specification.ubl.schema.xsd.creditnote_21.ObjectFactory._CreditNote_QNAME);
   }
 
   @NonNull
-  public static HrUBLJAXBMarshaller <InvoiceType> invoice ()
+  public static HrUblJaxbMarshaller <InvoiceType> invoice ()
   {
-    return new HrUBLJAXBMarshaller <> (InvoiceType.class,
-                                       HrUBLJAXBMarshaller.getAllXSDs (UBL21Marshaller.getAllInvoiceXSDs ()),
+    return new HrUblJaxbMarshaller <> (InvoiceType.class,
+                                       HrUblJaxbMarshaller.getAllXsds (UBL21Marshaller.getAllInvoiceXSDs ()),
                                        oasis.names.specification.ubl.schema.xsd.invoice_21.ObjectFactory._Invoice_QNAME);
   }
 
@@ -124,10 +127,10 @@ public final class HrUBLMarshaller
    * @return A marshaller for the Croatian extension element <code>HRFISK20Data</code> itself.
    */
   @NonNull
-  public static HrUBLJAXBMarshaller <HRFISK20DataType> hrExtension ()
+  public static HrUblJaxbMarshaller <HRFISK20DataType> hrExtension ()
   {
-    return new HrUBLJAXBMarshaller <> (HRFISK20DataType.class,
-                                       EHrUBLDocumentType.HR_EXTENSION.getAllXSDResources (),
-                                       hr.gov.mfin.schema.xsd.hrextensionaggregatecomponents_1.ObjectFactory._HRFISK20Data_QNAME);
+    return new HrUblJaxbMarshaller <> (HRFISK20DataType.class,
+                                       EHrUblDocumentType.HR_EXTENSION.getAllXsdResources (),
+                                       ObjectFactory._HRFISK20Data_QNAME);
   }
 }

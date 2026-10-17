@@ -21,13 +21,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Test class for class {@link CHrUBL}.
+ * Test class for class {@link CHrUbl}.
  */
-public final class CHrUBLTest
+public final class CHrUblTest
 {
   @Test
   public void testBasic ()
   {
-    assertTrue (CHrUBL.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS.exists ());
+    assertTrue (CHrUbl.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS.exists ());
   }
 }

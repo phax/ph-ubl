@@ -23,25 +23,25 @@ import com.helger.ubl21.UBL21NamespaceContext;
 /**
  * The namespace context to be used as the namespace prefix mapper.
  */
-public class HrUBLNamespaceContext extends UBL21NamespaceContext
+public class HrUblNamespaceContext extends UBL21NamespaceContext
 {
   private static final class SingletonHolder
   {
-    static final HrUBLNamespaceContext INSTANCE = new HrUBLNamespaceContext ();
+    static final HrUblNamespaceContext INSTANCE = new HrUblNamespaceContext ();
   }
 
-  protected HrUBLNamespaceContext ()
+  protected HrUblNamespaceContext ()
   {
     super ();
     // Change cec to ext - the prefix used by the Croatian examples
     addMapping ("ext", getCustomNamespaceURI ("cec"));
     removeMapping ("cec");
     // Add the Croatian extension mapping
-    addMapping ("hrextac", CHrUBL.XML_SCHEMA_HREXTAC_NAMESPACE_URL);
+    addMapping ("hrextac", CHrUbl.XML_SCHEMA_HREXTAC_NAMESPACE_URL);
   }
 
   @NonNull
-  public static HrUBLNamespaceContext getInstance ()
+  public static HrUblNamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;
   }

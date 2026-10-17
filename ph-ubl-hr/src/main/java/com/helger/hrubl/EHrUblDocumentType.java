@@ -32,7 +32,7 @@ import hr.gov.mfin.schema.xsd.hrextensionaggregatecomponents_1.HRFISK20DataType;
 /**
  * Enumeration with all available Croatian UBL document types.
  */
-public enum EHrUBLDocumentType
+public enum EHrUblDocumentType
 {
   CREDIT_NOTE (EUBL21DocumentType.CREDIT_NOTE),
   INVOICE (EUBL21DocumentType.INVOICE),
@@ -41,21 +41,21 @@ public enum EHrUBLDocumentType
                                          CUBL21.XSD_UNQUALIFIED_DATA_TYPES,
                                          CUBL21.XSD_QUALIFIED_DATA_TYPES,
                                          CUBL21.XSD_COMMON_BASIC_COMPONENTS,
-                                         CHrUBL.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS));
+                                         CHrUbl.XSD_HR_EXTENSION_AGGREGATE_COMPONENTS));
 
   private final Class <?> m_aImplClass;
-  private final ICommonsList <ClassPathResource> m_aXSDs;
+  private final ICommonsList <ClassPathResource> m_aXsds;
 
-  EHrUBLDocumentType (@NonNull final EUBL21DocumentType eUBL21)
+  EHrUblDocumentType (@NonNull final EUBL21DocumentType eUbl21)
   {
-    m_aImplClass = eUBL21.getImplementationClass ();
-    m_aXSDs = HrUBLMarshaller.HrUBLJAXBMarshaller.getAllXSDs (eUBL21.getAllXSDResources ());
+    m_aImplClass = eUbl21.getImplementationClass ();
+    m_aXsds = HrUblMarshaller.HrUblJaxbMarshaller.getAllXsds (eUbl21.getAllXSDResources ());
   }
 
-  EHrUBLDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXSDPaths)
+  EHrUblDocumentType (@NonNull final Class <?> aClass, @NonNull @Nonempty final ICommonsList <ClassPathResource> aXsdPaths)
   {
     m_aImplClass = aClass;
-    m_aXSDs = aXSDPaths;
+    m_aXsds = aXsdPaths;
   }
 
   @NonNull
@@ -67,8 +67,8 @@ public enum EHrUBLDocumentType
   @NonNull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <ClassPathResource> getAllXSDResources ()
+  public ICommonsList <ClassPathResource> getAllXsdResources ()
   {
-    return m_aXSDs.getClone ();
+    return m_aXsds.getClone ();
   }
 }

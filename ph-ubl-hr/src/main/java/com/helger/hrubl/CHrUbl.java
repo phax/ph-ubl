@@ -26,7 +26,7 @@ import com.helger.io.resource.ClassPathResource;
  * Constants for Croatian UBL (CIUS-HR with the EXT-HR extension) handling.
  */
 @Immutable
-public final class CHrUBL
+public final class CHrUbl
 {
   private static final String PREFIX = "external/schemas/";
 
@@ -38,20 +38,20 @@ public final class CHrUBL
 
   public static final ClassPathResource XSD_HR_EXTENSION_AGGREGATE_COMPONENTS = new ClassPathResource (SCHEMA_DIRECTORY +
                                                                                                        "common/HRExtensionAggregateComponents-1.xsd",
-                                                                                                       getCL ());
+                                                                                                       getCl ());
 
   @PresentForCodeCoverage
-  private static final CHrUBL INSTANCE = new CHrUBL ();
+  private static final CHrUbl INSTANCE = new CHrUbl ();
 
-  private CHrUBL ()
+  private CHrUbl ()
   {}
 
   /**
    * @return The class loader to be used to load the resources of this module. Never <code>null</code>.
    */
   @NonNull
-  public static ClassLoader getCL ()
+  public static ClassLoader getCl ()
   {
-    return CHrUBL.class.getClassLoader ();
+    return CHrUbl.class.getClassLoader ();
   }
 }
