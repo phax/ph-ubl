@@ -41,6 +41,7 @@ Java 17 minimum. CI tests against 17, 21, and 25.
 - `ph-ublpe` — Peruvian e-Invoice variant
 - `ph-ubl-dian` — Colombian e-Invoice variant
 - `ph-ubl-eforms` — EU eForms (UBL 2.3 based)
+- `ph-ubl-hr` — Croatian e-Invoice (CIUS-HR / EXT-HR) extension for UBL 2.1
 
 ## Key Dependencies
 

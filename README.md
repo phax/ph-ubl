@@ -28,6 +28,7 @@ The following projects are contained:
 * **ph-ublpe** contains the generated JAXB files for UBLPE #openinvoiceperu (optional artefact)
 * **ph-ubl-dian** contains the generated JAXB files for the Colombian e-Invoice (optional artefact)
 * **ph-ubl-eforms** contains the generated JAXB files for the EU eForms objects (optional artefact) - see https://ec.europa.eu/growth/single-market/public-procurement/digital-procurement/eforms_en
+* **ph-ubl-hr** contains the generated JAXB files for the extension of the Croatian e-Invoice (CIUS-HR / EXT-HR, optional artefact)
 
 # Building
 
@@ -48,6 +49,7 @@ The folders with the generated sources differ from subproject to subproject:
 * **ph-ubltr**: `target\generated-sources\ubltr` 
 * **ph-ubl-dian**: `target\generated-sources\dian` 
 * **ph-ubl-eforms**: `target\generated-sources\eforms` 
+* **ph-ubl-hr**: `target\generated-sources\hr` 
 
 # Examples
 
@@ -273,6 +275,20 @@ To read and write eForms UBL 2.3 documents add the following to your pom.xml to 
 
 Supported since v6.7.0
 
+## Maven usage Croatian UBL
+
+To read and write Croatian UBL 2.1 documents (CIUS-HR with the extension EXT-HR) add the following to your pom.xml to use this artifact:
+
+```xml
+<dependency>
+  <groupId>com.helger.ubl</groupId>
+  <artifactId>ph-ubl-hr</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+Supported since v10.2.2
+
 # Download
 Binary versions of the artefacts can be downloaded from Maven Central:
 
@@ -294,6 +310,7 @@ Binary versions of the artefacts can be downloaded from Maven Central:
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubltr/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-dian/
 * https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-eforms/
+* https://repo1.maven.org/maven2/com/helger/ubl/ph-ubl-hr/
 
 # Other UBL sites
 
@@ -311,6 +328,9 @@ For further information on the Universal Business Language can be found on the f
 * http://www.ubltr.com/
 
 # News and noteworthy
+
+v10.2.2 - work in progress
+* New submodule `ph-ubl-hr` for the extension of the Croatian e-Invoice (CIUS-HR / EXT-HR) - see [#70](https://github.com/phax/ph-ubl/issues/70)
 
 v10.2.1 - 2026-08-27
 * Updated to UBL 2.5 OS - https://docs.oasis-open.org/ubl/os-UBL-2.5/ (no XSD changes compared to CS01)

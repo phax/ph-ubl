@@ -1,0 +1,4 @@
+PUBLIC "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2" "maven:com.helger.xsd:ph-xsds-ccts-cct-schemamodule:jar::!/schemas/CCTS_CCT_SchemaModule.xsd"
+
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"  "maven:com.helger.ubl:ph-ubl21:jar::!/external/schemas/ubl21/common/UBL-UnqualifiedDataTypes-2.1.xsd"
+PUBLIC "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" "maven:com.helger.ubl:ph-ubl21:jar::!/external/schemas/ubl21/common/UBL-CommonBasicComponents-2.1.xsd"

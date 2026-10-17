@@ -1,0 +1,200 @@
+<xsd:schema xmlns="urn:mfin.gov.hr:schema:xsd:HRExtensionAggregateComponents-1"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:mfin.gov.hr:schema:xsd:HRExtensionAggregateComponents-1" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" />
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" />
+
+	<xsd:element name="HRFISK20Data" type="HRFISK20DataType" />
+
+	<xsd:complexType name="HRFISK20DataType">
+		<xsd:annotation>
+			<xsd:documentation>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HRObracunPDVPoNaplati" type="HRObracunPDVPoNaplatiType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HRTaxTotal" type="HRTaxTotalType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HRLegalMonetaryTotal" type="HRMonetaryTotalType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="HRMonetaryTotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:TaxExclusiveAmount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OutOfScopeOfVATAmount" type="OutOfScopeOfVATAmountType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRTaxTotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:TaxAmount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HRTaxSubtotal" type="HRTaxSubtotalType" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRTaxSubtotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:TaxableAmount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxAmount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HRTaxCategory" type="HRTaxCategoryType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRTaxCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Percent" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxExemptionReasonCode" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxExemptionReason" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HRTaxScheme" type="HRTaxSchemeType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRTaxSchemeType">
+		<xsd:annotation>
+			<xsd:documentation>
+
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OutOfScopeOfVATAmountType">
+		<xsd:simpleContent>
+			<xsd:extension base="udt:AmountType" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AccountingCurrencyPayableAmountType">
+		<xsd:simpleContent>
+			<xsd:extension base="udt:AmountType" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="HRObracunPDVPoNaplatiType">
+		<xsd:simpleContent>
+			<xsd:extension base="udt:TextType" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+</xsd:schema>
