@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-ph-ubl is a Java library providing JAXB bindings for OASIS UBL (Universal Business Language) versions 2.0 through 2.4, plus regional variants (Turkish UBL-TR, Peruvian UBLPE, Colombian DIAN, EU eForms). It is a multi-module Maven project with 16 modules.
+ph-ubl is a Java library providing JAXB bindings for OASIS UBL (Universal Business Language) versions 2.0 through 2.4, plus regional variants (Turkish UBL-TR, Peruvian UBLPE, Colombian DIAN, EU eForms). It is a multi-module Maven project with 20 modules.
 
 ## Build Commands
 
@@ -33,6 +33,7 @@ Java 17 minimum. CI tests against 17, 21, and 25.
 
 ## Module Layout
 
+- `ph-ubl-bom` — Bill of Materials listing all ph-ubl artifacts (import this, not `ph-ubl-parent-pom`)
 - `ph-ubl-testfiles` — shared test XML documents
 - `ph-ubl-api` — base API and code generation utilities
 - `ph-ubl{20,21,22,23,24}` — JAXB bindings per UBL version

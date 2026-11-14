@@ -10,6 +10,7 @@
 Set of Java libraries for reading and writing OASIS UBL 2.0, 2.1, 2.2, 2.3, 2.4 and 2.5 documents.
 The following projects are contained:
 
+* **ph-ubl-bom** the Bill of Materials (BOM) with the versions of all ph-ubl artefacts
 * **ph-ubl-testfiles** contains all UBL test files (used only in Maven test scope)
 * **ph-ubl-api** base library containing common stuff for UBL testing only.
 * **ph-ubl20** contains the generated JAXB files for UBL 2.0 as well as the helper classes.
@@ -66,12 +67,14 @@ You can use ph-ubl as a BOM (bill of material) when you include the following in
 ```xml
 <dependency>
   <groupId>com.helger.ubl</groupId>
-  <artifactId>ph-ubl-parent-pom</artifactId>
+  <artifactId>ph-ubl-bom</artifactId>
   <version>x.y.z</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
 ```
+
+Note: prior to v10.3.0 the artifact `ph-ubl-parent-pom` was used as the BOM.
 
 Note: prior to v6.3.0 the Maven groupId was `com.helger`.
 
@@ -329,13 +332,15 @@ For further information on the Universal Business Language can be found on the f
 
 # News and noteworthy
 
-v10.3.0 - work in progress
+v10.3.0 - 2026-11-14
+* Updated to ph-commons 12.7.1 and ph-xsds 4.1.2, importing their new BOMs `ph-commons-bom` and `ph-xsds-bom`
 * New submodule `ph-ubl-hr` for the extension of the Croatian e-Invoice (CIUS-HR / EXT-HR) - see [#70](https://github.com/phax/ph-ubl/issues/70)
 * `ph-ublpe`: `ApplicationResponse`, `CreditNote`, `DebitNote` and `Invoice` in `UBLPEMarshaller` and `EUBLPEDocumentType` are now based on UBL 2.1 (`ph-ubl21`) instead of UBL 2.0.
   This is an incompatible change.
 * `ph-ublpe`: updated to the SUNAT extension schema `UBLPE-SunatAggregateComponents-1.1.xsd` of the "Facturador SUNAT" v1.3.2.
   The JAXB class for its `DocumentReferenceType` is called `SunatDocumentReferenceType`.
   `SummaryDocuments` and `VoidedDocuments` remain based on UBL 2.0, because the SUNAT extension schema uses UBL 2.0 only components.
+* New submodule `ph-ubl-bom` as the dedicated Bill of Materials for all ph-ubl artefacts. Use it instead of `ph-ubl-parent-pom` for importing
 
 v10.2.1 - 2026-08-27
 * Updated to UBL 2.5 OS - https://docs.oasis-open.org/ubl/os-UBL-2.5/ (no XSD changes compared to CS01)
